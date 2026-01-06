@@ -1,0 +1,12 @@
+
+# large / generated
+hts-cache/
+*.zip
+*.exe
+
+
+# prevent big files
+hts-cache/
+*.zip
+*.exe
+

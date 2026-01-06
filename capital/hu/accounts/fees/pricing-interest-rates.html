@@ -1,0 +1,2257 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="hu" data-theme="light">
+
+<!-- Mirrored from www.interactivebrokers.ie/hu/accounts/fees/pricing-interest-rates.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Sep 2025 09:29:28 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8">
+<title>Kamatl&#225;bak | Interactive Brokers Ireland</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+<meta name="description" content="Az Interactive Brokers sz&#225;ml&#225;j&#225;n azonnal el&#233;rhet&#337; k&#233;szp&#233;nzegyenlege ut&#225;n piaci m&#233;rt&#233;k&#369; kamatj&#243;v&#225;&#237;r&#225;sra jogosult.">
+<meta name="keywords" content="fedezeti kamat, fedezeti hitelkamatl&#225;bak, kamatl&#225;b, interactive brokers kamatl&#225;b, kamat meghat&#225;roz&#225;sa, ir&#225;nyad&#243; kamatl&#225;b, referencia&#233;rt&#233;k, IBKR kamatinform&#225;ci&#243;, fizetett kamat, felsz&#225;m&#237">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta http-equiv="expires" content="-1">
+<meta name="robots" content="index, follow">
+<meta http-equiv="pragma" content="no-cache">
+<meta property="og:site_name" content="Interactive Brokers Ireland" />
+<!--Pid:48375-->
+<link rel="canonical" href="pricing-interest-rates.html"/>
+<meta name="apple-mobile-web-app-title" content="IBKR">
+<link rel="icon" sizes="192x192" href="../../../images/web/favicons/home-screen-icon-192x192.png" />
+<link rel="icon" sizes="128x128" href="../../../images/web/favicons/home-screen-icon-128x128.png" />
+<link rel="apple-touch-icon" sizes="57x57" href="../../../images/web/favicons/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="../../../images/web/favicons/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="../../../images/web/favicons/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="../../../images/web/favicons/apple-touch-icon-144x144.png" />
+<!-- SCRIPTS HEAD  -->
+<script type="text/javascript" src='../../../scripts/common/js/jquery-3.6.1/jquery.min.js'></script>
+<script type="text/javascript">
+function createScriptElement(data) {
+ if (typeof data == "undefined") {
+  return;
+ }
+ var element = document.createElement("SCRIPT");
+ element.type = "text/javascript";
+ if (typeof data.id != "undefined") {
+  element.id = data.id;
+ }
+ if (typeof data.source != "undefined") {
+  element.src = data.source;
+ }
+ if (typeof data.loadfunction == "function") {
+  element.onload = data.loadfunction;
+ }
+ document.head.appendChild(element);
+}
+createScriptElement({ source : "/scripts/common/js/bootstrap-5.2.2/bootstrap.bundle.min.js", loadfunction: bsLoaded  });
+createScriptElement({ source : "/scripts/common/js/lib.js?ver=9" });
+function storeCookie()
+{
+ if(typeof(Storage) !== 'undefined')
+ {
+   if(localStorage.getItem('web') !== null)
+   {
+     localStorage.removeItem('web');
+   }
+ }
+}
+function bsLoaded() {
+  createScriptElement({ source : "/scripts/common/js/appear/appear.min.js?ver=1" });
+  createScriptElement({ source : "/scripts/common/js/easing/easing.min.js?ver=1" });
+  createScriptElement({ source : "/scripts/common/js/parallax/parallax.min.js?ver=1" });
+  createScriptElement({ source : "/scripts/common/js/uitotop/uitotop.min.js?ver=1", loadfunction: uiLoaded });
+}
+function uiLoaded() {
+  createScriptElement({ source : "/scripts/common/js/twsUtils.js?ver=2" });
+  createScriptElement({ source : "/scripts/common/js/design/design.js?ver=1" }); 
+}
+</script>
+<script type="text/javascript">
+$(function() {
+ if (document.cookie.indexOf("IB_SEARCH") == -1)
+ {
+  var ex=new Date();
+  ex.setTime(ex.getTime()+86400000);
+  document.cookie ='IB_SEARCH='+Math.floor(new Date().getTime()/1000)+';expires='+ex.toGMTString()+';path=/;domain=.interactivebrokers.ie';
+ }
+  let nex=new Date();
+  nex.setTime(nex.getTime()+86400000);
+    document.cookie ='IB_QD=0;expires='+nex.toGMTString()+';path=/;domain=.interactivebrokers.ie';
+  
+  let excfd=new Date();
+  excfd.setTime(excfd.getTime()+86400000);
+  document.cookie ='IB_QD_CFD=0;expires='+excfd.toGMTString()+';path=/;domain=.interactivebrokers.ie';
+ $('div#langselector').find('a').each(function() {
+  $(this).click(function() {
+   var link = $(this).attr("href");
+   if(link.match(/\/(en|fr|de|es|it|ru|cn|jp)\//))
+   {
+    var langs = link.split("../../../index.html");
+    if(langs[3] == 'en' || langs[3] == 'fr' || langs[3] == 'de' || langs[3] == 'es' || langs[3] == 'it' || langs[3] == 'ru' || langs[3] == 'cn' || langs[3] == 'jp')
+    {
+      var lang = langs[3];
+      if(lang == 'cn')
+      {
+        lang = 'zh_CN';
+      }
+      if(lang == 'jp')
+      {
+        lang = 'ja';
+      }
+      if(hasCookie("IB_LANG"))
+      {
+        deleteCookie("IB_LANG");
+      }
+      setCookie("IB_LANG", lang, 7, '.interactivebrokers.ie');
+    } else if(langs[1] == 'en') {
+      var lang = 'en';
+      setCookie("IB_LANG", lang, 7, '.interactivebrokers.ie');
+    }
+   }
+  });
+ });
+ $('p#bandaid-close').click(function() {
+  setCookie("IB_BANDAID", 1, 7, '.interactivebrokers.ie');
+ });
+ $('a#btnCloseBannerRegionSelector').click(function() {
+  setCookie("IB_REGION_SEL", 1, 30, '.interactivebrokers.ie');
+ });
+ $('a#btnCloseBannerRegionDifc').click(function() {
+  setCookie("IB_DIFC", 1, 30, '.interactivebrokers.ie');
+ });
+});
+</script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    if(localStorage.getItem('consentMode') ===  null){
+                    const consentMode = {
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'analytics_storage': 'denied'
+            };
+                localStorage.setItem('consentMode', JSON.stringify(consentMode));
+        gtag('consent', 'default', consentMode);
+    }
+    else {
+        gtag('consent', 'default', JSON.parse(localStorage.getItem('consentMode')));
+    }
+</script>
+<!-- STYLES HEAD -->
+<style type="text/css">
+@import url('../../../css/bootstrap-5.2.2/bootstrap.min.css') layer(bootstrap);
+</style>
+<link rel="preload" as="style" href="../../../css/ibkr/website.mince12.css?v=1848a6e12ea6c289ee1df7ee63749846">
+<link rel="stylesheet" type="text/css" media="all" href="../../../css/ibkr/website.mince12.css?v=1848a6e12ea6c289ee1df7ee63749846">
+<link rel="preload" as="style" href="../../../css/ibkr/theme-ibkr.min4f42.css?v=be9c72c0d328e7fc4987bce81f28981c">
+<link rel="stylesheet" type="text/css" media="all" href="../../../css/ibkr/theme-ibkr.min4f42.css?v=be9c72c0d328e7fc4987bce81f28981c"><style>
+section#page-title {
+	display: none;
+}
+#interest-rates {
+	background-color: var(--gray-5);
+}
+/* EXAMPLE ----------------------------------------------------------*/
+.example-bkgd {
+	padding: 10px 40px;
+	background-color: var(--gray-5-solid);
+}
+.table .tr-underline {
+	border-bottom: 2px solid var(--border-color);
+}
+.table > tbody tr td.tr-blank {
+	padding: 0;
+	background-color: var(--gray-5);
+}
+.table > tbody tr td span.boldest {
+	font-weight: 600;
+	font-size: 1.125rem;
+	line-height: 1.125rem;
+}
+.table > thead tr th { 
+ 	color: var(--dark-70) !important; 
+} 
+.additional-info > .accordion-item h5 {
+	font-weight: 600;
+margin-bottom .75rem;
+}
+/* HERO ----------------------------------------------------------- */
+/* INTRO -------------------------------------------------------------- */
+#hero {
+	background-color: #161212;
+	background-image: url(../../../images/web/hero-lp-interest-rates.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 80% 50%;
+	padding: 80px 40px 100px;
+	text-align: start;
+}
+#hero h2 {
+	font-weight: 600;
+	font-size: 2.75rem;
+	line-height: 3.125rem;
+	margin: 0 0 2rem;
+	color: var(--white);
+}
+#hero .eyebrow {
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 2px;
+	color: var(--white);
+	font-size: 0.9375rem;
+}
+#hero h4 {
+	color: var(--white);
+	font-weight: 600;
+	padding-bottom: 2rem;
+	padding-right: 5rem;
+}
+#hero .wrapper {
+	padding: 4rem 2rem 1rem 3rem;
+}
+.dflex {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+/* MEDIA QUERY | EXTRA SMALL < 576px ---------------------------------------------------------------------------------------------------- */
+@media (max-width:575.98px) {
+#hero h2 {
+	font-size: 2.5rem;
+	line-height: 3.25rem;
+}
+#hero {
+	background-color: #161212;
+	background-image: none;
+	padding: 50px 20px;
+	text-align: center;
+}
+#hero-split {
+	background-color: #161212;
+	background-image: url(../../../images/web/hero-lp-interest-rates.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 100% 100%;
+	padding: 0px;
+	margin: 0px;
+	min-height: 200px;
+	display: block;
+}
+}
+/* MEDIA QUERY | SMALL > 576px ---------------------------------------------------------------------------------------------------- */
+@media (min-width:576px) and (max-width:767.98px) {
+#hero h2 {
+	font-size: 2.5rem;
+	line-height: 3.25rem;
+}
+#hero {
+	background-color: #161212;
+	background-image: none;
+	padding: 50px 20px;
+	text-align: center;
+}
+#hero-split {
+	background-color: #161212;
+	background-image: url(../../../images/web/hero-lp-interest-rates.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 100% 100%;
+	padding: 0px;
+	margin: 0px;
+	min-height: 200px;
+	display: block;
+}
+}
+/* MEDIA QUERY | MEDIUM > 768px ---------------------------------------------------------------------------------------------------- */
+@media (min-width:768px) and (max-width:991.98px) {
+#hero h2 {
+	font-size: 2.5rem;
+	line-height: 3.25rem;
+}
+#hero-split {
+	display: none;
+}
+.introduction .pad-offset {
+	padding-top: 10px;
+}
+}
+/* MEDIA QUERY | LARGE > 992px ---------------------------------------------------------------------------------------------------- */
+@media (min-width:992px) and (max-width:1199.98px) {
+#hero h2 {
+	font-size: 2.5rem;
+	line-height: 3.25rem;
+}
+#hero-split {
+	display: none;
+}
+.introduction .pad-offset {
+	padding-top: 30px;
+}
+}
+/* MEDIA QUERY | EXTRA LARGE > 1200px ---------------------------------------------------------------------------------------------------- */
+@media (min-width:1200px) {
+#hero h2 {
+	font-size: 2.75rem;
+	line-height: 3.125rem;
+}
+#hero-split {
+	display: none;
+}
+.introduction .pad-offset {
+	padding-top: 50px;
+}
+}
+</style>
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-d23de039-d518-4f10-9810-e68da4592744","rua.cook":"true","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="XE2AM-F37QZ-LYWQP-H8KRM-4SNX5",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"XE2AM-F37QZ-LYWQP-H8KRM-4SNX5";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n="false"=="true"?1:0,t="cookiepresent",a="eykumbc7mxv4o2gjeuyq-f-92b2af3ae-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1168163","ak.ai":parseInt("665092",10),"ak.ol":"0","ak.cr":42,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"e124a23","ak.r":50930,"ak.a2":n,"ak.m":"a","ak.n":"essl","ak.bpcip":"38.21.70.0","ak.cport":49591,"ak.gh":"95.101.132.228","ak.quicv":"","ak.tlsv":"tls1.2","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1758012721","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==3fJTE11DMu3HK71gGzyIAtB5HNvVSr8eZ1ocYIlfliSgpO73I6XkHjRtFb1a9+k4XOR6Tjr+N9dtuYCHYSVx8kclQ7R6tkY+f5ollEX7nPVQsRcancN7llp8BWC6dsfJK0W58SFLAAJmSQ8CBIVEE1+aURVVA9np8QLG+ZsCxohSWHJsLhvppL2CFwbZvQ4EzFsZYCLPqoCO1oHKtH6nuQsLz3qdV5KdcYqO6dGE09uARMuLZQL0NpgfC5ilqHuS3zaRZZ7hmEusaRBFql7YSdfJt8hZmE/OwZjuQdQcU1tquXjQjwuOQjY1B3gLoCMF3A+k4UGVTOP57WvkbzI6jtp1RHvGofpfxsUa5fI1X0XEHHhmYSOcJWE+Jqj1OGzO6bF60dJgUqkE10kXT9Q7pvDYvuq6RodnjstpqDmB1V0=","ak.pv":"398","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.html","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak-2.html","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body>
+<div id="printheader"></div>
+<!-- HEADER START  -->
+<div class="ibkr-header" id="ibkr-header">
+    
+        
+<style type="text/css">
+.banner-risk-warning {
+    margin:0px;
+    padding:8px 0px;
+    width:100%;
+    height:auto;
+    background-color:#242424;
+}
+.banner-risk-warning p {
+    margin:0px;
+    padding:0px;
+    font-weight:400;
+    font-size:1.0rem;
+    line-height:1.25rem;
+    text-align:center;
+    color:#FFFFFF;
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | EXTRA SMALL (< 576PX) ---------------------------------------------------------------------------------------------------- */
+@media (max-width:575.98px) {
+    .banner-risk-warning {
+        padding:4px 0px;
+    }
+    .banner-risk-warning p {
+        font-size:0.8125rem;
+        line-height:1.0rem;
+    }
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | SMALL (576PX-767.98PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:576px) and (max-width:767.98px) {
+    .banner-risk-warning {
+        padding:4px 0px;
+    }
+    .banner-risk-warning p {
+        font-size:0.8125rem;
+        line-height:1.0rem;
+    }
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | MEDIUM (768PX-991.98PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:768px) and (max-width:991.98px) {
+    .banner-risk-warning {
+        padding:4px 0px;
+    }
+    .banner-risk-warning p {
+        font-size:0.8125rem;
+        line-height:1.0rem;
+    }
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | LARGE (992PX-1199.98PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:992px) and (max-width:1199.98px) {
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | EXTRA LARGE (>1200PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:1200px) {
+}
+</style>
+<div class="banner-risk-warning">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p>A p&#233;nz&#252;gyi term&#233;kekbe val&#243; befektet&#233;s kock&#225;zattal j&#225;r. A vesztes&#233;ge ak&#225;r indul&#243; befektet&#233;s&#233;t is meghaladhatja.</p>
+            </div>
+        </div>
+    </div>
+</div>    <!-- NAV TOP START (LG/XL ONLY) -->
+    <nav class="navbar navbar-inverse navbar-expand-lg navbar-top d-none d-lg-block">
+        <div class="container">
+            <div class="navbar-collapse collapse" id="ibkr-nav-top"><!-- LEFT MENU -->
+                
+                <ul class="navbar-nav mr-auto align-items-center"><!-- FOR INDIVIDUALS -->
+                    <li class="nav-item dropdown"><a href="#" target="_self" class="nav-link dropdown-toggle" id="nav-for-individuals" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mag&#225;nszem&#233;lyek</a>
+                        <div class="dropdown-menu dropdown-ind-accounts" aria-labelledby="nav-for-individuals">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../individual-ie.html" target="_self" class="dropdown-item" >Egy&#233;ni vagy K&#246;z&#246;s sz&#225;mla</a> <a href="../trust-ie.html" target="_self" class="dropdown-item" >Bizalmi vagyonkezel&#233;si (trust) sz&#225;mla</a> <a href="../family-account-ie.html" target="_self" class="dropdown-item" >Csal&#225;di sz&#225;mla</a> <a href="../long-term-investment-accounts-ie.html" target="_self" class="dropdown-item">Tart&#243;s befektet&#233;si (TBSZ) sz&#225;mla</a> <a href="../plan-depargne-en-action-accounts-ie.html" target="_self" class="dropdown-item">Plan d&#8217;Epargne en Actions (PEA) sz&#225;mla</a> 
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- FOR INSTITUTIONS -->
+                    <li class="nav-item dropdown"><a href="#" target="_self" class="nav-link dropdown-toggle" id="nav-for-institutions" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Int&#233;zm&#233;nyek</a>
+                        <div class="dropdown-menu dropdown-inst-accounts" aria-labelledby="nav-for-institutions">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../institutions-ie.html" target="_self" class="dropdown-item" >Int&#233;zm&#233;nyi &#252;gyfelek &#8211; kezd&#337;lap</a> <a href="../advisor-ie.html" target="_self" class="dropdown-item" >Bejegyzett befektet&#233;si tan&#225;csad&#243;k</a> <a href="../proprietary-trading-group-ie.html" target="_self" class="dropdown-item" >Saj&#225;t sz&#225;ml&#225;s keresked&#233;si csoportok</a> <a href="../hedge-fund-ie.html" target="_self" class="dropdown-item" >Fedezeti alapok</a> <a href="../broker-ie.html" target="_self" class="dropdown-item" >K&#246;zvet&#237;t&#337; br&#243;kerek</a> <a href="../family-office-ie.html" target="_self" class="dropdown-item" >Int&#233;zm&#233;nyi csal&#225;di sz&#225;ml&#225;k</a> <a href="../compliance-officer-ie.html" target="_self" class="dropdown-item" >Compliance vezet&#337;k</a> <a href="../small-business-ie.html" target="_self" class="dropdown-item" >Kisv&#225;llalkoz&#225;sok</a> <a href="../fsa-insurance-providers.html" target="_self" class="dropdown-item" >Teljes k&#246;r&#369; adminisztr&#225;tori sz&#225;mla <br>biztos&#237;t&#243;knak</a> <a href="../money-manager-ie.html" target="_self" class="dropdown-item" >Befektet&#233;skezel&#337;k</a> <a href="../administrator-ie.html" target="_self" class="dropdown-item" >Befektet&#233;si alap adminisztr&#225;torok</a>  <a href="https://interactivebrokers.eu/campus/stl/" target="_blank" class="dropdown-item" >Oktat&#225;si int&#233;zm&#233;nyek</a>                                 </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul><!-- RIGHT MENU -->
+                
+                <ul class="navbar-nav ml-auto align-items-center"><!-- FREE TRIAL -->
+                    <li class="nav-item"><a href="../../trading/free-trial.html" target="_self" class="nav-link">INGYENES PR&#211;BAVERZI&#211;</a></li><!-- CAREERS -->
+                    
+                    <li class="nav-item"><a href="../../general/about/careers-splash.html" target="_self" class="nav-link">Karrierlehet&#337;s&#233;gek</a></li><!-- ABOUT US -->
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-about-us" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">R&#243;lunk</a>
+                        <div class="dropdown-menu dropdown-about-us" aria-labelledby="nav-about-us">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../../general/financial-strength.html" target="_self" class="dropdown-item" >Stabilit&#225;s &#233;s biztons&#225;g</a> <a href="../../general/about/info-and-history.html" target="_self" class="dropdown-item">Inform&#225;ci&#243;k &#233;s c&#233;gt&#246;rt&#233;net</a> <a href="../../general/awards.html" target="_self" class="dropdown-item">D&#237;jak</a> <a href="../../about/news-at-ibkr.html" target="_self" class="dropdown-item">IBKR h&#237;rek</a> <a href="../../general/about/press-and-media.html" target="_self" class="dropdown-item">Sajt&#243; &#233;s m&#233;dia</a> <a href="https://investors.interactivebrokers.com/ir/main.php" target="_blank" class="dropdown-item" rel="noreferrer noopener">Befektet&#337;i kapcsolatok</a> <a href="../../general/about/sustainability.html" target="_self" class="dropdown-item">Fenntarthat&#243;s&#225;g</a> <a href="../legalDocuments/brokerPerformanceReports.html" target="_self" class="dropdown-item">Szab&#225;lyoz&#243;i jelent&#233;sek</a> <a href="../referrer.html" target="_self" class="dropdown-item">K&#246;zvet&#237;tse hozz&#225;nk egy bar&#225;tj&#225;t</a> <a href="../../general/about/affiliate-programs.html" target="_self" class="dropdown-item">Affiliate programok</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- SUPPORT -->
+                    
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-support" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">T&#225;mogat&#225;s</a>
+                        <div class="dropdown-menu dropdown-contact-us" aria-labelledby="nav-support">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../../support/fund-my-account.html" target="_self" class="dropdown-item">T&#246;ltse fel a sz&#225;ml&#225;j&#225;t</a> <a href="../../support/individuals.html" target="_self" class="dropdown-item">Mag&#225;nszem&#233;lyek</a> <a href="../../support/institutions.html" target="_self" class="dropdown-item">Int&#233;zm&#233;nyek</a> <a href="../../support/institutional-sales-contacts4343.html?p=uk" target="_self" class="dropdown-item">Int&#233;zm&#233;nyi &#233;rt&#233;kes&#237;t&#337;k el&#233;rhet&#337;s&#233;gei</a> <a href="../../general/contact/ibot-container.html" target="_self" class="dropdown-item">GYIK &#225;ttekint&#233;se</a> <a href="../../support/reports-and-dates.html" target="_self" class="dropdown-item">Ad&#243;inform&#225;ci&#243;k</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- LANGUAGE SELECTOR -->
+                    <li class="nav-item dropdown"><a href="#" class="nav-link nav-language dropdown-toggle" id="nav-language" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Nyelv</span><img src="../../../images/web/icons/icon-language.svg" alt="Nyelv" width="23" height="18" border="0" /></a>
+                        <div class="dropdown-menu dropdown-language" aria-labelledby="nav-language">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../../../en/home.html" target="_self" class="dropdown-item">English</a>
+                                    <a href="../../../fr/home.html" target="_self" class="dropdown-item">Fran&#231;ais</a>
+                                    <a href="../../../de/home.html" target="_self" class="dropdown-item">Deutsch</a>
+                                    <a href="../../../es/home.html" target="_self" class="dropdown-item">Espa&#241;ol</a>
+                                    <a href="../../../it/home.html" target="_self" class="dropdown-item">Italiano</a>
+                                    <a href="../../home.html" target="_self" class="dropdown-item">Magyar</a>
+                                    <a href="../../../pt/home.html" target="_self" class="dropdown-item">Portugu&#234;s</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                                    </ul>
+            </div>
+        </div><!-- NAV TOP END --><!-- NAV BOTTOM START -->
+    </nav>
+    
+    <nav class="navbar navbar-inverse navbar-expand-lg navbar-bottom">
+        <div class="container"><!-- LOGO -->
+            
+             <a href="../../home.html" target="_self" title="Interactive Brokers kezd&#337;lap" alt="Interactive Brokers log&#243;" class="navbar-brand brand-logo" aria-label="Interactive Brokers Home"><span>Interactive Brokers kezd&#337;lap</span></a>
+            <!-- TOGGLE (XS/SM/MD ONLY) --><!-- OPEN ACCOUNT BUTTON (XS/SM/MD ONLY) -->
+            <button class="navbar-toggler" type="button" aria-label="Toggle Navigation"><span class="navbar-toggler-icon"><i class="fas fa-bars" aria-hidden="true"></i></span></button>
+            <a href="https://www.interactivebrokers.co.uk/Universal/Application" target="_self" class="d-block d-lg-none btn btn-open-account">Sz&#225;mlanyit&#225;s</a>
+            <!-- LOG IN (SM/MD ONLY) -->
+             <a href="https://www.interactivebrokers.co.uk/sso/Login?RL=1" target="_self" class="d-none d-sm-block d-lg-none btn btn-log-in">Bejelentkez&#233;s</a>             <!-- IBKR NAV BOTTOM START -->
+            <div class="navbar-collapse collapse" id="ibkr-nav-bottom">
+                <ul class="navbar-nav ml-auto align-items-center"><!-- WHY IBKR -->
+                    
+                    <li class="nav-item"><a href="../../whyib/overview.html" target="_self" class="nav-link">Mi&#233;rt v&#225;lasszon minket?</a></li><!-- PRICING -->
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-pricing" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&#193;rk&#233;pz&#233;s</a>
+                        <div class="dropdown-menu dropdown-pricing" aria-labelledby="nav-pricing">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../../pricing/commissions-home.html" target="_self" class="dropdown-item">Jutal&#233;kok</a> <a href="../../trading/margin-rates.html" target="_self" class="dropdown-item">Fedezeti hitelkamatok</a> <a href="pricing-interest-rates.html" target="_self" class="dropdown-item">Kamatl&#225;bak</a> <a href="../../pricing/short-sale-cost.html" target="_self" class="dropdown-item">Short elad&#225;s k&#246;lts&#233;ge</a> <a href="../../pricing/research-news-services.html" target="_self" class="dropdown-item">Elemz&#233;sek, h&#237;rek</a> <a href="../../pricing/market-data-pricing.html" target="_self" class="dropdown-item">Piaci adatok &#225;rk&#233;pz&#233;se</a> <a href="../../pricing/stock-yield-enhancement-program-ie.html" target="_self" class="dropdown-item">R&#233;szv&#233;nyhozam-n&#246;vel&#337; program (SYEP)</a> <a href="../../pricing/other-fees-overview.html" target="_self" class="dropdown-item">D&#237;jak</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- TRADING -->
+                    
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-technology" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Keresked&#233;s</a>
+                        <div class="dropdown-menu dropdown-technology" aria-labelledby="nav-technology">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../../trading/trading-platforms.html" target="_self" class="dropdown-item">Platformok</a> <a href="../../trading/ib-api.html" target="_self" class="dropdown-item">API fel&#252;letek</a> <a href="../../trading/margin.html" target="_self" class="dropdown-item">Fedezet (Margin)</a> <a href="../../trading/products-exchanges.html" target="_self" class="dropdown-item">Keres&#233;s ticker k&#243;dra vagy t&#337;zsd&#233;re</a> <a href="../../trading/products-stocks.html" target="_self" class="dropdown-item">Term&#233;kek &#225;ttekint&#233;se</a> <a href="../../trading/ordertypes.html" target="_self" class="dropdown-item">Megb&#237;z&#225;st&#237;pusok</a> <a href="../../whyib/reporting.html" target="_self" class="dropdown-item">Jelent&#233;sek</a> <a href="../../trading/securities-financing.html" target="_self" class="dropdown-item">&#201;rt&#233;kpap&#237;r-finansz&#237;roz&#225;s</a> <a href="../../trading/features-in-focus.html" target="_self" class="dropdown-item">Szolg&#225;ltat&#225;saink r&#233;szletei</a> <a href="../../general/education/probability_lab.html" target="_self" class="dropdown-item">Probability Lab</a> <a href="../../trading/sustainable-investing-ie.html" target="_self" class="dropdown-item">Fenntarthat&#243; befektet&#233;s</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- SERVICES -->
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-products" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Szolg&#225;ltat&#225;sok</a>
+                        <div class="dropdown-menu dropdown-products" aria-labelledby="nav-products">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../../trading/globalanalyst.html" target="_self" class="dropdown-item">IBKR GlobalAnalyst</a> <a href="../../trading/si-quotes.html" target="_self" class="dropdown-item">EUIBSI V&#233;tel/Elad&#225;s</a> <a href="../../portfolioanalyst/overview.html" target="_self" class="dropdown-item" rel="noreferrer noopener">PortfolioAnalyst</a> <a href="../../trading/products-bonds.html" target="_self" class="dropdown-item">K&#246;tv&#233;ny piact&#233;r</a> <a href="../../trading/products-mutual-funds.html" target="_self" class="dropdown-item">Befektet&#233;si alap piact&#233;r</a> <a href="../../trading/commission-free-etfs-mkt.html" target="_self" class="dropdown-item">ETF-ek tranzakci&#243;s d&#237;j n&#233;lk&#252;l</a> <a href="https://gdcdyn.interactivebrokers.com/aces/Marketplace/InvestorsMarketplace" target="_blank" class="dropdown-item">Befektet&#337;i piact&#233;r</a> <a href="../../trading/short-securities-availability.html" target="_self" class="dropdown-item">Shortolhat&#243; &#233;rt&#233;kpap&#237;rok el&#233;rhet&#337;s&#233;ge</a> <a href="../../trading/third-party-integration.html" target="_self" class="dropdown-item">Integr&#225;ci&#243; harmadik felekkel</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- EDUCATION -->
+                    
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-education" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Oktat&#225;s</a>
+                        <div class="dropdown-menu dropdown-education" aria-labelledby="nav-education">
+                            <div class="row">
+                                <div class="col">
+                                     <a href="https://interactivebrokers.eu/campus/" target="_blank" class="dropdown-item">IBKR Campus</a> <a href="https://interactivebrokers.eu/campus/academy" target="_blank" class="dropdown-item" rel="noreferrer noopener">Traders' Academy</a> <a href="https://interactivebrokers.eu/campus/news" target="_blank" class="dropdown-item" rel="noreferrer noopener">Traders' Insight</a> <a href="https://interactivebrokers.eu/campus/podcasts" target="_blank" class="dropdown-item" rel="noreferrer noopener">IBKR Podcastok</a> <a href="https://interactivebrokers.eu/campus/quant" target="_blank" class="dropdown-item" rel="noreferrer noopener">IBKR Quant Blog</a> <a href="https://interactivebrokers.eu/campus/webinars" target="_blank" class="dropdown-item" rel="noreferrer noopener">Webin&#225;riumok</a> <a href="https://interactivebrokers.eu/campus/stl/" target="_blank" class="dropdown-item">Student Trading Lab</a> <a href="https://interactivebrokers.eu/campus/glossary" target="_blank" class="dropdown-item" rel="noreferrer noopener">Traders' Glossary</a>  <a href="../../general/calendar/calendar.html" target="_self" class="dropdown-item">Keresked&#233;si napt&#225;r</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- SEARCH -->
+                    <li class="nav-item dropdown d-none d-lg-block" id="search-expand"><a href="#" class="nav-link nav-search dropdown-toggle" id="nav-search" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Search"><span>Keres&#233;s</span><i class="fas fa-search" aria-hidden="true"></i></a>
+                        <div class="dropdown-menu dropdown-search" aria-labelledby="nav-search">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="search_box">
+                                        <script type="text/javascript">
+                                         searchbox_input_changed=false;
+                                         $('#search-expand').on('shown.bs.dropdown', function(e) {
+                                           $('#searchField').focus();
+                                         });
+                                        </script>
+                                        <form action="https://www.interactivebrokers.ie/hu/search/search.php" method="get" class="search_form" id="search_form_id">
+                                            <input type="text" aria-label="Search Box" placeholder="Search" name="q" maxlength="64" autocomplete="off" id="searchField" class="form-control s swap_value searchinput" aria-label="Search Interactive Brokers">
+                                            <button type="submit" value="" id="searchsubmit" class="searchsubmit"><i class="fas fa-search" aria-hidden="true" aria-label="Submit Search"></i></button>
+                                        </form>
+                                        
+                                                                            </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- LOG IN -->
+                    
+                    <li class="nav-item dropdown d-none d-lg-block"><a href="#" target="_self" class="nav-link nav-login dropdown-toggle" id="nav-log-in" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bejelentkez&#233;s</a>
+                        <div class="dropdown-menu dropdown-login" aria-labelledby="nav-log-in">
+                            <div class="row">
+                                <div class="col">
+                                     <a href="../../../sso/Login0104.html?RL=1" target="_self" class="dropdown-item dropdown-portal">Port&#225;l bejelentkez&#233;s</a>  <a href="../../trading/ibkr-desktop.html" target="_self" class="dropdown-item">IBKR Desktop let&#246;lt&#233;se </a> <a href="../../trading/tws.html#tws-software" target="_self" class="dropdown-item">Trader Workstation let&#246;lt&#233;se</a> <a href="../../trading/tws-mobile.html#trytoday-drop" target="_self" class="dropdown-item">IBKR Mobile let&#246;lt&#233;se</a> <a href="../../trading/ibgateway-latest.html" target="_self" class="dropdown-item">IB Gateway let&#246;lt&#233;se</a> <a href="../../trading/trading-platforms.html" target="_self" class="dropdown-item">Az &#246;sszes IBKR platform &#246;sszehasonl&#237;t&#225;sa</a> <a href="https://forecasttrader.interactivebrokers.ie/eventtrader/#/markets" target="_self" class="dropdown-item">IBKR ForecastTrader</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- OPEN ACCOUNT -->
+                    <li class="nav-item dropdown d-none d-lg-block"><a href="#" target="_self" class="nav-link nav-open-account dropdown-toggle" id="nav-open-account" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sz&#225;mlanyit&#225;s</a>
+                        <div class="dropdown-menu dropdown-open-account" aria-labelledby="nav-open-account">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="https://www.interactivebrokers.co.uk/Universal/Application" target="_self" class="dropdown-item dropdown-portal">Sz&#225;mlanyit&#225;si k&#233;relem ind&#237;t&#225;sa</a> <a href="https://www.interactivebrokers.co.uk/sso/Login?c=t" target="_self" class="dropdown-item">Sz&#225;mlanyit&#225;si k&#233;relem befejez&#233;se</a> <a href="../../general/what-you-need-inv.html" target="_self" class="dropdown-item">Mire lesz sz&#252;ks&#233;ge?</a> <a href="../account-guide.html" target="_self" class="dropdown-item">Hogyan v&#225;lassza ki az &#214;nnek megfelel&#337; sz&#225;ml&#225;t?</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul><!-- IBKR MENU END -->
+                
+            </div>
+        </div><!-- NAV BOTTOM END -->
+    </nav>
+</div><!-- HEADER END ---------------------------------------------------------------------------------------------------- --><!-- MOBILE NAV START (XS/SM/MD ONLY) ---------------------------------------------------------------------------------------------------- -->
+
+<div class="menu-mobile d-lg-none"><!-- CLOSE BUTTON -->
+    
+    <div class="close-button"><button type="button" class="btn-close" aria-label="Close Menu"><i class="fas fa-times"></i></button></div><!-- LOGO -->
+    <div class="logo-container"><a href="../../home.html" target="_self" class="brand-logo" aria-label="Interactive Brokers Home"><span>Interactive Brokers kezd&#337;lap</span></a></div><!-- SEARCH -->
+    
+    <div class="search-container">
+        <div class="search-box">
+            <form action="https://www.interactivebrokers.ie/hu/search/search.php" method="get" class="search_form" id="search_form_id">
+                <input type="text" class="form-control" placeholder="Search" name="q" maxlength="64" autocomplete="off" id="searchFieldMobile" aria-label="Search Interactive Brokers"> 	
+                <button type="submit" class="btn-search-submit" value="" id="searchsubmitMobile" aria-label="Submit Search"><i class="fas fa-search" aria-hidden="true"></i></button> 	
+            </form>
+        </div>
+    </div>
+    <ul>
+            
+        <!-- PORTAL LOGIN -->
+        <li><a href="../../../sso/Login0104.html?RL=1" target="_self" class="menu-log-in">Port&#225;l bejelentkez&#233;s</a></li>
+        
+    <!-- OPEN ACCOUNT -->
+    <li class="has-submenu"><a href="#" target="_self" class="menu-open-account" data-submenu="submenu-open-account">Sz&#225;mlanyit&#225;s</a>
+        <div class="submenu" id="submenu-open-account">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-open-account">Vissza</button></p>
+            <p class="submenu-title">SZ&#193;MLANYIT&#193;S</p>
+            <ul>
+            <li><a href="https://www.interactivebrokers.co.uk/Universal/Application" target="_self" class="menu-start-application">Sz&#225;mlanyit&#225;si k&#233;relem ind&#237;t&#225;sa</a></li>
+            <li><a href="https://www.interactivebrokers.co.uk/sso/Login?c=t" target="_self">Sz&#225;mlanyit&#225;si k&#233;relem befejez&#233;se</a></li>
+            <li><a href="../../general/what-you-need-inv.html" target="_self">Mire lesz sz&#252;ks&#233;ge?</a></li>
+            <li><a href="../account-guide.html" target="_self">Hogyan v&#225;lassza ki az &#214;nnek megfelel&#337; sz&#225;ml&#225;t?</a></li>
+            </ul>
+        </div>
+    </li>
+        
+    <!-- FREE TRIAL -->
+    <li><a href="../../trading/free-trial.html" target="_self">Ingyenes pr&#243;baverzi&#243;</a></li><!-- WHY IBKR -->
+    <li><a href="../../whyib/overview.html" target="_self">Mi&#233;rt v&#225;lasszon minket?</a></li><!-- ACCOUNT TYPES -->
+    
+    <li class="has-submenu"><a href="#" target="_self" data-submenu="submenu-account-types">Sz&#225;mlat&#237;pusok</a>
+        <div class="submenu" id="submenu-account-types">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-account-types">Vissza</button></p>
+            <p class="submenu-title">MAG&#193;NSZEM&#201;LYEK</p>
+            <ul>
+            <li><a href="../individual-ie.html" target="_self" >Egy&#233;ni vagy K&#246;z&#246;s sz&#225;mla</a></li>
+            <li><a href="../trust-ie.html" target="_self" >Bizalmi vagyonkezel&#233;si (trust) sz&#225;ml&#225;k</a></li>
+            <li><a href="../family-account-ie.html" target="_self" >Csal&#225;di sz&#225;ml&#225;k</a></li>
+            <li><a href="../long-term-investment-accounts-ie.html" target="_self">Tart&#243;s befektet&#233;si (TBSZ) sz&#225;ml&#225;k</a></li>
+            <li><a href="../plan-depargne-en-action-accounts-ie.html" target="_self">Plan d&#8217;Epargne en Action (PEA) sz&#225;ml&#225;k</a></li>
+                        
+            </ul>
+            <p class="submenu-title">INT&#201;ZM&#201;NYEK</p>
+            <ul>
+            <li><a href="../institutions-ie.html" target="_self" >Int&#233;zm&#233;nyi sz&#225;ml&#225;k &#8211; Kezd&#337;lap</a></li>
+            <li><a href="../advisor-ie.html" target="_self" >Bejegyzett befektet&#233;si tan&#225;csad&#243;k</a></li>
+            <li><a href="../proprietary-trading-group-ie.html" target="_self" >Saj&#225;t sz&#225;ml&#225;s keresked&#233;si csoportok</a></li>
+            <li><a href="../hedge-fund-ie.html" target="_self" >Fedezeti alapok</a></li>
+            <li><a href="../broker-ie.html" target="_self" >K&#246;zvet&#237;t&#337; br&#243;kerek</a></li>
+            <li><a href="../family-office-ie.html" target="_self" >Int&#233;zm&#233;nyi csal&#225;di sz&#225;ml&#225;k</a></li>
+            <li><a href="../compliance-officer-ie.html" target="_self" >Compliance vezet&#337;k</a></li>
+            <li><a href="../small-business-ie.html" target="_self" >Kisv&#225;llalkoz&#225;sok</a></li>
+            <li><a href="../fsa-insurance-providers.html" target="_self" >Teljes k&#246;r&#369; adminisztr&#225;tori sz&#225;mla <br>biztos&#237;t&#243;knak</a></li>
+            <li><a href="../money-manager-ie.html" target="_self" >Befektet&#233;skezel&#337;k</a></li>
+            <li><a href="../administrator-ie.html" target="_self" >Befektet&#233;si alap adminisztr&#225;torok</a></li>
+             
+             
+            <li><a href="https://interactivebrokers.eu/campus/stl/" target="_blank" >Oktat&#225;si int&#233;zm&#233;nyek</a></li>
+                        
+            </ul>
+        </div>
+    </li><!-- PRICING -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-pricing">&#193;rk&#233;pz&#233;s</a>
+        <div class="submenu" id="submenu-pricing">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-pricing">Vissza</button></p>
+            <p class="submenu-title">&#193;RK&#201;PZ&#201;S</p>
+            <ul>
+            <li><a href="../../pricing/commissions-home.html" target="_self">Jutal&#233;kok</a></li>
+            <li><a href="../../trading/margin-rates.html" target="_self">Fedezeti hitelkamatl&#225;bak</a></li>
+            <li><a href="pricing-interest-rates.html" target="_self">Kamatl&#225;bak</a></li>
+            <li><a href="../../pricing/short-sale-cost.html" target="_self">Short elad&#225;s k&#246;lts&#233;ge</a></li>
+            <li><a href="../../pricing/research-news-services.html" target="_self">Kutat&#225;s &#233;s h&#237;rek</a></li>
+            <li><a href="../../pricing/market-data-pricing.html" target="_self">Piaci adatok &#225;rk&#233;pz&#233;se</a></li>
+            <li><a href="../../pricing/stock-yield-enhancement-program-ie.html" target="_self">R&#233;szv&#233;nyhozam-n&#246;vel&#337; program</a></li>
+            <li><a href="../../pricing/other-fees-overview.html" target="_self">D&#237;jak</a></li>
+            </ul>
+        </div>
+    </li><!-- TRADING -->
+    
+    <li class="has-submenu"><a href="#" data-submenu="submenu-trading">Keresked&#233;s</a>
+        <div class="submenu" id="submenu-trading">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-trading">Vissza</button></p>
+            <p class="submenu-title">KERESKED&#201;S</p>
+            <ul>
+            <li><a href="../../trading/trading-platforms.html" target="_self">Platformok</a></li>
+            <li><a href="../../trading/ib-api.html" target="_self">API fel&#252;letek</a></li>
+            <li><a href="../../trading/margin.html" target="_self">Fedezet (margin)</a></li>
+            <li><a href="../../trading/products-exchanges.html" target="_self">Keres&#233;s ticker k&#243;dra vagy t&#337;zsd&#233;re</a></li>
+            <li><a href="../../trading/products-stocks.html" target="_self">Term&#233;kek &#225;ttekint&#233;se</a></li>
+            <li><a href="../../trading/ordertypes.html" target="_self">Megb&#237;z&#225;st&#237;pusok</a></li>
+            <li><a href="../../whyib/reporting.html" target="_self">Jelent&#233;sek</a></li>
+            <li><a href="../../trading/securities-financing.html" target="_self">&#201;rt&#233;kpap&#237;r-finansz&#237;roz&#225;s</a></li>
+            <li><a href="../../trading/features-in-focus.html" target="_self">R&#233;szletes t&#225;j&#233;koztat&#243; a szolg&#225;ltat&#225;sokr&#243;l</a></li>
+            <li><a href="../../general/education/probability_lab.html" target="_self">Probability Lab</a></li>
+            <li><a href="../../trading/sustainable-investing-ie.html" target="_self">Fenntarthat&#243; befektet&#233;s</a></li>
+            </ul>
+        </div>
+    </li><!-- SERVICES -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-services">Szolg&#225;ltat&#225;sok</a>
+        <div class="submenu" id="submenu-services">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-services">Vissza</button></p>
+            <p class="submenu-title">SZOLG&#193;LTAT&#193;SOK</p>
+            <ul>
+            <li><a href="../../trading/globalanalyst.html" target="_self">IBKR GlobalAnalyst</a></li>
+            <li><a href="../../trading/si-quotes.html" target="_self">EUIBSI V&#233;tel/Elad&#225;s</a></li>
+            <li><a href="../../portfolioanalyst/overview.html" target="_self" rel="noreferrer noopener">PortfolioAnalyst</a></li>
+            <li><a href="../../trading/products-bonds.html" target="_self">K&#246;tv&#233;ny piact&#233;r</a></li>
+            <li><a href="../../trading/products-mutual-funds.html" target="_self">Befektet&#233;si alap piact&#233;r</a></li>
+            <li><a href="../../trading/commission-free-etfs-mkt.html" target="_self">Tranzakci&#243;s d&#237;j n&#233;lk&#252;li ETF-ek</a></li>
+            <li><a href="https://gdcdyn.interactivebrokers.com/aces/Marketplace/InvestorsMarketplace" target="_blank">Befektet&#337;i piact&#233;r</a></li>
+            <li><a href="../../trading/short-securities-availability.html" target="_self">Shortolhat&#243; &#233;rt&#233;kpap&#237;rok el&#233;rhet&#337;s&#233;ge</a></li>
+            <li><a href="../../trading/third-party-integration.html" target="_self">Harmadik f&#233;l integr&#225;ci&#243;</a></li>
+            </ul>
+        </div>
+    </li><!-- EDUCATION -->
+    
+    <li class="has-submenu"><a href="#" data-submenu="submenu-education">Oktat&#225;s</a>
+        <div class="submenu" id="submenu-education">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-education">Vissza</button></p>
+            <p class="submenu-title">OKTAT&#193;S</p>
+            <ul>
+             
+             
+            <li><a href="https://interactivebrokers.eu/campus/" target="_blank">IBKR Campus</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/academy" target="_blank">Traders' Academy</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/news" target="_blank">Traders' Insight</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/podcasts" target="_blank">IBKR Podcastok</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/quant" target="_blank">IBKR Quant Blog</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/webinars" target="_blank">Webin&#225;riumok</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/stl/" target="_blank">Student Trading Lab</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/glossary" target="_blank">Traders' Glossary</a></li>
+                        
+            <li><a href="../../general/calendar/calendar.html" target="_self">Keresked&#233;si napt&#225;r</a></li>
+            </ul>
+        </div>
+    </li><!-- ABOUT US -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-about-us">R&#243;lunk</a>
+        <div class="submenu" id="submenu-about-us">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-about-us">Vissza</button></p>
+            <p class="submenu-title">R&#211;LUNK</p>
+            <ul>
+            <li><a href="../../general/financial-strength.html" target="_self">Stabilit&#225;s &#233;s biztons&#225;g</a></li>
+            <li><a href="../../general/about/info-and-history.html" target="_self">Inform&#225;ci&#243;k &#233;s c&#233;gt&#246;rt&#233;net</a></li>
+            <li><a href="../../general/about/careers-splash.html" target="_self">Karrierlehet&#337;s&#233;gek</a></li>
+            <li><a href="../../general/awards.html" target="_self">D&#237;jak</a></li>
+            <li><a href="../../about/news-at-ibkr.html" target="_self">IBKR h&#237;rek</a></li>
+            <li><a href="../../general/about/press-and-media.html" target="_self">Sajt&#243; &#233;s m&#233;dia</a></li>
+            <li><a href="https://investors.interactivebrokers.com/ir/main.php" target="_blank" rel="noreferrer noopener">Befektet&#337;i kapcsolatok</a></li>
+            <li><a href="../../general/about/sustainability.html" target="_self">Fenntarthat&#243;s&#225;g</a></li>
+            <li><a href="../legalDocuments/brokerPerformanceReports.html" target="_self">Szab&#225;lyoz&#243;i jelent&#233;sek</a></li>
+            <li><a href="../referrer.html" target="_self">K&#246;zvet&#237;tse hozz&#225;nk egy bar&#225;tj&#225;t</a></li>
+            <li><a href="../../general/about/affiliate-programs.html" target="_self">Affiliate programok</a></li>
+            </ul>
+        </div>
+    </li><!-- SUPPORT -->
+    
+    <li class="has-submenu"><a href="#" data-submenu="submenu-support">T&#225;mogat&#225;s</a>
+        <div class="submenu" id="submenu-support">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-support">Vissza</button></p>
+            <p class="submenu-title">T&#193;MOGAT&#193;S</p>
+            <ul>
+            <li><a href="../../support/fund-my-account.html" target="_self">T&#246;ltse fel a sz&#225;ml&#225;j&#225;t</a></li>
+            <li><a href="../../support/individuals.html" target="_self">Mag&#225;nszem&#233;lyek</a></li>
+            <li><a href="../../support/institutions.html" target="_self">Int&#233;zm&#233;nyek</a></li>
+            <li><a href="../../support/institutional-sales-contacts4343.html?p=uk" target="_self">Int&#233;zm&#233;nyi &#233;rt&#233;kes&#237;t&#337;k el&#233;rhet&#337;s&#233;gei</a></li>
+            <li><a href="../../general/contact/ibot-container.html" target="_self">Tekintse &#225;t a GYIK-et</a></li>
+            <li><a href="../../support/reports-and-dates.html" target="_self">Ad&#243;inform&#225;ci&#243;k</a></li> 
+            </ul>
+        </div>
+    </li><!-- LANGUAGE -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-language">Nyelv</a>
+        <div class="submenu" id="submenu-language">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-language">Vissza</button></p>
+            <p class="submenu-title">NYELV</p>
+            <ul>
+            <li><a href="../../home.html" target="_self">Angol</a></li>
+            <li><a href="../../../fr/home.html" target="_self">Fran&#231;ais</a></li>
+            <li><a href="../../../de/home.html" target="_self">Deutsch</a></li>
+            <li><a href="../../../es/home.html" target="_self">Espa&#241;ol</a></li>
+            <li><a href="../../../it/home.html" target="_self">Italiano</a></li>
+            <li><a href="../../home.html" target="_self">Magyar</a></li>
+            <li><a href="../../../pt/home.html" target="_self">Portugu&#234;s</a></li>
+            </ul>
+        </div>
+    </li><!-- REGION SELECTOR -->
+    
+        
+    </ul>
+</div><!-- MOBILE NAV OVERLAY -->
+<div class="website-overlay d-lg-none"></div><!-- MOBILE NAV END  -->
+
+<script>
+$(window).on('load', function() {
+    // Simple check if URL contains 'conf=am'
+    if (!window.location.href.includes('conf=am')) {
+        $('#region-modal').modal({
+            backdrop: 'static',
+            keyboard: false
+        });
+        $('#region-modal').modal('show');
+        $('body').removeClass('modal-open');
+        $('body').css('overflow', '');
+        $('body').css('padding-right', '');
+    }
+});
+</script>
+<div class="modal modal-cookies fade" id="region-modal" tabindex="-1" role="dialog" aria-labelledby="modalRegionLabel" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+    <div class="modal-content" id="modalRegionContent">
+      <div class="modal-header d-block">
+        <p class="fs-5 modal-title" id="modalCookieLabel">Which IBKR website is best for you?</p>
+        <p class="pt-10 mb-0 pr-30 fs-6">The content on the website you selected is not intended for investors in your location. </p>
+        <p class="mb-40 fs-6">Please choose the website most applicable to you.</p>
+      </div>
+      <div class="modal-footer" id="modalRegionControls">
+        <div class="row">
+          <div class="col-12 col-md-4"></div>
+          <div class="col-12 col-md-8">
+            <p>
+              <button class="btn btn-primary" id="btnRegionRecommendation">Go to US website</button>
+              <button class="btn btn-primary" id="btnRegionCurrent">Stay on IE website</button>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+$(function() {
+   $('button#btnRegionRecommendation').click(function() {
+    window.location.href = 'https://www.interactivebrokers.com/';
+  });
+  $('button#btnRegionCurrent').click(function() {
+    setCookie("IB_REG", 1, 365, '.interactivebrokers.ie');
+    location.reload();
+  });
+});
+</script><div id="contents">
+    <section class="page-title" id="page-title">
+        <div class="container">
+            <div class="row">
+                <div class="col"><h1>Kamatl&#225;bak</h1></div>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript">
+$(function() {
+ window.setInterval(ping, 30000);
+ $('#int_calc_db, #int_calc_ssp, #int_calc_pcb').click(function(){
+  var method = $(this).attr("id") || '';
+  var nav = method == 'int_calc_pcb' ? $('#int_calc_pcb_nav').val() : 0;
+  var lite = 'f';
+  if(method == 'int_calc_pcb' && $("#int_calc_pcb_pro_mode").hasClass("hide-mode"))
+  {
+    lite = 't';
+  }
+  if(method == 'int_calc_db' && $("#int_calc_pro_mode").hasClass("hide-mode"))
+  {
+    lite = 't';
+  }
+  if(method == 'int_calc_ssp' && $("#int_calc_ssp_pro_mode").hasClass("hide-mode"))
+  {
+    lite = 't';
+  }
+  $.ajax({
+   url : '/response_handlers/interest/index.php',
+   accept : 'application/json',
+   type: 'POST',
+   dataType: 'json',
+   data: {
+    calc: method,
+    t: '7c250678f61f49092fa0d4040e5e54e9',
+    curr: $('#' + method + '_currency').val(),
+    bal: $('#' + method + '_balance').val(),
+    lite: lite,
+    nav: nav
+   },
+   success: function(res)
+   {
+    if(res && !res['error'])
+    {
+     $('#' + method + '_table').html(res['table']);
+     $('#' + method + '_content').show();
+     $('#' + method + '_baltotal').text(res['totbal']);
+     $('#' + method + '_curr').text(res['curr']);
+     $('#' + method + '_blendrate').text(res['blendedrate']);
+     if(method == 'int_calc_pcb')
+     {
+      $('#' + method + '_navinusd').text(res['nav_in_usd']);
+      if(nav < 100000)
+      {
+        $('#' + method + '_navadjusted').show();
+      } else {
+        $('#' + method + '_navadjusted').hide();
+      }
+     }
+    } else {
+     alert(res['error']);
+    }
+   },
+   error: function(xhr, ajaxOpt, err)
+   {
+    $('#' + method + '_table').html('<p>Error.</p>');
+   }
+  });
+ });
+});
+function ping()
+{
+ $.ajax({
+  url : '/response_handlers/interest/index.php',
+  accept : 'application/json',
+  type: 'POST',
+  dataType: 'json',
+  data: {
+   ping: 'true',
+   t: '7c250678f61f49092fa0d4040e5e54e9'
+  },
+  success: function(res)
+  {
+   if(res && !res['error'])
+   {
+    if(res['success'] && res['success'] == '1')
+    {
+     return;
+    }
+   }
+  }, error: function(xhr, ajaxOpt, err) {}
+ });
+}
+$(document).ready(function() {
+    	function GetURLParameter(sParam){
+			var sPageURL = window.location.search.substring(1);
+			var sURLVars = sPageURL.split('&');
+			var news_ibkr_v5 = false;
+			for (var i=0; i < sURLVars.length; i++){
+                var sName = sURLVars[i].split('=');
+				if ( (sName[0] == 'n') && (sName[1] == '1') ){
+					news_ibkr_v5 = true;
+				}
+			}
+			return news_ibkr_v5;
+		}
+		setTimeout(function() {
+			if ( GetURLParameter('n') ){
+				// open second accordion window in response to link from News@IBKR Vol.5 - "IBKR to Pay Interest on Smaller Cash Balances"
+			 	$('#heading02 a').click();
+			}
+		}, 200);
+	});
+	$(document).ready(function(){
+	     $("input[name='int_calc_acct_type']").change(function(){
+		$("#int_calc_db_content").css("display","none");
+		var holdlpmode =  $("input[name='int_calc_acct_type']:checked").val();  
+		// console.log('holdlpmode = ' + holdlpmode );	
+		if ( holdlpmode == 'ibkr_pro' ){
+			$("#int_calc_pro_mode").removeClass('hide-mode');
+			$("#int_calc_lite_mode").addClass('hide-mode');
+		} else {
+			$("#int_calc_lite_mode").removeClass('hide-mode');
+			$("#int_calc_pro_mode").addClass('hide-mode');
+		}
+	    });  
+	     $("input[name='int_calc_pcb_acct_type']").change(function(){
+		$("#int_calc_pcb_content").css("display","none");
+		var holdlpmode =  $("input[name='int_calc_pcb_acct_type']:checked").val();  
+		// console.log('holdlpmode = ' + holdlpmode );	
+		if ( holdlpmode == 'ibkr_pro' ){
+			$("#int_calc_pcb_pro_mode").removeClass('hide-mode');
+			$("#int_calc_pcb_lite_mode").addClass('hide-mode');
+		} else {
+			$("#int_calc_pcb_lite_mode").removeClass('hide-mode');
+			$("#int_calc_pcb_pro_mode").addClass('hide-mode');
+		}
+	    });  
+	});
+</script><section class="hero hero-dark hero-side-nav" id="">
+    <figure class="hero-bg-img img-flip-rtl">
+        <picture class="r-img"> <img src="../../../images/web/hero-interest-rates.jpg" alt="" border="0" /> </picture>
+    </figure>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 col-lg-4 col-xl-3">
+                
+<!-- SIDEBAR NAV -->
+<nav class="ibkr-sidebar">
+    <ul class="list-unstyled" id="nav_set">
+        <li  class="active" > <a href="pricing-interest-rates.html" id="nav_interest_rates" target="_self">Kamatl&#225;bak</a> </li>
+        <li   > <a href="../../pricing/reference-benchmark-rates-int.html" id="nav_benchmarks" target="_self">IBKR Referencia-hitelkamatl&#225;bak</a> </li>
+            
+    </ul><!-- SIDEBAR NAV SCRIPT -->
+</nav>
+<script>
+        $(document).ready(navSetAnimation);
+        $(window).on('resize',navSetAnimation);
+        function navSetAnimation() {
+            const mqMd = window.matchMedia( "(max-width:991.98px)" );
+            if (mqMd.matches) {
+                $('#nav_set li').each(function() {
+                    let navItem = $(this);
+                    let navItemIndex = (parseInt($(navItem).index() + 1)) * 0.1;
+                    let navOrigin = $('.hero').offset().left;
+                    if ($(navItem).hasClass('active')) {
+                        let navItemActive = $(this);
+                        let navItemActiveOffset = navItemActive.offset().left - navOrigin;
+                        let navItemActiveDuration = navItemIndex * 1000;
+                        $('#nav_set').animate({scrollLeft: navItemActiveOffset}, navItemActiveDuration);
+                    }
+                });
+            }
+        }
+    </script>            </div>
+            <div class="col-12 col-lg-8 col-xl-7">
+                <div class="hero-content">
+                    <p class="eyebrow">&#193;rk&#233;pz&#233;s</p>
+                    <h2>Kamatl&#225;bak</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="tabs-page">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <ul class="nav nav-tabs nav-lines" id="nav-tabs" role="tablist">
+                    <li class="nav-item" role="presentation"> <a class="nav-link active" 
+                        id="why-ibkr-tab" 
+                        data-bs-toggle="tab" data-bs-target="#why-ibkr"  
+                        role="tab" aria-controls="why-ibkr" 
+                        aria-selected="true">Mi&#233;rt v&#225;lasszon minket?</a> </li>
+                    <li class="nav-item" role="presentation"> <a class="nav-link" 
+                        id="about-tab" 
+                        data-bs-toggle="tab" data-bs-target="#about"  
+                        role="tab" aria-controls="about" 
+                        aria-selected="false">A kamatl&#225;bakr&#243;l b&#337;vebben</a> </li>
+                    <li class="nav-item" role="presentation"> <a class="nav-link" 
+                        id="education-tab" 
+                        data-bs-toggle="tab" data-bs-target="#education"  
+                        role="tab" aria-controls="education" 
+                        aria-selected="false">Oktat&#243;anyagok</a> </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- BELOW THE HERO -->
+<section class="pt-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="ibkr-tab-content tab-content" id="interest-rates-tab-content"><!-- why ibkr tab --> 
+                    <div class="tab-pane fade show active" 
+                        id="why-ibkr" role="tabpanel" 
+                        aria-labelledby="why-ibkr-tab" tabindex="0">
+                        <section id="interest-schedule" class="pt-0">
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <div class="col">
+                                                                                <h2>Tegyen szert kamatra azonnal el&#233;rhet&#337; k&#233;szp&#233;nzegyenlegei ut&#225;n<sup>1</sup></h2>
+                                        <p>&#220;gyfeleink kamatra tehetnek szert pozit&#237;v elsz&#225;molt k&#233;szp&#233;nzegyenlegeik (azaz a be nem fektetett k&#233;szp&#233;nzegyenlegeik) ut&#225;n. Az &#214;nnek fizetett kamat &#246;sszege az &#214;nre vonatkoz&#243; &#233;ves vegyes kamatl&#225;b alapj&#225;n ker&#252;l meghat&#225;roz&#225;sra. Az &#233;ves vegyes kamatl&#225;bat a sz&#225;ml&#225;j&#225;n l&#233;v&#337; be nem fektetett k&#233;szp&#233;nzegyenlegre alkalmazzuk. Egy bizonyos k&#252;sz&#246;b&#233;rt&#233;k alatti egyenlegek ut&#225;n nem j&#225;r kamat.</p>
+                                        <h3 class="fs-3 mt-20">Kamatl&#225;bak &#233;s s&#225;vok </h3>
+                                        <p>A fizetend&#337; kamat az al&#225;bbiak alapj&#225;n ker&#252;l meghat&#225;roz&#225;sra:</p>
+                                        <ol>
+                                                                                        <li>A sz&#225;ml&#225;j&#225;n tartott k&#233;szp&#233;nzegyenleg. </li>
+                                            <li>Sz&#225;ml&#225;ja &#246;ssz&#233;rt&#233;ke (azaz nett&#243; eszk&#246;z&#233;rt&#233;ke (NAV)); &#233;s </li>
+                                            <li>A be nem fektetett k&#233;szp&#233;nzegyenlege p&#233;nzneme. </li>
+                                                                                    </ol>
+                                                                                <p class="mt-20">A 100 000 USD-n&#233;l (vagy m&#225;s deviz&#225;ban azzal egyen&#233;rt&#233;k&#369; &#246;sszeghat&#225;rn&#225;l) nagyobb nett&#243; eszk&#246;z&#233;rt&#233;kkel (NAV) rendelkez&#337; sz&#225;ml&#225;k eset&#233;n a 10 000 EUR-t meghalad&#243; EUR k&#233;szp&#233;nzegyenlegek ut&#225;n 1.453% &#233;ves kamat vagy a 10 000 USD-t meghalad&#243; USD k&#233;szp&#233;nzegyenlegek ut&#225;n 3,83% &#233;ves kamat j&#225;r. A 100 000 USD-n&#233;l (vagy m&#225;s deviz&#225;ban azzal egyen&#233;rt&#233;k&#369; &#246;sszeghat&#225;rn&#225;l) kisebb nett&#243; eszk&#246;z&#233;rt&#233;kkel rendelkez&#337; &#252;gyfelek alacsonyabb &#233;ves kamatra jogosultak. A kamat ann&#225;l nagyobb, min&#233;l k&#246;zelebb van a sz&#225;mla nett&#243; eszk&#246;z&#233;rt&#233;ke a 100 000 USD-hez. Az els&#337; 10 000 EUR vagy 10 000 USD (vagy azzal egyen&#233;rt&#233;k&#369;) be nem fektetett k&#233;szp&#233;nzegyenleg ut&#225;n nem j&#225;r kamat. Ez azt jelenti, hogy az &#214;nnek fizetett kamat vegyes kamatl&#225;b, amely a 10 000 EUR vagy 10 000 USD alatti k&#233;szp&#233;nzegyenlege ut&#225;n j&#225;r&#243; kamatb&#243;l &#233;s az ezen &#246;sszeghat&#225;rok feletti k&#233;szp&#233;nzegyenlege ut&#225;n j&#225;r&#243; kamatb&#243;l tev&#337;dik &#246;ssze. Az al&#225;bbi t&#225;bl&#225;zat p&#233;ld&#225;kon kereszt&#252;l mutatja be a vegyes kamatl&#225;b kisz&#225;m&#237;t&#225;s&#225;nak m&#243;dj&#225;t. Pontosabb becsl&#233;shez k&#233;rj&#252;k, haszn&#225;lja az al&#225;bbi kalkul&#225;tort.</p>
+                                        <p class="mt-20">Ha egy &#252;gyf&#233;lsz&#225;mla jogosult kamatj&#243;v&#225;&#237;r&#225;sra, az Interactive Brokersn&#233;l vezetett k&#252;l&#246;nb&#246;z&#337; sz&#225;ml&#225;k egyenlegeinek az &#246;sszevon&#225;s&#225;ra nincs lehet&#337;s&#233;g. A sz&#225;mla nett&#243; eszk&#246;z&#233;rt&#233;k&#233;t a k&#252;l&#246;nb&#246;z&#337; deviz&#225;kban tartott egyenlegek &#246;sszess&#233;ge teszi ki, ugyanakkor az egyes devizaegyenlegekre vonatkoz&#243;an a kamatot k&#252;l&#246;n-k&#252;l&#246;n sz&#225;m&#237;tjuk ki &#233;s a 10 000  USD (vagy azzal egyen&#233;rt&#233;k&#369;) k&#252;sz&#246;b&#233;rt&#233;ket is k&#252;l&#246;n-k&#252;l&#246;n alkalmazzuk azokra. A k&#252;sz&#246;b&#233;rt&#233;ket el nem &#233;r&#337; egyes devizaegyenlegek ut&#225;n nem fizet&#252;nk kamatot.</p>
+                                                                                                                        <h3 class="fs-3 mt-20">P&#233;ld&#225;k (USD egyenlegek) </h3>
+                                        <p>Nett&#243; eszk&#246;z&#233;rt&#233;kkel korrig&#225;lt &#233;ves vegyes kamatl&#225;bak a 10 000 USD-t meghalad&#243; USD k&#233;szp&#233;nzegyenlegek ut&#225;n j&#225;r&#243; 3,83%-os kamat alapj&#225;n:</p><!-- EXAMPLE  --------------------------------------------------------------------------------------------------------- -->
+                                        
+<style type="text/css">
+    .page-example .table > tbody tr td {padding: .75rem 0 .5rem;}
+    .page-example .offscreen-var {position: fixed;top: -200px;}
+</style>
+<section id="page-example" class="page-example pt-20 pb-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 pb-20">
+                <div class="table-responsive">
+					<table cellspacing="0" cellpadding="0" border="0" width="100%" class="table table-bordered">
+                        <thead class="bg-gray-5-solid">
+                            <tr>
+                                <th align="center" valign="middle" class="text-bold"><span class="interest-rate-var text-danger text-price offscreen-var">3,83%</span></th>
+                                <th align="center" valign="middle" colspan="3" class="text-price bb-1">Fizetett &#233;ves vegyes kamatl&#225;b (USD)</th>
+                            </tr>
+                            <tr>
+                                <th width="25%" align="center" valign="middle" class="text-price">A sz&#225;mla k&#233;szp&#233;nzegyenlege (USD)</th>
+                                <th width="25%" align="center" valign="middle" class="text-price">Nett&#243; eszk&#246;z&#233;rt&#233;k 50 000</th>
+                                <th width="25%" align="center" valign="middle" class="text-price">Nett&#243; eszk&#246;z&#233;rt&#233;k 90 000</th>
+                                <th width="25%" align="center" valign="middle" class="text-price">Nett&#243; eszk&#246;z&#233;rt&#233;k &gt; 100 000</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td align="center" valign="middle"><span class="text-price lang-format">1 000 000</span></td>
+                                <td align="center" valign="middle"><span class="text-price ">&#8212;</span></td>
+                                <td align="center" valign="middle"><span class="text-price ">&#8212;</span></td>
+                                <td align="center" valign="middle"><span class="text-price blend-1m-nav100">#</span></td>
+                            </tr>
+                            <tr>
+                                <td align="center" valign="middle"><span class="text-price lang-format">100 000</span></td>
+                                <td align="center" valign="middle"><span class="text-price ">&#8212;</span></td>
+                                <td align="center" valign="middle"><span class="text-price ">&#8212;</span></td>
+                                <td align="center" valign="middle"><span class="text-price blend-100k-nav100">#</span></td>
+                            </tr>
+                            <tr>
+                                <td align="center" valign="middle"><span class="text-price lang-format">50 000</span></td>
+                                <td align="center" valign="middle"><span class="text-price blend-50k-nav50">#</span></td>
+                                <td align="center" valign="middle"><span class="text-price blend-50k-nav90">#</span></td>
+                                <td align="center" valign="middle"><span class="text-price blend-50k-nav100">#</span></td>
+                            </tr>
+                            <tr>
+                                <td align="center" valign="middle"><span class="text-price lang-format">25 000</span></td>
+                                <td align="center" valign="middle"><span class="text-price blend-25k-nav50">#</span></td>
+                                <td align="center" valign="middle"><span class="text-price blend-25k-nav90">#</span></td>
+                                <td align="center" valign="middle"><span class="text-price blend-25k-nav100">#</span></td>
+                            </tr>
+                            <tr>
+                                <td align="center" valign="middle"><span class="text-price">0 - <span class="lang-format">10 000</span></span></td>
+                                <td align="center" valign="middle"><span class="text-price ">0%</span></td>
+                                <td align="center" valign="middle"><span class="text-price ">0%</span></td>
+                                <td align="center" valign="middle"><span class="text-price ">0%</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+           </div>
+        </div>
+
+    </div>
+</section>
+<script>
+/*
+FORMULA:
+==> (US Interest Rate Var * ((Acct Cash Balance - Non-interest Base)/Acct Cash Balance))  
+==> (4.830 * ((1,000,000-10,000)/1,000,000))
+NAV > 100K
+1M     =PRODUCT((F2),((A3-G2)/A3))
+100K   =PRODUCT((F2),((A4-G2)/A4))
+50K    =PRODUCT((F2),((A5-G2)/A5))
+25K    =PRODUCT((F2),((A6-G2)/A6))
+// ==> NAV 90K is 90% of the >100K value
+NAV 90K 
+50K    =PRODUCT((F2),((A5-G2)/A5)*0.9)
+25K    =PRODUCT((F2),((A6-G2)/A6)*0.9)
+// ==> NAV 50K is 50% of the >100K value
+NAV 50K 
+50K    =PRODUCT((F2),((A5-G2)/A5)*0.5)
+25K    =PRODUCT((F2),((A6-G2)/A6)*0.5)
+
+*/
+$(document).ready(function() {
+    function cleanNum (n){
+        let newN = n;
+        newN = newN.replace(/\s+/g, '');
+        newN = newN.replace(/,/g, '');
+        newN = newN.replace(/\./g, '');
+        return newN;
+    }
+    function calcBlendedRate (r,a,b,p){
+        /* CreditIntRate = r;  Account Balance = a; Non-interest Base = b;  NAV Percentage = p;
+        FORMULA:
+        ==> (US Interest Rate Var * ((Acct Cash Balance - Non-interest Base)/Acct Cash Balance) * NAV Percentage)  
+        ==> NAV 90K is 90% of the >100K value, NAV 50 is 50% of the >100K value
+        ==> Example (4.830 * ((1,000,000-10,000)/1,000,000)*1.0)
+        */
+        let blend = (r * ((a-b)/a)*p).toFixed(3);
+        let blendStr = blend+'%';
+        return blendStr;
+    }
+    function translateDecimal(r){
+        let fixRate = r;
+        fixRate = fixRate.replace(/,/g, '.');
+        return fixRate;
+    }
+    let creditIntRate = ($('.interest-rate-var').text().split('%')[0].trim());///100
+    let nonInterestBase = 10000;
+    let holdBlendedRates = [
+        ['.blend-1m-nav100','.blend-100k-nav100', '.blend-50k-nav100', '.blend-25k-nav100','.blend-50k-nav90','.blend-25k-nav90','.blend-50k-nav50','.blend-25k-nav50'],
+        ['0%','0%','0%','0%','0%','0%','0%','0%'],
+        [1000000,100000,50000,25000,50000,25000,50000,25000],
+        [1.0,1.0,1.0,1.0,0.9,0.9,0.5,0.5]
+    ];
+    creditIntRate = translateDecimal(creditIntRate);
+    // creditIntRate = creditIntRate/100;
+    /* Calculate cells in interest rate table*/
+    for (let i=0; i<holdBlendedRates[0].length; i++){
+        // console.log( holdBlendedRates[2][i] );
+        let hr = creditIntRate;
+        let ha = holdBlendedRates[2][i];
+        let hb = nonInterestBase;
+        let hp = holdBlendedRates[3][i];
+        holdBlendedRates[1][i] = calcBlendedRate(hr,ha,hb,hp).toLocaleString("en-US").replace('.', ',');
+        // console.log( i + ': blended rate = ' + holdBlendedRates[1][i] );
+        $(holdBlendedRates[0][i]).text(holdBlendedRates[1][i]);
+    }
+    $('.lang-format').each(function () {
+        let holdVal = $(this).text().toLocaleString("en-US").replaceAll(',', ' ');
+        $(this).text(holdVal);
+    });
+});
+</script>                                    </div>
+                                </div>
+                            </div><!-- Interest Calculator  --------------------------------------------------------------------------------------------------------- -->
+                        </section>
+                        <section id="key-benefits" class="key-benefits pb-30">
+                            <div class="container">
+                                <div class="row mb-10">
+                                    <div class="col">
+                                        <h3>Kamatl&#225;b kalkul&#225;tor</h3>
+                                        <p>A k&#252;l&#246;nb&#246;z&#337; nett&#243; eszk&#246;z&#233;rt&#233;kekre, k&#233;szp&#233;nzegyenlegekre &#233;s deviz&#225;kra vonatkoz&#243; becs&#252;lt kamat kisz&#225;m&#237;t&#225;s&#225;hoz k&#233;rj&#252;k, haszn&#225;lja az al&#225;bbi kamatl&#225;b kalkul&#225;tort.</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col"><!-- START CALCULATOR --> 
+                                        
+<style type="text/css">
+section#page-title {
+	display: none;
+}
+h2.title {
+	font-weight: 600;
+	font-size: 2.5rem;
+	line-height: 2.75rem;
+}
+.ibkr-pro-lite-toggle {
+	display: block;
+	margin-top: 0px;
+	margin-bottom: 20px;
+	margin-start: 0px; -webkit-margin-start: 0px; -moz-margin-start: 0px;
+	margin-end: 10px; -webkit-margin-end: 10px; -moz-margin-end: 10px;
+	width: 220px;
+}
+.ibkr-pro-lite-toggle input[type=radio] {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-start: 10px; -webkit-margin-start: 10px; -moz-margin-start: 10px;
+	margin-end: 5px; -webkit-margin-end: 5px; -moz-margin-end: 5px;
+}
+.ibkr-pro-lite-toggle a.btn {
+	margin-start: 30px; -webkit-margin-start: 30px; -moz-margin-start: 30px;
+}
+.hide-mode {
+	display: none;
+}
+.margin-balance-wrapper {
+	display: inline;
+}
+.calc-box {
+	border: 1px solid var(--border-color);
+	background-color: var(--gray-5-solid);
+	padding: 20px;
+}
+.calc-box .btn-calculate {
+	min-width: 220px;
+	margin: 30px 0;
+}
+.calc-box .calc-flex-end {
+	display: flex;
+	align-self: end;
+}
+.RUB-inactive {
+	border-top: 4px solid var(--warning-30)!important;
+	border-bottom: 4px solid var(--warning-30)!important;
+}
+@media (max-width:767px) {
+.ibkr-pro-lite-toggle a.btn {
+	margin: 0px;
+}
+}
+</style>
+<div class="calc-box">
+  <div class="d-flex p-3">
+    <div>
+      <h5 class="mt-0 mb-2"> <span class="text-bold">Pozit&#237;v (k&#233;szp&#233;nz) egyenlegek ut&#225;n j&#225;r&#243; becs&#252;lt kamat</span> </h5>
+    </div>
+  </div>
+  <div class="d-flex justify-content-start flex-wrap p-3 pb-0"><!-- item 1 --> 
+    
+    <div class="mr-40 mb-20">
+      <h5 class="mt-0 mb-2"> K&#233;szp&#233;nzegyenleg megad&#225;sa</h5>
+      <input class="form-control" id="int_calc_pcb_balance" name="int_calc_pcb_balance" placeholder="0" type="text" />
+    </div><!-- item 2 -->
+    <div class="mr-40 mb-20 calc-flex-end">
+      <h5 class="mt-0 mb-2"> </h5>
+      <select class="form-control form-select pr-40" id="int_calc_pcb_currency" aria-label="Select a Currency">
+            <option value="USD">USD</option>
+            <option value="AED">AED</option>
+            <option value="AUD">AUD</option>
+            <option value="CAD">CAD</option>
+            <option value="CHF">CHF</option>
+            <option value="CNH">CNH</option>
+            <option value="CZK">CZK</option>
+            <option value="DKK">DKK</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="HKD">HKD</option>
+            <option value="HUF">HUF</option>
+            <option value="ILS">ILS</option>
+            
+                        <option value="INR">INR</option>
+            
+                                    <option value="JPY">JPY</option>
+            
+                        <option value="KRW">KRW</option>
+            <option value="MXN">MXN</option>
+            <option value="NOK">NOK</option>
+            <option value="NZD">NZD</option>
+            <option value="PLN">PLN</option>
+            <option value="RUB">RUB</option> 
+            <option value="SAR">SAR</option>
+            <option value="SEK">SEK</option>
+            <option value="SGD">SGD</option>
+            <option value="TRY">TRY</option>
+            <option value="ZAR">ZAR</option>
+        </select>
+    </div><!-- item 3 -->
+    
+    <div class="mr-10 mb-20">
+      <h5 class="mt-0 mb-2">Nett&#243; eszk&#246;z&#233;rt&#233;k megad&#225;sa</h5>
+      <input class="form-control" id="int_calc_pcb_nav" name="int_calc_pcb_nav" placeholder="0" type="text" />
+    </div>
+  </div><!-- Calculate Blended Rate -->
+  <div class="d-flex justify-content-end">
+    <a href="javascript:void(0);" class="btn btn-success btn-calculate" id="int_calc_pcb"> Vegyes kamatl&#225;b kisz&#225;m&#237;t&#225;sa</a>
+  </div>
+</div><!-- close calc box -->
+
+<div id="int_calc_pcb_content" style="display:none;" class="padding-top-50">
+    <div class="row">
+        <div class="col-12 col-md-8">
+            <div id="int_calc_pcb_table" class="table-responsive mb-10"></div>
+        </div>
+        <div class="col-12 col-md-4">
+            <div class="text-center mt-10">
+                <h6>Az &#214;n nett&#243; eszk&#246;z&#233;rt&#233;ke USD-ben</h6>
+                <h5 id="int_calc_pcb_navinusd" class="margin-top-0"></h5>
+                <h6><span id="int_calc_pcb_navadjusted" style="display:none;">Nett&#243; eszk&#246;z&#233;rt&#233;kkel korrig&#225;lt</span> vegyes kamatl&#225;b ebben a p&#233;nznemben: <span id="int_calc_pcb_curr"></span></h6>
+                <h2 id="int_calc_pcb_blendrate" class="margin-top-0"></h2>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="notes">
+                <p>A kamatl&#225;b kalkul&#225;tor az el&#337;z&#337; keresked&#233;si napi kamatl&#225;bakat veszi alapul.*A kalkul&#225;tor a v&#225;rhat&#243; &#233;ves kamatot &#233;s a vonatkoz&#243; kamatl&#225;bat a megadott k&#233;szp&#233;nzegyenleg &#233;s nett&#243; eszk&#246;z&#233;rt&#233;k alapj&#225;n sz&#225;m&#237;tja ki. A &#8222;Fizetett kamat&#8221; oszlopban szerepl&#337; becs&#252;lt &#233;rt&#233;k brutt&#243; &#246;sszeg, &#233;s nem veszi figyelembe az &#252;gyf&#233;l egy&#233;ni k&#246;r&#252;lm&#233;nyei miatt esetlegesen felmer&#252;l&#337; ad&#243;kat. Ez a kalkul&#225;tor az aktu&#225;lis kamatl&#225;bak &#233;s s&#225;vok szeml&#233;ltet&#233;s&#233;re szolg&#225;l, &#233;s nem jelzi el&#337;re megb&#237;zhat&#243;an a j&#246;v&#337;beli teljes&#237;tm&#233;nyt. A kamatl&#225;bak id&#337;vel v&#225;ltozhatnak.</p>
+                <p class="text-small">* A kamatl&#225;bak az IBKR referencia-kamatl&#225;bak alapj&#225;n ker&#252;lnek kisz&#225;m&#237;t&#225;sra. Tov&#225;bbi inform&#225;ci&#243;k&#233;rt l&#225;togasson el az <a href="../../pricing/reference-benchmark-rates-int.html" target="_self">IBKR referencia-kamatl&#225;bak</a> oldalra.</p>
+            </div>
+        </div>
+    </div>
+</div>                                        <!-- close calc box --> 
+                                        <br />
+                                        <br />
+                                    </div>
+                                </div>
+                            </div><!-- Interest Compare Table --------------------------------------------------------------------------------------------------------- -->
+                        </section>
+                        
+<style>
+#interest-rates h3 {
+	font-size: 1.125rem;
+	line-height: 1.5rem;
+}
+#interest-rates .table-responsive {
+	margin: 10px 0px;
+	padding: 2px;
+	background-color: transparent;
+	border: none;
+	font-size: 1.125rem;
+}
+#interest-rates .table-responsive th {
+	background-color: transparent;
+	color: var(--gray);
+	font-size: 0.825rem;
+	font-weight: 600;
+}
+#interest-rates .table-responsive th.featuredrow {
+	background-color: var(--bg-body);
+}
+#interest-rates .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+	border-top: none;
+	border-bottom: 1px solid var(--border-color);
+	padding: .75rem;
+}
+#interest-rates .featuredrow {
+	background-color: var(--bg-body);
+}
+#interest-rates .featuredcol {
+	background-color: var(--bg-body);
+	border-left: 3px solid var(--primary);
+	border-right: 3px solid var(--primary);
+}
+#interest-rates .featuredtop {
+	background-color: var(--bg-body);
+	border-top: 3px solid var(--primary);
+}
+#interest-rates .table>tbody>tr>td.featuredbottom {
+	background-color: var(--bg-body);
+	border-bottom: 3px solid var(--primary);
+}
+#interest-rates .table {
+	border: none;
+	margin-bottom: 0px;
+	background-color: transparent;
+}
+#interest-rates .text-price {
+	/*font-size: 1.375em;*/
+    font-size: 1.125rem;
+}
+.btn-group .btn-primary.inactive {
+	border: 1px solid var(--primary) !important;
+	color: var(--primary) !important;
+	background-color: var(--white) !important;
+}
+#interest-table sup {
+	top: -1em;
+}
+.featuredrow.text-md {
+	font-size: 1rem;
+}
+.usd-label {
+	font-size: .625em;
+	font-weight: 600;
+}
+.disclosure-inline {
+	font-size: .8125rem;
+	line-height: 1.2;
+	color: var(--font-color-light);
+}
+/* MEDIA QUERIES -------------------------------------------------------------- */
+    /* BOOTSTRAP 4 | MEDIA QUERY | EXTRA SMALL (0PX-576PX) ---------------------------------------------------------------------------------------------------- */
+@media (max-width:575.98px) {
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | SMALL (576PX-767.98PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:576px) and (max-width:767.98px) {
+}
+</style>
+<section id="interest-rates">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="row align-items-start"><!-- IB TEXT START ---------------------------------------------------------------------------------------------------- --> 
+                    
+                    <div class="col-12 text-center">
+                        <h2 class="mt-0">Mennyi kamatot fizet &#214;nnek a br&#243;kere?</h2>
+                    </div><!-- IB TEXT END ---------------------------------------------------------------------------------------------------- --><!-- TABLE START Local ----------------------------------------------------------------------------------------------- -->
+                    
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-12 p-40"><!-- UK Comparison -----> 
+                                
+                                                                <h3 class="text-center">EUR kamatl&#225;bak &#246;sszehasonl&#237;t&#225;sa (p&#233;ld&#225;k)</h3>
+                                <div class="table-responsive"><!-- INTEREST TABLE START ---------------------------------------------------------------------------------------------------- --> 
+                                    
+                                    <table id="interest-table" width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-bkgd-gray percent-value"><!-- table-bordered -->
+                                        <thead>
+                                            <tr>
+                                                <th align="left" width="15%" valign="bottom" class="text-bold">Forgat&#243;k&#246;nyv</th>
+                                                <th align="center" width="11%" valign="bottom" class="text-bold featuredcol featuredtop featuredrow">Interactive Brokers</th>
+                                                <th align="center" width="9%" valign="bottom" class="text-bold">Saxo</th>
+                                                <th align="center" width="11%" valign="bottom" class="text-bold">S Broker</th>
+                                                <th align="center" width="12%" valign="bottom" class="text-bold">Swiss Quote</th>
+                                                <th align="center" width="10%" valign="bottom" class="text-bold">Degiro</th>
+                                                <th align="center" width="10%" valign="bottom" class="text-bold">Fineco</th>
+                                                <th align="center" width="10%" valign="bottom" class="text-bold">IG</th>
+                                                <th align="center" width="12%" valign="bottom" class="text-bold">Renta 4 Banco</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td align="left" valign="middle" class=" em1-1 tablelabel">NAV = 20 000 EUR<br>K&#233;szp&#233;nz = 5 000 EUR</td>
+                                                <td align="center" valign="middle" class="text-price featuredcol featuredrow">0,000%</td>
+                                                <td align="center" valign="middle" class="text-price  ">0,000%</td>
+                                                <td align="center" valign="middle" class="text-price  ">1,500%</td>
+                                                <td align="center" valign="middle" class="text-price  ">0,000%</td>
+                                                <td align="center" valign="middle" class="text-price  ">0,000%</td>
+                                                <td align="center" valign="middle" class="text-price  ">0,000%</td>
+                                                <td align="center" valign="middle" class="text-price  ">n/a</td>
+                                                <td align="center" valign="middle" class="text-price  ">n/a</td>
+                                            </tr>
+                                            <tr>
+                                                <td align="left" valign="middle" class=" em1-1 tablelabel">NAV = 80 000 EUR<br>K&#233;szp&#233;nz = 20 000 EUR</td>
+                                                <td align="center" valign="middle" class="text-price  featuredcol featuredrow">0,858%</td>
+                                                <td align="center" valign="middle" class="text-price  ">0,034%</td>
+                                                <td align="center" valign="middle" class="text-price  ">1,500%</td>
+                                                <td align="center" valign="middle" class="text-price  ">0,000%</td>
+                                                <td align="center" valign="middle" class="text-price  ">0,000%</td>
+                                                <td align="center" valign="middle" class="text-price  ">0,000%</td>
+                                                <td align="center" valign="middle" class="text-price  ">n/a</td>
+                                                <td align="center" valign="middle" class="text-price  ">n/a</td>
+                                            </tr>
+                                            <tr>
+                                                <td align="left" valign="middle" class=" em1-1 tablelabel">NAV = 320 000 EUR<br>K&#233;szp&#233;nz = 80 000 EUR</td>
+                                                <td align="center" valign="middle" class="text-price  featuredcol featuredbottom featuredrow">1,735%</td>
+                                                <td align="center" valign="middle" class="text-price  ">0,148%</td>
+                                                <td align="center" valign="middle" class="text-price  ">1,500%</td>
+                                                <td align="center" valign="middle" class="text-price  ">0,000%</td>
+                                                <td align="center" valign="middle" class="text-price  ">0,000%</td>
+                                                <td align="center" valign="middle" class="text-price  ">0,000%</td>
+                                                <td align="center" valign="middle" class="text-price  ">n/a</td>
+                                                <td align="center" valign="middle" class="text-price  ">n/a</td>
+                                            </tr>
+                                        </tbody>
+                                    </table><!-- INTEREST TABLE END ---------------------------------------------------------------------------------------------------- -->
+                                     
+                                </div><!-- IE Comparison -->
+                                
+                                                                                                        <p class="disclosure-inline">Kamatl&#225;bak  2025. j&#250;lius 2.   napj&#225;n. Forr&#225;s: home.saxo (klasszikus sz&#225;mla), b&#337;vebb inform&#225;ci&#243;: https://www.home.saxo/campaigns/interest-rates-cal (a megjelen&#237;tett kamatl&#225;bak az &#214;n illet&#337;s&#233;ge szerinti orsz&#225;ga f&#252;ggv&#233;ny&#233;ben v&#225;ltozhatnak), sbroker.de (KantoPlus sz&#225;mla), swissquote.com, degiro.ie, uk.finecobank.com, ig.com/ie, r4.com<br> Az &#8222;N/A&#8221; jel&#246;l&#233;st akkor haszn&#225;ltuk, ha nem &#225;llt rendelkez&#233;sre a k&#237;n&#225;lt kamatl&#225;bakra vonatkoz&#243; &#8222;els&#337;dleges&#8221; forr&#225;s. Bizonyos esetekben a br&#243;ker nem t&#225;mogatja a k&#233;szp&#233;nzegyenlegeket az adott p&#233;nznemben. M&#225;s esetekben a br&#243;ker feltehet&#337;leg 0% kamatot k&#237;n&#225;l, de ezt k&#252;l&#246;n nem k&#246;zli.                                 </p>
+                            </div>
+                        </div><!-- TABLE END ---------------------------------------------------------------------------------------------------- --><!-- TABLE START USD ----------------------------------------------------------------------------------------------- -->
+                     
+                        <div class="row">
+                            <div class="col-12 ps-40 pe-40 pb-40"><!-- UK Comparison -----> 
+                                
+                                                                
+                                <h3 class="text-center">USD kamatl&#225;bak &#246;sszehasonl&#237;t&#225;sa (p&#233;ld&#225;k)</h3>
+                                <div class="table-responsive"><!-- INTEREST TABLE START ---------------------------------------------------------------------------------------------------- --> 
+                                    <table id="interest-table" width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-bkgd-gray percent-value"><!-- table-bordered -->
+                                        
+                                        <thead>
+                                            <tr>
+                                                <th align="left" width="15%" valign="bottom" class="text-bold">Forgat&#243;k&#246;nyv</th>
+                                                <th align="center" width="11%" valign="bottom" class="text-bold featuredcol featuredtop featuredrow">Interactive Brokers</th>
+                                                <th align="center" width="9%" valign="bottom" class="text-bold">Saxo</th>
+                                                <th align="center" width="11%" valign="bottom" class="text-bold">S Broker</th>
+                                                <th align="center" width="12%" valign="bottom" class="text-bold">Swiss Quote</th>
+                                                <th align="center" width="10%" valign="bottom" class="text-bold">Degiro</th>
+                                                <th align="center" width="10%" valign="bottom" class="text-bold">Fineco</th>
+                                                <th align="center" width="10%" valign="bottom" class="text-bold">IG</th>
+                                                <th align="center" width="12%" valign="bottom" class="text-bold">Renta 4 Banco</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td align="left" valign="middle" class=" em1-1 tablelabel">NAV = 20 000 USD<br>K&#233;szp&#233;nz = 5 000 USD</td>
+                                                <td align="center" valign="middle" class="text-price featuredcol featuredrow">0,000%</td>
+                                                <td align="center" valign="middle" class="text-price  ">0,000%</td>
+                                                <td align="center" valign="middle" class="text-price  ">n/a</td>
+                                                <td align="center" valign="middle" class="text-price  ">0,000%</td>
+                                                <td align="center" valign="middle" class="text-price  ">0,000%</td>
+                                                <td align="center" valign="middle" class="text-price  ">0,000%</td>
+                                                <td align="center" valign="middle" class="text-price  ">n/a</td>
+                                                <td align="center" valign="middle" class="text-price  ">n/a</td>
+                                            </tr>
+                                            <tr>
+                                                <td align="left" valign="middle" class=" em1-1 tablelabel">NAV = 80 000 USD<br>K&#233;szp&#233;nz = 20 000 USD</td>
+                                                <td align="center" valign="middle" class="text-price  featuredcol featuredrow">1,532%</td>
+                                                <td align="center" valign="middle" class="text-price  ">0,360%</td>
+                                                <td align="center" valign="middle" class="text-price  ">n/a</td>
+                                                <td align="center" valign="middle" class="text-price  ">0,000%</td>
+                                                <td align="center" valign="middle" class="text-price  ">0,000%</td>
+                                                <td align="center" valign="middle" class="text-price  ">0,000%</td>
+                                                <td align="center" valign="middle" class="text-price  ">n/a</td>
+                                                <td align="center" valign="middle" class="text-price  ">n/a</td>
+                                            </tr>
+                                            <tr>
+                                                <td align="left" valign="middle" class=" em1-1 tablelabel">NAV = 320 000 USD<br>K&#233;szp&#233;nz = 80 000 USD</td>
+                                                <td align="center" valign="middle" class="text-price  featuredcol featuredbottom featuredrow">3,351%</td>
+                                                <td align="center" valign="middle" class="text-price  ">1,851%</td>
+                                                <td align="center" valign="middle" class="text-price  ">n/a</td>
+                                                <td align="center" valign="middle" class="text-price  ">0,000%</td>
+                                                <td align="center" valign="middle" class="text-price  ">0,000%</td>
+                                                <td align="center" valign="middle" class="text-price  ">0,000%</td>
+                                                <td align="center" valign="middle" class="text-price  ">n/a</td>
+                                                <td align="center" valign="middle" class="text-price  ">n/a</td>
+                                            </tr>
+                                        </tbody>
+                                    </table><!-- INTEREST TABLE END ---------------------------------------------------------------------------------------------------- -->
+                                </div>
+                                
+                                                                                                        <p class="disclosure-inline">Kamatl&#225;bak  2025. j&#250;lius 2.   napj&#225;n. Forr&#225;s: home.saxo (klasszikus sz&#225;mla), b&#337;vebb inform&#225;ci&#243;: https://www.home.saxo/campaigns/interest-rates-cal (a megjelen&#237;tett kamatl&#225;bak az &#214;n illet&#337;s&#233;ge szerinti orsz&#225;ga f&#252;ggv&#233;ny&#233;ben v&#225;ltozhatnak), sbroker.de (KantoPlus sz&#225;mla), swissquote.com, degiro.ie, uk.finecobank.com, ig.com/ie, r4.com<br> Az &#8222;N/A&#8221; jel&#246;l&#233;st akkor haszn&#225;ltuk, ha nem &#225;llt rendelkez&#233;sre a k&#237;n&#225;lt kamatl&#225;bakra vonatkoz&#243; &#8222;els&#337;dleges&#8221; forr&#225;s. Bizonyos esetekben a br&#243;ker nem t&#225;mogatja a k&#233;szp&#233;nzegyenlegeket az adott p&#233;nznemben. M&#225;s esetekben a br&#243;ker feltehet&#337;leg 0% kamatot k&#237;n&#225;l, de ezt k&#252;l&#246;n nem k&#246;zli.                                 </p>
+                            </div>
+                        </div>
+                    </div><!-- TABLE END ---------------------------------------------------------------------------------------------------- -->
+                     
+                </div>
+            </div>
+        </div>
+    </div>
+</section>                        <!-- Global Interest Rates Table --------------------------------------------------------------------------------------------------------- --><!-- Move Pricing Interest Rates Data include file to the top of page --> 
+                        <section class="">
+                            <div class="container">
+                                                                <div class="row mb-40">
+                                    <div class="col">
+                                        <h3 class="fs-3">Glob&#225;lis kamatl&#225;bak a 100 000 USD-t meghalad&#243; nett&#243; eszk&#246;z&#233;rt&#233;kkel rendelkez&#337; sz&#225;ml&#225;k eset&#233;n</h3>
+                                        <ul>
+                                            <li>Az Interactive Brokers kamatot fizet nem csak az EUR-ban &#233;s USD-ben, hanem sz&#225;mos glob&#225;lis deviz&#225;ban tartott, be nem fektetett k&#233;szp&#233;nzegyenleg ut&#225;n. Ha 100 000 USD-n&#233;l (vagy m&#225;s deviz&#225;ban azzal egyen&#233;rt&#233;k&#369; &#246;sszeghat&#225;rn&#225;l) kisebb nett&#243; eszk&#246;z&#233;rt&#233;kkel rendelkezik, akkor alacsonyabb &#233;ves kamatra jogosult. A kamatl&#225;b kalkul&#225;tor seg&#237;ts&#233;g&#233;vel pontosabb becsl&#233;st kaphat az &#214;n &#225;ltal prefer&#225;lt deviz&#225;ban. </li>
+                                            <li>Az Interactive Brokers saj&#225;t bel&#225;t&#225;sa szerint, b&#225;rmikor m&#243;dos&#237;thatja a fenti kamatl&#225;bakat. Az aktu&#225;lis kamatl&#225;bakat a legjobb tud&#225;sunk szerint tessz&#252;k k&#246;zz&#233;.</li>
+                                            <li>Azon sz&#225;ml&#225;k eset&#233;ben, amelyek hitelegyenlege negat&#237;v kamatl&#225;bbal (&#233;ves&#237;tett kamatl&#225;b, APR) rendelkez&#337; deviz&#225;ban van, a legal&#225;bb 50 000 USD (vagy annak megfelel&#337;) egyenleg&#369; sz&#225;ml&#225;kra a negat&#237;v kamatl&#225;bat alkalmazzuk, viszont az ann&#225;l kisebb egyenleg&#369; sz&#225;ml&#225;kra nem alkalmazzuk a negat&#237;v kamatl&#225;bat.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                                                <div class="row">
+                                    <div class="col">
+                                        <p>BM = IBKR referencia-kamatl&#225;b. Tov&#225;bbi inform&#225;ci&#243;k&#233;rt l&#225;togasson el az <a href="../../pricing/reference-benchmark-rates-int.html" target="_self" class="link-generic">IBKR referencia-kamatl&#225;bak</a> oldalra.</p><!-- Interest Paid to You on Positive Balances  -->
+                                        <div class="table-responsive">
+                                            <table cellspacing="0" cellpadding="0" border="0" width="100%"
+						class="table table-striped table-bordered">
+                                                <thead>
+                                                <th width="20%" align="left" valign="bottom">Deviza</th>
+                                                    <th width="40%" align="left" valign="bottom">S&#225;v</th>
+                                                    <th width="40%" align="left" valign="bottom">A 100 000 USD-n&#233;l (vagy m&#225;s deviz&#225;ban azzal egyen&#233;rt&#233;k&#369; &#246;sszeghat&#225;rn&#225;l) <br>nagyobb nett&#243; eszk&#246;z&#233;rt&#233;kkel rendelkez&#337; sz&#225;ml&#225;k ut&#225;n fizetett kamat </th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td align="left" valign="middle">USD</td>
+                                                        <td align="left" valign="middle"><span class="text-price">0 &#8804; 10 000</span></td>
+                                                        <td align="left" valign="middle"><span class="text-price">0%</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle"></td>
+                                                        <td align="left" valign="middle"><span class="text-price">&gt; 10 000</span></td>
+                                                        <td align="left" valign="middle"><span
+						class="text-price">
+                                                            <span class="text-price">3.830%</span>   (BM - <span class="text-price">0.5%</span>)                                                            </span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle">AED</td>
+                                                        <td align="left" valign="middle"><span class="text-price">0 &#8804; 35 000</span></td>
+                                                        <td align="left" valign="middle"><span class="text-price">0%</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle"></td>
+                                                        <td align="left" valign="middle"><span class="text-price">&gt; 35 000</span></td>
+                                                        <td align="left" valign="middle"><span
+						class="text-price">
+                                                            <span class="text-price">3.659%</span>   (BM - <span class="text-price">0.75%</span>)                                                            </span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle">AUD</td>
+                                                        <td align="left" valign="middle"><span class="text-price">0 &#8804; 15 000</span></td>
+                                                        <td align="left" valign="middle"><span class="text-price">0%</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle"></td>
+                                                        <td align="left" valign="middle"><span class="text-price">15 000 &#8804; 150 000</span></td>
+                                                        <td align="left" valign="middle"><span
+                                                //if the host is Australia then use AUD value from IBCE website 
+                                                class="text-price">
+                                                            <span class="text-price">3.201%</span>   (BM - <span class="text-price">0.5%</span>)                                                            </span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle"></td>
+                                                        <td align="left" valign="middle"><span class="text-price">&gt; 150 000</span></td>
+                                                        <td align="left" valign="middle"><span
+                                                //if the host is Australia then use AUD value from IBCE website 
+                                                class="text-price">
+                                                            <span class="text-price">3.451%</span>   (BM - <span class="text-price">0.25%</span>)                                                            </span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle">CAD</td>
+                                                        <td align="left" valign="middle"><span class="text-price">0 &#8804; 13 000</span></td>
+                                                        <td align="left" valign="middle"><span class="text-price">0%</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle"></td>
+                                                        <td align="left" valign="middle"><span class="text-price">&gt; 13 000</span></td>
+                                                        <td align="left" valign="middle"><span
+						class="text-price">
+                                                            <span class="text-price">2.253%</span>   (BM - <span class="text-price">0.5%</span>)                                                            </span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle">CHF</td>
+                                                        <td align="left" valign="middle"><span class="text-price">0 &#8804; 100 000</span></td>
+                                                        <td align="left" valign="middle"><span class="text-price">0%</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle"></td>
+                                                        <td align="left" valign="middle"><span class="text-price">&gt; 100 000</span></td>
+                                <td align="left" valign="middle"><span
+                                        class="text-price"><span class="text-price">-0.393%</span>   (BM - <span class="text-price">0.25%</span>)</span>
+                                </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle">CNH</td>
+                                                        <td align="left" valign="middle"><span class="text-price">0 &#8804; 70 000</span></td>
+                                                        <td align="left" valign="middle"><span class="text-price">0%</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle"></td>
+                                                        <td align="left" valign="middle"><span class="text-price">&gt; 70 000</span></td>
+                                                        <td align="left" valign="middle"><span class="text-price">0,50%</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle">CZK</td>
+                                                        <td align="left" valign="middle"><span class="text-price">0 &#8804; 250 000</span></td>
+                                                        <td align="left" valign="middle"><span class="text-price">0%</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle"></td>
+                                                        <td align="left" valign="middle"><span class="text-price">&gt; 250 000</span></td>
+                                                        <td align="left" valign="middle"><span
+						class="text-price">
+                                                            <span class="text-price">1.271%</span>   (BM - <span class="text-price">2%</span>)                                                            </span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle">DKK</td>
+                                                        <td align="left" valign="middle"><span class="text-price">0 &#8804; 75 000</span></td>
+                                                        <td align="left" valign="middle"><span class="text-price">0%</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle"></td>
+                                                        <td align="left" valign="middle"><span class="text-price">&gt; 75 000</span></td>
+                                                        <td align="left" valign="middle"><span
+                        class="text-price">
+                                                            <span class="text-price">1.142%</span>   (BM - <span class="text-price">0.5%</span>)                                                            </span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle">EUR</td>
+                                                        <td align="left" valign="middle"><span class="text-price">0 &#8804; 10 000</span></td>
+                                                        <td align="left" valign="middle"><span class="text-price">0%</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle"></td>
+                                                        <td align="left" valign="middle"><span class="text-price">&gt; 10 000</span></td>
+                                                        <td align="left" valign="middle"><span
+                        class="text-price">
+                                                            <span class="text-price">1.453%</span>   (BM - <span class="text-price">0.5%</span>)                                                            </span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle">GBP</td>
+                                                        <td align="left" valign="middle"><span class="text-price">0 &#8804; 8 000</span></td>
+                                                        <td align="left" valign="middle"><span class="text-price">0%</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle"></td>
+                                                        <td align="left" valign="middle"><span class="text-price">&gt; 8 000</span></td>
+                                                        <td align="left" valign="middle"><span
+						class="text-price">
+                                                            <span class="text-price">3.499%</span>   (BM - <span class="text-price">0.5%</span>)                                                            </span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle">HKD</td>
+                                                        <td align="left" valign="middle"><span class="text-price">0 &#8804; 78 000</span></td>
+                                                        <td align="left" valign="middle"><span class="text-price">0%</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle"></td>
+                                                        <td align="left" valign="middle"><span class="text-price">&gt; 78 000</span></td>
+                                                        <td align="left" valign="middle"><span
+						class="text-price">
+                                                            <span class="text-price">1.870%</span>   (BM - <span class="text-price">0.75%</span>)</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle">HUF</td>
+                                                        <td align="left" valign="middle"><span class="text-price">0 &#8804; 3 500 000</span></td>
+                                                        <td align="left" valign="middle"><span class="text-price">0%</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle"></td>
+                                                        <td align="left" valign="middle"><span class="text-price">&gt; 3 500 000</span></td>
+                                                        <td align="left" valign="middle"><span
+						class="text-price">
+                                                            <span class="text-price">3.381%</span>   (BM - <span class="text-price">3%</span>)                                                            </span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle">ILS</td>
+                                                        <td align="left" valign="middle">Mind</td>
+                                                        <td align="left" valign="middle"><span class="text-price">0%</span></td>
+                                                    </tr>
+                                                                                                        <tr>
+                                                        <td align="left" valign="middle">INR</td>
+                                                        <td align="left" valign="middle">Mind</td>
+                                                        <td align="left" valign="middle"><span class="text-price">0%</span></td>
+                                                    </tr>
+                                                                                                        <tr>
+                                                        <td align="left" valign="middle">JPY</td>
+                                                        <td align="left" valign="middle"><span class="text-price">0 &#8804; 5 000 000</span></td>
+                                                        <td align="left" valign="middle"><span class="text-price">0%</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle"></td>
+                                                        <td align="left" valign="middle"><span class="text-price">&gt; 5 000 000</span></td>
+                                                        <td align="left" valign="middle"><span
+						class="text-price">
+                                                            <span class="text-price">0.174%</span>   (BM - <span class="text-price">0.25%</span>)                                                            </span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle">KRW  </td>
+                                                        <td align="left" valign="middle"><span class="text-price">0 &#8804; 12 000 000</span></td>
+                                                        <td align="left" valign="middle"><span class="text-price">0%</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle"></td>
+                                                        <td align="left" valign="middle"><span class="text-price">&gt; 12 000 000</span></td>
+                                                        <td align="left" valign="middle"><span
+						class="text-price">
+                                                            <span class="text-price">1.000%</span>   (BM - <span class="text-price">1.5%</span>)                                                            </span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle">MXN</td>
+                                                        <td align="left" valign="middle"><span class="text-price">0 &#8804; 200 000</span></td>
+                                                        <td align="left" valign="middle"><span class="text-price">0%</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle"></td>
+                                                        <td align="left" valign="middle"><span class="text-price">&gt; 200 000</span></td>
+                                                        <td align="left" valign="middle"><span
+						class="text-price">
+                                                            <span class="text-price">3.823%</span>   (BM - <span class="text-price">4%</span>)                                                            </span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle">NOK</td>
+                                                        <td align="left" valign="middle"><span class="text-price">0 &#8804; 100 000</span></td>
+                                                        <td align="left" valign="middle"><span class="text-price">0%</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle"></td>
+                                                        <td align="left" valign="middle"><span class="text-price">&gt; 100 000</span></td>
+                                                        <td align="left" valign="middle"><span
+                        class="text-price">
+                                                            <span class="text-price">2.195%</span>   (BM - <span class="text-price">2%</span>)                                                            </span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle">NZD</td>
+                                                        <td align="left" valign="middle"><span class="text-price">0 &#8804; 15 000</span></td>
+                                                        <td align="left" valign="middle"><span class="text-price">0%</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle"></td>
+                                                        <td align="left" valign="middle"><span class="text-price">&gt; 15 000</span></td>
+                                                        <td align="left" valign="middle"><span
+						class="text-price">
+                                                            <span class="text-price">0.484%</span>   (BM - <span class="text-price">2.5%</span>)                                                            </span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle">PLN</td>
+                                                        <td align="left" valign="middle"><span class="text-price">0 &#8804; 400 000</span></td>
+                                                        <td align="left" valign="middle"><span class="text-price">0%</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle"></td>
+                                                        <td align="left" valign="middle"><span class="text-price">&gt; 400 000</span></td>
+                                                        <td align="left" valign="middle"><span
+						class="text-price">
+                                                            <span class="text-price">2.834%</span>   (BM - <span class="text-price">2%</span>)                                                            </span></td>
+                                                    </tr>
+                                                                                                        <tr  class="RUB-inactive">
+                                                        <td align="left" valign="middle">RUB</td>
+                                                        <td align="left" valign="middle">Mind</td>
+                                                        <td align="left" valign="middle"><span class="text-price">0%</span></td>
+                                                    </tr>
+                                                                                                        <tr>
+                                                        <td align="left" valign="middle">SAR</td>
+                                                        <td align="left" valign="middle"><span class="text-price">0 &#8804; 35 000</span></td>
+                                                        <td align="left" valign="middle"><span class="text-price">0%</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle"></td>
+                                                        <td align="left" valign="middle"><span class="text-price">&gt; 35 000</span></td>
+                                                        <td align="left" valign="middle"><span
+						class="text-price">
+                                                            <span class="text-price">4.610%</span>   (BM - <span class="text-price">0.75%</span>)                                                            </span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle">SEK</td>
+                                                        <td align="left" valign="middle"><span class="text-price">0 &#8804; 110 000</span></td>
+                                                        <td align="left" valign="middle"><span class="text-price">0%</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle"></td>
+                                                        <td align="left" valign="middle"><span class="text-price">&gt; 110 000</span></td>
+                                                        <td align="left" valign="middle"><span
+						class="text-price">
+                                                            <span class="text-price">1.456%</span>   (BM - <span class="text-price">0.5%</span>)                                                            </span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle">SGD</td>
+                                                        <td align="left" valign="middle"><span class="text-price">0 &#8804; 14 000</span></td>
+                                                        <td align="left" valign="middle"><span class="text-price">0%</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle"></td>
+                                                        <td align="left" valign="middle"><span class="text-price">&gt; 14 000</span></td>
+                                                        <td align="left" valign="middle"><span
+						class="text-price">
+                                                            <span class="text-price">0.703%</span>   (BM - <span class="text-price">1%</span>)                                                            </span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle">TRY</td>
+                                                        <td align="left" valign="middle"><span class="text-price">0 &#8804; 250 000</span></td>
+                                                        <td align="left" valign="middle"><span class="text-price">0%</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle"></td>
+                                                        <td align="left" valign="middle"><span class="text-price">&gt; 250 000</span></td>
+                                                        <td align="left" valign="middle"><span class="text-price">5%</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle">ZAR</td>
+                                                        <td align="left" valign="middle"><span class="text-price">0 &#8804; 150 000</span></td>
+                                                        <td align="left" valign="middle"><span class="text-price">0%</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle"></td>
+                                                        <td align="left" valign="middle"><span class="text-price">&gt; 150 000</span></td>
+                                                        <td align="left" valign="middle"><span
+						class="text-price">
+                                                            <span class="text-price">5.099%</span>   (BM - <span class="text-price">1%</span>)                                                            </span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                                                                
+<div class='alert alert-warning mt-10 pb-20'>
+    <p class='alert p-10'><strong>MEGJEGYZ&#201;SEK:</strong> </p>
+    <ul>
+        <li>A t&#246;bb korm&#225;ny &#225;ltal bevezetett szankci&#243;k miatt az IBKR &#252;gyfelei jelenleg nem tudnak poz&#237;ci&#243;kat nyitni vagy lez&#225;rni a Moszkvai T&#337;zsd&#233;n (MOEX). </li>
+        <li>Jelenleg nem kapunk a MOEX-en jegyzett &#233;rt&#233;kpap&#237;rokra vagy a MOEX-en jegyzett &#246;sszetev&#337;vel rendelkez&#337; &#233;rt&#233;kpap&#237;rokra vonatkoz&#243; &#225;rfolyamadatokat.</li>
+        <li>Egy sz&#225;ml&#225;n tartott minden long vagy short RUB egyenleg automatikusan &#225;tv&#225;lt&#225;sra ker&#252;l USD-re vagy EUR-ra, a sz&#225;mlavezet&#337; t&#225;rsas&#225;g f&#252;ggv&#233;ny&#233;ben. Tov&#225;bbi inform&#225;ci&#243;k&#233;rt l&#225;togasson el a <a href='https://www.ibkrguides.com/kb/article-4563.htm' target='_blank' rel='noreferrer' class="link-generic">Tud&#225;st&#225;rba</a>.</li>
+    </ul>
+</div>                                                                            </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div><!-- / why ibkr tab content --><!-- about tab -->
+                    <div class="tab-pane fade" 
+                        id="about" role="tabpanel" 
+                        aria-labelledby="about-tab" tabindex="0">
+                                                <!-- ADDITIONAL INFORMATION ACCORDION SET ---------------------------------------------------------------------------------- -->
+                        <section id="additonal-info" class="additonal-info pt-0">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <h2>A kamatl&#225;bakr&#243;l b&#337;vebben</h2>
+                                        <div class="row mt-3">
+                                            <div class="col-12 col-lg-11">
+                                                <p class="fs-6 lh-6">A kamat a p&#233;nzk&#246;lcs&#246;n felv&#233;tele ut&#225;n fizetett d&#237;j, illetve a valaki m&#225;s p&#233;nz&#233;nek a haszn&#225;lat&#225;&#233;rt fizetett &#246;sszeg. A kamatot &#225;ltal&#225;ban a k&#246;lcs&#246;nvett vagy befektetett &#246;sszeg sz&#225;zal&#233;k&#225;ban fejezz&#252;k ki, &#233;s egy meghat&#225;rozott id&#337;tartamra sz&#225;m&#237;tjuk ki (pl. napi, havi vagy &#233;ves kamat).</p>
+                                                <ul>
+                                                    <li><span class="fw-600">P&#233;nzk&#246;lcs&#246;nz&#233;s:</span> amikor p&#233;nzk&#246;lcs&#246;nt vesz fel egy p&#233;nzint&#233;zett&#337;l, a p&#233;nzint&#233;zet kamatot sz&#225;m&#237;t fel &#214;nnek, amely tulajdonk&#233;ppen annak a d&#237;ja, hogy a c&#233;g az &#214;n rendelkez&#233;s&#233;re bocs&#225;tja az &#246;sszeget. N&#233;zz&#252;nk meg egy egyszer&#369; p&#233;ld&#225;t: ha &#214;n felvesz egy 1000 USD &#246;sszeg&#369; k&#246;lcs&#246;nt 5%-os &#233;ves kamat mellett 1 &#233;ves futamid&#337;vel, &#214;nnek <span class="fw-600">1050 USD-t</span> kell visszafizetnie, azaz a k&#246;lcs&#246;nvett 1000 USD-t plusz az &#233;ves k&#246;lcs&#246;nz&#233;si d&#237;jat, amely 1000 USD eset&#233;ben 50 USD-t tesz ki.</li>
+                                                    <li><span class="fw-600">A p&#233;nz haszn&#225;lat&#225;&#233;rt fizetett &#246;sszeg:</span> a 100 000 USD-n&#233;l (vagy m&#225;s deviz&#225;ban azzal egyen&#233;rt&#233;k&#369; &#246;sszeghat&#225;rn&#225;l) nagyobb nett&#243; eszk&#246;z&#233;rt&#233;kkel (NAV) rendelkez&#337; &#252;gyf&#233;lsz&#225;ml&#225;k eset&#233;n a 10 000 USD-t meghalad&#243; USD k&#233;szp&#233;nzegyenlegek ut&#225;n &#233;ves kamat j&#225;r. A 100 000 USD-n&#233;l (vagy m&#225;s deviz&#225;ban azzal egyen&#233;rt&#233;k&#369; &#246;sszeghat&#225;rn&#225;l) kisebb nett&#243; eszk&#246;z&#233;rt&#233;kkel rendelkez&#337; &#252;gyfelek alacsonyabb &#233;ves kamatra jogosultak. A kamat ann&#225;l nagyobb, min&#233;l k&#246;zelebb van a sz&#225;mla nett&#243; eszk&#246;z&#233;rt&#233;ke a 100 000 USD-hez. Az els&#337; 10 000 USD (vagy m&#225;s deviz&#225;ban annak megfelel&#337;) be nem fektetett k&#233;szp&#233;nzegyenleg ut&#225;n nem j&#225;r kamat.<br>N&#233;zz&#252;nk meg erre is egy egyszer&#369; p&#233;ld&#225;t: ha az &#214;n sz&#225;ml&#225;ja nett&#243; eszk&#246;z&#233;rt&#233;ke 100&nbsp;000&nbsp;USD (&#233;s jogosult kamatra), 10&nbsp;000&nbsp;USD be nem fektetett k&#233;szp&#233;nzegyenleggel rendelkezik, &#233;s az &#214;nnek fizetett &#233;ves kamat 3,83%, akkor az &#233;v v&#233;g&#233;n az egyenlege <span class="fw-600">10&nbsp;383&nbsp;USD-t</span> fog kitenni (10&nbsp;000 USD szabad k&#233;szp&#233;nzegyenleg plusz 383 USD kamat a k&#233;szp&#233;nzegyenleg haszn&#225;lat&#225;&#233;rt), felt&#233;telezve, hogy az adott &#233;vben nem v&#233;gzett kiutal&#225;st, teh&#225;t a 10&nbsp;000&nbsp;USD mindv&#233;gig rendelkez&#233;sre &#225;llt a sz&#225;ml&#225;n.</li>
+                                                </ul>
+                                                <p>A kamat mindk&#233;t esetben &#246;szt&#246;nz&#337;leg hat a p&#233;nz k&#246;lcs&#246;nad&#225;s&#225;ra, illetve k&#246;lcs&#246;nv&#233;tel&#233;re, &#233;s a p&#233;nz id&#337;&#233;rt&#233;k&#233;t t&#252;kr&#246;zi &#8211; ugyanis egy adott p&#233;nz&#246;sszeg ma t&#246;bbet &#233;r, mint ugyanaz az &#246;sszeg a j&#246;v&#337;ben.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col">
+                                        <h3 class="fs-4 lh-4">Tov&#225;bbi inform&#225;ci&#243;k</h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="accordion" id="accordionSet"><!-- BEGIN ACCORDION 01 --> 
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="heading01">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse01" aria-expanded="false" aria-controls="collapse01">Kamatfelsz&#225;m&#237;t&#225;s</button>
+                                                </h2>
+                                                <div id="collapse01" class="accordion-collapse collapse" aria-labelledby="heading01" >
+                                                    <div class="accordion-body"><!--<h5>Subtitle</h5>--> 
+                                                        <p>A kamat felsz&#225;m&#237;t&#225;s&#225;ra naponta ker&#252;l sor. Az IBKR az aktu&#225;lis kamatot havonta visszamen&#337;leg, a k&#246;vetkez&#337; h&#243;nap harmadik munkanapj&#225;n k&#246;zli. Az IBKR a s&#225;vok alapj&#225;n vegyes kamatl&#225;bat haszn&#225;l. A kamat alapj&#225;t k&#233;pez&#337; s&#225;vok id&#337;r&#337;l id&#337;re v&#225;ltozhatnak, el&#337;zetes t&#225;j&#233;koztat&#225;s n&#233;lk&#252;l.</p>
+                                                    </div>
+                                                </div>
+                                            </div><!-- END ACCORDION 01 --><!-- BEGIN ACCORDION 02 -->
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="heading02">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse02" aria-expanded="false" aria-controls="collapse02">Negat&#237;v kamatl&#225;bak</button>
+                                                </h2>
+                                                <div id="collapse02" class="accordion-collapse collapse" aria-labelledby="heading02" >
+                                                    <div class="accordion-body"><!--<h5>Shares loaned out may not be protected by SIPC.</h5>--> 
+                                                        <p>A CHF-ben, JPY-ben vagy RUB-ban tartott egyenlegek eset&#233;n az IBKR a pozit&#237;v egyenlegekre negat&#237;v kamatl&#225;bat alkalmazhat. A fenti deviz&#225;kban tartott sz&#225;ml&#225;kra alkalmazott negat&#237;v kamatl&#225;b egys&#233;ges &#233;s a sz&#225;mla m&#233;ret&#233;t&#337;l f&#252;ggetlen. M&#225;s deviz&#225;kn&#225;l, ahol az effekt&#237;v kamatl&#225;b kevesebb mint nulla, a fizetett kamat 0%.</p>
+                                                    </div>
+                                                </div>
+                                            </div><!-- END ACCORDION 02 --><!-- BEGIN ACCORDION 03 -->
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="heading03">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse03" aria-expanded="false" aria-controls="collapse03">Nagy &#246;sszeg&#369; k&#233;szp&#233;nzegyenleg eset&#233;n jav&#237;thatja az el&#233;rt hozamot</button>
+                                                </h2>
+                                                <div id="collapse03" class="accordion-collapse collapse" aria-labelledby="heading03" >
+                                                    <div class="accordion-body">
+                                                        <p>A nagy k&#233;szp&#233;nzpoz&#237;ci&#243;kkal &#233;s jelent&#337;s pozit&#237;v &#233;s negat&#237;v egyenlegekkel rendelkez&#337; &#252;gyfelek sz&#225;m&#225;ra kedvez&#337; lehet az IBKR speci&#225;lis k&#233;szp&#233;nzbefektet&#233;si programja, amely devizatranzakci&#243;kat (&#250;n. deviza-swap &#252;gyleteket) haszn&#225;l.
+                                                        <p>A jogosult IBKR &#252;gyfelek feliratkozhatnak egy automatikus swap-programra, amelyben az IBKR szisztematikusan hajthat v&#233;gre tranzakci&#243;kat a devizapiacon. Ezek a tranzakci&#243;k jav&#237;thatj&#225;k a nagy m&#233;ret&#369; long/short poz&#237;ci&#243;kat tartalmaz&#243;, t&#246;bbdeviz&#225;s sz&#225;ml&#225;val rendelkez&#337; &#252;gyfelek kamatjuttat&#225;sait/-k&#246;lts&#233;geit. A program nem j&#225;r semmilyen el&#337;nnyel az egydeviz&#225;s sz&#225;ml&#225;k vagy a long vagy short devizaegyenlegekkel rendelkez&#337; sz&#225;ml&#225;k eset&#233;n.</p>
+                                                        <p>A deviza-swap olyan tranzakci&#243;s strat&#233;gia, amelyben az &#252;gyf&#233;l deviza&#252;gyletet k&#246;t egy adott &#233;rt&#233;knapra (jellemz&#337;en a keresked&#233;si napot k&#246;vet&#337; napra (&#250;n. &#8222;Tomorrow&#8221; vagy &#8222;TOM&#8221;), majd az azt k&#246;vet&#337; napon (jellemz&#337;en a keresked&#233;si nap + 2 nap, (&#250;n. &#8222;NEXT&#8221;) egy azzal ellent&#233;tes ir&#225;ny&#250; &#252;gyletet k&#246;t. A k&#233;t &#252;gylet k&#246;z&#246;tti &#225;rfolyam-k&#252;l&#246;nb&#246;zet jelenti a k&#233;t deviza egyedi hozamg&#246;rb&#233;j&#233;nek bankk&#246;zi k&#252;l&#246;nb&#246;zet&#233;t. A deviza-swap piac lehet&#337;v&#233; teszi a jelent&#337;s &#225;rfolyamk&#252;l&#246;nbs&#233;gek kihaszn&#225;l&#225;s&#225;t. Az arra jogosult &#252;gyfelek el&#337;nyre tehetnek szert a keresked&#233;s el&#337;tti egyenlegek nett&#243;s&#237;t&#225;s&#225;b&#243;l &#233;s a tranzakci&#243;k hozam&#225;b&#243;l. A befektet&#337; k&#233;szp&#233;nz&#233;t a swap piacon fektetj&#252;k be &#8211; deviz&#225;nk&#233;nt jellemz&#337;en 2-10 b&#225;zispontos &#225;rr&#233;s mellett &#8211; az IBKR alap&#233;rtelmez&#233;s szerinti &#252;gyf&#233;legyenleg-v&#233;delmi mechanizmusa helyett. </p>
+                                                        <p>Ez a strat&#233;gia kifinomult befektet&#233;si strat&#233;gi&#225;nak min&#337;s&#252;l, &#233;s kiz&#225;r&#243;lag min&#337;s&#237;tett befektet&#337;k sz&#225;m&#225;ra &#233;rhet&#337; el, akik legal&#225;bb 10M USD (vagy azzal egyen&#233;rt&#233;k&#369;) k&#233;szp&#233;nzegyenleggel rendelkeznek, illetve &#8222;professzion&#225;lis&#8221; besorol&#225;ssal rendelkeznek az Egyes&#252;lt Kir&#225;lys&#225;gban, az EU-ban &#233;s a legt&#246;bb &#225;zsiai csendes-&#243;ce&#225;ni t&#233;rs&#233;gbeli szab&#225;lyoz&#243;i joghat&#243;s&#225;gban. A programban val&#243; r&#233;szv&#233;telhez az amerikai illet&#337;s&#233;g&#369; befektet&#337;knek jogosult szerz&#337;d&#337; f&#233;lnek (Eligible Contract Participant, ECP) kell lenni&#252;k.</p>
+                                                        <p>Tov&#225;bbi inform&#225;ci&#243;&#233;rt vegye fel a kapcsolatot swap &#252;gyletekkel foglalkoz&#243; &#252;gyf&#233;lszolg&#225;latunkkal az <a href="mailto:FXSwaps@IBKR.com" class="link-generic">FXSwaps@IBKR.com</a> email c&#237;men, tekintse meg a <a href="https://www.ibkr.com/faq?id=35784865" target="_blank" rel="noopener" class="link-generic">GYIK-et</a> vagy l&#225;togasson el a <a href="https://www.ibkrguides.com/kb/article-2815.htm" target="_blank" rel="noopener" class="link-generic">Tud&#225;st&#225;rba</a>.</p>
+                                                    </div>
+                                                </div>
+                                            </div><!-- END ACCORDION 03 -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div><!-- / about tab content --><!-- education tab -->
+                    <div class="tab-pane fade" 
+                        id="education" role="tabpanel" 
+                        aria-labelledby="education-tab" tabindex="0">
+                        <section id="education" class="education pt-0">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <h2>Az Interactive Brokers kamatokkal kapcsolatos oktat&#243;anyagai</h2>
+                                        <div class="row mt-3">
+                                            <div class="col-12 col-lg-11">
+                                                <p class="fs-6 lh-6">A kamat a p&#233;nzk&#246;lcs&#246;n felv&#233;tele ut&#225;n fizetett d&#237;j, illetve a valaki m&#225;s p&#233;nz&#233;nek a haszn&#225;lat&#225;&#233;rt fizetett &#246;sszeg. A kamatot &#225;ltal&#225;ban a k&#246;lcs&#246;nvett vagy befektetett &#246;sszeg sz&#225;zal&#233;k&#225;ban fejezz&#252;k ki, &#233;s egy meghat&#225;rozott id&#337;tartamra sz&#225;m&#237;tjuk ki (pl. napi, havi vagy &#233;ves kamat). Az Interactive Brokers Traders&#8217; Academy ingyenes anyagokat k&#237;n&#225;l, amelyek seg&#237;tenek jobban meg&#233;rteni a kamat szerep&#233;t a p&#233;nz&#252;gyi szolg&#225;ltat&#225;sokban.</p>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-3">
+                                            <div class="col-12 col-lg-5">
+                                                <h3 class="fs-4 lh-4">Kiemelt lecke</h3>
+                                                <h4 class="fs-7 lh-7 fw-600">Introduction to Monetary Policy (Bevezet&#233;s a monet&#225;ris politik&#225;ba)</h4>
+                                                <p>Ez a r&#246;vid lecke azt mutatja be, hogyan szab&#225;lyozza a monet&#225;ris politika a p&#233;nzk&#237;n&#225;latot &#233;s a gazdas&#225;gi n&#246;veked&#233;st.</p>
+                                                <p class="mt-4"><a class="btn btn-secondary" href="https://www.interactivebrokers.eu/campus/trading-lessons/introduction-to-monetary-policy/" target="_blank" rel="noreferrer noopener">N&#233;zze meg a leck&#233;t</a></p>                                            </div>
+                                            <div class="col-12 col-lg-4 offset-lg-1">
+                                                <h3 class="fs-4 lh-4 mb-20">Tov&#225;bbi inform&#225;ci&#243;k</h3>
+                                                <p><a class="link-chevron-circle-right" href="https://www.interactivebrokers.eu/campus/glossary-terms/interest-rate" target="_blank" rel="noreferrer noopener">Kamatl&#225;b</a></p>
+                                                <p><a class="link-chevron-circle-right" href="https://www.interactivebrokers.eu/campus/glossary-terms/accrued-interest" target="_blank" rel="noreferrer noopener">Elhat&#225;rolt kamat</a></p>
+                                                <p><a class="link-chevron-circle-right" href="https://www.interactivebrokers.eu/campus/glossary-terms/short-interest" target="_blank" rel="noreferrer noopener">Short kamat</a></p>
+                                                <p><a class="link-chevron-circle-right" href="https://www.interactivebrokers.eu/campus/glossary-terms/interest-rate-risk" target="_blank" rel="noreferrer noopener">Kamatkock&#225;zat</a></p>
+                                                <p><a class="link-chevron-circle-right" href="https://www.interactivebrokers.eu/campus/glossary-terms/real-interest-rate" target="_blank" rel="noreferrer noopener">Re&#225;lkamat</a></p>
+                                                <p><a class="link-chevron-circle-right" href="https://www.interactivebrokers.eu/campus/glossary-terms/variable-interest-rate" target="_blank" rel="noreferrer noopener">V&#225;ltoz&#243; kamat</a></p>
+                                                <p><a class="link-chevron-circle-right" href="https://www.ibkrguides.com/kb/article-974.htm" target="_blank" rel="noreferrer noopener">Referencia-kamatl&#225;b defin&#237;ci&#243;k</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- FAQs INTEREST RATES -->
+                        </section>
+                        <section id="additonal-info" class="additonal-info pt-0">
+                            <div class="container">
+                                <div class="row mt-60">
+                                    <div class="col-12">
+                                        <h3 class="fs-3">Kamatl&#225;bak - GYIK</h3>
+                                        <br />
+                                        <iframe id="ifr" src="../../../lib/cstools/faq/index.html#/articles/25475676?openExternal=true&isEmbedded=true" frameborder="0" style="width:100%;height:700px" height="700px" aria-label="Interest Rates FAQs"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div><!-- / education tab content -->
+                </div>
+                            </div>
+        </div>
+    </div>
+</section>
+<section id="disclosures" class="disclosure">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <p class="text-bold">K&#246;zz&#233;t&#233;telek</p>
+                <ol>
+                    <li>
+                        Az IBKR saj&#225;t bel&#225;t&#225;sa szerint, b&#225;rmikor m&#243;dos&#237;thatja a fenti kamatl&#225;bakat. Az aktu&#225;lis kamatl&#225;bakat a legjobb tud&#225;sunk szerint tessz&#252;k k&#246;zz&#233;. A kamatl&#225;bak a program vagy a konstrukci&#243; f&#252;ggv&#233;ny&#233;ben is v&#225;ltozhatnak. Bizonyos korl&#225;toz&#225;sok mellett. A k&#246;zz&#233;tett kamatl&#225;bak az IBKR k&#246;zvetlen &#252;gyfeleire vonatkoznak. El&#337;fordulhat, hogy a m&#225;s br&#243;kerek &#225;ltal k&#246;zvet&#237;tett &#252;gyfeleknek a k&#246;zvet&#237;t&#337; br&#243;ker &#225;ltal meghat&#225;rozottnak megfelel&#337;, a fentiekt&#337;l elt&#233;r&#337; m&#233;rt&#233;k&#369; kamatot kell fizetni&#252;k (vagy egy&#225;ltal&#225;n nem kell kamatot fizetni&#252;k). Javasoljuk az &#252;gyfeleknek, hogy a sz&#225;ml&#225;jukra vonatkoz&#243; kamatl&#225;bakkal kapcsolatban vegy&#233;k fel a kapcsolatot k&#246;zvet&#237;t&#337; br&#243;ker&#252;kkel.                    </li>
+                </ol>
+                <hr>
+                <ul>
+                                        <li>
+                        &#220;gyfeleink kamatra tehetnek szert pozit&#237;v elsz&#225;molt k&#233;szp&#233;nzegyenlegeik ut&#225;n. Ha m&#233;g a sz&#225;mlanyit&#225;si k&#233;relem j&#243;v&#225;hagy&#225;sa el&#337;tt felt&#246;lti a sz&#225;ml&#225;j&#225;t, m&#225;r a sz&#225;mlanyit&#225;s el&#337;tt szert tehet kamatra a k&#233;szp&#233;nzegyenlege ut&#225;n. Ha a sz&#225;mlanyit&#225;si k&#233;relme elutas&#237;t&#225;sra ker&#252;l, a befizetett &#246;sszeget kamatok n&#233;lk&#252;l utaljuk vissza.                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<script> 
+    $(document).ready(function() {
+        let checkBootstrap = setInterval(tabNav, 50);
+        let p = '';
+        function tabNav() {
+            const queryString = window.location.search; 
+            const urlParams = new URLSearchParams(queryString); 
+            let p = urlParams.get('p'); 
+            // Check if bootstrap js is loaded yet
+            let bootstrap_enabled = (typeof $().tab == 'function');
+            // If it's loaded trigger tab interaction
+            if (bootstrap_enabled === true) {
+                if ($(p != '') && ($('#nav-tabs  > .nav-item > .nav-link[data-bs-target="#' + p + '"]') != null)) {
+                    $('#nav-tabs  > .nav-item > .nav-link[data-bs-target="#' + p + '"]').tab('show');
+                    setTimeout(function() {
+                        $(window).scrollTop(0);
+                    }, 400);
+                }
+                clearInterval(checkBootstrap);
+                checkBootstrap = null;
+            }
+        }
+        function updateParam(param) {
+            let url = new URL(document.html);
+            let search_params = url.searchParams; 
+            search_params.set('p', param);
+            url.search = search_params.toString();
+            let new_url = url.toString();
+            history.pushState(null, null, new_url);
+            return false;
+        }
+        $('#nav-tabs  > .nav-item > .nav-link').click(function() {
+            let newParam = $(this).attr('data-bs-target').toString();
+            let cleanParam = newParam.replace('#','');
+            updateParam(cleanParam);
+        });
+    });
+</script>
+</div>
+
+<!-- FOOTER START ---------------------------------------------------------------------------------------------------- -->
+<footer class="footer noprint" id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p>Az Interactive Brokers &#174;, IB<sup>SM</sup>, InteractiveBrokers.com &#174;, Interactive Analytics &#174;, IB Options Analytics<sup>SM</sup>, IB SmartRouting<sup>SM</sup>, PortfolioAnalyst &#174;, IB Trader Workstation<sup>SM</sup> &#233;s One World, One Account<sup>SM</sup> az Interactive Brokers LLC szolg&#225;ltat&#225;si v&#233;djegyei &#233;s/vagy v&#233;djegyei. K&#233;r&#233;s eset&#233;n biztos&#237;tjuk az esetleges k&#225;rig&#233;nyekhez sz&#252;ks&#233;ges al&#225;t&#225;maszt&#243; dokument&#225;ci&#243;t &#233;s statisztikai adatokat. Az oldalon l&#225;that&#243; keresked&#233;si k&#243;dok kiz&#225;r&#243;lag szeml&#233;ltet&#233;si c&#233;lokat szolg&#225;lnak &#233;s nem tekintend&#337;k aj&#225;nl&#225;snak.</p>
+                <p>A r&#233;szv&#233;nyekkel, opci&#243;s &#233;s hat&#225;rid&#337;s &#252;gyletekkel, deviz&#225;kkal, k&#252;lf&#246;ldi r&#233;szv&#233;nyekkel &#233;s k&#246;tv&#233;nyekkel t&#246;rt&#233;n&#337; online keresked&#233;s jelent&#337;s vesztes&#233;g kock&#225;zat&#225;val j&#225;rhat.</p>
+                <p>Az opci&#243;k kock&#225;zatot jelentenek, ez&#233;rt nem minden befektet&#337;nek aj&#225;nlottak. Tov&#225;bbi inform&#225;ci&#243;k&#233;rt olvassa el az opci&#243;k k&#246;zz&#233;t&#233;teli dokumentum&#225;t <a href="https://www.theocc.com/about/publications/character-risks.jsp" rel="noreferrer noopener" target="_blank">(Characteristics and Risks of Standardized Options, ODD)</a>. Alternat&#237;v megold&#225;sk&#233;nt k&#233;rj&#252;k, vegye fel a kapcsolatot az <a href="../../support/customer-servicef763.html?p=contact" target="_self">IB &#220;gyf&#233;lszolg&#225;lat&#225;val</a> &#233;s k&#233;rje az ODD egy p&#233;ld&#225;ny&#225;nak megk&#252;ld&#233;s&#233;t. A keresked&#233;s megkezd&#233;se el&#337;tt &#252;gyfeleink k&#246;telesek elolvasni a <a href="../../general/homepage-disclosures.html" target="_self">Figyelmeztet&#233;sek &#233;s k&#246;zz&#233;t&#233;telek</a> oldalon tal&#225;lhat&#243; relev&#225;ns kock&#225;zatfelt&#225;r&#225;si nyilatkozatokat. A t&#337;ke&#225;tt&#233;tes keresked&#233;s kiz&#225;r&#243;lag magas kock&#225;zatt&#369;r&#233;s&#369;, tapasztalt befektet&#337;k sz&#225;m&#225;ra javasolt. A vesztes&#233;g m&#233;rt&#233;ke meghaladhatja indul&#243; befektet&#233;s&#233;t. A fedezeti hitelkamatokkal kapcsolatos tov&#225;bbi inform&#225;ci&#243;k&#233;rt k&#233;rj&#252;k, l&#225;togasson el a  <a href="../../trading/margin-rates.html" target="_self">Fedezeti hitelkamatok</a> oldalra. A hat&#225;rid&#337;s &#233;rt&#233;kpap&#237;rok magas kock&#225;zattal j&#225;rnak, ez&#233;rt nem minden befektet&#337;nek aj&#225;nlottak. A lehets&#233;ges vesztes&#233;g m&#233;rt&#233;ke meghaladhatja indul&#243; befektet&#233;s&#233;t. A hat&#225;rid&#337;s &#233;rt&#233;kpap&#237;rokkal val&#243; keresked&#233;s el&#337;tt olvassa el a <a href="../../general/homepage-disclosures.html" target="_self">&#8222;Security Futures Risk Disclosure Statement&#8221;</a> c&#237;m&#369; dokumentumot. A struktur&#225;lt term&#233;kek &#233;s a r&#246;gz&#237;tett kamatoz&#225;s&#250; term&#233;kek (mint p&#233;ld&#225;ul a k&#246;tv&#233;nyek) magasabb kock&#225;zattal j&#225;r&#243; &#246;sszetett term&#233;kek, ez&#233;rt nem minden befektet&#337;nek aj&#225;nlottak. Keresked&#233;s el&#337;tt olvassa el a <a href="../../general/homepage-disclosures.html" target="_self">Kock&#225;zatfelt&#225;r&#243; nyilatkozatot</a>.</p>
+                <p>Az IBKR ATS-sel kapcsolatos inform&#225;ci&#243;k&#233;rt k&#233;rj&#252;k, l&#225;togasson el a <a href="https://www.sec.gov/divisions/marketreg/form-ats-n-filings.htm#ats-n" rel="noreferrer noopener" target="_blank">SEC weboldal&#225;ra</a>.</p>
+<p>A 36 orsz&#225;g az orsz&#225;gokat &#233;s a ter&#252;leteket is mag&#225;ban foglalja.</p>
+            </div>
+        </div>
+        <div class="footer-site-links" id="footerSiteLinks">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>Sz&#225;mla</p>
+                    <ul>
+                    <li><a href="https://www.interactivebrokers.co.uk/sso/Login?RL=1" target="_self">Bejelentkez&#233;s</a></li>
+                    <li><a href="https://www.interactivebrokers.co.uk/Universal/Application" target="_self">Sz&#225;mlanyit&#225;s</a></li>
+                    <li><a href="https://www.interactivebrokers.co.uk/sso/Login?c=t" target="_self">Sz&#225;mlanyit&#225;si k&#233;relem befejez&#233;se</a></li>
+                    <li><a href="../account-guide.html" target="_self">Sz&#225;mlat&#237;pusok</a></li>
+                    <li><a href="https://www.interactivebrokers.co.uk/Universal/Application?ft=T" target="_self">Ingyenes pr&#243;baverzi&#243;</a></li>
+                    </ul>
+                    <p>Szoftverek &#233;s let&#246;lthet&#337; programok</p>
+                    <ul>
+                    <li><a href="../../trading/tws.html#tws-software" target="_self">Trader Workstation</a></li>
+                    <li><a href="../../trading/ibkr-desktop.html" target="_self">IBKR Desktop</a></li>
+                    <li><a href="../../trading/tws-mobile.html#trytoday" target="_self">IBKR Mobile</a></li>
+                    <li><a href="../../trading/ib-api.html#api-software" target="_self">API fel&#252;letek</a></li>
+                    </ul>    
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>T&#225;mogat&#225;s</p>
+                    <ul>
+					<li><a href="../../support/fund-my-account.html" target="_self">T&#246;ltse fel a sz&#225;ml&#225;j&#225;t</a></li>
+                    <li><a href="../../support/individuals.html" target="_self">Mag&#225;nszem&#233;lyek</a></li>
+                    <li><a href="../../support/institutions.html" target="_self">Int&#233;zm&#233;nyek</a></li>
+                    <li><a href="../../support/institutional-sales-contacts4343.html?p=uk" target="_self">Int&#233;zm&#233;nyi &#233;rt&#233;kes&#237;t&#337;k el&#233;rhet&#337;s&#233;gei</a></li>
+					<li><a href="../../general/contact/ibot-container.html" target="_self">Tekintse &#225;t a GYIK-et</a></li>
+					<li><a href="../../software/systemStatus.html" target="_self">Rendszer&#225;llapot</a></li>
+                    </ul>
+                    <p>Sz&#225;ll&#237;t&#243;i t&#225;mogat&#225;s</p>
+                    <ul>
+                    <li><a href="../../general/about/supplier-information.html" target="_self">Sz&#225;ll&#237;t&#243;i inform&#225;ci&#243;k</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>R&#243;lunk</p>
+                    <ul>
+                    <li><a href="../../general/awards.html" target="_self">D&#237;jak</a></li>
+                    <li><a href="../../general/about/careers-splash.html" target="_self">Karrierlehet&#337;s&#233;gek</a></li>
+                    <li><a href="../../general/about/about.html" target="_self">Inform&#225;ci&#243;k &#233;s c&#233;gt&#246;rt&#233;net</a></li>
+                    <li><a href="https://investors.interactivebrokers.com/ir/main.php" target="_blank" rel="noreferrer noopener">Befektet&#337;i kapcsolatok</a></li>
+                    <li><a href="../../about/news-at-ibkr.html" target="_self">IBKR h&#237;rek</a></li>
+                    <li><a href="../../general/about/press-and-media.html" target="_self">Sajt&#243; &#233;s m&#233;dia</a></li>
+                    <li><a href="../legalDocuments/brokerPerformanceReports.html" target="_self">Szab&#225;lyoz&#243;i jelent&#233;sek</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>K&#246;vessen minket a k&#246;z&#246;ss&#233;gi m&#233;di&#225;ban!</p>
+                    <ul>
+                        <li><a href="https://www.facebook.com/InteractiveBrokersEurope/" target="_blank" rel="noreferrer noopener"><i class="fab fa-facebook"></i>  Facebook</a></li>
+                        <li><a href="https://www.instagram.com/interactivebrokers_europe" target="_blank" rel="noreferrer noopener"><i class="fab fa-instagram"></i>  Instagram</a></li>
+                        <li><a href="https://twitter.com/IBKR_Europe" target="_blank" rel="noreferrer noopener"><i class="fab fa-x-twitter"></i>  Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-disclosure-links" id="footerDisclosureLinks">
+            <div class="row">
+                <div class="col">
+                    <ul>
+                    <li><a href="../legalDocuments/anti-fraud-notice.html" target="_self">T&#225;j&#233;koztat&#243; a csal&#225;s elleni k&#252;zdelemr&#337;l</a></li>
+                    <li><a href="../legalDocuments/custIdentificationNotice.html" target="_self">T&#225;j&#233;koztat&#243; az &#252;gyf&#233;l-azonos&#237;t&#225;si programr&#243;l</a></li>
+                    <li><a href="../../general/warnings-on-frauds-and-scams.html" target="_self">Figyelmeztet&#233;s csal&#225;sokra &#233;s &#225;tver&#233;sekre</a></li>
+                    <li><a href="../forms-and-disclosures-client-agreements.html" target="_self">Formanyomtatv&#225;nyok &#233;s k&#246;zz&#233;t&#233;telek</a></li>
+                    <li><a href="../legalDocuments/accessibility-policy.html" target="_self">Akad&#225;lymentes&#237;t&#233;si nyilatkozat</a></li>
+                    <li><a href="../legalDocuments/privacy.html" target="_self">Adatv&#233;delem</a></li>
+                    <li><a href="../../sitemap/index.html" target="_self">Oldalt&#233;rk&#233;p</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-entities" id="footerEntities">
+            <div class="row">
+                <div class="col">
+                    <div class="footer-entity"><!-- IBKR IE -->
+                        <p class="entity-name"><a href="../../../en/home.html" target="_self">Interactive Brokers Ireland Limited</a></p>
+                        <p>szab&#225;lyoz&#243; hat&#243;s&#225;ga a <a href="https://www.centralbank.ie/" target="_blank" rel="noreferrer noopener">Central Bank of Ireland</a> (CBI, hivatkoz&#225;si sz&#225;m: C423427), nyilv&#225;ntart&#243; hat&#243;s&#225;ga a Companies Registration Office (CRO, nyilv&#225;ntart&#225;si sz&#225;m: 657406), &#233;s az Irish Investor Compensation Scheme (ICS) tagja.<br> <strong>Sz&#233;khely:</strong> North Dock One, 91/92 North Wall Quay, Dublin 1 D01 H7V7, &#205;rorsz&#225;g.<br> <strong>Weboldal:</strong> <a href="../../../en/home.html" target="_self">www.interactivebrokers.ie</a></p>
+                        <p class="footer-entities-link"><a href="#collapseEntities" target="_self" class="collapsed" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseEntities">Az Interactive Brokers egy&#233;b le&#225;nyv&#225;llalataira vonatkoz&#243; inform&#225;ci&#243;k</a></p>
+                    </div>
+                    <div class="footer-entities-list collapse" id="collapseEntities">
+                        <div class="row">
+                            <div class="col-12 col-md-6"><!-- IBKR LLC -->
+                                
+                                <p class="entity-name"><a href="https://www.interactivebrokers.com/en/home.php?nored=t" target="_self">Interactive Brokers LLC</a></p>
+                                <p>a <a  rel="noreferrer noopener" target="_blank"  href="https://www.nyse.com/">NYSE</a>, a <a href="https://www.finra.org/" rel="noreferrer noopener"  target="_blank">FINRA</a> &#233;s a <a href="https://www.sipc.org/" rel=" noreferrer noopener" target="_blank">SIPC</a> tagja, szab&#225;lyoz&#243; hat&#243;s&#225;ga a US Securities and Exchange Commission illetve a Commodity Futures Trading Commission.<br> <strong>Sz&#233;khely:</strong> One Pickwick Plaza, Greenwich, CT 06830 USA<br> <strong>Weboldal:</strong> <a href="https://www.interactivebrokers.com/en/home.php?nored=t" target="_self">www.interactivebrokers.com</a></p><!-- IBKR CA -->
+                                <p class="entity-name"><a href="https://www.interactivebrokers.ca/en/home.php?nored=t" target="_self">Interactive Brokers Canada Inc.</a></p>
+                                <p>az , a <a href="https://www.ciro.ca/" target="_blank" rel="noreferrer noopener">Canadian Investment Regulatory Organization (CIRO)</a>  &#233;s a <a href="https://www.cipf.ca/" target="_blank" rel="noreferrer noopener">Canadian Investor Protection Fund tagja.</a><br> <strong>Sz&#233;khely:</strong> 1800 McGill College Avenue, Suite 2106, Montreal, Quebec, H3A 3J6, Kanada.<br> <strong>Weboldal:</strong> <a href="https://www.interactivebrokers.ca/en/home.php?nored=t" target="_self">www.interactivebrokers.ca</a></p><!-- IBKR UK -->
+                                
+                                <p class="entity-name"><a href="https://www.interactivebrokers.co.uk/en/home.php?nored=t" target="_self">Interactive Brokers U.K. Limited</a></p>
+                                <p>enged&#233;lyez&#337; &#233;s szab&#225;lyoz&#243; hat&#243;s&#225;ga a <a href="https://www.fca.org.uk/" target="_blank" rel="noreferrer noopener">Financial Conduct Authority</a>. FCA nyilv&#225;ntart&#225;si sz&#225;m: 208159. Bejegyezve Angli&#225;ban &#233;s Walesben 03958476 c&#233;gjegyz&#233;ksz&#225;mon. <a href="https://www.fca.org.uk/firms/financial-services-register" target="_blank" rel="noreferrer noopener">[https://www.fca.org.uk/firms/financial-services-register]</a><br> <strong>Sz&#233;khely:</strong> 20 Fenchurch Street, Floor 12, London EC3M 3BY.<br> <strong>Weboldal:</strong> <a href="https://www.interactivebrokers.co.uk/en/home.php?nored=t" target="_self">www.interactivebrokers.co.uk</a></p><!-- IBKR AUS -->
+                                <p class="entity-name"><a href="https://www.interactivebrokers.com.au/en/home.php?nored=t" target="_self">Interactive Brokers Australia Pty. Ltd.</a></p>
+                                <p>ABN 98 166 929 568 enged&#233;lyez&#337; &#233;s szab&#225;lyoz&#243; hat&#243;s&#225;ga az <a href="https://asic.gov.au/" target="_blank" rel="noreferrer noopener">Australian Securities and Investments Commission</a> (AFSL: 453554). Tags&#225;gai: <a href="https://www.asx.com.au/" target="_blank" rel="noreferrer noopener">ASX</a>, <a href="https://www.asx.com.au/" target="_blank" rel="noreferrer noopener">ASX 24</a> &#233;s <a href="https://www.cboe.com.au/" target="_blank" rel="noreferrer noopener">Cboe Australia</a>.<br> <strong>Sz&#233;khely:</strong> Level 11, 175 Pitt Street, Sydney, New South Wales 2000, Ausztr&#225;lia.<br> <strong>Weboldal:</strong> <a href="https://www.interactivebrokers.com.au/en/home.php?nored=t" target="_self">www.interactivebrokers.com.au </a></p>
+                            </div>
+                            <div class="col-12 col-md-6"><!-- IBKR HK -->
+                                
+                                <p class="entity-name"><a href="https://www.interactivebrokers.com.hk/en/home.php?nored=t" target="_self">Interactive Brokers Hong Kong Limited</a></p>
+                                <p>szab&#225;lyoz&#243; hat&#243;s&#225;ga a Hong Kong Securities and Futures Commission. Tags&#225;gai: <a href="https://www.hkex.com.hk/" target="_blank" rel="noreferrer noopener">SEHK</a> &#233;s <a href="https://www.hkex.com.hk/" target="_blank" rel="noreferrer noopener">HKFE</a>.<br> <strong>Sz&#233;khely:</strong> Suite 1512, Two Pacific Place, 88 Queensway, Admiralty, Hong Kong SAR.<br> <strong>Weboldal:</strong> <a href="https://www.interactivebrokers.com.hk/en/home.php?nored=t" target="_self">www.interactivebrokers.com.hk</a></p><!-- IBKR IN -->
+                                <p class="entity-name"><a href="https://www.interactivebrokers.co.in/en/home.php?nored=t" target="_self">Az Interactive Brokers India Pvt. Ltd.</a></p>
+                                <p>az <a href="https://www.nseindia.com/" target="_blank" rel="noreferrer noopener">NSE</a> &#233;s a <a href="https://www.bseindia.com/" target="_blank" rel="noreferrer noopener">BSE</a> keresked&#337;tagja, valamint az <a href="https://nsdl.co.in/" target="_blank" rel="noreferrer noopener">NSDL</a> let&#233;ti tagja. <a href="https://www.sebi.gov.in/" target="_blank" rel="noreferrer noopener">SEBI</a> nyilv&#225;ntart&#225;si sz&#225;m:  INZ000217730; NSDL: IN-DP-602-2021. CIN-U67120MH2007FTC170004.<br> <strong>Sz&#233;khely:</strong> 502/A, Times Square, Andheri Kurla Road, Andheri East, Mumbai 400059, India.<br> <strong>Telefon:</strong> +91-22-61289888 <span class="pipe">|</span> <strong>Fax:</strong> +91-22-61289898.<br> <strong>Weboldal:</strong> <a href="https://www.interactivebrokers.co.in/en/home.php?nored=t" target="_self">www.interactivebrokers.co.in</a></p><!-- IBKR JP -->
+                                
+                                <p class="entity-name"><a href="https://www.interactivebrokers.co.jp/en/home.php?nored=t" target="_self">Az Interactive Brokers Securities Japan Inc.</a></p>
+                                <p>szab&#225;lyoz&#243; hat&#243;s&#225;ga a Kanto Local Finance Bureau (nyilv&#225;ntart&#225;si sz&#225;m: 187), &#233;s a <a href="https://www.jsda.or.jp/" target="_blank" rel="noreferrer noopener">Japan Securities Dealers Association</a> illetve a <a href="https://www.nisshokyo.or.jp/" target="_blank" rel="noreferrer noopener">The Commodity Futures Association of Japan</a>tagja.<br> <strong>Sz&#233;khely:</strong> Kasumigaseki Building 25F, 2-5 Kasumigaseki 3-chome, Chiyoda-ku, Tokyo, 100-6025 Jap&#225;n.<br> <strong>Telefon:</strong> +81 03-4590-0711 <em>(munkanapokon: 8:30-17:30 JST)</em>.<br> <strong>Weboldal:</strong> <a href="https://www.interactivebrokers.co.jp/en/home.php?nored=t" target="_self">www.interactivebrokers.co.jp</a></p><!-- IBKR SG -->
+<p class="entity-name"><a href="https://www.interactivebrokers.com.sg/en/home.php" target="_self">Interactive Brokers Singapore Pte. Ltd.</a></p>
+<p>enged&#233;lyez&#337; &#233;s szab&#225;lyoz&#243; hat&#243;s&#225;ga a Monetary Authority of Singapore (Enged&#233;lysz&#225;m: CMS100917).<br> <strong>Sz&#233;khely:</strong>  1 Harbourfront Place #12-01/03, Harbourfront Tower 1, Singapore 098633. <br> <strong>Weboldal:</strong> <a href="https://www.interactivebrokers.com.sg/en/home.php" target="_self">www.interactivebrokers.com.sg</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- FOOTER END ---------------------------------------------------------------------------------------------------- -->
+</footer>
+
+<script>
+if(window.location.href.includes('conf=am')) {
+document.querySelector("#ibkr-header").style.display = "none";
+document.querySelector("#footer").style.display = "none";
+}
+</script><!-- SCRIPTS FOOTER ---------------------------------------------------------------------------------------------------- -->
+<script type="text/javascript" src="../../../scripts/common/js/zeynep-2.2.0/zeynep.js"></script>
+<script type="text/javascript" src="../../../scripts/common/js/lazyload/lazyload.min.js"></script>
+<script type="text/javascript" src="../../../search/conversions.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    
+    // GATHER HEIGHT OF HEADER
+    var headerHeight = $("div#ibkr-header").outerHeight();
+    // GATHER HEIGHT OF DISCLOSURES
+    var disclosureHeight = $("section#UKProductDisclosure, section#TurbosDisclosure").outerHeight();
+    $("section#UKProductDisclosure").css("top", headerHeight);
+    $("section#TurbosDisclosure").css("top", headerHeight);
+    // SET CONTENTS DIV PADDING TOP
+    $("div#contents").css("padding-top", disclosureHeight);
+    // OVERRIDE TOP OF DISCLOSURE AND PADDING-TOP OF CONTENTS ON WINDOW RESIZE
+    $(window).resize(function() {
+        var headerHeight = $("div#ibkr-header").outerHeight();
+        var disclosureHeight = $("section#UKProductDisclosure, section#TurbosDisclosure").outerHeight();
+        var headerHeightDelta = headerHeight - disclosureHeight;
+        $("section#UKProductDisclosure").css("top", disclosureHeight + headerHeightDelta);
+        $("section#TurbosDisclosure").css("top", disclosureHeight + headerHeightDelta);
+        $("div#contents").css("padding-top", disclosureHeight);
+    });
+
+    // OVERRIDE TOP OF DISCLOSURE AND PADDING-TOP OF CONTENTS ON BANNER CLOSE
+    $("#bannerRegionSelector a.btn-close").click(function() {
+        setTimeout(function() {
+            var headerHeight = $("div#ibkr-header").outerHeight();
+            $("section#UKProductDisclosure").css("top", headerHeight);
+            $("section#TurbosDisclosure").css("top", headerHeight);
+            $("div#contents").css("padding-top", disclosureHeight);
+        },500);
+    });
+    // MOBILE MENU
+    $(function() {
+        // Initilize mobile menu
+        var zeynep = $('.menu-mobile').zeynep({
+            opened: function () {
+            console.log('the side menu opened')
+        },
+        closed: function () {
+            console.log('the side menu closed')
+            }
+        })
+        // Dynamically bind closing event
+        zeynep.on('closing', function () {
+            console.log('this event is dynamically binded')
+        })
+        // Mobile menu close on overlay click
+        $('.website-overlay').on('click', function () {
+            zeynep.close()
+        })
+        // Mobile menu close on button click
+        $('.btn-close').on('click', function () {
+            zeynep.close()
+        })
+        // Mobile menu open on navbar-toggler click
+        $('.navbar-toggler').on('click', function () {
+            zeynep.open()
+        })
+    })
+});
+</script>
+<!-- STYLES FOOTER ---------------------------------------------------------------------------------------------------- -->
+<link rel="preload" as="font" type="font/woff2" href="../../../fonts/fontawesome-6.4.2/webfonts/fa-brands-400.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="../../../fonts/fontawesome-6.4.2/webfonts/fa-regular-400.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="../../../fonts/fontawesome-6.4.2/webfonts/fa-solid-900.woff2" crossorigin>
+<link rel="preload" as="style" href="../../../css/ibkr/website-print.min.css">
+<link rel="stylesheet" type="text/css" media="print" href="../../../css/ibkr/website-print.min.css">
+<style type="text/css">
+@import url('../../../css/fontawesome-6.4.2/all.min.css') layer(vendors);
+@import url('../../../css/animate-3.7.2/animate.min.css') layer(vendors);
+@import url('../../../css/bootstrap-switch-3.3.2/bootstrap-switch.min.css') layer(vendors);
+@import url('../../../css/icheck-1.0.2/icheck.css') layer(vendors);
+</style></body>
+
+<!-- Mirrored from www.interactivebrokers.ie/hu/accounts/fees/pricing-interest-rates.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Sep 2025 09:29:30 GMT -->
+</html>

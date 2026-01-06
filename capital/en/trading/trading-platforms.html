@@ -1,0 +1,1535 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en" data-theme="light">
+
+<!-- Mirrored from www.interactivebrokers.ie/en/trading/trading-platforms.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Sep 2025 08:54:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8">
+<title>Valor Trading Platforms | Valor Capital LTD</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+<meta name="description" content="Valor’s award-winning platforms offer many trading features. Our suite of trading platforms includes Client Portal, Trader Workstation, IBKR Desktop and more!">
+<meta name="keywords" content="trader workstation, tws, Valor mobile ios, android, software, download, interactive brokers platforms, online trading platforms, trading online, iBot, API, ibkr desktop, trading app, mobile trading">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta http-equiv="expires" content="-1">
+<meta name="robots" content="index, follow">
+<meta http-equiv="pragma" content="no-cache">
+<meta property="og:site_name" content="Valor Capital LTD" />
+<!--Pid:41332-->
+<link rel="canonical" href="trading-platforms.html"/>
+<meta name="apple-mobile-web-app-title" content="IBKR">
+<!-- SCRIPTS HEAD  -->
+<script type="text/javascript" src='../../scripts/common/js/jquery-3.6.1/jquery.min.js'></script>
+<script type="text/javascript">
+function createScriptElement(data) {
+ if (typeof data == "undefined") {
+  return;
+ }
+ var element = document.createElement("SCRIPT");
+ element.type = "text/javascript";
+ if (typeof data.id != "undefined") {
+  element.id = data.id;
+ }
+ if (typeof data.source != "undefined") {
+  // Fix the path to be relative to your local file structure
+  var fixedSource = data.source.replace(/^\//, '../../');
+  element.src = fixedSource;
+ }
+ if (typeof data.loadfunction == "function") {
+  element.onload = data.loadfunction;
+ }
+ document.head.appendChild(element);
+}
+createScriptElement({ source : "../../scripts/common/js/bootstrap-5.2.2/bootstrap.bundle.min.js", loadfunction: bsLoaded  });
+createScriptElement({ source : "../../scripts/common/js/lib.js?ver=9" });
+function storeCookie()
+{
+ if(typeof(Storage) !== 'undefined')
+ {
+   if(localStorage.getItem('web') !== null)
+   {
+     localStorage.removeItem('web');
+   }
+ }
+}
+function bsLoaded() {
+  createScriptElement({ source : "../../scripts/common/js/appear/appear.min.js?ver=1" });
+  createScriptElement({ source : "../../scripts/common/js/easing/easing.min.js?ver=1" });
+  createScriptElement({ source : "../../scripts/common/js/parallax/parallax.min.js?ver=1" });
+  createScriptElement({ source : "../../scripts/common/js/uitotop/uitotop.min.js?ver=1", loadfunction: uiLoaded });
+}
+function uiLoaded() {
+  createScriptElement({ source : "../../scripts/common/js/twsUtils.js?ver=2" });
+  createScriptElement({ source : "../../scripts/common/js/design/design.js?ver=1" }); 
+}
+</script>
+<script type="text/javascript">
+$(function() {
+ if (document.cookie.indexOf("IB_SEARCH") == -1)
+ {
+  var ex=new Date();
+  ex.setTime(ex.getTime()+86400000);
+  document.cookie ='IB_SEARCH='+Math.floor(new Date().getTime()/1000)+';expires='+ex.toGMTString()+';path=/;domain=.interactivebrokers.ie';
+ }
+  let nex=new Date();
+  nex.setTime(nex.getTime()+86400000);
+    document.cookie ='IB_QD=0;expires='+nex.toGMTString()+';path=/;domain=.interactivebrokers.ie';
+  
+  let excfd=new Date();
+  excfd.setTime(excfd.getTime()+86400000);
+  document.cookie ='IB_QD_CFD=0;expires='+excfd.toGMTString()+';path=/;domain=.interactivebrokers.ie';
+ $('div#langselector').find('a').each(function() {
+  $(this).click(function() {
+   var link = $(this).attr("href");
+   if(link.match(/\/(en|fr|de|es|it|ru|cn|jp)\//))
+   {
+    var langs = link.split("../../index.html");
+    if(langs[3] == 'en' || langs[3] == 'fr' || langs[3] == 'de' || langs[3] == 'es' || langs[3] == 'it' || langs[3] == 'ru' || langs[3] == 'cn' || langs[3] == 'jp')
+    {
+      var lang = langs[3];
+      if(lang == 'cn')
+      {
+        lang = 'zh_CN';
+      }
+      if(lang == 'jp')
+      {
+        lang = 'ja';
+      }
+      if(hasCookie("IB_LANG"))
+      {
+        deleteCookie("IB_LANG");
+      }
+      setCookie("IB_LANG", lang, 7, '.interactivebrokers.ie');
+    } else if(langs[1] == 'en') {
+      var lang = 'en';
+      setCookie("IB_LANG", lang, 7, '.interactivebrokers.ie');
+    }
+   }
+  });
+ });
+ $('p#bandaid-close').click(function() {
+  setCookie("IB_BANDAID", 1, 7, '.interactivebrokers.ie');
+ });
+ $('a#btnCloseBannerRegionSelector').click(function() {
+  setCookie("IB_REGION_SEL", 1, 30, '.interactivebrokers.ie');
+ });
+ $('a#btnCloseBannerRegionDifc').click(function() {
+  setCookie("IB_DIFC", 1, 30, '.interactivebrokers.ie');
+ });
+});
+</script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    if(localStorage.getItem('consentMode') ===  null){
+                    const consentMode = {
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'analytics_storage': 'denied'
+            };
+                localStorage.setItem('consentMode', JSON.stringify(consentMode));
+        gtag('consent', 'default', consentMode);
+    }
+    else {
+        gtag('consent', 'default', JSON.parse(localStorage.getItem('consentMode')));
+    }
+</script>
+<!-- STYLES HEAD -->
+<style type="text/css">
+@import url('../../css/bootstrap-5.2.2/bootstrap.min.css') layer(bootstrap);
+</style>
+<link rel="preload" as="style" href="../../css/ibkr/website.mince12.css?v=1848a6e12ea6c289ee1df7ee63749846">
+<link rel="stylesheet" type="text/css" media="all" href="../../css/ibkr/website.mince12.css?v=1848a6e12ea6c289ee1df7ee63749846">
+<link rel="preload" as="style" href="../../css/ibkr/theme-ibkr.min4f42.css?v=be9c72c0d328e7fc4987bce81f28981c">
+<link rel="stylesheet" type="text/css" media="all" href="../../css/ibkr/theme-ibkr.min4f42.css?v=be9c72c0d328e7fc4987bce81f28981c"><style type="text/css">
+	/* PAGE TITLE -------------------------------------------------------------- */
+	section#page-title { display: none;}
+    .hero {
+        background-color: var(--black);
+        position: relative;
+    }
+    .hero-content{
+        position:relative;
+        z-index: 2;
+    }
+    .hero-background-image-wrapper {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        inset-inline-start: 0;
+        z-index: 0;
+    }
+    .hero-background-image {
+        object-fit: cover;
+        object-position: center;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        inset-inline-start: 0;
+    }
+    .hero-featured-image-wrapper {
+        z-index: 1;
+    }
+    @media (max-width:991.98px) {
+        .hero-featured-image-wrapper {
+            padding-bottom: 40%;
+            height: 0;
+            width: 100%;
+            position:relative;
+        }
+    }
+    @media (min-width:992px) {
+        .hero-featured-image-wrapper {
+            position: absolute;
+            height: 100%;
+            width: 40%;
+            top: 0;
+            inset-inline-end: 0;
+        }
+    }
+    .hero-featured-image {
+        width: calc(100% - 3rem);
+        height: calc(100% - 3rem);
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        bottom: 1.5rem;
+        left: 1.5rem;
+        object-fit: contain !important;
+        object-position: center;
+    }
+    #hero .eyebrow {
+        font-weight: 600;
+        letter-spacing: 2px;
+        color: var(--white);
+        font-size: 0.9375rem;
+    }
+    #hero .hero-headline {
+        font-weight: 600;
+        font-size: 2.75rem;
+        line-height: 3.125rem;
+        color: var(--white);
+    }
+    #hero .hero-subhead {
+        margin: 0;
+        color: var(--white);
+        font-weight: 300;
+    }
+    #hero .hero-headline + .hero-subhead {
+        margin-top: 1rem;
+    }
+    #hero .hero-headline + .btn, 
+    #hero .hero-subhead + .btn{
+        margin-top: 2rem;
+    }
+.badge-pill {
+    padding: .25rem 1rem;
+    margin-bottom: 1rem;
+    vertical-align: top;
+}
+    /* MEDIA QUERY | LARGE > 992px  */
+    @media (max-width:1199.98px) {
+        #hero h2 {
+            font-size: 2.5rem;
+            line-height: 3.25rem;
+        }
+    }
+    /* MEDIA QUERY | EXTRA LARGE > 1200px  */
+    @media (min-width:1200px) {
+        #hero h2 {
+            font-size: 2.75rem;
+            line-height: 3.125rem;
+        }
+    }
+    .table-compare .table { border: 1px solid transparent;}
+    .table-compare .table tbody { border: 1px solid var(--border-color);}
+    .table-compare .table th {
+        border: none;
+        font-size: .875rem;
+        font-weight: 600;
+        text-align: center;
+        color: var(--font-color-dark);    
+    }
+    .table > tbody tr td i{margin-right:0;}
+    .table-compare td { 
+        vertical-align: middle; 
+    }
+    .table-compare td b {
+        visibility: hidden;
+    }
+    /* VIDEO  ---------------------------------------------------------------------------------------------------- */
+    .education {
+        padding-top:0;
+        padding-bottom:60px;
+    }
+    .boxshadow {
+        box-shadow: 0 20px 20px -10px rgba(0,0,0,.25);
+    }
+/* CFD Warning Message*/
+.cfd-warning-message {
+    padding: 1rem 1rem .5rem;
+    border: 1px solid var(--black-50);
+}
+</style>
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-d23de039-d518-4f10-9810-e68da4592744","rua.cook":"true","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="XE2AM-F37QZ-LYWQP-H8KRM-4SNX5",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"XE2AM-F37QZ-LYWQP-H8KRM-4SNX5";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n="false"=="true"?1:0,t="cookiepresent",a="eykumbc7mxv4o2gjenta-f-d2cb252e6-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1168163","ak.ai":parseInt("665092",10),"ak.ol":"0","ak.cr":38,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"167041e","ak.r":50930,"ak.a2":n,"ak.m":"a","ak.n":"essl","ak.bpcip":"38.21.70.0","ak.cport":49538,"ak.gh":"95.101.132.199","ak.quicv":"","ak.tlsv":"tls1.2","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1758012262","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==vVGFf7AY0hoslVAJXZAgJ0tTRma8ZgfHTu1tDNIbRqbqyLvpG9UUCQZHGylavg/DmUA1KVz/cD7HDvhArUhVuUvNvas0J2dxtwQFjDj8+h1SymGJ4JzGZn6AZ4GvhzQG6Mm/rAh4eaxGAzkXogVh67B1RuOhrhtbi1y8dL4ovQgi3Ees0EnRsfRyzgB/vXF2MFl6bWedI8emRwbNR85EuP5pmx+uCXup+AyLCtmIEnOQEzVeWGa9qo4HGkf7KsrLONuM0QG9A+IDb5Pt1wgUOLkYRCWX+bN6VScz42xe2sY8/ZIhHppxawUfQWrmzH2zpZxePaBfFZ1cZN86N9PinzlKxxObAAC6Vx77+eDAd8LV7E5XJnon9qblPkQNToKZpijaaxPu4RYUb5kXeJwcYfFSU292iI26RHHaugtubrw=","ak.pv":"398","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.html","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak-2.html","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body>
+<div id="printheader"></div>
+<!-- HEADER START  -->
+<div class="ibkr-header" id="ibkr-header">
+        <style type="text/css">
+.banner-risk-warning {
+    margin:0px;
+    padding:8px 0px;
+    width:100%;
+    height:auto;
+    background-color:#242424;
+}
+.banner-risk-warning p {
+    margin:0px;
+    padding:0px;
+    font-weight:400;
+    font-size:1.0rem;
+    line-height:1.25rem;
+    text-align:center;
+    color:#FFFFFF;
+}
+.banner-risk-warning .warninglink a{text-decoration:underline;}
+/* BOOTSTRAP 4 | MEDIA QUERY | EXTRA SMALL (< 576PX) ---------------------------------------------------------------------------------------------------- */
+@media (max-width:575.98px) {
+    .banner-risk-warning {
+        padding:4px 0px;
+    }
+    .banner-risk-warning p {
+        font-size:0.8125rem;
+        line-height:1.0rem;
+    }
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | SMALL (576PX-767.98PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:576px) and (max-width:767.98px) {
+    .banner-risk-warning {
+        padding:4px 0px;
+    }
+    .banner-risk-warning p {
+        font-size:0.8125rem;
+        line-height:1.0rem;
+    }
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | MEDIUM (768PX-991.98PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:768px) and (max-width:991.98px) {
+    .banner-risk-warning {
+        padding:4px 0px;
+    }
+    .banner-risk-warning p {
+        font-size:0.8125rem;
+        line-height:1.0rem;
+    }
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | LARGE (992PX-1199.98PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:992px) and (max-width:1199.98px) {
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | EXTRA LARGE (>1200PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:1200px) {
+    
+}
+</style>
+<div class="banner-risk-warning">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p>Investing in financial products involves risk. Losses may exceed the value of your original investment.</p>
+            </div>
+        </div>
+    </div>
+</div>    <!-- NAV TOP START (LG/XL ONLY) -->
+    <nav class="navbar navbar-inverse navbar-expand-lg navbar-top d-none d-lg-block">
+        <div class="container">
+            <div class="navbar-collapse collapse" id="ibkr-nav-top">
+            </div>
+        </div>
+    </nav>
+    <!-- NAV TOP END -->
+   
+                <!-- NAV BOTTOM START -->
+      <nav class="navbar navbar-inverse navbar-expand-lg navbar-bottom">
+        <div class="container">
+          <!-- LOGO -->
+          <a
+  href="../home.html"
+  target="_self"
+  title="Valor"
+  aria-label="Valor LTD Home"
+>
+  <img src="../../../logo.svg" alt="Valor LTD Logo" width="140" height="auto" />
+</a>
+
+
+          <!-- TOGGLE (XS/SM/MD ONLY) -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            aria-label="Toggle Navigation"
+          >
+            <span class="navbar-toggler-icon">
+              <i class="fas fa-bars" aria-hidden="true"></i>
+            </span>
+          </button>
+
+          <!-- NAV LINKS -->
+          <div class="navbar-collapse collapse" id="ibkr-nav-bottom">
+            <ul class="navbar-nav ml-auto align-items-center">
+              <!-- WHY VALOR -->
+              <li class="nav-item">
+                <a href="../whyib/overview.html" target="_self" class="nav-link">
+                  Why Valor
+                </a>
+              </li>
+
+              <!-- PRICING -->
+              <li class="nav-item dropdown">
+                <a
+                  href="javascript:void(0)"
+                  class="nav-link dropdown-toggle"
+                  id="nav-pricing"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Pricing
+                </a>
+                <div
+                  class="dropdown-menu dropdown-pricing"
+                  aria-labelledby="nav-pricing"
+                >
+                  <div class="row">
+                    <div class="col">
+                      <a
+                        href="../pricing/commissions-home.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >Commissions</a
+                      >
+                      <a
+                        href="../trading/margin-rates.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >Margin Rates</a
+                      >
+                      <a
+                        href="../pricing/research-news-services.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >Research and News</a
+                      >
+                      <a
+                        href="../pricing/market-data-pricing.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >Market Data Pricing</a
+                      >
+                      <a
+                        href="../pricing/other-fees-overview.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >Fees</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- TRADING -->
+              <li class="nav-item dropdown">
+                <a
+                  href="javascript:void(0)"
+                  class="nav-link dropdown-toggle"
+                  id="nav-technology"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Trading
+                </a>
+                <div
+                  class="dropdown-menu dropdown-technology"
+                  aria-labelledby="nav-technology"
+                >
+                  <div class="row">
+                    <div class="col">
+                      <a
+                        href="../trading/trading-platforms.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >Platforms</a
+                      >
+                      <a
+                        href="../trading/ib-api.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >APIs</a
+                      >
+                      <a
+                        href="../trading/margin.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >Margin</a
+                      >
+                      <a
+                        href="../trading/ordertypes.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >Order Types</a
+                      >
+                      <a
+                        href="../whyib/reporting.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >Reporting</a
+                      >
+                      <a
+                        href="../trading/sustainable-investing-ie.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >Sustainable Investing</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- LOGIN / OPEN ACCOUNT BUTTONS -->
+              <!-- LOG IN -->
+              <li class="nav-item d-none d-lg-block">
+                <a
+                  href="https://dex.whiterock24.ai/signin"
+                  target="_self"
+                  class="nav-link nav-login"
+                  id="nav-log-in"
+                >
+                  Log In
+                </a>
+              </li>
+              <!-- OPEN ACCOUNT -->
+              <li class="nav-item d-none d-lg-block">
+                <a
+                  href="https://dex.whiterock24.ai/sign-up"
+                  target="_self"
+                  class="nav-link nav-open-account"
+                  id="nav-open-account"
+                >
+                  Open Account
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- NAV BOTTOM END -->
+
+
+
+</div>
+<!-- HEADER END ---------------------------------------------------------------------------------------------------- -->
+ <!-- MOBILE NAV START (XS/SM/MD ONLY) -->
+<div class="menu-mobile d-lg-none">
+  <!-- CLOSE BUTTON -->
+  <div class="close-button">
+    <button type="button" class="btn-close" aria-label="Close Menu">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+
+  <!-- LOGO -->
+  <div class="logo-container">
+    <a
+  href="../home.html"
+  target="_self"
+  title="Valor"
+  aria-label="Valor LTD Home"
+>
+  <img src="../../../logo.svg" alt="Valor LTD Logo" width="140" height="auto" />
+</a>
+  </div>
+
+  <ul>
+    <!-- WHY VALOR -->
+    <li><a href="whyib/overview.html" target="_self">Why Valor</a></li>
+
+    <!-- PRICING (Always Open) -->
+    <li>
+      <p class="submenu-title">PRICING</p>
+      <ul>
+        <li><a href="../pricing/commissions-home.html" target="_self">Commissions</a></li>
+        <li><a href="../trading/margin-rates.html" target="_self">Margin Rates</a></li>
+        <li><a href="../pricing/research-news-services.html" target="_self">Research and News</a></li>
+        <li><a href="../pricing/market-data-pricing.html" target="_self">Market Data Pricing</a></li>
+        <li><a href="../pricing/other-fees-overview.html" target="_self">Fees</a></li>
+      </ul>
+    </li>
+
+    <!-- TRADING (Always Open) -->
+    <li>
+      <p class="submenu-title">TRADING</p>
+      <ul>
+        <li><a href="../trading/trading-platforms.html" target="_self">Platforms</a></li>
+        <li><a href="../trading/ib-api.html" target="_self">APIs</a></li>
+        <li><a href="../trading/margin.html" target="_self">Margin</a></li>
+        <li><a href="../trading/ordertypes.html" target="_self">Order Types</a></li>
+        <li><a href="../whyib/reporting.html" target="_self">Reporting</a></li>
+        <li><a href="../trading/sustainable-investing-ie.html" target="_self">Sustainable Investing</a></li>
+      </ul>
+    </li>
+
+    <!-- LOG IN -->
+    <li>
+      <a
+        href="https://dex.whiterock24.ai/signin"
+        target="_self"
+        class="nav-link nav-login"
+        id="nav-log-in"
+        style="display:block; width:calc(100% - 20px); margin:12px 10px; border:2px solid #c82333; color:#c82333; padding:12px; border-radius:0; text-align:center; font-weight:600;"
+      >
+        Log In
+      </a>
+    </li>
+
+    <!-- OPEN ACCOUNT -->
+    <li>
+      <a
+        href="https://dex.whiterock24.ai/sign-up"
+        target="_self"
+        class="nav-link nav-open-account"
+        id="nav-open-account"
+        style="display:block; width:calc(100% - 20px); margin:8px 10px 12px; background-color:#c82333; color:#fff; padding:12px; border-radius:0; text-align:center; font-weight:600;"
+      >
+        Open Account
+      </a>
+    </li>
+  </ul>
+</div>
+<!-- MOBILE NAV OVERLAY -->
+<div class="website-overlay d-lg-none"></div>
+<!-- MOBILE NAV END -->
+
+<style>
+/* Hover effects */
+.nav-login:hover {
+  border-color: #a71d2a !important;
+  color: #a71d2a !important;
+}
+
+.nav-open-account:hover {
+  background-color: #a71d2a !important;
+  color: #fff !important;
+}
+</style>
+
+
+
+<script>
+$(window).on('load', function() {
+    // Simple check if URL contains 'conf=am'
+    if (!window.location.href.includes('conf=am')) {
+        $('#region-modal').modal({
+            backdrop: 'static',
+            keyboard: false
+        });
+        $('#region-modal').modal('show');
+        $('body').removeClass('modal-open');
+        $('body').css('overflow', '');
+        $('body').css('padding-right', '');
+    }
+});
+</script>
+<script>
+$(function() {
+   $('button#btnRegionRecommendation').click(function() {
+    window.location.href = 'https://www.interactivebrokers.com/';
+  });
+  $('button#btnRegionCurrent').click(function() {
+    setCookie("IB_REG", 1, 365, '.interactivebrokers.ie');
+    location.reload();
+  });
+});
+</script><div id="contents">
+    <section class="page-title" id="page-title">
+        <div class="container">
+            <div class="row">
+                <div class="col"><h1>Valor Trading Platforms</h1></div>
+            </div>
+        </div>
+    </section>
+    <!-- INTRO -->
+<section id="hero" class="hero">
+    <figure class="hero-featured-image-wrapper">
+        <picture class="r-img">
+            <source media="(min-width:1200px)" srcset="https://www.interactivebrokers.ie/images/web/trading-platforms-hero-2025-xl.webp 1200w, https://www.interactivebrokers.ie/images/web/trading-platforms-hero-2025-xl.png 1200w">
+            <source media="(min-width:992px)" srcset="https://www.interactivebrokers.ie/images/web/trading-platforms-hero-2025-xl.webp 1199w, https://www.interactivebrokers.ie/images/web/trading-platforms-hero-2025-lg.png 1199w">
+            <source media="(min-width:768px)" srcset="https://www.interactivebrokers.ie/images/web/trading-platforms-hero-2025-md.webp 991w, https://www.interactivebrokers.ie/images/web/trading-platforms-hero-2025-md.png 991w">
+            <source media="(min-width:576px)" srcset="https://www.interactivebrokers.ie/images/web/trading-platforms-hero-2025-sm.webp 767w, https://www.interactivebrokers.ie/images/web/trading-platforms-hero-2025-sm.png 767w">
+            <source srcset="https://www.interactivebrokers.ie/images/web/trading-platforms-hero-2025-sm.webp 575w, https://www.interactivebrokers.ie/images/web/trading-platforms-hero-2025-sm.png 575w">
+            <img class="hero-featured-image" src="https://www.interactivebrokers.ie/images/web/trading-platforms-hero-2025-sm.png" alt="Valor Trading Platforms" border="0"  />
+        </picture>
+    </figure>
+    <figure class="hero-background-image-wrapper">
+        <picture class="r-img">
+            <source media="(min-width:1200px)" srcset="https://www.interactivebrokers.ie/images/web/hero-trading-platforms-bg-xl.webp 1200w, https://www.interactivebrokers.ie/images/web/hero-trading-platforms-bg-xl.jpg 1200w">
+            <source media="(min-width:992px)" srcset="https://www.interactivebrokers.ie/images/web/hero-trading-platforms-bg-xl.webp 1199w, https://www.interactivebrokers.ie/images/web/hero-trading-platforms-bg-lg.jpg 1199w">
+            <source media="(min-width:768px)" srcset="https://www.interactivebrokers.ie/images/web/hero-trading-platforms-bg-md.webp 991w, https://www.interactivebrokers.ie/images/web/hero-trading-platforms-bg-md.jpg 991w">
+            <source media="(min-width:576px)" srcset="https://www.interactivebrokers.ie/images/web/hero-trading-platforms-bg-sm.webp 767w, https://www.interactivebrokers.ie/images/web/hero-trading-platforms-bg-sm.jpg 767w">
+            <source srcset="https://www.interactivebrokers.ie/images/web/hero-trading-platforms-bg-xs.webp 575w, https://www.interactivebrokers.ie/images/web/hero-trading-platforms-bg-xs.jpg 575w">
+            <img class="hero-background-image" src="https://www.interactivebrokers.ie/images/web/hero-trading-platforms-bg-xs.jpg" alt="Financial Charting Screens" border="0"  />
+        </picture>
+    </figure>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-6 pb-4 pt-4 text-center text-lg-start">
+        <div class="hero-content">
+          <p class="eyebrow">PREMIER TECHNOLOGY</p>
+          <h2 class="hero-headline">Valor Trading Platforms</h2>
+          <p class="subheading text-white">Our award-winning platforms offer powerful trading features and streamline solutions for all traders. Valor offers desktop, mobile and online trading platforms with no platform fees. See which platform is best for your trading skills and investing strategies!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- WHICH PLATFORM IS RIGHT FOR YOU -->
+<section class="pb-0">
+  <div class="container"> 
+    <div class="row justify-content-center">
+        <div class="col-12 col-sm-9 col-lg-7 text-center">
+           <h2>Which Platforms are Right for You?</h2>
+            <p>Choose the best platforms that match your trading style and expertise. Our various trading platforms are labeled by skill level, free to use, and compared across features in the tables below. See how our clients use our platforms to meet their needs. </p>
+        </div>
+    </div>
+  </div>
+</section>
+<!-- LIKERT CHART COMPARE TRADING PLATFORMS BY EXPERIENCE LEVEL -->
+<style>
+    .section-platform-compare .container{max-width:1400px !important;}
+	.platform-chart {
+		width: 100%;
+		position:relative;
+	}
+	.chart-row-header {
+        min-width: 7.1875rem;
+		width: 37%;
+	}
+    @media (max-width:991.98px) { 
+		.chart-row-header{
+		    width: 100%;
+		}
+	}
+    /* Icon Link */
+    .chart-header-title {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: start;
+        gap: .35rem;
+    }
+	.chart-header-title .badge {
+		margin: 0;
+		/*font-size: .60em;*/
+        line-height: .85;
+		letter-spacing: .01em;
+		text-transform: uppercase;
+	}
+	.chart-row-bar {
+		display: flex;
+		flex-grow: 1;
+		align-items:center;
+	}
+	.chart-bar {
+		width: 100%;
+		height: 10px;
+		position: relative;
+	}
+	.chart-bar:before {
+		content:'';
+		position: absolute;
+		display: block;
+		height: 100%;
+		width: var(--chart-bar-width);
+		left: var(--chart-bar-start);
+		background-color: var(--primary);
+		z-index: 1;
+	}
+	.chart-bar:after {
+		content:'';
+		position: absolute;
+		display: block;
+		height: 100%;
+		width: 100%;
+		left: 0;
+		background-color: var(--gray-20-solid);
+		z-index: 0;
+	}
+	.chart-header-content {
+		margin-top: .5rem;
+	}
+</style>
+<section class="section-platform-compare">
+	<div class="container">
+
+		<!-- Main Platforms -->
+		<div class="row my-4">
+			<div class="col-12">
+				<table class="platform-chart">
+					<thead>
+                        <tr class="d-lg-none">
+                            <th colspan="6"><span class="text-dark fw-600 fs-7">Solutions by Business Experience</span></th>
+                        </tr>
+						<tr>
+							<th class="d-none d-lg-block"><span class="text-dark fw-600 fs-7">Solutions by Business Experience</span></th>
+							<th class="text-left" width="21%" colspan="2"><span class="text-dark fw-600">Startup</span></th>
+							<th class="text-center" width="21%" colspan="2"><span class="text-dark fw-600">Growth</span></th>
+							<th class="text-right" width="21%" colspan="2"><span class="text-dark fw-600">Enterprise</span></th>
+						</tr>
+					</thead>
+					<tbody>
+                        <!-- BUSINESS STRATEGY -->
+						<tr>
+							<td colspan="7">
+								<div class="row">
+								    <div class="col-12 chart-row-header pe-20">
+										<div class="d-flex align-items-center">
+                                            <a class="fs-7 fw-600" href="#platform-tabs" target="_self" data-bs-target="#business-strategy">
+                                                Business Strategy</a>
+                                            <div class="ms-10"><span class="badge badge-secondary">Consulting</span></div>
+                                        </div>
+									</div>
+									<div class="col-12 col-lg-6 chart-row-bar">
+                                        <div class="chart-bar" style="--chart-bar-start: calc((0/8) * 100%); --chart-bar-width: calc((6/8) * 100%);"></div>
+									</div>
+								</div>
+							</td>
+						</tr>
+                        <!-- DIGITAL TRANSFORMATION -->
+						<tr>
+							<td colspan="7">
+								<div class="row">
+									<div class="col-12 chart-row-header pe-20">
+										<div class="d-flex align-items-center">
+                                            <a class="fs-7 fw-600" href="#platform-tabs" target="_self" data-bs-target="#digital-transformation">
+                                            Digital Transformation</a>
+                                            <div class="ms-10"><span class="badge badge-secondary">Technology</span><span class="badge rounded-pill bg-primary px-3">Core</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6 chart-row-bar">
+                                        <div class="chart-bar" style="--chart-bar-start: calc((1/8) * 100%); --chart-bar-width: calc((6/8) * 100%);"></div>
+                                    </div>
+                                </div>    
+							</td>
+						</tr>
+                        <!-- OPERATIONS & EFFICIENCY -->
+						<tr>
+							<td colspan="7">
+								<div class="row">
+									<div class="col-12 chart-row-header pe-20">
+										<div class="d-flex align-items-center">
+                                            <a class="fs-7 fw-600" href="#platform-tabs" target="_self" data-bs-target="#operations">
+                                            Operations & Efficiency</a>
+                                            <div class="ms-10"><span class="badge badge-secondary">Process</span></div>
+                                        </div>
+									</div>
+									<div class="col-12 col-lg-6 chart-row-bar">
+                                        <div class="chart-bar" style="--chart-bar-start: calc((1/8) * 100%); --chart-bar-width: calc((6/8) * 100%);"></div>
+									</div>
+								</div>
+							</td>
+						</tr>
+                        <!-- FINANCIAL ADVISORY -->
+						<tr>
+							<td colspan="7">
+								<div class="row">
+									<div class="col-12 chart-row-header pe-20">
+										<div class="d-flex align-items-center">
+                                            <a class="fs-7 fw-600" href="#platform-tabs" target="_self" data-bs-target="#financial-advisory">
+                                            Financial Advisory</a>
+                                            <div class="ms-10"><span class="badge badge-secondary">Advisory</span></div>
+                                        </div>
+									</div>
+									<div class="col-12 col-lg-6 chart-row-bar">
+                                        <div class="chart-bar" style="--chart-bar-start: calc((4/8) * 100%); --chart-bar-width: calc((4/8) * 100%);"></div>
+									</div>
+								</div>
+							</td>
+						</tr>
+                        <!-- GLOBAL EXPANSION -->
+						<tr>
+							<td colspan="7">
+								<div class="row">
+                                        <div class="col-12 chart-row-header pe-20">
+                                            <div class="d-flex align-items-center">
+                                                <a class="fs-7 fw-600" href="#platform-tabs" target="_self" data-bs-target="#global-expansion">
+                                                Global Expansion</a>
+                                                <div class="ms-10 "><span class="badge badge-secondary">Markets</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-6 chart-row-bar">
+                                            <div class="chart-bar" style="--chart-bar-start: calc((0/8) * 100%); --chart-bar-width: calc((3/8) * 100%);"></div>
+                                        </div>
+								</div>
+							</td>
+						</tr>
+                        <!-- TECHNOLOGY INTEGRATION -->
+						<tr>
+							<td colspan="7">
+								<div class="row">
+									<div class="col-12 chart-row-header pe-20">
+										<div class="d-flex align-items-center">
+                                            <a class="fs-7 fw-600" href="#platform-tabs" target="_self" data-bs-target="#tech-integration">
+                                            Technology Integration</a>
+                                            <div class="ms-10"><span class="badge badge-secondary">Systems</span></div>
+                                        </div>
+									</div>
+									<div class="col-12 col-lg-6 chart-row-bar">
+                                        <div class="chart-bar" style="--chart-bar-start: calc((6/8) * 100%); --chart-bar-width: calc((2/8) * 100%);"></div>
+									</div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<!-- Specialty Solutions -->
+		<div class="row my-4">
+			<div class="col-12">
+				<table class="platform-chart">
+					<thead>
+                        <tr class="d-lg-none">
+                            <th colspan="6"><span class="text-dark fw-600 fs-7">Specialty Solutions</span></th>
+                        </tr>
+						<tr>
+							<th class="d-none d-lg-block"><span class="text-dark fw-600 fs-7">Specialty Solutions</span></th>
+							<th class="text-left" width="21%" colspan="2"><span class="text-dark fw-600">Startup</span></th>
+							<th class="text-center" width="21%" colspan="2"><span class="text-dark fw-600">Growth</span></th>
+							<th class="text-right" width="21%" colspan="2"><span class="text-dark fw-600">Enterprise</span></th>
+						</tr>
+					</thead>
+					<tbody>
+                        <!-- INNOVATION LAB -->
+						<tr>
+							<td colspan="7">
+								<div class="row">
+									<div class="col-12 chart-row-header pe-20">
+										<div class="d-flex align-items-center">
+                                            <a class="fs-7 fw-600" href="#platform-tabs" target="_self" data-bs-target="#innovation-lab">
+											Innovation Lab</a>
+                                            <div class="ms-10"><span class="badge badge-secondary">R&D</span></div>
+                                        </div>
+									</div>
+									<div class="col-12 col-lg-6 chart-row-bar">
+                                        <div class="chart-bar" style="--chart-bar-start: calc((0/8) * 100%); --chart-bar-width: calc((3/8) * 100%);"></div>
+									</div>
+								</div>
+							</td>
+						</tr>
+                        <!-- SUSTAINABILITY INITIATIVES -->
+                        <tr>
+							<td colspan="7">
+								<div class="row">
+									<div class="col-12 chart-row-header pe-20">
+										<div class="d-flex align-items-center">
+                                            <a class="fs-7 fw-600" href="#platform-tabs" target="_self" data-bs-target="#sustainability">
+											Sustainability Initiatives</a>
+                                            <div class="ms-10"><span class="badge badge-secondary">Impact</span></div>
+                                        </div>
+									</div>
+									<div class="col-12 col-lg-6 chart-row-bar">
+                                        <div class="chart-bar" style="--chart-bar-start: calc((0/8) * 100%); --chart-bar-width: calc((3/8) * 100%);"></div>
+									</div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+	</div>
+</section>
+<!-- TRADING PLATFORMS CONTENT -->
+<style type="text/css">
+    .tab-pane .gt-max-h{max-height:480px;}
+</style>
+<span class="id-drop"><span id="platform-tabs" ></span></span>
+<section class="mb-0 bg-gray-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <!-- PLATFORMS CONTENT IN TABS -->
+                <ul class="nav nav-tabs nav-lines" id="nav-tabs" role="tablist">
+                    <li class="nav-item">
+                        <a target="_self" class="nav-link active" role="tab" 
+                           data-bs-toggle="tab" data-bs-target="#trader-workstation-tws" 
+                           aria-controls="trader-workstation-tws" aria-selected="true">
+                           Trader Workstation (TWS)
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a target="_self" class="nav-link" role="tab" 
+                           data-bs-toggle="tab" data-bs-target="#apis" 
+                           aria-controls="apis" aria-selected="false">
+                           Valor APIs
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a target="_self" class="nav-link" role="tab" 
+                           data-bs-toggle="tab" data-bs-target="#forecast-trader" 
+                           aria-controls="forecast-trader" aria-selected="false">
+                           Valor ForecastTrader
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="tab-content">
+                    
+                    <!-- TAB 01 TWS (Default Active) -->
+                    <div class="tab-pane fade show active" id="trader-workstation-tws" role="tabpanel" aria-labelledby="trader-workstation-tws" tabindex="0">
+                        <div class="row align-items-center justify-content-center pt-40">
+                            <div class="col-8 col-sm-6 col-lg-4">
+                                <img src="../../images/web/trading-platforms-tws-rtl.webp" alt="Valor Desktop interface on a laptop" loading="lazy" class="d-rtl-none">
+                                <img src="../../images/web/trading-platforms-tws.webp" alt="Valor TWS Interface on a Desktop Monitor" loading="lazy" class="d-ltr-none">
+                            </div>
+                            <div class="col-12 col-sm-9 col-lg-6 offset-lg-1 mt-4 mt-lg-0 mb-40 text-center text-lg-start">
+                                <h2>Trader Workstation (TWS)</h2>
+                                <div class="mt-2 mb-4">
+                                    <span class="text-bold fs-8 lh-8">Trading Skills:</span>
+                                    <span class="badge badge-secondary">Intermediate</span>
+                                    <span class="badge badge-secondary">Advanced</span>
+                                </div>
+                                <p>Our flagship desktop platform designed for seasoned, active traders who trade multiple products and require power and flexibility. Trade stocks, options, futures, currencies, bonds and funds on over 160 markets worldwide from a single unified platform.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TAB 02 APIs -->
+                    <div class="tab-pane fade" id="apis" role="tabpanel" aria-labelledby="apis" tabindex="0">
+                        <div class="row align-items-center justify-content-center justify-content-lg-start pt-60">
+                            <div class="col-10 col-sm-8 col-md-6 col-lg-6 offset-lg-1 order-0 order-lg-0 text-center">
+                                <img src="../../images/web/img-ibkradvantage.png" alt="The Valor Advantage" width="1144" height="652" loading="lazy">
+                            </div>
+                            <div class="col-12 col-md-5 col-lg-4 order-1 order-lg-0 offset-lg-1 mt-4 mt-lg-0 mb-40 text-center text-lg-start">
+                                <h2>Valor APIs</h2>
+                                <div class="mt-2 mb-4">
+                                    <span class="text-bold fs-8 lh-8">Trading Skills:</span>
+                                    <span class="badge badge-secondary">Advanced</span>
+                                </div>
+                                <p>From our easy-to-use Excel API to our industrial strength FIX API, we offer something for every experience level. Our TWS API is well-supported with numerous examples to help you get started.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TAB 03 FORECAST TRADER -->
+                    <div class="tab-pane fade" id="forecast-trader" role="tabpanel" aria-labelledby="forecast-trader" tabindex="0">
+                        <div class="row align-items-center justify-content-center pt-40">
+                            <div class="col-10 col-sm-8 col-md-5 col-lg-6 offset-lg-1 order-lg-1 pb-20">
+                                <img src="../../images/eventtrader/et-home-hero-v4.jpg" alt="Valor ForecastTrader" border="0" loading="lazy" class="shadow">
+                            </div>
+                            <div class="col-12 col-sm-9 col-lg-5 mb-40 align-content-center order-lg-0">
+                                <h2>Valor ForecastTrader</h2>
+                                <div class="mt-2 mb-4">
+                                    <span class="text-bold fs-8 lh-8">Trading Skills:</span>
+                                    <span class="badge badge-secondary">Beginner</span>
+                                </div>
+                                <p>Valor ForecastTrader lets clients trade their opinion on yes-or-no questions on economic data and global events around the clock, six days a week.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- CLOSE TAB CONTENT-->
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- BOOTSTRAP TAB SCRIPT -->
+<script> 
+    $(document).ready(function() {
+        let checkBootstrap = setInterval(tabNav, 50);
+        let p = '';
+        function tabNav() {
+            const queryString = window.location.search; 
+            const urlParams = new URLSearchParams(queryString); 
+            let p = urlParams.get('p'); 
+            // Check if bootstrap js is loaded yet
+            let bootstrap_enabled = (typeof $().tab == 'function');
+            // If it's loaded trigger tab interaction
+            if (bootstrap_enabled === true) {
+                if ($(p != '') && ($('#nav-tabs  > .nav-item > .nav-link[data-bs-target="#' + p + '"]') != null)) {
+                    $('#nav-tabs  > .nav-item > .nav-link[data-bs-target="#' + p + '"]').tab('show');
+                    setTimeout(function() {
+                        // $(window).scrollTop(0);
+                    }, 400);
+                }
+                clearInterval(checkBootstrap);
+                checkBootstrap = null;
+            }
+        }
+        function updateParam(param) {
+            let url = new URL(document.html);
+            let search_params = url.searchParams; 
+            search_params.set('p', param);
+            url.search = search_params.toString();
+            let new_url = url.toString();
+            history.pushState(null, null, new_url);
+            return false;
+        }
+        $('#nav-tabs  > .nav-item > .nav-link').click(function() {
+            let newParam = $(this).attr('data-bs-target').toString();
+            let cleanParam = newParam.replace('#','');
+            updateParam(cleanParam);
+        });
+        $('.platform-chart a').click(function() {
+            let newParam = $(this).attr('data-bs-target').toString(); // .concat('#platform-tabs'); 
+            // console.log('likert clicked... ' + newParam );
+            let cleanParam = newParam.replace('#','');
+            updateParam(cleanParam);
+            tabNav();
+        });
+    });
+</script><!-- FEATURE COMPARISION ACCORDIONS -->
+<!-- MODAL | VALOR VIDEO START -->
+<div class="modal modal-video fade" id="modalVideo" tabindex="-1" role="dialog" aria-labelledby="modalVideo" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Which Platform is right for you?</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+      </div>
+      <div class="modal-body">
+        <div class="video-container">
+          <iframe src="https://www.youtube-nocookie.com/embed/p9laKRf6Z2U?rel=0&amp;controls=1&amp;showinfo=0" frameborder="0" allowfullscreen title="Which Platform is right for you?" class="embed-responsive-item" id="ibkr-youtube"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="pt-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h3>Award-winning platforms powerful enough <span class="d-none d-md-inline"><br>
+          </span>for professional traders but designed for everyone.</h3>
+      </div>
+    </div>
+  </div>
+</section>
+<!--BEST INFORMED INVESTORS CHOOSE IBKR-->
+<style type="text/css">
+	#best-informed-investors .best-informed-caption {
+		padding: 20px;
+	}
+	@media (min-width: 768px) {
+		#best-informed-investors .best-informed-caption {
+			padding: 30px;
+		}	
+</style>
+<section id="best-informed-investors" class="">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 col-md-5 col-lg-4">
+				<img loading="lazy" src="../../images/web/ibkr-best-informed-h.jpg" alt="Best Informed Investors Choose Valor Capital" width="500" height="333" class="img-fluid">
+			</div>
+            <div class="col-12 col-md-7 offset-lg-1 dflex best-informed-caption">
+				<h2 class="mb-20">The Best-Informed Investors Choose <span class="d-none d-sm-inline d-md-none"><br></span>Valor Capital</h2>
+								<p>Valor clients can use all our mobile, web, and desktop trading platforms with no additional fees. Featuring advanced charting, conditional orders, and 100+ algos, our award-winning platforms are powerful enough for professional traders but designed for everyone.</p>
+				            </div>
+        </div>
+    </div>
+</section><section id="disclosures" class="disclosure">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <p>This material does not and is not intended to take into account the particular financial conditions, investment objectives or requirements of individual customers. Before acting on this material, you should consider whether it is suitable for your particular circumstances and, as necessary, seek professional advice.</p>
+        <p>Any trading symbols displayed are for illustrative purposes only and are not intended to portray recommendations.</p>
+        <p>Some products may not be available in certain jurisdictions.</p>
+        <p>
+                  </p>
+                <hr>
+        <ol>
+        <li>Excluding those in Belgium, France, Liechtenstein, Portugal and Slovenia. Retail clients may trade up to the lesser of 1% of their total NAV or USD 1.0 million in forecast contracts.</li>
+        <li>Excluding those in France and Belgium</li>
+        </ol>
+              </div>
+    </div>
+  </div>
+</section>
+</div>
+ <!-- FOOTER START  -->
+    <footer class="footer noprint" id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <p>
+              © 2026 VALOR CAPITAL LTD. All rights reserved. VALOR CAPITAL LTD
+              is a private limited company incorporated in the UK, providing
+              management consultancy services.
+            </p>
+            <p>
+              VALOR CAPITAL LTD operates under UK company regulations and is
+              committed to delivering professional and ethical consultancy
+              services.
+            </p>
+          </div>
+        </div>
+        <div class="footer-disclosure-links" id="footerDisclosureLinks">
+          <div class="row">
+            <div class="col">
+              <ul>
+                <li>
+                  <a
+                    href="../accounts/legalDocuments/anti-fraud-notice.html"
+                    target="_self"
+                    >Anti-Fraud Notice</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../general/warnings-on-frauds-and-scams.html"
+                    target="_self"
+                    >Warning on Frauds and Scams</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../accounts/legalDocuments/accessibility-policy.html"
+                    target="_self"
+                    >Accessibility Statement</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+ <!-- LICENSE INFORMATION START -->
+<div class="license-info" style="
+  border-top: 1px solid #ccc;
+  margin-top: 25px;
+  padding-top: 20px;
+  font-size: 0.95rem;
+  color: #000;
+  line-height: 1.6;
+">
+  <h6 style="font-weight: 600; margin-bottom: 10px; font-size: 1rem; color: #000;">
+    FSCA Authorization
+  </h6>
+
+  <p>
+    VALOR CAPITAL LTD is listed among the officially authorised 
+    <strong>Crypto Asset Service Providers (CASPs)</strong> under the 
+    <em>Financial Advisory and Intermediary Services (FAIS) Act, No. 37 of 2002</em>.
+  </p>
+
+  <p style="margin-top: 15px; font-size: 0.9rem; color: #222;">
+    <strong>Disclaimer:</strong> VALOR CAPITAL LTD does not accept any responsibility or liability 
+    for financial losses, damages, or actions taken based on the information, opinions, or materials 
+    provided on this website or through any communication. Users acknowledge that all investment 
+    and business activities carry inherent risk, and VALOR CAPITAL LTD shall not be held accountable 
+    for any direct or indirect consequences arising from such decisions.
+  </p>
+</div>
+<!-- LICENSE INFORMATION END -->
+        <div class="footer-entities" id="footerEntities">
+          <div class="row">
+            <div class="col">
+              <div class="footer-entity">
+                <p class="entity-name">
+                  <a href="../home.html" target="_self">VALOR CAPITAL LTD</a>
+                </p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- FOOTER END  -->
+<!-- MODAL START | ABOUT IB GROUP ---------------------------------------------------------------------------------------------------- -->
+<div class="modal fade" id="modalAlert" tabindex="-1" role="dialog" aria-labelledby="modalAboutIBGroup">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content modal-primary">
+			<div class="modal-header">
+				<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+				<h4 class="modal-title" ><i class="fas fa-exclamation-circle"></i> Notice</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col">
+						<p class="message">message</p><!-- You will be brought to the website of our affiliate-->
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<div class="row">
+					<div class="col-12 col-sm-3 order-2 order-sm-1">
+						<div class="panel-btn-left"><a href="javascript:void(0);" data-bs-dismiss="modal" class="btn btn-secondary">Stay</a></div>
+					</div>
+					<div class="col-12 col-sm-9 order-1 order-sm-2">
+						<div class="panel-btn-right goto"><a href="javascript:void(0);" onclick=""  data-bs-dismiss="modal"  class="btn btn-primary">Go</a></div> 
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#modalAlert').on('show.bs.modal', function (event) {
+	  var button = $(event.relatedTarget) // Button that triggered the modal
+      let myMessage = button.data('mymessage');
+      /*let myLink = "location.href='"+button.data('mytargetlink')+"'"; */
+      let myLink = "window.open('"+button.data('mytargetlink')+"')"; 
+	  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+	  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+	  var modal = $(this)
+	  modal.find('.modal-body .message').text( myMessage );
+	  modal.find('.modal-footer .goto a').attr( "onclick", myLink );
+
+	})
+});
+</script><script>
+if(window.location.href.includes('conf=am')) {
+document.querySelector("#ibkr-header").style.display = "none";
+document.querySelector("#footer").style.display = "none";
+}
+
+</script>
+<!-- MODAL START | MODAL  -->
+<style type="text/css">
+#modalNewsAtIBKR .modal-dialog .modal-content .modal-header {
+    border-top: 1px solid var(--border-color) !important;
+}
+</style>
+<script>
+$(function() {
+ setTimeout(function() {
+  $('#modalNewsAtIBKR').modal('show');
+ }, 2000);
+});
+$('#modalNewsAtIBKR').on('hidden.bs.modal', function () {
+  setCookie("IB_EMPRO", '1', 90, '.interactivebrokers.ie');
+});
+$('#newsibkrform-submit').click(function() {
+  $('#newsibkrform-invalid-email').hide();
+  $.ajax({
+    type: "POST",
+    url: '/response_handlers/email-pros/index.php',
+      dataType: "json",
+      data: {
+        'email': $('#news_ibkr_email').val(),
+        'name': $('#news_ibkr_name').val(),
+        'emt': '8cd5fa66d6075ec9e4344c14bf026e04'
+      },
+      success: function(r) {
+        if(r && r.success)
+        {
+          $('#newsibkrform-submit').hide();
+          $('#newsibkrform-cancel').hide();
+          $('#newibkrform-success').show();
+          setCookie("IB_EMPRO", '1', 365, '.interactivebrokers.ie');
+        } else {
+          $('#newsibkrform-invalid-email').show();
+          $('#newsibkrform-invalid-email').text(r.msg);
+        }
+      },
+      error: function(xhr, status, err) {
+        $('#newsibkrform-invalid-email').text('There was an error submitting your email. Please try again.');
+      }
+    });
+});
+</script>
+<!-- MODAL END | MODAL  -->
+<!-- MODAL START | SHARE ON SOCIAL ---------------------------------------------------------------------------------------------------->
+<div class="modal fade noprint" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="emailModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button id="cls_frm_1" type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="gridSystemModalLabel"><i class="far fa-envelope text-gray"></i> Email</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col">
+						<form>
+							<div class="form-group">
+								<label for="_to" class="control-label">To:</label> <span id="_err_to" style="color: red;"></span>
+								<input type="text" class="form-control" id="_to">
+							</div>
+							<div class="form-group">
+								<label for="_from" class="control-label">From:</label> <span id="_err_frm" style="color: red;"></span>
+								<input type="text" class="form-control" id="_from">
+							</div>
+							<div class="form-group">
+								<label for="_subject" class="control-label">Subject:</label> <span id="_err_subject" style="color: red;"></span>
+								<input type="text" class="form-control" id="_subject" value="Interactive Brokers">
+							</div>
+							<div class="form-group">
+								<textarea class="form-control" id="_content" style="height:200px;"></textarea>
+							</div>
+							<p class="text-sm">URL: <span class="text-italic text-black">www.interactivebrokers.ie/en/index.php?f=<span id='vid'></span></span></p>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<div class="row">
+					<div class="col-6">
+						<div align="left">
+							<button id="cls_frm_2" type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
+						</div>
+					</div>
+					<div class="col-6">
+						<div align="right">
+							<button type="button" class="btn btn-primary" id="send">Send</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<input type="hidden" id="_page_id" name="_page_id" value="41332" />
+</div>
+<!-- MODAL END | SHARE ON SOCIAL ----------------------------------------------------------------------------------------------------> 
+<script type="text/javascript" src="../../insights/ibtr_share2667.js?t=v1"></script>
+<script>
+$(document).ready(function() {
+	 $(".social-sidebar span").click(function(){
+		 $(".social-sidebar div").toggleClass("social-sidebar-hide");
+		 $(".social-sidebar span").toggleClass("toggle-arrow");
+ 	 });
+});
+function emailCookie() {
+	if (document.cookie.indexOf("IB_EM_SH") == -1) {
+		var ex=new Date();
+		ex.setTime(ex.getTime()+86400000);
+		document.cookie ='IB_EM_SH='+1+';expires='+ex.toGMTString()+';path=/;domain=';
+	}
+}
+</script>
+<!-- SCRIPTS FOOTER ---------------------------------------------------------------------------------------------------- -->
+<script type="text/javascript" src="../../scripts/common/js/zeynep-2.2.0/zeynep.js"></script>
+<script type="text/javascript" src="../../scripts/common/js/lazyload/lazyload.min.js"></script>
+<script type="text/javascript" src="../../search/conversions.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    
+    // GATHER HEIGHT OF HEADER
+    var headerHeight = $("div#ibkr-header").outerHeight();
+    // GATHER HEIGHT OF DISCLOSURES
+    var disclosureHeight = $("section#UKProductDisclosure, section#TurbosDisclosure").outerHeight();
+    $("section#UKProductDisclosure").css("top", headerHeight);
+    $("section#TurbosDisclosure").css("top", headerHeight);
+    // SET CONTENTS DIV PADDING TOP
+    $("div#contents").css("padding-top", disclosureHeight);
+    // OVERRIDE TOP OF DISCLOSURE AND PADDING-TOP OF CONTENTS ON WINDOW RESIZE
+    $(window).resize(function() {
+        var headerHeight = $("div#ibkr-header").outerHeight();
+        var disclosureHeight = $("section#UKProductDisclosure, section#TurbosDisclosure").outerHeight();
+        var headerHeightDelta = headerHeight - disclosureHeight;
+        $("section#UKProductDisclosure").css("top", disclosureHeight + headerHeightDelta);
+        $("section#TurbosDisclosure").css("top", disclosureHeight + headerHeightDelta);
+        $("div#contents").css("padding-top", disclosureHeight);
+    });
+
+    // OVERRIDE TOP OF DISCLOSURE AND PADDING-TOP OF CONTENTS ON BANNER CLOSE
+    $("#bannerRegionSelector a.btn-close").click(function() {
+        setTimeout(function() {
+            var headerHeight = $("div#ibkr-header").outerHeight();
+            $("section#UKProductDisclosure").css("top", headerHeight);
+            $("section#TurbosDisclosure").css("top", headerHeight);
+            $("div#contents").css("padding-top", disclosureHeight);
+        },500);
+    });
+    // MOBILE MENU
+    $(function() {
+        // Initilize mobile menu
+        var zeynep = $('.menu-mobile').zeynep({
+            opened: function () {
+            console.log('the side menu opened')
+        },
+        closed: function () {
+            console.log('the side menu closed')
+            }
+        })
+        // Dynamically bind closing event
+        zeynep.on('closing', function () {
+            console.log('this event is dynamically binded')
+        })
+        // Mobile menu close on overlay click
+        $('.website-overlay').on('click', function () {
+            zeynep.close()
+        })
+        // Mobile menu close on button click
+        $('.btn-close').on('click', function () {
+            zeynep.close()
+        })
+        // Mobile menu open on navbar-toggler click
+        $('.navbar-toggler').on('click', function () {
+            zeynep.open()
+        })
+    })
+});
+</script>
+<!-- STYLES FOOTER ---------------------------------------------------------------------------------------------------- -->
+<link rel="preload" as="font" type="font/woff2" href="../../fonts/fontawesome-6.4.2/webfonts/fa-brands-400.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="../../fonts/fontawesome-6.4.2/webfonts/fa-regular-400.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="../../fonts/fontawesome-6.4.2/webfonts/fa-solid-900.woff2" crossorigin>
+<link rel="preload" as="style" href="../../css/ibkr/website-print.min.css">
+<link rel="stylesheet" type="text/css" media="print" href="../../css/ibkr/website-print.min.css">
+<style type="text/css">
+@import url('../../css/fontawesome-6.4.2/all.min.css') layer(vendors);
+@import url('../../css/animate-3.7.2/animate.min.css') layer(vendors);
+@import url('../../css/bootstrap-switch-3.3.2/bootstrap-switch.min.css') layer(vendors);
+@import url('../../css/icheck-1.0.2/icheck.css') layer(vendors);
+</style></body>
+<script>
+    $(document).ready(function() {		
+        var checkBootstrap = setInterval(hashNav,50);
+        function hashNav(){
+            var bootstrap_enabled = (typeof $().tabs == 'function');
+            if (bootstrap_enabled == true){
+                var url = document.location.toString();
+                if (url.match('#')) {
+                    $('.nav-lines a[href="#'+url.split('#')[1]+'"]').tab('show') ;
+                    setTimeout(function() {
+                        $(window).scrollTop(0);
+                    }, 500);
+                } 
+                $('.nav-lines a').on('shown.bs.tab', function (e) {
+                    if(history.pushState) {
+                        history.pushState(null, null, e.target.hash); 
+                    } else {
+                        window.location.hash = e.target.hash; //Polyfill for old browsers
+                    }
+                })
+                clearInterval(checkBootstrap);
+                checkBootstrap = null; 
+            }
+        }
+    });
+</script>
+<!-- MODAL --> 
+<script type="text/javascript">
+$(document).ready(function(){
+    // STOP PLAYING YOUTUBE VIDEO WHEN MODAL IS CLOSED
+    $('.modal-video').on('hide.bs.modal', function(e) {   
+        var $if = $(e.delegateTarget).find('iframe');
+        var src = $if.attr("src");
+        $if.attr("src", '../../empty.html');
+        $if.attr("src", src);
+    });
+});
+</script>
+
+<!-- Mirrored from www.interactivebrokers.ie/en/trading/trading-platforms.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Sep 2025 08:54:35 GMT -->
+</html>

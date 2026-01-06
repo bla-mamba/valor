@@ -1,0 +1,636 @@
+<!DOCTYPE HTML>
+<html dir="ltr" data-theme="light">
+    
+<!-- Mirrored from www.interactivebrokers.ie/Universal/servlet/Application.ApplicationSelector?ct=US&locale=en_US by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Sep 2025 09:41:37 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Cache-Control" content="must-revalidate, no-store, no-cache, private" />
+        <meta http-equiv="pragma" content="no-cache" />
+        <meta http-equiv="expires" content="0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, minimal-ui" />
+        <meta name="google" content="notranslate" />
+        <meta name="HandheldFriendly" content="true" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="robots" content="noindex,nofollow" />
+        <title id="applicationTitle">Application</title>
+        <style type="text/css">
+    .abracadabra {
+        display: none !important;
+    }
+</style><script type="text/javascript">
+    var globals = new Object();
+    globals.wizardSeed = 0;
+    globals.fingerprint = "";
+    globals.highEntropyFP = "";
+    globals.lowEntrophyFP = "";
+    globals.medEntrophyFP = "";
+    globals.currentStep = 0;
+    globals.currentSequence = 0;
+    globals.currentStepName = "";
+    globals.currentStepFormNumber = "";
+    globals.inactivityCheckPoint = 1800000;   // Check at the 30 minute mark;
+    globals.expired = false;
+    globals.accountExists = false;
+    globals.isMobilePlatform = false;
+    globals.oldSection = "-1";
+    globals.newSection = "-1";
+    globals.serverURL = "https://www.interactivebrokers.ie/Universal/servlet/www.interactivebrokers.ie";
+    globals.currentLanguage = "en_US";
+    globals.isNativeApplication = false;
+    globals.messageCenterWindow;
+    globals.liveChatWindow;
+    globals.inactivityTimeout;
+    globals.reviewStep = { formNumber : 0 };
+    globals.staticTextMap = new Object();
+    globals.cacheFactor = "?factor=4666154414";
+    globals.isWhiteBranded = false;
+    globals.contentQueue = new Array();
+    globals.popoverData = {shown : false, identifier : "", defaultContent : "<i class=\"fa fa-2x fa-spinner fa-spin\"></i>", timeoutId : -1, timeoutDuration : 500};
+    globals.helpCache = new Object();
+    globals.viewOnlyMode = false;
+    globals.lightWeightDataStr = "";
+    globals.enableLightDataPolling = false;
+    globals.isOpenedFromNativeApp = false;
+    globals.smsConfirmationTimer;
+    globals.autoSubmitStep = false;
+    globals.showAutoSubmitButton = false;
+    globals.autocompleteDetails = {};
+    globals.enableRegistrationUnloadWarning = true; 
+    globals.isAdditionalAccountPreferenceEnabled = true;
+    globals.isChosenPluginDisabled = false;
+    globals.administratorDataEntry = false;
+    globals.administratorClientVerification = false;
+    globals.baseSsoSession;
+    globals.captureScreenShot = false;
+    globals.activityEvents = ["mousemove", "mousedown", "keydown", "touchstart", "touchmove", "scroll"];
+    globals.enableRegistrationErrorClearing = true;
+</script>
+<script type="text/javascript">if (typeof globals != "undefined") {globals.staticTextMap = {"#skip":{"it_IT":"Ignora","ru_RU":"Пропустить","fr_FR":"Sauter","ja_JP":"スキップ","he_IL":"דלג","de_DE":"Überspringen","hu_HU":"Kihagyás","zh_TW":"略過","ko_KR":"건너뛰기","en_US":"Skip","es_ES":"Omitir","zh_CN":"跳过","ar_AE":"تخطي","nl_NL":"Overslaan","pt_PT":"Ignorar"},"[data-error-validateErr38]":{"it_IT":"La data di nascita non può essere successiva alla data odierna.","ru_RU":"Дата рождения не может быть в будущем.","fr_FR":"La date de naissance ne peut être dans le futur.","ja_JP":"本日以降の日付を生年月日にすることはできません。","he_IL":"תאריך לידה לא יכול להיות בעתיד.","de_DE":"Das Geburtsdatum kann nicht in der Zukunft liegen.","hu_HU":"Születési dátumként nem lehet a mai napnál későbbi dátumot megadni.","zh_TW":"生日不可以是未來的時間。","ko_KR":"생년월일은 미래 날짜로 설정할 수 없습니다.","en_US":"Date of Birth can not be in the future.","es_ES":"La fecha de nacimiento no puede ser futura.","zh_CN":"生日不可以是未来的时间。","ar_AE":"لا يمكن أن يكون تاريخ الميلاد في المستقبل.","nl_NL":"Date of Birth can not be in the future.","pt_PT":"A data de nascimento não pode ser uma data futura."},"[data-text-add-managerial-authority]":{"it_IT":"Aggiungere autorità gestionale","ru_RU":"Добавить руководителя","fr_FR":"Ajouter une autorité de gestion","ja_JP":"管理権限を追加","he_IL":"להוספת בעלי סמכות ניהולית","de_DE":"Weisungsbefugte(n) hinzufügen","hu_HU":"Vezetői jogkör gyakorlására jogosult személy hozzáadása","zh_TW":"添加管理權","ko_KR":"관리 권한 추가","en_US":"Add Managerial Authority","es_ES":"Añadir autoridad de gestión","zh_CN":"添加管理权","ar_AE":"إضافة سلطة إدارية","nl_NL":"Managementbevoegdheid toevoegen","pt_PT":"Adicionar autoridade gerencial"},"[data-error-validateErr74]":{"it_IT":"Il formato del mese non è valido. Il numero deve essere compreso tra 1 e 12.","ru_RU":"Недопустимый месяц. Должен быть значением от 1 до 12.","fr_FR":"Mois invalide. Doit être compris entre 1 et 12.","ja_JP":"無効な月です。1から12の間で入力してください。","he_IL":"חודש שגוי. חייב להיות בין 1 ל-12","de_DE":"Monat ungültig. Geben Sie eine Zahl zwischen 1 und 12 an.","hu_HU":"Érvénytelen hónap. Lehetséges hónapok: 1-12.","zh_TW":"無效的月份。必須介乎1至12。","ko_KR":"유효하지 않은 월입니다. 1과 12 사이여야 합니다.","en_US":"Invalid month. Must be between 1 and 12.","es_ES":"Mes no válido. Debe estar entre 1 y 12.","zh_CN":"无效的月份。必须为1到12之间的数字。","ar_AE":"طريقة كتابة الشهر غير سليمة. لابد وأن يكون بين 1 و 12 ","nl_NL":"Invalid month. Must be between 1 and 12.","pt_PT":"Mês inválido. Deve estar entre 1 e 12."},"#back":{"it_IT":"Indietro","ru_RU":"Назад","fr_FR":"Retour","ja_JP":"戻る","he_IL":"חזרה","de_DE":"Zurück","hu_HU":"Vissza","zh_TW":"返回","ko_KR":"뒤로","en_US":"Back","es_ES":"Atrás","zh_CN":"返回","ar_AE":"العودة","nl_NL":"Terug","pt_PT":"Voltar"},"[data-cancel-application]":{"it_IT":"Annullare richiesta","ru_RU":"Отменить заявку","fr_FR":"Annuler demande d&#39;ouverture de compte","ja_JP":"お申し込み書の削除","he_IL":"ביטול בקשה","de_DE":"Kontoeröffnung abbrechen","hu_HU":"Számlanyitási kérelem visszavonása","zh_TW":"取消申請","ko_KR":"신청 취소","en_US":"Cancel Application","es_ES":"Cancelar solicitud","zh_CN":"取消申请","ar_AE":"إلغاء الطلب","nl_NL":"Aanvraag annuleren","pt_PT":"Cancelar cadastro"},"[data-text-select]":{"it_IT":"Seleziona","ru_RU":"Выбрать","fr_FR":"Sélectionnez","ja_JP":"選択","he_IL":"בחר/י","de_DE":"Auswählen","hu_HU":"Válasszon","zh_TW":"選擇","ko_KR":"선택","en_US":"Select","es_ES":"Seleccionar","zh_CN":"选择","ar_AE":"تحديد","nl_NL":"Selecteren","pt_PT":"Selecionar"},"[data-text-session-expired]":{"it_IT":"Sessione scaduta","ru_RU":"Сеанс истек","fr_FR":"Session expirée","ja_JP":"セッションが切れました","he_IL":"מושב ההתחברות פקע","de_DE":"Sitzung abgelaufen","hu_HU":"Session Expired","zh_TW":"會話已過期","ko_KR":"세션 만료","en_US":"Session Expired","es_ES":"La sesión ha caducado","zh_CN":"会话已过期","ar_AE":"Session Expired","nl_NL":"Sessie verlopen","pt_PT":"Sua sessão expirou."},"[data-text-interested]":{"it_IT":"Mi interessa","ru_RU":"Выбран","fr_FR":"Interessé","ja_JP":"興味がある","he_IL":"מעוניין(ת)","de_DE":"Interessiert","hu_HU":"Érdekel","zh_TW":"感興趣","ko_KR":"관심 있음","en_US":"Interested","es_ES":"Me interesa","zh_CN":"感兴趣","ar_AE":"مهتم","nl_NL":"Geïnteresseerd","pt_PT":"Interessado"},"[data-text-tax-form]":{"it_IT":"Modulo fiscale","ru_RU":"Налоговая форма","fr_FR":"Formulaire fiscal","ja_JP":"納税申告書","he_IL":"טופס מס","de_DE":"Steuerformular","hu_HU":"Adónyomtatvány","zh_TW":"稅表","ko_KR":"세무 양식","en_US":"Tax Form","es_ES":"Formulario fiscal","zh_CN":"税表","ar_AE":"استمارة الضريبة","nl_NL":"Belastingformulier","pt_PT":"Formulário tributário"},"[data-text-preferred]":{"it_IT":"Preferiti","ru_RU":"Приоритетные","fr_FR":"Privilégiée","ja_JP":"優先","he_IL":"מועדף","de_DE":"Bevorzugt","hu_HU":"Előnyben részesített","zh_TW":"優先的","ko_KR":"선호","en_US":"Preferred","es_ES":"Preferente","zh_CN":"优先的","ar_AE":"المفضل","nl_NL":"Voorkeur","pt_PT":"Preferencial"},"#unloadMsg":{"it_IT":"In questa pagina sono presenti delle modifiche non salvate. Se decidi di uscire da questa pagina le modifiche andranno perse.","ru_RU":"У вас есть несохраненные изменения. Если вы покинете страницу сейчас, то изменения будут отменены.","fr_FR":"Si vous quittez cette page maintenant, vos modifications ne seront pas enregistrées.","ja_JP":"変更内容に保存されてないものがあります。このページから移動すると変更内容が破棄されます。","he_IL":"יש לך שינויים שלא נשמרו בעמוד זה. יציאה מהעמוד תבטל את השינויים שכבר נעשוץ","de_DE":"Sie haben auf dieser Seite Änderungen vorgenommen und nicht gespeichert. Wenn Sie diese Seite verlassen, werden Ihre Änderungen verworfen.","hu_HU":"Ezen az oldalon még nem mentette el a módosításait. Ha elhagyja az oldalt, a módosítások elvesznek.","zh_TW":"此頁面有未保存更改。如果離開此頁面，您的更改將被放棄。","ko_KR":"이 페이지에 저장되지 않은 변경 사항이 있습니다. 이 페이지를 떠나시면 변경 사항이 삭제됩니다.","en_US":"You have unsaved changes on this page. If you leave this page, your changes will be discarded.","es_ES":"Tiene cambios no guardados en esta página. Si sale, perderá todos los cambios.","zh_CN":"此页面有未保存更改。如果离开此页面，您的更改将被放弃。","ar_AE":"لديك تغييرات غير محفوظة في هذه الصفحة. سيؤدي الخروج من الصفحة إلى إلغاء التغييرات.","nl_NL":"You have unsaved changes on this page. If you leave this page, your changes will be discarded.","pt_PT":"Você tem alterações não salvas nesta página. Se você sair desta página, suas alterações serão descartadas."},"[data-logout]":{"it_IT":"Chiudere sessione","ru_RU":"Выход","fr_FR":"Se déconnecter","ja_JP":"ログアウト","he_IL":"התנתקות","de_DE":"Abmelden","hu_HU":"Kijelentkezés","zh_TW":"登出","ko_KR":"로그아웃","en_US":"Logout","es_ES":"Cerrar sesión","zh_CN":"退出","ar_AE":"تسجيل خروج","nl_NL":"Uitloggen","pt_PT":"Encerrar sessão"},"[data-chat]":{"it_IT":"Chat","ru_RU":"Онлайн-чат","fr_FR":"Chat en direct","ja_JP":"ライブチャット","he_IL":"צ&#39;אט חי בזמן אמת","de_DE":"Live-Chat","hu_HU":"Élő csevegés","zh_TW":"在線交談","ko_KR":"라이브 채팅","en_US":"Live Chat","es_ES":"Chat en directo","zh_CN":"在线聊天","ar_AE":"الدردشة المباشرة","nl_NL":"Livechat","pt_PT":"Chat ao vivo"},"#basicRequired":{"it_IT":"Obbligatorio","ru_RU":"требуется","fr_FR":"Requis.","ja_JP":"必要項目","he_IL":"חובה","de_DE":"Erforderlich","hu_HU":"Kötelező","zh_TW":"必須填寫","ko_KR":"필수 사항","en_US":"Required","es_ES":"Obligatorio","zh_CN":"必填","ar_AE":"مطلوب","nl_NL":"Vereist","pt_PT":"Obrigatório"},"[data-text-identification]":{"it_IT":"Identificazione","ru_RU":"Идентификация","fr_FR":"Identification","ja_JP":"本人確認書類","he_IL":"זהות","de_DE":"Identifikation","hu_HU":"Azonosítás","zh_TW":"身份證明","ko_KR":"신원 확인","en_US":"Identification","es_ES":"Identificación","zh_CN":"身份证明","ar_AE":"الهوية","nl_NL":"Identificatie","pt_PT":"Identificação"},"[data-text-save-managerial-authority]":{"it_IT":"Salva l&#39;autorità manageriale","ru_RU":"Сохранить руководителя","fr_FR":"Enregistrer l&#39;autorité de gestion","ja_JP":"管理権限を保存","he_IL":"שמור סמכות ניהולית","de_DE":"Weisungsbefugte(n) speichern","hu_HU":"Vezetői jogkör gyakorlására jogosult személy mentése","zh_TW":"保存管理權","ko_KR":"관리 권한 저장","en_US":"Save Managerial Authority","es_ES":"Guardar la autoridad de gestión","zh_CN":"保存管理权","ar_AE":"حفظ معلومات السلطة الإدارية","nl_NL":"Beheersbevoegdheid opslaan","pt_PT":"Salvar autoridade gerencial"},"#basicOptional":{"it_IT":"Facoltativo","ru_RU":"необязательно","fr_FR":"Optionnel","ja_JP":"(任意)","he_IL":"לא חובה","de_DE":"Optional","hu_HU":"Opcionális","zh_TW":"(可選填)","ko_KR":"선택 사항","en_US":"Optional","es_ES":"Opcional","zh_CN":"可选","ar_AE":"اختياري","nl_NL":"Optioneel","pt_PT":"Opcional"},"#cancel":{"it_IT":"Annulla","ru_RU":"Отменить","fr_FR":"Annuler","ja_JP":"キャンセル","he_IL":"ביטול","de_DE":"Abbrechen","hu_HU":"Mégse","zh_TW":"取消","ko_KR":"취소","en_US":"Cancel","es_ES":"Cancelar","zh_CN":"取消","ar_AE":"إلغاء","nl_NL":"Annuleren","pt_PT":"Cancelar"},"#confirmMobileNumberBarLabel":{"it_IT":"Confermare numero di telefono cellulare","ru_RU":"Подтвердить номер телефона","fr_FR":"Confirmer numéro de portable","ja_JP":"携帯番号を承認","he_IL":"אשרו מספר נייד","de_DE":"Telefonnummer bestätigen","hu_HU":"Mobiltelefonszám megerősítése","zh_TW":"確認手機號碼","ko_KR":"휴대폰 번호 확인","en_US":"Confirm Mobile Number","es_ES":"Confirmar número de teléfono móvil","zh_CN":"确认手机号码","ar_AE":"تأكيد رقم الهاتف المحمول","nl_NL":"Mobiel nummer bevestigen","pt_PT":"Confirmar número de celular"},"[data-error-validateErr77]":{"it_IT":"Il formato del giorno non è valido. Per questo mese, il numero deve essere compreso tra 1 e 31.","ru_RU":"Недопустимый день. Должен быть значением от 1 до 31.","fr_FR":"Jour invalide. Doit être compris entre 1 et 31.","ja_JP":"無効な日付です。1から31の間で入力してください。","he_IL":"יום שגוי. חייב להיות בין 1 ל-31.","de_DE":"Tag ungültig. Geben Sie eine Zahl zwischen 1 und 31 an.","hu_HU":"Érvénytelen nap. 1 és 31 közé kell esnie.","zh_TW":"無效的日子。必須介乎1至31。","ko_KR":"유효하지 않은 날짜입니다. 1과 31 사이여야 합니다.","en_US":"Invalid day. Must be between 1 and 31.","es_ES":"Día no válido. Debe estar entre 1 y 31.","zh_CN":"无效的日。必须为1到31日之间的日期。","ar_AE":"طريقة كتابة اليوم غير سليمة. لابد وأن يكون ما بين 1 و31. ","nl_NL":"Invalid day. Must be between 1 and 31.","pt_PT":"Dia inválido. Deve estar entre 1 e 31."},"#helpMsg":{"it_IT":"Aiuto","ru_RU":"Помощь","fr_FR":"Aide","ja_JP":"ヘルプ","he_IL":"עזרה","de_DE":"Hilfe","hu_HU":"Súgó","zh_TW":"幫助","ko_KR":"도움말","en_US":"Help","es_ES":"Ayuda","zh_CN":"帮助","ar_AE":"مساعدة","nl_NL":"Help","pt_PT":"Ajuda"},"#applicationTitle":{"it_IT":"Richiesta di apertura del conto","ru_RU":"Заявка","fr_FR":"Demande d&#39;ouverture de compte","ja_JP":"お申し込み","he_IL":"יישום","de_DE":"Antrag","hu_HU":"Számlanyitási kérelem benyújtása","zh_TW":"申請","ko_KR":"신청서","en_US":"Application","es_ES":"Solicitud","zh_CN":"申请","ar_AE":"تطبيق","nl_NL":"Aanvraag","pt_PT":"Cadastro"},"[data-text-selected]":{"it_IT":"Selezionato","ru_RU":"Выбрано","fr_FR":"Sélectionné","ja_JP":"選択済み","he_IL":"נבחר","de_DE":"Ausgewählt","hu_HU":"Kiválasztva","zh_TW":"已選","ko_KR":"선택됨","en_US":"Selected","es_ES":"Seleccionado","zh_CN":"已选","ar_AE":"المحدد","nl_NL":"Geselecteerd","pt_PT":"Selecionado"},"#autoSubmitDesc":{"it_IT":"Vai all&#39;ultima pagina compilata","ru_RU":"На последнюю заполненную страницу","fr_FR":"Aller à la dernière page terminée","ja_JP":"最後方の記入済みのページへ","he_IL":"לעמוד הכי מתקדם שהושלם","de_DE":"Zur letzten ausgefüllten Seite","hu_HU":"a legutolsó befejezett oldalra","zh_TW":"前往最早的已完成頁面","ko_KR":"최종 완료된 페이지로 이동","en_US":"To furthest completed page","es_ES":"Hasta la última página completada.","zh_CN":"前往最早的已完成页面","ar_AE":"إلى آخر صفحة مكتملة","nl_NL":"Naar meest voltooide pagina","pt_PT":"Até a última página concluída"},"#edit":{"it_IT":"Modifica","ru_RU":"Редактировать","fr_FR":"Modifier","ja_JP":"編集","he_IL":"ערוך","de_DE":"Bearbeiten","hu_HU":"Szerkesztés","zh_TW":"編輯","ko_KR":"편집","en_US":"Edit","es_ES":"Editar","zh_CN":"编辑","ar_AE":"تعديل","nl_NL":"Bewerken","pt_PT":"Editar"},"[data-text-taxes]":{"it_IT":"Confermi la sua residenza fiscale","ru_RU":"Подтвердите ваше налоговое резидентство","fr_FR":"Confirmation de la résidence fiscale","ja_JP":"税法上居住国の確認","he_IL":"אשר/י את מגורי המס שלך","de_DE":"Bestätigen Sie Ihre steuerliche Ansässigkeit","hu_HU":"Adóügyi illetőség  megerősítése","zh_TW":"確認您的稅務居住地","ko_KR":"세금 거주지를 확인해 주세요","en_US":"Confirm Your Tax Residence","es_ES":"Confirme su residencial fiscal","zh_CN":"确认您的税务居住地","ar_AE":"تأكيد إقامتك الضريبية","nl_NL":"Bevestig uw fiscale woonplaats","pt_PT":"Confirme sua residência fiscal"},"#Completed":{"it_IT":"Passo completato:","ru_RU":"Выполненный шаг:","fr_FR":"Étape terminée :","ja_JP":"完了済みの手順:","he_IL":"השלב שהושלם:","de_DE":"Abgeschlossener Schritt:","hu_HU":"Befejezett lépés:","zh_TW":"已完成步驟：","ko_KR":"완료된 단계:","en_US":"Completed Step:","es_ES":"Paso completado:","zh_CN":"已完成步骤：","ar_AE":"الخطوة المكتملة:","nl_NL":"Voltooide stap:","pt_PT":"Etapa concluída:"},"#browserWarningText":{"it_IT":"Il suo browser è <b>obsoleto<\/b>. Aggiornare il browser per usufruire di maggior sicurezza, comodità ed efficienza di questa applicazione.","ru_RU":"Ваш браузер <b>устарел<\/b>. Обновите его для защиты, удобства и безупречной работы данной заявки.","fr_FR":"Votre navigateur n&#39;est <b>pas à jour<\/b>. Mettez à jour votre navigateur pour une sécurité renforcée, un meilleur confort et une expérience optimisée de cette application.","ja_JP":"ブラウザのバージョンが<b>最新版<\/b>ではありません。アプリケーションのセキュリティ強化、処理速度向上のためにアップデートしてください。","he_IL":"הדפדפן שלך <b>לא מעודכן<\/b>. נא לעדכן את הדפדפן לשיפור האבטחה, הנוחיות וע&#34;מ לשפר את חווית הגשת הבקשה","de_DE":"Ihre Browserversion ist <b>nicht mehr aktuell<\/b>. Bitte aktualisieren Sie Ihre Browserversion für ein höheres Maß an Sicherheit, mehr Komfort und das bestmögliche Benutzererlebnis mit dieser Anwendung.","hu_HU":"Az Ön által használt böngésző <b>elavult<\/b>. A nagyobb biztonság, kényelem és a legjobb felhasználói élmény érdekében frissítse a böngészőjét.","zh_TW":"您的浏览器<b>版本過舊<\/b>。請升級瀏覽器，以獲得更高的安全性、舒適度及最佳使用體驗。","ko_KR":"귀하의 브라우저가 <b>구버전<\/b>입니다. 본 애플리케이션에서 더 나은 보안, 편의성 및 최적의 경험을 위해 브라우저를 업데이트해 주시기 바랍니다.","en_US":"Your browser is <b>out of date<\/b>. Update your browser for more security, comfort and the best experience in this application.","es_ES":"Su navegador está <b>desactualizado<\/b>. Para mayor seguridad y mejor experiencia de esta aplicación, actualice su navegador.","zh_CN":"您的浏览器<b>版本过旧<\/b>。请升级浏览器，以获得更高的安全性、舒适度及最佳使用体验。","ar_AE":"إصدار المتصفح <b>قديم<\/b>. يرجى تحميل نسخة جديدة من المتصف للحصول على أمان وراحة لأفضل تجربة.","nl_NL":"Your browser is <b>out of date<\/b>. Update your browser for more security, comfort and the best experience in this application.","pt_PT":"Seu navegador está <b>desatualizado<\/b>. Atualize seu navegador para ter mais segurança, mais conforto e a melhor experiência neste aplicativo."},"#citiesByPostalCode":{"it_IT":"Non sono state trovate città che corrispondo al codice postale fornito.","ru_RU":"Не найдено городов с таким индексом.","fr_FR":"Aucune ville ne correspond à ce code postal.","ja_JP":"この郵便番号の都市がありません。","he_IL":"לא נמצאו ערים עבור המיקוד","de_DE":"Zu dieser Postleitzahl konnte kein Ort gefunden werden.","hu_HU":"Az irányítószámhoz nem találtunk város.","zh_TW":"此郵政編碼未找到任何城市。","ko_KR":"해당 우편번호에 대한 도시를 찾을 수 없습니다.","en_US":"No cities were found for the postal code.","es_ES":"No se han encontrado ciudades para el código postal.","zh_CN":"此邮政编码未找到任何城市。","ar_AE":"لم يتم العثور على مدن بهذا الرمز البريدي.","nl_NL":"No cities were found for the postal code.","pt_PT":"Nenhuma cidade foi encontrada para o código postal."},"#done":{"it_IT":"Fatto","ru_RU":"Готово","fr_FR":"Terminé","ja_JP":"完了","he_IL":"בוצע","de_DE":"Fertig","hu_HU":"Elkészült","zh_TW":"已完成","ko_KR":"완료","en_US":"Done","es_ES":"Hecho","zh_CN":"完成","ar_AE":"منجز","nl_NL":"Gereed","pt_PT":"Concluído"},"[data-text-not-applicable]":{"it_IT":"Non applicabile","ru_RU":"Не применимо","fr_FR":"Ne s&#39;applique pas","ja_JP":"適用なし","he_IL":"לא ישים","de_DE":"Nicht zutreffend","hu_HU":"Tárgytalan","zh_TW":"不適用","ko_KR":"해당 없음","en_US":"Not Applicable","es_ES":"No se aplica","zh_CN":"不适用","ar_AE":"لا يمكن تطبيقه","nl_NL":"Niet van toepassing","pt_PT":"Não se aplica"},"#MoreInformation":{"it_IT":"Maggiori informazioni","ru_RU":"Подробнее","fr_FR":"Plus d&#39;informations","ja_JP":"詳細","he_IL":"מידע נוסף","de_DE":"Weitere Informationen","hu_HU":"További információ","zh_TW":"更多信息","ko_KR":"추가 정보","en_US":"More Information","es_ES":"Más información","zh_CN":"更多信息","ar_AE":"المزيد من المعلومات","nl_NL":"Meer informatie","pt_PT":"Mais informações"},"[data-text-regulatory]":{"it_IT":"Normativa","ru_RU":"Regulatory","fr_FR":"Réglementaire","ja_JP":"法規制","he_IL":"רגולטורי","de_DE":"Regulatorische Themen","hu_HU":"Szabályozó hatóság","zh_TW":"監管","ko_KR":"규제","en_US":"Regulatory","es_ES":"Reglamentario","zh_CN":"监管","ar_AE":"تنظيمي","nl_NL":"Wettelijk","pt_PT":"Regulatório"},"[data-callme]":{"it_IT":"Chiamami","ru_RU":"Звонок мне","fr_FR":"Appelez-moi","ja_JP":"弊社から電話を希望","he_IL":"טלפנו אלי","de_DE":"Anruf","hu_HU":"Call Me szolgáltatás","zh_TW":"致電我","ko_KR":"연락 주세요","en_US":"Call Me","es_ES":"Contacte conmigo","zh_CN":"致电联系","ar_AE":"اتصل بي","nl_NL":"Bel mij","pt_PT":"Chamada telefônica"},"#continue":{"it_IT":"Avanti","ru_RU":"Продолжить","fr_FR":"Poursuivre","ja_JP":"次に進む","he_IL":"המשך","de_DE":"Weiter","hu_HU":"Folytatás","zh_TW":"繼續","ko_KR":"계속","en_US":"Continue","es_ES":"Continuar","zh_CN":"继续","ar_AE":"متابعة","nl_NL":"Doorgaan","pt_PT":"Continuar"},"#inactiveMsg":{"it_IT":"Disconnessione per inattività","ru_RU":"Автоматический выход из системы","fr_FR":"Déconnexion suite à une période d&#39;inactivité trop longue","ja_JP":"無動作によるログアウト","he_IL":"התנתקות בשל חוסר פעילות","de_DE":"Inaktivitäts-Abmeldung","hu_HU":"Automatikus kijelentkezés inaktivitás esetén","zh_TW":"閒置登出","ko_KR":"비활성 로그아웃","en_US":"Inactivity Logout","es_ES":"Cierre de sesión por inactividad","zh_CN":"无活动退出","ar_AE":"تسجيل الخروج بسبب عدم النشاط","nl_NL":"Inactivity Logout","pt_PT":"Encerramento por inatividade"},"#noTextMatchSelect":{"it_IT":"Nessun risultato corrispondente","ru_RU":"По вашему запросу ничего не найдено.","fr_FR":"Aucun résultat correspondant","ja_JP":"一致する結果がありません","he_IL":"אין תוצאות מתאימות","de_DE":"Keine übereinstimmenden Ergebnisse","hu_HU":"Nincs találat","zh_TW":"沒有匹配的結果","ko_KR":"일치하는 결과가 없습니다","en_US":"No results match","es_ES":"No se han encontrado resultados coincidentes.","zh_CN":"没有匹配的结果","ar_AE":"لا توجد نتائج مطابقة","nl_NL":"Geen resultaten gevonden","pt_PT":"Nenhum resultado corresponde"},"[data-text-setup]":{"it_IT":"Setup Conto","ru_RU":"Настройки счета","fr_FR":"Configuration du compte","ja_JP":"口座設定","he_IL":"התקנת חשבון","de_DE":"Kontoeinrichtung","hu_HU":"Számlabeállítások","zh_TW":"帳戶設置","ko_KR":"계좌 설정","en_US":"Account Setup","es_ES":"Configuración de cuenta","zh_CN":"账户设置","ar_AE":"اعدادات الحساب","nl_NL":"Accountconfiguratie","pt_PT":"Configuração da conta"},"[data-error-validateErr76]":{"it_IT":"Il formato del giorno non è valido. Per questo mese, il numero deve essere compreso tra 1 e {0}.","ru_RU":"Недопустимый день. Должен быть значением от 1 до {0} этого месяца.","fr_FR":"Jour invalide. Doit être compris entre 1 et {0} pour ce mois.","ja_JP":"無効な日付です。この月は1から{0}の間で入力してください。","he_IL":"יום שגוי. חייב להיות בין 1 ל-{0} עבור חודש זה.","de_DE":"Tag ungültig. Geben Sie für diesen Monat eine Zahl zwischen 1 und {0} an.","hu_HU":"Érvénytelen nap. Az adott hónapban 1 és {0} közé kell esnie.","zh_TW":"無效的日子。本月必須介乎1至{0}。","ko_KR":"유효하지 않은 날짜입니다. 해당 월의 경우 1과 {0} 사이여야 합니다.","en_US":"Invalid day. Must be between 1 and {0} for this month.","es_ES":"Día no válido. Debe estar entre 1 y {0} para este mes.","zh_CN":"无效的日。该月必须为1到{0}日之间的日期。","ar_AE":"طريقة كتابة اليوم غير سليمة. لابد وأن تكون بين الرقمين 1 و {0} لهذا الشهر. ","nl_NL":"Invalid day. Must be between 1 and {0} for this month.","pt_PT":"Dia inválido. Deve estar entre 1 e {0} para este mês."},"#reviewPreviousStepWarningText":{"it_IT":"Individua i campi di immissione che desideri modificare e specifica le nuove risposte. Per modificare le informazioni in altre pagine della domanda, utilizza i pulsanti Indietro e Continua. Le risposte non modificate saranno salvate nella loro forma attuale; le nuove risposte saranno aggiornate nei nostri archivi al momento dell&#39;invio collettivo dalla pagina di revisione della domanda.","ru_RU":"Найдите поля, которые хотите исправить, и укажите новый ответ. Чтобы изменить данные на других страницах заявки, используйте кнопки &#34;Назад&#34; и &#34;Далее&#34;. Неотредактированные ответы будут сохранены как есть; новые данные будут сохранены после отправки со страницы &#34;Проверка заявки&#34;.","fr_FR":"Localisez le(s) champ(s) de saisie que vous souhaitez modifier et indiquez votre (vos) nouvelle(s) réponse(s). Pour modifier des informations sur d&#39;autres pages de la demande, utilisez les boutons « Retour » et « Continuer ». Les réponses non modifiées seront enregistrées sous leur forme actuelle ; les nouvelles réponses seront mises à jour dans nos dossiers lors de la soumission à partir de la page d&#39;examen de la demande.","ja_JP":"変更をご希望の箇所を見つけ、新しい内容をご入力下さい。お申込みの別のページの内容を変更する場合には、戻るまたは続けるボタンを使用して下さい。変更のない部分は現在の内容のまま保存されます。新しい内容は、再確認のページからお申込みが最終送信された時点で弊社の記録上更新されます。","he_IL":"נא לאתר את שדות הקלט שברצונך לשנות ולציין את הדרכונים החדשים. לעריכת פרטים בעמודים אחרים של הבקשה, יש להשתמש בלחצני ההמשך והחזרה. תשובות שלא שונו יישמרו כפי שהן; תשובות חדשות יעודכנו במערכת עם ההגשה הכוללת מעמוד הסקירה הסופית.","de_DE":"Navigieren Sie zu den Eingabefeldern, die Sie anpassen möchten, und geben Sie Ihre Antworten ein. Um Informationen auf anderen Seiten des Antrags zu ändern, verwenden Sie die Zurück- und Weiter-Schaltflächen. Nicht bearbeitete Felder werden in ihrem Ist-Zustand gespeichert. Neue Antworten werden in unseren Aufzeichnungen aktualisiert, sobald der Antrag insgesamt über die Seite zur Antragsprüfung eingereicht wurde.","hu_HU":"Tekintse át a módosítani kívánt mezőket, és írja be az új választ/válaszokat. A számlanyitási kérelem többi oldalán szereplő információk szerkesztéséhez lépjen a megfelelő oldalra a Vissza vagy a Folytatás gombok segítségével. A nem módosított válaszok a jelenlegi formában mentésre kerülnek; az új válaszokat a \u201eSzámlanyitási kérelem elbírálása\u201d oldalon együtt kell benyújtani, ezt követően frissítjük azokat a nyilvántartásunkban.","zh_TW":"找到您想修改的輸入欄，輸入新的回復。要編輯其它頁面上的信息，請使用返回和繼續按鈕。沒有改動的回復將按原樣保存；在申請審核頁面一起提交後，新的回復將自動更新到我們的系統中。","ko_KR":"수정하고자 하는 입력 필드를 찾아 새로운 응답을 지정해 주십시오. 신청서의 다른 페이지에서 정보를 편집하려면 이전 및 계속 단추를 사용하십시오. 편집되지 않은 응답은 현재 형태로 저장되며, 새로운 응답은 신청서 검토 페이지에서 일괄 제출 시 당사 기록에 업데이트됩니다.","en_US":"Locate the input field(s) you would like to amend and specify your new response(s). To edit information on other pages of the application, use the Back and Continue buttons. Unedited responses will be saved in their current form; new responses will be updated in our records upon collective submission from the Application Review page.","es_ES":"Localice los campos de entrada que desea modificar y especifique las nuevas respuestas. Para editar información en otras páginas de la solicitud, utilice los botones &#39;Atrás&#39; y &#39;Continuar&#39;. Las respuestas que no haya editado se guardarán sin modificaciones; las nuevas respuestas se actualizarán en nuestros registros después de que se envíen colectivamente desde la página Revisión de la solicitud.","zh_CN":"找到您想修改的输入栏，输入新的回复。要编辑其它页面上的信息，请使用返回和继续按钮。没有改动的回复将按原样保存；在申请审核页面一起提交后，新的回复将自动更新到我们的系统中。","ar_AE":"يرجى تحديد الحقول التي تريد تغييرها وتحديد المعلومات الجديدة. لتعديل التفاصيل في الصفحات الأخرى للتطبيق، استخدم زر المتابعة وزر العودة. سيتم الاحتفاظ بالإجابات التي لم يتم تغييرها؛ سيتم تحديث الإجابات الجديدة في النظام عند التقديم من صفحة المراجعة النهائية.","nl_NL":"Locate the input field(s) you would like to amend and specify your new response(s). To edit information on other pages of the application, use the Back and Continue buttons. Unedited responses will be saved in their current form; new responses will be updated in our records upon collective submission from the Application Review page.","pt_PT":"Localize os campos que você deseja modificar e especifique suas novas respostas. Para editar as informações em outras páginas do cadastro, use os botões &#34;Voltar&#34; e &#34;Continuar&#34;. As respostas que não forem editadas serão salvas no formato atual; as novas respostas serão atualizadas em nossos registros após o envio coletivo na página Revisão do cadastro."},"[data-text-admin-assisted-application]":{"it_IT":"Richiesta apertura tramite amministratore","ru_RU":"Заявка с сопровождением","fr_FR":"Demande d\u2019ouverture de compte assistée par Administrateur","ja_JP":"管理者サポートによるお申込み","he_IL":"בקשת חשבון בסיוע אדמיניסטרטור","de_DE":"Antrag mit Unterstützung durch Verwalter","hu_HU":"Administrator Assisted Application","zh_TW":"由管理員協助的申請","ko_KR":"관리자 지원 신청","en_US":"Administrator Assisted Application","es_ES":"Administrator Assisted Application","zh_CN":"管理员协助申请","ar_AE":"Administrator Assisted Application","nl_NL":"Administrator Assisted Application","pt_PT":"Cadastro assistido pelo administrador"},"#businessOrg":{"it_IT":"Azienda/Organizzazione","ru_RU":"Бизнес/организация","fr_FR":"Entreprise/Organisation","ja_JP":"法人・機関","he_IL":"עסק/ארגון","de_DE":"Unternehmen/Organisation","hu_HU":"Gazdálkodó szervezet / Szervezet","zh_TW":"公司/機構","ko_KR":"기업 / 기관","en_US":"Business/Organization","es_ES":"Business/Organization","zh_CN":"企业/组织","ar_AE":"شركة/مؤسسة","nl_NL":"Bedrijf/organisatie","pt_PT":"Empresa/Organização"},"[data-account-management]":{"it_IT":"Gestione Conto","ru_RU":"Управление счетом","fr_FR":"Gestion de compte","ja_JP":"アカウントマネジメント","he_IL":"ניהול חשבון","de_DE":"Kontoverwaltung","hu_HU":"Számlakezelés","zh_TW":"帳戶管理","ko_KR":"계좌 관리","en_US":"Account Management","es_ES":"Gestión de cuenta","zh_CN":"账户管理","ar_AE":"إدارة الحساب","nl_NL":"Accountbeheer","pt_PT":"Gerenciamento da conta"},"[data-confirm]":{"it_IT":"Conferma","ru_RU":"Подтвердить","fr_FR":"Confirmer","ja_JP":"承認する","he_IL":"אשרו","de_DE":"Bestätigen","hu_HU":"Megerősítés","zh_TW":"確認","ko_KR":"확인","en_US":"Confirm","es_ES":"Confirmar","zh_CN":"确认","ar_AE":"تأكيد","nl_NL":"Bevestigen","pt_PT":"Confirmar"},"#return":{"it_IT":"Restituisci","ru_RU":"Возврат","fr_FR":"Retourner","ja_JP":"リターン","he_IL":"חזור","de_DE":"Zurück","hu_HU":"Megtérülés","zh_TW":"返回","ko_KR":"돌아가기","en_US":"Return","es_ES":"Devolver","zh_CN":"返回","ar_AE":"عودة","nl_NL":"Rendement","pt_PT":"Rendimento"},"[data-text-configure-trading-account]":{"it_IT":"Configura il tuo conto di trading","ru_RU":"Настройте свой торговый счет","fr_FR":"Configurer votre compte de trading","ja_JP":"取引口座の設定","he_IL":"הגדרת תצורת חשבון המסחר.","de_DE":"Konfigurieren Sie Ihr Trading-Konto","hu_HU":"Kereskedési számla konfigurálása","zh_TW":"配置您的交易賬戶","ko_KR":"거래 계좌 설정하세요","en_US":"Configure Your Trading Account","es_ES":"Configure su cuenta de negociación","zh_CN":"配置您的交易账户","ar_AE":"قم بتكوين حساب التداول الخاص بك","nl_NL":"Configureer uw handelsaccount","pt_PT":"Configurar sua conta de negociação"},"[data-text-about-you]":{"it_IT":"Informazioni personali","ru_RU":"О вас","fr_FR":"À propos de vous","ja_JP":"お客様情報","he_IL":"אודותיכם","de_DE":"Über Sie","hu_HU":"Az Ön adatai","zh_TW":"基本信息","ko_KR":"고객님에 대해","en_US":"About You","es_ES":"Acerca de usted","zh_CN":"基本信息","ar_AE":"عنك","nl_NL":"Over u","pt_PT":"Informações sobre você"},"[data-error-validateErr79]":{"it_IT":"Sono ammesse solamente date di nascita comprese nell&#39;arco degli ultimi 130 anni.","ru_RU":"Допускаются только даты рождения в течение последних 130 лет.","fr_FR":"Nous pouvons uniquement accepter des dates de naissance des 130 dernières années.","ja_JP":"過去130年以内の生年月日のみ入力できます。","he_IL":"תאריך הלידה חייב להיות מ-130 השנים האחרונות.","de_DE":"Wir können nur Geburtsjahre innerhalb der letzten 130 Jahre akzeptieren.","hu_HU":"Kizárólag 130 évnél nem régebbi születési dátumot áll módunkban elfogadni.","zh_TW":"我們僅接受過去130年內的出生日期。","ko_KR":"지난 130년 이내의 생년월일만 입력 가능합니다.","en_US":"We can only accept birth dates from within the past 130 years.","es_ES":"Solo se aceptan fechas de nacimiento de los últimos 130 años.","zh_CN":"我们只接受过去130年以内的出生日期。","ar_AE":"لا نقبل إلا تاريخ الميلاد المسجل في غضون الـ 130 عاما الماضية.   ","nl_NL":"Wij kunnen alleen geboortedatums accepteren van de afgelopen 130 jaar.","pt_PT":"Só podemos aceitar datas de nascimento dos últimos 130 anos."},"#pageText":{"it_IT":"Pagina {0} di {1}","ru_RU":"Страница {0} из {1}","fr_FR":"Page {0} sur {1}","ja_JP":"{1}の{0}ページ目","he_IL":"עמוד {0} מתוך {1}","de_DE":"Seite {0} von {1}","hu_HU":"{0}/{1} oldal","zh_TW":"第{0}頁，共{1}頁","ko_KR":"{0} 페이지 / {1} 페이지","en_US":"Page {0} of {1}","es_ES":"Página {0} de {1}","zh_CN":"第{0}页，共{1}页","ar_AE":"صفحة {0} من {1}","nl_NL":"Pagina {0} van {1}","pt_PT":"Página {0} de {1}"},"#invalid":{"it_IT":"Non valido","ru_RU":"Недопустимо","fr_FR":"Invalide","ja_JP":"無効","he_IL":"שגוי","de_DE":"Ungültig","hu_HU":"Érvénytelen","zh_TW":"無效","ko_KR":"유효하지 않음","en_US":"Invalid","es_ES":"Inválido","zh_CN":"无效","ar_AE":"غير صحيح","nl_NL":"Ongeldig","pt_PT":"Inválido"},"[data-error-validateErr75]":{"it_IT":"Il formato dell&#39;anno non è valido. Deve contenere un numero composto da 4 cifre.","ru_RU":"Недопустимый год. Должен быть 4-значным числом.","fr_FR":"Année invalide. Doit être un nombre à 4 chiffres.","ja_JP":"無効な年です。4桁の数字を入力してください。","he_IL":"שנה שגויה. חייב להיות מספר בן 4 ספרות.","de_DE":"Jahr ungültig. Geben Sie eine 4-stellige Zahl ein.","hu_HU":"Érvénytelen évszám. Az évszámnak 4 számjegyből kell állnia.","zh_TW":"無效的年份。必須為4位數字。","ko_KR":"유효하지 않은 연도입니다. 4자리 숫자여야 합니다.","en_US":"Invalid year. Must be a 4-digit number.","es_ES":"Año no válido. Debe ser un número de 4 dígitos.","zh_CN":"无效的年份。必须为4位数的数字。","ar_AE":"طريقة كتابة السنة غير سليمة. لابد وأن تكون السنة مكونة من 4 أرقام ","nl_NL":"Invalid year. Must be a 4-digit number.","pt_PT":"Ano inválido. Deve ser um número de quatro dígitos."},"#chooseOneText":{"it_IT":"Scegliere (obbligatorio)","ru_RU":"Выберите (обязательно)","fr_FR":"Choose (Required)","ja_JP":"選択（必須）","he_IL":"בחר/י (חובה)","de_DE":"Auswählen (erforderlich)","hu_HU":"Choose (Required)","zh_TW":"選擇（必須）","ko_KR":"선택 (필수)","en_US":"Choose (Required)","es_ES":"Choose (Required)","zh_CN":"选择（必选）","ar_AE":"Choose (Required)","nl_NL":"Kiezen (Vereist)","pt_PT":"Escolha (obrigatório)"},"[data-operator-home]":{"it_IT":"Home operatore","ru_RU":"Главная страница оператора","fr_FR":"Page d&#39;accueil","ja_JP":"オペレーター・ホーム","he_IL":"בית המפעיל","de_DE":"Betreiber-Homepage","hu_HU":"Üzemeltető kezdőlap","zh_TW":"運營商首頁","ko_KR":"운영자 홈","en_US":"Operator Home","es_ES":"Página principal del operador","zh_CN":"运营商首页","ar_AE":"الصفحة الرئيسية للمشغل","nl_NL":"Operator Home","pt_PT":"Página inicial do operador"},"[data-text-status]":{"it_IT":"Stato","ru_RU":"Статус","fr_FR":"Statut","ja_JP":"ステータス","he_IL":"סטטוס","de_DE":"Status","hu_HU":"Státusz","zh_TW":"狀態","ko_KR":"현황","en_US":"Status","es_ES":"Estado","zh_CN":"状态","ar_AE":"الحالة","nl_NL":"Status","pt_PT":"Status"},"#needHelp":{"it_IT":"Hai dubbi o domande da fare?","ru_RU":"Есть вопрос?","fr_FR":"Besoin d&#39;aide ?","ja_JP":"よくある質問","he_IL":"יש שאלות?","de_DE":"Haben Sie eine Frage?","hu_HU":"Kérdése van?","zh_TW":"是否有疑問？","ko_KR":"질문이 있으신가요?","en_US":"Got a question?","es_ES":"¿Tiene una pregunta?","zh_CN":"是否有疑问？","ar_AE":"لديك سؤال؟","nl_NL":"Heeft u een vraag?","pt_PT":"Você tem alguma pergunta?"},"#autoSubmit":{"it_IT":"Vai avanti","ru_RU":"В конец заявки","fr_FR":"Poursuivre","ja_JP":"先へ移動","he_IL":"קפוץ קדימה","de_DE":"Überspringen","hu_HU":"Ugrás előre","zh_TW":"跳到下一步","ko_KR":"앞으로 이동","en_US":"Jump Ahead","es_ES":"Saltar","zh_CN":"跳到下一步","ar_AE":"التخطي إلى الأمام","nl_NL":"Vooruitspringen","pt_PT":"Pular"},"#basicRequiredEnglishOnly":{"it_IT":"Obbligatorio (Solo in inglese)","ru_RU":"Обязательно (только английский)","fr_FR":"Requis (en anglais uniquement)","ja_JP":"必須（英語のみ）","he_IL":"חובה (אנגלית בלבד)","de_DE":"Erforderlich (nur Englisch)","hu_HU":"Required (English only)","zh_TW":"必填（僅英語）","ko_KR":"필수 (영어만 가능)","en_US":"Required (English only)","es_ES":"Required (English only)","zh_CN":"必填（仅英语）","ar_AE":"Required (English only)","nl_NL":"Vereist (alleen Engels)","pt_PT":"Obrigatório (somente em inglês)"},"#Current":{"it_IT":"Passaggio attuale:","ru_RU":"Текущий шаг:","fr_FR":"Étape en cours :","ja_JP":"現在の手順:","he_IL":"השלב הנוכחי:","de_DE":"Aktueller Schritt:","hu_HU":"Aktuális lépés:","zh_TW":"當前步驟：","ko_KR":"현재 단계:","en_US":"Current Step:","es_ES":"Paso actual:","zh_CN":"当前步骤：","ar_AE":"الخطوة الحالية:","nl_NL":"Huidige stap:","pt_PT":"Etapa atual:"},"#redirectWindow":{"it_IT":"Adesso verrai reindirizzato/a al centro messaggi. Dopo aver inviato la tua replica, potrai chiudere la finestra.","ru_RU":"Вы будете перенаправлены в центр сообщений. После отправки ответа можете закрыть окно.","fr_FR":"Vous allez être redirigé vers le centre de messagerie. Après avoir envoyé votre réponse, vous pourrez fermer cette fenêtre.","ja_JP":"You will now be redirected to message center. After submitting your reply, you may close the window.","he_IL":"המערכת תנתב אותך למרכז ההודעות. לאחר הגשת התשובה, מותר לסגור חלון זה.","de_DE":"Sie werden jetzt zum Mitteilungs-Center weitergeleitet. Wenn Sie Ihre Antwort abgeschickt haben, können Sie dieses Fenster schließen.","hu_HU":"You will now be redirected to message center. After submitting your reply, you may close the window.","zh_TW":"您現在將被重新導向消息中心。提交回覆後，您便可關閉視窗。","ko_KR":"이제 메시지 센터로 리디렉션됩니다. 답변을 제출한 후 창을 닫으셔도 됩니다.","en_US":"You will now be redirected to message center. After submitting your reply, you may close the window.","es_ES":"You will now be redirected to message center. After submitting your reply, you may close the window.","zh_CN":"现在，您将被转至消息中心。在提交了您的回复后，您可关闭窗口。","ar_AE":"You will now be redirected to message center. After submitting your reply, you may close the window.","nl_NL":"You will now be redirected to message center. After submitting your reply, you may close the window.","pt_PT":"Agora você será redirecionado para a central de mensagens. Depois de enviar sua resposta, você pode fechar a janela."}}; }</script><script type="text/javascript">
+            function pluginSources() {
+                var pluginSources = [
+                    "https://www.interactivebrokers.ie/scripts/common/js/bootstrap-4.3.1/bootstrap.bundle.min.js?factor=4666154414",
+                    "https://www.interactivebrokers.ie/scripts/common/js/jquery.inputmask.bundle.min.js?factor=4666154414",
+                    "https://www.interactivebrokers.ie/scripts/common/js/forge-1.3.1/forge.all.min.js?factor=4666154414",
+                    "https://www.interactivebrokers.ie/scripts/common/js/analytics/ibkrfingerprint.js?factor=4666154414",
+                    "https://www.interactivebrokers.ie/scripts/common/js/2015/icheck.v1.0.3.js?factor=4666154414",
+                    "https://www.interactivebrokers.ie/scripts/common/js/am/chosen.v1.4.2.js?factor=4666154414",
+                    "https://www.interactivebrokers.ie/scripts/common/js/ibmktfp.js?factor=4666154414",
+                    "https://www.interactivebrokers.ie/Universal/Templates/script/application/cookie.js?factor=4666154414",
+                    "https://www.interactivebrokers.ie/Universal/Templates/script/application/prototypeFunctions.js?factor=4666154414"
+                    
+                    ,"https://www.interactivebrokers.ie/scripts/common/js/unorm-1.0.0/unorm.js?factor=4666154414"
+                    
+                ];
+
+                return pluginSources;
+            }
+
+            function onPluginCompletion() {
+                createScriptElement({ source : "/Universal/Templates/script/application/application.js?factor=4666154414", loadfunction : run });
+
+                // The following scripts are located here to prevent them from being fetched more than once.
+                // This is needed because their corresponding JSP most likely will be included more than once.
+                createScriptElement({ source : "/Universal/Templates/script/application/address.js?factor=4666154414" });
+                createScriptElement({ source : "/Universal/Templates/script/application/lightWeightSave.js?factor=4666154414" });
+            }
+
+            function run() {
+                $(document).ready(function() {
+                    $(window).resize(applicationResizeSuite);
+                    $(window).on("orientationchange", function() { setTimeout(applicationResizeSuite, 250); });
+
+                    if (navigator.cookieEnabled) {
+                        setFingerprint();
+
+                        $.ajaxPrefilter(function(options, originalOptions, jqXHR) {
+                            if (options.type === "POST" && options.url === getApplicationMainURL()) {
+                                if (options.data) {
+                                    if (typeof globals.fingerprint != "undefined" && globals.fingerprint != "") {
+                                        options.data += ("&fingerprint=" + globals.fingerprint);
+                                    }
+                                    if (typeof globals.highEntropyFP != "undefined" && globals.highEntropyFP != "") {
+                                        options.data += ("&highEntropyFP=" + globals.highEntropyFP);
+                                    }
+                                    if (typeof globals.lowEntrophyFP != "undefined" && globals.lowEntrophyFP != "") {
+                                        options.data += ("&lowEntrophyFP=" + globals.lowEntrophyFP);
+                                    }
+                                    if (typeof globals.medEntrophyFP != "undefined" && globals.medEntrophyFP != "") {
+                                        options.data += ("&medEntrophyFP=" + globals.medEntrophyFP);
+                                    }
+                                }
+                                if (typeof globals.baseSsoSession == "undefined") {
+                                    globals.baseSsoSession = getCookie("XYZAB_AM.LOGIN");
+                                    if (typeof globals.baseSsoSession != "undefined") {
+                                        checkSso();
+                                    }
+                                }
+                            }
+                        });
+
+                        checkHelpAvailability();
+                        setMetaData();
+                        pollEmailVerification();
+
+                        setTimeout(function() {
+                            initMainScreen();
+
+                            var params = new Object();
+                            
+                            params.action = "START";
+                                
+                            gotoPage(params);
+                        }, 250);
+                    } else {
+                        $("form#applicationForm").html($("#cookieError").html());
+                        $("div#app-contents").removeClass("invisible");
+                    }
+                    $("#cookieError").remove();
+                });
+            }
+
+            function postStyleCreation() {
+                document.body.className = "";
+
+                var printStyles = document.createElement("link");
+                printStyles.rel = "stylesheet";
+                printStyles.type = "text/css";
+                printStyles.media = "print";
+                printStyles.href = "https://www.interactivebrokers.ie/css/reg-am/registration-print.min.css?factor=4666154414";
+                printStyles.setAttribute("data-directional-link", "");
+                printStyles.setAttribute("data-ltr", "https://www.interactivebrokers.ie/css/reg-am/registration-print.min.css?factor=4666154414");
+                printStyles.setAttribute("data-rtl", "https://www.interactivebrokers.ie/css/reg-am/registration-print.rtl.min.css?factor=4666154414");
+                document.body.appendChild(printStyles);
+            }
+        </script>
+        <script id="pluginFactory" type="text/javascript">
+    var plugins = new Object();
+    plugins.completedLoads = 0;
+    plugins.sources = [];
+
+    function createScriptElement(data) {
+        // Return if no DATA is supplied
+        if (typeof data == "undefined") {
+            return;
+        }
+
+        var element = document.createElement("SCRIPT");
+        element.type = "text/javascript";
+
+        // Add element ID if supplied
+        if (typeof data.id != "undefined") {
+            element.id = data.id;
+        }
+
+        // Add element SOURCE if supplied
+        if (typeof data.source != "undefined") {
+            element.src = data.source;
+        }
+
+        // Add element LOADFUNCTION if supplied
+        if (typeof data.loadfunction == "function") {
+            element.onload = data.loadfunction;
+        }
+
+        // Append to HEAD
+        document.head.appendChild(element);
+    }
+
+    createScriptElement({ source : "https://www.interactivebrokers.ie/scripts/common/js/jquery-3.6.0/jquery.min.js?factor=4666154414", loadfunction : jqueryScriptLoaded });
+
+    function jqueryScriptLoaded() {
+        if (typeof window["pluginSources"] === "function") {
+            plugins.sources = window["pluginSources"]();
+        }
+
+        if (plugins.sources.length > 0) {
+            for (var source in plugins.sources) {
+                if (plugins.sources.hasOwnProperty(source)) {
+                    createScriptElement({ source : plugins.sources[source], loadfunction : pluginLoaded });
+                }
+            }
+        } else {
+            pluginsCompleted();
+        }
+    }
+
+    function pluginLoaded() {
+        ++plugins.completedLoads;
+
+        if (plugins.completedLoads == plugins.sources.length) {
+            pluginsCompleted();
+        }
+    }
+
+    function pluginsCompleted() {
+        if (typeof window["onPluginCompletion"] === "function") {
+            window["onPluginCompletion"]();
+        }
+    }
+
+    function getGStatBulletin(callBack, portalContext) {
+        var url = "/portal.proxy/" + portalContext + "/gstat/bulletins";
+        var params = new Object();
+        params.p = "application";
+        params.format = "webapp";
+
+        var bulletin;
+        $.ajax({
+            type : "POST",
+            url : url,
+            data : params,
+            success : function(data, textStatus, jqXHR) {
+                if (typeof data != "undefined") {
+                    callBack.apply(this, [data]);
+                }
+            }
+        });
+    }
+</script>
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="XE2AM-F37QZ-LYWQP-H8KRM-4SNX5",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"XE2AM-F37QZ-LYWQP-H8KRM-4SNX5";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="cookiepresent",a="eykumbc7mxv4o2gjeyra-f-0e5af4bd2-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1168163","ak.ai":parseInt("665092",10),"ak.ol":"0","ak.cr":38,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"e143f12","ak.r":50930,"ak.a2":n,"ak.m":"a","ak.n":"essl","ak.bpcip":"38.21.70.0","ak.cport":49608,"ak.gh":"95.101.132.228","ak.quicv":"","ak.tlsv":"tls1.2","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1758012962","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==Mf0hvRl5WTStxPIGV3iHKeBFZuDIW1Z3gqyeMIylyMxD0qSoMgxqtRUSfNRnugrHh6HP9LaeznhTww9tP4SZpLERsUsmcBvJCotvTUjfUb0cAgnfdH/8T69DKat/jdMW83q7ZsdcfEHixEE58vSr3KadhGHULCyR08CDDMujff6sdWoqnojzyPWROmpwBiamz7s02ZoP7mYtG8HGeLdefB53Q3+gesfvByY3miTodf+Y4uR8Mp7mEf+wZRkOk8YK2FKJzkWJQ3A/oe4kl1EXWrbzYWeEe/5LyPo+DMIpmQsoNH5lIKRzMnlalxmExlnpPc3SZdcK8X4NqtIOf3tjW8YZ06H253WQweGF7JSF49+LJDlgvyBZsAKkotKLjfeLAbZFyk77DuwQAk6uVoRV4q+urkrO+M6SfK/G/KZKTrU=","ak.pv":"398","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","https://www.interactivebrokers.ie/Universal/servlet/ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","https://www.interactivebrokers.ie/Universal/servlet/ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+    <body class="abracadabra">
+        <nav class="navbar navbar-light navbar-expand fixed-top">
+            <div class="container">
+                <span class="navbar-brand brand-logo"></span>
+                        <div class="ibkr-app-type d-none" data-account-function>
+                            <span class="ibkr-lite-styled d-none">ibkr<span> lite</span></span>
+                            <span class="ibkr-pro-styled d-none">ibkr<span> pro</span></span>
+                        </div>
+                    <div id="ibkr-nav" class="collapse navbar-collapse">
+                    <ul class="navbar-nav ml-auto align-items-center">
+                        <li class="nav-item nav-help">
+                                <a id="navHelpLink" class="nav-link" href="javascript:void(0);" onclick="getHelp();">
+                                    <span class="notification hidden"></span>
+                                    <i class="fa-solid fa-circle-question"></i>
+                                </a>
+                            </li>
+                        <li class="nav-item dropdown" role="listbox" aria-labelledby="languageSelectionLabel">
+                            <span id="languageSelectionLabel" class="sr-only">Language Selection</span>
+                            <a id="applicationDisplayLanguage" href="javascript:void(0);" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-globe-americas"></i><span id="currentLanguage">English</span></a><div id="languageList" class="dropdown-menu pull-right" aria-labelledby="applicationDisplayLanguage"><a href="javascript:void(0);" onclick="changeDisplayLanguage($(this));" data-direction="ltr" data-lang="en_US" class="dropdown-item active">English</a><a href="javascript:void(0);" onclick="changeDisplayLanguage($(this));" data-direction="ltr" data-lang="de_DE" class="dropdown-item">Deutsch</a><a href="javascript:void(0);" onclick="changeDisplayLanguage($(this));" data-direction="ltr" data-lang="es_ES" class="dropdown-item">Español</a><a href="javascript:void(0);" onclick="changeDisplayLanguage($(this));" data-direction="ltr" data-lang="fr_FR" class="dropdown-item">Français</a><a href="javascript:void(0);" onclick="changeDisplayLanguage($(this));" data-direction="ltr" data-lang="it_IT" class="dropdown-item">Italiano</a><a href="javascript:void(0);" onclick="changeDisplayLanguage($(this));" data-direction="ltr" data-lang="hu_HU" class="dropdown-item">Magyar</a><a href="javascript:void(0);" onclick="changeDisplayLanguage($(this));" data-direction="ltr" data-lang="pt_PT" class="dropdown-item">Português</a><a href="javascript:void(0);" onclick="changeDisplayLanguage($(this));" data-direction="ltr" data-lang="ru_RU" class="dropdown-item">Русский</a><a href="javascript:void(0);" onclick="changeDisplayLanguage($(this));" data-direction="ltr" data-lang="zh_CN" class="dropdown-item">简体中文</a><a href="javascript:void(0);" onclick="changeDisplayLanguage($(this));" data-direction="ltr" data-lang="zh_TW" class="dropdown-item">繁體中文</a><a href="javascript:void(0);" onclick="changeDisplayLanguage($(this));" data-direction="ltr" data-lang="ja_JP" class="dropdown-item">日本語</a><a href="javascript:void(0);" onclick="changeDisplayLanguage($(this));" data-direction="rtl" data-lang="ar_AE" class="dropdown-item">العربية</a><a href="javascript:void(0);" onclick="changeDisplayLanguage($(this));" data-direction="rtl" data-lang="he_IL" class="dropdown-item">עִברִית</a></div></li>
+                        <li class="nav-item dropdown d-none" data-account-function role="listbox" aria-labelledby="userMenuLabel">
+                            <span id="userMenuLabel" class="sr-only">User Menu</span>
+                            <a id="userMenu" href="javascript:void(0);" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-user"></i>
+                                <span data-account-identifier></span>
+                            </a>
+                            <div id="userDropdownMenu" class="dropdown-menu pull-right menu-user" aria-labelledby="userMenu">
+                                <a class="dropdown-item active d-block d-lg-none" tabindex="-1" role="document" href="javascript:void(0);">
+                                    <span data-account-identifier></span>
+                                </a>
+                                <div class="btn-logout">
+                                        <a id="logoutButton" href="javascript:void(0);" role="button" onclick="logout();" class="btn btn-primary">
+                                            <span data-logout>Logout</span>
+                                        </a>
+                                    </div>
+                                <a id="cancelApplicationLink" class="dropdown-item d-none" href="javascript:void(0);" onclick="showApplicationModal({'title' : $('span[data-cancel-application]').text(), 'servlet' : getApplicationMainURL(), 'parameters' : {'action' : 'utility', 'cmd' : 'cancelApplication'}});">
+                                    <span data-cancel-application>Cancel Application</span>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <script type="text/javascript">
+    var editBlockTimeout;
+
+    
+    function showEditBlock(formNumber) {
+        $("div#reminderButtonContainer").find("p").hide();
+        $("a#previousStepEditConfirmButton").attr("data-edit-form-number", formNumber);
+        $("p#confirmButtonBlock").show();
+        $("div#reviewPreviousStepWarning").show();
+
+        // fetch additional reminders thats needs to be displayed
+        fetchAdditionalReminders();
+
+        // Cancel and Go Curr if no action taken in 5 minutes
+        editBlockTimeout = setTimeout(function() {
+            previousStepSubmission({cmd : "cancelEditStep"});
+        }, 300000);
+    }
+
+    function previousStepSubmission(data) {
+        var params = new Object();
+        params.action = "previousSteps";
+        $.extend(params, data);
+
+        if (params.cmd == "editPreviousStep") {
+            params.formNumber = $("a#previousStepEditConfirmButton").attr("data-edit-form-number");
+        }
+
+        $.ajax({
+            type : "POST",
+            url : getApplicationMainURL(),
+            data : params,
+            dataType : "json",
+            success : function(data, textStatus, jqXHR) {
+                if (typeof data.newWizardSeed != "undefined") {
+                    globals.wizardSeed = data.newWizardSeed;
+                }
+            },
+            complete : function(jqXHR, textStatus) {
+                hideReminderBlocks();
+                if (params.cmd == "cancelEditStep") {
+                    goCurr();
+                }
+            }
+        });
+    }
+
+    
+    function showEditReminderBlock(additionalReminders) {
+        $("p#reminderButtonBlock").show();
+        $("div#reviewPreviousStepWarning").show();
+
+        displayAdditionalReminder(additionalReminders);
+    }
+
+    
+    function hideReminderBlocks() {
+        $("div#reviewPreviousStepWarning").hide();
+        $("div#reminderButtonContainer").find("p").hide();
+        clearTimeout(editBlockTimeout);
+        $("a#previousStepEditConfirmButton").removeAttr("data-edit-form-number");
+    }
+
+    function fetchAdditionalReminders() {
+        var params = new Object();
+        params.action = "previousSteps";
+        params.cmd = "additionalReminders";
+
+        $.ajax({
+            type : "POST",
+            cache : false,
+            url : getApplicationMainURL(),
+            dataType : "json",
+            data : params,
+            success : function(data, textStatus, jqXHR) {
+                displayAdditionalReminder(data.additionalReminders);
+            }
+        });
+    }
+
+    function displayAdditionalReminder(additionalReminders) {
+        $("div#additionalReminderWarningText").html("");
+        if (additionalReminders && additionalReminders.length > 0) {
+            var addReminders = "<ul class=\"paralist\">";
+            additionalReminders.forEach(function(reminder) {
+                addReminders += "<li>" + reminder + "</li>";
+            });
+            addReminders += "</ul>";
+            $("div#additionalReminderWarningText").html(addReminders);
+        }
+    }
+</script>
+
+<div id="reviewPreviousStepWarning" style="display: none;">
+    <div class="reminder-notification">
+        <div class="alert alert-warning">
+            <div class="container" role="dialog" aria-modal="true">
+                <div class="row align-items-center">
+                    <div class="col-2 col-sm-2 col-md-1">
+                        <div align="center">
+                            <i class="fas fa-2x fa-exclamation-triangle text-warning"></i>
+                            <span class="sr-only">Warning</span>
+                        </div>
+                    </div>
+                    <div class="col-10 col-sm-7 col-md-8">
+                        <p id="reviewPreviousStepWarningText">
+                            Locate the input field(s) you would like to amend and specify your new response(s). To edit information on other pages of the application, use the Back and Continue buttons. Unedited responses will be saved in their current form; new responses will be updated in our records upon collective submission from the Application Review page.</p>
+                        <div id="additionalReminderWarningText"></div>
+                    </div>
+                    <div id="reminderButtonContainer" class="col-12 col-sm-3 col-md-3">
+                        <p id="reminderButtonBlock" class="text-right text-center-xs" style="display: none;">
+                            <a id="previousStepReminderOkButton" class="btn btn-warning" role="button" href="javascript:void(0);" onclick="hideReminderBlocks();">
+                                Ok</a>
+                        </p>
+                        <p id="confirmButtonBlock" class="text-right text-center-xs" style="display: none;">
+                            <a id="previousStepEditCancelButton" class="btn btn-secondary" role="button" href="javascript:void(0);" onclick="previousStepSubmission({cmd : 'cancelEditStep'});">
+                                Cancel</a>
+                            <a id="previousStepEditConfirmButton" class="btn btn-warning" role="button" href="javascript:void(0);" onclick="previousStepSubmission({cmd : 'editPreviousStep'});">
+                                Edit</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-backdrop in"></div>
+</div><script type="text/javascript">
+    var focusedElement = undefined;
+
+    function hidePersistedDataInfoModal() {
+        if (focusedElement !== undefined) {
+            focusedElement.focus();
+        }
+        $("div#persistedDataInfoModal").hide();
+    }
+
+    function informCustomerForPersistedData() {
+        focusedElement = document.activeElement;
+        var persistedDataInfoModal = $("div#persistedDataInfoModal");
+        var hidePersistedDataInfoModalButton = $("#hidePersistedDataInfoModalButton");
+        persistedDataInfoModal.show();
+        hidePersistedDataInfoModalButton.focus();
+    }
+</script>
+
+<div id="persistedDataInfoModal" style="display: none;">
+    <div class="reminder-notification">
+        <div class="alert alert-warning">
+            <div class="container" role="dialog" aria-modal="true">
+                <div class="row align-items-center">
+                    <div class="col-2 col-sm-2 col-md-1">
+                        <div align="center">
+                            <i class="fas fa-2x fa-exclamation-triangle text-warning"></i>
+                            <span class="sr-only">Warning</span>
+                        </div>
+                    </div>
+                    <div class="col-10 col-sm-7 col-md-8">
+                        <p id="informCustomerForPersistedData">
+                            We have prefilled the details based on saved information. Review and complete your application.</p>
+                    </div>
+                    <div class="col-12 col-sm-3 col-md-3">
+                        <p class="text-right text-center-xs" >
+                            <a id="hidePersistedDataInfoModalButton" class="btn btn-warning" role="button" href="javascript:void(0);" onclick="hidePersistedDataInfoModal();">
+                                Ok</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><section id="app-status" class="app-status" style="display: none;"><div class="container"><div class="row" role="list"><div class="col" role="listitem" data-step-index="1"><p class="title" data-text-about-you>About You</p><p class="icon" aria-hidden="true"><i class="fas fa-circle"></i></p></div><div class="col" role="listitem" data-step-index="2"><p class="title" data-text-regulatory>Regulatory</p><p class="icon" aria-hidden="true"><i class="fas fa-circle"></i></p></div><div class="col" role="listitem" data-step-index="3"><p class="title" data-text-setup>Account Setup</p><p class="icon" aria-hidden="true"><i class="fas fa-circle"></i></p></div><div class="col" role="listitem" data-step-index="4"><p class="title" data-text-status>Status</p><p class="icon" aria-hidden="true"><i class="fas fa-circle"></i></p></div></div></div></section><div class="main-wrapper">
+            <div class="container-fluid">
+                <section id="offerWarning" class="pb-0" style="display: none;">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="alert alert-warning">
+                    <p class="text-center">
+                        <i class="fa fa-exclamation-triangle fa-3x"></i>
+                    </p>
+                    <p>
+                        This account is ineligible to enroll in IBKR Lite because it does not meet the enrollment guidelines. To become eligible, return to the previous page and edit your application.</p>
+                    <div id="offerWarningExplain"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><div id="app-contents" class="invisible">
+                    <input type="hidden" id="lastAccessedElement" name="lastAccessedElement" />
+                    <form data-action="/Universal/Application;jsessionid=1217DB57A293972F0E76BDD9AD26D03B.ny5www1" action="https://www.interactivebrokers.ie/Universal/Application;jsessionid=1217DB57A293972F0E76BDD9AD26D03B.ny5www1" method="post" id="applicationForm" onsubmit="return false;" class="form-horizontal" autocomplete="off" novalidate>
+                         <noscript>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="alert alert-danger" align="center">
+                                            <h5 aria-level="3">
+                                                    JavaScript must be enabled to use this application!</h5>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </noscript>
+                    </form>
+                </div>
+
+                <section id="mainApplicationButtons" class="panel-btns">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-4">
+                                <button id="back" type="button" class="btn btn-secondary btn-back w-100" style="visibility: hidden;">
+                                    Back</button>
+                            </div>
+                            <div class="col-8">
+                                <button id="continue" type="button" class="btn btn-primary btn-continue w-100" style="visibility: hidden;" data-submission-button>
+                                    Continue</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="help-icon">
+                <p class="notification hidden"></p>
+                <p>
+                    <a id="helpIconLink" class="nav-link" href="javascript:void(0);" onclick="getHelp();">
+                        <i class="fa-solid fa-circle-question"></i>
+                        <br />
+                        <span id="helpMsg" class="d-none d-sm-block">
+                            Help</span>
+                    </a>
+                </p>
+            </div>
+        <noscript id="styleBackupAlpha">
+    <link data-directional-link rel="stylesheet" type="text/css" href="https://www.interactivebrokers.ie/css/bootstrap-4.3.1/bootstrap.min.css?factor=4666154414" data-ltr="https://www.interactivebrokers.ie/css/bootstrap-4.3.1/bootstrap.min.css?factor=4666154414" data-rtl="https://www.interactivebrokers.ie/css/bootstrap-4.3.1/bootstrap.rtl.min.css?factor=4666154414" media="screen" onload="styleLoad(this)">
+    <link rel="stylesheet" type="text/css" href="https://www.interactivebrokers.ie/css/fontawesome-6.2.0/all.min.css?factor=4666154414" media="screen" onload="styleLoad(this)">
+    <link rel="stylesheet" type="text/css" href="https://www.interactivebrokers.ie/css/chosen-1.4.2/chosen.css?factor=4666154414" media="screen" onload="styleLoad(this)">
+    <link rel="stylesheet" type="text/css" href="https://www.interactivebrokers.ie/css/icheck-1.0.2/icheck.css?factor=4666154414" media="screen" onload="styleLoad(this)">
+    <link data-directional-link rel="stylesheet" type="text/css" href="https://www.interactivebrokers.ie/css/bootstrap-4.3.1/bootstrap-migration.min.css?factor=4666154414" data-ltr="https://www.interactivebrokers.ie/css/bootstrap-4.3.1/bootstrap-migration.min.css?factor=4666154414" data-rtl="https://www.interactivebrokers.ie/css/bootstrap-4.3.1/bootstrap-migration.rtl.min.css?factor=4666154414" media="screen" onload="styleLoad(this)">
+    <link data-directional-link rel="stylesheet" type="text/css" href="https://www.interactivebrokers.ie/css/reg-am/registration.min.css?factor=4666154414" data-ltr="https://www.interactivebrokers.ie/css/reg-am/registration.min.css?factor=4666154414" data-rtl="https://www.interactivebrokers.ie/css/reg-am/registration.rtl.min.css?factor=4666154414" media="screen" onload="styleLoad(this)">
+    <link rel="stylesheet" type="text/css" href="https://www.interactivebrokers.ie/css/ibkr/theme-ibkr-portal.min.css?factor=4666154414" media="screen" onload="styleLoad(this)">
+        </noscript>
+
+<noscript id="styleBackupBeta">
+    <style type="text/css">
+        .abracadabra {
+            display: block !important;
+        }
+        .invisible {
+            visibility: visible !important;
+        }
+    </style>
+</noscript>
+
+<script id="styleCreationScript" type="text/javascript">
+    var stylesLoadedCheckInterval;
+
+    var styleCreation = function() {
+        var styleBackupAlpha = document.getElementById("styleBackupAlpha");
+        var styleBackupBeta = document.getElementById("styleBackupBeta");
+        var styleCreationScript = document.getElementById("styleCreationScript");
+
+        var styleClone = document.createElement("div");
+        styleClone.innerHTML = styleBackupAlpha.textContent;
+
+        document.body.appendChild(styleClone);
+
+        styleBackupAlpha.parentElement.removeChild(styleBackupAlpha);
+        styleBackupBeta.parentElement.removeChild(styleBackupBeta);
+        styleCreationScript.parentElement.removeChild(styleCreationScript);
+
+        stylesLoadedCheckInterval = setInterval(stylesLoadedCheck, 10);
+    }
+
+    var styleLoad = function(styleLink) {
+        styleLink.removeAttribute("onload");
+    }
+
+    var stylesLoadedCheck = function() {
+        var pendingStyles = document.querySelectorAll("link[onload]").length;
+        if (pendingStyles <= 0) {
+            clearInterval(stylesLoadedCheckInterval);
+
+            setTimeout(function() {
+                if (typeof window["postStyleCreation"] === "function") {
+                    window["postStyleCreation"]();
+                }
+            }, 250);
+        }
+    }
+
+    var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+    if (raf) {
+        raf(function() {
+            window.setTimeout(styleCreation, 0);
+        });
+    } else {
+        window.addEventListener("load", styleCreation);
+    }
+</script><div class="modal" id="applicationModal" tabindex="-1" role="dialog" aria-labelledby="applicationModalLabel" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content" aria-modal="true">
+                    <div class="modal-header">
+                        <h5 aria-level="2" class="modal-title" id="applicationModalLabel"></h5>
+                        <button id="applicationModalTitleCloseButton" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div id="modalContentWrapper">
+                        <div class="modal-body"></div>
+                        <div class="modal-footer d-none"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="cookieError" style="display: none;">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="alert alert-danger" align="center">
+                            <h5 aria-level="3">
+                                Cookies must be enabled to use this application!</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="inactiveMsg" style="display: none;">Inactivity Logout</div>
+        <div id="unloadMsg" style="display: none;">You have unsaved changes on this page. If you leave this page, your changes will be discarded.</div>
+        <div class="d-block d-sm-none" data-device-xs></div>
+        <div class="d-none d-sm-block d-md-none" data-device-sm></div>
+        <div class="d-none d-md-block d-lg-none" data-device-md></div>
+        <div class="d-none d-lg-block" data-device-lg></div>
+    </body>
+
+<!-- Mirrored from www.interactivebrokers.ie/Universal/servlet/Application.ApplicationSelector?ct=US&locale=en_US by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Sep 2025 09:41:37 GMT -->
+</html>

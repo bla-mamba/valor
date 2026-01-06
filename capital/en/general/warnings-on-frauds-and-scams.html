@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en" data-theme="light">
+
+<!-- Mirrored from www.interactivebrokers.ie/en/general/warnings-on-frauds-and-scams.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Sep 2025 08:58:09 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8">
+<title>Warning on Frauds and Scams</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+<meta name="description" content="Warning on Frauds and Scams">
+<meta name="keywords" content="Warning on Frauds and Scams">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta http-equiv="expires" content="-1">
+<meta name="robots" content="index, follow">
+<meta http-equiv="pragma" content="no-cache">
+<meta property="og:site_name" content="Valor Capital LTD" />
+<!--Pid:49687-->
+<link rel="canonical" href="warnings-on-frauds-and-scams.html"/>
+<meta name="apple-mobile-web-app-title" content="IBKR">
+<!-- SCRIPTS HEAD  -->
+<script type="text/javascript" src='../../scripts/common/js/jquery-3.6.1/jquery.min.js'></script>
+<script type="text/javascript">
+function createScriptElement(data) {
+ if (typeof data == "undefined") {
+  return;
+ }
+ var element = document.createElement("SCRIPT");
+ element.type = "text/javascript";
+ if (typeof data.id != "undefined") {
+  element.id = data.id;
+ }
+ if (typeof data.source != "undefined") {
+  element.src = data.source;
+ }
+ if (typeof data.loadfunction == "function") {
+  element.onload = data.loadfunction;
+ }
+ document.head.appendChild(element);
+}
+createScriptElement({ source : "/scripts/common/js/bootstrap-5.2.2/bootstrap.bundle.min.js", loadfunction: bsLoaded  });
+createScriptElement({ source : "/scripts/common/js/lib.js?ver=9" });
+function storeCookie()
+{
+ if(typeof(Storage) !== 'undefined')
+ {
+   if(localStorage.getItem('web') !== null)
+   {
+     localStorage.removeItem('web');
+   }
+ }
+}
+function bsLoaded() {
+  createScriptElement({ source : "/scripts/common/js/appear/appear.min.js?ver=1" });
+  createScriptElement({ source : "/scripts/common/js/easing/easing.min.js?ver=1" });
+  createScriptElement({ source : "/scripts/common/js/parallax/parallax.min.js?ver=1" });
+  createScriptElement({ source : "/scripts/common/js/uitotop/uitotop.min.js?ver=1", loadfunction: uiLoaded });
+}
+function uiLoaded() {
+  createScriptElement({ source : "/scripts/common/js/twsUtils.js?ver=2" });
+  createScriptElement({ source : "/scripts/common/js/design/design.js?ver=1" }); 
+}
+</script>
+<script type="text/javascript">
+$(function() {
+ if (document.cookie.indexOf("IB_SEARCH") == -1)
+ {
+  var ex=new Date();
+  ex.setTime(ex.getTime()+86400000);
+  document.cookie ='IB_SEARCH='+Math.floor(new Date().getTime()/1000)+';expires='+ex.toGMTString()+';path=/;domain=.interactivebrokers.ie';
+ }
+  let nex=new Date();
+  nex.setTime(nex.getTime()+86400000);
+    document.cookie ='IB_QD=0;expires='+nex.toGMTString()+';path=/;domain=.interactivebrokers.ie';
+  
+  let excfd=new Date();
+  excfd.setTime(excfd.getTime()+86400000);
+  document.cookie ='IB_QD_CFD=0;expires='+excfd.toGMTString()+';path=/;domain=.interactivebrokers.ie';
+ $('div#langselector').find('a').each(function() {
+  $(this).click(function() {
+   var link = $(this).attr("href");
+   if(link.match(/\/(en|fr|de|es|it|ru|cn|jp)\//))
+   {
+    var langs = link.split("../../index.html");
+    if(langs[3] == 'en' || langs[3] == 'fr' || langs[3] == 'de' || langs[3] == 'es' || langs[3] == 'it' || langs[3] == 'ru' || langs[3] == 'cn' || langs[3] == 'jp')
+    {
+      var lang = langs[3];
+      if(lang == 'cn')
+      {
+        lang = 'zh_CN';
+      }
+      if(lang == 'jp')
+      {
+        lang = 'ja';
+      }
+      if(hasCookie("IB_LANG"))
+      {
+        deleteCookie("IB_LANG");
+      }
+      setCookie("IB_LANG", lang, 7, '.interactivebrokers.ie');
+    } else if(langs[1] == 'en') {
+      var lang = 'en';
+      setCookie("IB_LANG", lang, 7, '.interactivebrokers.ie');
+    }
+   }
+  });
+ });
+ $('p#bandaid-close').click(function() {
+  setCookie("IB_BANDAID", 1, 7, '.interactivebrokers.ie');
+ });
+ $('a#btnCloseBannerRegionSelector').click(function() {
+  setCookie("IB_REGION_SEL", 1, 30, '.interactivebrokers.ie');
+ });
+ $('a#btnCloseBannerRegionDifc').click(function() {
+  setCookie("IB_DIFC", 1, 30, '.interactivebrokers.ie');
+ });
+});
+</script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    if(localStorage.getItem('consentMode') ===  null){
+                    const consentMode = {
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'analytics_storage': 'denied'
+            };
+                localStorage.setItem('consentMode', JSON.stringify(consentMode));
+        gtag('consent', 'default', consentMode);
+    }
+    else {
+        gtag('consent', 'default', JSON.parse(localStorage.getItem('consentMode')));
+    }
+</script>
+<!-- STYLES HEAD -->
+<style type="text/css">
+@import url('../../css/bootstrap-5.2.2/bootstrap.min.css') layer(bootstrap);
+</style>
+<link rel="preload" as="style" href="../../css/ibkr/website.mince12.css?v=1848a6e12ea6c289ee1df7ee63749846">
+<link rel="stylesheet" type="text/css" media="all" href="../../css/ibkr/website.mince12.css?v=1848a6e12ea6c289ee1df7ee63749846">
+<link rel="preload" as="style" href="../../css/ibkr/theme-ibkr.min4f42.css?v=be9c72c0d328e7fc4987bce81f28981c">
+<link rel="stylesheet" type="text/css" media="all" href="../../css/ibkr/theme-ibkr.min4f42.css?v=be9c72c0d328e7fc4987bce81f28981c">
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-d23de039-d518-4f10-9810-e68da4592744","rua.cook":"true","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="XE2AM-F37QZ-LYWQP-H8KRM-4SNX5",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"XE2AM-F37QZ-LYWQP-H8KRM-4SNX5";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n="false"=="true"?1:0,t="cookiepresent",a="eykumbc7mxv4o2gjeomq-f-fee4d1480-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1168163","ak.ai":parseInt("665092",10),"ak.ol":"0","ak.cr":39,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"1d73c56e","ak.r":50930,"ak.a2":n,"ak.m":"a","ak.n":"essl","ak.bpcip":"38.21.70.0","ak.cport":49541,"ak.gh":"95.101.132.220","ak.quicv":"","ak.tlsv":"tls1.2","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1758012313","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==hUeD9x8HusIRKFLIN4Ua74cYMyIUJ9wJqeDPF/voiS3MLdDoUlCjCvbq8/tx9d2HLZEMV4dpIevfgq2jNY2xvhYhy3i5mieyEDwR3NPg+l/elw5OHJ7Q6ogsfbGfPABIfgVzlAuebfCzZBSbLINs2oORumCgTQe2nqOwPItohZBiNZDSoH/GRcwjJ5wa+gzErCqWURhywMtnlZlfmoHLpIT0j+M9b6HK17sbytMYGiuZac/sjgzw10/ZMowF1M5ULJ5jmYH/SwBkthoAUjV/9o4CJEYsgla9TurOQBjforFNVCdQnXIcMGZMAUpVncrTT0Uhji+jFLWPrYZ0yf64pKO54FC1O6XYkeT6xsEOjH3Wkvy5Nu1ylaIG5zbvGezuWEGzBjros6cWKA413whmgjPJJewbMyBzj35A1Sc2w1Y=","ak.pv":"398","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.html","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak-2.html","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body>
+<div id="printheader"></div>
+<!-- HEADER START  -->
+<div class="ibkr-header" id="ibkr-header">
+        <style type="text/css">
+.banner-risk-warning {
+    margin:0px;
+    padding:8px 0px;
+    width:100%;
+    height:auto;
+    background-color:#242424;
+}
+.banner-risk-warning p {
+    margin:0px;
+    padding:0px;
+    font-weight:400;
+    font-size:1.0rem;
+    line-height:1.25rem;
+    text-align:center;
+    color:#FFFFFF;
+}
+.banner-risk-warning .warninglink a{text-decoration:underline;}
+/* BOOTSTRAP 4 | MEDIA QUERY | EXTRA SMALL (< 576PX) ---------------------------------------------------------------------------------------------------- */
+@media (max-width:575.98px) {
+    .banner-risk-warning {
+        padding:4px 0px;
+    }
+    .banner-risk-warning p {
+        font-size:0.8125rem;
+        line-height:1.0rem;
+    }
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | SMALL (576PX-767.98PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:576px) and (max-width:767.98px) {
+    .banner-risk-warning {
+        padding:4px 0px;
+    }
+    .banner-risk-warning p {
+        font-size:0.8125rem;
+        line-height:1.0rem;
+    }
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | MEDIUM (768PX-991.98PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:768px) and (max-width:991.98px) {
+    .banner-risk-warning {
+        padding:4px 0px;
+    }
+    .banner-risk-warning p {
+        font-size:0.8125rem;
+        line-height:1.0rem;
+    }
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | LARGE (992PX-1199.98PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:992px) and (max-width:1199.98px) {
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | EXTRA LARGE (>1200PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:1200px) {
+    
+}
+</style>
+<div class="banner-risk-warning">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p>Investing in financial products involves risk. Losses may exceed the value of your original investment.</p>
+            </div>
+        </div>
+    </div>
+</div>    <!-- NAV TOP START (LG/XL ONLY) -->
+    <nav class="navbar navbar-inverse navbar-expand-lg navbar-top d-none d-lg-block">
+        <div class="container">
+            <div class="navbar-collapse collapse" id="ibkr-nav-top">
+            </div>
+        </div>
+    </nav>
+    <!-- NAV TOP END -->
+    <!-- NAV BOTTOM START -->
+    <nav class="navbar navbar-inverse navbar-expand-lg navbar-bottom">
+        <div class="container">
+            <!-- LOGO -->
+                       <a href="../home.html">
+  <img src="../../../logo.svg" alt="Valor LTD Logo" />
+</a>
+            <!-- TOGGLE (XS/SM/MD ONLY) -->
+            
+                    <!-- SEARCH -->
+                        <div class="dropdown-menu dropdown-search" aria-labelledby="nav-search">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="search_box">
+                                        <script type="text/javascript">
+                                         searchbox_input_changed=false;
+                                         $('#search-expand').on('shown.bs.dropdown', function(e) {
+                                           $('#searchField').focus();
+                                         });
+                                        </script>
+                                        <form action="https://www.interactivebrokers.ie/en/search/index.php" method="get" class="search_form" id="search_form_id">
+                                            <input type="text" aria-label="Search Box" placeholder="Search" name="query" maxlength="64" autocomplete="off" id="searchField" class="form-control s swap_value searchinput" aria-label="Search Interactive Brokers">
+                                            <button type="submit" value="" id="searchsubmit" class="searchsubmit"><i class="fas fa-search" aria-hidden="true" aria-label="Submit Search"></i></button>
+                                        </form>
+                                        <ul id='saytlist' style='width:150px;'><li style="display:none"></li></ul>
+<script>
+function delay(cb, ms)
+{
+  var timer = 0;
+  return function() {
+   var context = this, args = arguments;
+   clearTimeout(timer);
+   timer = setTimeout(function() {
+     cb.apply(context, args);
+   }, ms  || 0);
+  };
+}
+$(function() {
+
+ $('#searchField').keyup(delay(function() {
+  var q = $('#searchField').val() || '';
+  if(q.length >= 3)
+  {
+    $.ajax({
+      type: "POST",
+      url: 'https://misc.interactivebrokers.com/response_handlers/search/index.php',
+      dataType: "json",
+      data: {
+        'q': q
+      },
+      success: function(r) {
+        if(r && r.success)
+        {
+          var recommendations = '';
+          var limit = Math.min(r.suggestions.length, 10);
+          for(var i = 0; i < limit; i++)
+          {
+            recommendations += "<li>" + r.suggestions[i] + "</li>";
+          }
+          $('#saytlist').html(recommendations);
+          $('#saytlist').show();
+          $('ul#saytlist li').click(function(e) {
+            var list = $(this).text() || '';
+            e.stopPropagation();
+            if(list != '')
+            {
+              $('input#searchField').val(list);
+              $('button#searchsubmit').click();
+            }
+          });
+        }
+      },
+      error: function(xhr, status, err) {}
+    });
+  } else {
+   $('#saytlist').hide();
+  }
+ }, 500));
+});
+</script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <!-- IBKR MENU END -->
+            </div>
+        </div>
+    </nav>
+    <!-- NAV BOTTOM END -->
+</div>
+<!-- HEADER END ---------------------------------------------------------------------------------------------------- -->
+<!-- MOBILE NAV START (XS/SM/MD ONLY) ---------------------------------------------------------------------------------------------------- -->
+<div class="menu-mobile d-lg-none">
+    <!-- CLOSE BUTTON -->
+    <div class="close-button"><button type="button" class="btn-close" aria-label="Close Menu"><i class="fas fa-times"></i></button></div>
+    <!-- LOGO -->
+    <div class="logo-container"><a href="../home.html" target="_self" class="brand-logo" aria-label="Interactive Brokers Home"><span>Interactive Brokers Home</span></a></div>
+    <!-- SEARCH -->
+    <div class="search-container">
+        <div class="search-box">
+            <form action="https://www.interactivebrokers.ie/en/search/index.php" method="get" class="search_form" id="search_form_id">
+                <input type="text" class="form-control" placeholder="Search" name="query" maxlength="64" autocomplete="off" id="searchFieldMobile" aria-label="Search Interactive Brokers"> 	
+                <button type="submit" class="btn-search-submit" value="" id="searchsubmitMobile" aria-label="Submit Search"><i class="fas fa-search" aria-hidden="true"></i></button> 	
+            </form>
+        </div>
+    </div>
+    <ul>
+            <!-- PORTAL LOGIN -->
+        <li><a href="../../sso/Login0104.html?RL=1" target="_self" class="menu-log-in">Portal Login</a></li>
+        <!-- OPEN ACCOUNT -->
+    <li class="has-submenu"><a href="#" target="_self" class="menu-open-account" data-submenu="submenu-open-account">Open Account</a>
+        <div class="submenu" id="submenu-open-account">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-open-account">Back</button></p>
+            <p class="submenu-title">OPEN ACCOUNT</p>
+            <ul>
+            <li><a href="https://www.interactivebrokers.co.uk/Universal/Application" target="_self" class="menu-start-application">Start Application</a></li>
+            <li><a href="https://www.interactivebrokers.co.uk/sso/Login?c=t" target="_self">Finish an Application</a></li>
+            <li><a href="what-you-need-inv.html" target="_self">What You Need</a></li>
+            <li><a href="../accounts/account-guide.html" target="_self">A Guide to Choosing the Right Account</a></li>
+            </ul>
+        </div>
+    </li>
+        <!-- FREE TRIAL -->
+    <li><a href="../trading/free-trial.html" target="_self">Free Trial</a></li>
+    <!-- WHY IBKR -->
+    <li><a href="../whyib/overview.html" target="_self">Why IBKR</a></li>
+    <!-- ACCOUNT TYPES -->
+    <li class="has-submenu"><a href="#" target="_self" data-submenu="submenu-account-types">Account Types</a>
+        <div class="submenu" id="submenu-account-types">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-account-types">Back</button></p>
+            <p class="submenu-title">FOR INDIVIDUALS</p>
+            <ul>
+            <li><a href="../accounts/individual.html" target="_self" >Individual or Joint</a></li>
+            <li><a href="../accounts/trust.html" target="_self" >Trust Accounts</a></li>
+            <li><a href="../accounts/family-account.html" target="_self" >Family Accounts</a></li>
+            <li><a href="../accounts/long-term-investment-accounts.html" target="_self">Long-Term Investment (TBSZ) Accounts</a></li>
+            <li><a href="../accounts/plan-depargne-en-action-accounts.html" target="_self">Plan d’Epargne en Action (PEA) Accounts</a></li>
+                        </ul>
+            <p class="submenu-title">FOR INSTITUTIONS</p>
+            <ul>
+            <li><a href="../accounts/institutions.html" target="_self" >Institutions Home</a></li>
+            <li><a href="../accounts/advisor.html" target="_self" >Registered Investment Advisors</a></li>
+            <li><a href="../accounts/proprietary-trading-group.html" target="_self" >Proprietary Trading Groups</a></li>
+            <li><a href="../accounts/hedge-fund.html" target="_self" >Hedge Funds</a></li>
+            <li><a href="../accounts/broker.html" target="_self" >Introducing Brokers</a></li>
+            <li><a href="../accounts/family-office.html" target="_self" >Family Offices</a></li>
+            <li><a href="../accounts/compliance-officer.html" target="_self" >Compliance Officers</a></li>
+            <li><a href="../accounts/small-business.html" target="_self" >Small Businesses</a></li>
+            <li><a href="../accounts/fsa-insurance-providers.html" target="_self" >Full-Service Administrator <br>Insurance Providers</a></li>
+            <li><a href="../accounts/money-manager.html" target="_self" >Money Managers</a></li>
+            <li><a href="../accounts/administrator.html" target="_self" >Fund Administrators</a></li>
+             
+            <li><a href="https://interactivebrokers.eu/campus/stl/" target="_blank" >Educators</a></li>
+                        </ul>
+        </div>
+    </li>
+    <!-- PRICING -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-pricing">Pricing</a>
+        <div class="submenu" id="submenu-pricing">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-pricing">Back</button></p>
+            <p class="submenu-title">PRICING</p>
+            <ul>
+            <li><a href="../pricing/commissions-home.html" target="_self">Commissions</a></li>
+            <li><a href="../trading/margin-rates.html" target="_self">Margin Rates</a></li>
+            <li><a href="../accounts/fees/pricing-interest-rates.html" target="_self">Interest Rates</a></li>
+            <li><a href="../pricing/short-sale-cost.html" target="_self">Short Sale Cost</a></li>
+            <li><a href="../pricing/research-news-services.html" target="_self">Research and News</a></li>
+            <li><a href="../pricing/market-data-pricing.html" target="_self">Market Data Pricing</a></li>
+            <li><a href="../pricing/stock-yield-enhancement-program-ie.html" target="_self">Stock Yield Enhancement Program</a></li>
+            <li><a href="../pricing/other-fees-overview.html" target="_self">Fees</a></li>
+            </ul>
+        </div>
+    </li>
+    <!-- TRADING -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-trading">Trading</a>
+        <div class="submenu" id="submenu-trading">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-trading">Back</button></p>
+            <p class="submenu-title">TRADING</p>
+            <ul>
+            <li><a href="../trading/trading-platforms.html" target="_self">Platforms</a></li>
+            <li><a href="../trading/ib-api.html" target="_self">APIs</a></li>
+            <li><a href="../trading/margin.html" target="_self">Margin</a></li>
+            <li><a href="../trading/products-exchanges.html" target="_self">Symbol and Exchange Search</a></li>
+            <li><a href="../trading/products-stocks.html" target="_self">Products Overview</a></li>
+            <li><a href="../trading/ordertypes.html" target="_self">Order Types</a></li>
+            <li><a href="../whyib/reporting.html" target="_self">Reporting</a></li>
+            <li><a href="../trading/securities-financing.html" target="_self">Securities Financing</a></li>
+            <li><a href="../trading/features-in-focus.html" target="_self">Features in Focus</a></li>
+            <li><a href="education/probability-lab.html" target="_self">Probability Lab</a></li>
+            <li><a href="../trading/sustainable-investing-ie.html" target="_self">Sustainable Investing</a></li>
+            </ul>
+        </div>
+    </li>
+    <!-- SERVICES -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-services">Services</a>
+        <div class="submenu" id="submenu-services">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-services">Back</button></p>
+            <p class="submenu-title">SERVICES</p>
+            <ul>
+            <li><a href="../trading/globalanalyst.html" target="_self">IBKR GlobalAnalyst</a></li>
+            <li><a href="../trading/si-quotes.html" target="_self">EUIBSI Bid/Ask</a></li>
+            <li><a href="../portfolioanalyst/overview.html" target="_self" rel="noreferrer noopener">PortfolioAnalyst</a></li>
+            <li><a href="../trading/products-bonds.html" target="_self">Bonds Marketplace</a></li>
+            <li><a href="../trading/products-mutual-funds.html" target="_self">Mutual Funds Marketplace</a></li>
+            <li><a href="../trading/commission-free-etfs-mkt.html" target="_self">No Transaction Fee ETFs</a></li>
+            <li><a href="https://gdcdyn.interactivebrokers.com/aces/Marketplace/InvestorsMarketplace" target="_blank">Investors' Marketplace</a></li>
+            <li><a href="../trading/short-securities-availability.html" target="_self">Short Securities Availability</a></li>
+            <li><a href="../trading/third-party-integration.html" target="_self">Third Party Integration</a></li>
+            </ul>
+        </div>
+    </li>
+    <!-- EDUCATION -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-education">Education</a>
+        <div class="submenu" id="submenu-education">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-education">Back</button></p>
+            <p class="submenu-title">EDUCATION</p>
+            <ul>
+             
+            <li><a href="https://interactivebrokers.eu/campus/" target="_blank">IBKR Campus</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/academy" target="_blank">Traders' Academy</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/news" target="_blank">Traders' Insight</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/podcasts" target="_blank">IBKR Podcasts</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/quant" target="_blank">IBKR Quant Blog</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/webinars" target="_blank">Webinars</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/stl/" target="_blank">Student Trading Lab</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/glossary" target="_blank">Traders' Glossary</a></li>
+                        <li><a href="calendar/calendar.html" target="_self">Traders' Calendar</a></li>
+            </ul>
+        </div>
+    </li>
+    <!-- ABOUT US -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-about-us">About Us</a>
+        <div class="submenu" id="submenu-about-us">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-about-us">Back</button></p>
+            <p class="submenu-title">ABOUT US</p>
+            <ul>
+            <li><a href="financial-strength.html" target="_self">Strength and Security</a></li>
+            <li><a href="about/info-and-history.html" target="_self">Information and History</a></li>
+            <li><a href="about/careers-splash.html" target="_self">Careers</a></li>
+            <li><a href="awards.html" target="_self">Awards</a></li>
+            <li><a href="../about/news-at-ibkr.html" target="_self">News at IBKR</a></li>
+            <li><a href="about/press-and-media.html" target="_self">Press and Media</a></li>
+            <li><a href="https://investors.interactivebrokers.com/ir/main.php" target="_blank" rel="noreferrer noopener">Investor Relations</a></li>
+            <li><a href="about/sustainability.html" target="_self">Sustainability</a></li>
+            <li><a href="../accounts/legalDocuments/brokerPerformanceReports.html" target="_self">Regulatory Reports</a></li>
+            <li><a href="../accounts/referrer.html" target="_self">Refer a Friend</a></li>
+            <li><a href="about/affiliate-programs.html" target="_self">Affiliate Programs</a></li>
+            </ul>
+        </div>
+    </li>
+    <!-- SUPPORT -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-support">Support</a>
+        <div class="submenu" id="submenu-support">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-support">Back</button></p>
+            <p class="submenu-title">SUPPORT</p>
+            <ul>
+            <li><a href="../support/fund-my-account.html" target="_self">Fund Your Account</a></li>
+            <li><a href="../support/individuals.html" target="_self">For Individuals</a></li>
+            <li><a href="../support/institutions.html" target="_self">For Institutions</a></li>
+            <li><a href="../support/institutional-sales-contacts4343.html?p=uk" target="_self">Institutional Sales Contacts</a></li>
+            <li><a href="contact/ibot-container.html" target="_self">Browse our FAQs</a></li>
+            <li><a href="../support/reports-and-dates.html" target="_self">Tax Information</a></li> 
+            </ul>
+        </div>
+    </li>
+    <!-- LANGUAGE -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-language">Language</a>
+        <div class="submenu" id="submenu-language">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-language">Back</button></p>
+            <p class="submenu-title">LANGUAGE</p>
+            <ul>
+            <li><a href="../home.html" target="_self">English</a></li>
+            <li><a href="../../fr/home.html" target="_self">Français</a></li>
+            <li><a href="../../de/home.html" target="_self">Deutsch</a></li>
+            <li><a href="../../es/home.html" target="_self">Español</a></li>
+            <li><a href="../../it/home.html" target="_self">Italiano</a></li>
+            <li><a href="../../hu/home.html" target="_self">Magyar</a></li>
+            <li><a href="../../pt/home.html" target="_self">Português</a></li>
+            </ul>
+        </div>
+    </li>
+    <!-- REGION SELECTOR -->
+        </ul>
+</div>
+<!-- MOBILE NAV OVERLAY -->
+<div class="website-overlay d-lg-none"></div>
+<!-- MOBILE NAV END  -->
+<script>
+$(window).on('load', function() {
+    // Simple check if URL contains 'conf=am'
+    if (!window.location.href.includes('conf=am')) {
+        $('#region-modal').modal({
+            backdrop: 'static',
+            keyboard: false
+        });
+        $('#region-modal').modal('show');
+        $('body').removeClass('modal-open');
+        $('body').css('overflow', '');
+        $('body').css('padding-right', '');
+    }
+});
+</script>
+<div class="modal modal-cookies fade" id="region-modal" tabindex="-1" role="dialog" aria-labelledby="modalRegionLabel" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+    <div class="modal-content" id="modalRegionContent">
+      <div class="modal-header d-block">
+        <p class="fs-5 modal-title" id="modalCookieLabel">Which IBKR website is best for you?</p>
+        <p class="pt-10 mb-0 pr-30 fs-6">The content on the website you selected is not intended for investors in your location. </p>
+        <p class="mb-40 fs-6">Please choose the website most applicable to you.</p>
+      </div>
+      <div class="modal-footer" id="modalRegionControls">
+        <div class="row">
+          <div class="col-12 col-md-4"></div>
+          <div class="col-12 col-md-8">
+            <p>
+              <button class="btn btn-primary" id="btnRegionRecommendation">Go to US website</button>
+              <button class="btn btn-primary" id="btnRegionCurrent">Stay on IE website</button>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+$(function() {
+   $('button#btnRegionRecommendation').click(function() {
+    window.location.href = 'https://www.interactivebrokers.com/';
+  });
+  $('button#btnRegionCurrent').click(function() {
+    setCookie("IB_REG", 1, 365, '.interactivebrokers.ie');
+    location.reload();
+  });
+});
+</script><div id="contents">
+    <section class="page-title" id="page-title">
+        <div class="container">
+            <div class="row">
+                <div class="col"><h1>Warning on Frauds and Scams</h1></div>
+            </div>
+        </div>
+    </section>
+    <section id="warnings-disclosures"  class="pt-20">
+  <div class="container">
+    <div class="row">
+      <div class="col-12"> 
+          <div class="p-30 mt-20 mb-20 b-1 bc-secondary">
+              <h5 class="mt-0">Protect Yourself – Be Scam Aware</h5>
+              <p>REMEMBER: If it is too good to be true, it probably is! When in doubt, apply the scam test:</p>
+              <p class="ms-40"><span class="text-danger">S</span> – seems too good to be true</p>
+              <p class="ms-40"><span class="text-danger">C</span> – contacted out of the blue</p>
+              <p class="ms-40"><span class="text-danger">A</span> – asked for personal details</p>
+              <p class="ms-40"><span class="text-danger">M</span> – money is requested</p>
+          </div>
+        <h5 class="pt-20">Anyone can be the target of financial fraud and scams. Your best defence is to stay informed, alert and secure. Below you will find information on the most common financial services scams, as well as key advice and tips to help you avoid becoming the next victim! </h5>
+        <h5 class="pt-20">Examples of Common Scams</h5>
+        <p class="fw-600">The following are just some examples of common financial frauds. However, it is important to remember that perpetrators of fraud are constantly designing new ways to target their next victims. For this reason, you should remain vigilant and consider the possibility of fraud, even if the circumstances do not exactly fit one of the below examples. You should also keep an eye out for notices or warnings issued by your local regulator, exchanges or other market participants regarding patterns of fraudulent activity. </p>
+        <p class="pt-20"><strong>Clone Firm Scams:</strong><br>
+          Scammers may pretend to be from a legitimate firm to get you to transfer money to their account.  In some cases, scammers may pretend to represent or be part of a reputable financial services company, including Interactive Brokers.  The purpose of a Clone Firm Scam is to get you to transfer your money to an account that appears legitimate but which in fact belongs to the fraudsters.</p>
+        <p>These scams often involve the fraudster using a reputable firm’s logo or letterhead, adopting names that resemble those of the reputable firm, or even using names and addresses of persons who are associated with the real firm.</p>
+        <p>Be wary of cold calls or emails you receive requesting money from you. Check to make sure all emails use the firm’s real domain name (for IB, interactivebrokers.ie, interactivebrokers.com or interactivebrokers.co.uk). Be especially careful of any unprompted interactions through social media platforms – Interactive Brokers may promote its general products and services on social media but it will never interact with you through these channels in relation to your account nor prospective account. If you are unsure whether a communication is legitimate, please contact IB Client Services.</p>
+        <p>Here are some red flags you should watch out for if you are contacted by someone claiming to work for VALOR CAPITAL LTD or be affiliated with us:</p>
+<ul>
+  <li>VALOR CAPITAL LTD does not cold call consumers to offer services or products, nor do we make investment recommendations.</li>
+  <li>VALOR CAPITAL LTD does not directly interact with customers through social media channels.</li>
+  <li>VALOR CAPITAL LTD does not charge you for assistance or guidance in completing an account application.</li>
+  <li>VALOR CAPITAL LTD does not charge a fee to withdraw your funds.</li>
+  <li>VALOR CAPITAL LTD will never ask for remote access to your computer or mobile device.</li>
+  <li>VALOR CAPITAL LTD will not ask you to action an internal or external transfer of stock or money over the phone.</li>
+  <li>VALOR CAPITAL LTD will never ask you to share login details—especially using urgency or fear (e.g., “we detected a fraud attempt and need your login to stop it”).</li>
+</ul>
+
+<p class="pt-20"><strong>Pump-and-Dump or Ramp-and-Dump Schemes:</strong> In these schemes, scammers invest in a stock and then spread false or misleading information to create a buying frenzy that will artificially “pump” up the price. They then “dump” their shares at the inflated price, leaving others with losses. Such “hot tips” are often framed as privileged information from people “in the know.”</p>
+
+<p>Scammers often exploit new technologies to spread false or misleading information about a company’s stock price—for example, via messaging apps, social media platforms, and blogs.</p>
+
+<p class="pt-20"><strong>Trash-and-Cash Schemes:</strong> The opposite of pump-and-dump. Scammers circulate false information to pressure holders of a relatively illiquid security to sell. As the price drops, scammers buy at depressed levels.</p>
+
+<p class="pt-20"><strong>Pension Liberation Scam:</strong> Fraudsters promise “penalty-free” early access to pension benefits via supposed tax loopholes, then erode accounts through commissions and dubious investments. Early withdrawals often trigger penalties and lasting financial harm.</p>
+
+<p class="pt-20"><strong>Affinity Fraud:</strong> Scammers pose as members of a group (age, religion, ethnicity, profession, etc.) to build trust, often pushing fake or misrepresented investments. Many of these are <a href="https://www.investor.gov/protect-your-investments/fraud/types-fraud/ponzi-scheme" target="_blank" rel="noreferrer nofollow">Ponzi</a> or <a href="https://www.investor.gov/protect-your-investments/fraud/types-fraud/pyramid-schemes" target="_blank" rel="noreferrer nofollow">pyramid</a> schemes that collapse when new money dries up.</p>
+
+<p>Protect yourself by performing independent research and due diligence before accepting any investment advice or services. Always verify the credentials of the person or company and confirm regulatory authorization using your local regulator’s register.</p>
+
+<p class="pt-20"><strong>Holy Grail Scams:</strong> Be skeptical of claims of secret, “no-risk” trading systems with guaranteed profits. Extravagant promises and glowing testimonials are red flags—if it sounds too good to be true, it almost certainly is.</p>
+
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#modalAlert').on('show.bs.modal', function (event) {
+	  var button = $(event.relatedTarget) // Button that triggered the modal
+      let myMessage = button.data('mymessage');
+      /*let myLink = "location.href='"+button.data('mytargetlink')+"'"; */
+      let myLink = "window.open('"+button.data('mytargetlink')+"')"; 
+	  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+	  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+	  var modal = $(this)
+	  modal.find('.modal-body .message').text( myMessage );
+	  modal.find('.modal-footer .goto a').attr( "onclick", myLink );
+
+	})
+});
+</script><script>
+if(window.location.href.includes('conf=am')) {
+document.querySelector("#ibkr-header").style.display = "none";
+document.querySelector("#footer").style.display = "none";
+}
+
+</script>
+<!-- MODAL START | MODAL  -->
+<style type="text/css">
+#modalNewsAtIBKR .modal-dialog .modal-content .modal-header {
+    border-top: 1px solid var(--border-color) !important;
+}
+</style>
+<div class="modal fade" id="modalNewsAtIBKR" tabindex="-1" aria-labelledby="newsibkrLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+          <div class="modal-header">
+        <p class="modal-title" id="newsibkrLabel">Subscribe to News at IBKR</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+          <div class="modal-body">
+        <div class="row">
+              <div class="col">
+                <h2 class="mt-10">A Note from the Founder of Interactive Brokers</h2>
+                <p class="fs-6 lh-6 mt-10">Thank you for visiting Interactive Brokers. I appreciate your interest in our firm and the time you've taken to learn more about us.</p>
+                <p class="fs-6 lh-6 mt-20">If you'd like to stay connected, I invite you to subscribe to our quarterly update. In it, we share insights, platform enhancements, and tools to help you make better investment decisions.</p>
+                <p class="fs-6 lh-6 mt-20">For nearly 50 years, we've been committed to empowering investors through technology, transparency, and low costs. We're here to support your investing journey.</p>
+                <p class="fs-6 lh-6 mt-30 mb-20">Thomas Peterffy<br>
+                      Founder and Chairman<br>
+                      Interactive Brokers</p>
+                <div class="tab-content news-ibkr-form">
+                  <form id="contact" name="contact" class="needs-validation" novalidate="">
+                    <div class="row mt-20">
+                          <div class="col-12 col-lg-8 form-column-padding">
+                            <div class="mt-20 form-group mb-20">
+                              <label class="form-label" for="news_ibkr_email">Email<span class="required"></span></label>
+                              <input type="email" class="form-control" name="news_ibkr_email" aria-label="news_ibkr_email" id="news_ibkr_email" placeholder="Email address" title="This field is required" required="">
+                              <div id="newsibkrform-invalid-email" class="invalid-feedback"></div>
+                            </div>
+                      </div>
+                    </div>
+                    <div class="row mt-20" style="display:none">
+                          <div class="col-12 col-lg-8 form-column-padding">
+                            <div class="mt-20 form-group mb-20">
+                              <label class="form-label" for="news_ibkr_name">Name<span class="required"></span></label>
+                              <input type="name" class="form-control" name="news_ibkr_name" aria-label="news_ibkr_name" id="news_ibkr_name" placeholder="Name" title="This field is required" required="">
+                              <div id="newsibkrform-invalid-name" class="invalid-feedback">Please provide your name</div>
+                            </div>
+                      </div>
+                    </div>
+
+                    <div class="row pt-10">
+                      <div class="col">
+                        <hr>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12 col-sm-3 order-2 order-sm-1">
+                        <div class="d-flex justify-content-start">
+                            <p><a href="javascript:void(0);" target="_self" id="newsibkrform-cancel" class="btn btn-default" role="button" data-bs-dismiss="modal">Cancel</a></p>
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-9 order-1 order-sm-2">
+                        <div class="d-flex justify-content-end">
+                            <p><a href="javascript:void(0);" target="_self" id="newsibkrform-submit" type="submit" class="btn btn-primary  submit-btn" role="button">Submit</a></p>
+                            <p id="newibkrform-success" style="display:none;padding-top:10px;">We received your email. Thank you for your interest.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+  </div>
+</div>
+<script>
+$(function() {
+ setTimeout(function() {
+  $('#modalNewsAtIBKR').modal('show');
+ }, 2000);
+});
+$('#modalNewsAtIBKR').on('hidden.bs.modal', function () {
+  setCookie("IB_EMPRO", '1', 90, '.interactivebrokers.ie');
+});
+$('#newsibkrform-submit').click(function() {
+  $('#newsibkrform-invalid-email').hide();
+  $.ajax({
+    type: "POST",
+    url: '/response_handlers/email-pros/index.php',
+      dataType: "json",
+      data: {
+        'email': $('#news_ibkr_email').val(),
+        'name': $('#news_ibkr_name').val(),
+        'emt': 'abe3331d22a1c3283d001291fa169347'
+      },
+      success: function(r) {
+        if(r && r.success)
+        {
+          $('#newsibkrform-submit').hide();
+          $('#newsibkrform-cancel').hide();
+          $('#newibkrform-success').show();
+          setCookie("IB_EMPRO", '1', 365, '.interactivebrokers.ie');
+        } else {
+          $('#newsibkrform-invalid-email').show();
+          $('#newsibkrform-invalid-email').text(r.msg);
+        }
+      },
+      error: function(xhr, status, err) {
+        $('#newsibkrform-invalid-email').text('There was an error submitting your email. Please try again.');
+      }
+    });
+});
+</script>
+<script type="text/javascript" src="../../insights/ibtr_share2667.js?t=v1"></script>
+<script>
+$(document).ready(function() {
+	 $(".social-sidebar span").click(function(){
+		 $(".social-sidebar div").toggleClass("social-sidebar-hide");
+		 $(".social-sidebar span").toggleClass("toggle-arrow");
+ 	 });
+});
+function emailCookie() {
+	if (document.cookie.indexOf("IB_EM_SH") == -1) {
+		var ex=new Date();
+		ex.setTime(ex.getTime()+86400000);
+		document.cookie ='IB_EM_SH='+1+';expires='+ex.toGMTString()+';path=/;domain=';
+	}
+}
+</script>
+<!-- SCRIPTS FOOTER ---------------------------------------------------------------------------------------------------- -->
+<script type="text/javascript" src="../../scripts/common/js/zeynep-2.2.0/zeynep.js"></script>
+<script type="text/javascript" src="../../scripts/common/js/lazyload/lazyload.min.js"></script>
+<script type="text/javascript" src="../../search/conversions.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    
+    // GATHER HEIGHT OF HEADER
+    var headerHeight = $("div#ibkr-header").outerHeight();
+    // GATHER HEIGHT OF DISCLOSURES
+    var disclosureHeight = $("section#UKProductDisclosure, section#TurbosDisclosure").outerHeight();
+    $("section#UKProductDisclosure").css("top", headerHeight);
+    $("section#TurbosDisclosure").css("top", headerHeight);
+    // SET CONTENTS DIV PADDING TOP
+    $("div#contents").css("padding-top", disclosureHeight);
+    // OVERRIDE TOP OF DISCLOSURE AND PADDING-TOP OF CONTENTS ON WINDOW RESIZE
+    $(window).resize(function() {
+        var headerHeight = $("div#ibkr-header").outerHeight();
+        var disclosureHeight = $("section#UKProductDisclosure, section#TurbosDisclosure").outerHeight();
+        var headerHeightDelta = headerHeight - disclosureHeight;
+        $("section#UKProductDisclosure").css("top", disclosureHeight + headerHeightDelta);
+        $("section#TurbosDisclosure").css("top", disclosureHeight + headerHeightDelta);
+        $("div#contents").css("padding-top", disclosureHeight);
+    });
+
+    // OVERRIDE TOP OF DISCLOSURE AND PADDING-TOP OF CONTENTS ON BANNER CLOSE
+    $("#bannerRegionSelector a.btn-close").click(function() {
+        setTimeout(function() {
+            var headerHeight = $("div#ibkr-header").outerHeight();
+            $("section#UKProductDisclosure").css("top", headerHeight);
+            $("section#TurbosDisclosure").css("top", headerHeight);
+            $("div#contents").css("padding-top", disclosureHeight);
+        },500);
+    });
+    // MOBILE MENU
+    $(function() {
+        // Initilize mobile menu
+        var zeynep = $('.menu-mobile').zeynep({
+            opened: function () {
+            console.log('the side menu opened')
+        },
+        closed: function () {
+            console.log('the side menu closed')
+            }
+        })
+        // Dynamically bind closing event
+        zeynep.on('closing', function () {
+            console.log('this event is dynamically binded')
+        })
+        // Mobile menu close on overlay click
+        $('.website-overlay').on('click', function () {
+            zeynep.close()
+        })
+        // Mobile menu close on button click
+        $('.btn-close').on('click', function () {
+            zeynep.close()
+        })
+        // Mobile menu open on navbar-toggler click
+        $('.navbar-toggler').on('click', function () {
+            zeynep.open()
+        })
+    })
+});
+</script>
+<!-- STYLES FOOTER ---------------------------------------------------------------------------------------------------- -->
+<link rel="preload" as="font" type="font/woff2" href="../../fonts/fontawesome-6.4.2/webfonts/fa-brands-400.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="../../fonts/fontawesome-6.4.2/webfonts/fa-regular-400.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="../../fonts/fontawesome-6.4.2/webfonts/fa-solid-900.woff2" crossorigin>
+<link rel="preload" as="style" href="../../css/ibkr/website-print.min.css">
+<link rel="stylesheet" type="text/css" media="print" href="../../css/ibkr/website-print.min.css">
+<style type="text/css">
+@import url('../../css/fontawesome-6.4.2/all.min.css') layer(vendors);
+@import url('../../css/animate-3.7.2/animate.min.css') layer(vendors);
+@import url('../../css/bootstrap-switch-3.3.2/bootstrap-switch.min.css') layer(vendors);
+@import url('../../css/icheck-1.0.2/icheck.css') layer(vendors);
+</style></body>
+
+<!-- Mirrored from www.interactivebrokers.ie/en/general/warnings-on-frauds-and-scams.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Sep 2025 08:58:10 GMT -->
+</html>

@@ -1,0 +1,1813 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="de" data-theme="light">
+
+<!-- Mirrored from www.interactivebrokers.ie/de/accounts/account-guide.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Sep 2025 09:18:01 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8">
+<title>Kontoleitfaden | Interactive Brokers Ireland</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"> 
+<meta name="description" content="Interactive Brokers Kontotypen, IRA-Klassen und Basisw&#228;hrung.">
+<meta name="keywords" content="Kundentypen, Kontotypen, IRA, IRA-Konten, Basisw&#228;hrung, Kontenkonfiguration, Gemeinschaftskonto, Traditional, Roth, Simple Employment Plan, Direct Rollover, IRA-Untertypen, Beitragslimits, andere W&#228;hrungen">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta http-equiv="expires" content="-1">
+<meta name="robots" content="index, follow">
+<meta http-equiv="pragma" content="no-cache">
+<meta name="apple-mobile-web-app-title" content="IBKR">
+<link rel="icon" sizes="192x192" href="../../images/web/favicons/home-screen-icon-192x192.png" />
+<link rel="icon" sizes="128x128" href="../../images/web/favicons/home-screen-icon-128x128.png" />
+<link rel="apple-touch-icon" sizes="57x57" href="../../images/web/favicons/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="../../images/web/favicons/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="../../images/web/favicons/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="../../images/web/favicons/apple-touch-icon-144x144.png" />
+<!-- SCRIPTS HEAD  -->
+<script type="text/javascript" src='../../scripts/common/js/jquery-3.6.1/jquery.min.js'></script>
+<script type="text/javascript">
+function createScriptElement(data) {
+ if (typeof data == "undefined") {
+  return;
+ }
+ var element = document.createElement("SCRIPT");
+ element.type = "text/javascript";
+ if (typeof data.id != "undefined") {
+  element.id = data.id;
+ }
+ if (typeof data.source != "undefined") {
+  element.src = data.source;
+ }
+ if (typeof data.loadfunction == "function") {
+  element.onload = data.loadfunction;
+ }
+ document.head.appendChild(element);
+}
+createScriptElement({ source : "/scripts/common/js/bootstrap-5.2.2/bootstrap.bundle.min.js", loadfunction: bsLoaded  });
+createScriptElement({ source : "/scripts/common/js/lib.js?ver=9" });
+function storeCookie()
+{
+ if(typeof(Storage) !== 'undefined')
+ {
+   if(localStorage.getItem('web') !== null)
+   {
+     localStorage.removeItem('web');
+   }
+ }
+}
+function bsLoaded() {
+  createScriptElement({ source : "/scripts/common/js/appear/appear.min.js?ver=1" });
+  createScriptElement({ source : "/scripts/common/js/easing/easing.min.js?ver=1" });
+  createScriptElement({ source : "/scripts/common/js/parallax/parallax.min.js?ver=1" });
+  createScriptElement({ source : "/scripts/common/js/uitotop/uitotop.min.js?ver=1", loadfunction: uiLoaded });
+}
+function uiLoaded() {
+  createScriptElement({ source : "/scripts/common/js/twsUtils.js?ver=2" });
+  createScriptElement({ source : "/scripts/common/js/design/design.js?ver=1" }); 
+}
+</script>
+<script type="text/javascript">
+$(function() {
+ if (document.cookie.indexOf("IB_SEARCH") == -1)
+ {
+  var ex=new Date();
+  ex.setTime(ex.getTime()+86400000);
+  document.cookie ='IB_SEARCH='+Math.floor(new Date().getTime()/1000)+';expires='+ex.toGMTString()+';path=/;domain=.interactivebrokers.ie';
+ }
+  let nex=new Date();
+  nex.setTime(nex.getTime()+86400000);
+    document.cookie ='IB_QD=0;expires='+nex.toGMTString()+';path=/;domain=.interactivebrokers.ie';
+  
+  let excfd=new Date();
+  excfd.setTime(excfd.getTime()+86400000);
+  document.cookie ='IB_QD_CFD=0;expires='+excfd.toGMTString()+';path=/;domain=.interactivebrokers.ie';
+ $('div#langselector').find('a').each(function() {
+  $(this).click(function() {
+   var link = $(this).attr("href");
+   if(link.match(/\/(en|fr|de|es|it|ru|cn|jp)\//))
+   {
+    var langs = link.split("../../index.html");
+    if(langs[3] == 'en' || langs[3] == 'fr' || langs[3] == 'de' || langs[3] == 'es' || langs[3] == 'it' || langs[3] == 'ru' || langs[3] == 'cn' || langs[3] == 'jp')
+    {
+      var lang = langs[3];
+      if(lang == 'cn')
+      {
+        lang = 'zh_CN';
+      }
+      if(lang == 'jp')
+      {
+        lang = 'ja';
+      }
+      if(hasCookie("IB_LANG"))
+      {
+        deleteCookie("IB_LANG");
+      }
+      setCookie("IB_LANG", lang, 7, '.interactivebrokers.ie');
+    } else if(langs[1] == 'en') {
+      var lang = 'en';
+      setCookie("IB_LANG", lang, 7, '.interactivebrokers.ie');
+    }
+   }
+  });
+ });
+ $('p#bandaid-close').click(function() {
+  setCookie("IB_BANDAID", 1, 7, '.interactivebrokers.ie');
+ });
+ $('a#btnCloseBannerRegionSelector').click(function() {
+  setCookie("IB_REGION_SEL", 1, 30, '.interactivebrokers.ie');
+ });
+ $('a#btnCloseBannerRegionDifc').click(function() {
+  setCookie("IB_DIFC", 1, 30, '.interactivebrokers.ie');
+ });
+});
+</script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    if(localStorage.getItem('consentMode') ===  null){
+                    const consentMode = {
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'analytics_storage': 'denied'
+            };
+                localStorage.setItem('consentMode', JSON.stringify(consentMode));
+        gtag('consent', 'default', consentMode);
+    }
+    else {
+        gtag('consent', 'default', JSON.parse(localStorage.getItem('consentMode')));
+    }
+</script>
+<!-- STYLES HEAD -->
+<style type="text/css">
+@import url('../../css/bootstrap-5.2.2/bootstrap.min.css') layer(bootstrap);
+</style>
+<link rel="preload" as="style" href="../../css/ibkr/website.mince12.css?v=1848a6e12ea6c289ee1df7ee63749846">
+<link rel="stylesheet" type="text/css" media="all" href="../../css/ibkr/website.mince12.css?v=1848a6e12ea6c289ee1df7ee63749846">
+<link rel="preload" as="style" href="../../css/ibkr/theme-ibkr.min4f42.css?v=be9c72c0d328e7fc4987bce81f28981c">
+<link rel="stylesheet" type="text/css" media="all" href="../../css/ibkr/theme-ibkr.min4f42.css?v=be9c72c0d328e7fc4987bce81f28981c"><link rel="stylesheet" type="text/css" media="all" href="../../css/web/config-acct.css" />
+<style>a.link-chevron-right::after, a.link-chevron-right:hover::after, a.link-chevron-right:link::after, a.link-chevron-right:active::after {display: inline; white-space: nowrap;}</style>
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-d23de039-d518-4f10-9810-e68da4592744","rua.cook":"true","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="XE2AM-F37QZ-LYWQP-H8KRM-4SNX5",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"XE2AM-F37QZ-LYWQP-H8KRM-4SNX5";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n="false"=="true"?1:0,t="cookiepresent",a="eykumbc7mxv4o2gjetka-f-112c6000e-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1168163","ak.ai":parseInt("665092",10),"ak.ol":"0","ak.cr":39,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"1d792563","ak.r":50930,"ak.a2":n,"ak.m":"a","ak.n":"essl","ak.bpcip":"38.21.70.0","ak.cport":49573,"ak.gh":"95.101.132.220","ak.quicv":"","ak.tlsv":"tls1.2","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1758012628","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==TmSbuDWITHOEOZnVmusxVu8tVCySiiAP8eZE+lcHIQXHE8AjwlVJa1sIEh/4DI7TGn3d3sdx45JRMEfAytUVGCWU7qMlgF+uDTVQoUgR8zOkeSy5XniknAN0Il5/w21NlPkLAM3Yb3PPlv/JCKG+TZwacQqxV0fBr1GS2t9P252T8QRY+MkHF5mZrYsBVdrMtI/DFMNVCa71vNFq/Z5p1yhsWPcpnZy48aXBsZ8cYHq1AXaV3IWTfyXL9/qMIUFr8UVwsygT4GWtda/qx2a7Ex8lmAn6vwUK1qVBdaeIoem3fjGJxypCfGBiavsfQPwBZ9hMmyHsL0K+Yt0ngY1spFs5geKMsUi4SYSetMqBS/mclPZISG3NhhtbOXEHb/2XBq7gRom3O1GvKD0yokjtGI/AmxKFNpKLf8lArZY7OdU=","ak.pv":"398","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.html","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak-2.html","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body>
+<div id="printheader"></div>
+<!-- HEADER START  -->
+<div class="ibkr-header" id="ibkr-header">
+    
+        
+<style type="text/css">
+.banner-risk-warning {
+    margin:0px;
+    padding:8px 0px;
+    width:100%;
+    height:auto;
+    background-color:#242424;
+}
+.banner-risk-warning p {
+    margin:0px;
+    padding:0px;
+    font-weight:400;
+    font-size:1.0rem;
+    line-height:1.25rem;
+    text-align:center;
+    color:#FFFFFF;
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | EXTRA SMALL (< 576PX) ---------------------------------------------------------------------------------------------------- */
+@media (max-width:575.98px) {
+    .banner-risk-warning {
+        padding:4px 0px;
+    }
+    .banner-risk-warning p {
+        font-size:0.8125rem;
+        line-height:1.0rem;
+    }
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | SMALL (576PX-767.98PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:576px) and (max-width:767.98px) {
+    .banner-risk-warning {
+        padding:4px 0px;
+    }
+    .banner-risk-warning p {
+        font-size:0.8125rem;
+        line-height:1.0rem;
+    }
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | MEDIUM (768PX-991.98PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:768px) and (max-width:991.98px) {
+    .banner-risk-warning {
+        padding:4px 0px;
+    }
+    .banner-risk-warning p {
+        font-size:0.8125rem;
+        line-height:1.0rem;
+    }
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | LARGE (992PX-1199.98PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:992px) and (max-width:1199.98px) {
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | EXTRA LARGE (>1200PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:1200px) {
+}
+</style>
+<div class="banner-risk-warning">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p>Das Investieren in Finanzprodukte ist mit Risiken verbunden.<br> Ihre Anlagen k&#246;nnen an Wert gewinnen oder verlieren und Verluste k&#246;nnen den Wert Ihrer urspr&#252;nglichen Investition &#252;bersteigen.</p>
+            </div>
+        </div>
+    </div>
+</div>    <!-- NAV TOP START (LG/XL ONLY) -->
+    <nav class="navbar navbar-inverse navbar-expand-lg navbar-top d-none d-lg-block">
+        <div class="container">
+            <div class="navbar-collapse collapse" id="ibkr-nav-top"><!-- LEFT MENU -->
+                
+                <ul class="navbar-nav mr-auto align-items-center"><!-- FOR INDIVIDUALS -->
+                    <li class="nav-item dropdown"><a href="#" target="_self" class="nav-link dropdown-toggle" id="nav-for-individuals" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Privatkunden</a>
+                        <div class="dropdown-menu dropdown-ind-accounts" aria-labelledby="nav-for-individuals">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="individual-ie.html" target="_self" class="dropdown-item" >Einzel- oder Gemeinschaftskonten</a> <a href="trust-ie.html" target="_self" class="dropdown-item" >Trust-Konten</a> <a href="family-account-ie.html" target="_self" class="dropdown-item" >Family-Konten</a> <a href="long-term-investment-accounts-ie.html" target="_self" class="dropdown-item">Tart&#243;s Befektet&#233;si Sz&#225;mia (TBSZ)</a> <a href="plan-depargne-en-action-accounts-ie.html" target="_self" class="dropdown-item">Plan d&#8217;Epargne en Actions (PEA)</a> 
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- FOR INSTITUTIONS -->
+                    <li class="nav-item dropdown"><a href="#" target="_self" class="nav-link dropdown-toggle" id="nav-for-institutions" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Gesch&#228;ftskunden</a>
+                        <div class="dropdown-menu dropdown-inst-accounts" aria-labelledby="nav-for-institutions">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../../errorMessages/404.html" target="_self" class="dropdown-item" >Startseite Gesch&#228;ftskunden</a> <a href="advisor-ie.html" target="_self" class="dropdown-item" >Registrierte Anlageberater</a> <a href="proprietary-trading-group-ie.html" target="_self" class="dropdown-item" >Prop-Trader</a> <a href="hedge-fund-ie.html" target="_self" class="dropdown-item" >Hedgefonds</a> <a href="broker-ie.html" target="_self" class="dropdown-item" >Einf&#252;hrende Broker</a> <a href="family-office-ie.html" target="_self" class="dropdown-item" >Family Offices</a> <a href="compliance-officer-ie.html" target="_self" class="dropdown-item" >Compliance-Beauftragte</a> <a href="small-business-ie.html" target="_self" class="dropdown-item" >Kleinunternehmen</a> <a href="fsa-insurance-providers.html" target="_self" class="dropdown-item" >Full-Service-Verwalter <br>Versicherungsanbieter</a> <a href="money-manager-ie.html" target="_self" class="dropdown-item" >Money Manager</a> <a href="administrator-ie.html" target="_self" class="dropdown-item" >Fondsverwalter</a>  <a href="https://interactivebrokers.eu/campus/stl/" target="_blank" class="dropdown-item" >Bildungseinrichtungen</a>                                 </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul><!-- RIGHT MENU -->
+                
+                <ul class="navbar-nav ml-auto align-items-center"><!-- FREE TRIAL -->
+                    <li class="nav-item"><a href="../trading/free-trial.html" target="_self" class="nav-link">KOSTENLOS TESTEN</a></li><!-- CAREERS -->
+                    
+                    <li class="nav-item"><a href="../general/about/careers-splash.html" target="_self" class="nav-link">Karriere</a></li><!-- ABOUT US -->
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-about-us" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&#220;ber uns</a>
+                        <div class="dropdown-menu dropdown-about-us" aria-labelledby="nav-about-us">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../general/financial-strength.html" target="_self" class="dropdown-item" >Finanzst&#228;rke und Sicherheit</a> <a href="../general/about/info-and-history.html" target="_self" class="dropdown-item">Vorstellung und Firmengeschichte</a> <a href="../general/awards.html" target="_self" class="dropdown-item">Auszeichnungen</a> <a href="../about/news-at-ibkr.html" target="_self" class="dropdown-item">IBKR-News</a> <a href="../general/about/press-and-media.html" target="_self" class="dropdown-item">Presse und Medien</a> <a href="https://investors.interactivebrokers.com/ir/main.php" target="_blank" class="dropdown-item" rel="noreferrer noopener">Investorendialog</a> <a href="../general/about/sustainability.html" target="_self" class="dropdown-item">Nachhaltigkeit</a> <a href="legalDocuments/brokerPerformanceReports.html" target="_self" class="dropdown-item">Meldungen an Aufsichtsbeh&#246;rden</a> <a href="../../errorMessages/404.html" target="_self" class="dropdown-item">Empfehlen Sie uns weiter</a> <a href="../general/about/affiliate-programs.html" target="_self" class="dropdown-item">Partnerprogramme</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- SUPPORT -->
+                    
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-support" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Support</a>
+                        <div class="dropdown-menu dropdown-contact-us" aria-labelledby="nav-support">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../support/fund-my-account.html" target="_self" class="dropdown-item">Guthaben einzahlen</a> <a href="../support/individuals.html" target="_self" class="dropdown-item">Privatkunden</a> <a href="../support/institutions.html" target="_self" class="dropdown-item">Gesch&#228;ftskunden</a> <a href="../support/institutional-sales-contacts4343.html?p=uk" target="_self" class="dropdown-item">Vertriebskontakte f&#252;r Gesch&#228;ftskunden</a> <a href="../general/contact/ibot-container.html" target="_self" class="dropdown-item">FAQs</a> <a href="../support/reports-and-dates.html" target="_self" class="dropdown-item">Steuerinformationen</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- LANGUAGE SELECTOR -->
+                    <li class="nav-item dropdown"><a href="#" class="nav-link nav-language dropdown-toggle" id="nav-language" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Sprache</span><img src="../../images/web/icons/icon-language.svg" alt="Sprache" width="23" height="18" border="0" /></a>
+                        <div class="dropdown-menu dropdown-language" aria-labelledby="nav-language">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../../en/home.html" target="_self" class="dropdown-item">English</a>
+                                    <a href="../../fr/home.html" target="_self" class="dropdown-item">Fran&#231;ais</a>
+                                    <a href="../home.html" target="_self" class="dropdown-item">Deutsch</a>
+                                    <a href="../../es/home.html" target="_self" class="dropdown-item">Espa&#241;ol</a>
+                                    <a href="../../it/home.html" target="_self" class="dropdown-item">Italiano</a>
+                                    <a href="../../hu/home.html" target="_self" class="dropdown-item">Magyar</a>
+                                    <a href="../../pt/home.html" target="_self" class="dropdown-item">Portugu&#234;s</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                                    </ul>
+            </div>
+        </div><!-- NAV TOP END --><!-- NAV BOTTOM START -->
+    </nav>
+    
+    <nav class="navbar navbar-inverse navbar-expand-lg navbar-bottom">
+        <div class="container"><!-- LOGO -->
+            
+             <a href="../home.html" target="_self" title="Interactive Brokers Startseite" alt="Interactive Brokers Logo" class="navbar-brand brand-logo" aria-label="Interactive Brokers Home"><span>Interactive Brokers Startseite</span></a>
+            <!-- TOGGLE (XS/SM/MD ONLY) --><!-- OPEN ACCOUNT BUTTON (XS/SM/MD ONLY) -->
+            <button class="navbar-toggler" type="button" aria-label="Toggle Navigation"><span class="navbar-toggler-icon"><i class="fas fa-bars" aria-hidden="true"></i></span></button>
+            <a href="https://www.interactivebrokers.co.uk/Universal/Application" target="_self" class="d-block d-lg-none btn btn-open-account">Konto er&#246;ffnen</a>
+            <!-- LOG IN (SM/MD ONLY) -->
+             <a href="https://www.interactivebrokers.co.uk/sso/Login?RL=1" target="_self" class="d-none d-sm-block d-lg-none btn btn-log-in">Login</a>             <!-- IBKR NAV BOTTOM START -->
+            <div class="navbar-collapse collapse" id="ibkr-nav-bottom">
+                <ul class="navbar-nav ml-auto align-items-center"><!-- WHY IBKR -->
+                    
+                    <li class="nav-item"><a href="../whyib/overview.html" target="_self" class="nav-link">Warum IBKR?</a></li><!-- PRICING -->
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-pricing" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Preisgestaltung</a>
+                        <div class="dropdown-menu dropdown-pricing" aria-labelledby="nav-pricing">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../pricing/commissions-home.html" target="_self" class="dropdown-item">Provisionen</a> <a href="../trading/margin-rates.html" target="_self" class="dropdown-item">Margins&#228;tze</a> <a href="fees/pricing-interest-rates.html" target="_self" class="dropdown-item">Zinss&#228;tze</a> <a href="../pricing/short-sale-cost.html" target="_self" class="dropdown-item">Leerverkaufskosten</a> <a href="../pricing/research-news-services.html" target="_self" class="dropdown-item">Recherchen und Nachrichten</a> <a href="../pricing/market-data-pricing.html" target="_self" class="dropdown-item">Marktdaten-Preise</a> <a href="../pricing/stock-yield-enhancement-program-ie.html" target="_self" class="dropdown-item">Programm zur Optimierung der Aktienrendite</a> <a href="../pricing/other-fees-overview.html" target="_self" class="dropdown-item">Sonstige Geb&#252;hren</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- TRADING -->
+                    
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-technology" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Handel</a>
+                        <div class="dropdown-menu dropdown-technology" aria-labelledby="nav-technology">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../trading/trading-platforms.html" target="_self" class="dropdown-item">Plattformen</a> <a href="../trading/ib-api.html" target="_self" class="dropdown-item">APIs</a> <a href="../trading/margin.html" target="_self" class="dropdown-item">Margin</a> <a href="../trading/products-exchanges.html" target="_self" class="dropdown-item">Symbol- und B&#246;rsensuche</a> <a href="../trading/products-stocks.html" target="_self" class="dropdown-item">Produkt&#252;bersicht</a> <a href="../trading/ordertypes.html" target="_self" class="dropdown-item">Ordertypen</a> <a href="../whyib/reporting.html" target="_self" class="dropdown-item">Berichte</a> <a href="../trading/securities-financing.html" target="_self" class="dropdown-item">Wertpapierleihe</a> <a href="../trading/features-in-focus.html" target="_self" class="dropdown-item">Funktionen im Fokus</a> <a href="../general/education/probability_lab.html" target="_self" class="dropdown-item">Probability Lab</a> <a href="../trading/sustainable-investing-ie.html" target="_self" class="dropdown-item">Nachhaltiges Investieren</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- SERVICES -->
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-products" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Serviceleistungen</a>
+                        <div class="dropdown-menu dropdown-products" aria-labelledby="nav-products">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../trading/globalanalyst.html" target="_self" class="dropdown-item">IBKR GlobalAnalyst</a> <a href="../trading/si-quotes.html" target="_self" class="dropdown-item">EUIBSI Bid/Ask</a> <a href="../portfolioanalyst/overview.html" target="_self" class="dropdown-item" rel="noreferrer noopener">PortfolioAnalyst</a> <a href="../trading/products-bonds.html" target="_self" class="dropdown-item">Anleihen-Marktplatz</a> <a href="../trading/products-mutual-funds.html" target="_self" class="dropdown-item">Investmentfonds-Marktplatz</a> <a href="../trading/commission-free-etfs-mkt.html" target="_self" class="dropdown-item">ETFs ohne Transaktionsgeb&#252;hren</a> <a href="https://gdcdyn.interactivebrokers.com/aces/Marketplace/InvestorsMarketplace" target="_blank" class="dropdown-item">Anleger-Marktplatz</a> <a href="../trading/short-securities-availability.html" target="_self" class="dropdown-item">Verf&#252;gbarkeit von Wertpapieren f&#252;r Leerverk&#228;ufe</a> <a href="../trading/third-party-integration.html" target="_self" class="dropdown-item">Drittanbieter-Integration</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- EDUCATION -->
+                    
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-education" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Lerncenter</a>
+                        <div class="dropdown-menu dropdown-education" aria-labelledby="nav-education">
+                            <div class="row">
+                                <div class="col">
+                                     <a href="https://interactivebrokers.eu/campus/" target="_blank" class="dropdown-item">IBKR-Campus</a> <a href="https://interactivebrokers.eu/campus/academy" target="_blank" class="dropdown-item" rel="noreferrer noopener">Trader-Akademie</a> <a href="https://interactivebrokers.eu/campus/news" target="_blank" class="dropdown-item" rel="noreferrer noopener">Traders&#8217; Insight</a> <a href="https://interactivebrokers.eu/campus/podcasts" target="_blank" class="dropdown-item" rel="noreferrer noopener">IBKR-Podcasts</a> <a href="https://interactivebrokers.eu/campus/quant" target="_blank" class="dropdown-item" rel="noreferrer noopener">IBKR-Quant-Blog</a> <a href="https://interactivebrokers.eu/campus/webinars" target="_blank" class="dropdown-item" rel="noreferrer noopener">Webinare</a> <a href="https://interactivebrokers.eu/campus/stl/" target="_blank" class="dropdown-item">Trading Lab f&#252;r Schule und Studium</a> <a href="https://interactivebrokers.eu/campus/glossary" target="_blank" class="dropdown-item" rel="noreferrer noopener">Trader-Glossar</a>  <a href="../general/calendar/calendar.html" target="_self" class="dropdown-item">Trader-Kalender</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- SEARCH -->
+                    <li class="nav-item dropdown d-none d-lg-block" id="search-expand"><a href="#" class="nav-link nav-search dropdown-toggle" id="nav-search" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Search"><span>Suche</span><i class="fas fa-search" aria-hidden="true"></i></a>
+                        <div class="dropdown-menu dropdown-search" aria-labelledby="nav-search">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="search_box">
+                                        <script type="text/javascript">
+                                         searchbox_input_changed=false;
+                                         $('#search-expand').on('shown.bs.dropdown', function(e) {
+                                           $('#searchField').focus();
+                                         });
+                                        </script>
+                                        <form action="https://www.interactivebrokers.ie/de/search/index.php" method="get" class="search_form" id="search_form_id">
+                                            <input type="text" aria-label="Search Box" placeholder="Search" name="query" maxlength="64" autocomplete="off" id="searchField" class="form-control s swap_value searchinput" aria-label="Search Interactive Brokers">
+                                            <button type="submit" value="" id="searchsubmit" class="searchsubmit"><i class="fas fa-search" aria-hidden="true" aria-label="Submit Search"></i></button>
+                                        </form>
+                                        
+                                                                            </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- LOG IN -->
+                    
+                    <li class="nav-item dropdown d-none d-lg-block"><a href="#" target="_self" class="nav-link nav-login dropdown-toggle" id="nav-log-in" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Anmelden</a>
+                        <div class="dropdown-menu dropdown-login" aria-labelledby="nav-log-in">
+                            <div class="row">
+                                <div class="col">
+                                     <a href="../../sso/Login0104.html?RL=1" target="_self" class="dropdown-item dropdown-portal">Anmelden im Portal</a>  <a href="../trading/ibkr-desktop.html" target="_self" class="dropdown-item">IBKR Desktop herunterladen</a> <a href="../trading/tws.html#tws-software" target="_self" class="dropdown-item">Trader Workstation herunterladen</a> <a href="../trading/tws-mobile.html#trytoday-drop" target="_self" class="dropdown-item">IBKR Mobile herunterladen</a> <a href="../trading/ibgateway-latest.html" target="_self" class="dropdown-item">IB Gateway herunterladen</a> <a href="../trading/trading-platforms.html" target="_self" class="dropdown-item">Alle IBKR-Plattformen vergleichen</a> <a href="https://forecasttrader.interactivebrokers.ie/eventtrader/#/markets" target="_self" class="dropdown-item">IBKR ForecastTrader</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- OPEN ACCOUNT -->
+                    <li class="nav-item dropdown d-none d-lg-block"><a href="#" target="_self" class="nav-link nav-open-account dropdown-toggle" id="nav-open-account" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Konto er&#246;ffnen</a>
+                        <div class="dropdown-menu dropdown-open-account" aria-labelledby="nav-open-account">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="https://www.interactivebrokers.co.uk/Universal/Application" target="_self" class="dropdown-item dropdown-portal">Antrag starten</a> <a href="https://www.interactivebrokers.co.uk/sso/Login?c=t" target="_self" class="dropdown-item">Antrag abschlie&#223;en</a> <a href="../general/what-you-need-inv.html" target="_self" class="dropdown-item">Ben&#246;tigte Informationen</a> <a href="account-guide.html" target="_self" class="dropdown-item">Leitfaden zur Kontoauswahl</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul><!-- IBKR MENU END -->
+                
+            </div>
+        </div><!-- NAV BOTTOM END -->
+    </nav>
+</div><!-- HEADER END ---------------------------------------------------------------------------------------------------- --><!-- MOBILE NAV START (XS/SM/MD ONLY) ---------------------------------------------------------------------------------------------------- -->
+
+<div class="menu-mobile d-lg-none"><!-- CLOSE BUTTON -->
+    
+    <div class="close-button"><button type="button" class="btn-close" aria-label="Close Menu"><i class="fas fa-times"></i></button></div><!-- LOGO -->
+    <div class="logo-container"><a href="../home.html" target="_self" class="brand-logo" aria-label="Interactive Brokers Home"><span>Interactive Brokers Startseite</span></a></div><!-- SEARCH -->
+    
+    <div class="search-container">
+        <div class="search-box">
+            <form action="https://www.interactivebrokers.ie/de/search/index.php" method="get" class="search_form" id="search_form_id">
+                <input type="text" class="form-control" placeholder="Search" name="query" maxlength="64" autocomplete="off" id="searchFieldMobile" aria-label="Search Interactive Brokers"> 	
+                <button type="submit" class="btn-search-submit" value="" id="searchsubmitMobile" aria-label="Submit Search"><i class="fas fa-search" aria-hidden="true"></i></button> 	
+            </form>
+        </div>
+    </div>
+    <ul>
+            
+        <!-- PORTAL LOGIN -->
+        <li><a href="../../sso/Login0104.html?RL=1" target="_self" class="menu-log-in">Anmelden im Portal</a></li>
+        
+    <!-- OPEN ACCOUNT -->
+    <li class="has-submenu"><a href="#" target="_self" class="menu-open-account" data-submenu="submenu-open-account">Konto er&#246;ffnen</a>
+        <div class="submenu" id="submenu-open-account">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-open-account">Zur&#252;ck</button></p>
+            <p class="submenu-title">KONTO ER&#214;FFNEN</p>
+            <ul>
+            <li><a href="https://www.interactivebrokers.co.uk/Universal/Application" target="_self" class="menu-start-application">Antrag starten</a></li>
+            <li><a href="https://www.interactivebrokers.co.uk/sso/Login?c=t" target="_self">Antrag abschlie&#223;en</a></li>
+            <li><a href="../general/what-you-need-inv.html" target="_self">Ben&#246;tigte Informationen</a></li>
+            <li><a href="account-guide.html" target="_self">Leitfaden zur Kontoauswahl</a></li>
+            </ul>
+        </div>
+    </li>
+        
+    <!-- FREE TRIAL -->
+    <li><a href="../trading/free-trial.html" target="_self">Kostenlose Testversion</a></li><!-- WHY IBKR -->
+    <li><a href="../whyib/overview.html" target="_self">Warum IBKR?</a></li><!-- ACCOUNT TYPES -->
+    
+    <li class="has-submenu"><a href="#" target="_self" data-submenu="submenu-account-types">Kontotypen</a>
+        <div class="submenu" id="submenu-account-types">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-account-types">Zur&#252;ck</button></p>
+            <p class="submenu-title">PRIVATKUNDEN</p>
+            <ul>
+            <li><a href="individual-ie.html" target="_self" >Einzel- oder Gemeinschaftskonten</a></li>
+            <li><a href="trust-ie.html" target="_self" >Trust-Konten</a></li>
+            <li><a href="family-account-ie.html" target="_self" >Family-Konten</a></li>
+            <li><a href="long-term-investment-accounts-ie.html" target="_self">Tart&#243;s Befektet&#233;si Sz&#225;mia (TBSZ) </a></li>
+            <li><a href="plan-depargne-en-action-accounts-ie.html" target="_self">Plan d&#8217;&#233;pargne en actions (PEA)</a></li>
+                        
+            </ul>
+            <p class="submenu-title">GESCH&#196;FTSKUNDEN</p>
+            <ul>
+            <li><a href="../../errorMessages/404.html" target="_self" >Startseite Gesch&#228;ftskunden</a></li>
+            <li><a href="advisor-ie.html" target="_self" >Registrierte Anlageberater</a></li>
+            <li><a href="proprietary-trading-group-ie.html" target="_self" >Prop-Trader</a></li>
+            <li><a href="hedge-fund-ie.html" target="_self" >Hedgefonds</a></li>
+            <li><a href="broker-ie.html" target="_self" >Einf&#252;hrende Broker</a></li>
+            <li><a href="family-office-ie.html" target="_self" >Family Offices</a></li>
+            <li><a href="compliance-officer-ie.html" target="_self" >Compliance-Beauftragte</a></li>
+            <li><a href="small-business-ie.html" target="_self" >Kleinunternehmen</a></li>
+            <li><a href="fsa-insurance-providers.html" target="_self" >Full-Service-Verwalter <br>Versicherungsanbieter</a></li>
+            <li><a href="money-manager-ie.html" target="_self" >Money Manager</a></li>
+            <li><a href="administrator-ie.html" target="_self" >Fondsverwalter</a></li>
+             
+             
+            <li><a href="https://interactivebrokers.eu/campus/stl/" target="_blank" >Bildungseinrichtungen</a></li>
+                        
+            </ul>
+        </div>
+    </li><!-- PRICING -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-pricing">Preisgestaltung</a>
+        <div class="submenu" id="submenu-pricing">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-pricing">Zur&#252;ck</button></p>
+            <p class="submenu-title">PREISGESTALTUNG</p>
+            <ul>
+            <li><a href="../pricing/commissions-home.html" target="_self">Provisionen</a></li>
+            <li><a href="../trading/margin-rates.html" target="_self">Margins&#228;tze</a></li>
+            <li><a href="fees/pricing-interest-rates.html" target="_self">Zinss&#228;tze</a></li>
+            <li><a href="../pricing/short-sale-cost.html" target="_self">Leerverkaufskosten</a></li>
+            <li><a href="../pricing/research-news-services.html" target="_self">Recherchen und Nachrichten</a></li>
+            <li><a href="../pricing/market-data-pricing.html" target="_self">Marktdaten-Preise</a></li>
+            <li><a href="../pricing/stock-yield-enhancement-program-ie.html" target="_self">Programm zur Optimierung der Aktienrendite</a></li>
+            <li><a href="../pricing/other-fees-overview.html" target="_self">Geb&#252;hren</a></li>
+            </ul>
+        </div>
+    </li><!-- TRADING -->
+    
+    <li class="has-submenu"><a href="#" data-submenu="submenu-trading">Handel</a>
+        <div class="submenu" id="submenu-trading">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-trading">Zur&#252;ck</button></p>
+            <p class="submenu-title">HANDEL</p>
+            <ul>
+            <li><a href="../trading/trading-platforms.html" target="_self">Plattformen</a></li>
+            <li><a href="../trading/ib-api.html" target="_self">APIs</a></li>
+            <li><a href="../trading/margin.html" target="_self">Margin</a></li>
+            <li><a href="../trading/products-exchanges.html" target="_self">Symbol- und B&#246;rsensuche</a></li>
+            <li><a href="../trading/products-stocks.html" target="_self">Produkt&#252;bersicht</a></li>
+            <li><a href="../trading/ordertypes.html" target="_self">Ordertypen</a></li>
+            <li><a href="../whyib/reporting.html" target="_self">Berichte</a></li>
+            <li><a href="../trading/securities-financing.html" target="_self">Wertpapierleihe</a></li>
+            <li><a href="../trading/features-in-focus.html" target="_self">Funktionen im Fokus</a></li>
+            <li><a href="../general/education/probability_lab.html" target="_self">Probability Lab</a></li>
+            <li><a href="../trading/sustainable-investing-ie.html" target="_self">Nachhaltiges Investieren</a></li>
+            </ul>
+        </div>
+    </li><!-- SERVICES -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-services">Serviceleistungen</a>
+        <div class="submenu" id="submenu-services">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-services">Zur&#252;ck</button></p>
+            <p class="submenu-title">SERVICELEISTUNGEN</p>
+            <ul>
+            <li><a href="../trading/globalanalyst.html" target="_self">IBKR GlobalAnalyst</a></li>
+            <li><a href="../trading/si-quotes.html" target="_self">EUIBSI Bid/Ask</a></li>
+            <li><a href="../portfolioanalyst/overview.html" target="_self" rel="noreferrer noopener">PortfolioAnalyst</a></li>
+            <li><a href="../trading/products-bonds.html" target="_self">Anleihen-Marktplatz</a></li>
+            <li><a href="../trading/products-mutual-funds.html" target="_self">Investmentfonds-Marktplatz</a></li>
+            <li><a href="../trading/commission-free-etfs-mkt.html" target="_self">ETFs ohne Transaktionsgeb&#252;hr</a></li>
+            <li><a href="https://gdcdyn.interactivebrokers.com/aces/Marketplace/InvestorsMarketplace" target="_blank">Anleger-Marktplatz</a></li>
+            <li><a href="../trading/short-securities-availability.html" target="_self">Verf&#252;gbarkeit von Wertpapieren f&#252;r Leerverk&#228;ufe</a></li>
+            <li><a href="../trading/third-party-integration.html" target="_self">Drittanbieter-Integration</a></li>
+            </ul>
+        </div>
+    </li><!-- EDUCATION -->
+    
+    <li class="has-submenu"><a href="#" data-submenu="submenu-education">Lerncenter</a>
+        <div class="submenu" id="submenu-education">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-education">Zur&#252;ck</button></p>
+            <p class="submenu-title">LERNCENTER</p>
+            <ul>
+             
+             
+            <li><a href="https://interactivebrokers.eu/campus/" target="_blank">IBKR-Campus</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/academy" target="_blank">Trader-Akademie</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/news" target="_blank">Traders&#8217; Insight</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/podcasts" target="_blank">IBKR-Podcasts</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/quant" target="_blank">IBKR-Quant-Blog</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/webinars" target="_blank">Webinare</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/stl/" target="_blank">Trading Lab f&#252;r Schule und Studium</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/glossary" target="_blank">Trader-Glossar</a></li>
+                        
+            <li><a href="../general/calendar/calendar.html" target="_self">Trader-Kalender</a></li>
+            </ul>
+        </div>
+    </li><!-- ABOUT US -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-about-us">&#220;ber uns</a>
+        <div class="submenu" id="submenu-about-us">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-about-us">Zur&#252;ck</button></p>
+            <p class="submenu-title">&#220;BER UNS</p>
+            <ul>
+            <li><a href="../general/financial-strength.html" target="_self">Finanzst&#228;rke und Sicherheit</a></li>
+            <li><a href="../general/about/info-and-history.html" target="_self">Vorstellung und Firmengeschichte</a></li>
+            <li><a href="../general/about/careers-splash.html" target="_self">Karriere</a></li>
+            <li><a href="../general/awards.html" target="_self">Auszeichnungen</a></li>
+            <li><a href="../about/news-at-ibkr.html" target="_self">IBKR-News</a></li>
+            <li><a href="../general/about/press-and-media.html" target="_self">Presse und Medien</a></li>
+            <li><a href="https://investors.interactivebrokers.com/ir/main.php" target="_blank" rel="noreferrer noopener">Investorendialog</a></li>
+            <li><a href="../general/about/sustainability.html" target="_self">Nachhaltigkeit</a></li>
+            <li><a href="legalDocuments/brokerPerformanceReports.html" target="_self">Meldungen an Aufsichtsbeh&#246;rden</a></li>
+            <li><a href="../../errorMessages/404.html" target="_self">Empfehlen Sie uns weiter</a></li>
+            <li><a href="../general/about/affiliate-programs.html" target="_self">Partnerprogramme</a></li>
+            </ul>
+        </div>
+    </li><!-- SUPPORT -->
+    
+    <li class="has-submenu"><a href="#" data-submenu="submenu-support">Support</a>
+        <div class="submenu" id="submenu-support">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-support">Zur&#252;ck</button></p>
+            <p class="submenu-title">SUPPORT</p>
+            <ul>
+            <li><a href="../support/fund-my-account.html" target="_self">Guthaben einzahlen</a></li>
+            <li><a href="../support/individuals.html" target="_self">Privatkunden</a></li>
+            <li><a href="../support/institutions.html" target="_self">Gesch&#228;ftskunden</a></li>
+            <li><a href="../support/institutional-sales-contacts4343.html?p=uk" target="_self">Vertriebskontakte f&#252;r Gesch&#228;ftskunden</a></li>
+            <li><a href="../general/contact/ibot-container.html" target="_self">FAQs</a></li>
+            <li><a href="../support/reports-and-dates.html" target="_self">Steuerinformationen</a></li> 
+            </ul>
+        </div>
+    </li><!-- LANGUAGE -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-language">Sprache</a>
+        <div class="submenu" id="submenu-language">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-language">Zur&#252;ck</button></p>
+            <p class="submenu-title">SPRACHE</p>
+            <ul>
+            <li><a href="../home.html" target="_self">Englisch</a></li>
+            <li><a href="../../fr/home.html" target="_self">Fran&#231;ais</a></li>
+            <li><a href="../home.html" target="_self">Deutsch</a></li>
+            <li><a href="../../es/home.html" target="_self">Espa&#241;ol</a></li>
+            <li><a href="../../it/home.html" target="_self">Italiano</a></li>
+            <li><a href="../../hu/home.html" target="_self">Magyar</a></li>
+            <li><a href="../../pt/home.html" target="_self">Portugu&#234;s</a></li>
+            </ul>
+        </div>
+    </li><!-- REGION SELECTOR -->
+    
+        
+    </ul>
+</div><!-- MOBILE NAV OVERLAY -->
+<div class="website-overlay d-lg-none"></div><!-- MOBILE NAV END  -->
+
+<script>
+$(window).on('load', function() {
+    // Simple check if URL contains 'conf=am'
+    if (!window.location.href.includes('conf=am')) {
+        $('#region-modal').modal({
+            backdrop: 'static',
+            keyboard: false
+        });
+        $('#region-modal').modal('show');
+        $('body').removeClass('modal-open');
+        $('body').css('overflow', '');
+        $('body').css('padding-right', '');
+    }
+});
+</script>
+<div class="modal modal-cookies fade" id="region-modal" tabindex="-1" role="dialog" aria-labelledby="modalRegionLabel" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+    <div class="modal-content" id="modalRegionContent">
+      <div class="modal-header d-block">
+        <p class="fs-5 modal-title" id="modalCookieLabel">Which IBKR website is best for you?</p>
+        <p class="pt-10 mb-0 pr-30 fs-6">The content on the website you selected is not intended for investors in your location. </p>
+        <p class="mb-40 fs-6">Please choose the website most applicable to you.</p>
+      </div>
+      <div class="modal-footer" id="modalRegionControls">
+        <div class="row">
+          <div class="col-12 col-md-4"></div>
+          <div class="col-12 col-md-8">
+            <p>
+              <button class="btn btn-primary" id="btnRegionRecommendation">Go to US website</button>
+              <button class="btn btn-primary" id="btnRegionCurrent">Stay on IE website</button>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+$(function() {
+   $('button#btnRegionRecommendation').click(function() {
+    window.location.href = 'https://www.interactivebrokers.com/';
+  });
+  $('button#btnRegionCurrent').click(function() {
+    setCookie("IB_REG", 1, 365, '.interactivebrokers.ie');
+    location.reload();
+  });
+});
+</script><div id="contents">
+    <section class="page-title" id="page-title">
+        <div class="container">
+            <div class="row">
+                <div class="col"><h1>Kontoleitfaden</h1></div>
+            </div>
+        </div>
+    </section>
+    <!-- INTRO -->
+<section class="hero hero-dark hero-side-nav" id="">
+<figure class="hero-bg-img">
+    <picture>
+        <source media="(min-width:1200px)" srcset="/images/web/hero-account-config-xl.webp?v=e7d9ab81524b9f17d4da57b17443c2b5 1200w, /images/web/hero-account-config-xl.jpg?v=e7d9ab81524b9f17d4da57b17443c2b5 1200w">
+        <source media="(min-width:992px)" srcset="/images/web/hero-account-config-lg.webp?v=e7d9ab81524b9f17d4da57b17443c2b5 1199w, /images/web/hero-account-config-lg.jpg?v=e7d9ab81524b9f17d4da57b17443c2b5 1199w">
+        <source media="(min-width:768px)" srcset="/images/web/hero-account-config-md.webp?v=e7d9ab81524b9f17d4da57b17443c2b5 991w, /images/web/hero-account-config-md.jpg?v=e7d9ab81524b9f17d4da57b17443c2b5 991w">
+        <source media="(min-width:576px)" srcset="/images/web/hero-account-config-sm.webp?v=e7d9ab81524b9f17d4da57b17443c2b5 767w, /images/web/hero-account-config-sm.jpg?v=e7d9ab81524b9f17d4da57b17443c2b5 767w">
+        <source srcset="/images/web/hero-account-config.webp?v=e7d9ab81524b9f17d4da57b17443c2b5  575w, /images/web/hero-account-config.jpg?v=e7d9ab81524b9f17d4da57b17443c2b5 575w">
+        <img src="../../images/web/hero-account-config5fb9.jpg?v=e7d9ab81524b9f17d4da57b17443c2b5" alt="Kontokonfiguration" border="0" /> </picture>
+</figure>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 col-lg-4 col-xl-3">
+                
+<!-- Side Nav -->
+<nav class="ibkr-sidebar">
+    <ul class="nav"  id="nav_set" >
+        <li  class="active" > <a href="account-guide.html" id="nav_account_guide" target="_self">Kontoleitfaden</a> </li>
+        <li   > <a href="configuring-your-account.html" id="nav_configuring_account" target="_self">Kontokonfiguration</a> </li>
+        <li   > <a href="trading-and-market-data.html" id="nav_trading_mkt_data" target="_self">Trading und Marktdaten</a> </li>
+        <li  > <a href="required-minimums.html" id="nav_required_min" target="_self">Mindesteinlagen und -geb&#252;hren</a></li>
+        <li   > <a href="other-features-and-programs.html" id="nav_features_prog" target="_self">Weitere Merkmale und Programme</a></li>
+    </ul>
+</nav>
+<script>
+        $(document).ready(navSetAnimation);
+        $(window).on('resize',navSetAnimation);
+        function navSetAnimation() {
+            const mqMd = window.matchMedia( "(max-width:991.98px)" );
+            if (mqMd.matches) {
+                $('#nav_set li').each(function() {
+                    let navItem = $(this);
+                    let navItemIndex = (parseInt($(navItem).index() + 1)) * 0.1;
+                    let navOrigin = $('.hero').offset().left;
+                    if ($(navItem).hasClass('active')) {
+                        let navItemActive = $(this);
+                        let navItemActiveOffset = navItemActive.offset().left - navOrigin;
+                        let navItemActiveDuration = navItemIndex * 1000;
+                        $('#nav_set').animate({scrollLeft: navItemActiveOffset}, navItemActiveDuration);
+                    }
+                });
+            }
+        }
+    </script>            </div>
+            <div class="col-12 col-lg-8 col-xl-7">
+                <div class="hero-content">
+                    <p class="eyebrow">KONTOKONFIGURATION</p>
+                    <h2>Leitfaden zur Kontoauswahl</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 col-md-6 ">
+                <p class="fs-6 lh-6">
+                     Unsere Kundinnen und Kunden aus mehr als 200 L&#228;ndern und Territorien handeln Aktien, Optionen, Futures, W&#228;hrungen, Anleihen, Fonds und andere Produkte an 160 M&#228;rkten weltweit &#252;ber eine einzige Plattform.                 <p class="fs-6 lh-6">Die folgenden Tabellen liefern Ihnen weitere Informationen &#252;ber unsere verf&#252;gbaren Kontotypen und deren Merkmale.</p>
+            </div>
+            <div class="col-12 offset-md-1 col-md-5">
+                <div class="alert alert-primary p-30 link-right">
+                    <h3 class="h6 text-bold">Weitere Ressourcen:</h3>
+                                        <p><a href="https://ibkrcampus.eu/trading-lessons/open-an-account-deposit-and-withdraw/" target="_blank" rel="nofollow noopener noreferrer" class="link-chevron-right" >Kontoer&#246;ffnung, Ein- und Auszahlungen</a></p>
+                                        <p><a class="link-chevron-right" href="../whyib/overview.html">Vorteile eines Handelskontos bei IBKR</a></p>
+                    <p><a class="link-chevron-right" href="../trading/trading-platforms.html">F&#252;r das IBKR-Handelskonto verf&#252;gbare Plattformen</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<style type="text/css">
+#account-structures-individuals .table-responsive,
+#famliy-advisor-accounts .table-responsive,
+#family-office-accounts .table-responsive,
+#small-business-accounts .table-responsive,
+#advisor-accounts .table-responsive,
+#money-manager-accounts .table-responsive,
+#broker-accounts .table-responsive,
+#ptg-accounts .table-responsive,
+#hedge-fund-accounts .table-responsive,
+#compliance-officers .table-responsive,
+#administrators .table-responsive,
+#hedge-fund-investors .table-responsive 
+    {margin-bottom: 20px;}
+#hedge-fund-investors {margin-bottom: 80px;}
+.acct-detail {padding-bottom:0;}
+.acct-detail h4 {color:var(--dark);}
+.droplinks.dl-11 .container .row > div a {flex-basis: 16%;}
+@media (max-width:768px) {.droplinks .container .row > div a span, .droplinks .container .row > div a:link span {font-size: 0.65rem; line-height: 1.3;}}
+@media (min-width:768px) and (max-width:991.98px) {.droplinks .container .row > div a span, .droplinks .container .row > div a:link span {max-width: 95px; font-size: 0.7rem; line-height: 1.3;}}
+@media (min-width:992px) {.droplinks .container .row > div a span, .droplinks .container .row > div a:link span {max-width: 120px;}}
+</style><!-- include file "include_accountstructures.php" -->
+<section class="droplinks dl-11">
+    <div class="container">
+        <div class="row">
+            <div class="col"> 
+                <a href="#t-account-structures-individuals" target="_self" class="page-scroll">
+                    <svg role="img">
+                        <title>Verschiedene Anlagearten: Aktienhandel</title>
+                        <g>
+	<path d="M20.238,21.487c-4.633,0-8.401-3.769-8.401-8.402c0-4.632,3.769-8.4,8.401-8.4c4.632,0,8.401,3.768,8.401,8.4
+	C28.639,17.718,24.87,21.487,20.238,21.487z M20.238,5.784c-4.026,0-7.302,3.275-7.302,7.301c0,4.026,3.276,7.302,7.302,7.302
+	s7.301-3.276,7.301-7.302C27.539,9.06,24.264,5.784,20.238,5.784z"/>
+</g>
+<g>
+	<polygon points="20.147,37.796 15.305,24.974 8.531,26.669 8.531,34.573 7.431,34.573 7.431,25.81 15.989,23.669 20.147,34.683 
+	24.305,23.669 32.863,25.81 32.863,34.573 31.763,34.573 31.763,26.669 24.989,24.974 	"/>
+</g> </svg>  <span>Einzel- und Gemeinschaftskonten</span>  
+                </a>
+                <a href="#t-famliy-advisor-accounts" target="_self" class="page-scroll">
+                    <svg role="img">
+                        <title>Family</title>
+                        <polygon points="35.2,24.9 35.1,24.9 35.2,24.8 "/>
+<polygon points="35.2,24.9 35.1,24.9 35.2,24.8 "/>
+<g>
+	<path d="M31.1,24.7c-2.1,0-3.8-1.7-3.8-3.7c0-2.1,1.7-3.7,3.8-3.7s3.8,1.7,3.8,3.7C34.9,23.1,33.2,24.7,31.1,24.7z M31.1,18.2
+	c-1.6,0-2.9,1.3-2.9,2.8c0,1.6,1.3,2.8,2.9,2.8c1.6,0,2.9-1.3,2.9-2.8C34,19.4,32.7,18.2,31.1,18.2z M36.7,26.2l-2.3-0.6l-1.1-0.3
+	l-0.8,0.8l-1.3,1.2l-1.3-1.2L29,25.4l-1.2,0.3l-2.3,0.6l-1,0.2v5.3h1v-4.6l3.1-0.8l2.4,2.4l2.4-2.4l3.1,0.8v4.6h1v-5.3L36.7,26.2z
+	 M9.3,24.7c-2.1,0-3.8-1.7-3.8-3.7c0-2.1,1.7-3.7,3.8-3.7S13,18.9,13,21C13,23.1,11.3,24.7,9.3,24.7z M9.3,18.2
+	c-1.6,0-2.9,1.3-2.9,2.8c0,1.6,1.3,2.8,2.9,2.8s2.9-1.3,2.9-2.8C12.2,19.4,10.9,18.2,9.3,18.2z M14.8,26.2l-2.3-0.6l-1.1-0.3
+	l-0.8,0.8l-1.3,1.2L8,26.2l-0.8-0.8L6,25.7l-2.3,0.6l-1,0.2v5.3h1v-4.6l3.1-0.8l2.4,2.4l2.4-2.4l3.1,0.8v4.6h1v-5.3L14.8,26.2z"/>
+	<path d="M20.2,13.4c-2.1,0-3.8-1.7-3.8-3.7c0-2.1,1.7-3.7,3.8-3.7S24,7.6,24,9.6C24,11.7,22.3,13.4,20.2,13.4z M20.2,6.8
+	c-1.6,0-2.9,1.3-2.9,2.8c0,1.6,1.3,2.8,2.9,2.8s2.9-1.3,2.9-2.8C23.1,8.1,21.8,6.8,20.2,6.8z M25.7,14.9l-2.3-0.6L22.3,14l-0.8,0.8
+	l-1.3,1.2l-1.3-1.2L18.1,14l-1.2,0.3l-2.3,0.6l-1,0.2v5.3h1v-4.6l3.1-0.8l2.4,2.4l2.4-2.4l3.1,0.8v4.6h1v-5.3L25.7,14.9z"/>
+</g>
+<polygon points="27,24.9 27.1,24.9 27,24.8 "/>
+<polygon points="27,24.9 27.1,24.9 27,24.8 "/> </svg>  <span class="text-darkgray">Family-Advisor-Konto</span>  </a>                 <a href="#t-family-office-accounts" target="_self" class="page-scroll">
+                    <svg role="img">
+                        <title>Family Office</title>
+                        <polygon points="35.2,24.9 35.1,24.9 35.2,24.8 "/>
+<polygon points="35.2,24.9 35.1,24.9 35.2,24.8 "/>
+<g>
+	<path d="M31.1,24.7c-2.1,0-3.8-1.7-3.8-3.7c0-2.1,1.7-3.7,3.8-3.7s3.8,1.7,3.8,3.7C34.9,23.1,33.2,24.7,31.1,24.7z M31.1,18.2
+	c-1.6,0-2.9,1.3-2.9,2.8c0,1.6,1.3,2.8,2.9,2.8c1.6,0,2.9-1.3,2.9-2.8C34,19.4,32.7,18.2,31.1,18.2z M36.7,26.2l-2.3-0.6l-1.1-0.3
+	l-0.8,0.8l-1.3,1.2l-1.3-1.2L29,25.4l-1.2,0.3l-2.3,0.6l-1,0.2v5.3h1v-4.6l3.1-0.8l2.4,2.4l2.4-2.4l3.1,0.8v4.6h1v-5.3L36.7,26.2z
+	 M9.3,24.7c-2.1,0-3.8-1.7-3.8-3.7c0-2.1,1.7-3.7,3.8-3.7S13,18.9,13,21C13,23.1,11.3,24.7,9.3,24.7z M9.3,18.2
+	c-1.6,0-2.9,1.3-2.9,2.8c0,1.6,1.3,2.8,2.9,2.8s2.9-1.3,2.9-2.8C12.2,19.4,10.9,18.2,9.3,18.2z M14.8,26.2l-2.3-0.6l-1.1-0.3
+	l-0.8,0.8l-1.3,1.2L8,26.2l-0.8-0.8L6,25.7l-2.3,0.6l-1,0.2v5.3h1v-4.6l3.1-0.8l2.4,2.4l2.4-2.4l3.1,0.8v4.6h1v-5.3L14.8,26.2z"/>
+	<path d="M20.2,13.4c-2.1,0-3.8-1.7-3.8-3.7c0-2.1,1.7-3.7,3.8-3.7S24,7.6,24,9.6C24,11.7,22.3,13.4,20.2,13.4z M20.2,6.8
+	c-1.6,0-2.9,1.3-2.9,2.8c0,1.6,1.3,2.8,2.9,2.8s2.9-1.3,2.9-2.8C23.1,8.1,21.8,6.8,20.2,6.8z M25.7,14.9l-2.3-0.6L22.3,14l-0.8,0.8
+	l-1.3,1.2l-1.3-1.2L18.1,14l-1.2,0.3l-2.3,0.6l-1,0.2v5.3h1v-4.6l3.1-0.8l2.4,2.4l2.4-2.4l3.1,0.8v4.6h1v-5.3L25.7,14.9z"/>
+</g>
+<polygon points="27,24.9 27.1,24.9 27,24.8 "/>
+<polygon points="27,24.9 27.1,24.9 27,24.8 "/> </svg> <span>Family-Office-Konten</span>
+                </a>
+                <a href="#t-small-business-accounts" target="_self" class="page-scroll">
+                    <svg role="img">
+                        <title>Kleinunternehmen</title>
+                        <g>
+	<polygon points="23.626,32.625 24.727,32.625 24.727,20.723 29.915,20.723 29.915,32.625 31.016,32.625 31.016,19.624 
+	23.626,19.624 	"/>
+	<path d="M9.3,29.468h12.675v-9.885H9.3V29.468z M10.399,20.682h10.476v7.686H10.399V20.682z"/>
+	<rect x="9.037" y="8.335" width="22.292" height="1.1"/>
+	<polygon points="35.793,16.585 4.573,16.585 4.573,17.685 6.891,17.685 6.891,32.666 7.991,32.666 7.991,17.685 32.375,17.685 
+	32.375,32.666 33.475,32.666 33.475,17.685 35.793,17.685 	"/>
+	<rect x="6.021" y="13.835" width="28.188" height="1.1"/>
+	<rect x="7.584" y="11.085" width="25.25" height="1.1"/>
+</g> </svg> <span>Konten f&#252;r Kleinunternehmen</span>
+                </a>
+                <a href="#t-advisor-accounts" target="_self" class="page-scroll">
+                    <svg role="img">
+                        <title>Beraterkonten</title>
+                        <g>
+	<path d="M20.074,21.79c-4.898,0-8.884-3.985-8.884-8.884c0-4.898,3.985-8.883,8.884-8.883c4.898,0,8.883,3.985,8.883,8.883
+	C28.957,17.805,24.972,21.79,20.074,21.79z M20.074,5.123c-4.292,0-7.784,3.492-7.784,7.783c0,4.292,3.492,7.784,7.784,7.784
+	c4.292,0,7.783-3.492,7.783-7.784C27.857,8.615,24.365,5.123,20.074,5.123z"/>
+</g>
+<g>
+	<g>
+		<polygon points="6.935,34.906 5.835,34.906 5.835,26.176 15.211,23.051 15.559,24.094 6.935,26.969 		"/>
+	</g>
+	<g>
+		<polygon points="34.31,34.906 33.21,34.906 33.21,26.969 24.586,24.094 24.934,23.051 34.31,26.176 		"/>
+	</g>
+	<g>
+		<polygon points="19.985,39.414 17.36,35.361 18.601,27.576 17.226,24.817 18.21,24.327 19.742,27.4 18.512,35.117 20.016,37.438 
+		21.63,35.107 20.403,27.4 21.935,24.327 22.919,24.817 21.545,27.576 22.787,35.371 		"/>
+	</g>
+</g> </svg> <span>Beraterkonten</span>
+                </a>
+                <a href="#t-money-manager-accounts" target="_self" class="page-scroll">
+                    <svg role="img">
+                        <title>Money Manager</title>
+                        <g>
+	<path d="M20.074,21.79c-4.898,0-8.884-3.985-8.884-8.884c0-4.898,3.985-8.883,8.884-8.883c4.898,0,8.883,3.985,8.883,8.883
+	C28.957,17.805,24.972,21.79,20.074,21.79z M20.074,5.123c-4.292,0-7.784,3.492-7.784,7.783c0,4.292,3.492,7.784,7.784,7.784
+	c4.292,0,7.783-3.492,7.783-7.784C27.857,8.615,24.365,5.123,20.074,5.123z"/>
+</g>
+<g>
+	<g>
+		<polygon points="6.935,34.906 5.835,34.906 5.835,26.176 15.211,23.051 15.559,24.094 6.935,26.969 		"/>
+	</g>
+	<g>
+		<polygon points="34.31,34.906 33.21,34.906 33.21,26.969 24.586,24.094 24.934,23.051 34.31,26.176 		"/>
+	</g>
+	<g>
+		<polygon points="19.985,39.414 17.36,35.361 18.601,27.576 17.226,24.817 18.21,24.327 19.742,27.4 18.512,35.117 20.016,37.438 
+		21.63,35.107 20.403,27.4 21.935,24.327 22.919,24.817 21.545,27.576 22.787,35.371 		"/>
+	</g>
+</g> </svg> <span>Konten f&#252;r Money Manager</span>
+                </a>
+                <a href="#t-broker-accounts" target="_self" class="page-scroll">
+                    <svg role="img">
+                        <title>Broker &amp; Terminb&#246;rsenmakler (Futures Commission Merchants, FCM)</title>
+                        <g>
+	<path d="M20.074,21.79c-4.898,0-8.884-3.985-8.884-8.884c0-4.898,3.985-8.883,8.884-8.883c4.898,0,8.883,3.985,8.883,8.883
+	C28.957,17.805,24.972,21.79,20.074,21.79z M20.074,5.123c-4.292,0-7.784,3.492-7.784,7.783c0,4.292,3.492,7.784,7.784,7.784
+	c4.292,0,7.783-3.492,7.783-7.784C27.857,8.615,24.365,5.123,20.074,5.123z"/>
+</g>
+<g>
+	<g>
+		<polygon points="6.935,34.906 5.835,34.906 5.835,26.176 15.211,23.051 15.559,24.094 6.935,26.969 		"/>
+	</g>
+	<g>
+		<polygon points="34.31,34.906 33.21,34.906 33.21,26.969 24.586,24.094 24.934,23.051 34.31,26.176 		"/>
+	</g>
+	<g>
+		<polygon points="19.985,39.414 17.36,35.361 18.601,27.576 17.226,24.817 18.21,24.327 19.742,27.4 18.512,35.117 20.016,37.438 
+		21.63,35.107 20.403,27.4 21.935,24.327 22.919,24.817 21.545,27.576 22.787,35.371 		"/>
+	</g>
+</g> </svg> <span>Broker- und FCM-Konten</span>
+                </a>
+                <a href="#t-ptg-accounts" target="_self" class="page-scroll">
+                    <svg role="img">
+                        <title>Prop-Trader</title>
+                        <polygon points="35.2,24.9 35.1,24.9 35.2,24.8 "/>
+<polygon points="35.2,24.9 35.1,24.9 35.2,24.8 "/>
+<g>
+	<path d="M31.1,24.7c-2.1,0-3.8-1.7-3.8-3.7c0-2.1,1.7-3.7,3.8-3.7s3.8,1.7,3.8,3.7C34.9,23.1,33.2,24.7,31.1,24.7z M31.1,18.2
+	c-1.6,0-2.9,1.3-2.9,2.8c0,1.6,1.3,2.8,2.9,2.8c1.6,0,2.9-1.3,2.9-2.8C34,19.4,32.7,18.2,31.1,18.2z M36.7,26.2l-2.3-0.6l-1.1-0.3
+	l-0.8,0.8l-1.3,1.2l-1.3-1.2L29,25.4l-1.2,0.3l-2.3,0.6l-1,0.2v5.3h1v-4.6l3.1-0.8l2.4,2.4l2.4-2.4l3.1,0.8v4.6h1v-5.3L36.7,26.2z
+	 M9.3,24.7c-2.1,0-3.8-1.7-3.8-3.7c0-2.1,1.7-3.7,3.8-3.7S13,18.9,13,21C13,23.1,11.3,24.7,9.3,24.7z M9.3,18.2
+	c-1.6,0-2.9,1.3-2.9,2.8c0,1.6,1.3,2.8,2.9,2.8s2.9-1.3,2.9-2.8C12.2,19.4,10.9,18.2,9.3,18.2z M14.8,26.2l-2.3-0.6l-1.1-0.3
+	l-0.8,0.8l-1.3,1.2L8,26.2l-0.8-0.8L6,25.7l-2.3,0.6l-1,0.2v5.3h1v-4.6l3.1-0.8l2.4,2.4l2.4-2.4l3.1,0.8v4.6h1v-5.3L14.8,26.2z"/>
+	<path d="M20.2,13.4c-2.1,0-3.8-1.7-3.8-3.7c0-2.1,1.7-3.7,3.8-3.7S24,7.6,24,9.6C24,11.7,22.3,13.4,20.2,13.4z M20.2,6.8
+	c-1.6,0-2.9,1.3-2.9,2.8c0,1.6,1.3,2.8,2.9,2.8s2.9-1.3,2.9-2.8C23.1,8.1,21.8,6.8,20.2,6.8z M25.7,14.9l-2.3-0.6L22.3,14l-0.8,0.8
+	l-1.3,1.2l-1.3-1.2L18.1,14l-1.2,0.3l-2.3,0.6l-1,0.2v5.3h1v-4.6l3.1-0.8l2.4,2.4l2.4-2.4l3.1,0.8v4.6h1v-5.3L25.7,14.9z"/>
+</g>
+<polygon points="27,24.9 27.1,24.9 27,24.8 "/>
+<polygon points="27,24.9 27.1,24.9 27,24.8 "/> </svg> <span>Prop-Trader-Konten</span>
+                </a>
+                <a href="#t-hedge-fund-accounts" target="_self" class="page-scroll">
+                    <svg role="img">
+                        <title>Hedge- und Investmentfonds</title>
+                        <g>
+	<path d="M20.074,21.79c-4.898,0-8.884-3.985-8.884-8.884c0-4.898,3.985-8.883,8.884-8.883c4.898,0,8.883,3.985,8.883,8.883
+	C28.957,17.805,24.972,21.79,20.074,21.79z M20.074,5.123c-4.292,0-7.784,3.492-7.784,7.783c0,4.292,3.492,7.784,7.784,7.784
+	c4.292,0,7.783-3.492,7.783-7.784C27.857,8.615,24.365,5.123,20.074,5.123z"/>
+</g>
+<g>
+	<g>
+		<polygon points="6.935,34.906 5.835,34.906 5.835,26.176 15.211,23.051 15.559,24.094 6.935,26.969 		"/>
+	</g>
+	<g>
+		<polygon points="34.31,34.906 33.21,34.906 33.21,26.969 24.586,24.094 24.934,23.051 34.31,26.176 		"/>
+	</g>
+	<g>
+		<polygon points="19.985,39.414 17.36,35.361 18.601,27.576 17.226,24.817 18.21,24.327 19.742,27.4 18.512,35.117 20.016,37.438 
+		21.63,35.107 20.403,27.4 21.935,24.327 22.919,24.817 21.545,27.576 22.787,35.371 		"/>
+	</g>
+</g> </svg> <span>Konten f&#252;r Hedge- und Investmentfonds</span>
+                </a>
+                <a href="#t-compliance-officers" target="_self" class="page-scroll">
+                    <svg role="img">
+                        <title>Compliance-Beauftragte</title>
+                        <g>
+	<path d="M20.074,21.79c-4.898,0-8.884-3.985-8.884-8.884c0-4.898,3.985-8.883,8.884-8.883c4.898,0,8.883,3.985,8.883,8.883
+	C28.957,17.805,24.972,21.79,20.074,21.79z M20.074,5.123c-4.292,0-7.784,3.492-7.784,7.783c0,4.292,3.492,7.784,7.784,7.784
+	c4.292,0,7.783-3.492,7.783-7.784C27.857,8.615,24.365,5.123,20.074,5.123z"/>
+</g>
+<g>
+	<g>
+		<polygon points="6.935,34.906 5.835,34.906 5.835,26.176 15.211,23.051 15.559,24.094 6.935,26.969 		"/>
+	</g>
+	<g>
+		<polygon points="34.31,34.906 33.21,34.906 33.21,26.969 24.586,24.094 24.934,23.051 34.31,26.176 		"/>
+	</g>
+	<g>
+		<polygon points="19.985,39.414 17.36,35.361 18.601,27.576 17.226,24.817 18.21,24.327 19.742,27.4 18.512,35.117 20.016,37.438 
+		21.63,35.107 20.403,27.4 21.935,24.327 22.919,24.817 21.545,27.576 22.787,35.371 		"/>
+	</g>
+</g> </svg> <span>Konten f&#252;r Compliance-Beauftragte</span>
+                </a>
+                <a href="#t-administrators" target="_self" class="page-scroll">
+                    <svg role="img">
+                        <title>Verwalter</title>
+                        <g>
+	<path d="M32.265,12.225H6.498V7.958h25.767V12.225z M7.598,11.125h23.567V9.058H7.598V11.125z"/>
+	<path d="M32.265,18.975H6.498v-4.266h25.767V18.975z M7.598,17.875h23.567v-2.067H7.598V17.875z"/>
+	<path d="M18.848,25.725H6.498v-4.267h12.35V25.725z M7.598,24.625h10.15v-2.067H7.598V24.625z"/>
+	<polygon points="27.653,30.967 24.519,26.882 25.629,26.03 27.698,28.727 33.843,21.354 34.918,22.251 	"/>
+	<path d="M32.656,26.874c0.112,0.418,0.191,0.849,0.191,1.301c0,2.784-2.266,5.05-5.05,5.05
+	c-2.784,0-5.05-2.266-5.05-5.05s2.266-5.05,5.05-5.05c0.948,0,1.826,0.279,2.585,0.735l0.927-1.088
+	c-1.012-0.66-2.217-1.047-3.512-1.047c-3.557,0-6.45,2.894-6.45,6.45s2.894,6.45,6.45,6.45c3.557,0,6.45-2.894,6.45-6.45
+	c0-0.896-0.184-1.749-0.515-2.524L32.656,26.874z"/>
+</g> </svg> <span>Verwalter-Konten</span> 
+                </a> 
+            </div>
+        </div>
+    </div>
+</section>
+<span class="id-drop"><span id="t-account-structures-individuals"></span></span>
+<section id="account-structures-individuals" class="acct-detail">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+        
+                        <h4>Einzel- und Gemeinschaftskonten</h4>
+        
+          
+        				<div class="table-responsive">
+					<table cellspacing="0" cellpadding="0" border="0" width="100%" class="table table-striped table-bordered">
+						<thead>
+							<tr>
+								<th width="30%" align="left" class="table_header"> </th>
+								<th width="40%" align="center" class="table_header">Einzelkonten</th>
+								
+								<th width="40%" align="center" class="table_header">Gemeinschaftskonten</th>							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td align="left"><strong>Kundenbeschreibung</strong></td>
+								<td align="left">Eine Person ist allein Kontoinhaber/-in.</td>
+								
+								<td align="left">Zwei Personen sind zusammen Kontoinhaber/-innen. Gemeinschaftskonten sind als folgende Kontotypen verf&#252;gbar: Tenants with Rights of Survivorship (Gemeinschaftseigent&#252;mer mit Recht auf Weiterverf&#252;gung &#252;ber das Konto bei Ableben einer der Parteien), Tenancy in Common (gemeinschaftliches Eigentum), Community Property (Errungenschaftsgemeinschaft) oder Tenancy by the Entirety (Ehepartner halten Eigentum gemeinsam als ein Rechtstr&#228;ger).</td>							</tr>
+							<tr>
+								<td align="left"><strong>Kontobeschreibung</strong></td>
+								<td align="left">Verm&#246;genswerte werden in einem einzelnen Konto mit einer Person als Kontoinhaber/-in gehalten.</td>
+								
+								<td align="left">Verm&#246;genswerte werden in einem einzelnen Konto mit zwei Personen als Kontoinhaber/-innen gehalten.</td>							</tr>
+							<tr>
+								<td align="left"><strong>Trading-Funktionen und Kontoverwaltung</strong></td>
+								<td align="left">Kontoinhaber/-in hat Zugriff auf alle Funktionen. Zus&#228;tzliche Benutzer/-innen k&#246;nnen per Vollmacht hinzugef&#252;gt werden.</td>
+								
+								<td align="left">Beide Kontoinhaber/-innen haben Zugriff auf alle Funktionen. Zus&#228;tzliche Benutzer/-innen k&#246;nnen per Vollmacht hinzugef&#252;gt werden.</td>							</tr>
+							<tr>
+								<td align="left"><strong>Margin</strong></td>
+                                
+                                								<td align="left">Es werden sowohl Cash- als auch Marginkonten angeboten.</td>
+                                
+                                								<td align="left">Wie beim Einzelkonto.</td>							</tr>
+						</tbody>
+					</table>
+				</div>
+        
+        				<div>
+                    <a href="../../errorMessages/404.html#open-account" target="_self" class="btn btn-sm btn-default" >Konto er&#246;ffnen</a> <a href="../../errorMessages/404.html" target="_self" class="btn btn-sm btn-default" >Mehr erfahren</a>
+                </div>
+	        </div>
+        </div>
+    </div>
+</section>
+<span class="id-drop"><span id="t-famliy-advisor-accounts"></span></span>
+<section id="famliy-advisor-accounts" class="acct-detail">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+
+
+                				<h4>Family-Konto</h4>
+                
+                				<div class="table-responsive">
+					<table cellspacing="0" cellpadding="0" border="0" width="100%" class="table table-striped table-bordered">
+                        
+                        						<tbody>
+							<tr>
+								<td align="left" width="30%"><strong>Kundenbeschreibung</strong></td>
+								<td align="left">Eine nat&#252;rliche Person, das &#8222;Familienoberhaupt&#8220; (Head of Family, HOF), verwaltet die Konten von bis zu f&#252;nf Familienmitgliedern.</td>
+							</tr>
+							<tr>
+								<td align="left"><strong>Kontobeschreibung</strong></td>
+								<td align="left">Ein Masterkonto, das mit Unterkonten nat&#252;rlicher Personen verbunden ist. Das Masterkonto wird f&#252;r die Zuteilung von Transaktionen verwendet.</td>
+							</tr>
+							<tr>
+								<td align="left"><strong>Trading-Funktionen und Kontoverwaltung</strong></td>
+								<td align="left">Das Masterkonto bietet Zugriff auf die Trading- und die meisten Kontoverwaltungsfunktionen. Unterkonten haben keinen Zugriff auf Trading-Funktionen, k&#246;nnen aber alle Kontoverwaltungsfunktionen nutzen.</td>
+							</tr>
+							<tr>
+								<td align="left"><strong>Margin</strong></td>
+								<td align="left">Es werden sowohl Cash- als auch Marginkonten angeboten. Margin-Berechnungen erfolgen f&#252;r jedes Unterkonto einzeln.</td>
+							</tr>
+						</tbody>
+                        
+                        					</table>
+				</div>
+                <div>
+                    <a href="../../errorMessages/404.html#open-account" target="_self" class="btn btn-sm btn-default" >Konto er&#246;ffnen</a>  <a href="family-account-ie.html" target="_self" class="btn btn-sm btn-default" >Mehr erfahren</a>                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<span class="id-drop"><span id="t-family-office-accounts"></span></span>
+<section id="family-office-accounts" class="acct-detail">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<h4>Family-Office-Konten</h4>
+				<div class="table-responsive">
+					<table cellspacing="0" cellpadding="0" border="0" width="100%" class="table table-striped table-bordered">
+						<tbody>
+							<tr>
+								<td align="left" width="30%"><strong>Kundenbeschreibung</strong></td>
+								<td align="left">Eine nat&#252;rliche Person, die ein Family Office Manager ist.</td>
+							</tr>
+							<tr>
+								<td align="left"><strong>Kontobeschreibung</strong></td>
+								<td align="left"> Ein Masterkonto, das mit mehreren Kundenkonten verkn&#252;pft ist.</td>
+							</tr>
+							<tr>
+								<td align="left"><strong>Kundengeb&#252;hren</strong></td>
+								<td align="left">% des Eigenkapitals, Festpreis, % des G&amp;V, Geb&#252;hr pro Trade und manuelle Abrechnung.</td>
+							</tr>
+							<tr>
+								<td align="left"><strong>Trading-Funktionen und Kontoverwaltung</strong></td>
+								<td align="left">Family Office Manager k&#246;nnen auf einige oder alle Konten und Funktionen zugreifen. Die Kundinnen und Kunden k&#246;nnen Handelsgesch&#228;fte t&#228;tigen, Guthaben direkt &#252;bertragen und Kontoausz&#252;ge einsehen.</td>
+							</tr>
+							<tr>
+								<td align="left"><strong>Margin</strong></td>
+                                
+                                								<td align="left">Es werden sowohl Cash- als auch Marginkonten angeboten. Margin-Berechnungen erfolgen f&#252;r jedes Kundenkonto einzeln.</td>
+                                
+                                							</tr>
+							<tr>
+								<td align="left"><strong>Pre-Trade-Allokation</strong></td>
+								<td align="left">Family Office Manager k&#246;nnen vor dem Trade Zuteilungen nach prozentualen Anteilen je Konto, Eigenkapital-Anteil oder Anteil an Positionen vornehmen.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div>
+                    <a href="../../errorMessages/404.html#open-account" target="_self" class="btn btn-sm btn-default" >Konto er&#246;ffnen</a> <a href="../../errorMessages/404.html" target="_self" class="btn btn-sm btn-default" >Mehr erfahren</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<span class="id-drop"><span id="t-small-business-accounts"></span></span>
+<section id="small-business-accounts" class="acct-detail">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<h4>Konten f&#252;r Kleinunternehmen</h4>
+				<div class="table-responsive">
+					<table cellspacing="0" cellpadding="0" border="0" width="100%" class="table table-striped table-bordered">
+						<tbody>
+							<tr>
+								<td align="left" width="30%"><strong>Kundenbeschreibung</strong></td>
+								<td align="left">Ein Kleinunternehmen in Form einer Kapitalgesellschaft, einer Partnerschaftsgesellschaft, einer Gesellschaft mit beschr&#228;nkter Haftung oder einer Gesellschaft ohne eigene Rechtspers&#246;nlichkeit.</td>
+							</tr>
+							<tr>
+								<td align="left"><strong>Kontobeschreibung</strong></td>
+								<td align="left">Ein Einzelkonto mit Verm&#246;genswerten, die einer Organisation als Kontoninhaber geh&#246;ren.</td>
+							</tr>
+							<tr>
+								<td align="left"><strong>Trading-Funktionen und Kontoverwaltung</strong></td>
+								<td align="left">F&#252;r die Benutzer/-innen k&#246;nnen Zugriffsrechte f&#252;r alle oder nur bestimmte Trading- und Kontoverwaltungsfunktionen eingerichtet werden.</td>
+							</tr>
+							<tr>
+								<td align="left"><strong>Margin</strong></td>
+                                
+                                								<td align="left">Es werden sowohl Cash- als auch Marginkonten angeboten.</td>
+                                
+                                							</tr>
+						</tbody>
+					</table>
+				</div>
+                <div>
+                    <a href="../../errorMessages/404.html#open-account" target="_self" class="btn btn-sm btn-default" >Konto er&#246;ffnen</a> <a href="../../errorMessages/404.html" target="_self" class="btn btn-sm btn-default" >Mehr erfahren</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<span class="id-drop"><span id="t-advisor-accounts"></span></span>
+<section id="advisor-accounts" class="acct-detail">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+		    <h4>Beraterkonten</h4>
+				<div class="table-responsive">
+					<table cellspacing="0" cellpadding="0" border="0" width="100%" class="table table-striped table-bordered">
+						<tbody>
+							<tr>
+								<td align="left" width="30%"><strong>Kundenbeschreibung</strong></td>
+                                
+                                								<td align="left">Eine Organisation, die als Berater registriert ist und als solcher sowohl die Verm&#246;gensverwaltung (Wealth Management) als auch die Verwaltung des Kundenkapitals (Money Management) &#252;bernimmt.</td>
+                                
+                                							</tr>
+							<tr>
+								<td align="left"><strong>Kontobeschreibung</strong></td>
+								<td align="left">Ein Masterkonto, das mit Kundenkonten von nat&#252;rlichen Personen oder Unternehmen verkn&#252;pft ist. Das Masterkonto dient zur Geb&#252;hrenabrechnung und zur Zuteilung von Transaktionen. Die Berater/-innen k&#246;nnen jeweils ein eigenes Trading-Konto er&#246;ffnen. F&#252;r diesen Kontotyp wird eine White-Branding-Option angeboten, durch die das Corporate Design der Beratungsfirma integriert wird.</td>
+							</tr>
+							<tr>
+								<td align="left"><strong>Kundengeb&#252;hren</strong></td>
+								<td align="left">% des Eigenkapitals, Festpreis, % des G&amp;V, Geb&#252;hr pro Trade und manuelle Abrechnung.</td>
+							</tr>
+							<tr>
+								<td align="left"><strong>Trading-Funktionen und Kontoverwaltung</strong></td>
+								<td align="left">Das Beraterkonto bietet Zugriff auf die Trading- und die meisten Kontoverwaltungsfunktionen. Beratungsfirmen (Organisationen) k&#246;nnen f&#252;r mehrere Benutzer/-innen Zugriff auf verschiedene Funktionen und f&#252;r unterschiedliche Kundenkonten einrichten. Kundenkonten haben standardm&#228;&#223;ig keinen Zugriff auf Trading-Funktionen. Es ist allerdings m&#246;glich, diesen Zugriff zu aktivieren. Kundenkonten haben Zugriff auf alle Kontoverwaltungsfunktionen.</td>
+							</tr>
+							<tr>
+								<td align="left"><strong>Margin</strong></td>
+                                
+                                								<td align="left">Es werden sowohl Cash- als auch Marginkonten angeboten. Margin-Berechnungen erfolgen f&#252;r jedes Kundenkonto einzeln.</td>
+                                
+                                							</tr>
+							<tr>
+								<td align="left"><strong>Pre-Trade-Allokation</strong></td>
+								<td align="left">Berater/-innen k&#246;nnen vor dem Trade verrechnete Transaktionen (&#8222;Cleared Trades&#8220;) einzelnen Kundenkonten nach prozentualen Anteilen je Konto, nach Eigenkapital-Anteil oder nach Anteil an Positionen zuteilen.</td>
+							</tr>
+							<tr>
+								<td align="left"><strong>Kontostruktur mit mehreren Ebenen</strong></td>
+								<td align="left">Berater/-innen k&#246;nnen unter ihrem Masterkonto ein Beraterkonto mit Kundenkonten, ein Multi-Hedgefonds-Konto mit Fonds- oder SMA-Konten oder ein Konto mit getrennten Handelslimits (Separate Trading Limit, STL) hinzuf&#252;gen.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div>
+                    <a href="../../errorMessages/404.html#open-account" target="_self" class="btn btn-sm btn-default" >Konto er&#246;ffnen</a> <a href="../../errorMessages/404.html" target="_self" class="btn btn-sm btn-default" >Mehr erfahren</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<span class="id-drop"><span id="t-money-manager-accounts"></span></span>
+<section id="money-manager-accounts" class="acct-detail">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<h4>Konten f&#252;r Money Manager</h4>
+				<div class="table-responsive">
+					<table cellspacing="0" cellpadding="0" border="0" width="100%" class="table table-striped table-bordered">
+						<tbody>
+							<tr>
+								<td align="left" width="30%"><strong>Kundenbeschreibung</strong></td>
+								<td align="left">Eine nat&#252;rliche Person oder eine Organisation, die als Berater registriert ist und von einem Verm&#246;gensverwalter (Wealth Manager) beauftragt wird, das gesamte Kundenverm&#246;gen oder einen Teil davon zu verwalten.</td>
+							</tr>
+							<tr>
+								<td align="left"><strong>Kontobeschreibung</strong></td>
+								<td align="left">Ein neues, separates Kundenkonto wird f&#252;r jeden Kunden er&#246;ffnet, dessen Kapital von einem Money Manager verwaltet wird. Money Manager k&#246;nnen Gelder von mehreren Verm&#246;gensverwaltern (Wealth Manager) und deren Kundinnen und Kunden parallel verwalten.</td>
+							</tr>
+							<tr>
+								<td align="left"><strong>Kundengeb&#252;hren</strong></td>
+								<td align="left">%&nbsp;des Eigenkapitals, Pauschalgeb&#252;hr, %&nbsp;des G&amp;V, Geb&#252;hr pro Transaktion und manuelle Abrechnung m&#246;glich, festgelegt durch den Verm&#246;gensverwalter (Wealth Manager).</td>
+							</tr>
+							<tr>
+								<td align="left"><strong>Trading-Funktionen und Kontoverwaltung</strong></td>
+								<td align="left">Money Manager haben nur auf Trading-Funktionen Zugriff. Verm&#246;genswerte werden vom Verm&#246;gensverwalter (Wealth Manager) auf das Money-Manager-Kundenkonto verschoben. Organisationen, die als Money Manager agieren, k&#246;nnen f&#252;r mehrere Benutzer/-innen Zugriff auf verschiedene Funktionen und f&#252;r unterschiedliche Kundenkonten einrichten.</td>
+							</tr>
+							<tr>
+								<td align="left"><strong>Margin</strong></td>
+								<td align="left">Das Money-Manager-Kundenkonto &#252;bernimmt den Margintyp des Kundenkontos beim Verm&#246;gensverwalter (Wealth Manager). Die Marginberechnung erfolgt f&#252;r die Kundenkonten beim Verm&#246;gensverwalter (Wealth Manager) und beim Money Manager getrennt.</td>
+							</tr>
+							<tr>
+								<td align="left"><strong>Pre-Trade-Allokation</strong></td>
+								<td align="left">Wie beim Beraterkonto</td>
+							</tr>
+							<tr>
+								<td align="left"><strong>Kontostruktur mit mehreren Ebenen</strong></td>
+								<td align="left">Nicht verf&#252;gbar.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div>
+                    <a href="../../errorMessages/404.html#open-account" target="_self" class="btn btn-sm btn-default" >Konto er&#246;ffnen</a> <a href="../../errorMessages/404.html" target="_self" class="btn btn-sm btn-default" >Mehr erfahren</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<span class="id-drop"><span id="t-broker-accounts"></span></span>
+<section id="broker-accounts" class="acct-detail">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<h4>Broker- und FCM-Konten</h4>
+				<div class="table-responsive">
+					<table cellspacing="0" cellpadding="0" border="0" width="100%" class="table table-striped table-bordered">
+						<thead>
+							<tr>
+								<th width="40%" align="left" class="table_subheader"></th>
+								<th width="60%" align="left" class="table_subheader">Vollst&#228;ndig offengelegt</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td align="left"><strong>Kundenbeschreibung</strong></td>
+								<td align="left">Ein registrierter Broker oder Futures Commission Merchant (FCM), der Marketing- und Beratungsleistungen erbringt. Wir &#252;bernehmen alle &#252;brigen Leistungen, wie z.&nbsp;B. die Kundenkontoer&#246;ffnung, Ausf&#252;hrungen und Clearing von Transaktionen und Reporting.</td>
+							</tr>
+							<tr>
+								<td align="left"><strong>Kontobeschreibung</strong></td>
+								<td align="left">Ein Masterkonto, das mit einem Kundenkonto einer nat&#252;rlichen Personen oder Organisation verkn&#252;pft ist. Das Masterkonto dient dem Geb&#252;hreneinzug. Broker k&#246;nnen jeweils ein eigenes Trading-Konto er&#246;ffnen. F&#252;r diesen Kontotyp wird eine White-Branding-Option angeboten, durch die das Corporate Design des Brokers integriert wird.</td>
+							</tr>
+							<tr>
+								<td align="left"><strong>Kundengeb&#252;hren</strong></td>
+								<td align="left">Geb&#252;hr pro Trade.</td>
+							</tr>
+							<tr>
+								<td align="left"><strong>Trading-Funktionen und Kontoverwaltung</strong></td>
+								<td align="left">Die Broker haben Zugriff auf die meisten Kontoverwaltungsfunktionen. Sie k&#246;nnen f&#252;r mehrere Benutzer/-innen Zugriff auf verschiedene Funktionen und f&#252;r unterschiedliche Kundenkonten einrichten. Kundenkonten haben keinen Zugriff auf Trading-Funktionen, k&#246;nnen aber alle Kontoverwaltungsfunktionen nutzen.</td>
+							</tr>
+							<tr>
+								<td align="left"><strong>Margin</strong></td>
+                                
+                                								<td align="left">Es werden sowohl Cash- als auch Marginkonten angeboten. Margin-Berechnungen erfolgen f&#252;r jedes Kundenkonto einzeln.</td>
+                                
+                                							</tr>
+							<tr>
+								<td align="left"><strong>Pre-Trade-Allokation</strong></td>
+								<td align="left">Nicht verf&#252;gbar.</td>
+							</tr>
+							<tr>
+								<td align="left"><strong>Kontostruktur mit mehreren Ebenen</strong></td>
+								<td align="left">Broker k&#246;nnen unter ihrem Masterkonto ein Beraterkonto mit Kundenkonten, ein Multi-Hedgefonds-Konto mit Fonds- oder SMA-Konten oder ein Konto mit getrennten Handelslimits (Separate Trading Limit, STL) hinzuf&#252;gen.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div>
+                    <a href="../../errorMessages/404.html#open-account" target="_self" class="btn btn-sm btn-default" >Konto er&#246;ffnen</a> <a href="../../errorMessages/404.html" target="_self" class="btn btn-sm btn-default" >Mehr erfahren</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<span class="id-drop"><span id="t-ptg-accounts"></span></span>
+<section id="ptg-accounts" class="acct-detail">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<h4>Prop-Trader-Konten</h4>
+				<div class="table-responsive">
+					<table cellspacing="0" cellpadding="0" border="0" width="100%" class="table table-striped table-bordered">
+						<thead>
+							<tr>
+								<th width="33.333%" align="left" class="table_subheader"></th>
+								<th width="33.333%" align="left" class="table_subheader">Organisation</th>
+								<th width="33.333%" align="center" class="table_subheader">Konten mit getrennten Handelslimits (Separate Trading Limit, STL)</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td align="left"><strong>Kundenbeschreibung</strong></td>
+								<td align="left">Eine Kapitalgesellschaft, Partnerschaftsgesellschaft, Gesellschaft mit beschr&#228;nkter Haftung oder Gesellschaften ohne eigene Rechtspers&#246;nlichkeit.</td>
+								<td align="left">Wie bei Organisationen.</td>
+							</tr>
+							<tr>
+								<td align="left"><strong>Kontobeschreibung</strong></td>
+								<td align="left">Ein Einzelkonto mit Verm&#246;genswerten, die der Gesellschaft als Kontoninhaberin geh&#246;ren.</td>
+								<td align="left">Mehrere verkn&#252;pfte Konten, die alle im Namen derselben Gesellschaft gef&#252;hrt werden. Die Verm&#246;genswerte in allen Konten geh&#246;ren der Gesellschaft, die Inhaberin der Konten ist. Jedes Konto verf&#252;gt &#252;ber eigene Handelslimits und kann eine eigene Handelsstrategie verwenden. </td>
+							</tr>
+							<tr>
+								<td align="left"><strong>Trading-Funktionen und Kontoverwaltung</strong></td>
+								<td align="left">Mehrere Benutzer/-innen m&#246;glich. F&#252;r die Benutzer/-innen k&#246;nnen Zugriffsrechte f&#252;r alle oder nur bestimmte Trading- und Kontoverwaltungsfunktionen eingerichtet werden.</td>
+								<td align="left">Masterkontobenutzer/-innen werden explizit benannt und k&#246;nnen Zugriffsrechte f&#252;r alle oder nur bestimmte Trading- und Kontoverwaltungsfunktionen erhalten. Die Benutzer/-innen der Unterkonten haben nur Zugriff auf die Funktionen ihres eigenen Kontos.</td>
+							</tr>
+							<tr>
+								<td align="left"><strong>Margin</strong></td>
+                                
+                                								<td align="left">Es werden sowohl Cash- als auch Marginkonten angeboten.</td>
+								<td align="left">Es werden sowohl Cash- als auch Marginkonten angeboten. Bei der Ordereingabe wird die Margin f&#252;r jedes Unterkonto einzeln ermittelt. Zum Berechnen des Mindesteinschusses (Maintenance Margin) und Liquidationswerts werden alle Konten zusammengef&#252;hrt.</td>
+                                
+                                							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div>
+                    <a href="../../errorMessages/404.html#open-account" target="_self" class="btn btn-sm btn-default" >Konto er&#246;ffnen</a> <a href="../../errorMessages/404.html" target="_self" class="btn btn-sm btn-default" >Mehr erfahren</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<span class="id-drop"><span id="t-hedge-fund-accounts"></span></span>
+<section id="hedge-fund-accounts" class="acct-detail">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<h4>Konten f&#252;r Hedgefonds und Investmentfonds</h4>
+				<div class="table-responsive">
+					<table cellspacing="0" cellpadding="0" border="0" width="100%" class="table table-striped table-bordered">
+						<thead>
+							<tr>
+								<th width="25%" align="left" class="table_subheader"></th>
+								<th width="25%" align="left" class="table_subheader">Einzelfondskonto</th>
+								<th width="25%" align="center" class="table_subheader">Multifondskonto</th>
+								<th width="25%" align="center" class="table_subheader">Allokationskonto (Give-Up)</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td align="left"><strong>Kundenbeschreibung</strong></td>
+								<td align="left">Ein einziger Fonds, der von einem Investmentmanager verwaltet wird.</td>
+								<td align="left">Mehrere Fonds, die von einem Investmentmanager verwaltet werden.</td>
+								<td align="left">Mehrere vermischte Fonds, die von einem Investmentmanager verwaltet werden. Investmentmanager verwalten die Aktivit&#228;ten der einzelnen Fonds separat oder &#252;bergeben diese Aufgabe an einen externen Primebroker.</td>
+							</tr>
+							<tr>
+								<td align="left"><strong>Kontobeschreibung</strong></td>
+								<td align="left">Ein einzelnes Konto, f&#252;r das mehrere Benutzer/-innen angelegt werden k&#246;nnen. Durch die Konfiguration von Unterkonten f&#252;r autorisierte Trader ergibt sich die M&#246;glichkeit, mehrere Unterkonten f&#252;r verschiedene Handelsstrategien zu f&#252;hren.</td>
+								<td align="left">Ein Masterkonto zur Fondsverwaltung, das mit mehreren einzelnen Fondskonten verbunden ist. Das Masterkonto wird f&#252;r die Zuteilung von Transaktionen verwendet. Es k&#246;nnen auch einzelne Kundenkonten unter dem Masterkonto er&#246;ffnet werden.</td>
+								<td align="left">Ein einzelnes Allokationskonto f&#252;r Handelsausf&#252;hrungen, &#252;ber das die Trades am Ende des Handelstags an externe Primebroker &#252;bergeben werden k&#246;nnen (Give-Up).</td>
+							</tr>
+							<tr>
+								<td align="left"><strong>Kundengeb&#252;hren</strong></td>
+								<td align="left">Soft-Dollars sind f&#252;r f&#252;nf verschiedene Provisionsstufen verf&#252;gbar.</td>
+								<td align="left">Wie beim Einzelfondskonto.</td>
+								<td align="left">Wie beim Einzelfondskonto.</td>
+							</tr>
+							<tr>
+								<td align="left"><strong>Trading-Funktionen und Kontoverwaltung</strong></td>
+								<td align="left">F&#252;r die Benutzer/-innen k&#246;nnen Zugriffsrechte f&#252;r alle oder nur bestimmte Trading- und Kontoverwaltungsfunktionen eingerichtet werden.</td>
+								<td align="left">Admin-Benutzer/-innen von Master-Fondsverwaltungskonten haben Zugriff auf einige oder alle Fonds oder Funktionen. Jeder Fonds kann seine eigenen Benutzer/-innen mit eigenen Zugriffsrechten auf einige oder alle Kontoverwaltungsfunktionen haben.</td>
+								<td align="left">Fonds-Investmentmanager haben Zugriff auf einige oder alle Funktionen.</td>
+							</tr>
+							<tr>
+								<td align="left"><strong>Margin</strong></td>
+                                
+                                								<td align="left">Es werden sowohl Cash- als auch Marginkonten angeboten.</td>
+								<td align="left">Es werden sowohl Cash- als auch Marginkonten angeboten. Margin-Berechnungen erfolgen f&#252;r jedes Fondskonto einzeln.</td>
+								<td align="left">Es werden sowohl Cash- als auch Marginkonten angeboten. Alle Fonds-Transaktionen werden konsolidiert und die Margin-Berechnung erfolgt f&#252;r alle gemeinsam.</td>
+                                
+                                							</tr>
+							<tr>
+								<td align="left"><strong>Pre-Trade-Allokation</strong></td>
+								<td align="left">Nicht verf&#252;gbar.</td>
+								<td align="left">Admin-Benutzer/-innen von Master-Fonds k&#246;nnen vor dem Trade Zuteilungen nach prozentualem Anteil je Konto, Eigenkapital-Anteil oder Anteil an Positionen vornehmen.</td>
+								<td align="left">Nicht verf&#252;gbar.</td>
+							</tr>
+							<tr>
+								<td align="left"><strong>Kontostruktur mit mehreren Ebenen</strong></td>
+								<td align="left">Nicht verf&#252;gbar</td>
+								<td align="left">Investmentmanager k&#246;nnen unter ihrem Masterkonto ein Beraterkonto mit Kundenkonten, ein Multi-Hedgefonds-Konto mit Fonds- oder SMA-Konten oder ein Konto mit getrennten Handelslimits (Separate Trading Limit, STL) hinzuf&#252;gen.</td>
+								<td align="left">Wie beim offengelegten Broker.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div>
+                    <a href="../../errorMessages/404.html#open-account" target="_self" class="btn btn-sm btn-default" >Konto er&#246;ffnen</a> <a href="../../errorMessages/404.html" target="_self" class="btn btn-sm btn-default" >Mehr erfahren</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<span class="id-drop"><span id="t-compliance-officers"></span></span>
+<section id="compliance-officers" class="acct-detail">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<h4>Compliance-Beauftragte</h4>
+				<div class="table-responsive">
+					<table cellspacing="0" cellpadding="0" border="0" width="100%" class="table table-striped table-bordered">
+						<thead>
+							<tr>
+								<th width="30%" align="left" class="table_subheader"></th>
+								<th align="left" class="table_subheader">EmployeeTrack</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td align="left"><strong>Kundenbeschreibung</strong></td>
+								<td align="left">Eine Organisation, die die Handelsaktivit&#228;ten einiger oder all ihrer Mitarbeiter/-innen &#252;berwachen muss.</td>
+							</tr>
+							<tr>
+								<td align="left"><strong>Kontobeschreibung</strong></td>
+								<td align="left">Ein einzelnes Konto, das mit mehreren Einzel- bzw. Gemeinschaftskonten der Mitarbeiter/-innen verkn&#252;pft ist, um die Trading-Aktivit&#228;ten dieser Konten zu &#252;berwachen.</td>
+							</tr>
+							<tr>
+								<td align="left"><strong>Trading-Funktionen und Kontoverwaltung</strong></td>
+								<td align="left">Die Trading-Aktivit&#228;ten liegen in der Hand der Mitarbeiter/-innen des Brokers und das Compliance-Team hat Zugang zu diesen Aktivit&#228;ten.</td>
+							</tr>
+							<tr>
+								<td align="left"><strong>Margin</strong></td>
+								<td align="left">Nicht anwendbar.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div>
+                    <a href="../../errorMessages/404.html#open-account" target="_self" class="btn btn-sm btn-default" >Konto er&#246;ffnen</a> <a href="../../errorMessages/404.html" target="_self" class="btn btn-sm btn-default" >Mehr erfahren</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<span class="id-drop"><span id="t-administrators"></span></span>
+<section id="administrators" class="acct-detail">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<h4>Verwalter</h4>
+				<div class="table-responsive">
+					<table cellspacing="0" cellpadding="0" border="0" width="100%" class="table table-striped table-bordered">
+						<tbody>
+							<tr>
+								<td align="left" width="30%"><strong>Kundenbeschreibung</strong></td>
+								<td align="left">Eine Organisation, die externe administrative Dienstleistungen f&#252;r andere institutionelle Kunden anbietet. Bei den Dienstleistungen, die von einer solchen Organisation angeboten werden, kann es sich beispielsweise um Wirtschaftspr&#252;fungs-, Buchhaltungs- oder Rechtsberatungsleistungen handeln.</td>
+							</tr>
+							<tr>
+								<td align="left"><strong>Kontobeschreibung</strong></td>
+								<td align="left">Ein einzelnes Konto, das mit mehreren Beraterkonten, Einzel- oder Multi-Hedgefonds-Konten und Konten von Proprietary-Trading-Gesellschaften verbunden ist, um Reporting-Leistungen und andere administrative Aufgaben f&#252;r Kunden-, Fonds- oder Unterkonten zu erbringen.</td>
+							</tr>
+							<tr>
+								<td align="left"><strong>Trading-Funktionen und Kontoverwaltung</strong></td>
+								<td align="left">Ein Administrator hat keine Handelserlaubnis und keinen Zugang zu IB-Trading-Plattformen. Ein Administrator meldet sich einmal bei der Kontoverwaltung an, um die aufgetragenen Reporting-Aufgaben f&#252;r die verschiedenen Kunden-, Fonds- und Unterkonten auszuf&#252;hren.</td>
+							</tr>
+							<tr>
+								<td align="left"><strong>Margin</strong></td>
+								<td align="left">Nicht anwendbar.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div>
+                    <a href="../../errorMessages/404.html#open-account" target="_self" class="btn btn-sm btn-default" >Konto er&#246;ffnen</a> <a href="../../errorMessages/404.html" target="_self" class="btn btn-sm btn-default" >Mehr erfahren</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+<!-- FOOTER START  -->
+<footer class="footer noprint" id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p>Interactive Brokers &#174;, IB<sup>SM</sup>, InteractiveBrokers.com &#174;, Interactive Analytics &#174;, IB Options Analytics<sup>SM</sup>, IB SmartRouting<sup>SM</sup>, PortfolioAnalyst &#174;, IB Trader Workstation<sup>SM</sup> und One World, One Account<sup>SM</sup> sind Dienstleistungs- und/oder Handelsmarken von Interactive Brokers LLC. Auf Anfrage stellen wir Ihnen gerne Belege zu unseren Aussagen und statistischen Angaben zur Verf&#252;gung. Alle abgebildeten Handelssymbole dienen ausschlie&#223;lich Veranschaulichungszwecken und stellen keine Empfehlungen dar.</p>
+                <p>Der Online-Handel mit Aktien, Optionen, Futures, W&#228;hrungen, ausl&#228;ndischen Papieren und festverzinslichen Produkten kann mit dem Risiko von erheblichen Verlusten einhergehen.</p>
+                <p>Der Handel mit Optionen birgt Risiken und ist nicht f&#252;r alle Anleger/-innen geeignet. N&#228;here Informationen finden Sie im Dokument <a href="https://www.theocc.com/about/publications/character-risks.jsp" rel="noreferrer noopener" target="_blank">&#8222;Characteristics and Risks of Standardized Options&#8220;</a> (Besonderheiten und Risiken im Zusammenhang mit standardisierten Optionen) (auch &#8222;Options Disclosure Document&#8220;, ODD). Alternativ k&#246;nnen Sie sich auch an den <a href="../support/customer-servicef763.html?p=contact" target="_self">IB-Kundendienst</a> wenden, um eine Kopie des ODD zu erhalten. Bevor Kundinnen und Kunden mit dem Handeln beginnen, m&#252;ssen sie die relevanten Risikoinformationen in unseren <a href="../general/homepage-disclosures.html" target="_self">Warnhinweisen und Offenlegungen</a> durchlesen. Der Margin-Handel ist nur f&#252;r erfahrene Anleger/-innen mit hoher Risikotoleranz geeignet. Sie k&#246;nnen dabei mehr Geld verlieren, als Sie urspr&#252;nglich investiert haben. N&#228;here Informationen zu den Zinss&#228;tzen f&#252;r Margin-Kredite finden Sie unter <a href="../trading/margin-rates.html" target="_self">Margins&#228;tze</a>. Wertpapier-Futures bergen ein hohes Risiko und sind nicht f&#252;r alle Anleger/-innen geeignet. Sie k&#246;nnen dabei mehr Geld verlieren, als Sie urspr&#252;nglich investiert haben. Bitte lesen Sie die <a href="../general/homepage-disclosures.html" target="_self">Risikoinformationen zu Wertpapier-Futures</a> durch, bevor Sie mit Wertpapier-Futures handeln. Strukturierte Produkte sowie festverzinsliche Produkte wie z. B. Anleihen sind komplexe Produkte, die mit erh&#246;htem Risiko einhergehen und daher nicht f&#252;r alle Anleger/-innen geeignet sind. Bevor Sie mit dem Handeln beginnen, lesen Sie bitte die <a href="../general/homepage-disclosures.html" target="_self">relevanten Risikoinformationen und Offenlegungen</a> durch.</p>
+                <p>Weitere Informationen zu IBKR ATS finden Sie auf der <a href="https://www.sec.gov/divisions/marketreg/form-ats-n-filings.htm#ats-n" rel="noreferrer noopener" target="_blank">SEC-Seite</a>.</p>
+<p>36 L&#228;nder schlie&#223;t sowohl L&#228;nder als auch Territorien ein.</p>
+            </div>
+        </div>
+        <div class="footer-site-links" id="footerSiteLinks">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>Konto</p>
+                    <ul>
+                    <li><a href="https://www.interactivebrokers.co.uk/sso/Login?RL=1" target="_self">Anmelden</a></li>
+                    <li> <a href="https://www.interactivebrokers.co.uk/Universal/Application" target="_self">Konto er&#246;ffnen</a></li>
+                    <li><a href="https://www.interactivebrokers.co.uk/sso/Login?c=t" target="_self">Antrag abschlie&#223;en</a></li>
+                    <li><a href="account-guide.html" target="_self">Kontotypen</a></li>
+                    <li><a href="https://www.interactivebrokers.co.uk/Universal/Application?ft=T&amp;locale=de_DE" target="_self">Kostenlose Testversion</a></li>
+                    </ul>
+                    <p>Software &amp; Downloads</p>
+                    <ul>
+                    <li><a href="../trading/tws.html#tws-software" target="_self">Trader Workstation</a></li>
+                    <li><a href="../trading/ibkr-desktop.html" target="_self">IBKR&nbsp;Desktop</a></li>
+                    <li><a href="../trading/tws-mobile.html#trytoday" target="_self">IBKR Mobile</a></li>
+                    <li><a href="../trading/ib-api.html#api-software" target="_self">APIs</a></li>
+                    </ul>    
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>Support</p>
+                    <ul>
+					<li><a href="../support/fund-my-account.html" target="_self">Guthaben einzahlen</a></li>
+                    <li><a href="../support/individuals.html" target="_self">Privatkunden</a></li>
+                    <li><a href="../support/institutions.html" target="_self">Gesch&#228;ftskunden</a></li>
+                    <li><a href="../support/institutional-sales-contacts4343.html?p=uk" target="_self">Vertriebskontakte f&#252;r Gesch&#228;ftskunden</a></li>
+					<li><a href="../general/contact/ibot-container.html" target="_self">FAQs</a></li>
+					<li><a href="../software/systemStatus.html" target="_self">Systemstatus</a></li>
+                    </ul>
+                    <p>Anbieter-Support</p>
+                    <ul>
+                    <li><a href="../general/about/supplier-information.html" target="_self">Informationen f&#252;r Auftragnehmer</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>&#220;ber uns</p>
+                    <ul>
+                    <li><a href="../general/awards.html" target="_self">Auszeichnungen</a></li>
+                    <li><a href="../general/about/careers-splash.html" target="_self">Karriere</a></li>
+                    <li><a href="../general/about/about.html" target="_self">Vorstellung und Firmengeschichte</a></li>
+                    <li><a href="https://investors.interactivebrokers.com/ir/main.php" target="_blank" rel="noreferrer noopener">Investorendialog</a></li>
+                    <li><a href="../about/news-at-ibkr.html" target="_self">IBKR-News</a></li>
+                    <li><a href="../general/about/press-and-media.html" target="_self">Presse und Medien</a></li>
+                    <li><a href="legalDocuments/brokerPerformanceReports.html" target="_self">Meldungen an Aufsichtsbeh&#246;rden</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>Folgen Sie uns:</p>
+                    <ul>
+                        <li><a href="https://www.facebook.com/InteractiveBrokersEurope/" target="_blank" rel="noreferrer noopener"><i class="fab fa-facebook"></i>  Facebook</a></li>
+                        <li><a href="https://www.instagram.com/interactivebrokers_europe" target="_blank" rel="noreferrer noopener"><i class="fab fa-instagram"></i>  Instagram</a></li>
+                        <li><a href="https://twitter.com/IBKR_Europe" target="_blank" rel="noreferrer noopener"><i class="fab fa-x-twitter"></i>  Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-disclosure-links" id="footerDisclosureLinks">
+            <div class="row">
+                <div class="col">
+                    <ul>
+                    <li><a href="legalDocuments/anti-fraud-notice.html" target="_self">Hinweise zur Betrugsbek&#228;mpfung</a></li>
+                    <li><a href="../../errorMessages/404.html" target="_self">Hinweise zum Kundenidentifikationsprogramm</a></li>
+                    <li><a href="../general/warnings-on-frauds-and-scams.html" target="_self">Warnung vor Betrug und Scams</a></li>
+                    <li><a href="forms-and-disclosures-client-agreements.html" target="_self">Formulare und Offenlegungen</a></li>
+                    <li><a href="legalDocuments/accessibility-policy.html" target="_self">Erkl&#228;rung zur Barrierefreiheit</a></li>
+                    <li><a href="legalDocuments/privacy.html" target="_self">Datenschutz</a></li>
+                    <li><a href="../sitemap/index.html" target="_self">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-entities" id="footerEntities">
+            <div class="row">
+                <div class="col">
+                    <div class="footer-entity"><!-- IBKR IE -->
+                        <p class="entity-name"><a href="../../en/home.html" target="_self">Interactive Brokers Ireland Limited</a></p>
+                        <p>wird reguliert von der <a href="https://www.centralbank.ie/" target="_blank" rel="noreferrer noopener">Central Bank of Ireland</a> (CBI, Referenznummer: C423427), ist registriert beim Companies Registration Office (CRO, Registrierungsnummer: 657406) und ist ein Mitglied des Irish Investor Compensation Scheme (ICS).<br> <strong>Eingetragener Gesch&#228;ftssitz:</strong> North Dock One, 91/92 North Wall Quay, Dublin 1 D01 H7V7, Ireland.<br> <strong>Website:</strong> <a href="../../en/home.html" target="_self">www.interactivebrokers.ie</a></p>
+                        <p class="footer-entities-link"><a href="#collapseEntities" target="_self" class="collapsed" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseEntities">Informationen zu weiteren Gesellschaften von Interactive Brokers</a></p>
+                    </div>
+                    <div class="footer-entities-list collapse" id="collapseEntities">
+                        <div class="row">
+                            <div class="col-12 col-md-6"><!-- IBKR LLC -->
+                                
+                                <p class="entity-name"><a href="https://www.interactivebrokers.com/en/home.php?nored=t" target="_self">Interactive Brokers LLC</a></p>
+                                <p>ist Mitglied der <a  rel="noreferrer noopener" target="_blank"  href="https://www.nyse.com/">NYSE</a> &#8211; <a href="https://www.finra.org/" rel="noreferrer noopener"  target="_blank">FINRA</a> &#8211; <a href="https://www.sipc.org/" rel=" noreferrer noopener" target="_blank">SIPC</a> und wird reguliert von der US Securities and Exchange Commission und der Commodity Futures Trading Commission.<br> <strong>Hauptgesch&#228;ftssitz:</strong> One Pickwick Plaza, Greenwich, CT 06830 USA<br> <strong>Website:</strong> <a href="https://www.interactivebrokers.com/en/home.php?nored=t" target="_self">www.interactivebrokers.com</a></p><!-- IBKR CA -->
+                                <p class="entity-name"><a href="https://www.interactivebrokers.ca/en/home.php?nored=t" target="_self">Interactive Brokers Canada Inc.</a></p>
+                                <p>Ist Mitglied der  <a href="https://www.ciro.ca/" target="_blank" rel="noreferrer noopener">Canadian Investment Regulatory Organization (CIRO)</a>  und Mitglied des <a href="https://www.cipf.ca/" target="_blank" rel="noreferrer noopener">Canadian Investor Protection Fund.</a><br> <strong>Eingetragener Gesch&#228;ftssitz:</strong> 1800 McGill College Avenue, Suite 2106, Montreal, Quebec, H3A 3J6, Canada.<br> <strong>Website:</strong> <a href="https://www.interactivebrokers.ca/en/home.php?nored=t" target="_self">www.interactivebrokers.ca</a></p><!-- IBKR UK -->
+                                
+                                <p class="entity-name"><a href="https://www.interactivebrokers.co.uk/en/home.php?nored=t" target="_self">Interactive Brokers (U.K.) Limited</a></p>
+                                <p>ist von der <a href="https://www.fca.org.uk/" target="_blank" rel="noreferrer noopener">Financial Conduct Authority</a> zugelassen und wird von dieser reguliert. FCA-Handelsregisternummer 208159. In England und Wales im Handelsregister eingetragen unter der Firmennummer 03958476. <a href="https://www.fca.org.uk/firms/financial-services-register" target="_blank" rel="noreferrer noopener">[https://www.fca.org.uk/firms/financial-services-register]</a><br> <strong>Eingetragener Gesch&#228;ftssitz:</strong> 20 Fenchurch Street, Floor 12, London EC3M 3BY.<br> <strong>Website:</strong> <a href="https://www.interactivebrokers.co.uk/en/home.php?nored=t" target="_self">www.interactivebrokers.co.uk</a></p><!-- IBKR AUS -->
+                                <p class="entity-name"><a href="https://www.interactivebrokers.com.au/en/home.php?nored=t" target="_self">Interactive Brokers Australia Pty. Ltd.</a></p>
+                                <p>ABN 98 166 929 568 ist lizensiert von der <a href="https://asic.gov.au/" target="_blank" rel="noreferrer noopener">Australian Securities and Investments Commission</a> (AFSL: 453554), wird von dieser reguliert und nimmt an der <a href="https://www.asx.com.au/" target="_blank" rel="noreferrer noopener">ASX</a>, <a href="https://www.asx.com.au/" target="_blank" rel="noreferrer noopener">ASX 24</a> und <a href="https://www.cboe.com.au/" target="_blank" rel="noreferrer noopener">Cboe Australia</a> teil.<br> <strong>Eingetragener Gesch&#228;ftssitz:</strong> Level 11, 175 Pitt Street, Sydney, New South Wales 2000, Australia.<br> <strong>Website:</strong> <a href="https://www.interactivebrokers.com.au/en/home.php?nored=t" target="_self">www.interactivebrokers.com.au </a></p>
+                            </div>
+                            <div class="col-12 col-md-6"><!-- IBKR HK -->
+                                
+                                <p class="entity-name"><a href="https://www.interactivebrokers.com.hk/en/home.php?nored=t" target="_self">Interactive Brokers Hong Kong Limited</a></p>
+                                <p>wird von der Hong Kong Securities and Futures Commission reguliert und ist Mitglied der <a href="https://www.hkex.com.hk/" target="_blank" rel="noreferrer noopener">SEHK</a> und <a href="https://www.hkex.com.hk/" target="_blank" rel="noreferrer noopener">HKFE</a>.<br> <strong>Eingetragener Gesch&#228;ftssitz:</strong> Suite 1512, Two Pacific Place, 88 Queensway, Admiralty, Hong Kong SAR.<br> <strong>Website:</strong> <a href="https://www.interactivebrokers.com.hk/en/home.php?nored=t" target="_self">www.interactivebrokers.com.hk</a></p><!-- IBKR IN -->
+                                <p class="entity-name"><a href="https://www.interactivebrokers.co.in/en/home.php?nored=t" target="_self">Interactive Brokers India Pvt. Ltd.</a></p>
+                                <p>ist ein handelndes Mitglied der <a href="https://www.nseindia.com/" target="_blank" rel="noreferrer noopener">NSE</a> und <a href="https://www.bseindia.com/" target="_blank" rel="noreferrer noopener">BSE</a> sowie ein verwahrendes Mitglied der <a href="https://nsdl.co.in/" target="_blank" rel="noreferrer noopener">NSDL</a>. <a href="https://www.sebi.gov.in/" target="_blank" rel="noreferrer noopener">SEBI</a>-Registrierungs-Nr. INZ000217730; NSDL: IN-DP-602-2021. CIN-U67120MH2007FTC170004.<br> <strong>Eingetragener Gesch&#228;ftssitz:</strong> 502/A, Times Square, Andheri Kurla Road, Andheri East, Mumbai 400059, India.<br> <strong>Tel.:</strong> +91-22-61289888 <span class="pipe">|</span> <strong>Fax:</strong> +91-22-61289898.<br> <strong>Website:</strong> <a href="https://www.interactivebrokers.co.in/en/home.php?nored=t" target="_self">www.interactivebrokers.co.in</a></p><!-- IBKR JP -->
+                                
+                                <p class="entity-name"><a href="https://www.interactivebrokers.co.jp/en/home.php?nored=t" target="_self">Interactive Brokers Securities Japan, Inc.</a></p>
+                                <p>wird reguliert vom Kanto Local Finance Bureau (Registrierungsnr. 187) und ist Mitglied der<a href="https://www.jsda.or.jp/" target="_blank" rel="noreferrer noopener">Japan Securities Dealers Association</a> und der <a href="https://www.nisshokyo.or.jp/" target="_blank" rel="noreferrer noopener">Commodity Futures Association of Japan</a>.<br> <strong>Eingetragener Gesch&#228;ftssitz:</strong> Kasumigaseki Building 25F, 2-5 Kasumigaseki 3-chome, Chiyoda-ku, Tokyo, 100-6025 Japan.<br> <strong>Tel.:</strong> +81 03-4590-0711 <em>(an Gesch&#228;ftstagen von 08:30&#8211;17:30 Uhr Uhr JST)</em>.<br> <strong>Website:</strong> <a href="https://www.interactivebrokers.co.jp/en/home.php?nored=t" target="_self">www.interactivebrokers.co.jp</a></p><!-- IBKR SG -->
+<p class="entity-name"><a href="https://www.interactivebrokers.com.sg/en/home.php" target="_self">Interactive Brokers Singapore Pte. Ltd.</a></p>
+<p>ist lizensiert von der Monetary Authority of Singapore (Lizenznr. CMS100917) und wird von dieser reguliert.<br> <strong>Eingetragener Gesch&#228;ftssitz:</strong>  1 Harbourfront Place #12-01/03, Harbourfront Tower 1, Singapore 098633. <br> <strong>Website:</strong> <a href="https://www.interactivebrokers.com.sg/en/home.php" target="_self">www.interactivebrokers.com.sg</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- FOOTER END  -->
+</footer>
+
+<!-- MODAL START | ABOUT IB GROUP ---------------------------------------------------------------------------------------------------- -->
+<div class="modal fade" id="modalAlert" tabindex="-1" role="dialog" aria-labelledby="modalAboutIBGroup">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content modal-primary">
+			<div class="modal-header">
+				<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+				<h4 class="modal-title" ><i class="fas fa-exclamation-circle"></i> Notice</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col">
+						<p class="message">message</p><!-- You will be brought to the website of our affiliate-->
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<div class="row">
+					<div class="col-12 col-sm-3 order-2 order-sm-1">
+						<div class="panel-btn-left"><a href="javascript:void(0);" data-bs-dismiss="modal" class="btn btn-secondary">Stay</a></div>
+					</div>
+					<div class="col-12 col-sm-9 order-1 order-sm-2">
+						<div class="panel-btn-right goto"><a href="javascript:void(0);" onclick=""  data-bs-dismiss="modal"  class="btn btn-primary">Go</a></div> 
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#modalAlert').on('show.bs.modal', function (event) {
+	  var button = $(event.relatedTarget) // Button that triggered the modal
+      let myMessage = button.data('mymessage');
+      /*let myLink = "location.href='"+button.data('mytargetlink')+"'"; */
+      let myLink = "window.open('"+button.data('mytargetlink')+"')"; 
+	  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+	  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+	  var modal = $(this)
+	  modal.find('.modal-body .message').text( myMessage );
+	  modal.find('.modal-footer .goto a').attr( "onclick", myLink );
+
+	})
+});
+</script>
+<script>
+if(window.location.href.includes('conf=am')) {
+document.querySelector("#ibkr-header").style.display = "none";
+document.querySelector("#footer").style.display = "none";
+}
+</script>
+
+
+<!-- SHARE ON SOCIAL ---------------------------------------------------------------------------------------------------->
+<div class="social-sidebar animated fadeInLeft noprint">
+	<span><i class="fa fa-chevron-left"></i><i class="fa fa-chevron-right"></i></span>
+	<div class="icon-set">
+		<p>SHARE</p>
+		<div class="share-icon"><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.interactivebrokers.com%2fen%2findex.php%3ff%3d56698" target="_blank" rel="noreferrer noopener" title="Share on Facebook" aria-label="Share on Facebook" class="icon-facebook"><i class="fab fa-facebook-square"></i></a></div>
+		<div class="share-icon"><a href="https://twitter.com/intent/tweet?text=Interactive+Brokers&amp;url=https%3A%2F%2Fwww.interactivebrokers.com%2Fen%2Findex.php%3ff%3d56698&amp;related=" target="_blank" rel="noreferrer noopener" title="Share on Twitter" aria-label="Share on Twitter" class="icon-twitter"><i class="fab fa-twitter-square"></i></a></div>
+		<div class="share-icon"><a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwww.interactivebrokers.com%2fen%2findex.php%3ff%3d56698&amp;title=Interactive+Brokers&amp;summary=Interactive+Brokers&amp;source=LinkedIn" target="_blank" rel="noreferrer noopener" title="Share on Linkedin" aria-label="Share on Linkedin" class="icon-linkedin"><i class="fab fa-linkedin"></i></a></div>
+		<div class="share-icon"><a href="javascript:void(0);" target="_self" title="Share by Email" aria-label="Share by Email" name="btn_trigger" data-toggle="modal" data-target="#emailModal" id="56698" onClick="emailCookie();" class="icon-email"><i class="far fa-envelope"></i></a></div>
+	</div>
+</div>
+<!-- MODAL START | SHARE ON SOCIAL ---------------------------------------------------------------------------------------------------->
+<div class="modal fade noprint" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="emailModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button id="cls_frm_1" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="gridSystemModalLabel"><i class="far fa-envelope text-gray"></i> Email</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col">
+						<form>
+							<div class="form-group">
+								<label for="_to" class="control-label">To:</label> <span id="_err_to" style="color: red;"></span>
+								<input type="text" class="form-control" id="_to">
+							</div>
+							<div class="form-group">
+								<label for="_from" class="control-label">From:</label> <span id="_err_frm" style="color: red;"></span>
+								<input type="text" class="form-control" id="_from">
+							</div>
+							<div class="form-group">
+								<label for="_subject" class="control-label">Subject:</label> <span id="_err_subject" style="color: red;"></span>
+								<input type="text" class="form-control" id="_subject" value="Interactive Brokers">
+							</div>
+							<div class="form-group">
+								<textarea class="form-control" id="_content" style="height:200px;"></textarea>
+							</div>
+							<p class="text-sm">URL: <span class="text-italic text-black">www.interactivebrokers.ie/en/index.php?f=<span id='vid'></span></span></p>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<div class="row">
+					<div class="col-6">
+						<div align="left">
+							<button id="cls_frm_2" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+					<div class="col-6">
+						<div align="right">
+							<button type="button" class="btn btn-primary" id="send">Send</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<input type="hidden" id="_page_id" name="_page_id" value="56698" />
+</div>
+<!-- MODAL END | SHARE ON SOCIAL ----------------------------------------------------------------------------------------------------> 
+ 
+<script type="text/javascript" src="../../insights/ibtr_share2667.js?t=v1"></script>
+<script type="text/javascript" src="../../scripts/common/js/base642667.js?t=v1" ></script>
+<script>
+$(document).ready(function() {
+	 $(".social-sidebar span").click(function(){
+		 $(".social-sidebar div").toggleClass("social-sidebar-hide");
+		 $(".social-sidebar span").toggleClass("toggle-arrow");
+ 	 });
+});
+function emailCookie() {
+	if (document.cookie.indexOf("IB_EM_SH") == -1) {
+		var ex=new Date();
+		ex.setTime(ex.getTime()+86400000);
+		document.cookie ='IB_EM_SH='+1+';expires='+ex.toGMTString()+';path=/;domain=';
+	}
+}
+</script>
+<!-- SCRIPTS FOOTER ---------------------------------------------------------------------------------------------------- -->
+<script type="text/javascript" src="../../scripts/common/js/zeynep-2.2.0/zeynep.js"></script>
+<script type="text/javascript" src="../../scripts/common/js/lazyload/lazyload.min.js"></script>
+<script type="text/javascript" src="../../search/conversions.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    
+    // GATHER HEIGHT OF HEADER
+    var headerHeight = $("div#ibkr-header").outerHeight();
+    // GATHER HEIGHT OF DISCLOSURES
+    var disclosureHeight = $("section#UKProductDisclosure, section#TurbosDisclosure").outerHeight();
+    $("section#UKProductDisclosure").css("top", headerHeight);
+    $("section#TurbosDisclosure").css("top", headerHeight);
+    // SET CONTENTS DIV PADDING TOP
+    $("div#contents").css("padding-top", disclosureHeight);
+    // OVERRIDE TOP OF DISCLOSURE AND PADDING-TOP OF CONTENTS ON WINDOW RESIZE
+    $(window).resize(function() {
+        var headerHeight = $("div#ibkr-header").outerHeight();
+        var disclosureHeight = $("section#UKProductDisclosure, section#TurbosDisclosure").outerHeight();
+        var headerHeightDelta = headerHeight - disclosureHeight;
+        $("section#UKProductDisclosure").css("top", disclosureHeight + headerHeightDelta);
+        $("section#TurbosDisclosure").css("top", disclosureHeight + headerHeightDelta);
+        $("div#contents").css("padding-top", disclosureHeight);
+    });
+
+    // OVERRIDE TOP OF DISCLOSURE AND PADDING-TOP OF CONTENTS ON BANNER CLOSE
+    $("#bannerRegionSelector a.btn-close").click(function() {
+        setTimeout(function() {
+            var headerHeight = $("div#ibkr-header").outerHeight();
+            $("section#UKProductDisclosure").css("top", headerHeight);
+            $("section#TurbosDisclosure").css("top", headerHeight);
+            $("div#contents").css("padding-top", disclosureHeight);
+        },500);
+    });
+    // MOBILE MENU
+    $(function() {
+        // Initilize mobile menu
+        var zeynep = $('.menu-mobile').zeynep({
+            opened: function () {
+            console.log('the side menu opened')
+        },
+        closed: function () {
+            console.log('the side menu closed')
+            }
+        })
+        // Dynamically bind closing event
+        zeynep.on('closing', function () {
+            console.log('this event is dynamically binded')
+        })
+        // Mobile menu close on overlay click
+        $('.website-overlay').on('click', function () {
+            zeynep.close()
+        })
+        // Mobile menu close on button click
+        $('.btn-close').on('click', function () {
+            zeynep.close()
+        })
+        // Mobile menu open on navbar-toggler click
+        $('.navbar-toggler').on('click', function () {
+            zeynep.open()
+        })
+    })
+});
+</script>
+<!-- STYLES FOOTER ---------------------------------------------------------------------------------------------------- -->
+<link rel="preload" as="font" type="font/woff2" href="../../fonts/fontawesome-6.4.2/webfonts/fa-brands-400.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="../../fonts/fontawesome-6.4.2/webfonts/fa-regular-400.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="../../fonts/fontawesome-6.4.2/webfonts/fa-solid-900.woff2" crossorigin>
+<link rel="preload" as="style" href="../../css/ibkr/website-print.min.css">
+<link rel="stylesheet" type="text/css" media="print" href="../../css/ibkr/website-print.min.css">
+<style type="text/css">
+@import url('../../css/fontawesome-6.4.2/all.min.css') layer(vendors);
+@import url('../../css/animate-3.7.2/animate.min.css') layer(vendors);
+@import url('../../css/bootstrap-switch-3.3.2/bootstrap-switch.min.css') layer(vendors);
+@import url('../../css/icheck-1.0.2/icheck.css') layer(vendors);
+</style><script type="text/javascript">
+	/* <![CDATA[ */
+	var google_conversion_id = 1070426721;
+	var google_custom_params = window.google_tag_params;
+	var google_remarketing_only = true;
+	/* ]]> */
+</script>
+<script type="text/javascript" src="../../../www.googleadservices.com/pagead/f.txt"></script>
+<noscript>
+    <div display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt="" src="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/1070426721/?value=0&amp;guid=ON&amp;script=0"/>
+    </div>
+</noscript>
+</body>
+
+<!-- Mirrored from www.interactivebrokers.ie/de/accounts/account-guide.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Sep 2025 09:18:21 GMT -->
+</html>

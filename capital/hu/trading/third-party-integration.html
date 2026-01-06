@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="hu" data-theme="light">
+
+<!-- Mirrored from www.interactivebrokers.ie/hu/trading/third-party-integration.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Sep 2025 09:33:06 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8">
+<title>Harmadik f&#233;l integr&#225;ci&#243; | Interactive Brokers Ireland</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+<meta name="description" content="Integr&#225;lja IBKR adatait harmadik felek &#225;ltal fejlesztett portf&#243;li&#243;kezel&#337;, megb&#237;z&#225;skezel&#337;, keresked&#233;st k&#246;vet&#337; allok&#225;ci&#243;s &#233;s compliance szoftverekkel.">
+<meta name="keywords" content="Harmadik f&#233;l integr&#225;ci&#243;, harmadik f&#233;l portf&#243;li&#243;kezel&#337;, harmadik f&#233;l megb&#237;z&#225;skezel&#337;">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta http-equiv="expires" content="-1">
+<meta name="robots" content="index, follow">
+<meta http-equiv="pragma" content="no-cache">
+<meta property="og:site_name" content="Interactive Brokers Ireland" />
+<!--Pid:48395-->
+<link rel="canonical" href="third-party-integration.html"/>
+<meta name="apple-mobile-web-app-title" content="IBKR">
+<link rel="icon" sizes="192x192" href="../../images/web/favicons/home-screen-icon-192x192.png" />
+<link rel="icon" sizes="128x128" href="../../images/web/favicons/home-screen-icon-128x128.png" />
+<link rel="apple-touch-icon" sizes="57x57" href="../../images/web/favicons/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="../../images/web/favicons/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="../../images/web/favicons/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="../../images/web/favicons/apple-touch-icon-144x144.png" />
+<!-- SCRIPTS HEAD  -->
+<script type="text/javascript" src='../../scripts/common/js/jquery-3.6.1/jquery.min.js'></script>
+<script type="text/javascript">
+function createScriptElement(data) {
+ if (typeof data == "undefined") {
+  return;
+ }
+ var element = document.createElement("SCRIPT");
+ element.type = "text/javascript";
+ if (typeof data.id != "undefined") {
+  element.id = data.id;
+ }
+ if (typeof data.source != "undefined") {
+  element.src = data.source;
+ }
+ if (typeof data.loadfunction == "function") {
+  element.onload = data.loadfunction;
+ }
+ document.head.appendChild(element);
+}
+createScriptElement({ source : "/scripts/common/js/bootstrap-5.2.2/bootstrap.bundle.min.js", loadfunction: bsLoaded  });
+createScriptElement({ source : "/scripts/common/js/lib.js?ver=9" });
+function storeCookie()
+{
+ if(typeof(Storage) !== 'undefined')
+ {
+   if(localStorage.getItem('web') !== null)
+   {
+     localStorage.removeItem('web');
+   }
+ }
+}
+function bsLoaded() {
+  createScriptElement({ source : "/scripts/common/js/appear/appear.min.js?ver=1" });
+  createScriptElement({ source : "/scripts/common/js/easing/easing.min.js?ver=1" });
+  createScriptElement({ source : "/scripts/common/js/parallax/parallax.min.js?ver=1" });
+  createScriptElement({ source : "/scripts/common/js/uitotop/uitotop.min.js?ver=1", loadfunction: uiLoaded });
+}
+function uiLoaded() {
+  createScriptElement({ source : "/scripts/common/js/twsUtils.js?ver=2" });
+  createScriptElement({ source : "/scripts/common/js/design/design.js?ver=1" }); 
+}
+</script>
+<script type="text/javascript">
+$(function() {
+ if (document.cookie.indexOf("IB_SEARCH") == -1)
+ {
+  var ex=new Date();
+  ex.setTime(ex.getTime()+86400000);
+  document.cookie ='IB_SEARCH='+Math.floor(new Date().getTime()/1000)+';expires='+ex.toGMTString()+';path=/;domain=.interactivebrokers.ie';
+ }
+  let nex=new Date();
+  nex.setTime(nex.getTime()+86400000);
+    document.cookie ='IB_QD=0;expires='+nex.toGMTString()+';path=/;domain=.interactivebrokers.ie';
+  
+  let excfd=new Date();
+  excfd.setTime(excfd.getTime()+86400000);
+  document.cookie ='IB_QD_CFD=0;expires='+excfd.toGMTString()+';path=/;domain=.interactivebrokers.ie';
+ $('div#langselector').find('a').each(function() {
+  $(this).click(function() {
+   var link = $(this).attr("href");
+   if(link.match(/\/(en|fr|de|es|it|ru|cn|jp)\//))
+   {
+    var langs = link.split("../../index.html");
+    if(langs[3] == 'en' || langs[3] == 'fr' || langs[3] == 'de' || langs[3] == 'es' || langs[3] == 'it' || langs[3] == 'ru' || langs[3] == 'cn' || langs[3] == 'jp')
+    {
+      var lang = langs[3];
+      if(lang == 'cn')
+      {
+        lang = 'zh_CN';
+      }
+      if(lang == 'jp')
+      {
+        lang = 'ja';
+      }
+      if(hasCookie("IB_LANG"))
+      {
+        deleteCookie("IB_LANG");
+      }
+      setCookie("IB_LANG", lang, 7, '.interactivebrokers.ie');
+    } else if(langs[1] == 'en') {
+      var lang = 'en';
+      setCookie("IB_LANG", lang, 7, '.interactivebrokers.ie');
+    }
+   }
+  });
+ });
+ $('p#bandaid-close').click(function() {
+  setCookie("IB_BANDAID", 1, 7, '.interactivebrokers.ie');
+ });
+ $('a#btnCloseBannerRegionSelector').click(function() {
+  setCookie("IB_REGION_SEL", 1, 30, '.interactivebrokers.ie');
+ });
+ $('a#btnCloseBannerRegionDifc').click(function() {
+  setCookie("IB_DIFC", 1, 30, '.interactivebrokers.ie');
+ });
+});
+</script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    if(localStorage.getItem('consentMode') ===  null){
+                    const consentMode = {
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'analytics_storage': 'denied'
+            };
+                localStorage.setItem('consentMode', JSON.stringify(consentMode));
+        gtag('consent', 'default', consentMode);
+    }
+    else {
+        gtag('consent', 'default', JSON.parse(localStorage.getItem('consentMode')));
+    }
+</script>
+<!-- STYLES HEAD -->
+<style type="text/css">
+@import url('../../css/bootstrap-5.2.2/bootstrap.min.css') layer(bootstrap);
+</style>
+<link rel="preload" as="style" href="../../css/ibkr/website.mince12.css?v=1848a6e12ea6c289ee1df7ee63749846">
+<link rel="stylesheet" type="text/css" media="all" href="../../css/ibkr/website.mince12.css?v=1848a6e12ea6c289ee1df7ee63749846">
+<link rel="preload" as="style" href="../../css/ibkr/theme-ibkr.min4f42.css?v=be9c72c0d328e7fc4987bce81f28981c">
+<link rel="stylesheet" type="text/css" media="all" href="../../css/ibkr/theme-ibkr.min4f42.css?v=be9c72c0d328e7fc4987bce81f28981c"><style type="text/css">
+section#page-title { display:none; }
+.logo-portfolioanalyst, .logo-portfolioanalyst-inverse {
+    margin: 20px auto;
+}
+.pm-layout button {
+	margin:0px;
+	padding:15px; 
+	width:100%;
+	min-height:150px;
+	border:2px solid var(--bg-body);
+	background-color: var(--gray-10-solid);
+}
+.pm-layout button:hover {
+	-webkit-filter: brightness(1.03);
+         filter: brightness(1.03);
+	-webkit-transition:all 0.2s ease-in-out;
+	-moz-transition:all 0.2s ease-in-out;
+	-o-transition:all 0.2s ease-in-out;
+	transition:all 0.2s ease-in-out;
+}
+[data-theme="dark"] .pm-layout button:hover {
+	-webkit-filter: brightness(1.2);
+         filter: brightness(1.2);
+	-webkit-transition:all 0.2s ease-in-out;
+	-moz-transition:all 0.2s ease-in-out;
+	-o-transition:all 0.2s ease-in-out;
+	transition:all 0.2s ease-in-out;
+}
+.pm-layout button img {
+	width:100%;
+	max-width:100%;
+	height:auto;
+}
+[data-theme="dark"] .pm-layout button img {
+	-webkit-filter: invert(1) grayscale(1);
+	filter: invert(1) grayscale(1);
+}
+.modal-content {
+	border-radius:0;
+}
+.pa-banner { 
+	padding: 0 40px;
+}
+#tpi-portfolio{
+	background: -moz-linear-gradient(top, var(--gray-5-solid) 1%, var(--bg-body) 10%);
+	background: -webkit-linear-gradient(top, var(--gray-5-solid) 1%, var(--bg-body) 10%);
+	background: linear-gradient(to bottom, var(--gray-5-solid) 1%, var(--bg-body) 10%);
+}
+#tpi-portfolio row {
+	align-items: center;
+}
+.modal img{
+	background:var(--white);
+	padding:4px;
+}
+@media (max-width:992px) {
+.pa-banner { border-left:none; 
+             border-top:1px solid var(--border-color); 
+             border-bottom:1px solid var(--border-color); 
+             margin:30px 0 0 0;
+             padding:10px 0 40px 0}
+}
+</style>
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-d23de039-d518-4f10-9810-e68da4592744","rua.cook":"true","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="XE2AM-F37QZ-LYWQP-H8KRM-4SNX5",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"XE2AM-F37QZ-LYWQP-H8KRM-4SNX5";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n="false"=="true"?1:0,t="cookiepresent",a="eykumbc7mxv4o2gjevca-f-ed3532ffa-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1168163","ak.ai":parseInt("665092",10),"ak.ol":"0","ak.cr":40,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"16d6f03","ak.r":50930,"ak.a2":n,"ak.m":"a","ak.n":"essl","ak.bpcip":"38.21.70.0","ak.cport":49592,"ak.gh":"95.101.132.199","ak.quicv":"","ak.tlsv":"tls1.2","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1758012740","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==8xvaup0ZMCsXA2GJB6kC4LE7HFIm0haF2kCEFNocfRcQgLfls6Uo4f8Ug/P5zvsWpp2zisJKWXXw0jcKV/bIIoeTay2D0fVgOnObioitBgWoKMed7K8aHmRr0sx5EV7WZsC6ZcsyfQs+gujP8aHjrJ2AF3K9Q3S87xI9oPGzxTDegcWOjcDyhdKJTexA0dGjKygbMWD71+sucRGXzdnXmj5NK0JSlB04ba8a11MAH4AR7rxzUZgxd9zzhDg+fEGhmvrHnU1+uY6h9Nkd92sEY1zX0sVMrnaZRN9vhTtF1bc3NAVY+66yM5Mj2iQmivqboHZHm3pdxVhKXIPgg1jPYyi7E6HSs+7/pkOEDrAn3V588axZhpiDL6UxxYayYDyYd6LMkGrssfPBhVNiENyMj4lXvUGZUaXkriEBd2aa0ls=","ak.pv":"398","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.html","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak-2.html","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body>
+<div id="printheader"></div>
+<!-- HEADER START  -->
+<div class="ibkr-header" id="ibkr-header">
+    
+        
+<style type="text/css">
+.banner-risk-warning {
+    margin:0px;
+    padding:8px 0px;
+    width:100%;
+    height:auto;
+    background-color:#242424;
+}
+.banner-risk-warning p {
+    margin:0px;
+    padding:0px;
+    font-weight:400;
+    font-size:1.0rem;
+    line-height:1.25rem;
+    text-align:center;
+    color:#FFFFFF;
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | EXTRA SMALL (< 576PX) ---------------------------------------------------------------------------------------------------- */
+@media (max-width:575.98px) {
+    .banner-risk-warning {
+        padding:4px 0px;
+    }
+    .banner-risk-warning p {
+        font-size:0.8125rem;
+        line-height:1.0rem;
+    }
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | SMALL (576PX-767.98PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:576px) and (max-width:767.98px) {
+    .banner-risk-warning {
+        padding:4px 0px;
+    }
+    .banner-risk-warning p {
+        font-size:0.8125rem;
+        line-height:1.0rem;
+    }
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | MEDIUM (768PX-991.98PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:768px) and (max-width:991.98px) {
+    .banner-risk-warning {
+        padding:4px 0px;
+    }
+    .banner-risk-warning p {
+        font-size:0.8125rem;
+        line-height:1.0rem;
+    }
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | LARGE (992PX-1199.98PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:992px) and (max-width:1199.98px) {
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | EXTRA LARGE (>1200PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:1200px) {
+}
+</style>
+<div class="banner-risk-warning">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p>A p&#233;nz&#252;gyi term&#233;kekbe val&#243; befektet&#233;s kock&#225;zattal j&#225;r. A vesztes&#233;ge ak&#225;r indul&#243; befektet&#233;s&#233;t is meghaladhatja.</p>
+            </div>
+        </div>
+    </div>
+</div>    <!-- NAV TOP START (LG/XL ONLY) -->
+    <nav class="navbar navbar-inverse navbar-expand-lg navbar-top d-none d-lg-block">
+        <div class="container">
+            <div class="navbar-collapse collapse" id="ibkr-nav-top"><!-- LEFT MENU -->
+                
+                <ul class="navbar-nav mr-auto align-items-center"><!-- FOR INDIVIDUALS -->
+                    <li class="nav-item dropdown"><a href="#" target="_self" class="nav-link dropdown-toggle" id="nav-for-individuals" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mag&#225;nszem&#233;lyek</a>
+                        <div class="dropdown-menu dropdown-ind-accounts" aria-labelledby="nav-for-individuals">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../accounts/individual-ie.html" target="_self" class="dropdown-item" >Egy&#233;ni vagy K&#246;z&#246;s sz&#225;mla</a> <a href="../accounts/trust-ie.html" target="_self" class="dropdown-item" >Bizalmi vagyonkezel&#233;si (trust) sz&#225;mla</a> <a href="../accounts/family-account-ie.html" target="_self" class="dropdown-item" >Csal&#225;di sz&#225;mla</a> <a href="../accounts/long-term-investment-accounts-ie.html" target="_self" class="dropdown-item">Tart&#243;s befektet&#233;si (TBSZ) sz&#225;mla</a> <a href="../accounts/plan-depargne-en-action-accounts-ie.html" target="_self" class="dropdown-item">Plan d&#8217;Epargne en Actions (PEA) sz&#225;mla</a> 
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- FOR INSTITUTIONS -->
+                    <li class="nav-item dropdown"><a href="#" target="_self" class="nav-link dropdown-toggle" id="nav-for-institutions" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Int&#233;zm&#233;nyek</a>
+                        <div class="dropdown-menu dropdown-inst-accounts" aria-labelledby="nav-for-institutions">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../accounts/institutions-ie.html" target="_self" class="dropdown-item" >Int&#233;zm&#233;nyi &#252;gyfelek &#8211; kezd&#337;lap</a> <a href="../accounts/advisor-ie.html" target="_self" class="dropdown-item" >Bejegyzett befektet&#233;si tan&#225;csad&#243;k</a> <a href="../accounts/proprietary-trading-group-ie.html" target="_self" class="dropdown-item" >Saj&#225;t sz&#225;ml&#225;s keresked&#233;si csoportok</a> <a href="../accounts/hedge-fund-ie.html" target="_self" class="dropdown-item" >Fedezeti alapok</a> <a href="../accounts/broker-ie.html" target="_self" class="dropdown-item" >K&#246;zvet&#237;t&#337; br&#243;kerek</a> <a href="../accounts/family-office-ie.html" target="_self" class="dropdown-item" >Int&#233;zm&#233;nyi csal&#225;di sz&#225;ml&#225;k</a> <a href="../accounts/compliance-officer-ie.html" target="_self" class="dropdown-item" >Compliance vezet&#337;k</a> <a href="../accounts/small-business-ie.html" target="_self" class="dropdown-item" >Kisv&#225;llalkoz&#225;sok</a> <a href="../accounts/fsa-insurance-providers.html" target="_self" class="dropdown-item" >Teljes k&#246;r&#369; adminisztr&#225;tori sz&#225;mla <br>biztos&#237;t&#243;knak</a> <a href="../accounts/money-manager-ie.html" target="_self" class="dropdown-item" >Befektet&#233;skezel&#337;k</a> <a href="../accounts/administrator-ie.html" target="_self" class="dropdown-item" >Befektet&#233;si alap adminisztr&#225;torok</a>  <a href="https://interactivebrokers.eu/campus/stl/" target="_blank" class="dropdown-item" >Oktat&#225;si int&#233;zm&#233;nyek</a>                                 </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul><!-- RIGHT MENU -->
+                
+                <ul class="navbar-nav ml-auto align-items-center"><!-- FREE TRIAL -->
+                    <li class="nav-item"><a href="free-trial.html" target="_self" class="nav-link">INGYENES PR&#211;BAVERZI&#211;</a></li><!-- CAREERS -->
+                    
+                    <li class="nav-item"><a href="../general/about/careers-splash.html" target="_self" class="nav-link">Karrierlehet&#337;s&#233;gek</a></li><!-- ABOUT US -->
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-about-us" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">R&#243;lunk</a>
+                        <div class="dropdown-menu dropdown-about-us" aria-labelledby="nav-about-us">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../general/financial-strength.html" target="_self" class="dropdown-item" >Stabilit&#225;s &#233;s biztons&#225;g</a> <a href="../general/about/info-and-history.html" target="_self" class="dropdown-item">Inform&#225;ci&#243;k &#233;s c&#233;gt&#246;rt&#233;net</a> <a href="../general/awards.html" target="_self" class="dropdown-item">D&#237;jak</a> <a href="../about/news-at-ibkr.html" target="_self" class="dropdown-item">IBKR h&#237;rek</a> <a href="../general/about/press-and-media.html" target="_self" class="dropdown-item">Sajt&#243; &#233;s m&#233;dia</a> <a href="https://investors.interactivebrokers.com/ir/main.php" target="_blank" class="dropdown-item" rel="noreferrer noopener">Befektet&#337;i kapcsolatok</a> <a href="../general/about/sustainability.html" target="_self" class="dropdown-item">Fenntarthat&#243;s&#225;g</a> <a href="../accounts/legalDocuments/brokerPerformanceReports.html" target="_self" class="dropdown-item">Szab&#225;lyoz&#243;i jelent&#233;sek</a> <a href="../accounts/referrer.html" target="_self" class="dropdown-item">K&#246;zvet&#237;tse hozz&#225;nk egy bar&#225;tj&#225;t</a> <a href="../general/about/affiliate-programs.html" target="_self" class="dropdown-item">Affiliate programok</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- SUPPORT -->
+                    
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-support" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">T&#225;mogat&#225;s</a>
+                        <div class="dropdown-menu dropdown-contact-us" aria-labelledby="nav-support">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../support/fund-my-account.html" target="_self" class="dropdown-item">T&#246;ltse fel a sz&#225;ml&#225;j&#225;t</a> <a href="../support/individuals.html" target="_self" class="dropdown-item">Mag&#225;nszem&#233;lyek</a> <a href="../support/institutions.html" target="_self" class="dropdown-item">Int&#233;zm&#233;nyek</a> <a href="../support/institutional-sales-contacts4343.html?p=uk" target="_self" class="dropdown-item">Int&#233;zm&#233;nyi &#233;rt&#233;kes&#237;t&#337;k el&#233;rhet&#337;s&#233;gei</a> <a href="../general/contact/ibot-container.html" target="_self" class="dropdown-item">GYIK &#225;ttekint&#233;se</a> <a href="../support/reports-and-dates.html" target="_self" class="dropdown-item">Ad&#243;inform&#225;ci&#243;k</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- LANGUAGE SELECTOR -->
+                    <li class="nav-item dropdown"><a href="#" class="nav-link nav-language dropdown-toggle" id="nav-language" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Nyelv</span><img src="../../images/web/icons/icon-language.svg" alt="Nyelv" width="23" height="18" border="0" /></a>
+                        <div class="dropdown-menu dropdown-language" aria-labelledby="nav-language">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../../en/home.html" target="_self" class="dropdown-item">English</a>
+                                    <a href="../../fr/home.html" target="_self" class="dropdown-item">Fran&#231;ais</a>
+                                    <a href="../../de/home.html" target="_self" class="dropdown-item">Deutsch</a>
+                                    <a href="../../es/home.html" target="_self" class="dropdown-item">Espa&#241;ol</a>
+                                    <a href="../../it/home.html" target="_self" class="dropdown-item">Italiano</a>
+                                    <a href="../home.html" target="_self" class="dropdown-item">Magyar</a>
+                                    <a href="../../pt/home.html" target="_self" class="dropdown-item">Portugu&#234;s</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                                    </ul>
+            </div>
+        </div><!-- NAV TOP END --><!-- NAV BOTTOM START -->
+    </nav>
+    
+    <nav class="navbar navbar-inverse navbar-expand-lg navbar-bottom">
+        <div class="container"><!-- LOGO -->
+            
+             <a href="../home.html" target="_self" title="Interactive Brokers kezd&#337;lap" alt="Interactive Brokers log&#243;" class="navbar-brand brand-logo" aria-label="Interactive Brokers Home"><span>Interactive Brokers kezd&#337;lap</span></a>
+            <!-- TOGGLE (XS/SM/MD ONLY) --><!-- OPEN ACCOUNT BUTTON (XS/SM/MD ONLY) -->
+            <button class="navbar-toggler" type="button" aria-label="Toggle Navigation"><span class="navbar-toggler-icon"><i class="fas fa-bars" aria-hidden="true"></i></span></button>
+            <a href="https://www.interactivebrokers.co.uk/Universal/Application" target="_self" class="d-block d-lg-none btn btn-open-account">Sz&#225;mlanyit&#225;s</a>
+            <!-- LOG IN (SM/MD ONLY) -->
+             <a href="https://www.interactivebrokers.co.uk/sso/Login?RL=1" target="_self" class="d-none d-sm-block d-lg-none btn btn-log-in">Bejelentkez&#233;s</a>             <!-- IBKR NAV BOTTOM START -->
+            <div class="navbar-collapse collapse" id="ibkr-nav-bottom">
+                <ul class="navbar-nav ml-auto align-items-center"><!-- WHY IBKR -->
+                    
+                    <li class="nav-item"><a href="../whyib/overview.html" target="_self" class="nav-link">Mi&#233;rt v&#225;lasszon minket?</a></li><!-- PRICING -->
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-pricing" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&#193;rk&#233;pz&#233;s</a>
+                        <div class="dropdown-menu dropdown-pricing" aria-labelledby="nav-pricing">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../pricing/commissions-home.html" target="_self" class="dropdown-item">Jutal&#233;kok</a> <a href="margin-rates.html" target="_self" class="dropdown-item">Fedezeti hitelkamatok</a> <a href="../accounts/fees/pricing-interest-rates.html" target="_self" class="dropdown-item">Kamatl&#225;bak</a> <a href="../pricing/short-sale-cost.html" target="_self" class="dropdown-item">Short elad&#225;s k&#246;lts&#233;ge</a> <a href="../pricing/research-news-services.html" target="_self" class="dropdown-item">Elemz&#233;sek, h&#237;rek</a> <a href="../pricing/market-data-pricing.html" target="_self" class="dropdown-item">Piaci adatok &#225;rk&#233;pz&#233;se</a> <a href="../pricing/stock-yield-enhancement-program-ie.html" target="_self" class="dropdown-item">R&#233;szv&#233;nyhozam-n&#246;vel&#337; program (SYEP)</a> <a href="../pricing/other-fees-overview.html" target="_self" class="dropdown-item">D&#237;jak</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- TRADING -->
+                    
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-technology" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Keresked&#233;s</a>
+                        <div class="dropdown-menu dropdown-technology" aria-labelledby="nav-technology">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="trading-platforms.html" target="_self" class="dropdown-item">Platformok</a> <a href="ib-api.html" target="_self" class="dropdown-item">API fel&#252;letek</a> <a href="margin.html" target="_self" class="dropdown-item">Fedezet (Margin)</a> <a href="products-exchanges.html" target="_self" class="dropdown-item">Keres&#233;s ticker k&#243;dra vagy t&#337;zsd&#233;re</a> <a href="products-stocks.html" target="_self" class="dropdown-item">Term&#233;kek &#225;ttekint&#233;se</a> <a href="ordertypes.html" target="_self" class="dropdown-item">Megb&#237;z&#225;st&#237;pusok</a> <a href="../whyib/reporting.html" target="_self" class="dropdown-item">Jelent&#233;sek</a> <a href="securities-financing.html" target="_self" class="dropdown-item">&#201;rt&#233;kpap&#237;r-finansz&#237;roz&#225;s</a> <a href="features-in-focus.html" target="_self" class="dropdown-item">Szolg&#225;ltat&#225;saink r&#233;szletei</a> <a href="../general/education/probability_lab.html" target="_self" class="dropdown-item">Probability Lab</a> <a href="sustainable-investing-ie.html" target="_self" class="dropdown-item">Fenntarthat&#243; befektet&#233;s</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- SERVICES -->
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-products" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Szolg&#225;ltat&#225;sok</a>
+                        <div class="dropdown-menu dropdown-products" aria-labelledby="nav-products">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="globalanalyst.html" target="_self" class="dropdown-item">IBKR GlobalAnalyst</a> <a href="si-quotes.html" target="_self" class="dropdown-item">EUIBSI V&#233;tel/Elad&#225;s</a> <a href="../portfolioanalyst/overview.html" target="_self" class="dropdown-item" rel="noreferrer noopener">PortfolioAnalyst</a> <a href="products-bonds.html" target="_self" class="dropdown-item">K&#246;tv&#233;ny piact&#233;r</a> <a href="products-mutual-funds.html" target="_self" class="dropdown-item">Befektet&#233;si alap piact&#233;r</a> <a href="commission-free-etfs-mkt.html" target="_self" class="dropdown-item">ETF-ek tranzakci&#243;s d&#237;j n&#233;lk&#252;l</a> <a href="https://gdcdyn.interactivebrokers.com/aces/Marketplace/InvestorsMarketplace" target="_blank" class="dropdown-item">Befektet&#337;i piact&#233;r</a> <a href="short-securities-availability.html" target="_self" class="dropdown-item">Shortolhat&#243; &#233;rt&#233;kpap&#237;rok el&#233;rhet&#337;s&#233;ge</a> <a href="third-party-integration.html" target="_self" class="dropdown-item">Integr&#225;ci&#243; harmadik felekkel</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- EDUCATION -->
+                    
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-education" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Oktat&#225;s</a>
+                        <div class="dropdown-menu dropdown-education" aria-labelledby="nav-education">
+                            <div class="row">
+                                <div class="col">
+                                     <a href="https://interactivebrokers.eu/campus/" target="_blank" class="dropdown-item">IBKR Campus</a> <a href="https://interactivebrokers.eu/campus/academy" target="_blank" class="dropdown-item" rel="noreferrer noopener">Traders' Academy</a> <a href="https://interactivebrokers.eu/campus/news" target="_blank" class="dropdown-item" rel="noreferrer noopener">Traders' Insight</a> <a href="https://interactivebrokers.eu/campus/podcasts" target="_blank" class="dropdown-item" rel="noreferrer noopener">IBKR Podcastok</a> <a href="https://interactivebrokers.eu/campus/quant" target="_blank" class="dropdown-item" rel="noreferrer noopener">IBKR Quant Blog</a> <a href="https://interactivebrokers.eu/campus/webinars" target="_blank" class="dropdown-item" rel="noreferrer noopener">Webin&#225;riumok</a> <a href="https://interactivebrokers.eu/campus/stl/" target="_blank" class="dropdown-item">Student Trading Lab</a> <a href="https://interactivebrokers.eu/campus/glossary" target="_blank" class="dropdown-item" rel="noreferrer noopener">Traders' Glossary</a>  <a href="../general/calendar/calendar.html" target="_self" class="dropdown-item">Keresked&#233;si napt&#225;r</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- SEARCH -->
+                    <li class="nav-item dropdown d-none d-lg-block" id="search-expand"><a href="#" class="nav-link nav-search dropdown-toggle" id="nav-search" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Search"><span>Keres&#233;s</span><i class="fas fa-search" aria-hidden="true"></i></a>
+                        <div class="dropdown-menu dropdown-search" aria-labelledby="nav-search">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="search_box">
+                                        <script type="text/javascript">
+                                         searchbox_input_changed=false;
+                                         $('#search-expand').on('shown.bs.dropdown', function(e) {
+                                           $('#searchField').focus();
+                                         });
+                                        </script>
+                                        <form action="https://www.interactivebrokers.ie/hu/search/search.php" method="get" class="search_form" id="search_form_id">
+                                            <input type="text" aria-label="Search Box" placeholder="Search" name="q" maxlength="64" autocomplete="off" id="searchField" class="form-control s swap_value searchinput" aria-label="Search Interactive Brokers">
+                                            <button type="submit" value="" id="searchsubmit" class="searchsubmit"><i class="fas fa-search" aria-hidden="true" aria-label="Submit Search"></i></button>
+                                        </form>
+                                        
+                                                                            </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- LOG IN -->
+                    
+                    <li class="nav-item dropdown d-none d-lg-block"><a href="#" target="_self" class="nav-link nav-login dropdown-toggle" id="nav-log-in" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bejelentkez&#233;s</a>
+                        <div class="dropdown-menu dropdown-login" aria-labelledby="nav-log-in">
+                            <div class="row">
+                                <div class="col">
+                                     <a href="../../sso/Login0104.html?RL=1" target="_self" class="dropdown-item dropdown-portal">Port&#225;l bejelentkez&#233;s</a>  <a href="ibkr-desktop.html" target="_self" class="dropdown-item">IBKR Desktop let&#246;lt&#233;se </a> <a href="tws.html#tws-software" target="_self" class="dropdown-item">Trader Workstation let&#246;lt&#233;se</a> <a href="tws-mobile.html#trytoday-drop" target="_self" class="dropdown-item">IBKR Mobile let&#246;lt&#233;se</a> <a href="ibgateway-latest.html" target="_self" class="dropdown-item">IB Gateway let&#246;lt&#233;se</a> <a href="trading-platforms.html" target="_self" class="dropdown-item">Az &#246;sszes IBKR platform &#246;sszehasonl&#237;t&#225;sa</a> <a href="https://forecasttrader.interactivebrokers.ie/eventtrader/#/markets" target="_self" class="dropdown-item">IBKR ForecastTrader</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- OPEN ACCOUNT -->
+                    <li class="nav-item dropdown d-none d-lg-block"><a href="#" target="_self" class="nav-link nav-open-account dropdown-toggle" id="nav-open-account" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sz&#225;mlanyit&#225;s</a>
+                        <div class="dropdown-menu dropdown-open-account" aria-labelledby="nav-open-account">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="https://www.interactivebrokers.co.uk/Universal/Application" target="_self" class="dropdown-item dropdown-portal">Sz&#225;mlanyit&#225;si k&#233;relem ind&#237;t&#225;sa</a> <a href="https://www.interactivebrokers.co.uk/sso/Login?c=t" target="_self" class="dropdown-item">Sz&#225;mlanyit&#225;si k&#233;relem befejez&#233;se</a> <a href="../general/what-you-need-inv.html" target="_self" class="dropdown-item">Mire lesz sz&#252;ks&#233;ge?</a> <a href="../accounts/account-guide.html" target="_self" class="dropdown-item">Hogyan v&#225;lassza ki az &#214;nnek megfelel&#337; sz&#225;ml&#225;t?</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul><!-- IBKR MENU END -->
+                
+            </div>
+        </div><!-- NAV BOTTOM END -->
+    </nav>
+</div><!-- HEADER END ---------------------------------------------------------------------------------------------------- --><!-- MOBILE NAV START (XS/SM/MD ONLY) ---------------------------------------------------------------------------------------------------- -->
+
+<div class="menu-mobile d-lg-none"><!-- CLOSE BUTTON -->
+    
+    <div class="close-button"><button type="button" class="btn-close" aria-label="Close Menu"><i class="fas fa-times"></i></button></div><!-- LOGO -->
+    <div class="logo-container"><a href="../home.html" target="_self" class="brand-logo" aria-label="Interactive Brokers Home"><span>Interactive Brokers kezd&#337;lap</span></a></div><!-- SEARCH -->
+    
+    <div class="search-container">
+        <div class="search-box">
+            <form action="https://www.interactivebrokers.ie/hu/search/search.php" method="get" class="search_form" id="search_form_id">
+                <input type="text" class="form-control" placeholder="Search" name="q" maxlength="64" autocomplete="off" id="searchFieldMobile" aria-label="Search Interactive Brokers"> 	
+                <button type="submit" class="btn-search-submit" value="" id="searchsubmitMobile" aria-label="Submit Search"><i class="fas fa-search" aria-hidden="true"></i></button> 	
+            </form>
+        </div>
+    </div>
+    <ul>
+            
+        <!-- PORTAL LOGIN -->
+        <li><a href="../../sso/Login0104.html?RL=1" target="_self" class="menu-log-in">Port&#225;l bejelentkez&#233;s</a></li>
+        
+    <!-- OPEN ACCOUNT -->
+    <li class="has-submenu"><a href="#" target="_self" class="menu-open-account" data-submenu="submenu-open-account">Sz&#225;mlanyit&#225;s</a>
+        <div class="submenu" id="submenu-open-account">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-open-account">Vissza</button></p>
+            <p class="submenu-title">SZ&#193;MLANYIT&#193;S</p>
+            <ul>
+            <li><a href="https://www.interactivebrokers.co.uk/Universal/Application" target="_self" class="menu-start-application">Sz&#225;mlanyit&#225;si k&#233;relem ind&#237;t&#225;sa</a></li>
+            <li><a href="https://www.interactivebrokers.co.uk/sso/Login?c=t" target="_self">Sz&#225;mlanyit&#225;si k&#233;relem befejez&#233;se</a></li>
+            <li><a href="../general/what-you-need-inv.html" target="_self">Mire lesz sz&#252;ks&#233;ge?</a></li>
+            <li><a href="../accounts/account-guide.html" target="_self">Hogyan v&#225;lassza ki az &#214;nnek megfelel&#337; sz&#225;ml&#225;t?</a></li>
+            </ul>
+        </div>
+    </li>
+        
+    <!-- FREE TRIAL -->
+    <li><a href="free-trial.html" target="_self">Ingyenes pr&#243;baverzi&#243;</a></li><!-- WHY IBKR -->
+    <li><a href="../whyib/overview.html" target="_self">Mi&#233;rt v&#225;lasszon minket?</a></li><!-- ACCOUNT TYPES -->
+    
+    <li class="has-submenu"><a href="#" target="_self" data-submenu="submenu-account-types">Sz&#225;mlat&#237;pusok</a>
+        <div class="submenu" id="submenu-account-types">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-account-types">Vissza</button></p>
+            <p class="submenu-title">MAG&#193;NSZEM&#201;LYEK</p>
+            <ul>
+            <li><a href="../accounts/individual-ie.html" target="_self" >Egy&#233;ni vagy K&#246;z&#246;s sz&#225;mla</a></li>
+            <li><a href="../accounts/trust-ie.html" target="_self" >Bizalmi vagyonkezel&#233;si (trust) sz&#225;ml&#225;k</a></li>
+            <li><a href="../accounts/family-account-ie.html" target="_self" >Csal&#225;di sz&#225;ml&#225;k</a></li>
+            <li><a href="../accounts/long-term-investment-accounts-ie.html" target="_self">Tart&#243;s befektet&#233;si (TBSZ) sz&#225;ml&#225;k</a></li>
+            <li><a href="../accounts/plan-depargne-en-action-accounts-ie.html" target="_self">Plan d&#8217;Epargne en Action (PEA) sz&#225;ml&#225;k</a></li>
+                        
+            </ul>
+            <p class="submenu-title">INT&#201;ZM&#201;NYEK</p>
+            <ul>
+            <li><a href="../accounts/institutions-ie.html" target="_self" >Int&#233;zm&#233;nyi sz&#225;ml&#225;k &#8211; Kezd&#337;lap</a></li>
+            <li><a href="../accounts/advisor-ie.html" target="_self" >Bejegyzett befektet&#233;si tan&#225;csad&#243;k</a></li>
+            <li><a href="../accounts/proprietary-trading-group-ie.html" target="_self" >Saj&#225;t sz&#225;ml&#225;s keresked&#233;si csoportok</a></li>
+            <li><a href="../accounts/hedge-fund-ie.html" target="_self" >Fedezeti alapok</a></li>
+            <li><a href="../accounts/broker-ie.html" target="_self" >K&#246;zvet&#237;t&#337; br&#243;kerek</a></li>
+            <li><a href="../accounts/family-office-ie.html" target="_self" >Int&#233;zm&#233;nyi csal&#225;di sz&#225;ml&#225;k</a></li>
+            <li><a href="../accounts/compliance-officer-ie.html" target="_self" >Compliance vezet&#337;k</a></li>
+            <li><a href="../accounts/small-business-ie.html" target="_self" >Kisv&#225;llalkoz&#225;sok</a></li>
+            <li><a href="../accounts/fsa-insurance-providers.html" target="_self" >Teljes k&#246;r&#369; adminisztr&#225;tori sz&#225;mla <br>biztos&#237;t&#243;knak</a></li>
+            <li><a href="../accounts/money-manager-ie.html" target="_self" >Befektet&#233;skezel&#337;k</a></li>
+            <li><a href="../accounts/administrator-ie.html" target="_self" >Befektet&#233;si alap adminisztr&#225;torok</a></li>
+             
+             
+            <li><a href="https://interactivebrokers.eu/campus/stl/" target="_blank" >Oktat&#225;si int&#233;zm&#233;nyek</a></li>
+                        
+            </ul>
+        </div>
+    </li><!-- PRICING -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-pricing">&#193;rk&#233;pz&#233;s</a>
+        <div class="submenu" id="submenu-pricing">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-pricing">Vissza</button></p>
+            <p class="submenu-title">&#193;RK&#201;PZ&#201;S</p>
+            <ul>
+            <li><a href="../pricing/commissions-home.html" target="_self">Jutal&#233;kok</a></li>
+            <li><a href="margin-rates.html" target="_self">Fedezeti hitelkamatl&#225;bak</a></li>
+            <li><a href="../accounts/fees/pricing-interest-rates.html" target="_self">Kamatl&#225;bak</a></li>
+            <li><a href="../pricing/short-sale-cost.html" target="_self">Short elad&#225;s k&#246;lts&#233;ge</a></li>
+            <li><a href="../pricing/research-news-services.html" target="_self">Kutat&#225;s &#233;s h&#237;rek</a></li>
+            <li><a href="../pricing/market-data-pricing.html" target="_self">Piaci adatok &#225;rk&#233;pz&#233;se</a></li>
+            <li><a href="../pricing/stock-yield-enhancement-program-ie.html" target="_self">R&#233;szv&#233;nyhozam-n&#246;vel&#337; program</a></li>
+            <li><a href="../pricing/other-fees-overview.html" target="_self">D&#237;jak</a></li>
+            </ul>
+        </div>
+    </li><!-- TRADING -->
+    
+    <li class="has-submenu"><a href="#" data-submenu="submenu-trading">Keresked&#233;s</a>
+        <div class="submenu" id="submenu-trading">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-trading">Vissza</button></p>
+            <p class="submenu-title">KERESKED&#201;S</p>
+            <ul>
+            <li><a href="trading-platforms.html" target="_self">Platformok</a></li>
+            <li><a href="ib-api.html" target="_self">API fel&#252;letek</a></li>
+            <li><a href="margin.html" target="_self">Fedezet (margin)</a></li>
+            <li><a href="products-exchanges.html" target="_self">Keres&#233;s ticker k&#243;dra vagy t&#337;zsd&#233;re</a></li>
+            <li><a href="products-stocks.html" target="_self">Term&#233;kek &#225;ttekint&#233;se</a></li>
+            <li><a href="ordertypes.html" target="_self">Megb&#237;z&#225;st&#237;pusok</a></li>
+            <li><a href="../whyib/reporting.html" target="_self">Jelent&#233;sek</a></li>
+            <li><a href="securities-financing.html" target="_self">&#201;rt&#233;kpap&#237;r-finansz&#237;roz&#225;s</a></li>
+            <li><a href="features-in-focus.html" target="_self">R&#233;szletes t&#225;j&#233;koztat&#243; a szolg&#225;ltat&#225;sokr&#243;l</a></li>
+            <li><a href="../general/education/probability_lab.html" target="_self">Probability Lab</a></li>
+            <li><a href="sustainable-investing-ie.html" target="_self">Fenntarthat&#243; befektet&#233;s</a></li>
+            </ul>
+        </div>
+    </li><!-- SERVICES -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-services">Szolg&#225;ltat&#225;sok</a>
+        <div class="submenu" id="submenu-services">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-services">Vissza</button></p>
+            <p class="submenu-title">SZOLG&#193;LTAT&#193;SOK</p>
+            <ul>
+            <li><a href="globalanalyst.html" target="_self">IBKR GlobalAnalyst</a></li>
+            <li><a href="si-quotes.html" target="_self">EUIBSI V&#233;tel/Elad&#225;s</a></li>
+            <li><a href="../portfolioanalyst/overview.html" target="_self" rel="noreferrer noopener">PortfolioAnalyst</a></li>
+            <li><a href="products-bonds.html" target="_self">K&#246;tv&#233;ny piact&#233;r</a></li>
+            <li><a href="products-mutual-funds.html" target="_self">Befektet&#233;si alap piact&#233;r</a></li>
+            <li><a href="commission-free-etfs-mkt.html" target="_self">Tranzakci&#243;s d&#237;j n&#233;lk&#252;li ETF-ek</a></li>
+            <li><a href="https://gdcdyn.interactivebrokers.com/aces/Marketplace/InvestorsMarketplace" target="_blank">Befektet&#337;i piact&#233;r</a></li>
+            <li><a href="short-securities-availability.html" target="_self">Shortolhat&#243; &#233;rt&#233;kpap&#237;rok el&#233;rhet&#337;s&#233;ge</a></li>
+            <li><a href="third-party-integration.html" target="_self">Harmadik f&#233;l integr&#225;ci&#243;</a></li>
+            </ul>
+        </div>
+    </li><!-- EDUCATION -->
+    
+    <li class="has-submenu"><a href="#" data-submenu="submenu-education">Oktat&#225;s</a>
+        <div class="submenu" id="submenu-education">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-education">Vissza</button></p>
+            <p class="submenu-title">OKTAT&#193;S</p>
+            <ul>
+             
+             
+            <li><a href="https://interactivebrokers.eu/campus/" target="_blank">IBKR Campus</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/academy" target="_blank">Traders' Academy</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/news" target="_blank">Traders' Insight</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/podcasts" target="_blank">IBKR Podcastok</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/quant" target="_blank">IBKR Quant Blog</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/webinars" target="_blank">Webin&#225;riumok</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/stl/" target="_blank">Student Trading Lab</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/glossary" target="_blank">Traders' Glossary</a></li>
+                        
+            <li><a href="../general/calendar/calendar.html" target="_self">Keresked&#233;si napt&#225;r</a></li>
+            </ul>
+        </div>
+    </li><!-- ABOUT US -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-about-us">R&#243;lunk</a>
+        <div class="submenu" id="submenu-about-us">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-about-us">Vissza</button></p>
+            <p class="submenu-title">R&#211;LUNK</p>
+            <ul>
+            <li><a href="../general/financial-strength.html" target="_self">Stabilit&#225;s &#233;s biztons&#225;g</a></li>
+            <li><a href="../general/about/info-and-history.html" target="_self">Inform&#225;ci&#243;k &#233;s c&#233;gt&#246;rt&#233;net</a></li>
+            <li><a href="../general/about/careers-splash.html" target="_self">Karrierlehet&#337;s&#233;gek</a></li>
+            <li><a href="../general/awards.html" target="_self">D&#237;jak</a></li>
+            <li><a href="../about/news-at-ibkr.html" target="_self">IBKR h&#237;rek</a></li>
+            <li><a href="../general/about/press-and-media.html" target="_self">Sajt&#243; &#233;s m&#233;dia</a></li>
+            <li><a href="https://investors.interactivebrokers.com/ir/main.php" target="_blank" rel="noreferrer noopener">Befektet&#337;i kapcsolatok</a></li>
+            <li><a href="../general/about/sustainability.html" target="_self">Fenntarthat&#243;s&#225;g</a></li>
+            <li><a href="../accounts/legalDocuments/brokerPerformanceReports.html" target="_self">Szab&#225;lyoz&#243;i jelent&#233;sek</a></li>
+            <li><a href="../accounts/referrer.html" target="_self">K&#246;zvet&#237;tse hozz&#225;nk egy bar&#225;tj&#225;t</a></li>
+            <li><a href="../general/about/affiliate-programs.html" target="_self">Affiliate programok</a></li>
+            </ul>
+        </div>
+    </li><!-- SUPPORT -->
+    
+    <li class="has-submenu"><a href="#" data-submenu="submenu-support">T&#225;mogat&#225;s</a>
+        <div class="submenu" id="submenu-support">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-support">Vissza</button></p>
+            <p class="submenu-title">T&#193;MOGAT&#193;S</p>
+            <ul>
+            <li><a href="../support/fund-my-account.html" target="_self">T&#246;ltse fel a sz&#225;ml&#225;j&#225;t</a></li>
+            <li><a href="../support/individuals.html" target="_self">Mag&#225;nszem&#233;lyek</a></li>
+            <li><a href="../support/institutions.html" target="_self">Int&#233;zm&#233;nyek</a></li>
+            <li><a href="../support/institutional-sales-contacts4343.html?p=uk" target="_self">Int&#233;zm&#233;nyi &#233;rt&#233;kes&#237;t&#337;k el&#233;rhet&#337;s&#233;gei</a></li>
+            <li><a href="../general/contact/ibot-container.html" target="_self">Tekintse &#225;t a GYIK-et</a></li>
+            <li><a href="../support/reports-and-dates.html" target="_self">Ad&#243;inform&#225;ci&#243;k</a></li> 
+            </ul>
+        </div>
+    </li><!-- LANGUAGE -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-language">Nyelv</a>
+        <div class="submenu" id="submenu-language">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-language">Vissza</button></p>
+            <p class="submenu-title">NYELV</p>
+            <ul>
+            <li><a href="../home.html" target="_self">Angol</a></li>
+            <li><a href="../../fr/home.html" target="_self">Fran&#231;ais</a></li>
+            <li><a href="../../de/home.html" target="_self">Deutsch</a></li>
+            <li><a href="../../es/home.html" target="_self">Espa&#241;ol</a></li>
+            <li><a href="../../it/home.html" target="_self">Italiano</a></li>
+            <li><a href="../home.html" target="_self">Magyar</a></li>
+            <li><a href="../../pt/home.html" target="_self">Portugu&#234;s</a></li>
+            </ul>
+        </div>
+    </li><!-- REGION SELECTOR -->
+    
+        
+    </ul>
+</div><!-- MOBILE NAV OVERLAY -->
+<div class="website-overlay d-lg-none"></div><!-- MOBILE NAV END  -->
+
+<script>
+$(window).on('load', function() {
+    // Simple check if URL contains 'conf=am'
+    if (!window.location.href.includes('conf=am')) {
+        $('#region-modal').modal({
+            backdrop: 'static',
+            keyboard: false
+        });
+        $('#region-modal').modal('show');
+        $('body').removeClass('modal-open');
+        $('body').css('overflow', '');
+        $('body').css('padding-right', '');
+    }
+});
+</script>
+<div class="modal modal-cookies fade" id="region-modal" tabindex="-1" role="dialog" aria-labelledby="modalRegionLabel" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+    <div class="modal-content" id="modalRegionContent">
+      <div class="modal-header d-block">
+        <p class="fs-5 modal-title" id="modalCookieLabel">Which IBKR website is best for you?</p>
+        <p class="pt-10 mb-0 pr-30 fs-6">The content on the website you selected is not intended for investors in your location. </p>
+        <p class="mb-40 fs-6">Please choose the website most applicable to you.</p>
+      </div>
+      <div class="modal-footer" id="modalRegionControls">
+        <div class="row">
+          <div class="col-12 col-md-4"></div>
+          <div class="col-12 col-md-8">
+            <p>
+              <button class="btn btn-primary" id="btnRegionRecommendation">Go to US website</button>
+              <button class="btn btn-primary" id="btnRegionCurrent">Stay on IE website</button>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+$(function() {
+   $('button#btnRegionRecommendation').click(function() {
+    window.location.href = 'https://www.interactivebrokers.com/';
+  });
+  $('button#btnRegionCurrent').click(function() {
+    setCookie("IB_REG", 1, 365, '.interactivebrokers.ie');
+    location.reload();
+  });
+});
+</script><div id="contents">
+    <section class="page-title" id="page-title">
+        <div class="container">
+            <div class="row">
+                <div class="col"><h1>Harmadik f&#233;l integr&#225;ci&#243;</h1></div>
+            </div>
+        </div>
+    </section>
+    <!-- HERO -->
+<section class="hero hero-dark hero-bg-wrap bg-none bg-tertiary-dark-20" id="">
+    <figure class="hero-bg-img">
+        <picture class="r-img"><img src="../../images/2015/header-third-party-integration.jpg" alt="Harmadik f&#233;l integr&#225;ci&#243;" border="0" class="img-flip-rtl" /></picture>
+    </figure>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-6 col-xl-5">
+                <div class="hero-content">
+                    <h2>Harmadik f&#233;l integr&#225;ci&#243;</h2>
+                    <p class="subheading">Integr&#225;lja IBKR adatait harmadik felek &#225;ltal fejlesztett portf&#243;li&#243;kezel&#337;, megb&#237;z&#225;skezel&#337;, keresked&#233;st k&#246;vet&#337; allok&#225;ci&#243;s &#233;s compliance szoftverekkel.</p>
+                </div>
+            </div>
+        </div>
+    </div><!-- DROPLINKS -->
+</section>
+<section class="droplinks dl-4">
+    <div class="container">
+        <div class="row">
+            <div class="col"> 
+		<a href="#tpi-portfolio" target="_self" class="page-scroll">
+                    <svg role="img">
+                        <title>Portf&#243;li&#243;kezel&#233;s</title>
+                        <g>
+	<path d="M24.646,10.366V9.17c0-1.096-0.623-2.376-2.375-2.376h-3.584c-1.753,0-2.375,1.28-2.375,2.376v1.196H4.604
+	v21h31.75v-21H24.646z M17.312,9.17c0-0.514,0.179-1.376,1.375-1.376h3.584c1.195,0,1.375,0.862,1.375,1.376v1.196h-6.334V9.17z
+	 M35.354,30.366H5.604v-19h29.75V30.366z"/>
+	<polygon points="3.854,12.616 2.854,12.616 2.854,33.116 34.104,33.116 34.104,32.116 3.854,32.116 	"/>
+	<path d="M23.748,17.374c-0.847-0.871-1.874-1.279-2.861-1.379v-1.609h-0.85v1.593v0.403v0.449
+	c1.031-0.088,2.217,0.227,3.1,1.135L23.748,17.374z"/>
+	<path d="M20.057,26.141v1.573h0.85v-1.963h-0.001v-0.478c-1.334,0.162-2.963-0.305-3.943-1.672l-0.691,0.496
+	C17.222,25.423,18.682,26.047,20.057,26.141z"/>
+	<path d="M20.192,21.184c1.734,0.402,2.794,0.746,2.891,2.117c0.065,0.953-0.625,1.451-1.112,1.686v0.919
+	c0.008-0.003,0.016-0.005,0.022-0.007c1.297-0.467,2.021-1.461,1.938-2.657c-0.148-2.095-2.033-2.533-3.547-2.885
+	c-1.535-0.357-2.479-0.629-2.572-1.693c-0.08-0.912,0.744-1.391,1.102-1.555v-0.902c-0.121,0.041-0.244,0.078-0.354,0.129
+	c-1.086,0.496-1.682,1.395-1.594,2.4C17.115,20.467,18.75,20.848,20.192,21.184z"/>
+</g> </svg> <span>Portf&#243;li&#243;kezel&#337;</span> 
+				</a> 
+				<a href="#tpi-order" target="_self" class="page-scroll">
+                    <svg role="img">
+                        <title>Megb&#237;z&#225;skezel&#337;</title>
+                        <path d="M31.207,16.02c-2.035,0-3.7,1.532-3.949,3.5H9.396v-4.095c2.018-0.202,3.604-1.89,3.604-3.96
+c0-2.206-1.794-4-4-4s-4,1.794-4,4c0,1.999,1.478,3.645,3.396,3.939v5.116h9.5v6.458c-1.927,0.286-3.414,1.935-3.414,3.94
+c0,2.206,1.794,4,4,4c2.206,0,4-1.794,4-4c0-2.064-1.577-3.748-3.586-3.958v-6.44h8.362c0.249,1.968,1.914,3.5,3.949,3.5
+c2.206,0,4-1.793,4-4C35.207,17.814,33.413,16.02,31.207,16.02z M6,11.465c0-1.654,1.346-3,3-3s3,1.346,3,3c0,1.654-1.346,3-3,3
+S6,13.119,6,11.465z M21.482,30.918c0,1.654-1.346,3-3,3c-1.654,0-3-1.346-3-3s1.346-3,3-3
+C20.137,27.918,21.482,29.264,21.482,30.918z M31.207,23.02c-1.654,0-3-1.346-3-3s1.346-3,3-3s3,1.346,3,3
+S32.861,23.02,31.207,23.02z"/> </svg> <span>Megb&#237;z&#225;skezel&#337;</span> 
+				</a> 
+				<a href="#tpi-post-trade" target="_self" class="page-scroll">
+                    <svg role="img">
+                        <title>Keresked&#233;st k&#246;vet&#337; allok&#225;ci&#243;</title>
+                        <g>
+	<polygon points="10.17,14.121 9.17,14.121 9.17,19.91 16.17,19.91 16.17,26.861 17.17,26.861 17.17,19.91 
+	24.754,19.91 24.754,18.91 10.17,18.91 	"/>
+	<path d="M14.891,6.059h-10.5v6.834h10.5V6.059z M13.891,11.893h-8.5V7.059h8.5V11.893z"/>
+	<circle cx="9.641" cy="9.559" r="1.334"/>
+	<rect x="12.381" y="7.434" width="0.688" height="1"/>
+	<rect x="6.068" y="7.434" width="0.688" height="1"/>
+	<rect x="12.381" y="10.309" width="0.688" height="1"/>
+	<rect x="6.068" y="10.309" width="0.688" height="1"/>
+	<path d="M11.566,34.893h10.5v-6.834h-10.5V34.893z M12.566,29.059h8.5v4.834h-8.5V29.059z"/>
+	<circle cx="16.817" cy="31.56" r="1.333"/>
+	<rect x="19.557" y="29.434" width="0.688" height="1"/>
+	<rect x="13.246" y="29.434" width="0.688" height="1"/>
+	<rect x="19.557" y="32.309" width="0.688" height="1"/>
+	<rect x="13.246" y="32.309" width="0.688" height="1"/>
+	<path d="M25.816,16.059v6.833h10.5v-6.833H25.816z M35.316,21.893h-8.5v-4.833h8.5V21.893z"/>
+	<circle cx="31.066" cy="19.559" r="1.334"/>
+	<rect x="33.807" y="17.434" width="0.688" height="1"/>
+	<rect x="27.494" y="17.434" width="0.688" height="1"/>
+	<rect x="33.807" y="20.309" width="0.688" height="1"/>
+	<rect x="27.494" y="20.309" width="0.688" height="1"/>
+</g> </svg> <span>Keresked&#233;st k&#246;vet&#337; allok&#225;ci&#243;</span> 
+				</a> 
+				<a href="#tpi-employeetrack" target="_self" class="page-scroll">
+                    <svg role="img">
+                        <title>EmployeeTrack</title>
+                        <g>
+	<path d="M5.777,30.602c-1.062,0-1.925,0.862-1.925,1.924c0,1.062,0.863,1.926,1.925,1.926s1.925-0.863,1.925-1.926
+	C7.702,31.464,6.839,30.602,5.777,30.602z M5.777,33.352c-0.455,0-0.825-0.371-0.825-0.826s0.37-0.824,0.825-0.824
+	s0.825,0.369,0.825,0.824S6.232,33.352,5.777,33.352z"/>
+	<polygon points="37.057,27.674 34.449,26.657 34.583,27.522 9.319,31.355 9.484,32.442 34.751,28.609 
+	34.877,29.427 	"/>
+	<polygon points="32.615,20.857 34.169,18.532 31.378,18.343 31.763,19.125 8.808,30.354 9.291,31.341 
+	32.248,20.111 	"/>
+	<polygon points="27.889,13.359 28.68,10.673 25.962,11.328 26.565,11.964 8.015,29.539 8.772,30.338 27.322,12.762 
+		"/>
+	<polygon points="21.137,7.616 21.088,4.819 18.689,6.258 19.452,6.681 7.02,29.008 7.981,29.543 20.414,7.215 	"/>
+</g>                    </svg>
+                    <span>EmployeeTrack</span> 
+				</a> 
+			</div>
+        </div>
+    </div><!-- BEGIN TPI DETAILS CONTENT ------------------------------------------------>
+</section>
+<section id="tpi-portfolio">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 col-lg-6 be-1">
+                <h2>Portf&#243;li&#243;kezel&#233;s</h2>
+                <p>A portf&#243;li&#243;kezel&#337; szoftverek &#225;ltal&#225;ban lehet&#337;v&#233; teszik a befektet&#233;sek kezel&#233;s&#233;t &#233;s a portf&#243;li&#243; elemz&#233;s&#233;t k&#252;l&#246;nf&#233;le eszk&#246;z&#246;kkel. Az Interactive Brokers &#252;gyfelei jelenleg az al&#225;bbi harmadik f&#233;l szoftverc&#233;gek &#225;ltal fejlesztett portf&#243;li&#243;kezel&#337; szoftverekkel ig&#233;nyelhetik az integr&#225;ci&#243;t.</p><br>
+                <h5>Interactive Brokers jelent&#233;st&#233;teli integr&#225;ci&#243;s eszk&#246;z</h5>
+                <p>Az IBKR &#225;ltal&#225;nos jelent&#233;st&#233;teli fel&#252;leten kereszt&#252;l biztos&#237;tunk adatfolyamot azon &#252;gyfeleknek, akik az adatokat az al&#225;bbiakban fel nem sorolt, harmadik f&#233;l &#225;ltal fejlesztett szoftverrel szeretn&#233;k integr&#225;lni.</p>
+               <p> <a href="../../download/reportIntegration.pdf" target="_blank" class="btn btn-sm btn-primary">Fejleszt&#337;i &#250;tmutat&#243;: PDF</a></p>
+        	</div>
+        	<div class="col-12 col-lg-6 text-center">
+                  <div class="pa-banner">
+                    <h3 class="fs-6 lh-6 text-bold">Mi&#233;rt fizetne egy harmadik f&#233;l portf&#243;li&#243;kezel&#337; eszk&#246;z&#233;rt?</h3>
+                    <a href="https://www.portfolioanalyst.com/" target="_self" class="logo-portfolioanalyst d-dark-none" title="PortfolioAnalyst" aria-label="PortfolioAnalyst"></a>
+                    <a href="https://www.portfolioanalyst.com/" target="_self" class="logo-portfolioanalyst-inverse d-light-none" title="PortfolioAnalyst" aria-label="PortfolioAnalyst"></a>  
+                    <p class="fs-6 lh-6">Haszn&#225;lja ink&#225;bb az Interactive Brokers' PortfolioAnalyst nev&#369; portf&#243;li&#243;kezel&#337; eszk&#246;z&#233;t ingyen!</p><br>
+                     <a href="https://www.interactivebrokers.com/mkt/?src=ib3pi1&amp;url=/en/index.php?f=5078" class="btn btn-sm btn-primary">Tudjon meg t&#246;bbet</a>
+                  </div>
+            </div> 
+		</div>
+        <div class="row">
+        	<div class="col-12">
+            	<br>
+                <br>
+                <p>Az al&#225;bbiakban felsorolt let&#246;lt&#233;si megold&#225;sokon t&#250;l sz&#225;mos m&#225;s harmadik f&#233;l szolg&#225;ltat&#243; k&#237;n&#225;l m&#233;g portf&#243;li&#243;kezel&#233;si &#233;s ad&#243;bevall&#225;si csomagokat, amelyek integr&#225;lhat&#243;k a HTML let&#246;lt&#233;seinkkel. A tov&#225;bbi r&#233;szletek&#233;rt vegye fel a kapcsolatot a szolg&#225;ltat&#243;j&#225;val.</p>
+                <h5>Az al&#225;bbi felsorol&#225;sban nem szerepl&#337; harmadik f&#233;l &#225;ltal fejlesztett portf&#243;li&#243;kezel&#337; eszk&#246;zzel t&#246;rt&#233;n&#337; integr&#225;ci&#243; ig&#233;nyl&#233;s&#233;hez vegye fel a kapcsolatot az IBKR &#233;rt&#233;kes&#237;t&#337;j&#233;vel.</h5><br>
+                <h3>Let&#246;lt&#233;si c&#233;l:</h3>
+                <hr>
+            </div>
+        </div>
+            	<div class="row pm-layout"><!-- Addepar -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal"  data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.addepar.com" 
+data-myp1="We provide a direct data feed to Addepar."              
+data-myp2="To import your IBKR statement data into Addepar, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_addepar.png" alt="Addepar" loading="lazy" width="300" height="100" /></button></div><!-- ADDIKA -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.addika.io" 
+ data-myp1="We provide a direct data feed to ADDIKA."              
+data-myp2="To import your IBKR statement data into ADDIKA, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_addika.png" alt="ADDIKA" loading="lazy" width="300" height="100" /></button></div><!-- Advent -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.advent.com" 
+ data-myp1="We provide a direct data feed to Advent. Only stocks, options, bonds and futures data are available for Advent Custodial Data, which IBKR converts to USD."              
+data-myp2="To import your IBKR statement data into Advent, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_advent.png" alt="Advent" loading="lazy" width="300" height="100" /></button></div><!-- ADVYZON -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://main.yhlsoft.com/main/index.html" 
+data-myp1=""We provide a direct data feed to Advyzon. Only stocks, options, bonds and futures data are available for Advyzon Solutions, which IBKR converts to USD."              
+data-myp2="To import your IBKR statement data into Advyzon, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_advyzon.png" alt="Advyzon" loading="lazy" width="300" height="100" /></button></div><!-- SGGG Alpha Desk -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.alphadesk.com" 
+                   data-myp1="We provide a direct data feed to SGGG."              
+data-myp2="To import your IBKR statement data into SGGG, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_alphadesk.png" alt="SGGG" loading="lazy" width="300" height="100" /></button></div><!-- ARBOR -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.arborfs.com" 
+                   data-myp1="We provide a direct data feed to Arbor FS."              
+data-myp2="To import your IBKR statement data into Arbor FS, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_arbor.png" alt="Arbor FS" loading="lazy" width="300" height="100" /></button></div><!-- ARCHER -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.archerims.com" 
+                   data-myp1="We provide a direct data feed to Archer."              
+data-myp2="To import your IBKR statement data into Archer, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_archer.png" alt="Archer" loading="lazy" width="300" height="100" /></button></div><!-- ARCHWAY -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.archwaytechnology.net" 
+data-myp1="We provide a direct data feed to Archway."              
+data-myp2="To import your IBKR statement data into Archway, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_archway.png" alt="Archway" loading="lazy" width="300" height="100" /></button></div><!-- Athena Systems -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.athenasystems.com" 
+ >
+                <img src="../../images/2015/logos/company_logo_athena_systems.png" alt="Athena Systems" loading="lazy" width="300" height="100" /></button></div><!-- BILLFIN -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://support.billfin.com/portal/home" 
+data-myp1="We provide a direct data feed to BillFin."              
+data-myp2="To import your IBKR statement data into BillFin, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_billfin.png" alt="Billfin" loading="lazy" width="300" height="100" /></button></div><!-- BLOOMBERG -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.bloomberg.com" 
+                 data-myp1="We provide a direct data feed to Bloomberg."              
+data-myp2="To import your IBKR statement data into Bloomberg, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_bloomberg.png" alt="Bloomberg" loading="lazy" width="300" height="100" /></button></div><!-- BLUELEAF -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.blueleaf.com" 
+                   data-myp1="We provide a direct data feed to Blueleaf."              
+data-myp2="To import your IBKR statement data into Blueleaf, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_blueleaf.png" alt="Blueleaf" loading="lazy" width="300" height="100" /></button></div><!-- BRIDGEFT -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.bridgeft.com" 
+                   data-myp1="We provide a direct data feed to BridgeFT."              
+data-myp2="To import your IBKR statement data into BridgeFT, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_bridgeft.png" alt="BridgeFT" loading="lazy" width="300" height="100" /></button></div><!-- BROADRIDGE -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.broadridge.com" 
+                   data-myp1="We provide a direct data feed to Broadridge Investigo and Paladyne."              
+data-myp2="To import your IBKR statement data into Broadridge, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_broadridge.png" alt="Broadridge" loading="lazy" width="300" height="100" /></button></div><!-- Canpopy -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.canopy.cloud" 
+                  data-myp1="We provide a direct data feed to Canopy."              
+data-myp2="To import your IBKR statement data into Canopy, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_canopy.png" alt="Canopy" loading="lazy" width="300" height="100" /></button></div><!-- CAPTOOLS -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.captools.net/" 
+                data-myp1="We provide Daily Captools Downloads on the Activity Downloads page in Client Portal. The downloadable single zipped file contains an Account, Activity, Position and Security file."              
+data-myp2="To import your IBKR statement data into Captools, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_captoolsnet.png" alt="Captools" loading="lazy" width="300" height="100" /></button></div><!-- Circle Black -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.circleblack.com" 
+                   data-myp1="We provide a direct data feed to CircleBlack."              
+data-myp2="To import your IBKR statement data into CircleBlack, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_circleblack.png" alt="CircleBlack" loading="lazy" width="300" height="100" /></button></div><!-- CORNERSTONE -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.poweradvisortools.com" 
+                   data-myp1="We provide a direct data feed to Cornerstone Power Advisor."              
+data-myp2="To import your IBKR statement data into Cornerstone Power Advisor, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_cornerstone.png" alt="Cornerstone Power Advisor" loading="lazy" width="300" height="100" /></button></div><!-- DST -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.dstsystems.com/" 
+                   data-myp1="We provide a direct data feed to DST Vision Professional."              
+data-myp2="To import your IBKR statement data into DST Vision Professional, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_dst.png" alt="DST Vision Professional" loading="lazy" width="300" height="100" /></button></div><!-- ELECTRA -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.electrainfo.com" 
+                   data-myp1="K&#246;zvetlen adatfolyamot biztos&#237;tunk az Electrahoz." data-myp2="Az IBKR kimutat&#225;sok Electraba t&#246;rt&#233;n&#337; import&#225;l&#225;s&#225;hoz vegye fel a kapcsolatot az IBKR &#233;rt&#233;kes&#237;t&#337;j&#233;vel vagy k&#252;ldj&#246;n &#252;zenetet a <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a> email c&#237;mre." >
+                <img src="../../images/2015/logos/company_logo_electra.png" alt="Electra" loading="lazy" width="300" height="100" /></button></div><!-- EMONEY -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.emoneyadvisor.com" 
+                   data-myp1="K&#246;zvetlen adatfolyamot biztos&#237;tunk az eMoney-hoz." data-myp2="Az IBKR kimutat&#225;sok eMoney-ba t&#246;rt&#233;n&#337; import&#225;l&#225;s&#225;hoz vegye fel a kapcsolatot az IBKR &#233;rt&#233;kes&#237;t&#337;j&#233;vel vagy k&#252;ldj&#246;n &#252;zenetet a <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a> email c&#237;mre." >
+                <img src="../../images/2015/logos/company_logo_emoney.png" alt="eMoney" loading="lazy" width="300" height="100" /></button></div><!-- EMOtomy -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.emotomy.com" 
+                   data-myp1="K&#246;zvetlen adatfolyamot biztos&#237;tunk az Emotomy-hoz." data-myp2="Az IBKR kimutat&#225;sok Emotomy t&#246;rt&#233;n&#337; import&#225;l&#225;s&#225;hoz vegye fel a kapcsolatot az IBKR &#233;rt&#233;kes&#237;t&#337;j&#233;vel vagy k&#252;ldj&#246;n &#252;zenetet a <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a> email c&#237;mre." >
+                <img src="../../images/2015/logos/company_logo_emotomy.png" alt="Emotomy" loading="lazy" width="300" height="100" /></button></div><!-- Enfusion -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.enfusionsystems.com" 
+                   data-myp1="K&#246;zvetlen adatfolyamot biztos&#237;tunk az Enfusionh&#246;z." data-myp2="Az IBKR kimutat&#225;sok Enfusionbe t&#246;rt&#233;n&#337; import&#225;l&#225;s&#225;hoz vegye fel a kapcsolatot az IBKR &#233;rt&#233;kes&#237;t&#337;j&#233;vel vagy k&#252;ldj&#246;n &#252;zenetet a <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a> email c&#237;mre." >
+                <img src="../../images/2015/logos/company_logo_enfusion.png" alt="Enfusion" loading="lazy" width="300" height="100" /></button></div><!-- ENVESTNET TAMARAC -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://tamaracpc.com/" 
+                   data-myp1="Ha a PortfolioCenter Let&#246;lt&#233;sekbe szeretn&#233; import&#225;lni IBKR adatait, vegye fel a kapcsolatot IBKR &#233;rt&#233;kes&#237;t&#337;j&#233;vel vagy k&#252;ldj&#246;n &#252;zenetet a <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a> email c&#237;mre. Let&#246;ltheti a Biztons&#225;g, Portf&#243;li&#243;, &#193;r, Tranzakci&#243;, Poz&#237;ci&#243;, Elsz&#225;mol&#225;s &#233;s K&#246;lts&#233;galap&#250; Elsz&#225;mol&#225;s f&#225;jlokat egyedileg vagy az &#246;sszeset egy t&#246;m&#246;r&#237;tett &#225;llom&#225;nyban. Emellett FTP k&#233;zbes&#237;t&#233;st is k&#233;rhet, amihez vegye fel a kapcsolatot az IBKR &#233;rt&#233;kes&#237;t&#337;j&#233;vel, vagy k&#252;ldj&#246;n &#252;zenetet a fent eml&#237;tett email c&#237;mre. " data-myp2="A f&#225;jlok tartalmazz&#225;k a r&#233;szv&#233;ny, opci&#243;, k&#246;tv&#233;ny, k&#246;telezv&#233;ny &#233;s befektet&#233;si alap adatokat, az &#214;n sz&#225;ml&#225;j&#225;nak az alapdeviz&#225;j&#225;ra &#225;tv&#225;ltott &#246;sszegben." >
+                <img src="../../images/2015/logos/company_logo_envestnet-tamarac.png" alt="PortfolioCenter" loading="lazy" width="300" height="100" /></button></div><!-- EQUALIZER -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://bdequalizer.com/Marketing/index.aspx" 
+                   data-myp1="We provide a direct data feed to Equalizer."              
+data-myp2="To import your IBKR statement data into Equalizer, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_equalizer.png" alt="Equalizer" loading="lazy" width="300" height="100" /></button></div><!-- Everysk -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.everysk.com" 
+                   data-myp1="We provide a direct data feed to Everysk."              
+data-myp2="To import your IBKR statement data into Everysk, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_everysk.png" alt="Everysk" loading="lazy" width="300" height="100" /></button></div><!-- FACTSET -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.factset.com" 
+                  data-myp1="We provide a direct data feed to FactSet, a leading provider of financial  information and analytics that help the world's best investment professionals outperform. More than 55,500 users stay ahead of global market trends, access extensive company and industry intelligence, and monitor performance with FactSet's desktop analytics, mobile applications, and comprehensive data feeds. For more information, contact <a href='mailto:sales@factset.com'>sales@factset.com</a>."              
+data-myp2="To import your IBKR statement data into FactSet, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_factset.png" alt="FACTSET" loading="lazy" width="300" height="100" /></button></div><!-- FinFolio -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.FinFolio.com" 
+                   data-myp1="We provide a direct data feed to FinFolio."              
+data-myp2="To import your IBKR statement data into FinFolio, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_finfolio.png" alt="FinFolio" loading="lazy" width="300" height="100" /></button></div><!-- FIRM 58 -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.firm58.com" 
+                   data-myp1="We provide a direct data feed to Firm 58."              
+data-myp2="To import your IBKR statement data into Firm 58, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_firm58.png" alt="Firm 58" loading="lazy" width="300" height="100" /></button></div><!-- Formidium -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://formidium.com" 
+                   data-myp1="We provide a direct data feed to Formidium."              
+data-myp2="To import your IBKR statement data into Formidium Seamless Solutions, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_formidium.png" alt="Formidium" loading="lazy" width="300" height="100" /></button></div><!-- ft options -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.ftoptions.com" 
+                   data-myp1="We provide a direct data feed to FT Options."              
+data-myp2="To import your IBKR statement data into FT Options, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_ft_options.png" alt="FT Options" loading="lazy" width="300" height="100" /></button></div><!-- FundCount -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.fundcount.com" 
+                   data-myp1="We provide a direct data feed to FundCount."              
+data-myp2="To import your IBKR statement data into FundCount, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_fundcount.png" alt="FundCount" loading="lazy" width="300" height="100" /></button></div><!-- Fund Manager -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.fundmanagersoftware.com" 
+                  data-myp1="We provide a direct data feed to Fund Manager Software."              
+data-myp2="To import your IBKR statement data into Fund Manager Software, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_fund_manager.png" alt="Fund Manager Software" loading="lazy" width="300" height="100" /></button></div><!-- FundSeeder -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.fundseeder.com" 
+                   data-myp1="We provide a direct data feed to FundSeeder."              
+data-myp2="To import your IBKR statement data into FundSeeder, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_fund_seeder.png" alt="FundSeeder" loading="lazy" width="300" height="100" /></button></div><!-- FUSION -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.fusionadvisor.com" 
+                   data-myp1="We provide a direct data feed to Fusion Advisor."              
+data-myp2="To import your IBKR statement data into Fusion Advisor, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_fusion_advisor.png" alt="Fusion Advisor" loading="lazy" width="300" height="100" /></button></div><!-- FUSIONIQ -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://fusioniq.io" 
+                   data-myp1="We provide a direct data feed to FusionIQ."              
+data-myp2="To import your IBKR statement data into FusionIQ, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_fusioniq.png" alt="FusionIQ" loading="lazy" width="300" height="100" /></button></div><!-- GoalTech -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.goaltech.net" 
+                   data-myp1="We provide a direct data feed to GoalTech."              
+data-myp2="To import your IBKR statement data into GoalTech, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_goalTech.png" alt="GoalTech" loading="lazy" width="300" height="100" /></button></div><!-- HAS -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.hanlon.com" 
+                  data-myp1="To import to HAS, contact HAS to request the data feed."              
+data-myp2="Once HAS has processed your request, they will contact IBKR to link your account to the HAS data feed." >
+                <img src="../../images/2015/logos/company_logo-hanlon-advisory.png" alt="Hanlon Advisory Software (HAS)" loading="lazy" width="300" height="100" /></button></div><!-- Intelliflo -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.intelliflo.com/us/" 
+                  data-myp1="We provide a direct data feed to Intelliflo."              
+data-myp2="To import your IBKR statement data into Intelliflo, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_intelliflo.png" alt="Intelliflo" loading="lazy" width="300" height="100" /></button></div><!-- Kinfo -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                data-myweblink="https://kinfo.com" 
+               data-myp1="We provide a direct data feed to Kinfo."              
+data-myp2="To import your IBKR statement data into Kinfo, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+            <img src="../../images/2015/logos/company_logo_kinfo.png" alt="Kinfo" loading="lazy" width="300" height="100" /></button></div><!-- LIMINA -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.limina.com" 
+                  data-myp1="We provide a direct data feed to Limina Financial Systems."              
+data-myp2="To import your IBKR statement data into Limina Financial Systems, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_limina.png" alt="Limina Financial Systems" loading="lazy" width="300" height="100" /></button></div><!-- MASTTRO -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.masttro.com" 
+                   data-myp1="We provide a direct data feed to MASTTRO."              
+data-myp2="To import your IBKR statement data into MASTTRO, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_masttro.png" alt="MASTTRO" loading="lazy" width="300" height="100" /></button></div><!-- MORNINGSTAR -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.morningstar.com/business/brands/wealth" 
+                   data-myp1="We provide a direct data feed to MorningStar Office and MorningStar ByAllAccounts."              
+data-myp2="To import your IBKR statement data into MorningStar Office or MorningStar ByAllAccounts, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>.<br>For more information about MorningStar Office, visit <a href='https://www.morningstar.com/business/brands/wealth/products/morningstar-office' target='_blank'>Morningstar Office</a><br>For more information about MorningStar ByAllAccounts, visit <a href='http://byallaccounts.morningstar.com/' target='_blank'>http://byallaccounts.morningstar.com</a>" >
+                <img src="../../images/2015/logos/company_logo_morningstar.png" alt="MorningStar" loading="lazy" width="300" height="100" /></button></div><!-- MYDESQ -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.mydesq.com" 
+                   data-myp1="We provide a direct data feed to Mydesq."              
+data-myp2="To import your IBKR statement data into Mydesq, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_mydesq.png" alt="Mydesq" loading="lazy" width="300" height="100" /></button></div><!-- NDEX SYSTEMS -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.ndexsystems.com" 
+                  data-myp1="We provide a direct data feed to NDEX."              
+data-myp2="To import your IBKR statement data into NDEX, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_ndex_systems.png" alt="NDEX" loading="lazy" width="300" height="100" /></button></div><!-- NORTHSTAR RISK-->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.northstarrisk.com" 
+                   data-myp1="We provide a direct data feed to Northstar Risk."              
+data-myp2="To import your IBKR statement data into Northstar Risk, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_north-star-risk.png" alt="Northstar Risk" loading="lazy" width="300" height="100" /></button></div><!-- OPEN FINANCE -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.openfinance.com" 
+                   data-myp1="We provide a direct data feed to Open Finance."              
+data-myp2="To import your IBKR statement data into Open Finance, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_open_finance.png" alt="Open Finance" loading="lazy" width="300" height="100" /></button></div><!-- OPTURO -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.opturo.com" 
+                  data-myp1="We provide a direct data feed to Opturo."              
+data-myp2="To import your IBKR statement data into Opturo, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_opturo.png" alt="Opturo" loading="lazy" width="300" height="100" /></button></div><!-- ORION -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.orionadvisor.com" 
+                  data-myp1="We provide a direct data feed to Orion."              
+data-myp2="To import your IBKR statement data into Orion, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_orion.png" alt="Orion" loading="lazy" width="300" height="100" /></button></div><!-- Otos -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.the-gears.com/otoswealthsystem" 
+                   data-myp1="We provide a direct data feed to OTOS."              
+data-myp2="To import your IBKR statement data into OTOS, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_otos.png" alt="OTOS" loading="lazy" width="300" height="100" /></button></div><!-- Panoramix -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.panoramixfinancial.com" 
+                   data-myp1="We provide a direct data feed to Panoramix Financial."              
+data-myp2="To import your IBKR statement data into Panoramix Financial, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_panoramix.png" alt="Panoramix Financial" loading="lazy" width="300" height="100" /></button></div><!-- portfolio shop -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.portfolioshop.com" 
+                   data-myp1="We provide a direct data feed to PortfolioShop."              
+data-myp2="To import your IBKR statement data into PortfolioShop, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_portfolio_shop.png" alt="PortfolioShop" loading="lazy" width="300" height="100" /></button></div><!-- PRIVATE CLIENT RESOURCES -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.pcrinsights.com" 
+                  data-myp1="We provide a direct data feed to Private Client Resources."              
+data-myp2="To import your IBKR statement data into Private Client Resources, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_private_client_resources.png" alt="Private Client Resources" loading="lazy" width="300" height="100" /></button></div><!-- PROPREPORTS -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.propreports.com" 
+                  data-myp1="We provide a direct data feed to PropReports."              
+data-myp2="To import your IBKR statement data into PropReports, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_propreports.png" alt="PropReports" loading="lazy" width="300" height="100" /></button></div><!-- QUOVO -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.quovo.com" 
+                   data-myp1="We provide a direct data feed to Quovo."              
+data-myp2="To import your IBKR statement data into Quovo, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_quovo.png" alt="Quovo" loading="lazy" width="300" height="100" /></button></div><!-- RightCapital -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.rightcapital.com" 
+                   data-myp1="We provide a direct data feed to RightCapital."              
+data-myp2="To import your IBKR statement data into RightCapital, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_right-capital.png" alt="RightCapital" loading="lazy" width="300" height="100" /></button></div><!-- Riskalyze -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.riskalyze.com" 
+                   data-myp1="We provide a direct data feed to Riskalyze."              
+data-myp2="To import your IBKR statement data into Riskalyze, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_riskalyze.png" alt="Riskalyze" loading="lazy" width="300" height="100" /></button></div><!-- Sequential IT WebView -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.sequentialit.com" 
+                   data-myp1="We provide a direct data feed to Sequential IT WebView or any of your in house systems via their DataView adaptors."              
+data-myp2="To import your IBKR statement data, contact Sequential IT to request the data feed. Once Sequential IT has processed your request, they will contact IBKR to link your account." >
+                <img src="../../images/2015/logos/company_logo_sequential_it.png" alt="WebView" loading="lazy" width="300" height="100" /></button></div><!-- sharesight -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.sharesight.com" 
+                   data-myp1="We provide a direct data feed to Sharesight."              
+data-myp2="To import your IBKR statement data into Sharesight, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_sharesight.png" alt="Sharesight" loading="lazy" width="300" height="100" /></button></div><!-- Silexx -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.silexx.com" 
+                   data-myp1="We provide a direct data feed to Silexx Financial Systems."              
+data-myp2="To import your IBKR statement data into Silexx Financial Systems, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_silexx.png" alt="Silexx Financial Systems" loading="lazy" width="300" height="100" /></button></div><!-- S AND P CAPITAL IQ -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.spcapitaliq.com" 
+                   data-myp1="We provide a direct data feed to Capital IQ."              
+data-myp2="To import your IBKR statement data into Capital IQ, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_sp_capital_iq.png" alt="Capital IQ" loading="lazy" width="300" height="100" /></button></div><!-- StockRover -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.stockrover.com" 
+                   data-myp1="We provide a direct data feed to StockRover."              
+data-myp2="To import your IBKR statement data into StockRover, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_stockrover.png" alt="StockRover" loading="lazy" width="300" height="100" /></button></div><!-- STP - Suisse TechPartners STP -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.pm-plus.com/stp-company" 
+                  data-myp1="We provide a direct data feed to PMplus by SuisseTechPartners."              
+data-myp2="To import your IBKR statement data into PMplus by SuisseTechPartners, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_stp.png" alt="PMplus by SuisseTechPartners" loading="lazy" width="300" height="100" /></button></div><!-- Theorem Technologies -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.theorem.io" 
+                   data-myp1="We provide a direct data feed to Theorem Technologies."              
+data-myp2="To import your IBKR statement data into Theorem Technologies, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_theorem.png" alt="Theorem Technologies" loading="lazy" width="300" height="100" /></button></div><!-- Toogood -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.toogood.com" 
+                   data-myp1="We provide a direct data feed to Toogood Financial Systems."              
+data-myp2="To import your IBKR statement data into Toogood Financial Systems, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_toogood.png" alt="Toogood Financial Systems" loading="lazy" width="300" height="100" /></button></div><!-- Trademetria -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.trademetria.com" 
+                   data-myp1="We provide a direct data feed to Trademetria."              
+data-myp2="To import your IBKR statement data into Trademetria, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_trademetria.png" alt="Trademetria" loading="lazy" width="300" height="100" /></button></div><!-- TraderSync -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://tradersync.com" 
+                   data-myp1="We provide a direct data feed to TraderSync."              
+data-myp2="To import your IBKR statement data into TraderSync, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_tradersync.png" alt="TraderSync" loading="lazy" width="300" height="100" /></button></div><!-- TradesViz -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://tradesviz.com" 
+                   data-myp1="We provide a direct data feed to TradesViz.php."              
+data-myp2="To import your IBKR statement data into TradesViz.php, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_tradesviz.png" alt="TradesViz" loading="lazy" width="300" height="100" /></button></div><!-- Trading Front -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.tradingfront.com" 
+                   data-myp1="We provide a direct data feed to TradingFront."              
+data-myp2="To import your IBKR statement data into TradingFront, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_tradingfront.png" alt="TradingFront" loading="lazy" width="300" height="100" /></button></div><!-- Trinlogix -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.trinlogix.com" 
+                   data-myp1="We provide a direct data feed to Trinlogix."              
+data-myp2="To import your IBKR statement data into Trinlogix, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_trinlogix.png" alt="Trinlogix" loading="lazy" width="300" height="100" /></button></div><!-- TRUST FORT -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.trustfort.com" 
+                   data-myp1="We provide a direct data feed to Trust Fort."              
+data-myp2="To import your IBKR statement data into Trust Fort, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_trust_fort.png" alt="Trust Fort" loading="lazy" width="300" height="100" /></button></div><!-- Ultimus Fund Solutions -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.ultimusfundsolutions.com" 
+                  data-myp1="We provide a direct data feed to Ultimus Fund Solutions."              
+data-myp2="To import your IBKR statement data into Ultimus Fund Solutions, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_ultimus_fund.png" alt="Ultimus Fund Solutions" loading="lazy" width="300" height="100" /></button></div><!-- Vestr -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.vestr.com" 
+                   data-myp1="We provide a direct data feed to Vestr."              
+data-myp2="To import your IBKR statement data into Vestr, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_vestr.png" alt="Vestr" loading="lazy" width="300" height="100" /></button></div><!-- VestServe -->
+            <div class="col-6 col-md-2 no-padding"><button type="button" href="#thirdPartyModal" data-bs-toggle="modal" data-bs-target="#thirdPartyModal" 
+                   data-myweblink="https://www.vestserve.com" 
+                   data-myp1="We provide a direct data feed to VestServe."              
+data-myp2="To import your IBKR statement data into VestServe, contact your IBKR Sales Representative or email <a href='mailto:reportingintegration@interactivebrokers.com'>reportingintegration@interactivebrokers.com</a>." >
+                <img src="../../images/2015/logos/company_logo_vestserve.png" alt="VestServe" loading="lazy" width="300" height="100" /></button></div>
+		</div>
+	</div><!-- Third Party Modal -->
+</section>
+<div class="modal fade tpmodal" id="thirdPartyModal" tabindex="-1" role="dialog" aria-labelledby="thirdPartyModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+        	<span aria-hidden="true">&#215;</span>
+        </button>
+        <h4 class="modal-title">Let&#246;lt&#233;s <span class="co-name">COMPANY_NAME</span></h4>
+      </div>
+      <div class="modal-body">
+        <div align="center">
+            <img src="../../images/2015/logos/company_logo_image_name.html" alt="co-name" loading="lazy" style="margin:40px 0px;" />
+        </div>
+        <p class="paragraph1">Typically reads: We provide a direct data feed to COMPANY_NAME.</p>
+        <p class="paragraph2">Typically reads: To import your IBKR statements into COMPANY_NAME, contact your IBKR Sales Representative or email <a href="mailto:reportingintegration@interactivebrokers.com">reportingintegration@interactivebrokers.com</a>. </p>
+        <p>A <span class="co-name">COMPANY_NAME</span> kapcsolatos tov&#225;bbi inform&#225;ci&#243;k&#233;rt l&#225;togasson el a <a class="company-link" href="https://www.abc.com/" target='_blank'>https://www.abc.com</a> weboldalra.</p>
+      </div>
+    </div>
+  </div>
+</div><!-- BEGIN ORDER MANAGEMENT ------------------------------------------------>
+<section id="tpi-order" class="gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <h2>Megb&#237;z&#225;skezel&#337;</h2>
+                <p>A megb&#237;z&#225;skezel&#337; (OMS) rendszer olyan szoftver, amelynek c&#233;lja az &#233;rt&#233;kpap&#237;r-megb&#237;z&#225;sok eredm&#233;nyes &#233;s k&#246;lts&#233;ghat&#233;kony v&#233;grehajt&#225;sa. A br&#243;kerek &#233;s keresked&#337;k a k&#252;l&#246;nb&#246;z&#337; t&#237;pus&#250; &#233;rt&#233;kpap&#237;rokra sz&#243;l&#243; megb&#237;z&#225;sok teljes&#237;t&#233;s&#233;hez, illetve a megb&#237;z&#225;s rendszerben t&#246;rt&#233;n&#337; el&#337;rehalad&#225;s&#225;nak a nyomon k&#246;vet&#233;s&#233;hez haszn&#225;lj&#225;k az OMS rendszereket. Az Interactive Brokers az al&#225;bbiakban felsorolt harmadik f&#233;l OMS szolg&#225;ltat&#243;kkal tart fenn &#252;zleti kapcsolatot:</p>
+                <h5>Egy konkr&#233;t OMS szolg&#225;ltat&#243;val t&#246;rt&#233;n&#337; integr&#225;ci&#243; ig&#233;nyl&#233;s&#233;hez vegye fel a kapcsolatot az IBKR &#233;rt&#233;kes&#237;t&#337;j&#233;vel.</h5>
+                <br>
+            </div>
+    	</div>
+    	<div class="row">
+    		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <p><a href="http://www.abnamro.com/en/index.html" target="_blank" class="linkexternal"><strong>ABN Amro</strong></a></p>
+                <p><a href="http://www.broadridge.com/" target="_blank" class="linkexternal"><strong>ADP/Broadridge</strong></a></p>
+                <p><a href="https://www.bloomberg.com/professional/product/execution-management-system/" target="_blank" class="linkexternal"><strong>Bloomberg EMSX</strong></a></p>
+                <p><a href="http://www.crd.com/" target="_blank" class="linkexternal"><strong>Charles River Systems, Inc.</strong></a> <br />Ez az OMS szolg&#225;ltat&#243; tan&#250;s&#237;totta az IBKR-t.</p>
+<p><a href="https://www.enfusionsystems.com/" target="_blank" class="linkexternal"><strong>Enfusion Systems</strong></a></p>              
+  <p><a href="https://www.ezesoft.com/" target="_blank" class="linkexternal"><strong>Eze Castle OMS</strong></a><br> FIX CTCI integr&#225;ci&#243;</p>
+               <p><a href="https://www.dastrader.com/" target="_blank" class="linkexternal"><strong>DASTrader</strong></a></p>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+ <p><a href="http://www.flextrade.com/ " target="_blank" class="linkexternal"><strong>FlexTrade Systems</strong></a><br> Megb&#237;z&#225;sir&#225;ny&#237;t&#225;s</p>
+                <p><a href="http://www.derivatives.com/" target="_blank" class="linkexternal"><strong>Imagine Software</strong></a><br> FIX CTCI integr&#225;ci&#243;</p>
+                <p><a href="https://www.inforeachinc.com/" target="_blank" class="linkexternal"><strong>InfoReach</strong></a></p>
+                <p><a href="https://www.instinet.com/index.html" target="_blank" class="linkexternal"><strong>Instinet/Newport</strong></a></p>
+                <p><a href="http://www.linedata.com/" target="_blank" class="linkexternal"><strong>LineData  </strong></a></p>
+                <p><a href="http://www.neovest.com/" target="_blank" class="linkexternal"><strong>Neovest</strong></a></p>
+                <p><a href="http://realtick.com/default.aspx" target="_blank" class="linkexternal"><strong>RealTick</strong></a></p>
+            </div>
+    		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">  
+                <p><a href="https://www.refinitiv.com/en/products/autex-trade-route" target="_blank" class="linkexternal"><strong>Refinitiv/Autex Trade Route</strong></a></p>
+                <p><a href="https://www.refinitiv.com/en/products/redi-execution-management" target="_blank" class="linkexternal"><strong>REDI</strong></a></p>
+                <p><a href="https://www.sterlingtradingtech.com/" target="_blank" class="linkexternal"><strong>Sterling Trading Tech</strong></a></p>
+                <p><a href="https://www.itiviti.com/" target="_blank" class="linkexternal"><strong>Tradeware</strong></a></p>
+                <p><a href="http://www.tradeweb.com/" target="_blank" class="linkexternal"><strong>ULLink/Itiviti</strong></a></p>
+                <br>
+    		</div>
+    	</div>
+    </div><!-- BEGIN POST TRADE ALLOCATIONS ------------------------------------------------>
+</section>
+<section id="tpi-post-trade">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <h2>Keresked&#233;st k&#246;vet&#337; allok&#225;ci&#243;</h2>
+                <p>A keresked&#233;st k&#246;vet&#337; allok&#225;ci&#243;s szoftverek c&#233;lja az &#252;gyletek allok&#225;l&#225;sa az elsz&#225;mol&#243; br&#243;kerekhez. &#214;n haszn&#225;lhatja az IBKR saj&#225;t Keresked&#233;st K&#246;vet&#337; Allok&#225;ci&#243;s eszk&#246;z&#233;t vagy az al&#225;bbiakban felsorolt harmadik f&#233;l szolg&#225;ltat&#243;k valamelyik&#233;t.</p>
+                <p>Az IBKR intuit&#237;v, internet-alap&#250; Keresked&#233;st K&#246;vet&#337; Allok&#225;ci&#243;s (PTA) eszk&#246;ze haszn&#225;lat&#225;val a befektet&#337;k a k&#246;t&#233;st k&#246;vet&#337;en gyorsan allok&#225;lhatj&#225;k az amerikai r&#233;szv&#233;nyekre, opci&#243;kra &#233;s v&#225;llalati k&#246;tv&#233;nyekre sz&#243;l&#243; megb&#237;z&#225;saikat. Az &#220;gyf&#233;lport&#225;lr&#243;l el&#233;rhet&#337; PTA eszk&#246;z felsorolja az &#246;sszes aznapi, m&#233;g nem allok&#225;lt k&#246;t&#233;st, &#233;s testre szabhat&#243;, sablon-alap&#250; funkci&#243;kat k&#237;n&#225;l az &#252;gyletek mindegyik&#233;nek vagy csak n&#233;melyik&#233;nek az allok&#225;l&#225;s&#225;ra az el&#337;zetesen j&#243;v&#225;hagyott elsz&#225;mol&#243; br&#243;kerekhez.</p>
+                <p>Az IBKR PTA eszk&#246;z&#233;vel kapcsolatos tov&#225;bbi inform&#225;ci&#243;k&#233;rt l&#225;sd az <a href="https://www.interactivebrokers.com/en/software/am/am/trade/posttradeallocations.htm" target="_blank" class="linkexternal">&#220;gyf&#233;lport&#225;l Felhaszn&#225;l&#243;i &#218;tmutat&#243;t</a>.</p>
+                <br/>
+                <p>Egy konkr&#233;t keresked&#233;st k&#246;vet&#337; allok&#225;ci&#243;s szoftver szolg&#225;ltat&#243;val t&#246;rt&#233;n&#337; integr&#225;ci&#243; ig&#233;nyl&#233;s&#233;hez vegye fel a kapcsolatot az IBKR &#233;rt&#233;kes&#237;t&#337;j&#233;vel.</p>
+            </div>
+        </div>
+    </div><!-- BEGIN EMPLOYEE TRACK ------------------------------------------------>
+</section>
+<section id="tpi-employeetrack" class="gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <h2>EmployeeTrack</h2>
+                <p>Az IBKR adatfolyamot biztos&#237;t azon EmployeeTrack Megfelel&#337;s&#233;gi Vezet&#337;knek, akik egy harmadik f&#233;l &#225;ltal fejlesztett szoftverrel szeretn&#233;k integr&#225;lni az adataikat. </p>
+                <p>Az al&#225;bbi harmadik f&#233;l szoftverekhez k&#237;n&#225;lunk adatfolyamokat: </p>
+                <ul>
+    <li>ACA ComplianceAlpha</li>
+    <li>Ascendant Compliance Manager</li>
+    <li>BasisCode</li>
+    <li>ComplySci</li>
+    <li>Evare</li>
+    <li>FIS Employee Compliance Manager</li>
+    <li>IQ-EQ</li>
+    <li>MyComplianceOffice</li>
+    <li>Orical</li>
+    <li>Paragon Data Labs</li>
+    <li>StarCompliance</li>
+    <li>Wolters Kluwer CCH</li>
+                </ul>
+              <p>Az EmployeeTrack adatokat tartalmaz&#243; harmadik f&#233;l adatfolyam ig&#233;nyl&#233;s&#233;hez k&#252;ldj&#246;n e-mail &#252;zenetet az <a href="mailto:employeetrack@interactivebrokers.com" target="_self" class="linkexternal">employeetrack@interactivebrokers.com</a><br /> c&#237;mre vagy vegye fel a kapcsolatot az <a href="../support/institutional-sales-contacts.html" target="_self">IBKR &#233;rt&#233;kes&#237;t&#337;j&#233;vel</a>. </p>
+            </div>
+			<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-lg-offset-1 col-md-offset-1">
+                <span class="hidden-md hidden-lg"><hr /></span>
+                <img src="../../images/2015/third_party_icon_001.png" loading="lazy" alt="Harmadik f&#233;l" style="width:90px; height:auto; margin-top:20px" />
+                <h5>EmployeeTrack adatfolyam integr&#225;ci&#243;s &#250;tmutat&#243;</h5>
+                <p>Az EmployeeTrack sz&#225;ml&#225;val rendelkez&#337; Megfelel&#337;s&#233;gi Vezet&#337;k az IBKR &#225;ltal&#225;nos jelent&#233;st&#233;teli fel&#252;letr&#337;l is ig&#233;nyelhetnek adatfolyamot az al&#225;bbiakban fel NEM sorolt harmadik f&#233;l szoftverrel t&#246;rt&#233;n&#337; integr&#225;ci&#243; c&#233;lj&#225;ra.</p>
+                <br>
+                <p><a href="https://www.ibkrguides.com/datafeedintegration/home.htm" target="_blank" class="btn btn-sm btn-primary">EmployeeTrack adatfolyam integr&#225;ci&#243;s &#250;tmutat&#243;</a></p>
+            </div> 
+        </div>
+    </div><!-- MODAL SCRIPT -->
+</section>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#thirdPartyModal').on('show.bs.modal', function (event) {
+	  var button = $(event.relatedTarget) // Button that triggered the modal
+	  // var recipient = button.data('whatever') // Extract info from data-* attributes
+      var thirdPartyCompany = button.children('img').first().attr('alt');
+      var thirdPartyImg = button.children('img').first().attr('src'); // button.data('myimg');
+      var thirdPartyWeblink = button.data('myweblink');
+      var thirdPartyP1 = button.data('myp1');
+      var thirdPartyP2 = button.data('myp2');
+	  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+	  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+	  var tpmodal = $(this)
+	  tpmodal.find('.modal-header .modal-title').text( 'Downloading to ' + thirdPartyCompany );
+      tpmodal.find('.modal-body img').attr( "src" , thirdPartyImg );
+      tpmodal.find('.modal-body img').attr( "alt" , thirdPartyCompany );
+      tpmodal.find('.modal-body .co-name').text( thirdPartyCompany );
+      tpmodal.find('.modal-body p.paragraph1').html( thirdPartyP1 );
+      tpmodal.find('.modal-body p.paragraph2').html( thirdPartyP2 );
+      tpmodal.find('.modal-body a.company-link').text( thirdPartyWeblink );
+      tpmodal.find('.modal-body a.company-link').attr( "href" , thirdPartyWeblink );
+	})
+});
+</script>
+</div>
+
+<!-- FOOTER START ---------------------------------------------------------------------------------------------------- -->
+<footer class="footer noprint" id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p>Az Interactive Brokers &#174;, IB<sup>SM</sup>, InteractiveBrokers.com &#174;, Interactive Analytics &#174;, IB Options Analytics<sup>SM</sup>, IB SmartRouting<sup>SM</sup>, PortfolioAnalyst &#174;, IB Trader Workstation<sup>SM</sup> &#233;s One World, One Account<sup>SM</sup> az Interactive Brokers LLC szolg&#225;ltat&#225;si v&#233;djegyei &#233;s/vagy v&#233;djegyei. K&#233;r&#233;s eset&#233;n biztos&#237;tjuk az esetleges k&#225;rig&#233;nyekhez sz&#252;ks&#233;ges al&#225;t&#225;maszt&#243; dokument&#225;ci&#243;t &#233;s statisztikai adatokat. Az oldalon l&#225;that&#243; keresked&#233;si k&#243;dok kiz&#225;r&#243;lag szeml&#233;ltet&#233;si c&#233;lokat szolg&#225;lnak &#233;s nem tekintend&#337;k aj&#225;nl&#225;snak.</p>
+                <p>A r&#233;szv&#233;nyekkel, opci&#243;s &#233;s hat&#225;rid&#337;s &#252;gyletekkel, deviz&#225;kkal, k&#252;lf&#246;ldi r&#233;szv&#233;nyekkel &#233;s k&#246;tv&#233;nyekkel t&#246;rt&#233;n&#337; online keresked&#233;s jelent&#337;s vesztes&#233;g kock&#225;zat&#225;val j&#225;rhat.</p>
+                <p>Az opci&#243;k kock&#225;zatot jelentenek, ez&#233;rt nem minden befektet&#337;nek aj&#225;nlottak. Tov&#225;bbi inform&#225;ci&#243;k&#233;rt olvassa el az opci&#243;k k&#246;zz&#233;t&#233;teli dokumentum&#225;t <a href="https://www.theocc.com/about/publications/character-risks.jsp" rel="noreferrer noopener" target="_blank">(Characteristics and Risks of Standardized Options, ODD)</a>. Alternat&#237;v megold&#225;sk&#233;nt k&#233;rj&#252;k, vegye fel a kapcsolatot az <a href="../support/customer-servicef763.html?p=contact" target="_self">IB &#220;gyf&#233;lszolg&#225;lat&#225;val</a> &#233;s k&#233;rje az ODD egy p&#233;ld&#225;ny&#225;nak megk&#252;ld&#233;s&#233;t. A keresked&#233;s megkezd&#233;se el&#337;tt &#252;gyfeleink k&#246;telesek elolvasni a <a href="../general/homepage-disclosures.html" target="_self">Figyelmeztet&#233;sek &#233;s k&#246;zz&#233;t&#233;telek</a> oldalon tal&#225;lhat&#243; relev&#225;ns kock&#225;zatfelt&#225;r&#225;si nyilatkozatokat. A t&#337;ke&#225;tt&#233;tes keresked&#233;s kiz&#225;r&#243;lag magas kock&#225;zatt&#369;r&#233;s&#369;, tapasztalt befektet&#337;k sz&#225;m&#225;ra javasolt. A vesztes&#233;g m&#233;rt&#233;ke meghaladhatja indul&#243; befektet&#233;s&#233;t. A fedezeti hitelkamatokkal kapcsolatos tov&#225;bbi inform&#225;ci&#243;k&#233;rt k&#233;rj&#252;k, l&#225;togasson el a  <a href="margin-rates.html" target="_self">Fedezeti hitelkamatok</a> oldalra. A hat&#225;rid&#337;s &#233;rt&#233;kpap&#237;rok magas kock&#225;zattal j&#225;rnak, ez&#233;rt nem minden befektet&#337;nek aj&#225;nlottak. A lehets&#233;ges vesztes&#233;g m&#233;rt&#233;ke meghaladhatja indul&#243; befektet&#233;s&#233;t. A hat&#225;rid&#337;s &#233;rt&#233;kpap&#237;rokkal val&#243; keresked&#233;s el&#337;tt olvassa el a <a href="../general/homepage-disclosures.html" target="_self">&#8222;Security Futures Risk Disclosure Statement&#8221;</a> c&#237;m&#369; dokumentumot. A struktur&#225;lt term&#233;kek &#233;s a r&#246;gz&#237;tett kamatoz&#225;s&#250; term&#233;kek (mint p&#233;ld&#225;ul a k&#246;tv&#233;nyek) magasabb kock&#225;zattal j&#225;r&#243; &#246;sszetett term&#233;kek, ez&#233;rt nem minden befektet&#337;nek aj&#225;nlottak. Keresked&#233;s el&#337;tt olvassa el a <a href="../general/homepage-disclosures.html" target="_self">Kock&#225;zatfelt&#225;r&#243; nyilatkozatot</a>.</p>
+                <p>Az IBKR ATS-sel kapcsolatos inform&#225;ci&#243;k&#233;rt k&#233;rj&#252;k, l&#225;togasson el a <a href="https://www.sec.gov/divisions/marketreg/form-ats-n-filings.htm#ats-n" rel="noreferrer noopener" target="_blank">SEC weboldal&#225;ra</a>.</p>
+<p>A 36 orsz&#225;g az orsz&#225;gokat &#233;s a ter&#252;leteket is mag&#225;ban foglalja.</p>
+            </div>
+        </div>
+        <div class="footer-site-links" id="footerSiteLinks">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>Sz&#225;mla</p>
+                    <ul>
+                    <li><a href="https://www.interactivebrokers.co.uk/sso/Login?RL=1" target="_self">Bejelentkez&#233;s</a></li>
+                    <li><a href="https://www.interactivebrokers.co.uk/Universal/Application" target="_self">Sz&#225;mlanyit&#225;s</a></li>
+                    <li><a href="https://www.interactivebrokers.co.uk/sso/Login?c=t" target="_self">Sz&#225;mlanyit&#225;si k&#233;relem befejez&#233;se</a></li>
+                    <li><a href="../accounts/account-guide.html" target="_self">Sz&#225;mlat&#237;pusok</a></li>
+                    <li><a href="https://www.interactivebrokers.co.uk/Universal/Application?ft=T" target="_self">Ingyenes pr&#243;baverzi&#243;</a></li>
+                    </ul>
+                    <p>Szoftverek &#233;s let&#246;lthet&#337; programok</p>
+                    <ul>
+                    <li><a href="tws.html#tws-software" target="_self">Trader Workstation</a></li>
+                    <li><a href="ibkr-desktop.html" target="_self">IBKR Desktop</a></li>
+                    <li><a href="tws-mobile.html#trytoday" target="_self">IBKR Mobile</a></li>
+                    <li><a href="ib-api.html#api-software" target="_self">API fel&#252;letek</a></li>
+                    </ul>    
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>T&#225;mogat&#225;s</p>
+                    <ul>
+					<li><a href="../support/fund-my-account.html" target="_self">T&#246;ltse fel a sz&#225;ml&#225;j&#225;t</a></li>
+                    <li><a href="../support/individuals.html" target="_self">Mag&#225;nszem&#233;lyek</a></li>
+                    <li><a href="../support/institutions.html" target="_self">Int&#233;zm&#233;nyek</a></li>
+                    <li><a href="../support/institutional-sales-contacts4343.html?p=uk" target="_self">Int&#233;zm&#233;nyi &#233;rt&#233;kes&#237;t&#337;k el&#233;rhet&#337;s&#233;gei</a></li>
+					<li><a href="../general/contact/ibot-container.html" target="_self">Tekintse &#225;t a GYIK-et</a></li>
+					<li><a href="../software/systemStatus.html" target="_self">Rendszer&#225;llapot</a></li>
+                    </ul>
+                    <p>Sz&#225;ll&#237;t&#243;i t&#225;mogat&#225;s</p>
+                    <ul>
+                    <li><a href="../general/about/supplier-information.html" target="_self">Sz&#225;ll&#237;t&#243;i inform&#225;ci&#243;k</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>R&#243;lunk</p>
+                    <ul>
+                    <li><a href="../general/awards.html" target="_self">D&#237;jak</a></li>
+                    <li><a href="../general/about/careers-splash.html" target="_self">Karrierlehet&#337;s&#233;gek</a></li>
+                    <li><a href="../general/about/about.html" target="_self">Inform&#225;ci&#243;k &#233;s c&#233;gt&#246;rt&#233;net</a></li>
+                    <li><a href="https://investors.interactivebrokers.com/ir/main.php" target="_blank" rel="noreferrer noopener">Befektet&#337;i kapcsolatok</a></li>
+                    <li><a href="../about/news-at-ibkr.html" target="_self">IBKR h&#237;rek</a></li>
+                    <li><a href="../general/about/press-and-media.html" target="_self">Sajt&#243; &#233;s m&#233;dia</a></li>
+                    <li><a href="../accounts/legalDocuments/brokerPerformanceReports.html" target="_self">Szab&#225;lyoz&#243;i jelent&#233;sek</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>K&#246;vessen minket a k&#246;z&#246;ss&#233;gi m&#233;di&#225;ban!</p>
+                    <ul>
+                        <li><a href="https://www.facebook.com/InteractiveBrokersEurope/" target="_blank" rel="noreferrer noopener"><i class="fab fa-facebook"></i>  Facebook</a></li>
+                        <li><a href="https://www.instagram.com/interactivebrokers_europe" target="_blank" rel="noreferrer noopener"><i class="fab fa-instagram"></i>  Instagram</a></li>
+                        <li><a href="https://twitter.com/IBKR_Europe" target="_blank" rel="noreferrer noopener"><i class="fab fa-x-twitter"></i>  Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-disclosure-links" id="footerDisclosureLinks">
+            <div class="row">
+                <div class="col">
+                    <ul>
+                    <li><a href="../accounts/legalDocuments/anti-fraud-notice.html" target="_self">T&#225;j&#233;koztat&#243; a csal&#225;s elleni k&#252;zdelemr&#337;l</a></li>
+                    <li><a href="../accounts/legalDocuments/custIdentificationNotice.html" target="_self">T&#225;j&#233;koztat&#243; az &#252;gyf&#233;l-azonos&#237;t&#225;si programr&#243;l</a></li>
+                    <li><a href="../general/warnings-on-frauds-and-scams.html" target="_self">Figyelmeztet&#233;s csal&#225;sokra &#233;s &#225;tver&#233;sekre</a></li>
+                    <li><a href="../accounts/forms-and-disclosures-client-agreements.html" target="_self">Formanyomtatv&#225;nyok &#233;s k&#246;zz&#233;t&#233;telek</a></li>
+                    <li><a href="../accounts/legalDocuments/accessibility-policy.html" target="_self">Akad&#225;lymentes&#237;t&#233;si nyilatkozat</a></li>
+                    <li><a href="../accounts/legalDocuments/privacy.html" target="_self">Adatv&#233;delem</a></li>
+                    <li><a href="../sitemap/index.html" target="_self">Oldalt&#233;rk&#233;p</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-entities" id="footerEntities">
+            <div class="row">
+                <div class="col">
+                    <div class="footer-entity"><!-- IBKR IE -->
+                        <p class="entity-name"><a href="../../en/home.html" target="_self">Interactive Brokers Ireland Limited</a></p>
+                        <p>szab&#225;lyoz&#243; hat&#243;s&#225;ga a <a href="https://www.centralbank.ie/" target="_blank" rel="noreferrer noopener">Central Bank of Ireland</a> (CBI, hivatkoz&#225;si sz&#225;m: C423427), nyilv&#225;ntart&#243; hat&#243;s&#225;ga a Companies Registration Office (CRO, nyilv&#225;ntart&#225;si sz&#225;m: 657406), &#233;s az Irish Investor Compensation Scheme (ICS) tagja.<br> <strong>Sz&#233;khely:</strong> North Dock One, 91/92 North Wall Quay, Dublin 1 D01 H7V7, &#205;rorsz&#225;g.<br> <strong>Weboldal:</strong> <a href="../../en/home.html" target="_self">www.interactivebrokers.ie</a></p>
+                        <p class="footer-entities-link"><a href="#collapseEntities" target="_self" class="collapsed" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseEntities">Az Interactive Brokers egy&#233;b le&#225;nyv&#225;llalataira vonatkoz&#243; inform&#225;ci&#243;k</a></p>
+                    </div>
+                    <div class="footer-entities-list collapse" id="collapseEntities">
+                        <div class="row">
+                            <div class="col-12 col-md-6"><!-- IBKR LLC -->
+                                
+                                <p class="entity-name"><a href="https://www.interactivebrokers.com/en/home.php?nored=t" target="_self">Interactive Brokers LLC</a></p>
+                                <p>a <a  rel="noreferrer noopener" target="_blank"  href="https://www.nyse.com/">NYSE</a>, a <a href="https://www.finra.org/" rel="noreferrer noopener"  target="_blank">FINRA</a> &#233;s a <a href="https://www.sipc.org/" rel=" noreferrer noopener" target="_blank">SIPC</a> tagja, szab&#225;lyoz&#243; hat&#243;s&#225;ga a US Securities and Exchange Commission illetve a Commodity Futures Trading Commission.<br> <strong>Sz&#233;khely:</strong> One Pickwick Plaza, Greenwich, CT 06830 USA<br> <strong>Weboldal:</strong> <a href="https://www.interactivebrokers.com/en/home.php?nored=t" target="_self">www.interactivebrokers.com</a></p><!-- IBKR CA -->
+                                <p class="entity-name"><a href="https://www.interactivebrokers.ca/en/home.php?nored=t" target="_self">Interactive Brokers Canada Inc.</a></p>
+                                <p>az , a <a href="https://www.ciro.ca/" target="_blank" rel="noreferrer noopener">Canadian Investment Regulatory Organization (CIRO)</a>  &#233;s a <a href="https://www.cipf.ca/" target="_blank" rel="noreferrer noopener">Canadian Investor Protection Fund tagja.</a><br> <strong>Sz&#233;khely:</strong> 1800 McGill College Avenue, Suite 2106, Montreal, Quebec, H3A 3J6, Kanada.<br> <strong>Weboldal:</strong> <a href="https://www.interactivebrokers.ca/en/home.php?nored=t" target="_self">www.interactivebrokers.ca</a></p><!-- IBKR UK -->
+                                
+                                <p class="entity-name"><a href="https://www.interactivebrokers.co.uk/en/home.php?nored=t" target="_self">Interactive Brokers U.K. Limited</a></p>
+                                <p>enged&#233;lyez&#337; &#233;s szab&#225;lyoz&#243; hat&#243;s&#225;ga a <a href="https://www.fca.org.uk/" target="_blank" rel="noreferrer noopener">Financial Conduct Authority</a>. FCA nyilv&#225;ntart&#225;si sz&#225;m: 208159. Bejegyezve Angli&#225;ban &#233;s Walesben 03958476 c&#233;gjegyz&#233;ksz&#225;mon. <a href="https://www.fca.org.uk/firms/financial-services-register" target="_blank" rel="noreferrer noopener">[https://www.fca.org.uk/firms/financial-services-register]</a><br> <strong>Sz&#233;khely:</strong> 20 Fenchurch Street, Floor 12, London EC3M 3BY.<br> <strong>Weboldal:</strong> <a href="https://www.interactivebrokers.co.uk/en/home.php?nored=t" target="_self">www.interactivebrokers.co.uk</a></p><!-- IBKR AUS -->
+                                <p class="entity-name"><a href="https://www.interactivebrokers.com.au/en/home.php?nored=t" target="_self">Interactive Brokers Australia Pty. Ltd.</a></p>
+                                <p>ABN 98 166 929 568 enged&#233;lyez&#337; &#233;s szab&#225;lyoz&#243; hat&#243;s&#225;ga az <a href="https://asic.gov.au/" target="_blank" rel="noreferrer noopener">Australian Securities and Investments Commission</a> (AFSL: 453554). Tags&#225;gai: <a href="https://www.asx.com.au/" target="_blank" rel="noreferrer noopener">ASX</a>, <a href="https://www.asx.com.au/" target="_blank" rel="noreferrer noopener">ASX 24</a> &#233;s <a href="https://www.cboe.com.au/" target="_blank" rel="noreferrer noopener">Cboe Australia</a>.<br> <strong>Sz&#233;khely:</strong> Level 11, 175 Pitt Street, Sydney, New South Wales 2000, Ausztr&#225;lia.<br> <strong>Weboldal:</strong> <a href="https://www.interactivebrokers.com.au/en/home.php?nored=t" target="_self">www.interactivebrokers.com.au </a></p>
+                            </div>
+                            <div class="col-12 col-md-6"><!-- IBKR HK -->
+                                
+                                <p class="entity-name"><a href="https://www.interactivebrokers.com.hk/en/home.php?nored=t" target="_self">Interactive Brokers Hong Kong Limited</a></p>
+                                <p>szab&#225;lyoz&#243; hat&#243;s&#225;ga a Hong Kong Securities and Futures Commission. Tags&#225;gai: <a href="https://www.hkex.com.hk/" target="_blank" rel="noreferrer noopener">SEHK</a> &#233;s <a href="https://www.hkex.com.hk/" target="_blank" rel="noreferrer noopener">HKFE</a>.<br> <strong>Sz&#233;khely:</strong> Suite 1512, Two Pacific Place, 88 Queensway, Admiralty, Hong Kong SAR.<br> <strong>Weboldal:</strong> <a href="https://www.interactivebrokers.com.hk/en/home.php?nored=t" target="_self">www.interactivebrokers.com.hk</a></p><!-- IBKR IN -->
+                                <p class="entity-name"><a href="https://www.interactivebrokers.co.in/en/home.php?nored=t" target="_self">Az Interactive Brokers India Pvt. Ltd.</a></p>
+                                <p>az <a href="https://www.nseindia.com/" target="_blank" rel="noreferrer noopener">NSE</a> &#233;s a <a href="https://www.bseindia.com/" target="_blank" rel="noreferrer noopener">BSE</a> keresked&#337;tagja, valamint az <a href="https://nsdl.co.in/" target="_blank" rel="noreferrer noopener">NSDL</a> let&#233;ti tagja. <a href="https://www.sebi.gov.in/" target="_blank" rel="noreferrer noopener">SEBI</a> nyilv&#225;ntart&#225;si sz&#225;m:  INZ000217730; NSDL: IN-DP-602-2021. CIN-U67120MH2007FTC170004.<br> <strong>Sz&#233;khely:</strong> 502/A, Times Square, Andheri Kurla Road, Andheri East, Mumbai 400059, India.<br> <strong>Telefon:</strong> +91-22-61289888 <span class="pipe">|</span> <strong>Fax:</strong> +91-22-61289898.<br> <strong>Weboldal:</strong> <a href="https://www.interactivebrokers.co.in/en/home.php?nored=t" target="_self">www.interactivebrokers.co.in</a></p><!-- IBKR JP -->
+                                
+                                <p class="entity-name"><a href="https://www.interactivebrokers.co.jp/en/home.php?nored=t" target="_self">Az Interactive Brokers Securities Japan Inc.</a></p>
+                                <p>szab&#225;lyoz&#243; hat&#243;s&#225;ga a Kanto Local Finance Bureau (nyilv&#225;ntart&#225;si sz&#225;m: 187), &#233;s a <a href="https://www.jsda.or.jp/" target="_blank" rel="noreferrer noopener">Japan Securities Dealers Association</a> illetve a <a href="https://www.nisshokyo.or.jp/" target="_blank" rel="noreferrer noopener">The Commodity Futures Association of Japan</a>tagja.<br> <strong>Sz&#233;khely:</strong> Kasumigaseki Building 25F, 2-5 Kasumigaseki 3-chome, Chiyoda-ku, Tokyo, 100-6025 Jap&#225;n.<br> <strong>Telefon:</strong> +81 03-4590-0711 <em>(munkanapokon: 8:30-17:30 JST)</em>.<br> <strong>Weboldal:</strong> <a href="https://www.interactivebrokers.co.jp/en/home.php?nored=t" target="_self">www.interactivebrokers.co.jp</a></p><!-- IBKR SG -->
+<p class="entity-name"><a href="https://www.interactivebrokers.com.sg/en/home.php" target="_self">Interactive Brokers Singapore Pte. Ltd.</a></p>
+<p>enged&#233;lyez&#337; &#233;s szab&#225;lyoz&#243; hat&#243;s&#225;ga a Monetary Authority of Singapore (Enged&#233;lysz&#225;m: CMS100917).<br> <strong>Sz&#233;khely:</strong>  1 Harbourfront Place #12-01/03, Harbourfront Tower 1, Singapore 098633. <br> <strong>Weboldal:</strong> <a href="https://www.interactivebrokers.com.sg/en/home.php" target="_self">www.interactivebrokers.com.sg</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- FOOTER END ---------------------------------------------------------------------------------------------------- -->
+</footer>
+
+<script>
+if(window.location.href.includes('conf=am')) {
+document.querySelector("#ibkr-header").style.display = "none";
+document.querySelector("#footer").style.display = "none";
+}
+</script><!-- SCRIPTS FOOTER ---------------------------------------------------------------------------------------------------- -->
+<script type="text/javascript" src="../../scripts/common/js/zeynep-2.2.0/zeynep.js"></script>
+<script type="text/javascript" src="../../scripts/common/js/lazyload/lazyload.min.js"></script>
+<script type="text/javascript" src="../../search/conversions.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    
+    // GATHER HEIGHT OF HEADER
+    var headerHeight = $("div#ibkr-header").outerHeight();
+    // GATHER HEIGHT OF DISCLOSURES
+    var disclosureHeight = $("section#UKProductDisclosure, section#TurbosDisclosure").outerHeight();
+    $("section#UKProductDisclosure").css("top", headerHeight);
+    $("section#TurbosDisclosure").css("top", headerHeight);
+    // SET CONTENTS DIV PADDING TOP
+    $("div#contents").css("padding-top", disclosureHeight);
+    // OVERRIDE TOP OF DISCLOSURE AND PADDING-TOP OF CONTENTS ON WINDOW RESIZE
+    $(window).resize(function() {
+        var headerHeight = $("div#ibkr-header").outerHeight();
+        var disclosureHeight = $("section#UKProductDisclosure, section#TurbosDisclosure").outerHeight();
+        var headerHeightDelta = headerHeight - disclosureHeight;
+        $("section#UKProductDisclosure").css("top", disclosureHeight + headerHeightDelta);
+        $("section#TurbosDisclosure").css("top", disclosureHeight + headerHeightDelta);
+        $("div#contents").css("padding-top", disclosureHeight);
+    });
+
+    // OVERRIDE TOP OF DISCLOSURE AND PADDING-TOP OF CONTENTS ON BANNER CLOSE
+    $("#bannerRegionSelector a.btn-close").click(function() {
+        setTimeout(function() {
+            var headerHeight = $("div#ibkr-header").outerHeight();
+            $("section#UKProductDisclosure").css("top", headerHeight);
+            $("section#TurbosDisclosure").css("top", headerHeight);
+            $("div#contents").css("padding-top", disclosureHeight);
+        },500);
+    });
+    // MOBILE MENU
+    $(function() {
+        // Initilize mobile menu
+        var zeynep = $('.menu-mobile').zeynep({
+            opened: function () {
+            console.log('the side menu opened')
+        },
+        closed: function () {
+            console.log('the side menu closed')
+            }
+        })
+        // Dynamically bind closing event
+        zeynep.on('closing', function () {
+            console.log('this event is dynamically binded')
+        })
+        // Mobile menu close on overlay click
+        $('.website-overlay').on('click', function () {
+            zeynep.close()
+        })
+        // Mobile menu close on button click
+        $('.btn-close').on('click', function () {
+            zeynep.close()
+        })
+        // Mobile menu open on navbar-toggler click
+        $('.navbar-toggler').on('click', function () {
+            zeynep.open()
+        })
+    })
+});
+</script>
+<!-- STYLES FOOTER ---------------------------------------------------------------------------------------------------- -->
+<link rel="preload" as="font" type="font/woff2" href="../../fonts/fontawesome-6.4.2/webfonts/fa-brands-400.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="../../fonts/fontawesome-6.4.2/webfonts/fa-regular-400.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="../../fonts/fontawesome-6.4.2/webfonts/fa-solid-900.woff2" crossorigin>
+<link rel="preload" as="style" href="../../css/ibkr/website-print.min.css">
+<link rel="stylesheet" type="text/css" media="print" href="../../css/ibkr/website-print.min.css">
+<style type="text/css">
+@import url('../../css/fontawesome-6.4.2/all.min.css') layer(vendors);
+@import url('../../css/animate-3.7.2/animate.min.css') layer(vendors);
+@import url('../../css/bootstrap-switch-3.3.2/bootstrap-switch.min.css') layer(vendors);
+@import url('../../css/icheck-1.0.2/icheck.css') layer(vendors);
+</style></body>
+
+<!-- Mirrored from www.interactivebrokers.ie/hu/trading/third-party-integration.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Sep 2025 09:33:07 GMT -->
+</html>

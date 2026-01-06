@@ -1,0 +1,2432 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="de" data-theme="light">
+
+<!-- Mirrored from www.interactivebrokers.ie/fr/support/individuals.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Sep 2025 09:10:01 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8">
+<title>Assistance pour les comptes de clients particuliers. | Interactive Brokers Ireland</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"> 
+<meta name="description" content="Besoin d'aide&nbsp;? Trouvez des r&#233;ponses rapidement pour les comptes de clients particuliers gr&#226;ce &#224; nos guides, FAQ, notre assistance t&#233;l&#233;phonique et autre.">
+<meta name="keywords" content="assistance, service client&#232;le, nous contacter, Chat, t&#233;l&#233;phone, centre de messagerie, faq, email, envoyer des documents, assistance t&#233;l&#233;phonique, assistance par Chat, signaler un probl&#232;me, forum, recherche de contact, informa">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta http-equiv="expires" content="-1">
+<meta name="robots" content="index, follow">
+<meta http-equiv="pragma" content="no-cache">
+<meta name="apple-mobile-web-app-title" content="IBKR">
+<link rel="icon" sizes="192x192" href="../../images/web/favicons/home-screen-icon-192x192.png" />
+<link rel="icon" sizes="128x128" href="../../images/web/favicons/home-screen-icon-128x128.png" />
+<link rel="apple-touch-icon" sizes="57x57" href="../../images/web/favicons/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="../../images/web/favicons/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="../../images/web/favicons/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="../../images/web/favicons/apple-touch-icon-144x144.png" />
+<!-- SCRIPTS HEAD  -->
+<script type="text/javascript" src='../../scripts/common/js/jquery-3.6.1/jquery.min.js'></script>
+<script type="text/javascript">
+function createScriptElement(data) {
+ if (typeof data == "undefined") {
+  return;
+ }
+ var element = document.createElement("SCRIPT");
+ element.type = "text/javascript";
+ if (typeof data.id != "undefined") {
+  element.id = data.id;
+ }
+ if (typeof data.source != "undefined") {
+  element.src = data.source;
+ }
+ if (typeof data.loadfunction == "function") {
+  element.onload = data.loadfunction;
+ }
+ document.head.appendChild(element);
+}
+createScriptElement({ source : "/scripts/common/js/bootstrap-5.2.2/bootstrap.bundle.min.js", loadfunction: bsLoaded  });
+createScriptElement({ source : "/scripts/common/js/lib.js?ver=9" });
+function storeCookie()
+{
+ if(typeof(Storage) !== 'undefined')
+ {
+   if(localStorage.getItem('web') !== null)
+   {
+     localStorage.removeItem('web');
+   }
+ }
+}
+function bsLoaded() {
+  createScriptElement({ source : "/scripts/common/js/appear/appear.min.js?ver=1" });
+  createScriptElement({ source : "/scripts/common/js/easing/easing.min.js?ver=1" });
+  createScriptElement({ source : "/scripts/common/js/parallax/parallax.min.js?ver=1" });
+  createScriptElement({ source : "/scripts/common/js/uitotop/uitotop.min.js?ver=1", loadfunction: uiLoaded });
+}
+function uiLoaded() {
+  createScriptElement({ source : "/scripts/common/js/twsUtils.js?ver=2" });
+  createScriptElement({ source : "/scripts/common/js/design/design.js?ver=1" }); 
+}
+</script>
+<script type="text/javascript">
+$(function() {
+ if (document.cookie.indexOf("IB_SEARCH") == -1)
+ {
+  var ex=new Date();
+  ex.setTime(ex.getTime()+86400000);
+  document.cookie ='IB_SEARCH='+Math.floor(new Date().getTime()/1000)+';expires='+ex.toGMTString()+';path=/;domain=.interactivebrokers.ie';
+ }
+  let nex=new Date();
+  nex.setTime(nex.getTime()+86400000);
+    document.cookie ='IB_QD=0;expires='+nex.toGMTString()+';path=/;domain=.interactivebrokers.ie';
+  
+  let excfd=new Date();
+  excfd.setTime(excfd.getTime()+86400000);
+  document.cookie ='IB_QD_CFD=0;expires='+excfd.toGMTString()+';path=/;domain=.interactivebrokers.ie';
+ $('div#langselector').find('a').each(function() {
+  $(this).click(function() {
+   var link = $(this).attr("href");
+   if(link.match(/\/(en|fr|de|es|it|ru|cn|jp)\//))
+   {
+    var langs = link.split("../../index.html");
+    if(langs[3] == 'en' || langs[3] == 'fr' || langs[3] == 'de' || langs[3] == 'es' || langs[3] == 'it' || langs[3] == 'ru' || langs[3] == 'cn' || langs[3] == 'jp')
+    {
+      var lang = langs[3];
+      if(lang == 'cn')
+      {
+        lang = 'zh_CN';
+      }
+      if(lang == 'jp')
+      {
+        lang = 'ja';
+      }
+      if(hasCookie("IB_LANG"))
+      {
+        deleteCookie("IB_LANG");
+      }
+      setCookie("IB_LANG", lang, 7, '.interactivebrokers.ie');
+    } else if(langs[1] == 'en') {
+      var lang = 'en';
+      setCookie("IB_LANG", lang, 7, '.interactivebrokers.ie');
+    }
+   }
+  });
+ });
+ $('p#bandaid-close').click(function() {
+  setCookie("IB_BANDAID", 1, 7, '.interactivebrokers.ie');
+ });
+ $('a#btnCloseBannerRegionSelector').click(function() {
+  setCookie("IB_REGION_SEL", 1, 30, '.interactivebrokers.ie');
+ });
+ $('a#btnCloseBannerRegionDifc').click(function() {
+  setCookie("IB_DIFC", 1, 30, '.interactivebrokers.ie');
+ });
+});
+</script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    if(localStorage.getItem('consentMode') ===  null){
+                    const consentMode = {
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'analytics_storage': 'denied'
+            };
+                localStorage.setItem('consentMode', JSON.stringify(consentMode));
+        gtag('consent', 'default', consentMode);
+    }
+    else {
+        gtag('consent', 'default', JSON.parse(localStorage.getItem('consentMode')));
+    }
+</script>
+<!-- STYLES HEAD -->
+<style type="text/css">
+@import url('../../css/bootstrap-5.2.2/bootstrap.min.css') layer(bootstrap);
+</style>
+<link rel="preload" as="style" href="../../css/ibkr/website.mince12.css?v=1848a6e12ea6c289ee1df7ee63749846">
+<link rel="stylesheet" type="text/css" media="all" href="../../css/ibkr/website.mince12.css?v=1848a6e12ea6c289ee1df7ee63749846">
+<link rel="preload" as="style" href="../../css/ibkr/theme-ibkr.min4f42.css?v=be9c72c0d328e7fc4987bce81f28981c">
+<link rel="stylesheet" type="text/css" media="all" href="../../css/ibkr/theme-ibkr.min4f42.css?v=be9c72c0d328e7fc4987bce81f28981c"><style type="text/css">
+/* PAGE TITLE ---------------------------------------------------------------------------------------------------- */
+section#page-title { display:none !important; }
+/* SUPPORT HEADER ---------------------------------------------------------------------------------------------------- */
+.support-header {
+    position:relative;
+    background:#142028 url("../../images/web/support-header-individuals.jpg") no-repeat center top;
+    background-size:cover;
+    padding: 80px 20px;
+}
+.support-header .container {
+    position:relative;
+}
+.support-header h2 {
+    font-weight:600;
+    font-size:2.5rem;
+    line-height:2.75rem;
+    color:#FFFFFF;
+}
+.support-header p {
+    color:#FFFFFF;
+}
+.support-header p a, .support-header p a:link, .support-header p a:visited, .support-header p a:hover, .support-header p a:active, .support-header p a:focus {
+    color:#FFFFFF;
+}
+.support-header p a:hover {
+    text-decoration:underline;
+}
+.support-header .search_box .search_form .input-group {
+    background-color: var(--bg-body); 
+}
+.support-header .search_box .search_form input.form-control {
+    height:56px;
+}
+.support-header .search_box .search_form button.btn.btn-default.btn-outline{
+    height:56px; 
+}
+.support-header .search_box .search_form button.btn.btn-default.btn-outline:hover{
+    border:1px solid var(--primary) !important;
+}
+/* SYSTEM STATUS ---------------------------------------------------------------------------------------------------- */
+.support-header .system-status {
+    position:absolute;
+    z-index:1;
+    top:-60px;
+    inset-inline-end:0px;
+    width:400px;
+    height:auto;
+    color:var(--white);
+    background-color: rgba(0,0,0,0.50);
+    border:1px solid var(--border-color);
+}
+.support-header .system-status .system-title {
+    padding:20px 20px 10px 20px;
+    border-bottom:1px solid var(--border-color);
+}
+.support-header .system-status .system-title h6 {
+    margin:0px;
+    font-weight:300;
+    text-align:center;
+    color:var(--white);
+}
+.support-header .system-status .system-message {
+    padding:30px 20px 10px 20px;
+}
+.support-header .system-status .system-message hr {
+    border-top:1px solid var(--border-color);
+}
+.support-header .system-status .system-message p.message-light {
+    text-align:center;
+}
+.support-header .system-status .system-message p.message-light i {
+    margin:0px auto;
+}
+.support-header .system-status .system-message p.message-title {
+    font-weight:600;
+    font-size:1.0rem;
+    color:var(--white);
+}
+.support-header .system-status .system-message .messages {
+    max-height:80px;
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+.support-header .system-status .system-message p.message-details {
+    font-weight:300;
+    font-size:1.0rem;
+    color:#D7D7D7;
+}
+.support-header .system-status .system-message p.message-date {
+    margin:0px 0px 20px 0px;
+    padding:8px 0px;
+    font-size:0.75rem;
+    border-top:1px solid var(--border-color);
+    border-bottom:1px solid var(--border-color);
+}
+.support-header .system-status .system-message p.message-info {
+    color:var(--white);
+}
+.borderbottom{border-bottom:1px solid var(--border-color);height:1px;margin-bottom:.5rem;}
+/* WELCOME CENTER ---------------------------------------------------------------------------------------------------- */
+#welcome-ctr {padding:10px 20px 40px; background-color:var(--dark-60);}  
+#welcome-ctr h2, #welcome-ctr h3, #welcome-ctr h4, #welcome-ctr h5, #welcome-ctr h6, #welcome-ctr p  {
+    color:var(--white);
+}
+#welcome-ctr h3{font-weight: 600;}
+#welcome-ctr h5{margin:0 0 5px;}
+#welcome-ctr .d-inline{display: inline;}
+#welcome-ctr .btn {min-width:200px;}
+#welcome-ctr .dflex {
+    display: flex;
+    align-items: flex-start;
+    justify-content:flex-start;
+}
+/* SUPPORT IBKR PHONE ---------------------------------------------------------------------------------------------------- */
+.support-ib-phone {
+    padding:30px 0px;
+}
+.support-ib-phone h5 {
+    line-height:2.0rem;
+}
+.support-ib-phone h6 {
+	font-weight: 300;
+}
+.support-ib-phone h6 a{
+	text-decoration: none;
+}
+.support-ib-phone p {
+	margin-bottom: .5rem;
+}
+.support-ib-phone p a {
+    font-size:0.8125rem;
+}
+.support-ib-phone p span.dial-type {
+    font-size:0.8125rem;
+    color:#666666;
+	white-space: nowrap;
+}
+/* SUPPORT COMMON QUESTIONS ---------------------------------------------------------------------------------------------------- */
+.support-common-questions {
+    padding:40px 0px 60px 0px;
+}
+.support-common-questions p {
+    position:relative;
+    text-align:start;
+}
+.support-common-questions p a, .support-common-questions p a:link, .support-common-questions p a:visited, .support-common-questions p a:hover, .support-common-questions p a:active, .support-common-questions p a:focus {
+    display:block;
+    margin:0px;
+    text-align:start;
+}
+.support-common-questions p a::before {
+    position:absolute;
+    left:0px;
+    margin:0px;
+    padding:0px;
+    font-style:normal;
+    font-variant:normal;
+    text-rendering:auto;
+    -webkit-font-smoothing:antialiased;
+    font-weight:900;
+}
+/* SUPPORT VIDEOS ---------------------------------------------------------------------------------------------------- */
+.support-videos {
+    padding:60px 0px 80px 0px;
+}
+[dir="rtl"] .support-videos h3 span {
+    float:left;}
+.support-videos h3 span {
+    float:right;
+    margin-top:13px;
+    font-size:1.0rem;
+}
+.support-videos h3 span a, .support-videos h3 span a:link, .support-videos h3 span a:visited, .support-videos h3 span a:hover, .support-videos h3 span a:active, .support-videos h3 span a:focus {
+    text-decoration:none;
+}
+.support-videos .carousel .carousel-indicators {
+    bottom:-40px;
+}
+.support-videos .carousel .carousel-inner .carousel-item .row {
+    margin:0px;
+}
+.support-videos .carousel .carousel-inner .carousel-item .row > div {
+    padding:0px;
+}
+.support-videos .carousel .carousel-inner .carousel-item .row > div a, .support-videos .carousel .carousel-inner .carousel-item .row > div a:link, .support-videos .carousel .carousel-inner .carousel-item .row > div a:visited, .support-videos .carousel .carousel-inner .carousel-item .row > div a:hover, .support-videos .carousel .carousel-inner .carousel-item .row > div a:active, .support-videos .carousel .carousel-inner .carousel-item .row > div a:focus {
+    display:block;
+    padding:10px;
+    text-align:center;
+    border:2px solid transparent;
+}
+.support-videos .carousel .carousel-inner .carousel-item .row > div img {
+    margin:0px auto;
+    max-width:100%;
+    width:100%;
+    height:auto;
+}
+.support-videos .carousel .carousel-inner .carousel-item .row > div span {
+    display:block;
+    margin:20px 0px 0px 0px;
+    color:var(--gray);
+}
+/* HOVER STATE */
+.support-videos .carousel .carousel-inner .carousel-item .row > div a:hover {
+    border-color:var(--primary);
+}
+/* SUPPORT ADDITIONAL TOOLS ---------------------------------------------------------------------------------------------------- */
+.support-additional-tools {
+    padding:20px 0px 20px 0px;
+}
+.support-additional-tools p {
+    text-align:start;
+}
+.support-additional-tools hr {
+    margin:20px 0px 40px 0px;
+}
+.support-additional-tools p a, .support-additional-tools p a:link, .support-additional-tools p a:visited, .support-additional-tools p a:hover, .support-additional-tools p a:active, .support-additional-tools p a:focus {
+    display:block;
+    margin:0px;
+    padding:0px;
+    text-align:start;
+}
+/* ICON LINKS */
+.support-additional-tools .icon-links p a, .support-additional-tools .icon-links p a:link, .support-additional-tools .icon-links p a:visited, .support-additional-tools .icon-links p a:hover, .support-additional-tools .icon-links p a:active, .support-additional-tools .icon-links p a:focus {
+    position:relative;
+    display:flex;
+    flex-wrap: nowrap;
+    justify-content:flex-start;
+    align-items:center;
+    align-content:center;
+    margin:0px;
+    padding:0px;
+    font-size:0.875rem;
+    text-align:start;
+}
+.support-additional-tools .icon-links p a img, .support-additional-tools .icon-links p a:link img, .support-additional-tools .icon-links p a:visited img, .support-additional-tools .icon-links p a:hover img, .support-additional-tools .icon-links p a:active img, .support-additional-tools .icon-links p a:focus img {
+    margin:0px 20px 0px 0px;
+    padding:0px;
+    width:28px;
+    height:auto;
+}
+.support-additional-tools .icon-links p a span span, .support-additional-tools .icon-links p a:link span span, .support-additional-tools .icon-links p a:visited span span, .support-additional-tools .icon-links p a:hover span span, .support-additional-tools .icon-links p a:active span span, .support-additional-tools .icon-links p a:focus span span {
+    font-size:1.0rem;
+}
+/* SUPPORT SERVICES ---------------------------------------------------------------------------------------------------- */
+.support-services {
+    padding:40px 0px 0px 0px;
+}
+.support-services p {
+    text-align:center;
+}
+.support-services p a img {
+    margin:0px auto 20px auto;
+    width:20%;
+    height:50px;
+}
+.support-services p a, .support-services p a:link, .support-services p a:visited, .support-services p a:hover, .support-services p a:active, .support-services p a:focus {
+    display:block;
+    margin:0px;
+    padding:20px 0px;
+    font-size:0.875rem;
+    text-align:center;
+}
+.support-services p a span, .support-services p a:link span, .support-services p a:visited span, .support-services p a:hover span, .support-services p a:active span, .support-services p a:focus span {
+    font-weight:300;
+    font-size:1.5rem;
+    line-height:2.0rem;
+    color: var(--dark);
+}
+/* SUPPORT CONTACT US ---------------------------------------------------------------------------------------------------- */
+.support-contact-us {
+    padding:40px 0px 40px 0px;
+}
+.support-contact-us p {
+    text-align:center;
+}
+.support-contact-us p a img {
+    margin:0px auto 20px auto;
+    width:20%;
+    height:50px;
+}
+.support-contact-us p a, .support-contact-us p a:link, .support-contact-us p a:visited, .support-contact-us p a:hover, .support-contact-us p a:active, .support-contact-us p a:focus {
+    display:block;
+    margin:0px;
+    padding:20px 0px;
+    font-size:0.875rem;
+    text-align:center;
+}
+.support-contact-us p a span, .support-contact-us p a:link span, .support-contact-us p a:visited span, .support-contact-us p a:hover span, .support-contact-us p a:active span, .support-contact-us p a:focus span {
+    font-weight:300;
+    font-size:1.5rem;
+    line-height:2.0rem;
+    color: var(--dark);
+}
+/* MEDIA QUERY | EXTRA SMALL (0PX - 576PX) ---------------------------------------------------------------------------------------------------- */
+@media (max-width: 575.98px) {
+    /* SUPPORT HEADER ---------------------------------------------------------------------------------------------------- */
+    .support-header {
+        background-image:none;
+        padding: 30px 20px;
+    }
+    /* SYSTEM STATUS ---------------------------------------------------------------------------------------------------- */
+    .support-header .system-status {
+        position:relative;
+        z-index:1;
+        top:0px;
+        right:auto;
+        margin:20px 0px 0px 0px;
+        width:100%;
+    }
+    .support-header .system-status .system-title {
+        padding:10px 20px;
+    }
+    .support-header .system-status .system-message {
+        padding:20px 20px;
+    }
+	/* SUPPORT IBKR PHONE ---------------------------------------------------------------------------------------------------- */
+	.support-ib-phone p span.dial-type {
+		white-space: normal;
+	}
+    /* SUPPORT VIDEOS ---------------------------------------------------------------------------------------------------- */
+    .support-videos h3 span {
+        margin-top:3px;
+    }
+    #welcome-ctr .dflex { display: block;}
+}
+/* MEDIA QUERY | EXTRA SMALL < 576px ---------------------------------------------------------------------------------------------------- */
+/* MEDIA QUERY | SMALL (576PX - 768PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    /* SUPPORT HEADER ---------------------------------------------------------------------------------------------------- */
+    .support-header {
+        background-image:none;
+        padding: 30px 20px;
+    }
+    /* SYSTEM STATUS ---------------------------------------------------------------------------------------------------- */
+    .support-header .system-status {
+        position:relative;
+        z-index:1;
+        top:0px;
+        inset-inline-end:auto;
+        margin:20px 0px 0px 0px;
+        width:100%;
+    }
+    .support-header .system-status .system-title {
+        padding:10px 20px;
+    }
+    .support-header .system-status .system-message {
+        padding:20px 20px;
+    }
+    /* SUPPORT VIDEOS ---------------------------------------------------------------------------------------------------- */
+    .support-videos h3 span {
+        margin-top:3px;
+    }
+}
+/* MEDIA QUERY | MEDIUM (768PX - 992PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /* SUPPORT HEADER ---------------------------------------------------------------------------------------------------- */
+    .support-header {
+        background-image:none;
+    }
+    /* SYSTEM STATUS ---------------------------------------------------------------------------------------------------- */
+    .support-header .system-status {
+        position:relative;
+        z-index:1;
+        top:0px;
+        inset-inline-end:auto;
+        margin:20px 0px 0px 0px;
+        width:100%;
+    }
+    .support-header .system-status .system-title {
+        padding:10px 20px;
+    }
+    .support-header .system-status .system-message {
+        padding:20px 20px;
+    }
+}
+/* MEDIA QUERY | LARGE (992PX - 1200PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
+/* MEDIA QUERY | EXTRA LARGE > 1200px ---------------------------------------------------------------------------------------------------- */
+@media (min-width: 1200px) {
+}
+.contact-iframe {
+    min-height: 680px;
+}
+.nocopy {user-select:none;}
+</style>
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-d23de039-d518-4f10-9810-e68da4592744","rua.cook":"true","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="XE2AM-F37QZ-LYWQP-H8KRM-4SNX5",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"XE2AM-F37QZ-LYWQP-H8KRM-4SNX5";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n="false"=="true"?1:0,t="cookiepresent",a="eykumbc7mxv4o2gjesrq-f-b0cb0c124-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1168163","ak.ai":parseInt("665092",10),"ak.ol":"0","ak.cr":45,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"1d7859f8","ak.r":50930,"ak.a2":n,"ak.m":"a","ak.n":"essl","ak.bpcip":"38.21.70.0","ak.cport":49585,"ak.gh":"95.101.132.220","ak.quicv":"","ak.tlsv":"tls1.2","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1758012579","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==EpMNIBNoyt5PKSKaFwXa6f9VhlaP/43ypt6zTqFgXRKLVeDoTTUX2icZb1WiluZPU5eufvUJRd+BCy9K8RqDkqFz/15dL1SicmjhgEvE+buvJ4WbNyugcmFmYiavBSCNFdmPWVLFUZX2bwn6yv3dkkUEpUpWjiwRt8c4+uqNaXPGoMBa3+qPZR1rI+WYEhOEX9t5rpV3jjXcp6dRRFwiIUNm55xBDT6P+3IZnNpI7Uqgyic8b03cD3hgqCJSoHx9MNOsjCezeXzsANZaEOeRUObAVCIEoo4MZDJvr4eOtgFBkTb6EQbgibpWT2cOR4ZUgZFeB1OzF5QfH+tdfrehSWIHqD79uW+78vkMHiNOC4Un8QrHN6Giuxk1L7txnTp7VrK6KDCnLXjfDHPG7oSRgnQS/02nURmzNEz6diOyRVQ=","ak.pv":"398","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.html","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak-2.html","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body>
+<div id="printheader"></div>
+<!-- HEADER START ---------------------------------------------------------------------------------------------------- -->
+<div class="ibkr-header" id="ibkr-header">
+    
+    <div class="banner-region-selector collapse show" id="bannerRegionSelector">
+    <div class="banner-content">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col">
+                    <div class="row align-items-center">
+                        <div class="col-12 col-sm-2 col-md-1 col-xl-1">
+                            <p class="m-0 text-center"><i class="fa-solid fa-2x fa-triangle-exclamation text-warning"></i></p>
+                        </div>
+                        <div class="col-12 col-sm-10 col-md-6 col-xl-7">
+                            <p class="m-0 fs-6 lh-6 text-center text-sm-start">Le contenu de ce site n'est pas destin&#233; aux clients de votre r&#233;gion. Veuillez choisir un autre pays ou une autre r&#233;gion pour acc&#233;der au contenu sp&#233;cifique &#224; votre juridiction.</p>
+                            <span class="d-block d-md-none"><br /></span>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-5 col-xl-4">
+                            <div class="row align-items-center gx-1">
+                                <div class="col-12 col-sm-9 col-md-8 col-lg-8">
+                                    <label class="visually-hidden" for="selectRegion">R&#233;gion</label>
+                                    <select class="form-select" id="selectRegion">
+                                        
+                                                                                <option value="AL">Albanie</option>
+                                        
+                                                                                <option value="other">Autre pays ou r&#233;gion</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-sm-3 col-md-4 col-lg-4">
+                                    <button type="submit" class="btn btn-sm btn-primary w-100" id="btnContinueToRegion">Poursuivre</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+$(function() {
+   $('button#btnContinueToRegion').click(function() {
+    if($('select#selectRegion').val() == 'other')
+    {
+      setCookie("IB_REGION_SEL", 1, 30, '.interactivebrokers.ie');
+      window.location.href = '../choose-country-region.html';
+    } else {
+      window.location.href = 'https://www.interactivebrokers.com/';
+    }
+  });
+});
+</script>    
+<style type="text/css">
+.banner-risk-warning {
+    margin:0px;
+    padding:8px 0px;
+    width:100%;
+    height:auto;
+    background-color:#242424;
+}
+.banner-risk-warning p {
+    margin:0px;
+    padding:0px;
+    font-weight:400;
+    font-size:1.0rem;
+    line-height:1.25rem;
+    text-align:center;
+    color:#FFFFFF;
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | EXTRA SMALL (< 576PX) ---------------------------------------------------------------------------------------------------- */
+@media (max-width:575.98px) {
+    .banner-risk-warning {
+        padding:4px 0px;
+    }
+    .banner-risk-warning p {
+        font-size:0.8125rem;
+        line-height:1.0rem;
+    }
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | SMALL (576PX-767.98PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:576px) and (max-width:767.98px) {
+    .banner-risk-warning {
+        padding:4px 0px;
+    }
+    .banner-risk-warning p {
+        font-size:0.8125rem;
+        line-height:1.0rem;
+    }
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | MEDIUM (768PX-991.98PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:768px) and (max-width:991.98px) {
+    .banner-risk-warning {
+        padding:4px 0px;
+    }
+    .banner-risk-warning p {
+        font-size:0.8125rem;
+        line-height:1.0rem;
+    }
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | LARGE (992PX-1199.98PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:992px) and (max-width:1199.98px) {
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | EXTRA LARGE (>1200PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:1200px) {
+}
+</style>
+<div class="banner-risk-warning">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p>Investir dans des produits financiers comporte des risques.<br> La valeur de vos investissements peut augmenter ou diminuer, et les pertes peuvent &#234;tre sup&#233;rieures &#224; la valeur de votre investissement initial.
+</p>
+            </div>
+        </div>
+    </div>
+</div>    <!-- NAV TOP START (LG/XL ONLY) -->
+    <nav class="navbar navbar-inverse navbar-expand-lg navbar-top d-none d-lg-block">
+        <div class="container">
+            <div class="navbar-collapse collapse" id="ibkr-nav-top"><!-- LEFT MENU -->
+                
+                <ul class="navbar-nav mr-auto align-items-center"><!-- FOR INDIVIDUALS -->
+                    <li class="nav-item dropdown"><a href="#" target="_self" class="nav-link dropdown-toggle" id="nav-for-individuals" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Clients particuliers</a>
+                        <div class="dropdown-menu dropdown-ind-accounts" aria-labelledby="nav-for-individuals">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../accounts/individual-ie.html" target="_self" class="dropdown-item" >Individuel ou joint</a> <a href="../accounts/trust-ie.html" target="_self" class="dropdown-item" >Compte Trust</a> <a href="../accounts/family-account-ie.html" target="_self" class="dropdown-item" >Compte Famille</a> <a href="../accounts/long-term-investment-accounts.html" target="_self" class="dropdown-item">Compte investissement &#224; long terme (TBSZ)</a> <a href="../accounts/plan-depargne-en-action-accounts-ie.html" target="_self" class="dropdown-item">Plan d&#8217;&#233;pargne en actions (PEA)</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- FOR INSTITUTIONS -->
+                    
+                    <li class="nav-item dropdown"><a href="#" target="_self" class="nav-link dropdown-toggle" id="nav-for-institutions" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Clients institutionnels</a>
+                        <div class="dropdown-menu dropdown-inst-accounts" aria-labelledby="nav-for-institutions">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../accounts/institutions-ie.html" target="_self" class="dropdown-item" >Accueil - Institutions</a> <a href="../accounts/advisor-ie.html" target="_self" class="dropdown-item" >Conseillers en inv. enregistr&#233;</a> <a href="../accounts/proprietary-trading-group-ie.html" target="_self" class="dropdown-item" >Groupe de prop trading</a> <a href="../accounts/hedge-fund-ie.html" target="_self" class="dropdown-item" >Hedge funds</a> <a href="../accounts/broker-ie.html" target="_self" class="dropdown-item" >Courtiers introducteurs</a> <a href="../accounts/family-office-ie.html" target="_self" class="dropdown-item" >Family offices</a> <a href="../accounts/compliance-officer-ie.html" target="_self" class="dropdown-item" >Responsables conformit&#233;</a> <a href="../accounts/small-business-ie.html" target="_self" class="dropdown-item" >Petites entreprises</a> <a href="../accounts/fsa-insurance-providers.html" target="_self" class="dropdown-item" >Administrateurs de service complet <br>Compagnies d'assurance</a> <a href="../accounts/money-manager-ie.html" target="_self" class="dropdown-item" >Gestionnaires de portefeuille</a> <a href="../accounts/administrator-ie.html" target="_self" class="dropdown-item" >Administrateurs de fonds</a>  <a href="https://ibkrcampus.eu/stl/" target="_blank" class="dropdown-item" >Enseignants</a>                                 </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul><!-- RIGHT MENU -->
+                <ul class="navbar-nav ml-auto align-items-center"><!-- FREE TRIAL -->
+                    
+                    <li class="nav-item"><a href="../trading/free-trial.html" target="_self" class="nav-link">ESSAI GRATUIT</a></li><!-- CAREERS -->
+                    <li class="nav-item"><a href="../general/about/careers-splash.html" target="_self" class="nav-link">IBKR recrute</a></li><!-- ABOUT US -->
+                    
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-about-us" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&#192; propos d'IBKR</a>
+                        <div class="dropdown-menu dropdown-about-us" aria-labelledby="nav-about-us">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../general/financial-strength.html" target="_self" class="dropdown-item" >Solidit&#233; financi&#232;re et s&#233;curit&#233;</a> <a href="../general/about/about.html" target="_self" class="dropdown-item">Histoire du groupe</a> <a href="../general/awards.html" target="_self" class="dropdown-item">R&#233;compenses</a> <a href="../about/news-at-ibkr.html" target="_self" class="dropdown-item">Actualit&#233; IBKR</a> <a href="../general/about/press-and-media.html" target="_self" class="dropdown-item">Presse et m&#233;dias</a> <a href="https://investors.interactivebrokers.com/ir/main.php" target="_blank" class="dropdown-item" rel="noreferrer noopener">Relations investisseurs</a> <a href="../general/about/sustainability.html" target="_self" class="dropdown-item">Durabilit&#233;</a> <a href="../accounts/legalDocuments/brokerPerformanceReports.html" target="_self" class="dropdown-item">Rapports r&#233;glementaires</a> <a href="../accounts/referrer.html" target="_self" class="dropdown-item">Recommander un ami</a><a href="../general/about/affiliate-programs.html" target="_self" class="dropdown-item">Programmes affili&#233;s</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- SUPPORT -->
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-support" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Assistance</a>
+                        <div class="dropdown-menu dropdown-contact-us" aria-labelledby="nav-support">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="fund-my-account.html" target="_self" class="dropdown-item">Approvisionner votre compte</a> <a href="individuals.html" target="_self" class="dropdown-item">Clients particuliers</a> <a href="institutions.html" target="_self" class="dropdown-item">Clients institutionnels</a> <a href="institutional-sales-contacts4343.html?p=uk" target="_self" class="dropdown-item">Service commercial pour clients institutionnels</a> <a href="../general/contact/ibot-container.html" target="_self" class="dropdown-item">Parcourir nos FAQ</a> <a href="reports-and-dates.html" target="_self" class="dropdown-item">Informations fiscales</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- LANGUAGE SELECTOR -->
+                    
+                    <li class="nav-item dropdown"><a href="#" class="nav-link nav-language dropdown-toggle" id="nav-language" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Langue</span><img src="../../images/web/icons/icon-language.svg" alt="Langue" width="23" height="18" border="0" /></a>
+                        <div class="dropdown-menu dropdown-language" aria-labelledby="nav-language">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../../en/home.html" target="_self" class="dropdown-item">English</a>
+                                    <a href="../home.html" target="_self" class="dropdown-item">Fran&#231;ais</a>
+                                    <a href="../../de/home.html" target="_self" class="dropdown-item">Deutsch</a>
+                                    <a href="../../es/home.html" target="_self" class="dropdown-item">Espa&#241;ol</a>
+                                    <a href="../../it/home.html" target="_self" class="dropdown-item">Italiano</a>
+                                    <a href="../../hu/home.html" target="_self" class="dropdown-item">Magyar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                                    
+                </ul>
+            </div>
+        </div><!-- NAV TOP END --><!-- NAV BOTTOM START -->
+    </nav>
+    
+    <nav class="navbar navbar-inverse navbar-expand-lg navbar-bottom">
+        <div class="container"><!-- LOGO -->
+             <a href="../home.html" target="_self" title="Accueil Interactive Brokers" alt="Interactive Brokers Logo" class="navbar-brand brand-logo" aria-label="Interactive Brokers Home"><span>Accueil Interactive Brokers</span></a>
+            <!-- TOGGLE (XS/SM/MD ONLY) --><!-- OPEN ACCOUNT BUTTON (XS/SM/MD ONLY) -->
+            <button class="navbar-toggler" type="button" aria-label="Toggle Navigation"><span class="navbar-toggler-icon"><i class="fas fa-bars" aria-hidden="true"></i></span></button>
+            
+            <a href="https://www.interactivebrokers.co.uk/Universal/Application" target="_self" class="d-block d-lg-none btn btn-open-account">Ouvrir un compte</a>
+            <!-- LOG IN (SM/MD ONLY) -->
+             <a href="https://www.interactivebrokers.co.uk/sso/Login?RL=1" target="_self" class="d-none d-sm-block d-lg-none btn btn-log-in">Se connecter</a>             <!-- IBKR NAV BOTTOM START -->
+            <div class="navbar-collapse collapse" id="ibkr-nav-bottom">
+                <ul class="navbar-nav ml-auto align-items-center"><!-- WHY IBKR -->
+                    <li class="nav-item"><a href="../whyib/overview.html" target="_self" class="nav-link">Pourquoi IBKR</a></li><!-- PRICING -->
+                    
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-pricing" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tarification</a>
+                        <div class="dropdown-menu dropdown-pricing" aria-labelledby="nav-pricing">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../pricing/commissions-home.html" target="_self" class="dropdown-item">Commissions</a> <a href="../trading/margin-rates.html" target="_self" class="dropdown-item">Taux de marge</a> <a href="../accounts/fees/pricing-interest-rates.html" target="_self" class="dropdown-item">Taux d'int&#233;r&#234;t</a> <a href="../pricing/short-sale-cost.html" target="_self" class="dropdown-item">Co&#251;t de vente &#224; d&#233;couvert</a> <a href="../pricing/research-news-services.html" target="_self" class="dropdown-item">Recherche et actualit&#233;</a> <a href="../pricing/research-news-marketdata.html" target="_self" class="dropdown-item">Donn&#233;es de march&#233;</a> <a href="../pricing/stock-yield-enhancement-program-ie.html" target="_self" class="dropdown-item">Programme d'am&#233;lioration du rendement des actions</a> <a href="../pricing/other-fees-overview.html" target="_self" class="dropdown-item">Autres frais</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- TRADING -->
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-technology" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Trading</a>
+                        <div class="dropdown-menu dropdown-technology" aria-labelledby="nav-technology">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../trading/trading-platforms.html" target="_self" class="dropdown-item">Plateformes</a> <a href="../trading/ib-api.html" target="_self" class="dropdown-item">API</a> <a href="../trading/margin.html" target="_self" class="dropdown-item">Marge</a> <a href="../trading/products-exchanges.html" target="_self" class="dropdown-item">Recherche de produits et bourses</a> <a href="../trading/ordertypes.html" target="_self" class="dropdown-item">Types d'ordres</a> <a href="../whyib/reporting.html" target="_self" class="dropdown-item">D&#233;claration</a> <a href="../trading/securities-financing.html" target="_self" class="dropdown-item">Financement des titres</a> <a href="../trading/features-in-focus.html" target="_self" class="dropdown-item">Zoom sur les fonctionnalit&#233;s</a> <a href="../general/education/probability_lab.html" target="_self" class="dropdown-item">Probability Lab</a><a href="../trading/sustainable-investing-ie.html" target="_self" class="dropdown-item">Investissement durable</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- SERVICES -->
+                    
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-products" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+                        <div class="dropdown-menu dropdown-products" aria-labelledby="nav-products">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../trading/globalanalyst.html" target="_self" class="dropdown-item">GlobalAnalyst IBKR</a> <a href="../trading/si-quotes.html" target="_self" class="dropdown-item">Cours acheteur/vendeur EUIBSI</a> <a href="../portfolioanalyst/overview.html" target="_self" class="dropdown-item" rel="noreferrer noopener">PortfolioAnalyst</a> <a href="../trading/products-bonds.html" target="_self" class="dropdown-item">Carrefour des obligations</a> <a href="../trading/products-mutual-funds.html" target="_self" class="dropdown-item">Carrefour des FCP</a> <a href="../trading/commission-free-etfs-mkt.html" target="_self" class="dropdown-item">ETF sans frais de transaction</a> <a href="https://gdcdyn.interactivebrokers.com/aces/Marketplace/InvestorsMarketplace" target="_blank" class="dropdown-item">Carrefour des investisseurs</a><a href="../trading/short-securities-availability.html" target="_self" class="dropdown-item">Disponibilit&#233; des titres pour vente &#224; d&#233;couvert</a><a href="../trading/third-party-integration.html" target="_self" class="dropdown-item">Int&#233;gration des programmes tiers</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- EDUCATION -->
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-education" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Apprendre</a>
+                        <div class="dropdown-menu dropdown-education" aria-labelledby="nav-education">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="https://ibkrcampus.eu/" target="_blank" class="dropdown-item">IBKR Campus</a> <a href="https://ibkrcampus.eu/academy" target="_blank" class="dropdown-item" rel="noreferrer noopener">Traders' Academy</a> <a href="https://ibkrcampus.eu/news" target="_blank" class="dropdown-item" rel="noreferrer noopener">Traders' Insight</a> <a href="https://ibkrcampus.eu/podcasts" target="_blank" class="dropdown-item" rel="noreferrer noopener">IBKR Podcasts</a> <a href="https://ibkrcampus.eu/quant" target="_blank" class="dropdown-item" rel="noreferrer noopener">IBKR Quant Blog</a> <a href="https://ibkrcampus.eu/webinars" target="_blank" class="dropdown-item" rel="noreferrer noopener">Webinaires</a> <a href="https://ibkrcampus.eu/stl/" target="_blank" class="dropdown-item">Student Trading Lab</a>   <a href="https://ibkrcampus.eu/glossary" target="_blank" class="dropdown-item" rel="noreferrer noopener">Glossaire du trading</a> <a href="../general/calendar/calendar.html" target="_self" class="dropdown-item">Calendrier des traders</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- SEARCH -->
+                    
+                    <li class="nav-item dropdown d-none d-lg-block" id="search-expand"><a href="#" class="nav-link nav-search dropdown-toggle" id="nav-search" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Recherche</span><i class="fas fa-search" aria-hidden="true"></i></a>
+                        <div class="dropdown-menu dropdown-search" aria-labelledby="nav-search">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="search_box">
+                                        <script type="text/javascript">
+                                         searchbox_input_changed=false;
+                                         $('#search-expand').on('shown.bs.dropdown', function(e) {
+                                           $('#searchField').focus();
+                                         });
+                                        </script>
+                                        <form action="https://www.interactivebrokers.ie/fr/search/index.php" method="get" class="search_form" id="search_form_id">
+                                            <input type="text" aria-label="Search Box" placeholder="Search" name="query" maxlength="64" autocomplete="off" id="searchField" class="form-control s swap_value searchinput" aria-label="Search Interactive Brokers">
+                                            <button type="submit" value="" id="searchsubmit" class="searchsubmit"><i class="fas fa-search" aria-hidden="true" aria-label="Submit Search"></i></button>
+                                        </form>
+                                                                            
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- LOG IN -->
+                    <li class="nav-item dropdown d-none d-lg-block"><a href="#" target="_self" class="nav-link nav-login dropdown-toggle" id="nav-log-in" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Se connecter</a>
+                        <div class="dropdown-menu dropdown-login" aria-labelledby="nav-log-in">
+                            <div class="row">
+                                <div class="col">
+                                     <a href="https://www.interactivebrokers.co.uk/sso/Login?RL=1" target="_self" class="dropdown-item dropdown-portal">Se connecter au Portail</a>  <a href="../trading/tws.html#tws-software" target="_self" class="dropdown-item">T&#233;l&#233;charger Trader Workstation</a> <a href="../trading/ibkr-desktop.html" target="_self" class="dropdown-item">T&#233;l&#233;charger IBKR Desktop</a> <a href="../trading/tws-mobile.html#trytoday-drop" target="_self" class="dropdown-item">T&#233;l&#233;charger IBKR Mobile</a><a href="../trading/ibgateway-latest.html" target="_self" class="dropdown-item">T&#233;l&#233;charger IB Gateway</a> <a href="../trading/trading-platforms.html" target="_self" class="dropdown-item">Comparer toutes les plateformes IBKR</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- OPEN ACCOUNT -->
+                    
+                    <li class="nav-item dropdown d-none d-lg-block"><a href="#" target="_self" class="nav-link nav-open-account dropdown-toggle" id="nav-open-account" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ouvrir un compte</a>
+                        <div class="dropdown-menu dropdown-open-account" aria-labelledby="nav-open-account">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="https://www.interactivebrokers.co.uk/Universal/Application" target="_self" class="dropdown-item dropdown-portal">Ouvrir un compte</a> <a href="https://www.interactivebrokers.co.uk/sso/Login?c=t" target="_self" class="dropdown-item">Finir une demande</a> <a href="../general/what-you-need-inv.html" target="_self" class="dropdown-item">Ce dont vous avez besoin</a> <a href="../accounts/account-guide.html" target="_self" class="dropdown-item">Choisir le compte qui vous convient</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul><!-- IBKR MENU END -->
+            </div>
+        </div><!-- NAV BOTTOM END -->
+    </nav>
+    
+</div><!-- HEADER END ---------------------------------------------------------------------------------------------------- --><!-- MOBILE NAV START (XS/SM/MD ONLY) ---------------------------------------------------------------------------------------------------- -->
+
+<div class="menu-mobile d-lg-none"><!-- CLOSE BUTTON -->
+    <div class="close-button"><a href="javascript:void(0);" target="_self" class="btn-close" aria-label="Close Menu"><i class="fas fa-times"></i></a></div><!-- LOGO -->
+    
+    <div class="logo-container"><a href="../home.html" target="_self" class="brand-logo" aria-label="Interactive Brokers Home"><span>Accueil Interactive Brokers</span></a></div><!-- SEARCH -->
+    <div class="search-container">
+        <div class="search-box">
+            <form action="https://www.interactivebrokers.ie/fr/search/index.php" method="get" class="search_form" id="search_form_id">
+                <input type="text" class="form-control" placeholder="Search" name="query" maxlength="64" autocomplete="off" id="searchFieldMobile" aria-label="Search Interactive Brokers"> 	
+                <button type="submit" class="btn-search-submit" value="" id="searchsubmitMobile" aria-label="Submit Search"><i class="fas fa-search" aria-hidden="true"></i></button> 	
+            </form>
+        </div>
+    </div>
+    <ul>
+    
+            <!-- PORTAL LOGIN -->
+        <li><a href="https://www.interactivebrokers.co.uk/sso/Login?RL=1" target="_self" class="menu-log-in">Se connecter au Portail</a></li>
+    
+        <!-- OPEN ACCOUNT -->
+    <li class="has-submenu"><a href="#" target="_self" class="menu-open-account" data-submenu="submenu-open-account">Ouvrir un compte</a>
+        <div class="submenu" id="submenu-open-account">
+            <p class="nav-link-back"><a href="javascript:void(0);" target="_self" data-submenu-close="submenu-open-account">Retour</a></p>
+            <p class="submenu-title">OUVRIR UN COMPTE</p>
+            <ul>
+            <li><a href="https://www.interactivebrokers.co.uk/Universal/Application" target="_self" class="menu-start-application">Ouvrir un compte</a></li>
+            <li><a href="https://www.interactivebrokers.co.uk/sso/Login?c=t" target="_self">Terminer une demande en cours</a></li>
+            <li><a href="../general/what-you-need-inv.html" target="_self">Ce dont vous avez besoin</a></li>
+            <li><a href="../accounts/account-guide.html" target="_self">Comment choisir le compte qui vous convient</a></li>
+            </ul>
+        </div>
+    </li>
+    
+        <!-- FREE TRIAL -->
+    <li><a href="../trading/free-trial.html" target="_self">Essai gratuit</a></li><!-- WHY IBKR -->
+    
+    <li><a href="../whyib/overview.html" target="_self">Pourquoi IBKR</a></li><!-- ACCOUNT TYPES -->
+    <li class="has-submenu"><a href="#" target="_self" data-submenu="submenu-account-types">Types de comptes</a>
+        <div class="submenu" id="submenu-account-types">
+            <p class="nav-link-back"><a href="javascript:void(0);" target="_self" data-submenu-close="submenu-account-types">Retour</a></p>
+            <p class="submenu-title">Clients particuliers</p>
+            <ul>
+            <li><a href="../accounts/individual-ie.html" target="_self" >Individuel ou joint</a></li>
+            <li><a href="../accounts/trust-ie.html" target="_self" >Comptes Trust</a></li>
+            <li><a href="../accounts/family-account-ie.html" target="_self" >Comptes Famille</a></li>
+            <li><a href="../accounts/long-term-investment-accounts.html" target="_self">Comptes investissement &#224; long terme (TBSZ)</a></li>
+            <li><a href="../accounts/plan-depargne-en-action-accounts-ie.html" target="_self">Plan d&#8217;&#233;pargne en actions (PEA)</a></li>
+            </ul>
+            <p class="submenu-title">Clients institutionnels</p>
+            <ul>
+            <li><a href="../accounts/institutions-ie.html" target="_self" >Accueil clients institutionnels</a></li>
+            <li><a href="../accounts/advisor-ie.html" target="_self" >Conseiller en investissement enregistr&#233;</a></li>
+            <li><a href="../accounts/proprietary-trading-group-ie.html" target="_self" >Groupes de trading pour compte propre</a></li>
+            <li><a href="../accounts/hedge-fund-ie.html" target="_self" >Hedge funds</a></li>
+            <li><a href="../accounts/broker-ie.html" target="_self" >Courtiers introducteurs</a></li>
+            <li><a href="../accounts/family-office-ie.html" target="_self" >Family offices</a></li>
+            <li><a href="../accounts/compliance-officer-ie.html" target="_self" >Responsables conformit&#233;</a></li>
+            <li><a href="../accounts/small-business-ie.html" target="_self" >Petites entreprises</a></li>
+            <li><a href="../accounts/fsa-insurance-providers.html" target="_self" >Administrateurs de service complet <br>Compagnies d'assurance</a></li>
+            <li><a href="../accounts/money-manager-ie.html" target="_self" >Gestionnaires de portefeuille</a></li>
+            <li><a href="../accounts/administrator-ie.html" target="_self" >Administrateurs de fonds</a></li>
+            
+             
+            <li><a href="https://ibkrcampus.eu/stl/" target="_blank" >Enseignants</a></li>
+            
+                        </ul>
+        </div>
+    </li><!-- PRICING -->
+    
+    <li class="has-submenu"><a href="#" data-submenu="submenu-pricing">Tarification</a>
+        <div class="submenu" id="submenu-pricing">
+            <p class="nav-link-back"><a href="javascript:void(0);" target="_self" data-submenu-close="submenu-pricing">Retour</a></p>
+            <p class="submenu-title">TARIFICATION</p>
+            <ul>
+            <li><a href="../pricing/commissions-home.html" target="_self">Commissions </a></li>
+            <li><a href="../trading/margin-rates.html" target="_self">Taux de marge</a></li>
+            <li><a href="../accounts/fees/pricing-interest-rates.html" target="_self">Taux d'int&#233;r&#234;t</a></li>
+            <li><a href="../pricing/short-sale-cost.html" target="_self">Co&#251;t de vente &#224; d&#233;couvert</a></li>
+            <li><a href="../pricing/research-news-services.html" target="_self">Recherche et actualit&#233;s</a></li>
+            <li><a href="../pricing/research-news-marketdata.html" target="_self">Donn&#233;es de march&#233;</a></li>
+            <li><a href="../pricing/stock-yield-enhancement-program-ie.html" target="_self">Programme d'am&#233;lioration du rendement des actions</a></li>
+            <li><a href="../pricing/other-fees-overview.html" target="_self">Frais</a></li>
+            </ul>
+        </div>
+    </li><!-- TRADING -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-trading">Trading</a>
+        <div class="submenu" id="submenu-trading">
+            <p class="nav-link-back"><a href="javascript:void(0);" target="_self" data-submenu-close="submenu-trading">Retour</a></p>
+            <p class="submenu-title">TRADING</p>
+            <ul>
+            <li><a href="../trading/trading-platforms.html" target="_self">Plateformes</a></li>
+            <li><a href="../trading/ib-api.html" target="_self">API</a></li>
+            <li><a href="../trading/margin.html" target="_self">Marge</a></li>
+            <li><a href="../trading/products-exchanges.html" target="_self">Recherche de produits et bourses</a></li>
+            <li><a href="../trading/ordertypes.html" target="_self">Types d'ordres</a></li>
+            <li><a href="../whyib/reporting.html" target="_self">Rapports</a></li>
+            <li><a href="../trading/securities-financing.html" target="_self">Financement des titres</a></li>
+            <li><a href="../trading/features-in-focus.html" target="_self">Zoom sur les fonctionnalit&#233;s</a></li>
+            <li><a href="../general/education/probability_lab.html" target="_self">Probability Lab</a></li>
+            <li><a href="../trading/sustainable-investing-ie.html" target="_self">Investissement durable</a></li>
+            </ul>
+        </div>
+    </li><!-- SERVICES -->
+    
+    <li class="has-submenu"><a href="#" data-submenu="submenu-services">Services</a>
+        <div class="submenu" id="submenu-services">
+            <p class="nav-link-back"><a href="javascript:void(0);" target="_self" data-submenu-close="submenu-services">Retour</a></p>
+            <p class="submenu-title">SERVICES</p>
+            <ul>
+            <li><a href="../trading/globalanalyst.html" target="_self">IBKR GlobalAnalyst</a></li>
+            <li><a href="../trading/si-quotes.html" target="_self">Cours acheteur/vendeur EUIBSI</a></li>
+            <li><a href="../portfolioanalyst/overview.html" target="_self" rel="noreferrer noopener">PortfolioAnalyst</a></li>
+            <li><a href="../trading/products-bonds.html" target="_self">Carrefour des obligations</a></li>
+            <li><a href="../trading/products-mutual-funds.html" target="_self">Carrefour des fonds communs de placement</a></li>
+            <li><a href="../trading/commission-free-etfs-mkt.html" target="_self">ETF sans frais de transaction</a></li>
+            <li><a href="https://gdcdyn.interactivebrokers.com/aces/Marketplace/InvestorsMarketplace" target="_blank">Carrefour des investisseurs</a></li>
+            <li><a href="../trading/short-securities-availability.html" target="_self">Titres disponibles pour vente &#224; d&#233;couvert</a></li>
+            <li><a href="../trading/third-party-integration.html" target="_self">Int&#233;gration de programmes tiers</a></li>
+            </ul>
+        </div>
+    </li><!-- EDUCATION -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-education">Apprendre</a>
+        <div class="submenu" id="submenu-education">
+            <p class="nav-link-back"><a href="javascript:void(0);" target="_self" data-submenu-close="submenu-education">Retour</a></p>
+            <p class="submenu-title">APPRENDRE</p>
+            <ul>
+            
+             
+            <li><a href="https://ibkrcampus.eu/" target="_blank">IBKR Campus</a></li>
+            <li><a href="https://ibkrcampus.eu/academy" target="_blank">Traders' Academy</a></li>
+            <li><a href="https://ibkrcampus.eu/news" target="_blank">Traders' Insight</a></li>
+            <li><a href="https://ibkrcampus.eu/podcasts" target="_blank">IBKR Podcasts</a></li>
+            <li><a href="https://ibkrcampus.eu/quant" target="_blank">IBKR Quant Blog</a></li>
+            <li><a href="https://ibkrcampus.eu/webinars" target="_blank">Webinaires</a></li>
+            <li><a href="https://ibkrcampus.eu/stl/" target="_blank">Student Trading Lab</a></li>
+            
+                         
+            <li><a href="https://ibkrcampus.eu/glossary" target="_blank">Glossaire du trading</a></li>
+            
+                        <li><a href="../general/calendar/calendar.html" target="_self">Calendrier du trader</a></li>
+            </ul>
+        </div>
+    </li><!-- ABOUT US -->
+    
+    <li class="has-submenu"><a href="#" data-submenu="submenu-about-us">&#192; propos d'IBKR</a>
+        <div class="submenu" id="submenu-about-us">
+            <p class="nav-link-back"><a href="javascript:void(0);" target="_self" data-submenu-close="submenu-about-us">Retour</a></p>
+            <p class="submenu-title">&#192; PROPOS D'IBKR</p>
+            <ul>
+            <li><a href="../general/financial-strength.html" target="_self">Solidit&#233; financi&#232;re et s&#233;curit&#233;</a></li>
+            <li><a href="../general/about/about.html" target="_self">Histoire du groupe</a></li>
+            <li><a href="../general/about/careers-splash.html" target="_self">IBKR recrute</a></li>
+            <li><a href="../general/awards.html" target="_self">R&#233;compenses</a></li>
+            <li><a href="../about/news-at-ibkr.html" target="_self">L'actualit&#233; IBKR</a></li>
+            <li><a href="../general/about/press-and-media.html" target="_self">Presse et m&#233;dias</a></li>
+            <li><a href="https://investors.interactivebrokers.com/ir/main.php" target="_blank" rel="noreferrer noopener">Relations investisseurs</a></li>
+            <li><a href="../general/about/sustainability.html" target="_self">Durabilit&#233;</a></li>
+            <li><a href="../accounts/legalDocuments/brokerPerformanceReports.html" target="_self">Rapports r&#233;glementaires</a></li>
+            <li><a href="../accounts/referrer.html" target="_self">Recommander un ami</a></li>
+            <li><a href="../general/about/affiliate-programs.html" target="_self">Programmes affili&#233;s</a></li>
+            </ul>
+        </div>
+    </li><!-- SUPPORT -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-support">Assistance</a>
+        <div class="submenu" id="submenu-support">
+            <p class="nav-link-back"><a href="javascript:void(0);" target="_self" data-submenu-close="submenu-support">Retour</a></p>
+            <p class="submenu-title">Assistance</p>
+            <ul>
+            <li><a href="fund-my-account.html" target="_self">Approvisionner votre compte</a></li>
+            <li><a href="individuals.html" target="_self">Clients particuliers</a></li>
+            <li><a href="institutions.html" target="_self">Clients institutionnels</a></li>
+            <li><a href="institutional-sales-contacts4343.html?p=uk" target="_self">Service commercial pour clients institutionnels</a></li>
+            <li><a href="../general/contact/ibot-container.html" target="_self">Parcourir nos FAQ</a></li>
+            <li><a href="reports-and-dates.html" target="_self">Informations fiscales</a></li> 
+            </ul>
+        </div>
+    </li><!-- LANGUAGE -->
+    
+    <li class="has-submenu"><a href="#" data-submenu="submenu-language">Langue</a>
+        <div class="submenu" id="submenu-language">
+            <p class="nav-link-back"><a href="javascript:void(0);" target="_self" data-submenu-close="submenu-language">Retour</a></p>
+            <p class="submenu-title">Langue</p>
+            <ul>
+            <li><a href="../home.html" target="_self">Anglais</a></li>
+            <li><a href="../home.html" target="_self">Fran&#231;ais</a></li>
+            <li><a href="../../de/home.html" target="_self">Deutsch</a></li>
+            <li><a href="../../es/home.html" target="_self">Espa&#241;ol</a></li>
+            <li><a href="../../it/home.html" target="_self">Italiano</a></li>
+            <li><a href="../../hu/home.html" target="_self">Magyar</a></li>
+            </ul>
+        </div>
+    </li><!-- REGION SELECTOR -->
+    
+        </ul>
+</div><!-- MOBILE NAV OVERLAY -->
+
+<div class="website-overlay d-lg-none"></div><!-- MOBILE NAV END ---------------------------------------------------------------------------------------------------- -->
+
+<!-- MODAL START | GDPR COOKIES -->
+<div class="modal modal-cookies fade" id="cookie-modal" tabindex="-1" role="dialog" aria-labelledby="modalCookieLabel">
+	<div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+		<div class="modal-content">
+			<div class="modal-header d-block">
+				<p class="fs-5 modal-title" id="modalCookieLabel">Centre de pr&#233;f&#233;rences de confidentialit&#233;</p>
+                <p class="pt-10 pr-30">Ce site Internet utilise des cookies pour vous offrir une meilleure exp&#233;rience de navigation et afin de collecter des informations d'usage. <br>En cliquant sur le bouton &#171;&nbsp;ACCEPTER LES COOKIES&nbsp;&#187;, vous acceptez notre Politique d'utilisation des cookies.</p>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-12 col-lg-4">
+                        <p class="fs-4 modal-title text black" id="modalCookieLabel">Personnaliser les param&#232;tres de confidentialit&#233;</p>
+						<ul role="tablist" class="nav flex-column" id="cookieTabs">
+                            <li role="presentation" class="nav-item" name="tab1"><a class="nav-link" href="#tab-01" aria-controls="tab-01" role="tab" data-bs-toggle="tab">Votre confidentialit&#233;</a></li>
+                            <li role="presentation" class="nav-item" name="tab2"><a id="temporary" class="nav-link" href="#tab-02" aria-controls="tab-02" role="tab" data-bs-toggle="tab">Cookies strictement n&#233;cessaires</a></li>
+                            <li role="presentation" class="nav-item" name="tab3"><a class="nav-link" href="#tab-03" aria-controls="tab-03" role="tab" data-bs-toggle="tab">Cookies de performance</a></li>
+                            <li role="presentation" class="nav-item" name="tab4"><a class="nav-link" href="#tab-04" aria-controls="tab-04" role="tab" data-bs-toggle="tab">Cookies fonctionnels</a></li>
+                            <li role="presentation" class="nav-item" name="tab5"><a class="nav-link" href="#tab-05" aria-controls="tab-05" role="tab" data-bs-toggle="tab">Cookies Marketing</a></li>
+                            <li role="presentation" class="nav-item" name="tab6"><a class="nav-link" href="#tab-06" aria-controls="tab-06" role="tab" data-bs-toggle="tab">Politique d'utilisation des cookies</a></li>
+						</ul>
+		            </div>
+					<div class="col-12 col-lg-8"><!-- TAB CONTENT START -->
+						
+						<div class="tab-content"><!-- TAB-01 -->
+							<div role="tabpanel" id="tab-01" class="tab-pane active">
+								<p><strong>Votre confidentialit&#233;</strong></p>
+								<p>Lorsque vous visitez un site Internet, des cookies et balises web peuvent &#234;tre utilis&#233;s pour stocker ou collecter des informations sur votre navigateur. Ces informations peuvent vous concerner vous, vos pr&#233;f&#233;rences ou votre appareil et sont g&#233;n&#233;ralement utilis&#233;es pour un fonctionnement optimal du site Internet. G&#233;n&#233;ralement, les informations ne vous identifient pas directement mais permettent de fournir une exp&#233;rience de navigation personnalis&#233;e.  Parce que nous respectons votre droit &#224; la vie priv&#233;e, vous pouvez choisir de permettre certains types de cookies et balises web. Veuillez cliquer sur les diff&#233;rents titres des cat&#233;gories pour en savoir plus et modifier vos param&#232;tres par d&#233;faut. Vous devez cependant savoir que bloquer certains types de cookies peut avoir un impact sur votre interaction avec notre site Internet et limiter les services que nous pouvons vous offrir.</p>
+							</div><!-- TAB 02 -->
+							
+							<div role="tabpanel" id="tab-02" class="tab-pane">
+								<p><strong>Cookies strictement n&#233;cessaires</strong></p>
+								<p>Les cookies strictement n&#233;cessaires sont indispensables au bon fonctionnement du site Internet et ne peuvent &#234;tre d&#233;sactiv&#233;s dans nos syst&#232;mes. G&#233;n&#233;ralement, ils sont utilis&#233;s uniquement en r&#233;ponse &#224; des actions de votre part qui correspondent &#224; une demande de services, telle que d&#233;terminer vos pr&#233;f&#233;rences de confidentialit&#233;, vous connecter ou remplir des formulaires. Bien qu'il vous soit possible de param&#233;trer votre navigateur pour qu'il bloque les cookies ou qu'il vous alerte de leur pr&#233;sence, certaines sections de votre site Internet ne fonctionneront pas. Ces cookies ne stockent pas d'informations personnelles identifiables.</p>
+								<br>
+								<p class="text-success text-small">Toujours activ&#233;s</p>
+							</div><!-- TAB 03 -->
+							<div role="tabpanel" id="tab-03" class="tab-pane">
+								<p><strong>Cookies et balises web de performance</strong></p>
+								<p>Les cookies et balises web de performance nous permettent de compter le nombre de visites et les sources du trafic afin que nous puissions mesurer et am&#233;liorer la performance de notre site. Ils nous aident &#224; savoir quelles sont les pages les plus ou les moins populaires et de voir la mani&#232;re dont les visiteurs naviguent sur le site. Toutes les informations collect&#233;es par ces cookies et balises web sont agr&#233;g&#233;es et anonymes. Si vous n'autorisez pas ces cookies et balises web, nous ne saurons pas quand vous avez visit&#233; notre site et nous ne pourrons pas suivre sa performance.</p>
+								<form>
+								<fieldset>
+								<p class="checkbox-label"><input type="checkbox" name="toggle-performance-cookies" data-on-color="success" data-off-color="default" data-on-text="Yes" data-off-text="No"><label id="act-perf">Actifs</label></p>
+								</fieldset>
+								</form>
+							</div><!-- TAB 04 -->
+							
+							<div role="tabpanel" id="tab-04" class="tab-pane">
+								<p><strong>Cookies fonctionnels</strong></p>
+								<p>Les cookies fonctionnels permettent au site Internet de fournir des fonctionnalit&#233;s et une personnalisation optimis&#233;es. Ils peuvent &#234;tre plac&#233;s par nous ou des fournisseurs tiers dont nous avons ajout&#233; les services sur nos pages. Si vous n'autorisez pas ces cookies, une partie ou la totalit&#233; de ces services peut ne pas fonctionner correctement.</p>
+								<form>
+								<fieldset>
+								<p class="checkbox-label"><input type="checkbox" name="toggle-functional-cookies" data-on-color="success" data-off-color="default" data-on-text="Yes" data-off-text="No"><label id="act-func">Actifs</label></p>
+								</fieldset>
+								</form>
+							</div><!-- TAB 05 -->
+							<div role="tabpanel" id="tab-05" class="tab-pane">
+								<p><strong>Cookies et balises web de marketing</strong></p>
+								<p>Les cookies et balises web de marketing peuvent &#234;tre plac&#233;s sur notre site par des partenaires publicitaires. Ils peuvent &#234;tre utilis&#233;s par ces soci&#233;t&#233;s afin d'&#233;tablir un profil de vos int&#233;r&#234;ts et afficher des publicit&#233;s pertinentes sur d'autres sites. Ils ne stockent pas d'informations personnelles directement et identifient uniquement votre navigateur et appareil internet. Si vous n'autorisez pas ces cookies et balises web, vos publicit&#233;s seront moins bien cibl&#233;es. Notre site Internet ne piste pas les utilisateurs lorsqu'ils passent par les sites Internet de parties tierces, ne leur fournit pas de publicit&#233; cibl&#233;e et par cons&#233;quent, ne r&#233;pond pas aux signaux "Do not track" (ne pas suivre).</p>
+								<form>
+								<fieldset>
+								<p class="checkbox-label"><input type="checkbox" name="toggle-targeting-cookies" data-on-color="success" data-off-color="default" data-on-text="Yes" data-off-text="No"><label id="act-target">Actifs</label></p>
+								</fieldset>
+								</form>
+							</div><!-- TAB COOKIE POLICY  -->
+                            
+							<div role="tabpanel" id="tab-06" class="tab-pane tab-policy">
+                                <h2>Politique d'utilisation des cookies d'Interactive Brokers Group</h2><br>
+                                <p><strong>Qu'est-ce qu'un cookie ou une balise web&nbsp;?</strong></p>
+                                    <p> Les cookies sont de petits fichiers qu'un site Internet transf&#232;re sur l'ordinateur d'un utilisateur afin de collecter des donn&#233;es. Les balises web sont des images pixels invisibles utilis&#233;es pour collecter des informations concernant l'usage d'un site Internet, la r&#233;ponse &#224; un e-mail et le pistage. G&#233;n&#233;ralement, les cookies peuvent contenir des informations concernant vos adresses de protocole internet (&#171;&nbsp;IP&nbsp;&#187;), la r&#233;gion ou zone g&#233;ographique o&#249; votre ordinateur ou appareil a acc&#233;d&#233; &#224; Internet, le type de navigateur, le syst&#232;me d'exploitation et d'autres informations concernant l'usage du site Internet, notamment l'historique des pages que vous visitez. </p>
+                                <p><strong>Comment utilisons-nous les cookies et balises web&nbsp;?</strong></p>
+                                    <p>Interactive Brokers Group collecte des informations &#224; partir des cookies et balises web qui sont stock&#233;es sur une base de donn&#233;es interne. Ces informations sont conserv&#233;es conform&#233;ment &#224; notre politique de confidentialit&#233;. Ce site Internet utilise les cookies et balises web suivants&nbsp;:</p>
+                                    <p><strong>Cookies strictement n&#233;cessaires</strong></p>
+                                    <p>Ces cookies sont indispensables au bon fonctionnement du site Internet et ne peuvent &#234;tre d&#233;sactiv&#233;s dans nos syst&#232;mes. G&#233;n&#233;ralement, ils sont utilis&#233;s uniquement en r&#233;ponse &#224; des actions de votre part qui correspondent &#224; une demande de services, telle que d&#233;terminer vos pr&#233;f&#233;rences de confidentialit&#233;, vous connecter ou remplir des formulaires. Vous pouvez param&#233;trer votre navigateur pour qu'il bloque les cookies ou qu'il vous alerte de leur pr&#233;sence mais certaines sections de votre site Internet ne fonctionneront plus correctement. Ces cookies ne stockent pas d'informations personnelles.</p>
+                                    <p><strong>Cookies et balises web de performance</strong></p>
+                                    <p>Ces cookies et balises web nous permettent de compter le nombre de visites et les sources du trafic afin que nous puissions mesurer et am&#233;liorer la performance de notre site. Ils nous aident &#224; savoir quelles sont les pages les plus ou les moins populaires et &#224; voir la mani&#232;re dont les visiteurs naviguent sur le site. Toutes les informations que ces cookies et balises web collectent sont agr&#233;g&#233;es et, par cons&#233;quent, anonymes. Si vous n'autorisez pas ces cookies et balises web, nous ne saurons pas quand vous avez visit&#233; notre site et nous ne pourrons pas enregistrer notre visite.</p>
+                                    <p>Le site Internet utilise Google Analytics, un service de donn&#233;es analytiques fourni par Google.Inc. (&#171;&nbsp;Google&nbsp;&#187;). Google Analytics utilise des cookies qui vous aident &#224; analyser la mani&#232;re dont est utilis&#233; ce site Internet. Les informations g&#233;n&#233;r&#233;es par ces cookies concernant l'utilisation de ce site Internet (y compris votre adresse IP) seront transmises et stock&#233;es par Google sur ses serveurs aux &#201;tats-Unis. Google utilisera ces informations &#224; des fins d'&#233;valuation de votre utilisation du site Internet, pour compiler des rapports sur l'activit&#233; du site pour les exploitants du site et fournir d'autres services li&#233;s &#224; l'activit&#233; et l'utilisation du site. Google peut &#233;galement transf&#233;rer ces informations &#224; des parties tierces lorsque cela est requis par la loi ou lorsque des parties tierces traitent ces informations pour le compte de Google. Google n'associera pas votre adresse IP &#224; d'autres donn&#233;es d&#233;tenues par eux. </p>
+                                    <p><strong>Cookies fonctionnels</strong></p>
+                                    <p>Ces cookies permettent au site Internet de fournir des fonctionnalit&#233;s et une personnalisation optimis&#233;es. Ils peuvent &#234;tre plac&#233;s par nous ou des fournisseurs tiers dont nous avons ajout&#233; les services sur nos pages. Si vous n'autorisez pas ces cookies, une partie ou la totalit&#233; de ces services peut ne pas fonctionner correctement.</p>
+                                    <p><strong>Cookies et balises web de marketing</strong></p>
+                                <p>Ces cookies et balises de ciblage peuvent &#234;tre plac&#233;s sur notre site par des partenaires publicitaires. Ils peuvent &#234;tre utilis&#233;s par ces soci&#233;t&#233;s afin d'&#233;tablir un profil de vos int&#233;r&#234;ts et afficher des publicit&#233;s pertinentes sur d'autres sites. Ils ne stockent pas d'informations personnelles directement et identifient uniquement votre navigateur et appareil internet. Si vous n'autorisez pas ces cookies et balises web, vos publicit&#233;s seront moins bien cibl&#233;es. Le site Internet ne piste pas les utilisateurs lorsqu'ils passent par les sites Internet de parties tierces, ne leur fournit pas de publicit&#233; cibl&#233;e et par cons&#233;quent, ne r&#233;pond pas aux signaux &#171;&nbsp;Ne pas suivre&nbsp;&#187;.</p>
+                                <p><strong>G&#233;rer vos pr&#233;f&#233;rences pour les cookies</strong></p>
+                                <p>Plusieurs possibilit&#233;s s'offrent &#224; vous quant &#224; la gestion des cookies sur votre ordinateur. Tous les navigateurs majeurs vous donnent la possibilit&#233; de bloquer ou supprimer les cookies de votre syst&#232;me. Cependant, si vous d&#233;cidez de d&#233;sactiver les cookies, vous ne serez peut-&#234;tre pas en mesure d'acc&#233;der &#224; certaines sections de notre site Internet ou ce dernier peut ne pas fonctionner correctement. Pour en savoir plus sur vos possibilit&#233;s de gestion des cookies et balises web et la mani&#232;re dont vous pouvez les d&#233;sactiver, consultez les fonctionnalit&#233;s de confidentialit&#233; de votre navigateur ou visitez <a href="http://www.allaboutcookies.org/" target="_new" class="linkarrowexternal">www.allaboutcookies.org</a>. </p>
+                                <p>Ce site Internet peut vous diriger vers le site Internet d'une partie tierce qui peut &#233;galement utiliser des cookies et balises web sur lesquels nous n'avons aucun contr&#244;le.  Nous vous recommandons de v&#233;rifier les politiques de confidentialit&#233; des parties tierces pour des informations concernant les cookies et balises web qui peuvent &#234;tre utilis&#233;s.</p>
+							</div>
+						</div><!-- TAB CONTENT END -->
+					</div>
+				</div>		
+		    </div>
+			<div class="modal-footer">
+				<div class="row">
+					<div class="col">
+						<p>
+                            <button type="button" class="btn btn-default" id="gdpr-customize-settings">Personnaliser les param&#232;tres</button> <button type="button" class="btn btn-default" id="gdpr-save-settings">Enregistrer les param&#232;tres personnalis&#233;s</button> <button type="button" class="btn btn-success" id="gdpr-reject-all"><i class="fas fa-times-circle"></i>Rejeter tous les cookies</button> <a href="javascript:allowAllCookies();" class="btn btn-success" id="btn_accept_cookies"><i class="fas fa-check-circle"></i> Accepter les cookies</a>
+                        </p>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+</div><!-- MODAL END | GDPR COOKIES -->
+
+<script type="text/javascript" src="../../scripts/common/js/2015/bootstrap-switch.min.js"></script>
+<script type="text/javascript">
+ var statePerformanceCookie = false;
+ var stateFunctionalCookie = false;
+ var stateTargetingCookie = false;
+         function setConsent(consent){
+            const consentMode = {
+                'functionality_storage': consent.necessary ? 'granted' : 'denied',
+                'security_storage': consent.necessary ? 'granted' : 'denied',
+                'ad_storage': consent.marketing ? 'granted' : 'denied',
+                'analytics_storage': consent.analytics ? 'granted' : 'denied',
+                'ad_personalization': consent.preferences ? 'granted' : 'denied',
+                'ad_user_data': consent.marketing ? 'granted' : 'denied'
+            };
+            if (typeof gtag == 'function'){
+                gtag('consent', 'update', consentMode);
+            }
+            localStorage.setItem('consentMode', JSON.stringify(consentMode));
+        }
+     
+ $(function() {
+        $('#btn_accept_cookies').on("click tap touch", function() {
+   $('#cookie-header').slideUp();
+  });
+  $('#cookie-modal-close').on("click tap touch", function() {
+   window.location.reload(true);
+  });
+  $('#btn_accept_cookies').on("click tap touch", function() {
+   if(typeof document.fp === "function")
+   {
+    var fip = fp();
+   } else {
+    var fip = '';
+   }
+   $.ajax({
+    url: '/response_handlers/cookies/index.php',
+    accept: 'application/json',
+    type: 'POST',
+    dataType: 'json',
+    data: {
+     gdpr_update_cookies: 'true',
+     t: 'ce1aad92b939420fc17005e5461e6f48',
+     perf: true,
+     func: true,
+     targ: true,
+     fp: fip
+    },
+    success: function(res)
+    {
+     if(res && !res['error'])
+     {
+      if(res['success'] && res['success'] == '1')
+      {
+       $('#cookie-modal').modal('hide');
+       $('#cookie-header').slideUp();
+      }
+     }
+     location.reload(true);
+    },
+    error: function(xhr, ajaxOpt, err){}
+   });
+     });
+  // Show Modal Body and hide 'Customize Settings' button
+  $('#gdpr-customize-settings').on("click tap touch", function() {
+     $('#gdpr-save-settings').show();
+     $('#gdpr-customize-settings').hide();
+     $('.modal-body').show();
+      // Initialize first tab in modal window to display
+      $('#cookieTabs li:first-child a').click();
+  }); 
+  $('#gdpr-save-settings').on("click tap touch", function() {
+   if(typeof document.fp === "function")
+   {
+    var fip = fp();
+   } else {
+    var fip = '';
+   }
+      setConsent({
+    necessary: true,
+    analytics: statePerformanceCookie,
+    preferences: stateFunctionalCookie,
+    marketing: stateTargetingCookie
+  });
+     $.ajax({
+    url: '/response_handlers/cookies/index.php',
+    accept: 'application/json',
+    type: 'POST',
+    dataType: 'json',
+    data: {
+     gdpr_update_cookies: 'true',
+     t: 'ce1aad92b939420fc17005e5461e6f48',
+     perf: statePerformanceCookie,
+     func: stateFunctionalCookie,
+     targ: stateTargetingCookie,
+     fp: fip
+    },
+    success: function(res)
+    {
+     if(res && !res['error'])
+     {
+      if(res['success'] && res['success'] == '1')
+      {
+       $('#cookie-modal').modal('hide');
+       $('#cookie-header').slideUp();
+      }
+     }
+     location.reload(true);
+    },
+    error: function(xhr, ajaxOpt, err){}
+   });
+     });
+  // BOOTSTRAP SWITCH initialize
+  $("[name='toggle-performance-cookies']").bootstrapSwitch();
+  $("[name='toggle-functional-cookies']").bootstrapSwitch();
+  $("[name='toggle-targeting-cookies']").bootstrapSwitch();
+ });
+  $('#gdpr-reject-all').on("click tap touch", function() {
+   if(typeof document.fp === "function")
+   {
+    var fip = fp();
+   } else {
+    var fip = '';
+   }
+      setConsent({
+    necessary: false,
+    analytics: false,
+    preferences: false,
+    marketing: false
+   });
+      $.ajax({
+    url: '/response_handlers/cookies/index.php',
+    accept: 'application/json',
+    type: 'POST',
+    dataType: 'json',
+    data: {
+     gdpr_update_cookies: 'true',
+     t: 'ce1aad92b939420fc17005e5461e6f48',
+     perf: false,
+     func: false,
+     targ: false,
+     fp: fip
+    },
+    success: function(res)
+    {
+     if(res && !res['error'])
+     {
+      if(res['success'] && res['success'] == '1')
+      {
+       $('#cookie-modal').modal('hide');
+       $('#cookie-header').slideUp();
+       location.reload(true);
+      } 
+     } else {
+       location.reload(true); 
+     }
+    },
+    error: function(xhr, ajaxOpt, err)
+    {
+     location.reload(true);
+    }
+   });
+  });
+ // respond to on/off switch events
+ $("input[name='toggle-performance-cookies']").on('switchChange.bootstrapSwitch', function (event, state) {
+  statePerformanceCookie = state;
+  if(state === true)
+  {
+   $('#act-perf').addClass('text-success');
+  } else {
+   $('#act-perf').removeClass('text-success');
+  }
+  $("input[name='toggle-performance-cookies']").attr( "checked", state );
+ });
+ $("input[name='toggle-functional-cookies']").on('switchChange.bootstrapSwitch', function (event, state) {
+  stateFunctionalCookie = state;
+  if(state === true)
+  {
+   $('#act-func').addClass('text-success');
+  } else {
+   $('#act-func').removeClass('text-success');
+  }
+  $("input[name='toggle-functional-cookies']").attr( "checked", state );
+ });
+ $("input[name='toggle-targeting-cookies']").on('switchChange.bootstrapSwitch', function (event, state) {
+  stateTargetingCookie = state;
+  if(state === true)
+  {
+   $('#act-target').addClass('text-success');
+  } else {
+   $('#act-target').removeClass('text-success');
+  }
+  $("input[name='toggle-targeting-cookies']").attr( "checked", state );
+ });
+ // initialize button state when tab is clicked
+ $("[name='tab3']").on("click tap touch", function() {
+	initPerformanceCookie();
+ });
+  $("[name='tab4']").on("click tap touch", function() {
+	initFunctionalCookie();
+ });
+  $("[name='tab5']").on("click tap touch", function() {
+	initTargetingCookie();
+ });
+ function initPerformanceCookie(){
+	 // read current state of bootstrapSwtich and change if it doesn't match the saved cookie boolean
+	if (statePerformanceCookie != $("[name='toggle-performance-cookies']").bootstrapSwitch('state')){
+		$("[name='toggle-performance-cookies']").bootstrapSwitch().click();
+		$("input[name='toggle-performance-cookies']").attr( "checked", statePerformanceCookie );
+	}
+ }
+ function initFunctionalCookie(){
+	 if (stateFunctionalCookie != $("[name='toggle-functional-cookies']").bootstrapSwitch('state')){
+		$("[name='toggle-functional-cookies']").bootstrapSwitch().click();
+   		$("input[name='toggle-functional-cookies']").attr( "checked", stateFunctionalCookie );
+	}
+ }
+ function initTargetingCookie(){
+	 if (stateTargetingCookie != $("[name='toggle-targeting-cookies']").bootstrapSwitch('state')){
+		$("[name='toggle-targeting-cookies']").bootstrapSwitch().click();
+   		$("input[name='toggle-targeting-cookies']").attr( "checked", stateTargetingCookie );
+	}
+ }
+ function allowAllCookies(){
+  // reset all Active on/off switches to on and update corresponding variables
+  if ( !statePerformanceCookie ) {
+   $("input[name='toggle-performance-cookies']").attr( "checked", true );
+   $("[name='toggle-performance-cookies']").bootstrapSwitch().click();
+   statePerformanceCookie = true;
+  }
+  if ( !stateFunctionalCookie ) {
+   $("input[name='toggle-functional-cookies']").attr( "checked", true );
+   $("[name='toggle-functional-cookies']").bootstrapSwitch().click();
+   stateFunctionalCookie = true;
+  }
+  if ( !stateTargetingCookie ) {
+   $("input[name='toggle-targeting-cookies']").attr( "checked", true );
+   $("[name='toggle-targeting-cookies']").bootstrapSwitch().click();
+   stateTargetingCookie = true;
+  }
+    setConsent({
+    necessary: true,
+    analytics: true,
+    preferences: true,
+    marketing: true
+  });
+    initPerformanceCookie();
+  initFunctionalCookie();
+  initTargetingCookie();
+ }
+  $(window).on('load', function() {
+  $('#cookie-modal').modal({
+    backdrop: 'static',
+    keyboard: false
+  });
+  $('#cookie-modal').modal('show');
+  $('body').removeClass('modal-open');
+  $('body').css('overflow', '');
+  $('body').css('padding-right', '');
+ });
+   // Hide Modal Body and hide 'Save Custom Settings' button
+  $('#gdpr-save-settings').hide();
+  $('.modal-body').hide();
+</script><div id="contents">
+    <section class="page-title" id="page-title">
+        <div class="container">
+            <div class="row">
+                <div class="col"><h1>Assistance pour les comptes de clients particuliers.</h1></div>
+            </div>
+        </div>
+    </section>
+    <!-- SUPPORT HEADER ---------------------------------------------------------------------------------------------------- -->
+<section class="support-header" id="support-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                <h2>Bienvenue sur l'assistance IBKR</h2>
+                <div class="search_box">
+                    <script type="text/javascript">
+                     searchbox_input_changed=false;
+                      $('#search-expand').on('shown.bs.dropdown', function(e) {
+                        $('#searchField').focus();
+                      });
+                    </script>
+                    <form action="https://www.interactivebrokers.ie/fr/search/index.php" method="get" class="search_form mb-20 mt-20" id="search_form_id">
+                        <div class="input-group"><input type="text" aria-label="Search Box" placeholder="Search for Help" name="query" maxlength="64" autocomplete="off" id="searchField" class="form-control s swap_value searchinput">
+                        <button type="submit" value="" id="searchsubmit" class="btn btn-default btn-outline"><i class="fa-solid fa-magnifying-glass"></i></button></div>
+                    </form>
+                                    </div>
+                <p>ou <a href="../general/contact/ibot-container.html" target="_self" class="cp-link link-arrow-right">Parcourir nos FAQ</a></p>
+            </div>
+        </div><!-- SYSTEM STATUS START -->
+                <div class="system-status">
+            <div class="system-title">
+                <h6>&#201;TAT DU SYST&#200;ME</h6>
+            </div>
+            <div class="system-message">
+                <div class="row">
+                    <div class="col-xs-2 col-sm-1 col-md-1 col-lg-1">
+                        <p class="message-light"><i class="fas fa-square-full text-danger"></i></p>
+                    </div>
+                    <div class="col-xs-10 col-sm-11 col-md-11 col-lg-11">
+                                                    <p class="message-title">Probl&#232;mes actuels</p>
+                            <div class="messages">
+                                                                <p class="message-details">To MEMX Traders:MEMX Options is once again available for trading.</p>
+                                <hr>
+                                                            </div>
+                            <p class="message-date">MIS &#192; JOUR&nbsp;: 2025/09/15 02:45:16</p>
+                            <p class="message-info"><a href="../software/systemStatus.html" target="_self" class="cp-link link-chevron-right">En savoir plus</a></p>
+                                            </div>
+                </div>
+            </div>
+        </div><!-- SYSTEM STATUS END -->
+    </div><!-- Welcome Center Link --------------------------------------------------------------------------------------------------------------- -->
+</section>
+<section id="welcome-ctr">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h3>Commencer :</h3>
+            </div>
+        </div>
+        <div class="row mt-10">
+            <div class="col-12 col-md-8 col-lg-7 dflex">
+                <div>
+                    <h5>Rendez-vous sur notre Centre de bienvenue pour trouver des informations sur le trading, la gestion, l'approvisionnement et la configuration de votre compte, ainsi que d'autres fonctionnalit&#233;s cl&#233;s.</h5>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 col-lg-3 offset-lg-2 dflex">
+                <div>
+                    <a href="../accounts/welcome-individuals.html" target="_self" class="btn btn-default">Visiter le centre de bienvenue</a>
+                </div>
+            </div>
+        </div>
+    </div><!-- DROP LINKS -->
+</section>
+<section class="droplinks dl-4">
+  <div class="container">
+    <div class="row">
+      <div class="col"> 
+          <a href="#findanswers" target="_self" class="page-scroll">
+            <svg role="img">
+              <title>Trouvez vos r&#233;ponses rapidement</title>
+                <g>
+	<polygon points="23.63,20.916 21.562,18.219 20.451,19.072 23.585,23.156 30.852,14.44 29.775,13.544 	"/>
+	<polygon points="12.386,15.568 7.766,21.111 6.199,19.068 5.405,19.676 7.733,22.712 13.154,16.209 	"/>
+	<path d="M31.841,11.554c-1.731-1.732-4.032-2.685-6.481-2.685s-4.751,0.954-6.483,2.685
+	c-3.455,3.455-3.56,8.998-0.335,12.592l-1.806,1.806l-1.178-1.179L9.901,30.43l3.062,3.063l5.657-5.656l-1.178-1.178l1.805-1.806
+	c1.683,1.514,3.83,2.35,6.11,2.35c2.449,0,4.75-0.953,6.482-2.686C35.414,20.943,35.414,15.127,31.841,11.554z M12.963,32.079
+	l-1.648-1.649l4.242-4.242l1.649,1.649L12.963,32.079z M31.131,23.812c-1.542,1.541-3.593,2.392-5.773,2.392
+	c-2.182,0-4.232-0.851-5.774-2.392c-3.185-3.186-3.185-8.367-0.001-11.55c1.543-1.543,3.594-2.392,5.775-2.392
+	c2.183,0,4.233,0.849,5.774,2.392C34.316,15.446,34.314,20.627,31.131,23.812z"/>
+</g> </svg> <span>Trouvez vos r&#233;ponses rapidement</span> </a> 
+          <a href="#videotutorials" target="_self" class="page-scroll">
+            <svg role="img">
+              <title>Tutoriels vid&#233;o</title>
+                        <g>
+	<path d="M5.75,8.167v24.249h28.5V8.167H5.75z M33.25,14.125h-3.915V9.167h3.915V14.125z M10.625,19.792H6.75v-4.667
+	h3.875V19.792z M10.625,20.792v4.667H6.75v-4.667H10.625z M11.625,9.167h16.71v22.249h-16.71V9.167z M29.335,20.792h3.915v4.667
+	h-3.915V20.792z M29.335,19.792v-4.667h3.915v4.667H29.335z M10.625,9.167v4.958H6.75V9.167H10.625z M6.75,26.459h3.875v4.957H6.75
+	V26.459z M29.335,31.416v-4.957h3.915v4.957H29.335z"/>
+	<path d="M17.459,15.88v8.849l7.391-4.426L17.459,15.88z M18.459,17.644l4.443,2.659l-4.443,2.661V17.644z"/>
+</g> </svg> <span>Tutoriels vid&#233;o</span> </a> 
+          <a href="#commonquestions" target="_self" class="page-scroll">
+            <svg role="img">
+              <title>Questions r&#233;currentes</title>
+                        <g>
+	<path class="st0" d="M28.8,11.6c-1.7-1.7-4-2.7-6.5-2.7s-4.8,1-6.5,2.7c-3.5,3.5-3.6,9-0.3,12.6L13.7,26l-1.2-1.2l-5.7,5.7l3.1,3.1
+		l5.7-5.7l-1.2-1.2l1.8-1.8c1.7,1.5,3.8,2.4,6.1,2.4c2.4,0,4.8-1,6.5-2.7C32.4,20.9,32.4,15.1,28.8,11.6z M10,32.1l-1.6-1.6l4.2-4.2
+		l1.6,1.6L10,32.1z M28.1,23.8c-1.5,1.5-3.6,2.4-5.8,2.4c-2.2,0-4.2-0.9-5.8-2.4c-3.2-3.2-3.2-8.4,0-11.6c1.5-1.5,3.6-2.4,5.8-2.4
+		c2.2,0,4.2,0.8,5.8,2.4C31.3,15.4,31.3,20.6,28.1,23.8z"/>
+</g>
+<path class="st0" d="M27.6,13.1l-0.7,0.7c1.1,1.1,1.8,2.6,1.8,4.3c0,3.4-2.8,6.2-6.2,6.2c-1.7,0-3.2-0.7-4.3-1.8l-0.7,0.7
+	c1.3,1.3,3.1,2.1,5.1,2.1c4,0,7.2-3.2,7.2-7.2C29.7,16.1,28.9,14.4,27.6,13.1z"/> </svg> <span>Questions r&#233;currentes</span> </a> 
+          <a href="#information" target="_self" class="page-scroll">
+            <svg role="img">
+              <title>Informations et outils</title>
+                        <g>
+	<path d="M32.587,13.844l-8.782-8.812l-0.17,0.002H8.313v30.09h24.27h0.002V13.985l-0.001-0.001L32.587,13.844z
+	 M24.104,6.758l6.763,6.774h-6.763V6.758z M31.584,34.124H9.313V6.034h13.791v7.707l-0.002,0.791h0.002h8.48V34.124z"/>
+	<rect x="13.493" y="19.146" width="14" height="1.5"/>
+	<rect x="13.493" y="23.48" width="14" height="1.5"/>
+	<rect x="13.493" y="27.814" width="14" height="1.5"/>
+</g> </svg> <span>Informations et outils</span> </a>         </div>
+    </div>
+  </div><!-- SUPPORT SERVICES ---------------------------------------------------------------------------------------------------- -->
+</section>
+<span class="id-drop"><span id="findanswers"></span></span>
+<section class="support-services" id="support-services">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h3>Trouvez vos r&#233;ponses rapidement</h3>
+                <br>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-2">
+                              <p><a href="../education/tradersu/documentation.html#user-guides" target="_self"><img src="../../images/web/support-UG.svg" alt="Guides utilisateur" border="0" loading="lazy" /><br>Guides utilisateur</a></p>
+                          </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-2">
+                <p><a href="https://www.ibkrguides.com/kb/" target="_self"><img src="../../images/web/support-KB.svg" alt="Base de connaissances" border="0" loading="lazy" /><br>Base de connaissances</a></p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-2">
+                              <p><a href="../education/tradersu/documentation.html#faqs" target="_self"><img src="../../images/web/support-FAQ.svg" alt="FAQ Plateforme" border="0" loading="lazy" /><br>FAQ Plateforme</a></p>
+                          </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-2">
+                              <p><a href="../education/tradersu/documentation.html#release-notes" target="_self"><img src="../../images/web/support-RN.svg" alt="Notes de publication" border="0" loading="lazy" /><br>Notes de publication</a></p>
+                          </div>
+		    <div class="col-12 bb-1"></div>
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                    <p><a href="javascript:void(0);" target="_self" class="cp-link" data-bs-toggle="modal" data-bs-target="#modalMessageCenter"><img src="../../images/web/support-icon-message-center.svg" alt="E-mail" border="0" loading="lazy" /><br><span>E-mail</span><br> Envoyer un e-mail</a></p>
+                </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                <p><a id="selfServicePhone" href="javascript:void(0);" target="_self"><img src="../../images/web/support-icon-phone-support.svg" alt="Support t&#233;l&#233;phonique" border="0" loading="lazy" /><br><span>Support t&#233;l&#233;phonique</span><br> Contacter le support</a></p>
+            </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                <p><a id="selfServiceChat" href="javascript:void(0);" target="_self"><img src="../../images/web/support-icon-chat-room.svg" alt="Espace Chat" border="0" loading="lazy" /><br><span>Espace Chat</span><br> Discuter avec un repr&#233;sentant en direct</a></p>          
+            </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                <p><a href="customer-service3787.html?p=fax" target="_self" class="cp-link"><img src="../../images/web/support-icon-send-documents.svg" alt="Envoyer les documents" border="0" loading="lazy" /><br><span>Envoyer des documents</span><br>Charger ou envoyer des documents</a></p>
+            </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                <p><a href="https://www.interactivebrokers.co.uk/sso/resolver?action=CS_WEB_TICKET" target="_self" class="cp-link"><img src="../../images/web/support-icon-report-problem.svg" alt="Signaler un probl&#232;me" border="0" loading="lazy" /><br><span>Signaler un probl&#232;me</span><br> Signaler un bug de logiciel</a></p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                                <p><a href="../../sso/Login9a70.html?forwardTo=21" target="_self" class="cp-link"><img src="../../images/web/support-ic-forum.svg" alt="Forum" border="0" loading="lazy" /><br><span>Forum</span><br> Recevez de l'aide de la part d'autres utilisateurs IBKR.</a></p>
+                            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                <p><a href="https://www.interactivebrokers.co.uk/sso/resolver?action=FEEDBACK" target="_self" class="cp-link"><img src="../../images/web/support-icon-features-poll.svg" alt="Features Poll" border="0" loading="lazy" /><br><span>Features Poll</span><br> Demander/Voter pour de nouvelles fonctionnalit&#233;s</a></p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                <p><a href="../trading/products-exchanges.html" target="_self"><img src="../../images/web/support-icon-contract-search.svg" alt="Rechercher un contrat" border="0" loading="lazy" /><br><span>Rechercher un contrat</span><br> Rechercher un contrat</a></p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                <p><a href="fund-my-account.html" target="_self"><img src="../../images/app/source-of-wealth.svg" alt="Approvisionnement" border="0" loading="lazy" /><br><span>R&#233;f&#233;rence d'approvisionnement</span><br>Approvisionner votre compte</a></p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                <p><a href="reports-and-dates.html" target="_self"><img src="../../images/app/agreements.svg" alt="Informations fiscales" border="0" loading="lazy" /><br><span>Informations fiscales</span><br>Informations fiscales et d&#233;claration</a></p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                <p><a href="../trading/delivery-exercise-actions.html" target="_self"><img src="../../images/app/icons8-skyscrapers.svg" alt="Livraison, exercice et op&#233;rations sur titre" border="0" loading="lazy" /><br><span>Livraison, exercice et op&#233;rations sur titre</span><br>&#192; propos de la livraison, l'exercice et les op&#233;rations sur titre</a></p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                <p><a href="../general/calendar/calendar.html" target="_self"><img src="../../images/app/icons8-baby_calendar.svg" alt="Calendrier du trader" border="0" loading="lazy" /><br><span>Calendrier des traders</span><br>Calendrier, &#233;v&#233;nements et jours f&#233;ri&#233;s</a></p>
+            </div>
+        </div>
+    </div><!-- SUPPORT VIDEOS ---------------------------------------------------------------------------------------------------- -->
+</section>
+<span class="id-drop"><span id="videotutorials"></span></span>
+<section class="support-videos" id="support-videos">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h3>Tutoriels vid&#233;os<span class=""><a href="https://ibkrcampus.com/academy" target="_self" class="cp-link">Toutes les vid&#233;os</a></span></h3><!-- CAROUSEL START -->
+                <br>
+                <div class="carousel slide" data-bs-ride="carousel" id="carouselVideos" data-interval="10000"><!-- CAROUSEL INNER START -->
+                    <div class="carousel-inner"><!-- VIDEO SET 1 -->
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                    <a href="javascript:void(0);" target="_self" data-bs-toggle="modal" data-bs-target="#modalVideo-01">
+                                        <img src="../../../img.youtube.com/vi/_WHqIMkasI4/mqdefault.jpg" alt="" border="0" loading="lazy" />
+                                        <span>FAQ - D&#233;p&#244;t de fonds par transfert bancaire chez IBKR</span>
+                                    </a>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                    <a href="javascript:void(0);" target="_self" data-bs-toggle="modal" data-bs-target="#modalVideo-02">
+                                        <img src="../../../img.youtube.com/vi/STVod9ZjLF4/mqdefault.jpg" alt="" border="0" loading="lazy" />
+                                        <span>Mise en page et configuration du graphique - TWS</span>
+                                    </a>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                    <a href="javascript:void(0);" target="_self" data-bs-toggle="modal" data-bs-target="#modalVideo-03">
+                                        <img src="../../../img.youtube.com/vi/orKHoXy8QLs/mqdefault.jpg" alt="" border="0" loading="lazy" />
+                                        <span>Vente &#224; d&#233;couvert et marge</span>
+                                    </a>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                    <a href="javascript:void(0);" target="_self" data-bs-toggle="modal" data-bs-target="#modalVideo-04">
+                                        <img src="../../../img.youtube.com/vi/5mEt3ENGrO8/mqdefault.jpg" alt="" border="0" loading="lazy" />
+                                        <span>Commencer avec IBKR Mobile pour iPhone</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div><!-- VIDEO SET 2 -->
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                    <a href="javascript:void(0);" target="_self" data-bs-toggle="modal" data-bs-target="#modalVideo-05">
+                                        <img src="../../../img.youtube.com/vi/YnBStylSCn0/mqdefault.jpg" alt="" border="0" loading="lazy" />
+                                        <span>Utiliser l'Explorateur de fondamentaux IBKR</span>
+                                    </a>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                    <a href="javascript:void(0);" target="_self" data-bs-toggle="modal" data-bs-target="#modalVideo-06">
+                                        <img src="../../../img.youtube.com/vi/g8zYBcepK6E/mqdefault.jpg" alt="" border="0" loading="lazy" />
+                                        <span>Fractions d'actions</span>
+                                    </a>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                    <a href="javascript:void(0);" target="_self" data-bs-toggle="modal" data-bs-target="#modalVideo-07">
+                                        <img src="../../../img.youtube.com/vi/2dVuseRXlus/mqdefault.jpg" alt="" border="0" loading="lazy" />
+                                        <span>Type d'ordre &#224; cours limit&#233; dans Mosaic</span>
+                                    </a>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                    <a href="javascript:void(0);" target="_self" data-bs-toggle="modal" data-bs-target="#modalVideo-08">
+                                        <img src="../../../img.youtube.com/vi/raVlU69dYQI/mqdefault.jpg" alt="" border="0" loading="lazy" />
+                                        <span>Fonctionnalit&#233;s de compte - Portail Client</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div><!-- VIDEO SET 3 -->
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                    <a href="javascript:void(0);" target="_self" data-bs-toggle="modal" data-bs-target="#modalVideo-09">
+                                        <img src="../../../img.youtube.com/vi/_WHqIMkasI4/mqdefault.jpg" alt="" border="0" loading="lazy" />
+                                        <span>Fonctionnalit&#233;s bancaires - Portail Client</span>
+                                    </a>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                    <a href="javascript:void(0);" target="_self" data-bs-toggle="modal" data-bs-target="#modalVideo-10">
+                                        <img src="../../../img.youtube.com/vi/AUqEqiQ-Va8/mqdefault.jpg" alt="" border="0" loading="lazy" />
+                                        <span>M&#233;canismes d'une transaction &#224; l'&#233;tranger</span>
+                                    </a>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                    <a href="javascript:void(0);" target="_self" data-bs-toggle="modal" data-bs-target="#modalVideo-11">
+                                        <img src="../../../img.youtube.com/vi/vOUBwOdAdnU/mqdefault.jpg" alt="" border="0" loading="lazy" />
+                                        <span>TWS pour d&#233;butants - Commencer</span>
+                                    </a>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                    <a href="javascript:void(0);" target="_self" data-bs-toggle="modal" data-bs-target="#modalVideo-12">
+                                        <img src="../../../img.youtube.com/vi/0KjezE5K-lk/mqdefault.jpg" alt="" border="0" loading="lazy" />
+                                        <span>IB Key - Authentification &#224; 2 facteurs &#8211; iPhone</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- CAROUSEL INNER END -->
+                    <ol class="carousel-indicators">
+                    <li data-bs-target="#carouselVideos" data-bs-slide-to="0" class="active"></li>
+                    <li data-bs-target="#carouselVideos" data-bs-slide-to="1"></li>
+                    <li data-bs-target="#carouselVideos" data-bs-slide-to="2"></li>
+                    </ol>
+                </div><!-- CAROUSEL END -->
+            </div>
+        </div>
+    </div><!-- SUPPORT COMMON QUESTIONS ---------------------------------------------------------------------------------------------------- -->
+</section>
+<span class="id-drop"><span id="commonquestions"></span></span>
+<section class="support-common-questions" id="support-common-questions">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h3>Questions r&#233;currentes</h3>
+                <br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <p><a href="../../lib/cstools/faq/index.html#/articles/630983028" target="_blank" rel="noreferrer noopener" class="cp-link">Qu'est-ce qu'un r&#232;glement &#224; T+1 ?</a></p>
+                                <p><a href="../../lib/cstools/faq/index.html#/content/30115238?articleId=69657179" target="_blank" rel="noreferrer noopener" class="cp-link">O&#249; puis-je trouver mes formulaires fiscaux&nbsp;?</a></p>
+                <p><a href="../../lib/cstools/faq/index.html#/content/27276866?link=27276866" target="_blank" rel="noreferrer noopener" class="cp-link">Comment transf&#233;rer des fonds &#224; IBKR&nbsp;?</a></p>
+                <p><a href="../../lib/cstools/faq/index.html#/content/27276960?link=27276960" target="_blank" rel="noreferrer noopener" class="cp-link">Comment changer mon mot de passe&nbsp;?</a></p>
+                <p><a href="../../lib/cstools/faq/index.html#/content/28229824?link=28229824" target="_blank" rel="noreferrer noopener" class="cp-link">Comment transf&#233;rer des fonds en dehors d'IBKR&nbsp;?</a></p>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <p><a href="../../lib/cstools/faq/index.html#/content/32659392?link=32659392" target="_blank" rel="noreferrer noopener" class="cp-link">Y a-t-il un d&#233;p&#244;t minimum requis&nbsp;?</a></p>
+                <p><a href="../../lib/cstools/faq/index.html#/content/37128282?link=37128282" target="_blank" rel="noreferrer noopener" class="cp-link">Comment ouvrir un compte de trading simul&#233;&nbsp;?</a></p>
+                <p><a href="../../lib/cstools/faq/index.html#/content/23298902?link=23298902" target="_blank" rel="noreferrer noopener" class="cp-link">Que signifie Pattern Day Trader (PDT)&nbsp;?</a></p>
+                <p><a href="../../lib/cstools/faq/index.html#/content/28239718?link=28239718" target="_blank" rel="noreferrer noopener" class="cp-link">Comment s'abonner aux donn&#233;es de march&#233;&nbsp;?</a></p>
+                <p><a href="../../lib/cstools/faq/index.html#/content/28224903?link=28224903" target="_blank" rel="noreferrer noopener" class="cp-link">Comment ouvrir un compte&nbsp;?</a></p>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <p><a href="../../lib/cstools/chat/indexf9e9.html?q=faq://pageId=51679208" target="_blank" rel="noreferrer noopener" class="cp-link">Y a-t-il des frais d'activit&#233;&nbsp;?</a></p>
+                <p><a href="../../lib/cstools/faq/index.html#/content/32647026?link=32647026" target="_blank" rel="noreferrer noopener" class="cp-link">Pourquoi dois-je payer des int&#233;r&#234;ts&nbsp;?</a></p>
+                <p><a href="../../lib/cstools/faq/index.html#/content/111454768?articleId=111454768" target="_blank" rel="noreferrer noopener" class="cp-link">Comment convertir des devises&nbsp;?</a></p>
+                <p><a href="../../lib/cstools/faq/index.html#/content/27280950?link=27280950" target="_blank" rel="noreferrer noopener" class="cp-link">Quelles sont mes informations de routage&nbsp;?</a></p>
+                <p><a href="../../lib/cstools/faq/index.html#/content/28214711?link=28214711" target="_blank" rel="noreferrer noopener" class="cp-link">Comment mettre &#224; jour mon adresse&nbsp;?</a></p>
+            </div>
+        </div>
+    </div><!-- SUPPORT INFORMATION AND TOOLS ---------------------------------------------------------------------------------------------------- -->
+</section>
+<span class="id-drop"><span id="information"></span></span>
+<section class="support-additional-tools" id="support-additional-tools">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h3>Informations et outils</h3>
+                <br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                                    <p><a href="javascript:void(0);" target="_self" data-bs-toggle="modal" data-bs-target="#modalLoginMessage" data-href="/sso/Login?action=CS_MARKET_DATA_ASSISTANT">Assistant donn&#233;es de march&#233;</a></p>
+                            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                                    <p><a href="javascript:void(0);" target="_self" data-bs-toggle="modal" data-bs-target="#modalLoginMessage" data-href="/sso/Login?action=CS_SLB">Titres disponibles pour vente &#224; d&#233;couvert (SLB)</a></p>
+                            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                                    <p><a href="javascript:void(0);" target="_self" data-bs-toggle="modal" data-bs-target="#modalLoginMessage" data-href="/sso/Login?action=CS_TRADE_CANCEL">Annulation de transaction</a></p>
+                            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                                    <p><a href="javascript:void(0);" target="_self" data-bs-toggle="modal" data-bs-target="#modalLoginMessage" data-href="/sso/Login?action=Support">Voir les transactions sur les plateformes FX d'IBKR</a></p>
+                            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                                    <p><a href="javascript:void(0);" target="_self" data-bs-toggle="modal" data-bs-target="#modalLoginMessage" data-href="/sso/Login?action=CS_CORP_ACTION">Gestionnaire d'op&#233;rations sur titres</a></p>
+                            </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                <p><a href="javascript:void(0);" target="_self" data-bs-toggle="modal" data-bs-target="#modalLoginMessage" data-href="/sso/Login?action=DOC">Chargement de documents s&#233;curis&#233;</a></p>
+            </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                                    <p><a href="javascript:void(0);" target="_self" data-bs-toggle="modal" data-bs-target="#modalLoginMessage" data-href="/sso/Login?action=CS_PRIIPS">Produits d'investissement packag&#233;s de d&#233;tail et fond&#233; sur l'assurance &#8211; Documents d'informations cl&#233;s (PRIIPS KID)</a></p>
+                            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                            </div>
+        </div>
+    </div>
+</section>
+<!-- MODAL START | MESSAGE CENTER ---------------------------------------------------------------------------------------------------- -->
+<div class="modal fade" id="modalMessageCenter" tabindex="-1" role="dialog" aria-labelledby="modalMessageCenterLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalMessageCenterLabel">E-mail</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&#215;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <p>Dans le cadre de la lutte contre le spam et pour des raisons de s&#233;curit&#233;, nous ne prenons plus en charge les messages entrants envoy&#233;s depuis une adresse commerciale. Les clients poss&#233;dant d&#233;j&#224; un compte ainsi que les clients en ayant fait la demande peuvent nous envoyer leurs requ&#234;tes par le biais du Centre de messagerie depuis la Gestion de compte, ou en cliquant sur le lien ci-dessous. Quelle que soit la m&#233;thode utilis&#233;e pour nous faire parvenir votre demande, la r&#233;ponse sera fournie depuis le Centre de messagerie. Cependant, vos <a href="http://ibkb.interactivebrokers.com/node/1251" target="_blank" class="linkexternal">pr&#233;f&#233;rences</a> de communication peuvent &#234;tre param&#233;tr&#233;es pour qu'une copie vous soit envoy&#233;e par e-mail.</p>
+                        <p>Si vous n'&#234;tes pas encore client d'IB, vous pouvez &#233;galement nous soumettre vos requ&#234;tes &#224; partir du lien ci-dessous. Vous recevrez votre r&#233;ponse &#224; l'adresse e-mail que vous avez communiqu&#233;e. </p>
+                        <p>Nous r&#233;pondons g&#233;n&#233;ralement dans les 24 heures aux requ&#234;tes soumises durant nos horaires de fonctionnement.</p>
+                        <br>
+                        <p><strong>REMARQUE IMPORTANTE</strong><br><span class="text-danger">Pour les probl&#232;mes de mots de passe, d'appareils de s&#233;curit&#233; et d'acc&#232;s au compte, veuillez contacter notre Service client&#232;le <u>uniquement</u> par t&#233;l&#233;phone. Une v&#233;rification de l'identit&#233; du titulaire du compte sera effectu&#233;e.<br><strong>Ne soumettez pas vos requ&#234;tes li&#233;es &#224; des probl&#232;mes de s&#233;curit&#233; par e-mail.</strong></span></p>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="../general/contact/newContact/contact.html" target="_self" class="btn btn-primary">Poursuivre</a>
+            </div>
+        </div>
+    </div>
+</div><!-- MODAL END | MESSAGE CENTER ---------------------------------------------------------------------------------------------------- --><!-- MODAL START | LOGIN MESSAGE ---------------------------------------------------------------------------------------------------- -->
+<div class="modal fade" id="modalLoginMessage" tabindex="-1" role="dialog" aria-labelledby="modalLoginMessageLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLoginMessageLabel">Se connecter</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&#215;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <h5 class="text-center">Veuillez vous connecter au Portail Client<br> pour acc&#233;der au service suivant.</h5>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="https://ndcdyn.interactivebrokers.com/sso/Login?RL=1" target="_self" class="btn btn-primary">Poursuivre pour se connecter</a>
+            </div>
+        </div>
+    </div>
+</div><!-- MODAL END | LOGIN MESSAGE ---------------------------------------------------------------------------------------------------- --><!-- MODAL START | VIDEO 01 ---------------------------------------------------------------------------------------------------- -->
+<div class="modal modal-video fade" id="modalVideo-01" tabindex="-1" role="dialog" aria-labelledby="modalLabelVideo-01" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLabelVideo-01">FAQ - D&#233;p&#244;t de fonds par transfert bancaire chez IBKR</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&#215;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="video-container">
+                    <iframe src="https://www.youtube-nocookie.com/embed/_WHqIMkasI4?rel=0&amp;controls=1&amp;showinfo=0" frameborder="0" allowfullscreen="" title="FAQ - D&#233;p&#244;t de fonds par transfert bancaire chez IBKR" class="embed-responsive-item" id=""></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- MODAL END | VIDEO 01 ---------------------------------------------------------------------------------------------------- --><!-- MODAL START | VIDEO 02 ---------------------------------------------------------------------------------------------------- -->
+<div class="modal modal-video fade" id="modalVideo-02" tabindex="-1" role="dialog" aria-labelledby="modalLabelVideo-02" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLabelVideo-02">Mise en page et configuration du graphique - TWS</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&#215;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="video-container">
+                    <iframe src="https://www.youtube-nocookie.com/embed/STVod9ZjLF4?rel=0&amp;controls=1&amp;showinfo=0" frameborder="0" allowfullscreen="" title="Mise en page et configuration du graphique - TWS" class="embed-responsive-item" id=""></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- MODAL END | VIDEO 02 ---------------------------------------------------------------------------------------------------- --><!-- MODAL START | VIDEO 03 ---------------------------------------------------------------------------------------------------- -->
+<div class="modal modal-video fade" id="modalVideo-03" tabindex="-1" role="dialog" aria-labelledby="modalLabelVideo-03" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLabelVideo-03">Vente &#224; d&#233;couvert et marge</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&#215;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="video-container">
+                    <iframe src="https://www.youtube-nocookie.com/embed/orKHoXy8QLs?rel=0&amp;controls=1&amp;showinfo=0" frameborder="0" allowfullscreen="" title="Vente &#224; d&#233;couvert et marge" class="embed-responsive-item" id=""></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- MODAL END | VIDEO 03 ---------------------------------------------------------------------------------------------------- --><!-- MODAL START | VIDEO 04 ---------------------------------------------------------------------------------------------------- -->
+<div class="modal modal-video fade" id="modalVideo-04" tabindex="-1" role="dialog" aria-labelledby="modalLabelVideo-04" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLabelVideo-04">Commencer avec IBKR Mobile pour iPhone</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&#215;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="video-container">
+                    <iframe src="https://www.youtube-nocookie.com/embed/5mEt3ENGrO8?rel=0&amp;controls=1&amp;showinfo=0" frameborder="0" allowfullscreen="" title="Commencer avec IBKR Mobile pour iPhone" class="embed-responsive-item" id=""></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- MODAL END | VIDEO 04 ---------------------------------------------------------------------------------------------------- --><!-- MODAL START | VIDEO 05 ---------------------------------------------------------------------------------------------------- -->
+<div class="modal modal-video fade" id="modalVideo-05" tabindex="-1" role="dialog" aria-labelledby="modalLabelVideo-05" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLabelVideo-05">Utiliser l'Explorateur de fondamentaux IBKR</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&#215;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="video-container">
+                    <iframe src="https://www.youtube-nocookie.com/embed/YnBStylSCn0?rel=0&amp;controls=1&amp;showinfo=0" frameborder="0" allowfullscreen="" title="Utiliser l'Explorateur de fondamentaux IBKR" class="embed-responsive-item" id=""></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- MODAL END | VIDEO 05 ---------------------------------------------------------------------------------------------------- --><!-- MODAL START | VIDEO 06 ---------------------------------------------------------------------------------------------------- -->
+<div class="modal modal-video fade" id="modalVideo-06" tabindex="-1" role="dialog" aria-labelledby="modalLabelVideo-06" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLabelVideo-06">Fractions d'actions</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&#215;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="video-container">
+                    <iframe src="https://www.youtube-nocookie.com/embed/g8zYBcepK6E?rel=0&amp;controls=1&amp;showinfo=0" frameborder="0" allowfullscreen="" title="Fractions d'actions" class="embed-responsive-item" id=""></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- MODAL END | VIDEO 06 ---------------------------------------------------------------------------------------------------- --><!-- MODAL START | VIDEO 07 ---------------------------------------------------------------------------------------------------- -->
+<div class="modal modal-video fade" id="modalVideo-07" tabindex="-1" role="dialog" aria-labelledby="modalLabelVideo-07" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLabelVideo-07">Type d'ordre &#224; cours limit&#233; dans Mosaic</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&#215;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="video-container">
+                    <iframe src="https://www.youtube-nocookie.com/embed/2dVuseRXlus?rel=0&amp;controls=1&amp;showinfo=0" frameborder="0" allowfullscreen="" title="Type d'ordre &#224; cours limit&#233; dans Mosaic" class="embed-responsive-item" id=""></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- MODAL END | VIDEO 07 ---------------------------------------------------------------------------------------------------- --><!-- MODAL START | VIDEO 08 ---------------------------------------------------------------------------------------------------- -->
+<div class="modal modal-video fade" id="modalVideo-08" tabindex="-1" role="dialog" aria-labelledby="modalLabelVideo-08" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLabelVideo-08">Fonctionnalit&#233;s de compte - Portail Client</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&#215;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="video-container">
+                    <iframe src="https://www.youtube-nocookie.com/embed/raVlU69dYQI?rel=0&amp;controls=1&amp;showinfo=0" frameborder="0" allowfullscreen="" title="Fonctionnalit&#233;s de compte - Portail Client" class="embed-responsive-item" id=""></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- MODAL END | VIDEO 08 ---------------------------------------------------------------------------------------------------- --><!-- MODAL START | VIDEO 09 ---------------------------------------------------------------------------------------------------- -->
+<div class="modal modal-video fade" id="modalVideo-09" tabindex="-1" role="dialog" aria-labelledby="modalLabelVideo-09" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLabelVideo-09">Fonctionnalit&#233;s bancaires - Portail Client</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&#215;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="video-container">
+                    <iframe src="https://www.youtube-nocookie.com/embed/_WHqIMkasI4?rel=0&amp;controls=1&amp;showinfo=0" frameborder="0" allowfullscreen="" title="Fonctionnalit&#233;s bancaires - Portail Client" class="embed-responsive-item" id=""></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- MODAL END | VIDEO 09 ---------------------------------------------------------------------------------------------------- --><!-- MODAL START | VIDEO 10 ---------------------------------------------------------------------------------------------------- -->
+<div class="modal modal-video fade" id="modalVideo-10" tabindex="-1" role="dialog" aria-labelledby="modalLabelVideo-10" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLabelVideo-10">M&#233;canismes d'une transaction &#224; l'&#233;tranger</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&#215;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="video-container">
+                    <iframe src="https://www.youtube-nocookie.com/embed/AUqEqiQ-Va8?rel=0&amp;controls=1&amp;showinfo=0" frameborder="0" allowfullscreen="" title="M&#233;canismes d'une transaction &#224; l'&#233;tranger" class="embed-responsive-item" id=""></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- MODAL END | VIDEO 10 ---------------------------------------------------------------------------------------------------- --><!-- MODAL START | VIDEO 11 ---------------------------------------------------------------------------------------------------- -->
+<div class="modal modal-video fade" id="modalVideo-11" tabindex="-1" role="dialog" aria-labelledby="modalLabelVideo-11" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLabelVideo-11">TWS pour d&#233;butants - Commencer</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&#215;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="video-container">
+                    <iframe src="https://www.youtube-nocookie.com/embed/vOUBwOdAdnU?rel=0&amp;controls=1&amp;showinfo=0" frameborder="0" allowfullscreen="" title="TWS pour d&#233;butants - Commencer" class="embed-responsive-item" id=""></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- MODAL END | VIDEO 11 ---------------------------------------------------------------------------------------------------- --><!-- MODAL START | VIDEO 12 ---------------------------------------------------------------------------------------------------- -->
+<div class="modal modal-video fade" id="modalVideo-12" tabindex="-1" role="dialog" aria-labelledby="modalLabelVideo-12" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLabelVideo-12">IB Key - Authentification &#224; 2 facteurs &#8211; iPhone</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&#215;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="video-container">
+                    <iframe src="https://www.youtube-nocookie.com/embed/0KjezE5K-lk?rel=0&amp;controls=1&amp;showinfo=0" frameborder="0" allowfullscreen="" title="IB Key - Authentification &#224; 2 facteurs &#8211; iPhone" class="embed-responsive-item" id=""></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- MODAL END | VIDEO 12 ---------------------------------------------------------------------------------------------------- --><!-- MODAL START | IBOT PHONE SELF SERVICE ---------------------------------------------------------------------------------------------------- -->
+<div class="modal fade" id="modalPhoneSelfService" tabindex="-1" role="dialog" aria-labelledby="modalSelfService">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalMessageCenterLabel">Support t&#233;l&#233;phonique</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&#215;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div id="contact_support_phone" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 contact-iframe">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- MODAL END | IBOT PHONE SELF SERVICE ---------------------------------------------------------------------------------------------------- --><!-- MODAL START | IBOT CHAT SELF SERVICE ---------------------------------------------------------------------------------------------------- -->
+<div class="modal fade" id="modalChatSelfService" tabindex="-1" role="dialog" aria-labelledby="modalSelfService">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalMessageCenterLabel">Espace Chat</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&#215;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div id="contact_support_chat" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 contact-iframe">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- MODAL END | IBOT CHAT SELF SERVICE ---------------------------------------------------------------------------------------------------- -->
+<script type="text/javascript">
+$(document).ready(function(){
+    // Should self service modals be shown?
+        if (window.bannerAbFeature) {
+        bannerAbFeature.default("chat").then(shouldLoad => { 
+            window.__shouldLoadChat = shouldLoad;
+        });
+        bannerAbFeature.default("phone").then(shouldLoad => { 
+            window.__shouldLoadPhone = shouldLoad;
+        });
+    }
+        window.addEventListener("message", function(event) {
+        if (event.origin != window.location.origin) {
+            return;
+        }
+        var selfServiceApp = event.source.location.href.match(/(\?|\&)([^=]+)\=([^&]+)/g)[1].split('=')[1];
+        var eventData = JSON.parse(event.data);
+        if (eventData.action === 'show') {
+            // Show modal if user is logged in
+            if (selfServiceApp === 'phone') {
+                $('#modalPhoneSelfService').modal('show');
+            }
+            else if (selfServiceApp === 'chat') {
+                $('#modalChatSelfService').modal('show');
+            }
+            else {
+                console.error('Ready should only be for app chat & phone');
+            }
+        }
+    }, false);
+    // Self Service Modals
+    $('#selfServicePhone').click(function() {
+        // Prevent extra loading of iframe if already clicked
+        if (window.__phoneLoaded) {
+            $('#modalPhoneSelfService').modal('show');
+        }
+        else if (window.__shouldLoadPhone) {
+            window.__phoneLoaded = true;
+            var iframe = document.createElement("iframe");
+            iframe.id = "phoneIframe";
+            iframe.frameBorder = 0;
+            iframe.width = "100%";
+            iframe.height = "100%";
+            iframe.setAttribute("src", "/lib/cstools/faq/#/ibot?isEmbedded=true&app=phone&nextUrl=" + encodeURIComponent('customer-servicef763.html?p=contact'));
+            document.getElementById("contact_support_phone").appendChild(iframe);
+            // Have to assign sandbox in this method or iframe content will disappear.
+            document.getElementById("phoneIframe").setAttribute("sandbox", "allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation allow-top-navigation-by-user-activation");
+            $('#modalPhoneSelfService').modal('show');
+        } else {
+            window.open('customer-servicef763.html?p=contact', '_blank');
+        }
+    });
+    $('#selfServiceChat').click(function() {
+        // Prevent extra loading of iframe if already clicked
+        if (window.__chatLoaded) {
+            $('#modalChatSelfService').modal('show');
+        }
+        else if (window.__shouldLoadChat) {
+            window.__chatLoaded = true;
+            var iframe = document.createElement("iframe");
+            iframe.id = "chatIframe";
+            iframe.frameBorder = 0;
+            iframe.width = "100%";
+            iframe.height = "100%";
+                                var chatLink = 'customer-service310d.html?p=chat';
+                        iframe.src = "/lib/cstools/faq/#/ibot?isEmbedded=true&app=chat&nextUrl=" + encodeURIComponent(chatLink);
+            document.getElementById("contact_support_chat").appendChild(iframe);
+            // Have to assign sandbox in this method or iframe content will disappear.
+            document.getElementById("chatIframe").setAttribute("sandbox", "allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation allow-top-navigation-by-user-activation");
+            $('#modalChatSelfService').modal('show');
+        } else {
+                                window.open('customer-service310d.html?p=chat', '_blank');
+                    }
+    });
+    // STOP PLAYING YOUTUBE VIDEO WHEN MODAL IS CLOSED
+    $('.modal-video').on('hide.bs.modal', function(e) {   
+        var $if = $(e.delegateTarget).find('iframe');
+        var src = $if.attr("src");
+        $if.attr("src", '../../empty.html');
+        $if.attr("src", src);
+    });
+    // SWITCH LINKS IN MODAL WINDOW FOR PORTAL LOGIN
+    $("#modalLoginMessage").on("show.bs.modal", function(event) {
+        var button = $(event.relatedTarget);
+        var link = button.data("href");
+        var modal = $(this);
+        modal.find(".modal-footer a").attr("href", link);
+    });
+});
+</script>
+<script type="text/javascript">
+    function closeModals() {
+        $('#modalChatSelfService').modal('hide');
+        $('#modalPhoneSelfService').modal('hide');
+    }
+</script>
+<script type="text/javascript">
+    function closeModals() {
+        $('#modalChatSelfService').modal('hide');
+        $('#modalPhoneSelfService').modal('hide');
+    }
+</script><!-- Dependencies needed for self service phone & chat -->
+<script type="text/javascript" src="../../lib/common/common.web.js"></script>
+<script type="text/javascript" src="../../lib/cstools/faq/bannerAbFeature.js"></script>
+</div>
+
+<!-- FOOTER START ---------------------------------------------------------------------------------------------------- -->
+<footer class="footer noprint" id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p>Interactive Brokers &#174;, IB<sup>SM</sup>, InteractiveBrokers.com &#174;, Interactive Analytics &#174;, IB Options Analytics<sup>SM</sup>, IB SmartRouting<sup>SM</sup>, PortfolioAnalyst &#174;, IB Trader Workstation<sup>SM</sup> et One World, One Account<sup>SM</sup> sont des marques de service et/ou des marques d&#233;pos&#233;es Interactive Brokers LLC. Pour toute r&#233;clamation ou demande d'informations chiffr&#233;es, la documentation connexe est disponible sur demande.  Tous les symboles pris en exemple ne le sont qu'&#224; titre illustratif et ne constituent en aucun cas des recommandations de trading.</p>
+                <p>Le trading &#233;lectronique d'actions, d'options, de contrats &#224; terme, de devises, de participations &#233;trang&#232;res, et de produits &#224; revenu fixe pr&#233;sente un risque &#233;lev&#233; de perte.</p>
+                <p>Le trading d'options comporte des risques et ne convient pas &#224; tous les investisseurs. Pour plus d&#8217;informations, veuillez consulter <a href="https://www.theocc.com/about/publications/character-risks.jsp" rel="noreferrer noopener" target="_blank">Characteristics and Risks of Standardized Options</a> (Caract&#233;ristiques et risques des options standardis&#233;es), aussi appel&#233; &#171;&nbsp;options disclosure document&nbsp;&#187; (ODD). Sinon, veuillez contacter le <a href="customer-servicef763.html?p=contact" target="_self">Service client&#232;le d'IB</a> pour recevoir un exemplaire de l'ODD. Avant de commencer &#224; trader, veuillez prendre connaissance de notre d&#233;claration sur les risques encourus &#224; la page <a href="../general/homepage-disclosures.html" target="_self">Avertissements et Informations importantes</a>. Le trading sur marge est r&#233;serv&#233; aux traders exp&#233;riment&#233;s qui peuvent tol&#233;rer des risques &#233;lev&#233;s. Vous vous exposez &#224; des pertes potentielles sup&#233;rieures &#224; votre investissement initial. Pour plus d'informations sur les taux des pr&#234;ts sur marge, consultez <a href="../trading/margin-rates.html" target="_self">Taux de pr&#234;t sur marge</a>. Le trading de contrats &#224; terme sur titres implique des risques &#233;lev&#233;s et ne convient pas &#224; tous les investisseurs. Vous vous exposez &#224; des pertes sup&#233;rieures &#224; votre investissement initial. Avant de trader des contrats &#224; terme, veuillez lire la <a href="../general/homepage-disclosures.html" target="_self">d&#233;claration des risques des contrats &#224; terme de titres</a>. Les produits structur&#233;s et &#224; revenu fixe sont des produits complexes plus risqu&#233;s qui ne conviennent pas &#224; tous les investisseurs. Avant de commencer &#224; trader, veuillez prendre connaissance <a href="../general/homepage-disclosures.html" target="_self">de nos avertissements sur les risques encourus</a>.</p>
+                <p>Pour plus d'informations sur IBKR ATS, veuillez <a href="https://www.sec.gov/divisions/marketreg/form-ats-n-filings.htm#ats-n" rel="noreferrer noopener" target="_blank">consulter le site de la SEC</a>.</p>
+<p>36 pays (comprend les pays et les territoires).</p>
+            </div>
+        </div>
+        <div class="footer-site-links" id="footerSiteLinks">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>Compte</p>
+                    <ul>
+                    <li><a href="https://www.interactivebrokers.co.uk/sso/Login?RL=1" target="_self">Se connecter</a></li>
+                    <li><a href="https://www.interactivebrokers.co.uk/Universal/Application" target="_self">Ouvrir un compte</a></li>
+                    <li><a href="https://www.interactivebrokers.co.uk/sso/Login?c=t" target="_self">Terminer une demande en cours</a></li>
+                    <li><a href="../accounts/account-guide.html" target="_self">Types de comptes</a></li>
+                    <li><a href="https://www.interactivebrokers.co.uk/Universal/Application?ft=T&amp;locale=fr_FR" target="_self">Essai gratuit</a></li>
+                    </ul>
+                    <p>Logiciel &amp; T&#233;l&#233;chargements</p>
+                    <ul>
+                    <li><a href="../trading/tws.html#tws-software" target="_self">Trader Workstation</a></li>
+                    <li><a href="../trading/ibkr-desktop.html" target="_self">IBKR Desktop</a></li>
+                    <li><a href="../trading/tws-mobile.html#trytoday" target="_self">IBKR Mobile</a></li>
+                    <li><a href="../trading/ib-api.html#api-software" target="_self">API</a></li>
+                    </ul>    
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>Assistance</p>
+                    <ul>
+					<li><a href="fund-my-account.html" target="_self">Approvisionner votre compte</a></li>
+                    <li><a href="individuals.html" target="_self">Clients particuliers</a></li>
+                    <li><a href="institutions.html" target="_self">Clients institutionnels</a></li>
+                    <li><a href="institutional-sales-contacts4343.html?p=uk" target="_self">Service commercial pour clients institutionnels</a></li>
+					<li><a href="../general/contact/ibot-container.html" target="_self">Parcourir nos FAQ</a></li>
+					<li><a href="../software/systemStatus.html" target="_self">&#201;tat du syst&#232;me</a></li>
+                    </ul>
+                    <p>Assistance distributeur</p>
+                    <ul>
+                    <li><a href="../../en/general/about/supplier-information.html" target="_self">Informations fournisseur</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>&#192; propos d'IBKR</p>
+                    <ul>
+                    <li><a href="../general/awards.html" target="_self">R&#233;compenses</a></li>
+                    <li><a href="../general/about/careers-splash.html" target="_self">IBKR recrute</a></li>
+                    <li><a href="../general/about/about.html" target="_self">Histoire du groupe</a></li>
+                    <li><a href="https://investors.interactivebrokers.com/ir/main.php" target="_blank" rel="noreferrer noopener">Relations investisseurs</a></li>
+                    <li><a href="../about/news-at-ibkr.html" target="_self">Actualit&#233; IBKR</a></li>
+                    <li><a href="../general/about/press-and-media.html" target="_self">Presse et m&#233;dias</a></li>
+                    <li><a href="../accounts/legalDocuments/brokerPerformanceReports.html" target="_self">Rapports r&#233;glementaires</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>Suivez-nous sur les r&#233;seaux sociaux</p>
+                    <ul>
+                        <li><a href="https://www.facebook.com/InteractiveBrokersEurope/" target="_blank" rel="noreferrer noopener"><i class="fab fa-facebook"></i>  Facebook</a></li>
+                        <li><a href="https://www.instagram.com/interactivebrokers_europe" target="_blank" rel="noreferrer noopener"><i class="fab fa-instagram"></i>  Instagram</a></li>
+                        <li><a href="https://twitter.com/IBKR_Europe" target="_blank" rel="noreferrer noopener"><i class="fab fa-x-twitter"></i>  Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-disclosure-links" id="footerDisclosureLinks">
+            <div class="row">
+                <div class="col">
+                    <ul>
+                    <li><a href="../accounts/legalDocuments/anti-fraud-notice.html" target="_self">Politique anti-fraude</a></li>
+                    <li><a href="../../errorMessages/404.html" target="_self">Note concernant le programme d'identification des clients</a></li>
+                    <li><a href="../general/warnings-on-frauds-and-scams.html" target="_self">Avertissement concernant les fraudes et arnaques</a></li>
+                    <li><a href="../accounts/forms-and-disclosures-client-agreements.html" target="_self">Formulaires et d&#233;clarations</a></li>
+                    <li><a href="../accounts/legalDocuments/privacy.html" target="_self">Confidentialit&#233;</a></li>
+                    <li><a href="../sitemap/index.html" target="_self">Plan du site</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-entities" id="footerEntities">
+            <div class="row">
+                <div class="col">
+                    <div class="footer-entity"><!-- IBKR IE -->
+                        <p class="entity-name"><a href="../../en/home.html" target="_self">Interactive Brokers Ireland Limited</a></p>
+                        <p>est r&#233;gul&#233;e par la <a href="https://www.centralbank.ie/" target="_blank" rel="noreferrer noopener">Banque centrale d'Irlande</a> (CBI, num&#233;ro de r&#233;f&#233;rence C423427), enregistr&#233;e aupr&#232;s de la Companies Registration Office (CRO, num&#233;ro d'enregistrement 657406), et est membre du Irish Investor Compensation Scheme (ICS).<br> <strong>Si&#232;ge :</strong> North Dock One, 91/92 North Wall Quay, Dublin 1 D01 H7V7, Ireland.<br> <strong>Site&nbsp;:</strong> <a href="../../en/home.html" target="_self">www.interactivebrokers.ie</a></p>
+                        <p class="footer-entities-link"><a href="#collapseEntities" target="_self" class="collapsed" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseEntities">Informations concernant les autres filiales d'Interactive Brokers</a></p>
+                    </div>
+                    <div class="footer-entities-list collapse" id="collapseEntities">
+                        <div class="row">
+                            <div class="col-12 col-md-6"><!-- IBKR LLC -->
+                                
+                                <p class="entity-name"><a href="https://www.interactivebrokers.com/en/home.php?nored=t" target="_self">Interactive Brokers LLC</a></p>
+                                <p>est membre de <a  rel="noreferrer noopener" target="_blank"  href="https://www.nyse.com/">NYSE</a> - <a href="https://www.finra.org/" rel="noreferrer noopener"  target="_blank">FINRA</a> - <a href="https://www.sipc.org/" rel=" noreferrer noopener" target="_blank">SIPC</a> et est r&#233;gul&#233;e par la US Securities and Exchange Commission et la Commodity Futures Trading Commission.<br> <strong>Si&#232;ge&nbsp;:</strong> One Pickwick Plaza, Greenwich, CT 06830 USA<br> <strong>Site&nbsp;:</strong> <a href="https://www.interactivebrokers.com/en/home.php?nored=t" target="_self">www.interactivebrokers.com</a></p><!-- IBKR CA -->
+                                <p class="entity-name"><a href="https://www.interactivebrokers.ca/en/home.php?nored=t" target="_self">Interactive Brokers Canada Inc.</a></p>
+                                <p>est membre de l' <a href="https://www.ocri.ca/" target="_blank" rel="noreferrer noopener">Organisme canadien de r&#233;glementation des investissements (OCRI)</a>  et du <a href="https://www.cipf.ca/" target="_blank" rel="noreferrer noopener">Fonds canadien de protection des &#233;pargnants (FCPE).</a><br> <strong>Si&#232;ge&nbsp;:</strong> 1800 McGill College Avenue, Suite 2106, Montr&#233;al, Qu&#233;bec, H3A 3J6, Canada.<br> <strong>Site&nbsp;:</strong> <a href="https://www.interactivebrokers.ca/en/home.php?nored=t" target="_self">www.interactivebrokers.ca</a></p><!-- IBKR UK -->
+                                
+                                <p class="entity-name"><a href="https://www.interactivebrokers.co.uk/en/home.php?nored=t" target="_self">Interactive Brokers (U.K.) Limited</a></p>
+                                <p>est autoris&#233;e et r&#233;gul&#233;e par la <a href="https://www.fca.org.uk/" target="_blank" rel="noreferrer noopener">Financial Conduct Authority</a>. Num&#233;ro d'enregistrement FCA 208159. Constitut&#233;e en Angleterre et au Pays de Galles, immatricul&#233;e sous le num&#233;ro 03958476. <a href="https://www.fca.org.uk/firms/financial-services-register" target="_blank" rel="noreferrer noopener">[https://www.fca.org.uk/firms/financial-services-register]</a><br> <strong>Si&#232;ge :</strong> 20 Fenchurch Street, Floor 12, London EC3M 3BY.<br> <strong>Site&nbsp;:</strong> <a href="https://www.interactivebrokers.co.uk/en/home.php?nored=t" target="_self">www.interactivebrokers.co.uk</a></p><!-- IBKR HU -->
+                                <p class="entity-name"><a href="https://www.interactivebrokers.hu/en/home.php?nored=t" target="_self">Interactive Brokers Central Europe Zrt.</a></p>
+                                <p>est autoris&#233;e et r&#233;gul&#233;e par la <a href="https://www.mnb.hu/" target="_blank" rel="noreferrer noopener">Central Bank of Hungary (Magyar Nemzeti Bank)</a> sous la licence n&#176;&nbsp; H-EN-III-623/2020. Num&#233;ro d'immatriculation 01-10-141029. Tribunal d'inscription&nbsp;: Company Registry of the Metropolitan General Court.<br> <strong>Si&#232;ge&nbsp;:</strong> 1075 Budapest, Mad&#225;ch Imre &#250;t 13-14., Hungary.<br> <strong>Site&nbsp;:</strong> <a href="https://www.interactivebrokers.hu/en/home.php?nored=t" target="_self">www.interactivebrokers.hu</a></p><!-- IBKR AUS -->
+                                
+                                <p class="entity-name"><a href="https://www.interactivebrokers.com.au/en/home.php?nored=t" target="_self">Interactive Brokers Australia Pty. Ltd.</a></p>
+                                <p>ABN 98 166 929 568 est r&#233;gul&#233;e par l'<a href="https://asic.gov.au/" target="_blank" rel="noreferrer noopener">Australian Securities and Investments Commission</a> (AFSL&nbsp;: 453554) et est un participant du <a href="https://www.asx.com.au/" target="_blank" rel="noreferrer noopener">ASX</a>, <a href="https://www.asx.com.au/" target="_blank" rel="noreferrer noopener">ASX 24</a> et <a href="https://www.cboe.com.au/" target="_blank" rel="noreferrer noopener">Cboe Australia</a>.<br> <strong>Si&#232;ge :</strong> Level 11, 175 Pitt Street, Sydney, New South Wales 2000, Australia.<br> <strong>Site&nbsp;:</strong> <a href="https://www.interactivebrokers.com.au/en/home.php?nored=t" target="_self">www.interactivebrokers.com.au </a></p>
+                            </div>
+                            <div class="col-12 col-md-6"><!-- IBKR HK -->
+                                <p class="entity-name"><a href="https://www.interactivebrokers.com.hk/en/home.php?nored=t" target="_self">Interactive Brokers Hong Kong Limited</a></p>
+                                <p>est r&#233;gul&#233;e par la Hong Kong Securities and Futures Commission, et est membre du <a href="https://www.hkex.com.hk/" target="_blank" rel="noreferrer noopener">SEHK</a> et <a href="https://www.hkex.com.hk/" target="_blank" rel="noreferrer noopener">HKFE</a>.<br> <strong>Si&#232;ge&nbsp;:</strong> Suite 1512, Two Pacific Place, 88 Queensway, Admiralty, Hong Kong SAR.<br> <strong>Site&nbsp;:</strong> <a href="https://www.interactivebrokers.com.hk/en/home.php?nored=t" target="_self">www.interactivebrokers.com.hk</a></p><!-- IBKR IN -->
+                                
+                                <p class="entity-name"><a href="https://www.interactivebrokers.co.in/en/home.php?nored=t" target="_self">Interactive Brokers India Pvt. Ltd.</a></p>
+                                <p>est membre du <a href="https://www.nseindia.com/" target="_blank" rel="noreferrer noopener">NSE</a>, <a href="https://www.bseindia.com/" target="_blank" rel="noreferrer noopener">BSE</a>, et un participant d&#233;positaire du <a href="https://nsdl.co.in/" target="_blank" rel="noreferrer noopener">NSDL</a>. N&#176; d'enregistrement <a href="https://www.sebi.gov.in/" target="_blank" rel="noreferrer noopener">SEBI</a> INZ000217730; NSDL: IN-DP-602-2021. CIN-U67120MH2007FTC170004.<br> <strong>Si&#232;ge :</strong> 502/A, Times Square, Andheri Kurla Road, Andheri East, Mumbai 400059, India.<br> <strong>T&#233;l&#233;phone :</strong> +91-22-61289888 <span class="pipe">|</span> <strong>Fax :</strong> +91-22-61289898.<br> <strong>Site :</strong> <a href="https://www.interactivebrokers.co.in/en/home.php?nored=t" target="_self">www.interactivebrokers.co.in</a></p><!-- IBKR JP -->
+                                <p class="entity-name"><a href="https://www.interactivebrokers.co.jp/en/home.php?nored=t" target="_self">Interactive Brokers Securities Japan Inc.</a></p>
+                                <p>est r&#233;gul&#233;e par le Kanto Local Finance Bureau (N&#176; d'enregistrement 187) et est membre de la <a href="https://www.jsda.or.jp/" target="_blank" rel="noreferrer noopener">Japan Securities Dealers Association</a> et la <a href="https://www.nisshokyo.or.jp/" target="_blank" rel="noreferrer noopener">Commodity Futures Association of Japan</a>.<br> <strong>Si&#232;ge :</strong> Kasumigaseki Building 25F, 2-5 Kasumigaseki 3-chome, Chiyoda-ku, Tokyo, 100-6025 Japan.<br> <strong>T&#233;l&#233;phone :</strong> +81 03-4590-0711 <em>(les jours ouvr&#233;s de 8&nbsp;h&nbsp;30 &#224; 17&nbsp;h&nbsp;30 JST)</em>.<br> <strong>Site :</strong> <a href="https://www.interactivebrokers.co.jp/en/home.php?nored=t" target="_self">www.interactivebrokers.co.jp</a></p><!-- IBKR SG -->
+                                
+                                <p class="entity-name"><a href="https://www.interactivebrokers.com.sg/en/home.php?nored=t" target="_self">Interactive Brokers Singapore Pte. Ltd.</a></p>
+                                <p>est autoris&#233;e et r&#233;gul&#233;e par la Monetary Authority of Singapore (Licence n&#176; CMS100917).<br> <strong>Si&#232;ge&nbsp;:</strong> #40-02A, Asia Square Tower 1, 8 Marina View, Singapore 018960.<br> <strong>Site&nbsp;:</strong> <a href="https://www.interactivebrokers.com.sg/en/home.php?nored=t" target="_self">www.interactivebrokers.com.sg</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- FOOTER END ---------------------------------------------------------------------------------------------------- -->
+</footer>
+<!-- SHARE ON SOCIAL ---------------------------------------------------------------------------------------------------->
+<div class="social-sidebar animated fadeInLeft noprint">
+	<span><i class="fa fa-chevron-left"></i><i class="fa fa-chevron-right"></i></span>
+	<div class="icon-set">
+		<p>SHARE</p>
+		<div class="share-icon"><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.interactivebrokers.com%2fen%2findex.php%3ff%3d47181" target="_blank" rel="noreferrer noopener" title="Share on Facebook" aria-label="Share on Facebook" class="icon-facebook"><i class="fab fa-facebook-square"></i></a></div>
+		<div class="share-icon"><a href="https://twitter.com/intent/tweet?text=Interactive+Brokers&amp;url=https%3A%2F%2Fwww.interactivebrokers.com%2Fen%2Findex.php%3ff%3d47181&amp;related=" target="_blank" rel="noreferrer noopener" title="Share on Twitter" aria-label="Share on Twitter" class="icon-twitter"><i class="fab fa-twitter-square"></i></a></div>
+		<div class="share-icon"><a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwww.interactivebrokers.com%2fen%2findex.php%3ff%3d47181&amp;title=Interactive+Brokers&amp;summary=Interactive+Brokers&amp;source=LinkedIn" target="_blank" rel="noreferrer noopener" title="Share on Linkedin" aria-label="Share on Linkedin" class="icon-linkedin"><i class="fab fa-linkedin"></i></a></div>
+		<div class="share-icon"><a href="javascript:void(0);" target="_self" title="Share by Email" aria-label="Share by Email" name="btn_trigger" data-toggle="modal" data-target="#emailModal" id="47181" onClick="emailCookie();" class="icon-email"><i class="far fa-envelope"></i></a></div>
+	</div>
+</div>
+<!-- MODAL START | SHARE ON SOCIAL ---------------------------------------------------------------------------------------------------->
+<div class="modal fade noprint" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="emailModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button id="cls_frm_1" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="gridSystemModalLabel"><i class="far fa-envelope text-gray"></i> Email</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col">
+						<form>
+							<div class="form-group">
+								<label for="_to" class="control-label">To:</label> <span id="_err_to" style="color: red;"></span>
+								<input type="text" class="form-control" id="_to">
+							</div>
+							<div class="form-group">
+								<label for="_from" class="control-label">From:</label> <span id="_err_frm" style="color: red;"></span>
+								<input type="text" class="form-control" id="_from">
+							</div>
+							<div class="form-group">
+								<label for="_subject" class="control-label">Subject:</label> <span id="_err_subject" style="color: red;"></span>
+								<input type="text" class="form-control" id="_subject" value="Interactive Brokers">
+							</div>
+							<div class="form-group">
+								<textarea class="form-control" id="_content" style="height:200px;"></textarea>
+							</div>
+							<p class="text-sm">URL: <span class="text-italic text-black">www.interactivebrokers.ie/en/index.php?f=<span id='vid'></span></span></p>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<div class="row">
+					<div class="col-6">
+						<div align="left">
+							<button id="cls_frm_2" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+					<div class="col-6">
+						<div align="right">
+							<button type="button" class="btn btn-primary" id="send">Send</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<input type="hidden" id="_page_id" name="_page_id" value="47181" />
+</div>
+<!-- MODAL END | SHARE ON SOCIAL ----------------------------------------------------------------------------------------------------> 
+ 
+<script type="text/javascript" src="../../insights/ibtr_share2667.js?t=v1"></script>
+<script type="text/javascript" src="../../scripts/common/js/base642667.js?t=v1" ></script>
+<script>
+$(document).ready(function() {
+	 $(".social-sidebar span").click(function(){
+		 $(".social-sidebar div").toggleClass("social-sidebar-hide");
+		 $(".social-sidebar span").toggleClass("toggle-arrow");
+ 	 });
+});
+function emailCookie() {
+	if (document.cookie.indexOf("IB_EM_SH") == -1) {
+		var ex=new Date();
+		ex.setTime(ex.getTime()+86400000);
+		document.cookie ='IB_EM_SH='+1+';expires='+ex.toGMTString()+';path=/;domain=';
+	}
+}
+</script>
+<!-- SCRIPTS FOOTER ---------------------------------------------------------------------------------------------------- -->
+<script type="text/javascript" src="../../scripts/common/js/zeynep-2.2.0/zeynep.js"></script>
+<script type="text/javascript" src="../../scripts/common/js/lazyload/lazyload.min.js"></script>
+<script type="text/javascript" src="../../search/conversions.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    
+    // GATHER HEIGHT OF HEADER
+    var headerHeight = $("div#ibkr-header").outerHeight();
+    // GATHER HEIGHT OF DISCLOSURES
+    var disclosureHeight = $("section#UKProductDisclosure, section#TurbosDisclosure").outerHeight();
+    $("section#UKProductDisclosure").css("top", headerHeight);
+    $("section#TurbosDisclosure").css("top", headerHeight);
+    // SET CONTENTS DIV PADDING TOP
+    $("div#contents").css("padding-top", disclosureHeight);
+    // OVERRIDE TOP OF DISCLOSURE AND PADDING-TOP OF CONTENTS ON WINDOW RESIZE
+    $(window).resize(function() {
+        var headerHeight = $("div#ibkr-header").outerHeight();
+        var disclosureHeight = $("section#UKProductDisclosure, section#TurbosDisclosure").outerHeight();
+        var headerHeightDelta = headerHeight - disclosureHeight;
+        $("section#UKProductDisclosure").css("top", disclosureHeight + headerHeightDelta);
+        $("section#TurbosDisclosure").css("top", disclosureHeight + headerHeightDelta);
+        $("div#contents").css("padding-top", disclosureHeight);
+    });
+
+    // OVERRIDE TOP OF DISCLOSURE AND PADDING-TOP OF CONTENTS ON BANNER CLOSE
+    $("#bannerRegionSelector a.btn-close").click(function() {
+        setTimeout(function() {
+            var headerHeight = $("div#ibkr-header").outerHeight();
+            $("section#UKProductDisclosure").css("top", headerHeight);
+            $("section#TurbosDisclosure").css("top", headerHeight);
+            $("div#contents").css("padding-top", disclosureHeight);
+        },500);
+    });
+    // MOBILE MENU
+    $(function() {
+        // Initilize mobile menu
+        var zeynep = $('.menu-mobile').zeynep({
+            opened: function () {
+            console.log('the side menu opened')
+        },
+        closed: function () {
+            console.log('the side menu closed')
+            }
+        })
+        // Dynamically bind closing event
+        zeynep.on('closing', function () {
+            console.log('this event is dynamically binded')
+        })
+        // Mobile menu close on overlay click
+        $('.website-overlay').on('click', function () {
+            zeynep.close()
+        })
+        // Mobile menu close on button click
+        $('.btn-close').on('click', function () {
+            zeynep.close()
+        })
+        // Mobile menu open on navbar-toggler click
+        $('.navbar-toggler').on('click', function () {
+            zeynep.open()
+        })
+    })
+});
+</script>
+<!-- STYLES FOOTER ---------------------------------------------------------------------------------------------------- -->
+<link rel="preload" as="font" type="font/woff2" href="../../fonts/fontawesome-6.4.2/webfonts/fa-brands-400.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="../../fonts/fontawesome-6.4.2/webfonts/fa-regular-400.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="../../fonts/fontawesome-6.4.2/webfonts/fa-solid-900.woff2" crossorigin>
+<link rel="preload" as="style" href="../../css/ibkr/website-print.min.css">
+<link rel="stylesheet" type="text/css" media="print" href="../../css/ibkr/website-print.min.css">
+<style type="text/css">
+@import url('../../css/fontawesome-6.4.2/all.min.css') layer(vendors);
+@import url('../../css/animate-3.7.2/animate.min.css') layer(vendors);
+@import url('../../css/bootstrap-switch-3.3.2/bootstrap-switch.min.css') layer(vendors);
+@import url('../../css/icheck-1.0.2/icheck.css') layer(vendors);
+</style><script type="text/javascript">
+	/* <![CDATA[ */
+	var google_conversion_id = 1070426721;
+	var google_custom_params = window.google_tag_params;
+	var google_remarketing_only = true;
+	/* ]]> */
+</script>
+<script type="text/javascript" src="../../../www.googleadservices.com/pagead/f.txt"></script>
+<noscript>
+    <div display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt="" src="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/1070426721/?value=0&amp;guid=ON&amp;script=0"/>
+    </div>
+</noscript>
+</body>
+
+<!-- Mirrored from www.interactivebrokers.ie/fr/support/individuals.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Sep 2025 09:10:05 GMT -->
+</html>

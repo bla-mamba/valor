@@ -1,0 +1,2855 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en" data-theme="light">
+  <!-- Mirrored from www.interactivebrokers.ie/en/whyib/overview.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Sep 2025 08:53:41 GMT -->
+  <!-- Added by HTTrack --><meta
+    http-equiv="content-type"
+    content="text/html;charset=UTF-8"
+  /><!-- /Added by HTTrack -->
+  <head>
+    <meta charset="utf-8" />
+    <title>Why Trade Globally with Valor? | VALOR CAPITAL LTD</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=5"
+    />
+    <meta
+      name="description"
+      content="Valor helps minimize costs to maximize your returns. Our clients access low commissions and financing rates, receive support for best price execution, and can participate in a stock yield enhancement program."
+    />
+    <meta
+      name="keywords"
+      content="why valor, why ib, low cost, global offerings, trading technology, risk management, comprehensive reporting, traders university, strength and security"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="expires" content="-1" />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta property="og:site_name" content="Valor" />
+    <!--Pid:40071-->
+    <link rel="canonical" href="overview.html" />
+    <meta name="apple-mobile-web-app-title" content="IBKR" />
+    <!-- SCRIPTS HEAD  -->
+    <script
+      type="text/javascript"
+      src="../../scripts/common/js/jquery-3.6.1/jquery.min.js"
+    ></script>
+    <script type="text/javascript">
+      function createScriptElement(data) {
+        if (typeof data == "undefined") {
+          return;
+        }
+        var element = document.createElement("SCRIPT");
+        element.type = "text/javascript";
+        if (typeof data.id != "undefined") {
+          element.id = data.id;
+        }
+        if (typeof data.source != "undefined") {
+          element.src = data.source;
+        }
+        if (typeof data.loadfunction == "function") {
+          element.onload = data.loadfunction;
+        }
+        document.head.appendChild(element);
+      }
+      createScriptElement({
+        source: "/scripts/common/js/bootstrap-5.2.2/bootstrap.bundle.min.js",
+        loadfunction: bsLoaded,
+      });
+      createScriptElement({ source: "/scripts/common/js/lib.js?ver=9" });
+      function storeCookie() {
+        if (typeof Storage !== "undefined") {
+          if (localStorage.getItem("web") !== null) {
+            localStorage.removeItem("web");
+          }
+        }
+      }
+      function bsLoaded() {
+        createScriptElement({
+          source: "/scripts/common/js/appear/appear.min.js?ver=1",
+        });
+        createScriptElement({
+          source: "/scripts/common/js/easing/easing.min.js?ver=1",
+        });
+        createScriptElement({
+          source: "/scripts/common/js/parallax/parallax.min.js?ver=1",
+        });
+        createScriptElement({
+          source: "/scripts/common/js/uitotop/uitotop.min.js?ver=1",
+          loadfunction: uiLoaded,
+        });
+      }
+      function uiLoaded() {
+        createScriptElement({ source: "/scripts/common/js/twsUtils.js?ver=2" });
+        createScriptElement({
+          source: "/scripts/common/js/design/design.js?ver=1",
+        });
+      }
+    </script>
+    <script type="text/javascript">
+      $(function () {
+        if (document.cookie.indexOf("IB_SEARCH") == -1) {
+          var ex = new Date();
+          ex.setTime(ex.getTime() + 86400000);
+          document.cookie =
+            "IB_SEARCH=" +
+            Math.floor(new Date().getTime() / 1000) +
+            ";expires=" +
+            ex.toGMTString() +
+            ";path=/;domain=.interactivebrokers.ie";
+        }
+        let nex = new Date();
+        nex.setTime(nex.getTime() + 86400000);
+        document.cookie =
+          "IB_QD=0;expires=" +
+          nex.toGMTString() +
+          ";path=/;domain=.interactivebrokers.ie";
+
+        let excfd = new Date();
+        excfd.setTime(excfd.getTime() + 86400000);
+        document.cookie =
+          "IB_QD_CFD=0;expires=" +
+          excfd.toGMTString() +
+          ";path=/;domain=.interactivebrokers.ie";
+        $("div#langselector")
+          .find("a")
+          .each(function () {
+            $(this).click(function () {
+              var link = $(this).attr("href");
+              if (link.match(/\/(en|fr|de|es|it|ru|cn|jp)\//)) {
+                var langs = link.split("../../index.html");
+                if (
+                  langs[3] == "en" ||
+                  langs[3] == "fr" ||
+                  langs[3] == "de" ||
+                  langs[3] == "es" ||
+                  langs[3] == "it" ||
+                  langs[3] == "ru" ||
+                  langs[3] == "cn" ||
+                  langs[3] == "jp"
+                ) {
+                  var lang = langs[3];
+                  if (lang == "cn") {
+                    lang = "zh_CN";
+                  }
+                  if (lang == "jp") {
+                    lang = "ja";
+                  }
+                  if (hasCookie("IB_LANG")) {
+                    deleteCookie("IB_LANG");
+                  }
+                  setCookie("IB_LANG", lang, 7, ".interactivebrokers.ie");
+                } else if (langs[1] == "en") {
+                  var lang = "en";
+                  setCookie("IB_LANG", lang, 7, ".interactivebrokers.ie");
+                }
+              }
+            });
+          });
+        $("p#bandaid-close").click(function () {
+          setCookie("IB_BANDAID", 1, 7, ".interactivebrokers.ie");
+        });
+        $("a#btnCloseBannerRegionSelector").click(function () {
+          setCookie("IB_REGION_SEL", 1, 30, ".interactivebrokers.ie");
+        });
+        $("a#btnCloseBannerRegionDifc").click(function () {
+          setCookie("IB_DIFC", 1, 30, ".interactivebrokers.ie");
+        });
+      });
+    </script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      if (localStorage.getItem("consentMode") === null) {
+        const consentMode = {
+          ad_storage: "denied",
+          ad_user_data: "denied",
+          ad_personalization: "denied",
+          analytics_storage: "denied",
+        };
+        localStorage.setItem("consentMode", JSON.stringify(consentMode));
+        gtag("consent", "default", consentMode);
+      } else {
+        gtag(
+          "consent",
+          "default",
+          JSON.parse(localStorage.getItem("consentMode"))
+        );
+      }
+    </script>
+    <!-- STYLES HEAD -->
+    <style type="text/css">
+      @import url("../../css/bootstrap-5.2.2/bootstrap.min.css")
+      layer(bootstrap);
+    </style>
+    <link
+      rel="preload"
+      as="style"
+      href="../../css/ibkr/website.mince12.css?v=1848a6e12ea6c289ee1df7ee63749846"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+      href="../../css/ibkr/website.mince12.css?v=1848a6e12ea6c289ee1df7ee63749846"
+    />
+    <link
+      rel="preload"
+      as="style"
+      href="../../css/ibkr/theme-ibkr.min4f42.css?v=be9c72c0d328e7fc4987bce81f28981c"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+      href="../../css/ibkr/theme-ibkr.min4f42.css?v=be9c72c0d328e7fc4987bce81f28981c"
+    />
+    <style type="text/css">
+      /* PAGE TITLE -------------------------------------------------------------- */
+      section#page-title {
+      	display: none;
+      }
+      .ytp-chrome-top{display:none;}
+      /* INTRO -------------------------------------------------------------- */
+      #intro {
+      	background: var(--gray-30-solid);
+      	background: -moz-linear-gradient(180deg, var(--gray-30-solid) 0%, var(--gray-10-solid) 100%);
+      	background: -webkit-linear-gradient(180deg, var(--gray-30-solid) 0%, var(--gray-10-solid) 100%);
+      	background: linear-gradient(180deg, var(--gray-30-solid) 0%, var(--gray-10-solid) 100%);
+      	position: relative;
+      	min-height: 250px;
+      }
+      @media (max-width:575.98px) {
+      #intro .intro-img {
+      	min-height: 200px;
+      }
+      }
+      @media (min-width:576px) and (max-width:991.98px) {
+      #intro .intro-img {
+      	min-height: 280px;
+      }
+      }
+      @media (max-width:991.98px) {
+      #intro {
+      	padding: 0;
+      }
+      #intro .intro-content {
+      	padding: 40px;
+      }
+      }
+      #intro h2 {
+      	color: var(--h5-color);
+      	font-size: 2.5rem;
+      	line-height: 1.1;
+      }
+      .hero-background-image {
+      	object-fit: cover;
+      	object-position: center;
+      	height: 100%;
+      	width: 100%;
+      	position: absolute;
+      	top: 0;
+      	inset-inline-start: 0;
+      }
+      @media (max-width:991.98px) {
+      .hero-background-image-wrapper {
+      	padding-bottom: 40%;
+      	height: 0;
+      	width: 100%;
+      	position: relative;
+      }
+      }
+      @media (min-width:992px) {
+      .hero-background-image-wrapper {
+      	position: absolute;
+      	height: 100%;
+      	width: 40%;
+      	top: 0;
+      	inset-inline-end: 0;
+      }
+      }
+      .id-drop {
+      	clip: rect(0 0 0 0);
+      	clip-path: inset(50%);
+      	height: 1px;
+      	overflow: hidden;
+      	position: relative;
+      	white-space: nowrap;
+      	width: 1px;
+      }
+      .id-drop .id-drop-target-adjustment {
+      	position: absolute;
+      	top: -150px;
+      }
+      .section-global-market-access {
+      	background: var(--gray-10-solid);
+      	background-image: none;
+      	background-repeat: no-repeat;
+      	background-size: 50%, cover;
+      	background-position: bottom right, top left;
+      }
+      .section-global-market-access a:link{font-weight: var(--fw-600);}
+      @media (min-width:992px) {
+      .section-global-market-access {
+      	background-image: url('../../images/web/why-ibkr-global-market-access-background.png'), linear-gradient(180deg, var(--gray-10-solid) 0%, var(--gray-30-solid) 100%);
+      }
+      .global-market-access-content {
+      	padding-top: 80px;
+      	padding-bottom: 80px;
+      }
+      }
+      .global-market-access-img {
+      	position: relative;
+      	z-index: 20;
+      }
+      @media (max-width:991.98px) {
+      .global-market-access-img {
+      	width: 75%;
+      	max-width: 400px;
+      	margin-left: auto;
+      	margin-right: auto;
+      	padding-bottom: 50%;
+      }
+      }
+      @media (min-width:992px) {
+      .global-market-access-img {
+      	top: 10%;
+      	height: 0;
+      	padding-bottom: 100%;
+      }
+      }
+      .global-market-access-img .r-img {
+      	width: 100%;
+      	height: 100%;
+      	top: 0;
+      	inset-inline-start: 0;
+      	position: absolute;
+      	object-fit: contain;
+      	object-position: center;
+      }
+      @supports (filter: blur(4px)) {
+      @media (max-width:991.98px) {
+      .global-market-access-img:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      opacity: .35;
+      border-radius: 100%;
+      height: 1rem;
+      width: 100%;
+      transform: translate(-50%, 70%);
+      background-color: #000;
+      filter: blur(25px);
+      z-index: 30;
+      }
+      }
+      @media (min-width:992px) {
+      .global-market-access-img:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      opacity: .2;
+      border-radius: 100%;
+      height: 3rem;
+      width: 100%;
+      transform: translate(-50%, 70%);
+      background-color: #000;
+      filter: blur(25px);
+      z-index: 30;
+      }
+      }
+      }
+      .section-platform-compare {
+      	padding-top: 0;
+      	padding-bottom: 0;
+      }
+      .disclosure-list {
+      	padding: 0;
+      	margin: 0;
+      	margin-start: 1em;
+      	-webkit-margin-start: 1em;
+      	-moz-margin-start: 1em;
+      }
+      .disclosure-list li + li {
+      	margin-top: .5rem;
+      }
+      .section-low-cost .fa-ul li + li {
+      	margin-top: 1.5rem;
+      }
+      .logo-grid {
+      	display: grid;
+      	grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      	column-gap: 1.875rem;
+      	row-gap: 3rem;
+      }
+      @media (max-width:575.98px) {
+      .logo-grid {
+      	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      }
+      }
+      .text-md {
+      	font-size: 1rem !important;
+      }
+      .text-xs {
+      	font-size: .75rem !important;
+      }
+      .text-gray {
+      	color: var(--gray)!important;
+      }
+    </style>
+
+    <script>
+      (window.BOOMR_mq = window.BOOMR_mq || []).push([
+        "addVar",
+        {
+          "rua.upush": "false",
+          "rua.cpush": "false",
+          "rua.upre": "false",
+          "rua.cpre": "false",
+          "rua.uprl": "false",
+          "rua.cprl": "false",
+          "rua.cprf": "false",
+          "rua.trans": "SJ-d23de039-d518-4f10-9810-e68da4592744",
+          "rua.cook": "true",
+          "rua.ims": "false",
+          "rua.ufprl": "false",
+          "rua.cfprl": "false",
+          "rua.isuxp": "false",
+          "rua.texp": "norulematch",
+          "rua.ceh": "false",
+          "rua.ueh": "false",
+          "rua.ieh.st": "0",
+        },
+      ]);
+    </script>
+    <script>
+      !(function (e) {
+        var n = "https://s.go-mpulse.net/boomerang/";
+        if ("False" == "True")
+          (e.BOOMR_config = e.BOOMR_config || {}),
+            (e.BOOMR_config.PageParams = e.BOOMR_config.PageParams || {}),
+            (e.BOOMR_config.PageParams.pci = !0),
+            (n = "https://s2.go-mpulse.net/boomerang/");
+        if (
+          ((window.BOOMR_API_key = "XE2AM-F37QZ-LYWQP-H8KRM-4SNX5"),
+          (function () {
+            function e() {
+              if (!o) {
+                var e = document.createElement("script");
+                (e.id = "boomr-scr-as"),
+                  (e.src = window.BOOMR.url),
+                  (e.async = !0),
+                  i.parentNode.appendChild(e),
+                  (o = !0);
+              }
+            }
+            function t(e) {
+              o = !0;
+              var n,
+                t,
+                a,
+                r,
+                d = document,
+                O = window;
+              if (
+                ((window.BOOMR.snippetMethod = e ? "if" : "i"),
+                (t = function (e, n) {
+                  var t = d.createElement("script");
+                  (t.id = n || "boomr-if-as"),
+                    (t.src = window.BOOMR.url),
+                    (BOOMR_lstart = new Date().getTime()),
+                    (e = e || d.body),
+                    e.appendChild(t);
+                }),
+                !window.addEventListener &&
+                  window.attachEvent &&
+                  navigator.userAgent.match(/MSIE [67]\./))
+              )
+                return (
+                  (window.BOOMR.snippetMethod = "s"),
+                  void t(i.parentNode, "boomr-async")
+                );
+              (a = document.createElement("IFRAME")),
+                (a.src = "about:blank"),
+                (a.title = ""),
+                (a.role = "presentation"),
+                (a.loading = "eager"),
+                (r = (a.frameElement || a).style),
+                (r.width = 0),
+                (r.height = 0),
+                (r.border = 0),
+                (r.display = "none"),
+                i.parentNode.appendChild(a);
+              try {
+                (O = a.contentWindow), (d = O.document.open());
+              } catch (_) {
+                (n = document.domain),
+                  (a.src =
+                    "javascript:var d=document.open();d.domain='" +
+                    n +
+                    "';void(0);"),
+                  (O = a.contentWindow),
+                  (d = O.document.open());
+              }
+              if (n)
+                (d._boomrl = function () {
+                  (this.domain = n), t();
+                }),
+                  d.write("<bo" + "dy onload='document._boomrl();'>");
+              else if (
+                ((O._boomrl = function () {
+                  t();
+                }),
+                O.addEventListener)
+              )
+                O.addEventListener("load", O._boomrl, !1);
+              else if (O.attachEvent) O.attachEvent("onload", O._boomrl);
+              d.close();
+            }
+            function a(e) {
+              window.BOOMR_onload = (e && e.timeStamp) || new Date().getTime();
+            }
+            if (
+              !window.BOOMR ||
+              (!window.BOOMR.version && !window.BOOMR.snippetExecuted)
+            ) {
+              (window.BOOMR = window.BOOMR || {}),
+                (window.BOOMR.snippetStart = new Date().getTime()),
+                (window.BOOMR.snippetExecuted = !0),
+                (window.BOOMR.snippetVersion = 12),
+                (window.BOOMR.url = n + "XE2AM-F37QZ-LYWQP-H8KRM-4SNX5");
+              var i =
+                  document.currentScript ||
+                  document.getElementsByTagName("script")[0],
+                o = !1,
+                r = document.createElement("link");
+              if (
+                r.relList &&
+                "function" == typeof r.relList.supports &&
+                r.relList.supports("preload") &&
+                "as" in r
+              )
+                (window.BOOMR.snippetMethod = "p"),
+                  (r.href = window.BOOMR.url),
+                  (r.rel = "preload"),
+                  (r.as = "script"),
+                  r.addEventListener("load", e),
+                  r.addEventListener("error", function () {
+                    t(!0);
+                  }),
+                  setTimeout(function () {
+                    if (!o) t(!0);
+                  }, 3e3),
+                  (BOOMR_lstart = new Date().getTime()),
+                  i.parentNode.appendChild(r);
+              else t(!1);
+              if (window.addEventListener)
+                window.addEventListener("load", a, !1);
+              else if (window.attachEvent) window.attachEvent("onload", a);
+            }
+          })(),
+          "".length > 0)
+        )
+          if (
+            e &&
+            "performance" in e &&
+            e.performance &&
+            "function" == typeof e.performance.setResourceTimingBufferSize
+          )
+            e.performance.setResourceTimingBufferSize();
+        !(function () {
+          if (
+            ((BOOMR = e.BOOMR || {}),
+            (BOOMR.plugins = BOOMR.plugins || {}),
+            !BOOMR.plugins.AK)
+          ) {
+            var n = "false" == "true" ? 1 : 0,
+              t = "cookiepresent",
+              a = "eykumbc7mxv4o2gjenoa-f-c5bd8fa7d-clientnsv4-s.akamaihd.net",
+              i = "false" == "true" ? 2 : 1,
+              o = {
+                "ak.v": "39",
+                "ak.cp": "1168163",
+                "ak.ai": parseInt("665092", 10),
+                "ak.ol": "0",
+                "ak.cr": 45,
+                "ak.ipv": 4,
+                "ak.proto": "http/1.1",
+                "ak.rid": "e0d26ce",
+                "ak.r": 50930,
+                "ak.a2": n,
+                "ak.m": "a",
+                "ak.n": "essl",
+                "ak.bpcip": "38.21.70.0",
+                "ak.cport": 49539,
+                "ak.gh": "95.101.132.228",
+                "ak.quicv": "",
+                "ak.tlsv": "tls1.2",
+                "ak.0rtt": "",
+                "ak.0rtt.ed": "",
+                "ak.csrc": "-",
+                "ak.acc": "bbr",
+                "ak.t": "1758012252",
+                "ak.ak":
+                  "hOBiQwZUYzCg5VSAfCLimQ==ls8VjRVVms5kRbmghnFddWuJxqjYig9h9PYUClyv9zH3mCW42o6OxIlDYPirVZHlQaBb7bSUoR1nnLCDLzvo1/oDRR4Mq4OtPBJ7DUPyqnotypIuRY9uAsAqaTDmxIml0Kio5/tsGtZEAuqYvgY17hoEiNZAYclMccZZKQDeHtYsmChvfi7n8OZ52r42HPRBQVZoQBMMgeb2fWm6q6Ffgoe6VSK9tCwvRX7jB4kBBKyeJwZbsr8PEbgN8lRPOYAFRG6AVJD8LJW7swevEdP/WfwXtMkN4oEWFpgWsotAu9/5xmGVcmYDuhWqHYsZYWYme5y5zTZbn2wx5IkjO8dprhWsVxbUxbbt+WT1PUowcrBYkyNMElVRmmlqJEPUC8WuRM6iUyWEiKz3/AtAoNc++z08iRfRHZMAAW9waOHLyJM=",
+                "ak.pv": "398",
+                "ak.dpoabenc": "",
+                "ak.tf": i,
+              };
+            if ("" !== t) o["ak.ruds"] = t;
+            var r = {
+              i: !1,
+              av: function (n) {
+                var t = "http.initiator";
+                if (n && (!n[t] || "spa_hard" === n[t]))
+                  (o["ak.feo"] = void 0 !== e.aFeoApplied ? 1 : 0),
+                    BOOMR.addVar(o);
+              },
+              rv: function () {
+                var e = [
+                  "ak.bpcip",
+                  "ak.cport",
+                  "ak.cr",
+                  "ak.csrc",
+                  "ak.gh",
+                  "ak.ipv",
+                  "ak.html",
+                  "ak.n",
+                  "ak.ol",
+                  "ak.proto",
+                  "ak.quicv",
+                  "ak.tlsv",
+                  "ak.0rtt",
+                  "ak.0rtt.ed",
+                  "ak.r",
+                  "ak.acc",
+                  "ak-2.html",
+                  "ak.tf",
+                ];
+                BOOMR.removeVar(e);
+              },
+            };
+            BOOMR.plugins.AK = {
+              akVars: o,
+              akDNSPreFetchDomain: a,
+              init: function () {
+                if (!r.i) {
+                  var e = BOOMR.subscribe;
+                  e("before_beacon", r.av, null, null),
+                    e("onbeacon", r.rv, null, null),
+                    (r.i = !0);
+                }
+                return this;
+              },
+              is_complete: function () {
+                return !0;
+              },
+            };
+          }
+        })();
+      })(window);
+    </script>
+  </head>
+  <body>
+    <div id="printheader"></div>
+    <!-- HEADER START  -->
+    <div class="ibkr-header" id="ibkr-header">
+      <style type="text/css">
+        .banner-risk-warning {
+          margin: 0px;
+          padding: 8px 0px;
+          width: 100%;
+          height: auto;
+          background-color: #242424;
+        }
+        .banner-risk-warning p {
+          margin: 0px;
+          padding: 0px;
+          font-weight: 400;
+          font-size: 1rem;
+          line-height: 1.25rem;
+          text-align: center;
+          color: #ffffff;
+        }
+        .banner-risk-warning .warninglink a {
+          text-decoration: underline;
+        }
+        /* BOOTSTRAP 4 | MEDIA QUERY | EXTRA SMALL (< 576PX) ---------------------------------------------------------------------------------------------------- */
+        @media (max-width: 575.98px) {
+          .banner-risk-warning {
+            padding: 4px 0px;
+          }
+          .banner-risk-warning p {
+            font-size: 0.8125rem;
+            line-height: 1rem;
+          }
+        }
+        /* BOOTSTRAP 4 | MEDIA QUERY | SMALL (576PX-767.98PX) ---------------------------------------------------------------------------------------------------- */
+        @media (min-width: 576px) and (max-width: 767.98px) {
+          .banner-risk-warning {
+            padding: 4px 0px;
+          }
+          .banner-risk-warning p {
+            font-size: 0.8125rem;
+            line-height: 1rem;
+          }
+        }
+        /* BOOTSTRAP 4 | MEDIA QUERY | MEDIUM (768PX-991.98PX) ---------------------------------------------------------------------------------------------------- */
+        @media (min-width: 768px) and (max-width: 991.98px) {
+          .banner-risk-warning {
+            padding: 4px 0px;
+          }
+          .banner-risk-warning p {
+            font-size: 0.8125rem;
+            line-height: 1rem;
+          }
+        }
+        /* BOOTSTRAP 4 | MEDIA QUERY | LARGE (992PX-1199.98PX) ---------------------------------------------------------------------------------------------------- */
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+        }
+        /* BOOTSTRAP 4 | MEDIA QUERY | EXTRA LARGE (>1200PX) ---------------------------------------------------------------------------------------------------- */
+        @media (min-width: 1200px) {
+        }
+      </style>
+      <div class="banner-risk-warning">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <p>
+                Investing in financial products involves risk. Losses may exceed
+                the value of your original investment.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- NAV TOP START (LG/XL ONLY) -->
+      <nav
+        class="navbar navbar-inverse navbar-expand-lg navbar-top d-none d-lg-block"
+      >
+        <div class="container">
+      </nav>
+      <!-- NAV TOP END -->
+        <!-- NAV BOTTOM START -->
+      <nav class="navbar navbar-inverse navbar-expand-lg navbar-bottom">
+        <div class="container">
+          <!-- LOGO -->
+          <a
+  href="../home.html"
+  target="_self"
+  title="Valor"
+  aria-label="Valor LTD Home"
+>
+  <img src="../../../logo.svg" alt="Valor LTD Logo" width="140" height="auto" />
+</a>
+
+
+          <!-- TOGGLE (XS/SM/MD ONLY) -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            aria-label="Toggle Navigation"
+          >
+            <span class="navbar-toggler-icon">
+              <i class="fas fa-bars" aria-hidden="true"></i>
+            </span>
+          </button>
+
+          <!-- NAV LINKS -->
+          <div class="navbar-collapse collapse" id="ibkr-nav-bottom">
+            <ul class="navbar-nav ml-auto align-items-center">
+              <!-- WHY VALOR -->
+              <li class="nav-item">
+                <a href="../whyib/overview.html" target="_self" class="nav-link">
+                  Why Valor
+                </a>
+              </li>
+
+              <!-- PRICING -->
+              <li class="nav-item dropdown">
+                <a
+                  href="javascript:void(0)"
+                  class="nav-link dropdown-toggle"
+                  id="nav-pricing"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Pricing
+                </a>
+                <div
+                  class="dropdown-menu dropdown-pricing"
+                  aria-labelledby="nav-pricing"
+                >
+                  <div class="row">
+                    <div class="col">
+                      <a
+                        href="../pricing/commissions-home.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >Commissions</a
+                      >
+                      <a
+                        href="../trading/margin-rates.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >Margin Rates</a
+                      >
+                      <a
+                        href="../pricing/research-news-services.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >Research and News</a
+                      >
+                      <a
+                        href="../pricing/market-data-pricing.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >Market Data Pricing</a
+                      >
+                      <a
+                        href="../pricing/other-fees-overview.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >Fees</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- TRADING -->
+              <li class="nav-item dropdown">
+                <a
+                  href="javascript:void(0)"
+                  class="nav-link dropdown-toggle"
+                  id="nav-technology"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Trading
+                </a>
+                <div
+                  class="dropdown-menu dropdown-technology"
+                  aria-labelledby="nav-technology"
+                >
+                  <div class="row">
+                    <div class="col">
+                      <a
+                        href="../trading/trading-platforms.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >Platforms</a
+                      >
+                      <a
+                        href="../trading/ib-api.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >APIs</a
+                      >
+                      <a
+                        href="../trading/margin.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >Margin</a
+                      >
+                      <a
+                        href="../trading/ordertypes.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >Order Types</a
+                      >
+                      <a
+                        href="../whyib/reporting.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >Reporting</a
+                      >
+                      <a
+                        href="../trading/sustainable-investing-ie.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >Sustainable Investing</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- LOGIN / OPEN ACCOUNT BUTTONS -->
+              <!-- LOG IN -->
+              <li class="nav-item d-none d-lg-block">
+                <a
+                  href="https://dex.whiterock24.ai/signin"
+                  target="_self"
+                  class="nav-link nav-login"
+                  id="nav-log-in"
+                >
+                  Log In
+                </a>
+              </li>
+              <!-- OPEN ACCOUNT -->
+              <li class="nav-item d-none d-lg-block">
+                <a
+                  href="https://dex.whiterock24.ai/sign-up"
+                  target="_self"
+                  class="nav-link nav-open-account"
+                  id="nav-open-account"
+                >
+                  Open Account
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- NAV BOTTOM END -->
+    </div>
+    <!-- HEADER END ---------------------------------------------------------------------------------------------------- -->
+  <!-- MOBILE NAV START (XS/SM/MD ONLY) -->
+<div class="menu-mobile d-lg-none">
+  <!-- CLOSE BUTTON -->
+  <div class="close-button">
+    <button type="button" class="btn-close" aria-label="Close Menu">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+
+  <!-- LOGO -->
+  <div class="logo-container">
+    <a
+  href="../home.html"
+  target="_self"
+  title="Valor"
+  aria-label="Valor LTD Home"
+>
+  <img src="../../../logo.svg" alt="Valor LTD Logo" width="140" height="auto" />
+</a>
+  </div>
+
+  <ul>
+    <!-- WHY VALOR -->
+    <li><a href="whyib/overview.html" target="_self">Why Valor</a></li>
+
+    <!-- PRICING (Always Open) -->
+    <li>
+      <p class="submenu-title">PRICING</p>
+      <ul>
+        <li><a href="../pricing/commissions-home.html" target="_self">Commissions</a></li>
+        <li><a href="../trading/margin-rates.html" target="_self">Margin Rates</a></li>
+        <li><a href="../pricing/research-news-services.html" target="_self">Research and News</a></li>
+        <li><a href="../pricing/market-data-pricing.html" target="_self">Market Data Pricing</a></li>
+        <li><a href="../pricing/other-fees-overview.html" target="_self">Fees</a></li>
+      </ul>
+    </li>
+
+    <!-- TRADING (Always Open) -->
+    <li>
+      <p class="submenu-title">TRADING</p>
+      <ul>
+        <li><a href="../trading/trading-platforms.html" target="_self">Platforms</a></li>
+        <li><a href="../trading/ib-api.html" target="_self">APIs</a></li>
+        <li><a href="../trading/margin.html" target="_self">Margin</a></li>
+        <li><a href="../trading/ordertypes.html" target="_self">Order Types</a></li>
+        <li><a href="../whyib/reporting.html" target="_self">Reporting</a></li>
+        <li><a href="../trading/sustainable-investing-ie.html" target="_self">Sustainable Investing</a></li>
+      </ul>
+    </li>
+
+    <!-- LOG IN -->
+    <li>
+      <a
+        href="https://dex.whiterock24.ai/signin"
+        target="_self"
+        class="nav-link nav-login"
+        id="nav-log-in"
+        style="display:block; width:calc(100% - 20px); margin:12px 10px; border:2px solid #c82333; color:#c82333; padding:12px; border-radius:0; text-align:center; font-weight:600;"
+      >
+        Log In
+      </a>
+    </li>
+
+    <!-- OPEN ACCOUNT -->
+    <li>
+      <a
+        href="https://dex.whiterock24.ai/sign-up"
+        target="_self"
+        class="nav-link nav-open-account"
+        id="nav-open-account"
+        style="display:block; width:calc(100% - 20px); margin:8px 10px 12px; background-color:#c82333; color:#fff; padding:12px; border-radius:0; text-align:center; font-weight:600;"
+      >
+        Open Account
+      </a>
+    </li>
+  </ul>
+</div>
+<!-- MOBILE NAV OVERLAY -->
+<div class="website-overlay d-lg-none"></div>
+<!-- MOBILE NAV END -->
+
+<style>
+/* Hover effects */
+.nav-login:hover {
+  border-color: #a71d2a !important;
+  color: #a71d2a !important;
+}
+
+.nav-open-account:hover {
+  background-color: #a71d2a !important;
+  color: #fff !important;
+}
+</style>
+
+    <script>
+      $(window).on("load", function () {
+        // Simple check if URL contains 'conf=am'
+        if (!window.location.href.includes("conf=am")) {
+          $("#region-modal").modal({
+            backdrop: "static",
+            keyboard: false,
+          });
+          $("#region-modal").modal("show");
+          $("body").removeClass("modal-open");
+          $("body").css("overflow", "");
+          $("body").css("padding-right", "");
+        }
+      });
+    </script>
+    <div
+      class="modal modal-cookies fade"
+      id="region-modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="modalRegionLabel"
+      data-bs-backdrop="static"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+        <div class="modal-content" id="modalRegionContent">
+          <div class="modal-header d-block">
+            <p class="fs-5 modal-title" id="modalCookieLabel">
+              Which IBKR website is best for you?
+            </p>
+            <p class="pt-10 mb-0 pr-30 fs-6">
+              The content on the website you selected is not intended for
+              investors in your location.
+            </p>
+            <p class="mb-40 fs-6">
+              Please choose the website most applicable to you.
+            </p>
+          </div>
+          <div class="modal-footer" id="modalRegionControls">
+            <div class="row">
+              <div class="col-12 col-md-4"></div>
+              <div class="col-12 col-md-8">
+                <p>
+                  <button class="btn btn-primary" id="btnRegionRecommendation">
+                    Go to US website
+                  </button>
+                  <button class="btn btn-primary" id="btnRegionCurrent">
+                    Stay on IE website
+                  </button>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(function () {
+        $("button#btnRegionRecommendation").click(function () {
+          window.location.href = "https://www.interactivebrokers.com/";
+        });
+        $("button#btnRegionCurrent").click(function () {
+          setCookie("IB_REG", 1, 365, ".interactivebrokers.ie");
+          location.reload();
+        });
+      });
+    </script>
+    <div id="contents">
+      <section class="page-title" id="page-title">
+        <div class="container">
+          <div class="row">
+            <div class="col"><h1>Why Trade Globally with IBKR?</h1></div>
+          </div>
+        </div>
+      </section>
+      <!-- INTRO ---->
+      <section id="intro">
+        <figure class="hero-background-image-wrapper">
+          <picture class="r-img">
+            <source
+              media="(min-width:1200px)"
+              srcset="
+                https://www.interactivebrokers.ie/images/web/why-ibkr-hero-xl.webp 1200w,
+                https://www.interactivebrokers.ie/images/web/why-ibkr-hero-xl.jpg  1200w
+              "
+            />
+            <source
+              media="(min-width:992px)"
+              srcset="
+                https://www.interactivebrokers.ie/images/web/why-ibkr-hero-lg.webp 1199w,
+                https://www.interactivebrokers.ie/images/web/why-ibkr-hero-lg.jpg  1199w
+              "
+            />
+            <source
+              media="(min-width:768px)"
+              srcset="
+                https://www.interactivebrokers.ie/images/web/why-ibkr-hero-md.webp 991w,
+                https://www.interactivebrokers.ie/images/web/why-ibkr-hero-md.jpg  991w
+              "
+            />
+            <source
+              media="(min-width:576px)"
+              srcset="
+                https://www.interactivebrokers.ie/images/web/why-ibkr-hero-sm.webp 767w,
+                https://www.interactivebrokers.ie/images/web/why-ibkr-hero-sm.jpg  767w
+              "
+            />
+            <source
+              srcset="
+                https://www.interactivebrokers.ie/images/web/why-ibkr-hero-xs.webp 575w
+              "
+            />
+            <img
+              class="hero-background-image"
+              src="https://www.interactivebrokers.ie/images/web/why-ibkr-hero-xl.webp"
+              alt="Valor is the Professional's Gateway to the World's Markets"
+              border="0"
+            />
+          </picture>
+        </figure>
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-6">
+              <div class="intro-content">
+                <h2 class="mt-0">
+                  Valor is the Professional's Gateway to the World's Markets
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- DROPLINKS -->
+      <section class="droplinks dl-6">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <a
+                href="#section-global-market-access"
+                target="_self"
+                class="page-scroll"
+              >
+                <svg role="img">
+                  <title>Global Markets</title>
+                  <path
+                    d="M20.105,5.858c-7.882,0-14.295,6.413-14.295,14.295c0,7.881,6.413,14.292,14.295,14.292
+c7.881,0,14.295-6.411,14.295-14.292C34.4,12.271,27.986,5.858,20.105,5.858z M20.105,33.42c-1.978,0-3.763-2.346-4.833-5.844
+c1.557-0.313,3.176-0.482,4.833-0.482c1.657,0,3.277,0.17,4.834,0.482C23.869,31.074,22.083,33.42,20.105,33.42z M20.105,26.094
+c-1.747,0-3.457,0.181-5.1,0.517c-0.453-1.786-0.725-3.815-0.762-5.958h11.725c-0.037,2.142-0.309,4.171-0.762,5.958
+C23.562,26.275,21.853,26.094,20.105,26.094z M20.105,6.884c1.974,0,3.757,2.337,4.829,5.826c-1.557,0.312-3.175,0.481-4.829,0.481
+c-1.653,0-3.271-0.169-4.826-0.481C16.35,9.222,18.131,6.884,20.105,6.884z M20.105,14.191c1.745,0,3.454-0.181,5.096-0.516
+c0.457,1.791,0.73,3.828,0.768,5.978H14.244c0.038-2.15,0.311-4.187,0.767-5.978C16.653,14.01,18.361,14.191,20.105,14.191z
+ M13.244,19.653H6.835c0.109-2.924,1.159-5.607,2.866-7.755c1.351,0.656,2.797,1.176,4.313,1.553
+C13.55,15.302,13.28,17.404,13.244,19.653z M13.244,20.653c0.036,2.241,0.305,4.335,0.767,6.181
+c-1.519,0.378-2.967,0.899-4.319,1.557c-1.701-2.144-2.747-4.82-2.856-7.738H13.244z M26.969,20.653h6.406
+c-0.109,2.917-1.155,5.594-2.856,7.738c-1.351-0.657-2.799-1.179-4.316-1.557C26.664,24.988,26.933,22.894,26.969,20.653z
+ M26.969,19.653c-0.036-2.249-0.307-4.351-0.771-6.202c1.516-0.377,2.961-0.896,4.311-1.552c1.708,2.147,2.758,4.831,2.867,7.754
+H26.969z M29.827,11.114c-1.227,0.575-2.532,1.036-3.899,1.374c-0.699-2.315-1.71-4.159-2.922-5.303
+C25.671,7.782,28.029,9.181,29.827,11.114z M17.206,7.185c-1.212,1.144-2.222,2.988-2.921,5.303
+c-1.368-0.338-2.675-0.799-3.902-1.375C12.181,9.181,14.54,7.781,17.206,7.185z M10.371,29.175c1.228-0.577,2.537-1.039,3.908-1.378
+c0.698,2.321,1.709,4.17,2.922,5.317C14.531,32.517,12.169,31.113,10.371,29.175z M23.011,33.114
+c1.213-1.147,2.224-2.996,2.923-5.317c1.37,0.34,2.679,0.802,3.906,1.378C28.041,31.113,25.68,32.516,23.011,33.114z"
+                  />
+                </svg>
+                <span>Global Markets</span>
+              </a>
+              <a href="#section-low-cost" target="_self" class="page-scroll">
+                <svg role="img">
+                  <title>Professional Pricing</title>
+                  <g>
+                    <g>
+                      <g></g>
+                      <rect x="19.31" y="10.441" width="1.19" height="10.684" />
+                      <g>
+                        <path
+                          d="M19.312,32.578h1.187v-8.799l-1.187-0.295V32.578z"
+                        />
+                      </g>
+                    </g>
+                    <polygon
+                      points="13.057,10.701 13.764,9.994 8.682,4.912 3.6,9.994 4.307,10.701 8.182,6.826 8.182,20.654 
+	12.354,20.654 12.354,19.654 9.182,19.654 9.182,6.826 	"
+                    />
+                    <polygon
+                      points="27.041,29.607 26.334,30.314 31.416,35.396 36.498,30.314 35.791,29.607 31.916,33.482 
+	31.916,19.654 27.744,19.654 27.744,20.654 30.916,20.654 30.916,33.482 	"
+                    />
+                  </g>
+                  <g>
+                    <path
+                      d="M13.096,26.583c1.523,2.095,4.053,3.345,6.778,3.345c0.913,0,1.807-0.148,2.584-0.429
+	c2.108-0.76,3.286-2.37,3.151-4.307c-0.237-3.405-3.329-4.124-5.814-4.702c-2.614-0.606-4.212-1.106-4.37-2.919
+	c-0.139-1.591,1.282-2.419,1.899-2.701c0.18-0.083,0.372-0.146,0.57-0.208v-1.235c-0.419,0.109-0.768,0.228-1.063,0.364
+	c-1.761,0.807-2.728,2.258-2.587,3.884c0.244,2.8,2.919,3.422,5.279,3.97c2.942,0.685,4.738,1.271,4.903,3.628
+	c0.139,1.986-1.61,2.838-2.369,3.111c-0.663,0.239-1.426,0.365-2.206,0.365c-2.325,0-4.485-1.066-5.792-2.856L13.096,26.583z"
+                    />
+                    <path
+                      d="M20.427,14.41c1.108,0.106,2.685,0.521,4.023,1.876l0.85-0.828c-1.642-1.666-3.544-2.143-4.874-2.245V14.41
+	z"
+                    />
+                  </g>
+                </svg>
+                <span>Professional Pricing</span>
+              </a>
+              <a
+                href="#section-trading-technology"
+                target="_self"
+                class="page-scroll"
+              >
+                <svg role="img">
+                  <title>Innovative Technology</title>
+                  <path
+                    d="M15.184,10.462c-1.372,0-2.488-1.084-2.488-2.417s1.116-2.417,2.488-2.417c1.371,0,2.486,1.084,2.486,2.417
+	S16.555,10.462,15.184,10.462z M15.184,6.728c-0.765,0-1.388,0.591-1.388,1.317s0.623,1.317,1.388,1.317
+	c0.765,0,1.387-0.591,1.387-1.317S15.949,6.728,15.184,6.728z"
+                  />
+                  <path
+                    d="M31.383,10.462c-1.372,0-2.487-1.084-2.487-2.417s1.115-2.417,2.487-2.417c1.371,0,2.486,1.084,2.486,2.417
+	S32.754,10.462,31.383,10.462z M31.383,6.728c-0.765,0-1.388,0.591-1.388,1.317s0.623,1.317,1.388,1.317s1.387-0.591,1.387-1.317
+	S32.147,6.728,31.383,6.728z"
+                  />
+                  <path
+                    d="M23.822,17.434c-1.372,0-2.487-1.084-2.487-2.417c0-1.333,1.115-2.417,2.487-2.417
+	c1.371,0,2.486,1.084,2.486,2.417C26.309,16.35,25.193,17.434,23.822,17.434z M23.822,13.7c-0.765,0-1.388,0.591-1.388,1.317
+	s0.623,1.317,1.388,1.317s1.387-0.591,1.387-1.317S24.587,13.7,23.822,13.7z"
+                  />
+                  <polygon
+                    points="24.926,30.233 23.826,30.233 23.826,24.853 14.613,15.816 14.613,9.902 15.713,9.902 
+	15.713,15.354 24.926,24.392 	"
+                  />
+                  <rect
+                    x="24.397"
+                    y="11.045"
+                    transform="matrix(0.7199 -0.6941 0.6941 0.7199 -0.3105 22.4201)"
+                    width="6.448"
+                    height="1.1"
+                  />
+                  <path
+                    d="M24.389,34.636c-1.372,0-2.487-1.084-2.487-2.417s1.115-2.417,2.487-2.417c1.371,0,2.486,1.084,2.486,2.417
+	S25.76,34.636,24.389,34.636z M24.389,30.901c-0.765,0-1.388,0.591-1.388,1.317s0.623,1.317,1.388,1.317s1.387-0.591,1.387-1.317
+	S25.153,30.901,24.389,30.901z"
+                  />
+                  <path
+                    d="M8.075,10.462c-1.372,0-2.487-1.084-2.487-2.417s1.116-2.417,2.487-2.417c1.371,0,2.486,1.084,2.486,2.417
+	S9.446,10.462,8.075,10.462z M8.075,6.728c-0.765,0-1.388,0.591-1.388,1.317S7.31,9.362,8.075,9.362
+	c0.765,0,1.387-0.591,1.387-1.317S8.84,6.728,8.075,6.728z"
+                  />
+                  <polygon
+                    points="17.817,30.233 16.717,30.233 16.717,24.853 7.504,15.816 7.504,9.902 8.604,9.902 8.604,15.354 
+	17.817,24.392 	"
+                  />
+                  <path
+                    d="M17.28,34.636c-1.372,0-2.488-1.084-2.488-2.417s1.116-2.417,2.488-2.417c1.371,0,2.486,1.084,2.486,2.417
+	S18.651,34.636,17.28,34.636z M17.28,30.901c-0.765,0-1.388,0.591-1.388,1.317s0.623,1.317,1.388,1.317
+	c0.765,0,1.387-0.591,1.387-1.317S18.044,30.901,17.28,30.901z"
+                  />
+                  <path
+                    d="M7.943,27.135c-1.372,0-2.487-1.084-2.487-2.417c0-1.332,1.116-2.416,2.487-2.416s2.487,1.084,2.487,2.416
+	C10.43,26.051,9.314,27.135,7.943,27.135z M7.943,23.401c-0.765,0-1.388,0.591-1.388,1.316c0,0.727,0.623,1.317,1.388,1.317
+	c0.765,0,1.387-0.591,1.387-1.317C9.33,23.992,8.708,23.401,7.943,23.401z"
+                  />
+                  <path
+                    d="M7.943,34.636c-1.372,0-2.487-1.084-2.487-2.417s1.116-2.417,2.487-2.417s2.487,1.084,2.487,2.417
+	S9.314,34.636,7.943,34.636z M7.943,30.901c-0.765,0-1.388,0.591-1.388,1.317s0.623,1.317,1.388,1.317
+	c0.765,0,1.387-0.591,1.387-1.317S8.708,30.901,7.943,30.901z"
+                  />
+                  <rect x="7.393" y="26.632" width="1.1" height="3.72" />
+                  <path
+                    d="M31.44,22.646c-1.372,0-2.487-1.084-2.487-2.417s1.115-2.417,2.487-2.417c1.371,0,2.486,1.084,2.486,2.417
+	S32.812,22.646,31.44,22.646z M31.44,18.912c-0.765,0-1.388,0.591-1.388,1.317s0.623,1.317,1.388,1.317s1.387-0.591,1.387-1.317
+	S32.205,18.912,31.44,18.912z"
+                  />
+                  <path
+                    d="M31.44,30.146c-1.372,0-2.487-1.084-2.487-2.417s1.115-2.417,2.487-2.417c1.371,0,2.486,1.084,2.486,2.417
+	S32.812,30.146,31.44,30.146z M31.44,26.412c-0.765,0-1.388,0.591-1.388,1.317s0.623,1.317,1.388,1.317s1.387-0.591,1.387-1.317
+	S32.205,26.412,31.44,26.412z"
+                  />
+                  <rect x="30.891" y="22.143" width="1.1" height="3.72" />
+                </svg>
+                <span>Innovative Technology</span>
+              </a>
+              <a href="#section-security" target="_self" class="page-scroll">
+                <svg role="img">
+                  <title>A Broker You Can Trust</title>
+                  <path
+                    d="M32.262,8.377c-3.419-1.786-8.677-2.721-12.104-2.721c-3.427,0-8.685,0.935-12.104,2.721L7.759,8.531v11.058
+c0,4.563,3.322,12.856,12.234,15.681l0.166,0.053l0.165-0.053c8.912-2.822,12.232-11.117,12.232-15.681V8.531L32.262,8.377z
+ M20.159,6.756c3.116,0,8.062,0.856,11.3,2.446v4.313c-3.369-0.728-8.12-1.111-11.3-1.111s-7.931,0.384-11.3,1.111V9.202
+C12.098,7.612,17.043,6.756,20.159,6.756z M20.159,34.167c-8.228-2.694-11.3-10.353-11.3-14.578v-4.95
+c3.297-0.744,8.105-1.136,11.3-1.136c3.194,0,8.002,0.393,11.3,1.137v4.949C31.459,23.812,28.387,31.473,20.159,34.167z"
+                  />
+                </svg>
+                <span>Strength & Security</span>
+              </a>
+              <a href="#section-education" target="_self" class="page-scroll">
+                <svg role="img">
+                  <title>Education</title>
+                  <g>
+                    <path
+                      d="M11.4,25.9c-0.4-3.3,0.6-6.5,2.7-9l-5.5-1.4V19h1.1v1H6.5v-0.9h1.1c0-1.2,0-2.4,0-3.6c0-0.1-0.2-0.3-0.4-0.3
+	c-1.5-0.4-3.1-0.8-4.7-1.2l-0.3-0.1l2.4-0.6l15-3.8c0.2,0,0.4,0,0.6,0l17,4.3l0.5,0.2l-11.4,2.8c1.5,1.6,2.5,3.5,2.8,5.7
+	c0.2,1.1,0.2,2.2,0.3,3.4h-0.1l-0.2-0.1c-1.4-1.6-3.4-2.6-5.6-2.9c-2.7-0.5-5.4-0.4-8,0.3c-1.5,0.4-2.9,1.2-3.9,2.3
+	C11.6,25.6,11.5,25.8,11.4,25.9z M33.7,14L33.7,14l-0.3-0.2l-13.1-3.3c-0.2-0.1-0.4-0.1-0.6,0c-4.1,1-8.1,2-12.2,3.1l-1.2,0.3
+	c0.1,0.1,0.3,0.2,0.4,0.2l12.7,3.2c0.3,0.1,0.7,0.1,1,0c3.4-0.9,6.9-1.7,10.3-2.6L33.7,14z M12.2,23.7c2.4-1.5,5.3-2.2,8.1-2.1
+	c2.8-0.1,5.7,0.6,8.1,2c-0.2-2.4-1.3-4.7-3-6.4c-0.1-0.1-0.3-0.2-0.5-0.1c-1.5,0.4-3,0.8-4.6,1.1c-0.3,0.1-0.6,0.1-0.8,0l-4-1
+	c-0.2,0-0.3,0-0.5,0.1C13.4,19.1,12.4,21.3,12.2,23.7z"
+                    />
+                    <path d="M6.7,20.5h0.9v10.1H6.7V20.5z" />
+                    <path d="M8.5,20.5h0.9v10.1H8.5V20.5z" />
+                  </g>
+                </svg>
+                <span>Education</span>
+              </a>
+              <a href="#section-awards" target="_self" class="page-scroll">
+                <svg role="img">
+                  <title>Awards</title>
+                  <g>
+                    <path
+                      d="M24.143,17.261c0.61-1.448,2.529-6.085,2.529-7.067V6.328h-6.519h-6.481v3.865
+		c0,0.985,1.906,5.65,2.501,7.081c-2.962,1.474-5.001,4.522-5.001,8.054c0,4.971,4.029,9,9,9s9-4.029,9-9
+		C29.172,21.785,27.119,18.729,24.143,17.261z M14.672,10.193V7.328h4.981v6.842h1V7.328h5.019v2.865
+		c0,0.548-1.228,3.775-2.45,6.677c-0.953-0.345-1.978-0.542-3.05-0.542c-1.084,0-2.118,0.201-3.08,0.553
+		C16.053,14.38,14.672,10.797,14.672,10.193z M20.172,33.328c-4.411,0-8-3.588-8-8c0-4.411,3.589-8,8-8s8,3.589,8,8
+		C28.172,29.74,24.583,33.328,20.172,33.328z"
+                    />
+                    <path
+                      d="M20.172,19.328c-3.313,0-6,2.688-6,6c0,3.314,2.687,6,6,6s6-2.686,6-6
+		C26.172,22.016,23.485,19.328,20.172,19.328z M20.172,30.328c-2.757,0-5-2.242-5-5c0-2.756,2.243-5,5-5s5,2.245,5,5
+		C25.172,28.086,22.929,30.328,20.172,30.328z"
+                    />
+                  </g>
+                </svg>
+                <span>Awards</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <span class="id-drop"
+        ><span id="section-global-market-access"></span
+      ></span>
+      <section class="section-global-market-access py-lg-0">
+        <div class="container">
+          <div class="row align-items-stretch">
+            <div class="col-12 col-lg-5 mt-4 mt-lg-0 order-1 order-lg-0">
+              <div class="global-market-access-content">
+                <h2>Global Market Access – Discover More Opportunities</h2>
+                <p class="mt-4 mb-2">
+                  Clients in over 200 countries and territories trade stocks,
+                  options, futures, currencies, bonds, funds and more on 160
+                  global markets from a single unified platform. Explore all
+                  available products worldwide.
+                </p>
+                <p class="mt-4 mb-2">
+                  Fund your account and trade assets in 28 currencies.<sup
+                    class="disclosure-indicator"
+                    aria-details="d-metrics-ibkr-currencies"
+                    >1</sup
+                  >
+                </p>
+                <p class="mt-4 mb-2">
+                  Scan the world for investment opportunities with the World Map
+                  Screener and the World Data Screener.
+                </p>
+              </div>
+            </div>
+            <div
+              class="col-12 offset-lg-1 col-lg-6 position-relative order-0 order-lg-1"
+            >
+              <figure class="global-market-access-img d-rtl-none">
+                <picture>
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="
+                      https://www.interactivebrokers.ie/images/web/why-ibkr-global-market-access-imac-xl.webp 1200w,
+                      https://www.interactivebrokers.ie/images/web/why-ibkr-global-market-access-imac-xl.png  1200w
+                    "
+                  />
+                  <source
+                    media="(min-width:992px)"
+                    srcset="
+                      https://www.interactivebrokers.ie/images/web/why-ibkr-global-market-access-imac-lg.webp 1199w,
+                      https://www.interactivebrokers.ie/images/web/why-ibkr-global-market-access-imac-lg.png  1199w
+                    "
+                  />
+                  <source
+                    media="(min-width:768px)"
+                    srcset="
+                      https://www.interactivebrokers.ie/images/web/why-ibkr-global-market-access-imac-md.webp 991w,
+                      https://www.interactivebrokers.ie/images/web/why-ibkr-global-market-access-imac-md.png  991w
+                    "
+                  />
+                  <source
+                    media="(min-width:576px)"
+                    srcset="
+                      https://www.interactivebrokers.ie/images/web/why-ibkr-global-market-access-imac-sm.webp 767w,
+                      https://www.interactivebrokers.ie/images/web/why-ibkr-global-market-access-imac-sm.png  767w
+                    "
+                  />
+                  <source
+                    srcset="
+                      https://www.interactivebrokers.ie/images/web/why-ibkr-global-market-access-imac-xl.webp 575w,
+                      https://www.interactivebrokers.ie/images/web/why-ibkr-global-market-access-imac-xs.png  575w
+                    "
+                  />
+                  <img
+                    class="r-img"
+                    src="https://www.interactivebrokers.ie/images/web/why-ibkr-global-market-access-imac-xl.webp"
+                    alt="Global Market Access"
+                    border="0"
+                  />
+                </picture>
+              </figure>
+              <figure class="global-market-access-img d-ltr-none">
+                <picture>
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="
+                      https://www.interactivebrokers.ie/images/web/why-ibkr-global-market-access-imac-rtl-xl.webp 1200w,
+                      https://www.interactivebrokers.ie/images/web/why-ibkr-global-market-access-imac-rtl-xl.png  1200w
+                    "
+                  />
+                  <source
+                    media="(min-width:992px)"
+                    srcset="
+                      https://www.interactivebrokers.ie/images/web/why-ibkr-global-market-access-imac-rtl-lg.webp 1199w,
+                      https://www.interactivebrokers.ie/images/web/why-ibkr-global-market-access-imac-rtl-lg.png  1199w
+                    "
+                  />
+                  <source
+                    media="(min-width:768px)"
+                    srcset="
+                      https://www.interactivebrokers.ie/images/web/why-ibkr-global-market-access-imac-rtl-md.webp 991w,
+                      https://www.interactivebrokers.ie/images/web/why-ibkr-global-market-access-imac-rtl-md.png  991w
+                    "
+                  />
+                  <source
+                    media="(min-width:576px)"
+                    srcset="
+                      https://www.interactivebrokers.ie/images/web/why-ibkr-global-market-access-imac-rtl-sm.webp 767w,
+                      https://www.interactivebrokers.ie/images/web/why-ibkr-global-market-access-imac-rtl-sm.png  767w
+                    "
+                  />
+                  <source
+                    srcset="
+                      https://www.interactivebrokers.ie/images/web/why-ibkr-global-market-access-imac-rtl.webp 575w,
+                      https://www.interactivebrokers.ie/images/web/why-ibkr-global-market-access-imac-rtl.png  575w
+                    "
+                  />
+                  <img
+                    class="r-img"
+                    src="https://www.interactivebrokers.ie/images/web/why-ibkr-global-market-access-imac-rtl-xl.webp"
+                    alt="Global Market Access"
+                    border="0"
+                  />
+                </picture>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+      <span class="id-drop"><span id="section-low-cost"></span></span>
+      <!-- LOWER COSTS -->
+      <style>
+        .section-low-cost .custom-border li a {
+          color: var(--p-color);
+        }
+        .section-low-cost .custom-border {
+          border-left: 4px solid var(--primary);
+          background-color: var(--gray-10-solid);
+        }
+        .section-low-cost .disclosure {
+          background: none;
+          padding: 0px;
+        }
+        .section-low-cost .disclosure .col-12 {
+          padding: 0px;
+        }
+        .section-low-cost .disclosure a {
+          color: var(--link-color);
+          text-decoration: none;
+        }
+        .section-low-cost .highlight-box {
+          padding: 2rem;
+          background-color: var(--gray-10-solid);
+        }
+      </style>
+      <span class="id-drop"><span id="lower-cost-inst"></span></span>
+      <!-- Trading Technology -->
+      <span class="id-drop"><span id="section-trading-technology"></span></span>
+      <span class="drop-link"><span id="trading-technology"></span></span>
+      <section id="trading-technology-section">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-9">
+              <figure>
+  <picture>
+    <!-- Desktop (min-width: 768px and up) -->
+    <source media="(min-width:768px)" srcset="../1.png" />
+    <!-- Mobile (below 768px) -->
+    <source srcset="../2.png" />
+    <img
+      class="drop-shadow-xl"
+      src="../1.png"
+      alt="Valor Capital Interface"
+      loading="lazy"
+      width="1637"
+      height="917"
+    />
+  </picture>
+</figure>
+
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-12 col-lg-11">
+              <h2 class="text-center">
+                Powerful Trading Platforms To Help You Succeed
+              </h2>
+            </div>
+          </div>
+          <div class="row justify-content-center mt-20">
+            <div class="col-12 col-lg-5">
+              <div class="mb-20">
+                <p>
+                  Award winning platforms for every investor from beginner to
+                  advanced on mobile, web and desktop.
+                </p>
+              </div>
+              <div class="mb-20">
+                <p>
+                  Discover new investment opportunities with over 200 free and
+                  premium research, market commentary and news providers.
+                </p>
+              </div>
+              <div class="mb-20">
+                <p>
+                  Spot market opportunities, analyze results, manage your
+                  account and make better decisions with our free trading tools.
+                </p>
+              </div>
+            </div>
+            <div class="col-12 col-lg-5 offset-lg-1">
+              <div class="mb-20">
+                <p>
+                  100+ order types - from limit orders to complex algorithmic
+                  trading - help you execute any trading strategy.
+                </p>
+              </div>
+              <div class="mb-20">
+                <p>
+                  Real-time trade confirmations, margin details, transaction
+                  cost analysis, sophisticated portfolio analysis and more.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--BEST INFORMED INVESTORS CHOOSE IBKR-->
+      <style type="text/css">
+        #best-informed-investors .best-informed-caption {
+        	padding: 20px;
+        }
+        @media (min-width: 768px) {
+        	#best-informed-investors .best-informed-caption {
+        		padding: 30px;
+        	}
+      </style>
+      <section id="best-informed-investors" class="">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-12 col-md-5 col-lg-4">
+              <img
+                loading="lazy"
+                src="../../images/web/ibkr-best-informed-h.jpg"
+                alt="Best Informed Investors Choose Interactive Brokers"
+              />
+            </div>
+            <div
+              class="col-12 col-md-7 offset-lg-1 dflex best-informed-caption"
+            >
+              <h2 class="mb-20">
+                The Best-Informed Investors Choose
+                <span class="d-none d-sm-inline d-md-none"><br /></span
+                >Interactive Brokers
+              </h2>
+              <p>
+                Valor puts serious investors in control by combining low pricing,
+                global market access, award-winning technology, and deep
+                financial strength. With equity capital of $18.5 billion,<span
+                  class="disclosure-indicator sup"
+                  aria-details="d-metrics-ibg-affiliates"
+                  >1</span
+                >
+                and 160+ global market centers, Valor truly serves investors who
+                demand more.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <span class="id-drop"><span id="section-security"></span></span>
+      <!-- BROKER SECURITY ---------------------------------------------------------------------------------------------------- -->
+      <span class="id-drop"><span id="broker-security"></span></span>
+      <section id="broker-security">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-12 col-lg-6 margin-bottom-20">
+              <h2>A Broker You Can Trust</h2>
+              <p>
+                When placing your money with a broker, you need to make sure
+                your broker is secure and can endure through good and bad times
+                in the broader financial markets. Our strong capital position,
+                conservative balance sheet and automated risk controls are
+                designed to protect Valor from major market events that can
+                threaten the stability of financial institutions.
+              </p>
+              <div class="totals">
+                <div class="row">
+                  <div class="col-6 col-sm-4">
+                    <p class="fs-2 fw-300 mt-20 mb-0">VALOR</p>
+                    <p class="text-small">Nasdaq Listed</p>
+                  </div>
+                  <div class="col-6 col-sm-4">
+                    <p class="fs-2 fw-300 mt-20 mb-0">$18.5B</p>
+                    <p class="text-small">
+                      Equity Capital<span
+                        class="disclosure-indicator"
+                        aria-details="d-metrics-ibg-affiliates"
+                        >*</span
+                      >
+                    </p>
+                  </div>
+                  <div class="col-6 col-sm-4">
+                    <p class="fs-2 fw-300 mt-20 mb-0">74%</p>
+                    <p class="text-small">
+                      Privately Held<span
+                        class="disclosure-indicator"
+                        aria-details="d-metrics-ibg-affiliates"
+                        >*</span
+                      >
+                    </p>
+                  </div>
+                  <div class="col-6 col-sm-4">
+                    <p class="fs-2 fw-300 mt-20 mb-0">$13.3B</p>
+                    <p class="text-small">
+                      Excess Regulatory Capital<span
+                        class="disclosure-indicator"
+                        aria-details="d-metrics-ibg-affiliates"
+                        >*</span
+                      >
+                    </p>
+                  </div>
+                  <div class="col-6 col-sm-4">
+                    <p class="fs-2 fw-300 mt-20 mb-0">3.87M</p>
+                    <p class="text-small">
+                      Client Accounts<span
+                        class="disclosure-indicator"
+                        aria-details="d-metrics-ibg-affiliates"
+                        >*</span
+                      >
+                    </p>
+                  </div>
+                  <div class="col-6 col-sm-4">
+                    <p class="fs-2 fw-300 mt-20 mb-0">3.55M</p>
+                    <p class="text-small">
+                      Daily Avg Revenue Trades<span
+                        class="disclosure-indicator"
+                        aria-details="d-metrics-ibg-affiliates"
+                        >*</span
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <br />
+            </div>
+            <div class="col-12 col-lg-5 offset-lg-1">
+              <picture>
+                <source
+                  media="(min-width:1200px)"
+                  srcset="
+                    https://www.interactivebrokers.ie/images/web/home-security-xl.webp?v=16bc5109771a1fe5f202675551139124 1200w,
+                    https://www.interactivebrokers.ie/images/web/home-security-xl.jpg?v=16bc5109771a1fe5f202675551139124  1200w
+                  "
+                />
+                <source
+                  media="(min-width:992px)"
+                  srcset="
+                    https://www.interactivebrokers.ie/images/web/home-security-lg.webp?v=16bc5109771a1fe5f202675551139124 1199w,
+                    https://www.interactivebrokers.ie/images/web/home-security-lg.jpg?v=16bc5109771a1fe5f202675551139124  1199w
+                  "
+                />
+                <source
+                  media="(min-width:768px)"
+                  srcset="
+                    https://www.interactivebrokers.ie/images/web/home-security-md.webp?v=16bc5109771a1fe5f202675551139124 991w,
+                    https://www.interactivebrokers.ie/images/web/home-security-md.jpg?v=16bc5109771a1fe5f202675551139124  991w
+                  "
+                />
+                <source
+                  media="(min-width:576px)"
+                  srcset="
+                    https://www.interactivebrokers.ie/images/web/home-security-sm.webp?v=16bc5109771a1fe5f202675551139124 767w,
+                    https://www.interactivebrokers.ie/images/web/home-security-sm.jpg?v=16bc5109771a1fe5f202675551139124  767w
+                  "
+                />
+                <source
+                  srcset="
+                    https://www.interactivebrokers.ie/images/web/home-security.webp?v=16bc5109771a1fe5f202675551139124 575w,
+                    https://www.interactivebrokers.ie/images/web/home-security.jpg?v=16bc5109771a1fe5f202675551139124  575w
+                  "
+                />
+                <img
+                  loading="lazy"
+                  src="https://www.interactivebrokers.ie/images/web/home-security-xl.webp?v=16bc5109771a1fe5f202675551139124"
+                  alt="Secure metal vault door"
+                  width="1600"
+                  height="1067"
+                />
+              </picture>
+            </div>
+          </div>
+          <p class="disclosure-item-inline text-sm text-dark-gray pl-3 mt-3">
+            Interactive Brokers Group and its affiliates. For additional
+            information view our
+            <a
+              href="https://investors.interactivebrokers.com/ir/main.php"
+              target="_blank"
+              rel="noopener"
+              >Investors Relations - Earnings Release</a
+            >
+            section.
+          </p>
+        </div>
+      </section>
+      <span class="id-drop"><span id="section-education"></span></span>
+      <style>
+        .education-banner {
+          min-height: 200px;
+        }
+        .logo-area {
+          background-image: url("../../images/web/header-campusac3c.jpg?v=3113cc28ffbb69041cb7a6b0d591f079");
+          background-size: cover;
+          background-position: right;
+          background-repeat: no-repeat;
+        }
+        .logo-area img {
+          width: 360px;
+        }
+        .description {
+          padding: 50px;
+        }
+        .education p {
+          color: var(--white);
+          margin: 5px 10px;
+          display: inline-block;
+        }
+        .education {
+          flex-flow: wrap;
+          padding: 0 40px;
+          justify-content: center;
+          display: flex;
+        }
+
+        @media (max-width: 576px) {
+          .description {
+            padding: 20px;
+          }
+        }
+        @media (max-width: 767.99px) {
+          .logo-area {
+            padding: 30px 20px 24px;
+          }
+        }
+        @media (min-width: 768px) and (max-width: 991.99px) {
+          .logo-area img {
+            padding: 30px;
+            min-width: 270px;
+          }
+          .education-banner {
+            min-height: 240px;
+          }
+        }
+        @media (min-width: 992px) {
+          .logo-area {
+            max-width: 480px;
+          }
+          .logo-area img {
+            min-width: 200px;
+          }
+          .education-banner {
+            min-height: 240px;
+          }
+        }
+      </style>
+      <span class="id-drop"><span id="education"></span></span>
+      <span class="id-drop"><span id="section-awards"></span></span>
+      <!-- AWARD WINNING PLATFORM AND SERVICES -->
+      <style type="text/css">
+        #award-winning {
+            padding-top: 50px;
+            padding-bottom: 20px;
+        }
+
+        #award-winning .awardset {
+            margin: 20px;
+        }
+        #award-winning .award-attribute {
+            text-align: center;
+            font-size: 0.875rem;
+        }
+        #award-winning .award-headline {
+            text-align: center;
+            padding-bottom: 2rem;
+        }
+        .award-content {
+            max-width: 200px;
+            height: 100%;
+            margin: auto;
+        }
+        /* Aspect Ratio */
+        .award-img-aspect {
+            width: 100%;
+            padding-top: 100%;
+            height: 0;
+            position:relative;
+        }
+        /* Aspect Ratio Container */
+        .award-img-aspect .award-img {
+            position: absolute;
+            height: 100% !important;
+            width: 100% !important;
+            top: 0;
+            left: 0;
+            display: flex;
+        }
+        .award-img-aspect .award-img img {
+            padding: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: contain;
+            object-position: center;
+            transform-origin: center;
+        }
+        #award-winning .btn-awards {
+            text-align: center;
+            margin: 20px;
+        }
+        /* MEDIA QUERY | EXTRA SMALL < 576px ---------------------------------------------------------------------------------------------------- */
+        @media (max-width:575.98px) {
+            #award-winning .award-attribute {
+                text-align: center;
+                font-size: 1rem;
+            }
+        }
+        /* MEDIA QUERY | SMALL > 576px ---------------------------------------------------------------------------------------------------- */
+        @media (min-width:576px) and (max-width:767.98px) {
+            #award-winning .award-attribute {
+                text-align: center;
+                font-size: 1rem;
+            }
+        }
+        /* MEDIA QUERY | MEDIUM > 768px ---------------------------------------------------------------------------------------------------- */
+        @media (min-width:768px) and (max-width:991.98px) {
+            #award-winning .awardset {
+                margin: 0;
+            }
+            #award-winning .award-attribute {
+                text-align: center;
+                font-size: 1rem;
+            }
+        }
+        /* MEDIA QUERY | LARGE > 992px ---------------------------------------------------------------------------------------------------- */
+        @media (min-width:992px) {
+                margin-top: 0;
+                margin-end: 25px;
+                -webkit-margin-end: 25px;
+                -moz-margin-end: 25px;
+                margin-bottom: 0;
+                margin-start: 0;
+                -webkit-margin-start: 0;
+                -moz-margin-start: 0;
+            }
+            #award-winning .awardset:last-child {
+                margin:0;
+            }
+        }
+      </style>
+      <section id="award-winning">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 text-center">
+              <h2 class="award-headline">Award Winning Platform & Services</h2>
+            </div>
+          </div>
+          <div class="row justify-content-center align-items-stretch">
+            <div class="col-12 col-md-4 col-lg-2 awardset order-1 order-lg-0">
+              <div class="award-content">
+                <div class="award-img-aspect">
+                  <div class="award-img">
+                    <img
+                      style="scale: 0.9"
+                      class="award-sb"
+                      loading="lazy"
+                      src="../../images/web/awards-2025-stockbrokers-professionaltrading.svg"
+                      alt="StockBrokers.com 2025 rated #1 for Professional Trading"
+                    />
+                  </div>
+                </div>
+                <p class="award-attribute">
+                  #1 Professional Trading
+                  <span class="d-none d-md-inline"><br /></span>#1 International
+                  Trading
+                </p>
+              </div>
+            </div>
+            <div class="col-12 col-md-4 col-lg-2 awardset order-2 order-lg-1">
+              <div class="award-content">
+                <div class="award-img-aspect">
+                  <div class="award-img">
+                    <img
+                      style="scale: 0.97"
+                      class="award-bz"
+                      loading="lazy"
+                      src="../../images/web/awards-2024-nerdwallet-best-online-broker-advanced-traders.png"
+                      alt="Nerdwallet Award"
+                    />
+                  </div>
+                </div>
+                <p class="award-attribute">
+                  Best Online Broker<span class="d-inline d-md-none">,</span>
+                  <span class="d-none d-md-inline"><br /></span> for Advanced
+                  Traders
+                </p>
+              </div>
+            </div>
+            <div class="col-12 col-md-4 col-lg-2 awardset order-0 order-lg-2">
+              <div class="award-content">
+                <div class="award-img-aspect">
+                  <div class="award-img">
+                    <img
+                      style="scale: 0.95"
+                      class="award-br"
+                      loading="lazy"
+                      src="../../images/web/award-barrons-2023-best-online-broker.png"
+                      alt="Interactive Brokers was Rated #1 - Best Online Broker ... Again - 2023 by Barron's"
+                    />
+                  </div>
+                </div>
+                <p class="award-attribute">
+                  #1 Best Online Broker
+                  <span class="d-none d-md-inline"><br /></span>5 out of 5 stars
+                </p>
+              </div>
+            </div>
+            <div class="col-12 col-md-4 col-lg-2 awardset order-3">
+              <div class="award-content">
+                <div class="award-img-aspect">
+                  <div class="award-img">
+                    <img
+                      class="award-iv"
+                      loading="lazy"
+                      src="../../images/web/award-2024-investopedia-best-for-advanced-traders.png"
+                      alt="Investopedia 2024 Award - Best for Advanced Traders"
+                    />
+                  </div>
+                </div>
+                <p class="award-attribute">
+                  Best for
+                  <span class="d-none d-md-inline"><br /> </span>Advanced
+                  Traders
+                </p>
+              </div>
+            </div>
+            <div class="col-12 col-md-4 col-lg-2 awardset order-4">
+              <div class="award-content">
+                <div class="award-img-aspect">
+                  <div class="award-img">
+                    <img
+                      style="scale: 0.85"
+                      class="award-bc d-light-none"
+                      loading="lazy"
+                      src="../../images/web/award-2025-brokerchooser_d.png"
+                      alt="BrokerChooser 2025 Award - Best Online Broker"
+                    />
+                    <img
+                      style="scale: 0.85"
+                      class="award-bc d-dark-none"
+                      loading="lazy"
+                      src="../../images/web/award-2025-brokerchooser.png"
+                      alt="BrokerChooser 2025 Award - Best Online Broker"
+                    />
+                  </div>
+                </div>
+                <p class="award-attribute">Best Online Broker</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <style type="text/css">
+        .cta-grid {
+          display: grid;
+          gap: 1.875rem;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          row-template-columns: 250px;
+        }
+        .cta-grid-item {
+          height: 0;
+          padding-bottom: 54%;
+          position: relative;
+        }
+        .cta-grid-aspect {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          inset-inline-start: 0;
+          display: flex;
+          z-index: 1;
+        }
+        .cta-grid-img {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          inset-inline-start: 0;
+          z-index: 0;
+        }
+        .cta-grid-img .r-img {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          inset-inline-start: 0;
+          object-fit: cover;
+          object-position: center end;
+        }
+        .cta-grid-content {
+          padding: 2rem;
+          align-self: flex-end;
+        }
+        .cta-grid-content h3 {
+          color: var(--black);
+          font-weight: var(--fw-600);
+          font-size: 1.25rem;
+          line-height: 1.625rem;
+        }
+        .cta-list {
+          display: grid;
+          gap: 0.5rem;
+          grid-template-columns: 1fr 1fr;
+        }
+        .cta-list img {
+          height: 40px;
+        }
+      </style>
+
+<section class="disclosure" id="disclosure">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <ol class="disclosure-list-page">
+          <li>
+            VALOR CAPITAL LTD is a registered private limited company providing professional consultancy services.
+          </li>
+          <li>
+            All information presented is for general business purposes and should not be considered financial advice.
+          </li>
+          <li>
+            Our consultancy activities focus on management strategy and operational efficiency, not financial management.
+          </li>
+          <li>
+            Any references to performance or results are illustrative and do not guarantee future success.
+          </li>
+          <li>
+            Clients are responsible for making their own informed decisions before implementing recommendations.
+          </li>
+          <li>
+            VALOR CAPITAL LTD complies with applicable UK regulations and operates under its registered company status.
+          </li>
+          <li>
+            Services may vary depending on industry sector, company size, and regional requirements.
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+      <style>
+        .disclosure-indicator.sup {
+          font-weight: var(--fw-400);
+          font-size: 0.625rem;
+          color: inherit;
+          vertical-align: super;
+          inset-block-start: -0.5em;
+          position: relative;
+          inset-inline-start: 2px;
+          line-height: 0;
+        }
+      </style>
+      <script>
+        $("span.disclosure-indicator").each(function () {
+          $(this).addClass("sup");
+        });
+
+        $(".disclosure-item-inline, .disclosure-list-inline").each(function () {
+          $(this).css("display", "none");
+        });
+        $(".disclosure-list-page > li").each(function (index) {
+          $(this).attr("data-sequence", index + 1);
+        });
+        $(".disclosure-indicator").each(function () {
+          var ariaDetails = $(this).attr("aria-details");
+          var disclosureId = $("#" + ariaDetails);
+          var disclosureCount = $(disclosureId).attr("data-sequence");
+          $(this).empty().append(disclosureCount);
+        });
+      </script>
+      <!-- Video Modal -->
+      <div
+        class="modal fade"
+        id="modalVideo"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="modalVideo"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <p class="modal-title" id="modalVideoTitle">
+                Change Cookie Settings
+              </p>
+              <button
+                type="button"
+                class="close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>
+                YouTube videos set Functional Cookies. You have rejected
+                Functional Cookies. In order to watch this video you must accept
+                Functional Cookies.
+              </p>
+              <p
+                class="d-flex flex-column flex-md-row flex-md-nowrap gap-3 align-items-center mt-3"
+              >
+                <a
+                  class="btn btn-secondary"
+                  href="../accounts/legalDocuments/privacy.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Change Cookie Settings</a
+                >
+                <a
+                  class="link-generic"
+                  href="https://gdcdyn.interactivebrokers.com/Universal/servlet/Registration_v2.formSampleView?formdb=4399"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >Read Cookie Policy</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script type="text/javascript">
+        // reloads the page when the video is dismissed. Since the condition is php-based we need to reload the page get the new value.
+        $("#modalVideo").on("hide.bs.modal", function (event) {
+          window.location.reload();
+        });
+      </script>
+
+      <script src="../../../player.vimeo.com/api/player.js"></script>
+      <script type="text/javascript">
+        $(document).ready(function () {
+          function stopVideo() {
+            var $frame = $("iframe");
+            // saves the current iframe source
+            var vidsrc = $frame.attr("src");
+            // sets the source to nothing, stopping the video
+            $frame.attr("src", "");
+            // sets it back to the correct link so that it reloads immediately on the next window open
+            $frame.attr("src", vidsrc);
+          }
+          $("#modalVideo").on("hidden.bs.modal", function (e) {
+            stopVideo();
+          });
+          // link directly to open account modal
+          if (window.location.href.indexOf("#modalOpenAccount") != -1) {
+            $("#modalOpenAccount").modal("show");
+          }
+        });
+      </script>
+    </div>
+   
+          <!-- FOOTER START  -->
+    <footer class="footer noprint" id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <p>
+              © 2026 VALOR CAPITAL LTD. All rights reserved. VALOR CAPITAL LTD
+              is a private limited company incorporated in the UK, providing
+              management consultancy services.
+            </p>
+            <p>
+              VALOR CAPITAL LTD operates under UK company regulations and is
+              committed to delivering professional and ethical consultancy
+              services.
+            </p>
+          </div>
+        </div>
+        <div class="footer-disclosure-links" id="footerDisclosureLinks">
+          <div class="row">
+            <div class="col">
+              <ul>
+                <li>
+                  <a
+                    href="../accounts/legalDocuments/anti-fraud-notice.html"
+                    target="_self"
+                    >Anti-Fraud Notice</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../general/warnings-on-frauds-and-scams.html"
+                    target="_self"
+                    >Warning on Frauds and Scams</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../accounts/legalDocuments/accessibility-policy.html"
+                    target="_self"
+                    >Accessibility Statement</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+ <!-- LICENSE INFORMATION START -->
+<div class="license-info" style="
+  border-top: 1px solid #ccc;
+  margin-top: 25px;
+  padding-top: 20px;
+  font-size: 0.95rem;
+  color: #000;
+  line-height: 1.6;
+">
+  <h6 style="font-weight: 600; margin-bottom: 10px; font-size: 1rem; color: #000;">
+    FSCA Authorization
+  </h6>
+
+  <p>
+    VALOR CAPITAL LTD is listed among the officially authorised 
+    <strong>Crypto Asset Service Providers (CASPs)</strong> under the 
+    <em>Financial Advisory and Intermediary Services (FAIS) Act, No. 37 of 2002</em>.
+  </p>
+
+  <p style="margin-top: 15px; font-size: 0.9rem; color: #222;">
+    <strong>Disclaimer:</strong> VALOR CAPITAL LTD does not accept any responsibility or liability 
+    for financial losses, damages, or actions taken based on the information, opinions, or materials 
+    provided on this website or through any communication. Users acknowledge that all investment 
+    and business activities carry inherent risk, and VALOR CAPITAL LTD shall not be held accountable 
+    for any direct or indirect consequences arising from such decisions.
+  </p>
+</div>
+<!-- LICENSE INFORMATION END -->
+        <div class="footer-entities" id="footerEntities">
+          <div class="row">
+            <div class="col">
+              <div class="footer-entity">
+                <p class="entity-name">
+                  <a href="../home.html" target="_self">VALOR CAPITAL LTD</a>
+                </p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- FOOTER END  -->
+    <!-- MODAL START | ABOUT IB GROUP ---------------------------------------------------------------------------------------------------- -->
+    <div
+      class="modal fade"
+      id="modalAlert"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="modalAboutIBGroup"
+    >
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content modal-primary">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+            <h4 class="modal-title">
+              <i class="fas fa-exclamation-circle"></i> Notice
+            </h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col">
+                <p class="message">message</p>
+                <!-- You will be brought to the website of our affiliate-->
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="row">
+              <div class="col-12 col-sm-3 order-2 order-sm-1">
+                <div class="panel-btn-left">
+                  <a
+                    href="javascript:void(0);"
+                    data-bs-dismiss="modal"
+                    class="btn btn-secondary"
+                    >Stay</a
+                  >
+                </div>
+              </div>
+              <div class="col-12 col-sm-9 order-1 order-sm-2">
+                <div class="panel-btn-right goto">
+                  <a
+                    href="javascript:void(0);"
+                    onclick=""
+                    data-bs-dismiss="modal"
+                    class="btn btn-primary"
+                    >Go</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#modalAlert").on("show.bs.modal", function (event) {
+          var button = $(event.relatedTarget); // Button that triggered the modal
+          let myMessage = button.data("mymessage");
+          /*let myLink = "location.href='"+button.data('mytargetlink')+"'"; */
+          let myLink = "window.open('" + button.data("mytargetlink") + "')";
+          // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+          // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+          var modal = $(this);
+          modal.find(".modal-body .message").text(myMessage);
+          modal.find(".modal-footer .goto a").attr("onclick", myLink);
+        });
+      });
+    </script>
+    <script>
+      if (window.location.href.includes("conf=am")) {
+        document.querySelector("#ibkr-header").style.display = "none";
+        document.querySelector("#footer").style.display = "none";
+      }
+    </script>
+    <!-- MODAL START | MODAL  -->
+    <style type="text/css">
+      #modalNewsAtIBKR .modal-dialog .modal-content .modal-header {
+        border-top: 1px solid var(--border-color) !important;
+      }
+    </style>
+    <div
+      class="modal fade"
+      id="modalNewsAtIBKR"
+      tabindex="-1"
+      aria-labelledby="newsibkrLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <p class="modal-title" id="newsibkrLabel">
+              Subscribe to News at IBKR
+            </p>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col">
+                <h2 class="mt-10">
+                  A Note from the Founder of Interactive Brokers
+                </h2>
+                <p class="fs-6 lh-6 mt-10">
+                  Thank you for visiting Interactive Brokers. I appreciate your
+                  interest in our firm and the time you've taken to learn more
+                  about us.
+                </p>
+                <p class="fs-6 lh-6 mt-20">
+                  If you'd like to stay connected, I invite you to subscribe to
+                  our quarterly update. In it, we share insights, platform
+                  enhancements, and tools to help you make better investment
+                  decisions.
+                </p>
+                <p class="fs-6 lh-6 mt-20">
+                  For nearly 50 years, we've been committed to empowering
+                  investors through technology, transparency, and low costs.
+                  We're here to support your investing journey.
+                </p>
+                <p class="fs-6 lh-6 mt-30 mb-20">
+                  Thomas Peterffy<br />
+                  Founder and Chairman<br />
+                  Interactive Brokers
+                </p>
+                <div class="tab-content news-ibkr-form">
+                  <form
+                    id="contact"
+                    name="contact"
+                    class="needs-validation"
+                    novalidate=""
+                  >
+                    <div class="row mt-20">
+                      <div class="col-12 col-lg-8 form-column-padding">
+                        <div class="mt-20 form-group mb-20">
+                          <label class="form-label" for="news_ibkr_email"
+                            >Email<span class="required"></span
+                          ></label>
+                          <input
+                            type="email"
+                            class="form-control"
+                            name="news_ibkr_email"
+                            aria-label="news_ibkr_email"
+                            id="news_ibkr_email"
+                            placeholder="Email address"
+                            title="This field is required"
+                            required=""
+                          />
+                          <div
+                            id="newsibkrform-invalid-email"
+                            class="invalid-feedback"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-20" style="display: none">
+                      <div class="col-12 col-lg-8 form-column-padding">
+                        <div class="mt-20 form-group mb-20">
+                          <label class="form-label" for="news_ibkr_name"
+                            >Name<span class="required"></span
+                          ></label>
+                          <input
+                            type="name"
+                            class="form-control"
+                            name="news_ibkr_name"
+                            aria-label="news_ibkr_name"
+                            id="news_ibkr_name"
+                            placeholder="Name"
+                            title="This field is required"
+                            required=""
+                          />
+                          <div
+                            id="newsibkrform-invalid-name"
+                            class="invalid-feedback"
+                          >
+                            Please provide your name
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row pt-10">
+                      <div class="col">
+                        <hr />
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12 col-sm-3 order-2 order-sm-1">
+                        <div class="d-flex justify-content-start">
+                          <p>
+                            <a
+                              href="javascript:void(0);"
+                              target="_self"
+                              id="newsibkrform-cancel"
+                              class="btn btn-default"
+                              role="button"
+                              data-bs-dismiss="modal"
+                              >Cancel</a
+                            >
+                          </p>
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-9 order-1 order-sm-2">
+                        <div class="d-flex justify-content-end">
+                          <p>
+                            <a
+                              href="javascript:void(0);"
+                              target="_self"
+                              id="newsibkrform-submit"
+                              type="submit"
+                              class="btn btn-primary submit-btn"
+                              role="button"
+                              >Submit</a
+                            >
+                          </p>
+                          <p
+                            id="newibkrform-success"
+                            style="display: none; padding-top: 10px"
+                          >
+                            We received your email. Thank you for your interest.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(function () {
+        setTimeout(function () {
+          $("#modalNewsAtIBKR").modal("show");
+        }, 2000);
+      });
+      $("#modalNewsAtIBKR").on("hidden.bs.modal", function () {
+        setCookie("IB_EMPRO", "1", 90, ".interactivebrokers.ie");
+      });
+      $("#newsibkrform-submit").click(function () {
+        $("#newsibkrform-invalid-email").hide();
+        $.ajax({
+          type: "POST",
+          url: "/response_handlers/email-pros/index.php",
+          dataType: "json",
+          data: {
+            email: $("#news_ibkr_email").val(),
+            name: $("#news_ibkr_name").val(),
+            emt: "129bca1175c87f29f253e0eb8dc4f895",
+          },
+          success: function (r) {
+            if (r && r.success) {
+              $("#newsibkrform-submit").hide();
+              $("#newsibkrform-cancel").hide();
+              $("#newibkrform-success").show();
+              setCookie("IB_EMPRO", "1", 365, ".interactivebrokers.ie");
+            } else {
+              $("#newsibkrform-invalid-email").show();
+              $("#newsibkrform-invalid-email").text(r.msg);
+            }
+          },
+          error: function (xhr, status, err) {
+            $("#newsibkrform-invalid-email").text(
+              "There was an error submitting your email. Please try again."
+            );
+          },
+        });
+      });
+    </script>
+    <div
+      class="modal fade noprint"
+      id="emailModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="emailModalLabel"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              id="cls_frm_1"
+              type="button"
+              class="close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title" id="gridSystemModalLabel">
+              <i class="far fa-envelope text-gray"></i> Email
+            </h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col">
+                <form>
+                  <div class="form-group">
+                    <label for="_to" class="control-label">To:</label>
+                    <span id="_err_to" style="color: red"></span>
+                    <input type="text" class="form-control" id="_to" />
+                  </div>
+                  <div class="form-group">
+                    <label for="_from" class="control-label">From:</label>
+                    <span id="_err_frm" style="color: red"></span>
+                    <input type="text" class="form-control" id="_from" />
+                  </div>
+                  <div class="form-group">
+                    <label for="_subject" class="control-label">Subject:</label>
+                    <span id="_err_subject" style="color: red"></span>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="_subject"
+                      value="Interactive Brokers"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <textarea
+                      class="form-control"
+                      id="_content"
+                      style="height: 200px"
+                    ></textarea>
+                  </div>
+                  <p class="text-sm">
+                    URL:
+                    <span class="text-italic text-black"
+                      >www.interactivebrokers.ie/en/index.php?f=<span
+                        id="vid"
+                      ></span
+                    ></span>
+                  </p>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="row">
+              <div class="col-6">
+                <div align="left">
+                  <button
+                    id="cls_frm_2"
+                    type="button"
+                    class="btn btn-default"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+              <div class="col-6">
+                <div align="right">
+                  <button type="button" class="btn btn-primary" id="send">
+                    Send
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <input type="hidden" id="_page_id" name="_page_id" value="40071" />
+    </div>
+    <!-- MODAL END | SHARE ON SOCIAL ---------------------------------------------------------------------------------------------------->
+    <script
+      type="text/javascript"
+      src="../../insights/ibtr_share2667.js?t=v1"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $(".social-sidebar span").click(function () {
+          $(".social-sidebar div").toggleClass("social-sidebar-hide");
+          $(".social-sidebar span").toggleClass("toggle-arrow");
+        });
+      });
+      function emailCookie() {
+        if (document.cookie.indexOf("IB_EM_SH") == -1) {
+          var ex = new Date();
+          ex.setTime(ex.getTime() + 86400000);
+          document.cookie =
+            "IB_EM_SH=" +
+            1 +
+            ";expires=" +
+            ex.toGMTString() +
+            ";path=/;domain=";
+        }
+      }
+    </script>
+    <!-- SCRIPTS FOOTER ---------------------------------------------------------------------------------------------------- -->
+    <script
+      type="text/javascript"
+      src="../../scripts/common/js/zeynep-2.2.0/zeynep.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../../scripts/common/js/lazyload/lazyload.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../../search/conversions.min.js"
+    ></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        // GATHER HEIGHT OF HEADER
+        var headerHeight = $("div#ibkr-header").outerHeight();
+        // GATHER HEIGHT OF DISCLOSURES
+        var disclosureHeight = $(
+          "section#UKProductDisclosure, section#TurbosDisclosure"
+        ).outerHeight();
+        $("section#UKProductDisclosure").css("top", headerHeight);
+        $("section#TurbosDisclosure").css("top", headerHeight);
+        // SET CONTENTS DIV PADDING TOP
+        $("div#contents").css("padding-top", disclosureHeight);
+        // OVERRIDE TOP OF DISCLOSURE AND PADDING-TOP OF CONTENTS ON WINDOW RESIZE
+        $(window).resize(function () {
+          var headerHeight = $("div#ibkr-header").outerHeight();
+          var disclosureHeight = $(
+            "section#UKProductDisclosure, section#TurbosDisclosure"
+          ).outerHeight();
+          var headerHeightDelta = headerHeight - disclosureHeight;
+          $("section#UKProductDisclosure").css(
+            "top",
+            disclosureHeight + headerHeightDelta
+          );
+          $("section#TurbosDisclosure").css(
+            "top",
+            disclosureHeight + headerHeightDelta
+          );
+          $("div#contents").css("padding-top", disclosureHeight);
+        });
+
+        // OVERRIDE TOP OF DISCLOSURE AND PADDING-TOP OF CONTENTS ON BANNER CLOSE
+        $("#bannerRegionSelector a.btn-close").click(function () {
+          setTimeout(function () {
+            var headerHeight = $("div#ibkr-header").outerHeight();
+            $("section#UKProductDisclosure").css("top", headerHeight);
+            $("section#TurbosDisclosure").css("top", headerHeight);
+            $("div#contents").css("padding-top", disclosureHeight);
+          }, 500);
+        });
+        // MOBILE MENU
+        $(function () {
+          // Initilize mobile menu
+          var zeynep = $(".menu-mobile").zeynep({
+            opened: function () {
+              console.log("the side menu opened");
+            },
+            closed: function () {
+              console.log("the side menu closed");
+            },
+          });
+          // Dynamically bind closing event
+          zeynep.on("closing", function () {
+            console.log("this event is dynamically binded");
+          });
+          // Mobile menu close on overlay click
+          $(".website-overlay").on("click", function () {
+            zeynep.close();
+          });
+          // Mobile menu close on button click
+          $(".btn-close").on("click", function () {
+            zeynep.close();
+          });
+          // Mobile menu open on navbar-toggler click
+          $(".navbar-toggler").on("click", function () {
+            zeynep.open();
+          });
+        });
+      });
+    </script>
+    <!-- Fix for Bootstrap dropdowns -->
+    <script>
+      $(document).ready(function() {
+        // Initialize dropdown functionality manually
+        $('.nav-link.dropdown-toggle').on('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          
+          var dropdown = $(this).next('.dropdown-menu');
+          var isOpen = dropdown.hasClass('show');
+          
+          // Close all other dropdowns
+          $('.dropdown-menu.show').removeClass('show');
+          $('.nav-link.dropdown-toggle[aria-expanded="true"]').attr('aria-expanded', 'false');
+          
+          // Toggle current dropdown
+          if (!isOpen) {
+            dropdown.addClass('show');
+            $(this).attr('aria-expanded', 'true');
+          } else {
+            dropdown.removeClass('show');
+            $(this).attr('aria-expanded', 'false');
+          }
+        });
+        
+        // Close dropdowns when clicking outside
+        $(document).on('click', function(e) {
+          if (!$(e.target).closest('.dropdown').length) {
+            $('.dropdown-menu.show').removeClass('show');
+            $('.nav-link.dropdown-toggle[aria-expanded="true"]').attr('aria-expanded', 'false');
+          }
+        });
+      });
+    </script>
+    <!-- STYLES FOOTER ---------------------------------------------------------------------------------------------------- -->
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="../../fonts/fontawesome-6.4.2/webfonts/fa-brands-400.woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="../../fonts/fontawesome-6.4.2/webfonts/fa-regular-400.woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="../../fonts/fontawesome-6.4.2/webfonts/fa-solid-900.woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      as="style"
+      href="../../css/ibkr/website-print.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="print"
+      href="../../css/ibkr/website-print.min.css"
+    />
+    <style type="text/css">
+      @import url("../../css/fontawesome-6.4.2/all.min.css") layer(vendors);
+      @import url("../../css/animate-3.7.2/animate.min.css") layer(vendors);
+      @import url("../../css/bootstrap-switch-3.3.2/bootstrap-switch.min.css")
+      layer(vendors);
+      @import url("../../css/icheck-1.0.2/icheck.css") layer(vendors);
+    </style>
+  </body>
+
+  <!-- Mirrored from www.interactivebrokers.ie/en/whyib/overview.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Sep 2025 08:53:47 GMT -->
+</html>

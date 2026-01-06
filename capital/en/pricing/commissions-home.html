@@ -1,0 +1,1708 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en" data-theme="light">
+  <!-- Mirrored from www.interactivebrokers.ie/en/pricing/commissions-home.php?re=amer by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Sep 2025 09:34:14 GMT -->
+  <!-- Added by HTTrack --><meta
+    http-equiv="content-type"
+    content="text/html;charset=UTF-8"
+  /><!-- /Added by HTTrack -->
+  <head>
+    <meta charset="utf-8" />
+    <title>Commissions & Fees | Valor Capital LTD</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=5"
+    />
+    <meta
+      name="description"
+      content="See commission schedules and trading desk fees here. Valor has low commissions on products across 160 global markets. No added spreads, ticket charges, platform fees, or account minimums."
+    />
+    <meta
+      name="keywords"
+      content="commissions, valor commissions, valor fees, fees, costs, stock commissions, warrants commissions, ETF commissions, option commissions, currency commissions, futures commissions, commission schedule, trading desk fees"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="expires" content="-1" />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta property="og:site_name" content="Valor" />
+    <!--Pid:49807-->
+    <link rel="canonical" href="commissions-home.html" />
+    <meta name="apple-mobile-web-app-title" content="IBKR" />
+    <!-- SCRIPTS HEAD  -->
+    <script
+      type="text/javascript"
+      src="../../scripts/common/js/jquery-3.6.1/jquery.min.js"
+    ></script>
+    <script type="text/javascript">
+      function createScriptElement(data) {
+        if (typeof data == "undefined") {
+          return;
+        }
+        var element = document.createElement("SCRIPT");
+        element.type = "text/javascript";
+        if (typeof data.id != "undefined") {
+          element.id = data.id;
+        }
+        if (typeof data.source != "undefined") {
+          element.src = data.source;
+        }
+        if (typeof data.loadfunction == "function") {
+          element.onload = data.loadfunction;
+        }
+        document.head.appendChild(element);
+      }
+      createScriptElement({
+        source:
+          "../../scripts/common/js/bootstrap-5.2.2/bootstrap.bundle.min.js",
+        loadfunction: bsLoaded,
+      });
+      createScriptElement({ source: "../../scripts/common/js/lib.js?ver=9" });
+      function storeCookie() {
+        if (typeof Storage !== "undefined") {
+          if (localStorage.getItem("web") !== null) {
+            localStorage.removeItem("web");
+          }
+        }
+      }
+      function bsLoaded() {
+        createScriptElement({
+          source: "../../scripts/common/js/appear/appear.min.js?ver=1",
+        });
+        createScriptElement({
+          source: "../../scripts/common/js/easing/easing.min.js?ver=1",
+        });
+        createScriptElement({
+          source: "../../scripts/common/js/parallax/parallax.min.js?ver=1",
+        });
+        createScriptElement({
+          source: "../../scripts/common/js/uitotop/uitotop.min.js?ver=1",
+          loadfunction: uiLoaded,
+        });
+      }
+      function uiLoaded() {
+        createScriptElement({
+          source: "../../scripts/common/js/twsUtils.js?ver=2",
+        });
+        createScriptElement({
+          source: "../../scripts/common/js/design/design.js?ver=1",
+        });
+      }
+    </script>
+    <script type="text/javascript">
+      $(function () {
+        if (document.cookie.indexOf("IB_SEARCH") == -1) {
+          var ex = new Date();
+          ex.setTime(ex.getTime() + 86400000);
+          document.cookie =
+            "IB_SEARCH=" +
+            Math.floor(new Date().getTime() / 1000) +
+            ";expires=" +
+            ex.toGMTString() +
+            ";path=/;domain=.interactivebrokers.ie";
+        }
+        let nex = new Date();
+        nex.setTime(nex.getTime() + 86400000);
+        document.cookie =
+          "IB_QD=0;expires=" +
+          nex.toGMTString() +
+          ";path=/;domain=.interactivebrokers.ie";
+
+        let excfd = new Date();
+        excfd.setTime(excfd.getTime() + 86400000);
+        document.cookie =
+          "IB_QD_CFD=0;expires=" +
+          excfd.toGMTString() +
+          ";path=/;domain=.interactivebrokers.ie";
+        $("div#langselector")
+          .find("a")
+          .each(function () {
+            $(this).click(function () {
+              var link = $(this).attr("href");
+              if (link.match(/\/(en|fr|de|es|it|ru|cn|jp)\//)) {
+                var langs = link.split("../../index.html");
+                if (
+                  langs[3] == "en" ||
+                  langs[3] == "fr" ||
+                  langs[3] == "de" ||
+                  langs[3] == "es" ||
+                  langs[3] == "it" ||
+                  langs[3] == "ru" ||
+                  langs[3] == "cn" ||
+                  langs[3] == "jp"
+                ) {
+                  var lang = langs[3];
+                  if (lang == "cn") {
+                    lang = "zh_CN";
+                  }
+                  if (lang == "jp") {
+                    lang = "ja";
+                  }
+                  if (hasCookie("IB_LANG")) {
+                    deleteCookie("IB_LANG");
+                  }
+                  setCookie("IB_LANG", lang, 7, ".interactivebrokers.ie");
+                } else if (langs[1] == "en") {
+                  var lang = "en";
+                  setCookie("IB_LANG", lang, 7, ".interactivebrokers.ie");
+                }
+              }
+            });
+          });
+        $("p#bandaid-close").click(function () {
+          setCookie("IB_BANDAID", 1, 7, ".interactivebrokers.ie");
+        });
+        $("a#btnCloseBannerRegionSelector").click(function () {
+          setCookie("IB_REGION_SEL", 1, 30, ".interactivebrokers.ie");
+        });
+        $("a#btnCloseBannerRegionDifc").click(function () {
+          setCookie("IB_DIFC", 1, 30, ".interactivebrokers.ie");
+        });
+      });
+    </script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      if (localStorage.getItem("consentMode") === null) {
+        const consentMode = {
+          ad_storage: "denied",
+          ad_user_data: "denied",
+          ad_personalization: "denied",
+          analytics_storage: "denied",
+        };
+        localStorage.setItem("consentMode", JSON.stringify(consentMode));
+        gtag("consent", "default", consentMode);
+      } else {
+        gtag(
+          "consent",
+          "default",
+          JSON.parse(localStorage.getItem("consentMode"))
+        );
+      }
+    </script>
+    <!-- STYLES HEAD -->
+    <style type="text/css">
+      @import url("../../css/bootstrap-5.2.2/bootstrap.min.css")
+      layer(bootstrap);
+    </style>
+    <link
+      rel="preload"
+      as="style"
+      href="../../css/ibkr/website.mince12.css?v=1848a6e12ea6c289ee1df7ee63749846"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+      href="../../css/ibkr/website.mince12.css?v=1848a6e12ea6c289ee1df7ee63749846"
+    />
+    <link
+      rel="preload"
+      as="style"
+      href="../../css/ibkr/theme-ibkr.min4f42.css?v=be9c72c0d328e7fc4987bce81f28981c"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+      href="../../css/ibkr/theme-ibkr.min4f42.css?v=be9c72c0d328e7fc4987bce81f28981c"
+    />
+    <style type="text/css">
+      #page-title {
+        display: none;
+      }
+      .tile-item {
+        display: block;
+        background-color: var(--gray-5-solid);
+        padding: 20px 30px;
+        border: none;
+        margin-bottom: 4px;
+        margin: 0;
+        -webkit-transition: all 0.3s ease-out;
+        -moz-transition: all 0.3s ease-out;
+        -o-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
+      }
+      .tile-item:hover {
+        background-color: var(--gray-30-solid);
+        cursor: pointer;
+      }
+      .tile-item + .tile-item {
+        margin-top: 2px;
+      }
+      .tile-header {
+        font-size: 1.125rem;
+        font-weight: var(--fw-600);
+        margin: 0;
+        line-height: 1.375;
+      }
+      .tile-content-subheader {
+        font-size: 0.9375rem;
+        font-weight: var(--fw-600);
+        line-height: 1;
+      }
+      .tile-content .text-price {
+        font-size: 1.5rem;
+        font-weight: var(--fw-600);
+      }
+      .tile-content * {
+        margin: 0;
+      }
+      .tile-content * + * {
+        margin-top: 0.25rem;
+        margin-bottom: 0;
+      }
+      .tile-content-label {
+        color: var(--gray);
+        font-size: 0.875rem;
+        letter-spacing: 0.1em;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+      .tile-content-small {
+        color: var(--dark);
+        font-size: 0.875rem;
+        letter-spacing: normal;
+        line-height: 1.1;
+        text-transform: none;
+      }
+      .text-button-icon i {
+        display: inline-block;
+      }
+      .light-gray {
+        background-color: var(--gray-5-solid);
+      }
+      [dir="rtl"] .fa-chevron-circle-right {
+        transform: scaleX(-1);
+        -moz-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+      }
+      /* MEDIA QUERY | EXTRA SMALL < 576px ---------------------------------------------------------------------------------------------------- */
+      @media (max-width: 575.98px) {
+      }
+      /* MEDIA QUERY | SMALL > 576px ---------------------------------------------------------------------------------------------------- */
+      @media (min-width: 576px) and (max-width: 767.98px) {
+      }
+      /* MEDIA QUERY | MEDIUM DOWN < 768px ---------------------------------------------------------------------------------------------------- */
+      @media (max-width: 767.98px) {
+      }
+      /* MEDIA QUERY | LARGE DOWN > 768px ---------------------------------------------------------------------------------------------------- */
+      @media (max-width: 991.98px) {
+        .tile-content + .tile-content {
+          padding-top: 1.5rem;
+        }
+        .text-button,
+        .text-button-icon {
+          display: block;
+          font-size: 0.95rem;
+          font-weight: var(--fw-600);
+          margin: 0;
+        }
+        .text-button-label {
+          display: inline-block;
+        }
+        .text-button-icon i {
+          font-size: 0.85em;
+        }
+      }
+      /* MEDIA QUERY | LARGE UP > 992px ---------------------------------------------------------------------------------------------------- */
+      @media (min-width: 992px) {
+        .text-button-label {
+          display: none !important;
+        }
+        .text-button-icon i {
+          font-size: 1.25em;
+        }
+      }
+      /* MEDIA QUERY | EXTRA LARGE > 1200px ---------------------------------------------------------------------------------------------------- */
+      @media (min-width: 1200px) {
+      }
+    </style>
+
+    <script>
+      (window.BOOMR_mq = window.BOOMR_mq || []).push([
+        "addVar",
+        {
+          "rua.upush": "false",
+          "rua.cpush": "false",
+          "rua.upre": "false",
+          "rua.cpre": "false",
+          "rua.uprl": "false",
+          "rua.cprl": "false",
+          "rua.cprf": "false",
+          "rua.trans": "SJ-d23de039-d518-4f10-9810-e68da4592744",
+          "rua.cook": "true",
+          "rua.ims": "false",
+          "rua.ufprl": "false",
+          "rua.cfprl": "false",
+          "rua.isuxp": "false",
+          "rua.texp": "norulematch",
+          "rua.ceh": "false",
+          "rua.ueh": "false",
+          "rua.ieh.st": "0",
+        },
+      ]);
+    </script>
+    <script>
+      !(function (e) {
+        var n = "https://s.go-mpulse.net/boomerang/";
+        if ("False" == "True")
+          (e.BOOMR_config = e.BOOMR_config || {}),
+            (e.BOOMR_config.PageParams = e.BOOMR_config.PageParams || {}),
+            (e.BOOMR_config.PageParams.pci = !0),
+            (n = "https://s2.go-mpulse.net/boomerang/");
+        if (
+          ((window.BOOMR_API_key = "XE2AM-F37QZ-LYWQP-H8KRM-4SNX5"),
+          (function () {
+            function e() {
+              if (!o) {
+                var e = document.createElement("script");
+                (e.id = "boomr-scr-as"),
+                  (e.src = window.BOOMR.url),
+                  (e.async = !0),
+                  i.parentNode.appendChild(e),
+                  (o = !0);
+              }
+            }
+            function t(e) {
+              o = !0;
+              var n,
+                t,
+                a,
+                r,
+                d = document,
+                O = window;
+              if (
+                ((window.BOOMR.snippetMethod = e ? "if" : "i"),
+                (t = function (e, n) {
+                  var t = d.createElement("script");
+                  (t.id = n || "boomr-if-as"),
+                    (t.src = window.BOOMR.url),
+                    (BOOMR_lstart = new Date().getTime()),
+                    (e = e || d.body),
+                    e.appendChild(t);
+                }),
+                !window.addEventListener &&
+                  window.attachEvent &&
+                  navigator.userAgent.match(/MSIE [67]\./))
+              )
+                return (
+                  (window.BOOMR.snippetMethod = "s"),
+                  void t(i.parentNode, "boomr-async")
+                );
+              (a = document.createElement("IFRAME")),
+                (a.src = "about:blank"),
+                (a.title = ""),
+                (a.role = "presentation"),
+                (a.loading = "eager"),
+                (r = (a.frameElement || a).style),
+                (r.width = 0),
+                (r.height = 0),
+                (r.border = 0),
+                (r.display = "none"),
+                i.parentNode.appendChild(a);
+              try {
+                (O = a.contentWindow), (d = O.document.open());
+              } catch (_) {
+                (n = document.domain),
+                  (a.src =
+                    "javascript:var d=document.open();d.domain='" +
+                    n +
+                    "';void(0);"),
+                  (O = a.contentWindow),
+                  (d = O.document.open());
+              }
+              if (n)
+                (d._boomrl = function () {
+                  (this.domain = n), t();
+                }),
+                  d.write("<bo" + "dy onload='document._boomrl();'>");
+              else if (
+                ((O._boomrl = function () {
+                  t();
+                }),
+                O.addEventListener)
+              )
+                O.addEventListener("load", O._boomrl, !1);
+              else if (O.attachEvent) O.attachEvent("onload", O._boomrl);
+              d.close();
+            }
+            function a(e) {
+              window.BOOMR_onload = (e && e.timeStamp) || new Date().getTime();
+            }
+            if (
+              !window.BOOMR ||
+              (!window.BOOMR.version && !window.BOOMR.snippetExecuted)
+            ) {
+              (window.BOOMR = window.BOOMR || {}),
+                (window.BOOMR.snippetStart = new Date().getTime()),
+                (window.BOOMR.snippetExecuted = !0),
+                (window.BOOMR.snippetVersion = 12),
+                (window.BOOMR.url = n + "XE2AM-F37QZ-LYWQP-H8KRM-4SNX5");
+              var i =
+                  document.currentScript ||
+                  document.getElementsByTagName("script")[0],
+                o = !1,
+                r = document.createElement("link");
+              if (
+                r.relList &&
+                "function" == typeof r.relList.supports &&
+                r.relList.supports("preload") &&
+                "as" in r
+              )
+                (window.BOOMR.snippetMethod = "p"),
+                  (r.href = window.BOOMR.url),
+                  (r.rel = "preload"),
+                  (r.as = "script"),
+                  r.addEventListener("load", e),
+                  r.addEventListener("error", function () {
+                    t(!0);
+                  }),
+                  setTimeout(function () {
+                    if (!o) t(!0);
+                  }, 3e3),
+                  (BOOMR_lstart = new Date().getTime()),
+                  i.parentNode.appendChild(r);
+              else t(!1);
+              if (window.addEventListener)
+                window.addEventListener("load", a, !1);
+              else if (window.attachEvent) window.attachEvent("onload", a);
+            }
+          })(),
+          "".length > 0)
+        )
+          if (
+            e &&
+            "performance" in e &&
+            e.performance &&
+            "function" == typeof e.performance.setResourceTimingBufferSize
+          )
+            e.performance.setResourceTimingBufferSize();
+        !(function () {
+          if (
+            ((BOOMR = e.BOOMR || {}),
+            (BOOMR.plugins = BOOMR.plugins || {}),
+            !BOOMR.plugins.AK)
+          ) {
+            var n = "false" == "true" ? 1 : 0,
+              t = "cookiepresent",
+              a = "eykumbc7mxv4o2gjewla-f-bb8103bb1-clientnsv4-s.akamaihd.net",
+              i = "false" == "true" ? 2 : 1,
+              o = {
+                "ak.v": "39",
+                "ak.cp": "1168163",
+                "ak.ai": parseInt("665092", 10),
+                "ak.ol": "0",
+                "ak.cr": 40,
+                "ak.ipv": 4,
+                "ak.proto": "http/1.1",
+                "ak.rid": "16e3073",
+                "ak.r": 50930,
+                "ak.a2": n,
+                "ak.m": "a",
+                "ak.n": "essl",
+                "ak.bpcip": "38.21.70.0",
+                "ak.cport": 49592,
+                "ak.gh": "95.101.132.199",
+                "ak.quicv": "",
+                "ak.tlsv": "tls1.2",
+                "ak.0rtt": "",
+                "ak.0rtt.ed": "",
+                "ak.csrc": "-",
+                "ak.acc": "bbr",
+                "ak.t": "1758012822",
+                "ak.ak":
+                  "hOBiQwZUYzCg5VSAfCLimQ==Rf3iL3+KFvOMCF9CuI07WncbI0aJKkxY/qSUVYD5QzUdoT8O9EhkexYMx+uIIOZ7bNOIklyI+ighf+KDLedcO3NLryJQ8V6/kRZ2YGXXauU4UxY2yMPe6BWRP0z4sDzr+8eZOmJeRuG6Y2D2NiTcsnR8b6uHWWJIZeGT4r1w8UR9algjP19gxlXvaL9xnkxdTqwsQcOs3gxNcjT9QbuLnjIZrUzKOyjqOsAt0tj7VRzlicWoJ+DIWDL3J3vHmMlgYZ55lRmsxj68ATwHyq914PJjiXp9w39OSviDlIgi02qyoET4Qfgfui5Z8J7Sc7ogm/FvE0QqpM4Cc61EdsWyQsxgTSlwLQVB5Ivcqqw0UWX7dRszjjyomD8C4hncu/4V47w07o4isw2T0deTLH7/P/Rq4BDQVnuTH43wjH/u1Vo=",
+                "ak.pv": "398",
+                "ak.dpoabenc": "",
+                "ak.tf": i,
+              };
+            if ("" !== t) o["ak.ruds"] = t;
+            var r = {
+              i: !1,
+              av: function (n) {
+                var t = "http.initiator";
+                if (n && (!n[t] || "spa_hard" === n[t]))
+                  (o["ak.feo"] = void 0 !== e.aFeoApplied ? 1 : 0),
+                    BOOMR.addVar(o);
+              },
+              rv: function () {
+                var e = [
+                  "ak.bpcip",
+                  "ak.cport",
+                  "ak.cr",
+                  "ak.csrc",
+                  "ak.gh",
+                  "ak.ipv",
+                  "ak.html",
+                  "ak.n",
+                  "ak.ol",
+                  "ak.proto",
+                  "ak.quicv",
+                  "ak.tlsv",
+                  "ak.0rtt",
+                  "ak.0rtt.ed",
+                  "ak.r",
+                  "ak.acc",
+                  "ak-2.html",
+                  "ak.tf",
+                ];
+                BOOMR.removeVar(e);
+              },
+            };
+            BOOMR.plugins.AK = {
+              akVars: o,
+              akDNSPreFetchDomain: a,
+              init: function () {
+                if (!r.i) {
+                  var e = BOOMR.subscribe;
+                  e("before_beacon", r.av, null, null),
+                    e("onbeacon", r.rv, null, null),
+                    (r.i = !0);
+                }
+                return this;
+              },
+              is_complete: function () {
+                return !0;
+              },
+            };
+          }
+        })();
+      })(window);
+    </script>
+  </head>
+  <body>
+    <div id="printheader"></div>
+    <!-- HEADER START  -->
+    <div class="ibkr-header" id="ibkr-header">
+      <style type="text/css">
+        .banner-risk-warning {
+          margin: 0px;
+          padding: 8px 0px;
+          width: 100%;
+          height: auto;
+          background-color: #242424;
+        }
+        .banner-risk-warning p {
+          margin: 0px;
+          padding: 0px;
+          font-weight: 400;
+          font-size: 1rem;
+          line-height: 1.25rem;
+          text-align: center;
+          color: #ffffff;
+        }
+        .banner-risk-warning .warninglink a {
+          text-decoration: underline;
+        }
+        /* BOOTSTRAP 4 | MEDIA QUERY | EXTRA SMALL (< 576PX) ---------------------------------------------------------------------------------------------------- */
+        @media (max-width: 575.98px) {
+          .banner-risk-warning {
+            padding: 4px 0px;
+          }
+          .banner-risk-warning p {
+            font-size: 0.8125rem;
+            line-height: 1rem;
+          }
+        }
+        /* BOOTSTRAP 4 | MEDIA QUERY | SMALL (576PX-767.98PX) ---------------------------------------------------------------------------------------------------- */
+        @media (min-width: 576px) and (max-width: 767.98px) {
+          .banner-risk-warning {
+            padding: 4px 0px;
+          }
+          .banner-risk-warning p {
+            font-size: 0.8125rem;
+            line-height: 1rem;
+          }
+        }
+        /* BOOTSTRAP 4 | MEDIA QUERY | MEDIUM (768PX-991.98PX) ---------------------------------------------------------------------------------------------------- */
+        @media (min-width: 768px) and (max-width: 991.98px) {
+          .banner-risk-warning {
+            padding: 4px 0px;
+          }
+          .banner-risk-warning p {
+            font-size: 0.8125rem;
+            line-height: 1rem;
+          }
+        }
+        /* BOOTSTRAP 4 | MEDIA QUERY | LARGE (992PX-1199.98PX) ---------------------------------------------------------------------------------------------------- */
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+        }
+        /* BOOTSTRAP 4 | MEDIA QUERY | EXTRA LARGE (>1200PX) ---------------------------------------------------------------------------------------------------- */
+        @media (min-width: 1200px) {
+        }
+      </style>
+      <div class="banner-risk-warning">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <p>
+                Investing in financial products involves risk. Losses may exceed
+                the value of your original investment.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- NAV TOP START (LG/XL ONLY) -->
+      <nav
+        class="navbar navbar-inverse navbar-expand-lg navbar-top d-none d-lg-block"
+      >
+        <div class="container">
+          <div class="navbar-collapse collapse" id="ibkr-nav-top"></div>
+        </div>
+      </nav>
+      <!-- NAV TOP END -->
+    
+        <!-- NAV BOTTOM START -->
+      <nav class="navbar navbar-inverse navbar-expand-lg navbar-bottom">
+        <div class="container">
+          <!-- LOGO -->
+          <a
+  href="../home.html"
+  target="_self"
+  title="Valor"
+  aria-label="Valor LTD Home"
+>
+  <img src="../../../logo.svg" alt="Valor LTD Logo" width="140" height="auto" />
+</a>
+
+
+          <!-- TOGGLE (XS/SM/MD ONLY) -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            aria-label="Toggle Navigation"
+          >
+            <span class="navbar-toggler-icon">
+              <i class="fas fa-bars" aria-hidden="true"></i>
+            </span>
+          </button>
+
+          <!-- NAV LINKS -->
+          <div class="navbar-collapse collapse" id="ibkr-nav-bottom">
+            <ul class="navbar-nav ml-auto align-items-center">
+              <!-- WHY VALOR -->
+              <li class="nav-item">
+                <a href="../whyib/overview.html" target="_self" class="nav-link">
+                  Why Valor
+                </a>
+              </li>
+
+              <!-- PRICING -->
+              <li class="nav-item dropdown">
+                <a
+                  href="javascript:void(0)"
+                  class="nav-link dropdown-toggle"
+                  id="nav-pricing"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Pricing
+                </a>
+                <div
+                  class="dropdown-menu dropdown-pricing"
+                  aria-labelledby="nav-pricing"
+                >
+                  <div class="row">
+                    <div class="col">
+                      <a
+                        href="../pricing/commissions-home.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >Commissions</a
+                      >
+                      <a
+                        href="../trading/margin-rates.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >Margin Rates</a
+                      >
+                      <a
+                        href="../pricing/research-news-services.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >Research and News</a
+                      >
+                      <a
+                        href="../pricing/market-data-pricing.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >Market Data Pricing</a
+                      >
+                      <a
+                        href="../pricing/other-fees-overview.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >Fees</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- TRADING -->
+              <li class="nav-item dropdown">
+                <a
+                  href="javascript:void(0)"
+                  class="nav-link dropdown-toggle"
+                  id="nav-technology"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Trading
+                </a>
+                <div
+                  class="dropdown-menu dropdown-technology"
+                  aria-labelledby="nav-technology"
+                >
+                  <div class="row">
+                    <div class="col">
+                      <a
+                        href="../trading/trading-platforms.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >Platforms</a
+                      >
+                      <a
+                        href="../trading/ib-api.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >APIs</a
+                      >
+                      <a
+                        href="../trading/margin.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >Margin</a
+                      >
+                      <a
+                        href="../trading/ordertypes.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >Order Types</a
+                      >
+                      <a
+                        href="../whyib/reporting.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >Reporting</a
+                      >
+                      <a
+                        href="../trading/sustainable-investing-ie.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >Sustainable Investing</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- LOGIN / OPEN ACCOUNT BUTTONS -->
+              <!-- LOG IN -->
+              <li class="nav-item d-none d-lg-block">
+                <a
+                  href="https://dex.whiterock24.ai/signin"
+                  target="_self"
+                  class="nav-link nav-login"
+                  id="nav-log-in"
+                >
+                  Log In
+                </a>
+              </li>
+              <!-- OPEN ACCOUNT -->
+              <li class="nav-item d-none d-lg-block">
+                <a
+                  href="https://dex.whiterock24.ai/sign-up"
+                  target="_self"
+                  class="nav-link nav-open-account"
+                  id="nav-open-account"
+                >
+                  Open Account
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- NAV BOTTOM END -->
+
+    </div>
+    <!-- HEADER END ---------------------------------------------------------------------------------------------------- -->
+    <!-- MOBILE NAV START (XS/SM/MD ONLY) -->
+<div class="menu-mobile d-lg-none">
+  <!-- CLOSE BUTTON -->
+  <div class="close-button">
+    <button type="button" class="btn-close" aria-label="Close Menu">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+
+  <!-- LOGO -->
+  <div class="logo-container">
+    <a
+  href="../home.html"
+  target="_self"
+  title="Valor"
+  aria-label="Valor LTD Home"
+>
+  <img src="../../../logo.svg" alt="Valor LTD Logo" width="140" height="auto" />
+</a>
+  </div>
+
+  <ul>
+    <!-- WHY VALOR -->
+    <li><a href="whyib/overview.html" target="_self">Why Valor</a></li>
+
+    <!-- PRICING (Always Open) -->
+    <li>
+      <p class="submenu-title">PRICING</p>
+      <ul>
+        <li><a href="../pricing/commissions-home.html" target="_self">Commissions</a></li>
+        <li><a href="../trading/margin-rates.html" target="_self">Margin Rates</a></li>
+        <li><a href="../pricing/research-news-services.html" target="_self">Research and News</a></li>
+        <li><a href="../pricing/market-data-pricing.html" target="_self">Market Data Pricing</a></li>
+        <li><a href="../pricing/other-fees-overview.html" target="_self">Fees</a></li>
+      </ul>
+    </li>
+
+    <!-- TRADING (Always Open) -->
+    <li>
+      <p class="submenu-title">TRADING</p>
+      <ul>
+        <li><a href="../trading/trading-platforms.html" target="_self">Platforms</a></li>
+        <li><a href="../trading/ib-api.html" target="_self">APIs</a></li>
+        <li><a href="../trading/margin.html" target="_self">Margin</a></li>
+        <li><a href="../trading/ordertypes.html" target="_self">Order Types</a></li>
+        <li><a href="../whyib/reporting.html" target="_self">Reporting</a></li>
+        <li><a href="../trading/sustainable-investing-ie.html" target="_self">Sustainable Investing</a></li>
+      </ul>
+    </li>
+
+    <!-- LOG IN -->
+    <li>
+      <a
+        href="https://dex.whiterock24.ai/signin"
+        target="_self"
+        class="nav-link nav-login"
+        id="nav-log-in"
+        style="display:block; width:calc(100% - 20px); margin:12px 10px; border:2px solid #c82333; color:#c82333; padding:12px; border-radius:0; text-align:center; font-weight:600;"
+      >
+        Log In
+      </a>
+    </li>
+
+    <!-- OPEN ACCOUNT -->
+    <li>
+      <a
+        href="https://dex.whiterock24.ai/sign-up"
+        target="_self"
+        class="nav-link nav-open-account"
+        id="nav-open-account"
+        style="display:block; width:calc(100% - 20px); margin:8px 10px 12px; background-color:#c82333; color:#fff; padding:12px; border-radius:0; text-align:center; font-weight:600;"
+      >
+        Open Account
+      </a>
+    </li>
+  </ul>
+</div>
+<!-- MOBILE NAV OVERLAY -->
+<div class="website-overlay d-lg-none"></div>
+<!-- MOBILE NAV END -->
+
+<style>
+/* Hover effects */
+.nav-login:hover {
+  border-color: #a71d2a !important;
+  color: #a71d2a !important;
+}
+
+.nav-open-account:hover {
+  background-color: #a71d2a !important;
+  color: #fff !important;
+}
+</style>
+
+
+
+    <div id="contents">
+      <section class="page-title" id="page-title">
+        <div class="container">
+          <div class="row">
+            <div class="col"><h1>Commissions & Fees</h1></div>
+          </div>
+        </div>
+      </section>
+      <!-- INTRO -->
+      <section class="hero hero-side-nav hero-dark" id="">
+        <figure class="hero-bg-img">
+          <picture>
+            <source
+              media="(min-width:1200px)"
+              srcset="
+                https://www.interactivebrokers.ie/images/web/commissions-hero-bg-xl.webp?v=c6837bcaf7ca64c9233b4fe9281dffdc 1200w,
+                https://www.interactivebrokers.ie/images/web/commissions-hero-bg-xl.jpg?v=c6837bcaf7ca64c9233b4fe9281dffdc  1200w
+              "
+            />
+            <source
+              media="(min-width:992px)"
+              srcset="
+                https://www.interactivebrokers.ie/images/web/commissions-hero-bg-lg.webp?v=c6837bcaf7ca64c9233b4fe9281dffdc 1199w,
+                https://www.interactivebrokers.ie/images/web/commissions-hero-bg-lg.jpg?v=c6837bcaf7ca64c9233b4fe9281dffdc  1199w
+              "
+            />
+            <source
+              media="(min-width:768px)"
+              srcset="
+                https://www.interactivebrokers.ie/images/web/commissions-hero-bg-md.webp?v=c6837bcaf7ca64c9233b4fe9281dffdc 991w,
+                https://www.interactivebrokers.ie/images/web/commissions-hero-bg-md.jpg?v=c6837bcaf7ca64c9233b4fe9281dffdc  991w
+              "
+            />
+            <source
+              media="(min-width:576px)"
+              srcset="
+                https://www.interactivebrokers.ie/images/web/commissions-hero-bg-xl.webp?v=c6837bcaf7ca64c9233b4fe9281dffdc 767w,
+                https://www.interactivebrokers.ie/images/web/commissions-hero-bg-xl.webp?v=c6837bcaf7ca64c9233b4fe9281dffdc 767w
+              "
+            />
+            <source
+              srcset="
+                https://www.interactivebrokers.ie/images/web/commissions-hero-bg-xl.webp?v=c6837bcaf7ca64c9233b4fe9281dffdc 575w,
+                https://www.interactivebrokers.ie/images/web/commissions-hero-bg-xl.webp?v=c6837bcaf7ca64c9233b4fe9281dffdc 575w
+              "
+            />
+            <img
+              class="img-flip-rtl"
+              src="https://www.interactivebrokers.ie/images/web/commissions-hero-bg-xl.webp?v=c6837bcaf7ca64c9233b4fe9281dffdc"
+              alt="Commissions Section Hero"
+              border="0"
+              width="900"
+              height="495"
+            />
+          </picture>
+        </figure>
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-4 col-xl-3">
+              <!-- Side Nav -->
+              <nav class="ibkr-sidebar">
+                <ul class="nav" id="nav_set">
+                  <li class="active">
+                    <a
+                      href="commissions-home.html"
+                      id="nav_overview"
+                      target="_self"
+                      >Overview</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      id="nav_futures"
+                      href="commissions-futures31b2.html?re=amer"
+                      target="_self"
+                      >Futures and FOPs</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      id="nav_spot_cur"
+                      href="commissions-spot-currencies31b2.html?re=amer"
+                      target="_self"
+                      >Spot Currencies</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      id="nav_cfds"
+                      href="commissions-cfd-share31b2.html?re=amer"
+                      target="_self"
+                      >CFDs</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      id="nav_trade_desk"
+                      href="commissions-trade-desk31b2.html?re=amer"
+                      target="_self"
+                      >Trade Desk</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+              <script>
+                $(document).ready(navSetAnimation);
+                $(window).on("resize", navSetAnimation);
+                function navSetAnimation() {
+                  const mqMd = window.matchMedia("(max-width:991.98px)");
+                  if (mqMd.matches) {
+                    $("#nav_set li").each(function () {
+                      let navItem = $(this);
+                      let navItemIndex = parseInt($(navItem).index() + 1) * 0.1;
+                      let navOrigin = $(".hero").offset().left;
+                      if ($(navItem).hasClass("active")) {
+                        let navItemActive = $(this);
+                        let navItemActiveOffset =
+                          navItemActive.offset().left - navOrigin;
+                        let navItemActiveDuration = navItemIndex * 1000;
+                        $("#nav_set").animate(
+                          { scrollLeft: navItemActiveOffset },
+                          navItemActiveDuration
+                        );
+                      }
+                    });
+                  }
+                }
+              </script>
+            </div>
+            <div class="col-12 col-sm-10 col-lg-7">
+              <div class="hero-content">
+                <p class="eyebrow">COMMISSIONS</p>
+                <h2>
+                  Minimize Your
+                  <span class="d-none d-md-inline d-lg-none"><br /> </span>Costs
+                  to <span class="d-none d-xl-inline"><br /> </span>Maximize
+                  Your Returns<sup>1</sup>
+                </h2>
+                <p class="subheading">
+                  Low commissions on products across 160 global markets
+                  <span class="d-none d-lg-inline"><br /> </span>No added
+                  spreads, ticket charges, platform fees, or account minimums
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    <section class="py-5 bg-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10 offset-lg-1">
+            <h2 class="mb-4">Our Commitment to Transparent Pricing</h2>
+            <p class="lead">At Valor Capital LTD, we believe that competitive pricing is fundamental to your investment success. Our commission structure is designed to provide institutional-grade pricing to all clients, regardless of account size.</p>
+            
+            <div class="row mt-5">
+              <div class="col-md-4 mb-4">
+                <div class="p-4 h-100 border">
+                  <h4 class="mb-3">No Hidden Fees</h4>
+                  <p>We maintain complete transparency in our fee structure. What you see is what you pay—no surprise charges, no hidden platform fees, and no minimum account balance requirements.</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="p-4 h-100 border">
+                  <h4 class="mb-3">Volume Discounts</h4>
+                  <p>Our tiered pricing structure rewards active traders. The more you trade, the lower your per-trade costs become, ensuring that high-volume clients benefit from economies of scale.</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="p-4 h-100 border">
+                  <h4 class="mb-3">Global Access</h4>
+                  <p>Access 160+ markets worldwide with a single account. Our competitive commission rates apply across all markets, giving you the freedom to diversify globally without excessive costs.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-5 light-gray">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10 offset-lg-1">
+            <h2 class="mb-4">Commission Structure Overview</h2>
+            <p class="mb-5">Valor Capital LTD offers some of the most competitive commission rates in the industry. Our pricing is straightforward and designed to maximize your returns.</p>
+            
+            <div class="mb-5">
+              <h3 class="mb-3">Equities & ETFs</h3>
+              <p><strong>UK & European Markets:</strong> From 0.05% of trade value (minimum £3.00 per order)</p>
+              <p><strong>US Markets:</strong> $0.005 per share (minimum $1.00 per order)</p>
+              <p><strong>Asian Markets:</strong> Competitive rates starting from 0.08% of trade value</p>
+              <p class="text-muted mt-2"><em>All equity trades are executed at the best available price with no markup on the spread.</em></p>
+            </div>
+
+            <div class="mb-5">
+              <h3 class="mb-3">Futures & Options</h3>
+              <p><strong>Index Futures:</strong> From £0.85 per contract</p>
+              <p><strong>Commodity Futures:</strong> From £1.25 per contract</p>
+              <p><strong>Options on Futures:</strong> From £0.85 per contract</p>
+              <p><strong>Equity Options:</strong> From £1.50 per contract (UK), $0.65 per contract (US)</p>
+              <p class="text-muted mt-2"><em>Exchange and regulatory fees are passed through at cost with no markup.</em></p>
+            </div>
+
+            <div class="mb-5">
+              <h3 class="mb-3">Foreign Exchange</h3>
+              <p><strong>Spot FX:</strong> Spreads from 0.2 pips on major pairs</p>
+              <p><strong>FX Options:</strong> Competitive spreads with no commission on standard lots</p>
+              <p><strong>Currency Conversion:</strong> Interbank rates plus 0.002% (2 basis points)</p>
+              <p class="text-muted mt-2"><em>Access to over 100 currency pairs with institutional-grade execution.</em></p>
+            </div>
+
+            <div class="mb-5">
+              <h3 class="mb-3">Contracts for Difference (CFDs)</h3>
+              <p><strong>Share CFDs:</strong> From 0.05% of trade value</p>
+              <p><strong>Index CFDs:</strong> Spreads from 0.5 points on major indices</p>
+              <p><strong>Commodity CFDs:</strong> Competitive spreads with no commission</p>
+              <p class="text-muted mt-2"><em>CFD trading involves significant risk. Losses can exceed deposits.</em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-5 bg-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10 offset-lg-1">
+            <h2 class="mb-4">Industry-Leading Margin Rates</h2>
+            <p class="lead mb-4">Valor Capital LTD offers some of the lowest margin rates in the industry, calculated daily and charged monthly based on your average daily balance.</p>
+            
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <thead class="table-light">
+                  <tr>
+                    <th>Balance Tier (GBP)</th>
+                    <th>Annual Rate</th>
+                    <th>Effective Daily Rate</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>£0 - £100,000</td>
+                    <td>Base Rate + 1.5%</td>
+                    <td>Calculated daily</td>
+                  </tr>
+                  <tr>
+                    <td>£100,000 - £1,000,000</td>
+                    <td>Base Rate + 1.0%</td>
+                    <td>Calculated daily</td>
+                  </tr>
+                  <tr>
+                    <td>£1,000,000 - £5,000,000</td>
+                    <td>Base Rate + 0.75%</td>
+                    <td>Calculated daily</td>
+                  </tr>
+                  <tr>
+                    <td>Over £5,000,000</td>
+                    <td>Base Rate + 0.5%</td>
+                    <td>Calculated daily</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="text-muted mt-3"><em>Base rate is determined by the Bank of England base rate. Margin rates are subject to change. Please refer to your account agreement for complete terms.</em></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-5 light-gray">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10 offset-lg-1">
+            <h2 class="mb-4">Additional Services & Fees</h2>
+            
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <h4>Market Data</h4>
+                <p><strong>Real-Time Data:</strong> From £5/month per exchange</p>
+                <p><strong>Delayed Data:</strong> Free for all account holders</p>
+                <p><strong>Premium Research:</strong> Available from £25/month</p>
+              </div>
+              <div class="col-md-6 mb-4">
+                <h4>Account Services</h4>
+                <p><strong>Account Maintenance:</strong> No monthly fees</p>
+                <p><strong>Withdrawals:</strong> Free (up to 3 per month)</p>
+                <p><strong>Wire Transfers:</strong> £10 per outgoing transfer</p>
+              </div>
+              <div class="col-md-6 mb-4">
+                <h4>Trading Platforms</h4>
+                <p><strong>Web Platform:</strong> Free</p>
+                <p><strong>Desktop Platform:</strong> Free</p>
+                <p><strong>Mobile Apps:</strong> Free (iOS & Android)</p>
+              </div>
+              <div class="col-md-6 mb-4">
+                <h4>Professional Services</h4>
+                <p><strong>Trade Desk Assistance:</strong> From £25 per trade</p>
+                <p><strong>Portfolio Analysis:</strong> Complimentary</p>
+                <p><strong>Tax Reporting:</strong> Included at no charge</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-5 bg-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10 offset-lg-1">
+            <h2 class="mb-4">Why Valor Capital LTD?</h2>
+            <p class="lead mb-5">Our pricing philosophy is simple: lower costs mean higher returns for you. See how we compare to traditional brokers.</p>
+            
+            <div class="row">
+              <div class="col-md-4 mb-4">
+                <div class="text-center p-4 border h-100">
+                  <div class="display-4 text-primary mb-3">85%</div>
+                  <h5>Lower Commissions</h5>
+                  <p>Compared to traditional full-service brokers on average equity trades</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="text-center p-4 border h-100">
+                  <div class="display-4 text-primary mb-3">160+</div>
+                  <h5>Global Markets</h5>
+                  <p>Access to exchanges across North America, Europe, Asia, and beyond</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="text-center p-4 border h-100">
+                  <div class="display-4 text-primary mb-3">£0</div>
+                  <h5>Account Minimum</h5>
+                  <p>No minimum balance required to open or maintain your account</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-5 light-gray">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10 offset-lg-1">
+            <h2 class="mb-4">Important Information</h2>
+            <div class="small">
+              <p><strong>Risk Warning:</strong> Trading in financial instruments carries a high level of risk and may not be suitable for all investors. The value of investments can go down as well as up, and you may receive back less than your original investment. Past performance is not indicative of future results.</p>
+              
+              <p><strong>Margin Trading:</strong> Trading on margin increases both potential gains and potential losses. You should carefully consider whether margin trading is appropriate for your financial situation and risk tolerance.</p>
+              
+              <p><strong>CFD Risk:</strong> Contracts for Difference (CFDs) are complex instruments and come with a high risk of losing money rapidly due to leverage. You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money.</p>
+              
+              <p><strong>Commission Disclosure:</strong> All commission rates quoted are subject to change. Additional exchange, regulatory, and clearing fees may apply. Please refer to our complete fee schedule for detailed information on all charges.</p>
+              
+              <p><strong>Professional Advice:</strong> This information is provided for general purposes only and does not constitute financial advice. You should seek independent financial advice before making any investment decisions.</p>
+              
+              <p class="mt-4"><sup>1</sup> Lower costs can contribute to better net returns, but do not guarantee investment performance. All investments carry risk.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer noprint" id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <p>
+              © 2026 VALOR CAPITAL LTD. All rights reserved. VALOR CAPITAL LTD
+              is a private limited company incorporated in the UK, providing
+              management consultancy services.
+            </p>
+            <p>
+              VALOR CAPITAL LTD operates under UK company regulations and is
+              committed to delivering professional and ethical consultancy
+              services.
+            </p>
+          </div>
+        </div>
+        <div class="footer-disclosure-links" id="footerDisclosureLinks">
+          <div class="row">
+            <div class="col">
+              <ul>
+                <li>
+                  <a
+                    href="../accounts/legalDocuments/anti-fraud-notice.html"
+                    target="_self"
+                    >Anti-Fraud Notice</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../general/warnings-on-frauds-and-scams.html"
+                    target="_self"
+                    >Warning on Frauds and Scams</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../accounts/legalDocuments/accessibility-policy.html"
+                    target="_self"
+                    >Accessibility Statement</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+ <!-- LICENSE INFORMATION START -->
+<div class="license-info" style="
+  border-top: 1px solid #ccc;
+  margin-top: 25px;
+  padding-top: 20px;
+  font-size: 0.95rem;
+  color: #000;
+  line-height: 1.6;
+">
+  <h6 style="font-weight: 600; margin-bottom: 10px; font-size: 1rem; color: #000;">
+    FSCA Authorization
+  </h6>
+
+  <p>
+    VALOR CAPITAL LTD is listed among the officially authorised 
+    <strong>Crypto Asset Service Providers (CASPs)</strong> under the 
+    <em>Financial Advisory and Intermediary Services (FAIS) Act, No. 37 of 2002</em>.
+  </p>
+
+  <p style="margin-top: 15px; font-size: 0.9rem; color: #222;">
+    <strong>Disclaimer:</strong> VALOR CAPITAL LTD does not accept any responsibility or liability 
+    for financial losses, damages, or actions taken based on the information, opinions, or materials 
+    provided on this website or through any communication. Users acknowledge that all investment 
+    and business activities carry inherent risk, and VALOR CAPITAL LTD shall not be held accountable 
+    for any direct or indirect consequences arising from such decisions.
+  </p>
+</div>
+<!-- LICENSE INFORMATION END -->
+        <div class="footer-entities" id="footerEntities">
+          <div class="row">
+            <div class="col">
+              <div class="footer-entity">
+                <p class="entity-name">
+                  <a href="../home.html" target="_self">VALOR CAPITAL LTD</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- FOOTER END  -->
+
+    <!-- MODAL START | ABOUT IB GROUP ---------------------------------------------------------------------------------------------------- -->
+    <div
+      class="modal fade"
+      id="modalAlert"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="modalAboutIBGroup"
+    >
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content modal-primary">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+            <h4 class="modal-title">
+              <i class="fas fa-exclamation-circle"></i> Notice
+            </h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col">
+                <p class="message">message</p>
+                <!-- You will be brought to the website of our affiliate-->
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="row">
+              <div class="col-12 col-sm-3 order-2 order-sm-1">
+                <div class="panel-btn-left">
+                  <a
+                    href="javascript:void(0);"
+                    data-bs-dismiss="modal"
+                    class="btn btn-secondary"
+                    >Stay</a
+                  >
+                </div>
+              </div>
+              <div class="col-12 col-sm-9 order-1 order-sm-2">
+                <div class="panel-btn-right goto">
+                  <a
+                    href="javascript:void(0);"
+                    onclick=""
+                    data-bs-dismiss="modal"
+                    class="btn btn-primary"
+                    >Go</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#modalAlert").on("show.bs.modal", function (event) {
+          var button = $(event.relatedTarget); // Button that triggered the modal
+          let myMessage = button.data("mymessage");
+          /*let myLink = "location.href='"+button.data('mytargetlink')+"'"; */
+          let myLink = "window.open('" + button.data("mytargetlink") + "')";
+          // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+          // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+          var modal = $(this);
+          modal.find(".modal-body .message").text(myMessage);
+          modal.find(".modal-footer .goto a").attr("onclick", myLink);
+        });
+      });
+    </script>
+    <script>
+      if (window.location.href.includes("conf=am")) {
+        document.querySelector("#ibkr-header").style.display = "none";
+        document.querySelector("#footer").style.display = "none";
+      }
+    </script>
+    <!-- MODAL START | MODAL  -->
+    <!-- SHARE ON SOCIAL ---------------------------------------------------------------------------------------------------->
+    <!-- MODAL START | SHARE ON SOCIAL ---------------------------------------------------------------------------------------------------->
+    <div
+      class="modal fade noprint"
+      id="emailModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="emailModalLabel"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              id="cls_frm_1"
+              type="button"
+              class="close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title" id="gridSystemModalLabel">
+              <i class="far fa-envelope text-gray"></i> Email
+            </h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col">
+                <form>
+                  <div class="form-group">
+                    <label for="_to" class="control-label">To:</label>
+                    <span id="_err_to" style="color: red"></span>
+                    <input type="text" class="form-control" id="_to" />
+                  </div>
+                  <div class="form-group">
+                    <label for="_from" class="control-label">From:</label>
+                    <span id="_err_frm" style="color: red"></span>
+                    <input type="text" class="form-control" id="_from" />
+                  </div>
+                  <div class="form-group">
+                    <label for="_subject" class="control-label">Subject:</label>
+                    <span id="_err_subject" style="color: red"></span>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="_subject"
+                      value="Interactive Brokers"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <textarea
+                      class="form-control"
+                      id="_content"
+                      style="height: 200px"
+                    ></textarea>
+                  </div>
+                  <p class="text-sm">
+                    URL:
+                    <span class="text-italic text-black"
+                      >www.interactivebrokers.ie/en/index.php?f=<span
+                        id="vid"
+                      ></span
+                    ></span>
+                  </p>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="row">
+              <div class="col-6">
+                <div align="left">
+                  <button
+                    id="cls_frm_2"
+                    type="button"
+                    class="btn btn-default"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+              <div class="col-6">
+                <div align="right">
+                  <button type="button" class="btn btn-primary" id="send">
+                    Send
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <input type="hidden" id="_page_id" name="_page_id" value="49807" />
+    </div>
+    <!-- MODAL END | SHARE ON SOCIAL ---------------------------------------------------------------------------------------------------->
+    <script
+      type="text/javascript"
+      src="../../insights/ibtr_share2667.js?t=v1"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $(".social-sidebar span").click(function () {
+          $(".social-sidebar div").toggleClass("social-sidebar-hide");
+          $(".social-sidebar span").toggleClass("toggle-arrow");
+        });
+      });
+      function emailCookie() {
+        if (document.cookie.indexOf("IB_EM_SH") == -1) {
+          var ex = new Date();
+          ex.setTime(ex.getTime() + 86400000);
+          document.cookie =
+            "IB_EM_SH=" +
+            1 +
+            ";expires=" +
+            ex.toGMTString() +
+            ";path=/;domain=";
+        }
+      }
+    </script>
+    <!-- SCRIPTS FOOTER ---------------------------------------------------------------------------------------------------- -->
+    <script
+      type="text/javascript"
+      src="../../scripts/common/js/zeynep-2.2.0/zeynep.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../../scripts/common/js/lazyload/lazyload.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../../search/conversions.min.js"
+    ></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        // GATHER HEIGHT OF HEADER
+        var headerHeight = $("div#ibkr-header").outerHeight();
+        // GATHER HEIGHT OF DISCLOSURES
+        var disclosureHeight = $(
+          "section#UKProductDisclosure, section#TurbosDisclosure"
+        ).outerHeight();
+        $("section#UKProductDisclosure").css("top", headerHeight);
+        $("section#TurbosDisclosure").css("top", headerHeight);
+        // SET CONTENTS DIV PADDING TOP
+        $("div#contents").css("padding-top", disclosureHeight);
+        // OVERRIDE TOP OF DISCLOSURE AND PADDING-TOP OF CONTENTS ON WINDOW RESIZE
+        $(window).resize(function () {
+          var headerHeight = $("div#ibkr-header").outerHeight();
+          var disclosureHeight = $(
+            "section#UKProductDisclosure, section#TurbosDisclosure"
+          ).outerHeight();
+          var headerHeightDelta = headerHeight - disclosureHeight;
+          $("section#UKProductDisclosure").css(
+            "top",
+            disclosureHeight + headerHeightDelta
+          );
+          $("section#TurbosDisclosure").css(
+            "top",
+            disclosureHeight + headerHeightDelta
+          );
+          $("div#contents").css("padding-top", disclosureHeight);
+        });
+
+        // OVERRIDE TOP OF DISCLOSURE AND PADDING-TOP OF CONTENTS ON BANNER CLOSE
+        $("#bannerRegionSelector a.btn-close").click(function () {
+          setTimeout(function () {
+            var headerHeight = $("div#ibkr-header").outerHeight();
+            $("section#UKProductDisclosure").css("top", headerHeight);
+            $("section#TurbosDisclosure").css("top", headerHeight);
+            $("div#contents").css("padding-top", disclosureHeight);
+          }, 500);
+        });
+        // MOBILE MENU
+        $(function () {
+          // Initilize mobile menu
+          var zeynep = $(".menu-mobile").zeynep({
+            opened: function () {
+              console.log("the side menu opened");
+            },
+            closed: function () {
+              console.log("the side menu closed");
+            },
+          });
+          // Dynamically bind closing event
+          zeynep.on("closing", function () {
+            console.log("this event is dynamically binded");
+          });
+          // Mobile menu close on overlay click
+          $(".website-overlay").on("click", function () {
+            zeynep.close();
+          });
+          // Mobile menu close on button click
+          $(".btn-close").on("click", function () {
+            zeynep.close();
+          });
+          // Mobile menu open on navbar-toggler click
+          $(".navbar-toggler").on("click", function () {
+            zeynep.open();
+          });
+        });
+      });
+    </script>
+    <!-- STYLES FOOTER ---------------------------------------------------------------------------------------------------- -->
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="../../fonts/fontawesome-6.4.2/webfonts/fa-brands-400.woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="../../fonts/fontawesome-6.4.2/webfonts/fa-regular-400.woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="../../fonts/fontawesome-6.4.2/webfonts/fa-solid-900.woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      as="style"
+      href="../../css/ibkr/website-print.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="print"
+      href="../../css/ibkr/website-print.min.css"
+    />
+    <style type="text/css">
+      @import url("../../css/fontawesome-6.4.2/all.min.css") layer(vendors);
+      @import url("../../css/animate-3.7.2/animate.min.css") layer(vendors);
+      @import url("../../css/bootstrap-switch-3.3.2/bootstrap-switch.min.css")
+      layer(vendors);
+      @import url("../../css/icheck-1.0.2/icheck.css") layer(vendors);
+    </style>
+  </body>
+
+  <!-- Mirrored from www.interactivebrokers.ie/en/pricing/commissions-home.php?re=amer by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Sep 2025 09:34:17 GMT -->
+</html>

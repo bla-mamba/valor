@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="de" data-theme="light">
+
+<!-- Mirrored from www.interactivebrokers.ie/de/general/about/supplier-information.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Sep 2025 09:18:28 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8">
+<title>Informationen f&#252;r Auftragnehmer | Interactive Brokers Ireland</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"> 
+<meta name="description" content="Zusammenfassende Darstellung des Unternehmens &#252;ber die Bedeutung der Zusammenarbeit mit Auftragnehmern, Verhaltenskodex f&#252;r Auftragnehmer">
+<meta name="keywords" content="Anbieter, Auftragnehmer, Verhaltenskodex f&#252;r Auftragnehmer">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta http-equiv="expires" content="-1">
+<meta name="robots" content="index, follow">
+<meta http-equiv="pragma" content="no-cache">
+<meta name="apple-mobile-web-app-title" content="IBKR">
+<link rel="icon" sizes="192x192" href="../../../images/web/favicons/home-screen-icon-192x192.png" />
+<link rel="icon" sizes="128x128" href="../../../images/web/favicons/home-screen-icon-128x128.png" />
+<link rel="apple-touch-icon" sizes="57x57" href="../../../images/web/favicons/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="../../../images/web/favicons/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="../../../images/web/favicons/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="../../../images/web/favicons/apple-touch-icon-144x144.png" />
+<!-- SCRIPTS HEAD  -->
+<script type="text/javascript" src='../../../scripts/common/js/jquery-3.6.1/jquery.min.js'></script>
+<script type="text/javascript">
+function createScriptElement(data) {
+ if (typeof data == "undefined") {
+  return;
+ }
+ var element = document.createElement("SCRIPT");
+ element.type = "text/javascript";
+ if (typeof data.id != "undefined") {
+  element.id = data.id;
+ }
+ if (typeof data.source != "undefined") {
+  element.src = data.source;
+ }
+ if (typeof data.loadfunction == "function") {
+  element.onload = data.loadfunction;
+ }
+ document.head.appendChild(element);
+}
+createScriptElement({ source : "/scripts/common/js/bootstrap-5.2.2/bootstrap.bundle.min.js", loadfunction: bsLoaded  });
+createScriptElement({ source : "/scripts/common/js/lib.js?ver=9" });
+function storeCookie()
+{
+ if(typeof(Storage) !== 'undefined')
+ {
+   if(localStorage.getItem('web') !== null)
+   {
+     localStorage.removeItem('web');
+   }
+ }
+}
+function bsLoaded() {
+  createScriptElement({ source : "/scripts/common/js/appear/appear.min.js?ver=1" });
+  createScriptElement({ source : "/scripts/common/js/easing/easing.min.js?ver=1" });
+  createScriptElement({ source : "/scripts/common/js/parallax/parallax.min.js?ver=1" });
+  createScriptElement({ source : "/scripts/common/js/uitotop/uitotop.min.js?ver=1", loadfunction: uiLoaded });
+}
+function uiLoaded() {
+  createScriptElement({ source : "/scripts/common/js/twsUtils.js?ver=2" });
+  createScriptElement({ source : "/scripts/common/js/design/design.js?ver=1" }); 
+}
+</script>
+<script type="text/javascript">
+$(function() {
+ if (document.cookie.indexOf("IB_SEARCH") == -1)
+ {
+  var ex=new Date();
+  ex.setTime(ex.getTime()+86400000);
+  document.cookie ='IB_SEARCH='+Math.floor(new Date().getTime()/1000)+';expires='+ex.toGMTString()+';path=/;domain=.interactivebrokers.ie';
+ }
+  let nex=new Date();
+  nex.setTime(nex.getTime()+86400000);
+    document.cookie ='IB_QD=0;expires='+nex.toGMTString()+';path=/;domain=.interactivebrokers.ie';
+  
+  let excfd=new Date();
+  excfd.setTime(excfd.getTime()+86400000);
+  document.cookie ='IB_QD_CFD=0;expires='+excfd.toGMTString()+';path=/;domain=.interactivebrokers.ie';
+ $('div#langselector').find('a').each(function() {
+  $(this).click(function() {
+   var link = $(this).attr("href");
+   if(link.match(/\/(en|fr|de|es|it|ru|cn|jp)\//))
+   {
+    var langs = link.split("../../../index.html");
+    if(langs[3] == 'en' || langs[3] == 'fr' || langs[3] == 'de' || langs[3] == 'es' || langs[3] == 'it' || langs[3] == 'ru' || langs[3] == 'cn' || langs[3] == 'jp')
+    {
+      var lang = langs[3];
+      if(lang == 'cn')
+      {
+        lang = 'zh_CN';
+      }
+      if(lang == 'jp')
+      {
+        lang = 'ja';
+      }
+      if(hasCookie("IB_LANG"))
+      {
+        deleteCookie("IB_LANG");
+      }
+      setCookie("IB_LANG", lang, 7, '.interactivebrokers.ie');
+    } else if(langs[1] == 'en') {
+      var lang = 'en';
+      setCookie("IB_LANG", lang, 7, '.interactivebrokers.ie');
+    }
+   }
+  });
+ });
+ $('p#bandaid-close').click(function() {
+  setCookie("IB_BANDAID", 1, 7, '.interactivebrokers.ie');
+ });
+ $('a#btnCloseBannerRegionSelector').click(function() {
+  setCookie("IB_REGION_SEL", 1, 30, '.interactivebrokers.ie');
+ });
+ $('a#btnCloseBannerRegionDifc').click(function() {
+  setCookie("IB_DIFC", 1, 30, '.interactivebrokers.ie');
+ });
+});
+</script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    if(localStorage.getItem('consentMode') ===  null){
+                    const consentMode = {
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'analytics_storage': 'denied'
+            };
+                localStorage.setItem('consentMode', JSON.stringify(consentMode));
+        gtag('consent', 'default', consentMode);
+    }
+    else {
+        gtag('consent', 'default', JSON.parse(localStorage.getItem('consentMode')));
+    }
+</script>
+<!-- STYLES HEAD -->
+<style type="text/css">
+@import url('../../../css/bootstrap-5.2.2/bootstrap.min.css') layer(bootstrap);
+</style>
+<link rel="preload" as="style" href="../../../css/ibkr/website.mince12.css?v=1848a6e12ea6c289ee1df7ee63749846">
+<link rel="stylesheet" type="text/css" media="all" href="../../../css/ibkr/website.mince12.css?v=1848a6e12ea6c289ee1df7ee63749846">
+<link rel="preload" as="style" href="../../../css/ibkr/theme-ibkr.min4f42.css?v=be9c72c0d328e7fc4987bce81f28981c">
+<link rel="stylesheet" type="text/css" media="all" href="../../../css/ibkr/theme-ibkr.min4f42.css?v=be9c72c0d328e7fc4987bce81f28981c"><style type="text/css">
+	/* PAGE TITLE -------------------------------------------------------------- */
+	#page-title {
+		display: none;
+	}
+	/* PAGE -------------------------------------------------------------- */
+	.hero {
+		min-height:280px !important;
+	}	
+	.intro h2 {
+		font-weight: var(--fw-300);
+		margin-bottom: 1rem;
+	}	
+	.main h2 {
+		font-weight: var(--fw-600);
+		font-size: var(--h6-font-size);
+		line-height: 1.3;
+	}
+</style>
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-d23de039-d518-4f10-9810-e68da4592744","rua.cook":"true","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="XE2AM-F37QZ-LYWQP-H8KRM-4SNX5",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"XE2AM-F37QZ-LYWQP-H8KRM-4SNX5";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n="false"=="true"?1:0,t="cookiepresent",a="eykumbc7mxv4o2gjetmq-f-0f765a62e-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1168163","ak.ai":parseInt("665092",10),"ak.ol":"0","ak.cr":45,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"1d793ab7","ak.r":50930,"ak.a2":n,"ak.m":"a","ak.n":"essl","ak.bpcip":"38.21.70.0","ak.cport":49573,"ak.gh":"95.101.132.220","ak.quicv":"","ak.tlsv":"tls1.2","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1758012633","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==+Wobh0II0Qz/67t5mVXAkouZJkIwnl7S54tXpxUapKxwkLElWP984ej/75YI1nxKLJbq3xHypOMWkYuaz/RFqQOPqqEAKgMZesx3670hJy6JElNSS1WEHFrYYVPSBiyEejNVuf9gatIvcCegxIjF54oKYWciloPlmztochFnDCYTayB1tLA/1AvOfBZv8577syASg0UxbDO8W8EccSWgZ68fUMPNnrIraVhLsljWrZl6EB4CpjqLBYCY/uB9VBLtJq3Umd6E/gpDFt9eDS2i+S8n/WqMtrZquA+sdnZLQhZ+bBtSrzX7IEv2poK9Pi6tA0Jt6/QmCxUuGWYhV1FDRiwh/LQDCACswpfdGTI41zkCliCXSBm5lk2YLv8PjDEgUFWkjlzmte3aiK7gOFnow6EmnHXNGYZxOchs0+H9qHs=","ak.pv":"398","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.html","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak-2.html","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body>
+<div id="printheader"></div>
+<!-- HEADER START  -->
+<div class="ibkr-header" id="ibkr-header">
+    
+        
+<style type="text/css">
+.banner-risk-warning {
+    margin:0px;
+    padding:8px 0px;
+    width:100%;
+    height:auto;
+    background-color:#242424;
+}
+.banner-risk-warning p {
+    margin:0px;
+    padding:0px;
+    font-weight:400;
+    font-size:1.0rem;
+    line-height:1.25rem;
+    text-align:center;
+    color:#FFFFFF;
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | EXTRA SMALL (< 576PX) ---------------------------------------------------------------------------------------------------- */
+@media (max-width:575.98px) {
+    .banner-risk-warning {
+        padding:4px 0px;
+    }
+    .banner-risk-warning p {
+        font-size:0.8125rem;
+        line-height:1.0rem;
+    }
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | SMALL (576PX-767.98PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:576px) and (max-width:767.98px) {
+    .banner-risk-warning {
+        padding:4px 0px;
+    }
+    .banner-risk-warning p {
+        font-size:0.8125rem;
+        line-height:1.0rem;
+    }
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | MEDIUM (768PX-991.98PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:768px) and (max-width:991.98px) {
+    .banner-risk-warning {
+        padding:4px 0px;
+    }
+    .banner-risk-warning p {
+        font-size:0.8125rem;
+        line-height:1.0rem;
+    }
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | LARGE (992PX-1199.98PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:992px) and (max-width:1199.98px) {
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | EXTRA LARGE (>1200PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:1200px) {
+}
+</style>
+<div class="banner-risk-warning">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p>Das Investieren in Finanzprodukte ist mit Risiken verbunden.<br> Ihre Anlagen k&#246;nnen an Wert gewinnen oder verlieren und Verluste k&#246;nnen den Wert Ihrer urspr&#252;nglichen Investition &#252;bersteigen.</p>
+            </div>
+        </div>
+    </div>
+</div>    <!-- NAV TOP START (LG/XL ONLY) -->
+    <nav class="navbar navbar-inverse navbar-expand-lg navbar-top d-none d-lg-block">
+        <div class="container">
+            <div class="navbar-collapse collapse" id="ibkr-nav-top"><!-- LEFT MENU -->
+                
+                <ul class="navbar-nav mr-auto align-items-center"><!-- FOR INDIVIDUALS -->
+                    <li class="nav-item dropdown"><a href="#" target="_self" class="nav-link dropdown-toggle" id="nav-for-individuals" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Privatkunden</a>
+                        <div class="dropdown-menu dropdown-ind-accounts" aria-labelledby="nav-for-individuals">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../../accounts/individual-ie.html" target="_self" class="dropdown-item" >Einzel- oder Gemeinschaftskonten</a> <a href="../../accounts/trust-ie.html" target="_self" class="dropdown-item" >Trust-Konten</a> <a href="../../accounts/family-account-ie.html" target="_self" class="dropdown-item" >Family-Konten</a> <a href="../../accounts/long-term-investment-accounts-ie.html" target="_self" class="dropdown-item">Tart&#243;s Befektet&#233;si Sz&#225;mia (TBSZ)</a> <a href="../../accounts/plan-depargne-en-action-accounts-ie.html" target="_self" class="dropdown-item">Plan d&#8217;Epargne en Actions (PEA)</a> 
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- FOR INSTITUTIONS -->
+                    <li class="nav-item dropdown"><a href="#" target="_self" class="nav-link dropdown-toggle" id="nav-for-institutions" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Gesch&#228;ftskunden</a>
+                        <div class="dropdown-menu dropdown-inst-accounts" aria-labelledby="nav-for-institutions">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../../../errorMessages/404.html" target="_self" class="dropdown-item" >Startseite Gesch&#228;ftskunden</a> <a href="../../accounts/advisor-ie.html" target="_self" class="dropdown-item" >Registrierte Anlageberater</a> <a href="../../accounts/proprietary-trading-group-ie.html" target="_self" class="dropdown-item" >Prop-Trader</a> <a href="../../accounts/hedge-fund-ie.html" target="_self" class="dropdown-item" >Hedgefonds</a> <a href="../../accounts/broker-ie.html" target="_self" class="dropdown-item" >Einf&#252;hrende Broker</a> <a href="../../accounts/family-office-ie.html" target="_self" class="dropdown-item" >Family Offices</a> <a href="../../accounts/compliance-officer-ie.html" target="_self" class="dropdown-item" >Compliance-Beauftragte</a> <a href="../../accounts/small-business-ie.html" target="_self" class="dropdown-item" >Kleinunternehmen</a> <a href="../../accounts/fsa-insurance-providers.html" target="_self" class="dropdown-item" >Full-Service-Verwalter <br>Versicherungsanbieter</a> <a href="../../accounts/money-manager-ie.html" target="_self" class="dropdown-item" >Money Manager</a> <a href="../../accounts/administrator-ie.html" target="_self" class="dropdown-item" >Fondsverwalter</a>  <a href="https://interactivebrokers.eu/campus/stl/" target="_blank" class="dropdown-item" >Bildungseinrichtungen</a>                                 </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul><!-- RIGHT MENU -->
+                
+                <ul class="navbar-nav ml-auto align-items-center"><!-- FREE TRIAL -->
+                    <li class="nav-item"><a href="../../trading/free-trial.html" target="_self" class="nav-link">KOSTENLOS TESTEN</a></li><!-- CAREERS -->
+                    
+                    <li class="nav-item"><a href="careers-splash.html" target="_self" class="nav-link">Karriere</a></li><!-- ABOUT US -->
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-about-us" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&#220;ber uns</a>
+                        <div class="dropdown-menu dropdown-about-us" aria-labelledby="nav-about-us">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../financial-strength.html" target="_self" class="dropdown-item" >Finanzst&#228;rke und Sicherheit</a> <a href="info-and-history.html" target="_self" class="dropdown-item">Vorstellung und Firmengeschichte</a> <a href="../awards.html" target="_self" class="dropdown-item">Auszeichnungen</a> <a href="../../about/news-at-ibkr.html" target="_self" class="dropdown-item">IBKR-News</a> <a href="press-and-media.html" target="_self" class="dropdown-item">Presse und Medien</a> <a href="https://investors.interactivebrokers.com/ir/main.php" target="_blank" class="dropdown-item" rel="noreferrer noopener">Investorendialog</a> <a href="sustainability.html" target="_self" class="dropdown-item">Nachhaltigkeit</a> <a href="../../accounts/legalDocuments/brokerPerformanceReports.html" target="_self" class="dropdown-item">Meldungen an Aufsichtsbeh&#246;rden</a> <a href="../../../errorMessages/404.html" target="_self" class="dropdown-item">Empfehlen Sie uns weiter</a> <a href="affiliate-programs.html" target="_self" class="dropdown-item">Partnerprogramme</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- SUPPORT -->
+                    
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-support" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Support</a>
+                        <div class="dropdown-menu dropdown-contact-us" aria-labelledby="nav-support">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../../support/fund-my-account.html" target="_self" class="dropdown-item">Guthaben einzahlen</a> <a href="../../support/individuals.html" target="_self" class="dropdown-item">Privatkunden</a> <a href="../../support/institutions.html" target="_self" class="dropdown-item">Gesch&#228;ftskunden</a> <a href="../../support/institutional-sales-contacts4343.html?p=uk" target="_self" class="dropdown-item">Vertriebskontakte f&#252;r Gesch&#228;ftskunden</a> <a href="../contact/ibot-container.html" target="_self" class="dropdown-item">FAQs</a> <a href="../../support/reports-and-dates.html" target="_self" class="dropdown-item">Steuerinformationen</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- LANGUAGE SELECTOR -->
+                    <li class="nav-item dropdown"><a href="#" class="nav-link nav-language dropdown-toggle" id="nav-language" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Sprache</span><img src="../../../images/web/icons/icon-language.svg" alt="Sprache" width="23" height="18" border="0" /></a>
+                        <div class="dropdown-menu dropdown-language" aria-labelledby="nav-language">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../../../en/home.html" target="_self" class="dropdown-item">English</a>
+                                    <a href="../../../fr/home.html" target="_self" class="dropdown-item">Fran&#231;ais</a>
+                                    <a href="../../home.html" target="_self" class="dropdown-item">Deutsch</a>
+                                    <a href="../../../es/home.html" target="_self" class="dropdown-item">Espa&#241;ol</a>
+                                    <a href="../../../it/home.html" target="_self" class="dropdown-item">Italiano</a>
+                                    <a href="../../../hu/home.html" target="_self" class="dropdown-item">Magyar</a>
+                                    <a href="../../../pt/home.html" target="_self" class="dropdown-item">Portugu&#234;s</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                                    </ul>
+            </div>
+        </div><!-- NAV TOP END --><!-- NAV BOTTOM START -->
+    </nav>
+    
+    <nav class="navbar navbar-inverse navbar-expand-lg navbar-bottom">
+        <div class="container"><!-- LOGO -->
+            
+             <a href="../../home.html" target="_self" title="Interactive Brokers Startseite" alt="Interactive Brokers Logo" class="navbar-brand brand-logo" aria-label="Interactive Brokers Home"><span>Interactive Brokers Startseite</span></a>
+            <!-- TOGGLE (XS/SM/MD ONLY) --><!-- OPEN ACCOUNT BUTTON (XS/SM/MD ONLY) -->
+            <button class="navbar-toggler" type="button" aria-label="Toggle Navigation"><span class="navbar-toggler-icon"><i class="fas fa-bars" aria-hidden="true"></i></span></button>
+            <a href="https://www.interactivebrokers.co.uk/Universal/Application" target="_self" class="d-block d-lg-none btn btn-open-account">Konto er&#246;ffnen</a>
+            <!-- LOG IN (SM/MD ONLY) -->
+             <a href="https://www.interactivebrokers.co.uk/sso/Login?RL=1" target="_self" class="d-none d-sm-block d-lg-none btn btn-log-in">Login</a>             <!-- IBKR NAV BOTTOM START -->
+            <div class="navbar-collapse collapse" id="ibkr-nav-bottom">
+                <ul class="navbar-nav ml-auto align-items-center"><!-- WHY IBKR -->
+                    
+                    <li class="nav-item"><a href="../../whyib/overview.html" target="_self" class="nav-link">Warum IBKR?</a></li><!-- PRICING -->
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-pricing" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Preisgestaltung</a>
+                        <div class="dropdown-menu dropdown-pricing" aria-labelledby="nav-pricing">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../../pricing/commissions-home.html" target="_self" class="dropdown-item">Provisionen</a> <a href="../../trading/margin-rates.html" target="_self" class="dropdown-item">Margins&#228;tze</a> <a href="../../accounts/fees/pricing-interest-rates.html" target="_self" class="dropdown-item">Zinss&#228;tze</a> <a href="../../pricing/short-sale-cost.html" target="_self" class="dropdown-item">Leerverkaufskosten</a> <a href="../../pricing/research-news-services.html" target="_self" class="dropdown-item">Recherchen und Nachrichten</a> <a href="../../pricing/market-data-pricing.html" target="_self" class="dropdown-item">Marktdaten-Preise</a> <a href="../../pricing/stock-yield-enhancement-program-ie.html" target="_self" class="dropdown-item">Programm zur Optimierung der Aktienrendite</a> <a href="../../pricing/other-fees-overview.html" target="_self" class="dropdown-item">Sonstige Geb&#252;hren</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- TRADING -->
+                    
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-technology" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Handel</a>
+                        <div class="dropdown-menu dropdown-technology" aria-labelledby="nav-technology">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../../trading/trading-platforms.html" target="_self" class="dropdown-item">Plattformen</a> <a href="../../trading/ib-api.html" target="_self" class="dropdown-item">APIs</a> <a href="../../trading/margin.html" target="_self" class="dropdown-item">Margin</a> <a href="../../trading/products-exchanges.html" target="_self" class="dropdown-item">Symbol- und B&#246;rsensuche</a> <a href="../../trading/products-stocks.html" target="_self" class="dropdown-item">Produkt&#252;bersicht</a> <a href="../../trading/ordertypes.html" target="_self" class="dropdown-item">Ordertypen</a> <a href="../../whyib/reporting.html" target="_self" class="dropdown-item">Berichte</a> <a href="../../trading/securities-financing.html" target="_self" class="dropdown-item">Wertpapierleihe</a> <a href="../../trading/features-in-focus.html" target="_self" class="dropdown-item">Funktionen im Fokus</a> <a href="../education/probability_lab.html" target="_self" class="dropdown-item">Probability Lab</a> <a href="../../trading/sustainable-investing-ie.html" target="_self" class="dropdown-item">Nachhaltiges Investieren</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- SERVICES -->
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-products" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Serviceleistungen</a>
+                        <div class="dropdown-menu dropdown-products" aria-labelledby="nav-products">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../../trading/globalanalyst.html" target="_self" class="dropdown-item">IBKR GlobalAnalyst</a> <a href="../../trading/si-quotes.html" target="_self" class="dropdown-item">EUIBSI Bid/Ask</a> <a href="../../portfolioanalyst/overview.html" target="_self" class="dropdown-item" rel="noreferrer noopener">PortfolioAnalyst</a> <a href="../../trading/products-bonds.html" target="_self" class="dropdown-item">Anleihen-Marktplatz</a> <a href="../../trading/products-mutual-funds.html" target="_self" class="dropdown-item">Investmentfonds-Marktplatz</a> <a href="../../trading/commission-free-etfs-mkt.html" target="_self" class="dropdown-item">ETFs ohne Transaktionsgeb&#252;hren</a> <a href="https://gdcdyn.interactivebrokers.com/aces/Marketplace/InvestorsMarketplace" target="_blank" class="dropdown-item">Anleger-Marktplatz</a> <a href="../../trading/short-securities-availability.html" target="_self" class="dropdown-item">Verf&#252;gbarkeit von Wertpapieren f&#252;r Leerverk&#228;ufe</a> <a href="../../trading/third-party-integration.html" target="_self" class="dropdown-item">Drittanbieter-Integration</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- EDUCATION -->
+                    
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-education" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Lerncenter</a>
+                        <div class="dropdown-menu dropdown-education" aria-labelledby="nav-education">
+                            <div class="row">
+                                <div class="col">
+                                     <a href="https://interactivebrokers.eu/campus/" target="_blank" class="dropdown-item">IBKR-Campus</a> <a href="https://interactivebrokers.eu/campus/academy" target="_blank" class="dropdown-item" rel="noreferrer noopener">Trader-Akademie</a> <a href="https://interactivebrokers.eu/campus/news" target="_blank" class="dropdown-item" rel="noreferrer noopener">Traders&#8217; Insight</a> <a href="https://interactivebrokers.eu/campus/podcasts" target="_blank" class="dropdown-item" rel="noreferrer noopener">IBKR-Podcasts</a> <a href="https://interactivebrokers.eu/campus/quant" target="_blank" class="dropdown-item" rel="noreferrer noopener">IBKR-Quant-Blog</a> <a href="https://interactivebrokers.eu/campus/webinars" target="_blank" class="dropdown-item" rel="noreferrer noopener">Webinare</a> <a href="https://interactivebrokers.eu/campus/stl/" target="_blank" class="dropdown-item">Trading Lab f&#252;r Schule und Studium</a> <a href="https://interactivebrokers.eu/campus/glossary" target="_blank" class="dropdown-item" rel="noreferrer noopener">Trader-Glossar</a>  <a href="../calendar/calendar.html" target="_self" class="dropdown-item">Trader-Kalender</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- SEARCH -->
+                    <li class="nav-item dropdown d-none d-lg-block" id="search-expand"><a href="#" class="nav-link nav-search dropdown-toggle" id="nav-search" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Search"><span>Suche</span><i class="fas fa-search" aria-hidden="true"></i></a>
+                        <div class="dropdown-menu dropdown-search" aria-labelledby="nav-search">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="search_box">
+                                        <script type="text/javascript">
+                                         searchbox_input_changed=false;
+                                         $('#search-expand').on('shown.bs.dropdown', function(e) {
+                                           $('#searchField').focus();
+                                         });
+                                        </script>
+                                        <form action="https://www.interactivebrokers.ie/de/search/index.php" method="get" class="search_form" id="search_form_id">
+                                            <input type="text" aria-label="Search Box" placeholder="Search" name="query" maxlength="64" autocomplete="off" id="searchField" class="form-control s swap_value searchinput" aria-label="Search Interactive Brokers">
+                                            <button type="submit" value="" id="searchsubmit" class="searchsubmit"><i class="fas fa-search" aria-hidden="true" aria-label="Submit Search"></i></button>
+                                        </form>
+                                        
+                                                                            </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- LOG IN -->
+                    
+                    <li class="nav-item dropdown d-none d-lg-block"><a href="#" target="_self" class="nav-link nav-login dropdown-toggle" id="nav-log-in" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Anmelden</a>
+                        <div class="dropdown-menu dropdown-login" aria-labelledby="nav-log-in">
+                            <div class="row">
+                                <div class="col">
+                                     <a href="../../../sso/Login0104.html?RL=1" target="_self" class="dropdown-item dropdown-portal">Anmelden im Portal</a>  <a href="../../trading/ibkr-desktop.html" target="_self" class="dropdown-item">IBKR Desktop herunterladen</a> <a href="../../trading/tws.html#tws-software" target="_self" class="dropdown-item">Trader Workstation herunterladen</a> <a href="../../trading/tws-mobile.html#trytoday-drop" target="_self" class="dropdown-item">IBKR Mobile herunterladen</a> <a href="../../trading/ibgateway-latest.html" target="_self" class="dropdown-item">IB Gateway herunterladen</a> <a href="../../trading/trading-platforms.html" target="_self" class="dropdown-item">Alle IBKR-Plattformen vergleichen</a> <a href="https://forecasttrader.interactivebrokers.ie/eventtrader/#/markets" target="_self" class="dropdown-item">IBKR ForecastTrader</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- OPEN ACCOUNT -->
+                    <li class="nav-item dropdown d-none d-lg-block"><a href="#" target="_self" class="nav-link nav-open-account dropdown-toggle" id="nav-open-account" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Konto er&#246;ffnen</a>
+                        <div class="dropdown-menu dropdown-open-account" aria-labelledby="nav-open-account">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="https://www.interactivebrokers.co.uk/Universal/Application" target="_self" class="dropdown-item dropdown-portal">Antrag starten</a> <a href="https://www.interactivebrokers.co.uk/sso/Login?c=t" target="_self" class="dropdown-item">Antrag abschlie&#223;en</a> <a href="../what-you-need-inv.html" target="_self" class="dropdown-item">Ben&#246;tigte Informationen</a> <a href="../../accounts/account-guide.html" target="_self" class="dropdown-item">Leitfaden zur Kontoauswahl</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul><!-- IBKR MENU END -->
+                
+            </div>
+        </div><!-- NAV BOTTOM END -->
+    </nav>
+</div><!-- HEADER END ---------------------------------------------------------------------------------------------------- --><!-- MOBILE NAV START (XS/SM/MD ONLY) ---------------------------------------------------------------------------------------------------- -->
+
+<div class="menu-mobile d-lg-none"><!-- CLOSE BUTTON -->
+    
+    <div class="close-button"><button type="button" class="btn-close" aria-label="Close Menu"><i class="fas fa-times"></i></button></div><!-- LOGO -->
+    <div class="logo-container"><a href="../../home.html" target="_self" class="brand-logo" aria-label="Interactive Brokers Home"><span>Interactive Brokers Startseite</span></a></div><!-- SEARCH -->
+    
+    <div class="search-container">
+        <div class="search-box">
+            <form action="https://www.interactivebrokers.ie/de/search/index.php" method="get" class="search_form" id="search_form_id">
+                <input type="text" class="form-control" placeholder="Search" name="query" maxlength="64" autocomplete="off" id="searchFieldMobile" aria-label="Search Interactive Brokers"> 	
+                <button type="submit" class="btn-search-submit" value="" id="searchsubmitMobile" aria-label="Submit Search"><i class="fas fa-search" aria-hidden="true"></i></button> 	
+            </form>
+        </div>
+    </div>
+    <ul>
+            
+        <!-- PORTAL LOGIN -->
+        <li><a href="../../../sso/Login0104.html?RL=1" target="_self" class="menu-log-in">Anmelden im Portal</a></li>
+        
+    <!-- OPEN ACCOUNT -->
+    <li class="has-submenu"><a href="#" target="_self" class="menu-open-account" data-submenu="submenu-open-account">Konto er&#246;ffnen</a>
+        <div class="submenu" id="submenu-open-account">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-open-account">Zur&#252;ck</button></p>
+            <p class="submenu-title">KONTO ER&#214;FFNEN</p>
+            <ul>
+            <li><a href="https://www.interactivebrokers.co.uk/Universal/Application" target="_self" class="menu-start-application">Antrag starten</a></li>
+            <li><a href="https://www.interactivebrokers.co.uk/sso/Login?c=t" target="_self">Antrag abschlie&#223;en</a></li>
+            <li><a href="../what-you-need-inv.html" target="_self">Ben&#246;tigte Informationen</a></li>
+            <li><a href="../../accounts/account-guide.html" target="_self">Leitfaden zur Kontoauswahl</a></li>
+            </ul>
+        </div>
+    </li>
+        
+    <!-- FREE TRIAL -->
+    <li><a href="../../trading/free-trial.html" target="_self">Kostenlose Testversion</a></li><!-- WHY IBKR -->
+    <li><a href="../../whyib/overview.html" target="_self">Warum IBKR?</a></li><!-- ACCOUNT TYPES -->
+    
+    <li class="has-submenu"><a href="#" target="_self" data-submenu="submenu-account-types">Kontotypen</a>
+        <div class="submenu" id="submenu-account-types">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-account-types">Zur&#252;ck</button></p>
+            <p class="submenu-title">PRIVATKUNDEN</p>
+            <ul>
+            <li><a href="../../accounts/individual-ie.html" target="_self" >Einzel- oder Gemeinschaftskonten</a></li>
+            <li><a href="../../accounts/trust-ie.html" target="_self" >Trust-Konten</a></li>
+            <li><a href="../../accounts/family-account-ie.html" target="_self" >Family-Konten</a></li>
+            <li><a href="../../accounts/long-term-investment-accounts-ie.html" target="_self">Tart&#243;s Befektet&#233;si Sz&#225;mia (TBSZ) </a></li>
+            <li><a href="../../accounts/plan-depargne-en-action-accounts-ie.html" target="_self">Plan d&#8217;&#233;pargne en actions (PEA)</a></li>
+                        
+            </ul>
+            <p class="submenu-title">GESCH&#196;FTSKUNDEN</p>
+            <ul>
+            <li><a href="../../../errorMessages/404.html" target="_self" >Startseite Gesch&#228;ftskunden</a></li>
+            <li><a href="../../accounts/advisor-ie.html" target="_self" >Registrierte Anlageberater</a></li>
+            <li><a href="../../accounts/proprietary-trading-group-ie.html" target="_self" >Prop-Trader</a></li>
+            <li><a href="../../accounts/hedge-fund-ie.html" target="_self" >Hedgefonds</a></li>
+            <li><a href="../../accounts/broker-ie.html" target="_self" >Einf&#252;hrende Broker</a></li>
+            <li><a href="../../accounts/family-office-ie.html" target="_self" >Family Offices</a></li>
+            <li><a href="../../accounts/compliance-officer-ie.html" target="_self" >Compliance-Beauftragte</a></li>
+            <li><a href="../../accounts/small-business-ie.html" target="_self" >Kleinunternehmen</a></li>
+            <li><a href="../../accounts/fsa-insurance-providers.html" target="_self" >Full-Service-Verwalter <br>Versicherungsanbieter</a></li>
+            <li><a href="../../accounts/money-manager-ie.html" target="_self" >Money Manager</a></li>
+            <li><a href="../../accounts/administrator-ie.html" target="_self" >Fondsverwalter</a></li>
+             
+             
+            <li><a href="https://interactivebrokers.eu/campus/stl/" target="_blank" >Bildungseinrichtungen</a></li>
+                        
+            </ul>
+        </div>
+    </li><!-- PRICING -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-pricing">Preisgestaltung</a>
+        <div class="submenu" id="submenu-pricing">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-pricing">Zur&#252;ck</button></p>
+            <p class="submenu-title">PREISGESTALTUNG</p>
+            <ul>
+            <li><a href="../../pricing/commissions-home.html" target="_self">Provisionen</a></li>
+            <li><a href="../../trading/margin-rates.html" target="_self">Margins&#228;tze</a></li>
+            <li><a href="../../accounts/fees/pricing-interest-rates.html" target="_self">Zinss&#228;tze</a></li>
+            <li><a href="../../pricing/short-sale-cost.html" target="_self">Leerverkaufskosten</a></li>
+            <li><a href="../../pricing/research-news-services.html" target="_self">Recherchen und Nachrichten</a></li>
+            <li><a href="../../pricing/market-data-pricing.html" target="_self">Marktdaten-Preise</a></li>
+            <li><a href="../../pricing/stock-yield-enhancement-program-ie.html" target="_self">Programm zur Optimierung der Aktienrendite</a></li>
+            <li><a href="../../pricing/other-fees-overview.html" target="_self">Geb&#252;hren</a></li>
+            </ul>
+        </div>
+    </li><!-- TRADING -->
+    
+    <li class="has-submenu"><a href="#" data-submenu="submenu-trading">Handel</a>
+        <div class="submenu" id="submenu-trading">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-trading">Zur&#252;ck</button></p>
+            <p class="submenu-title">HANDEL</p>
+            <ul>
+            <li><a href="../../trading/trading-platforms.html" target="_self">Plattformen</a></li>
+            <li><a href="../../trading/ib-api.html" target="_self">APIs</a></li>
+            <li><a href="../../trading/margin.html" target="_self">Margin</a></li>
+            <li><a href="../../trading/products-exchanges.html" target="_self">Symbol- und B&#246;rsensuche</a></li>
+            <li><a href="../../trading/products-stocks.html" target="_self">Produkt&#252;bersicht</a></li>
+            <li><a href="../../trading/ordertypes.html" target="_self">Ordertypen</a></li>
+            <li><a href="../../whyib/reporting.html" target="_self">Berichte</a></li>
+            <li><a href="../../trading/securities-financing.html" target="_self">Wertpapierleihe</a></li>
+            <li><a href="../../trading/features-in-focus.html" target="_self">Funktionen im Fokus</a></li>
+            <li><a href="../education/probability_lab.html" target="_self">Probability Lab</a></li>
+            <li><a href="../../trading/sustainable-investing-ie.html" target="_self">Nachhaltiges Investieren</a></li>
+            </ul>
+        </div>
+    </li><!-- SERVICES -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-services">Serviceleistungen</a>
+        <div class="submenu" id="submenu-services">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-services">Zur&#252;ck</button></p>
+            <p class="submenu-title">SERVICELEISTUNGEN</p>
+            <ul>
+            <li><a href="../../trading/globalanalyst.html" target="_self">IBKR GlobalAnalyst</a></li>
+            <li><a href="../../trading/si-quotes.html" target="_self">EUIBSI Bid/Ask</a></li>
+            <li><a href="../../portfolioanalyst/overview.html" target="_self" rel="noreferrer noopener">PortfolioAnalyst</a></li>
+            <li><a href="../../trading/products-bonds.html" target="_self">Anleihen-Marktplatz</a></li>
+            <li><a href="../../trading/products-mutual-funds.html" target="_self">Investmentfonds-Marktplatz</a></li>
+            <li><a href="../../trading/commission-free-etfs-mkt.html" target="_self">ETFs ohne Transaktionsgeb&#252;hr</a></li>
+            <li><a href="https://gdcdyn.interactivebrokers.com/aces/Marketplace/InvestorsMarketplace" target="_blank">Anleger-Marktplatz</a></li>
+            <li><a href="../../trading/short-securities-availability.html" target="_self">Verf&#252;gbarkeit von Wertpapieren f&#252;r Leerverk&#228;ufe</a></li>
+            <li><a href="../../trading/third-party-integration.html" target="_self">Drittanbieter-Integration</a></li>
+            </ul>
+        </div>
+    </li><!-- EDUCATION -->
+    
+    <li class="has-submenu"><a href="#" data-submenu="submenu-education">Lerncenter</a>
+        <div class="submenu" id="submenu-education">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-education">Zur&#252;ck</button></p>
+            <p class="submenu-title">LERNCENTER</p>
+            <ul>
+             
+             
+            <li><a href="https://interactivebrokers.eu/campus/" target="_blank">IBKR-Campus</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/academy" target="_blank">Trader-Akademie</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/news" target="_blank">Traders&#8217; Insight</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/podcasts" target="_blank">IBKR-Podcasts</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/quant" target="_blank">IBKR-Quant-Blog</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/webinars" target="_blank">Webinare</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/stl/" target="_blank">Trading Lab f&#252;r Schule und Studium</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/glossary" target="_blank">Trader-Glossar</a></li>
+                        
+            <li><a href="../calendar/calendar.html" target="_self">Trader-Kalender</a></li>
+            </ul>
+        </div>
+    </li><!-- ABOUT US -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-about-us">&#220;ber uns</a>
+        <div class="submenu" id="submenu-about-us">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-about-us">Zur&#252;ck</button></p>
+            <p class="submenu-title">&#220;BER UNS</p>
+            <ul>
+            <li><a href="../financial-strength.html" target="_self">Finanzst&#228;rke und Sicherheit</a></li>
+            <li><a href="info-and-history.html" target="_self">Vorstellung und Firmengeschichte</a></li>
+            <li><a href="careers-splash.html" target="_self">Karriere</a></li>
+            <li><a href="../awards.html" target="_self">Auszeichnungen</a></li>
+            <li><a href="../../about/news-at-ibkr.html" target="_self">IBKR-News</a></li>
+            <li><a href="press-and-media.html" target="_self">Presse und Medien</a></li>
+            <li><a href="https://investors.interactivebrokers.com/ir/main.php" target="_blank" rel="noreferrer noopener">Investorendialog</a></li>
+            <li><a href="sustainability.html" target="_self">Nachhaltigkeit</a></li>
+            <li><a href="../../accounts/legalDocuments/brokerPerformanceReports.html" target="_self">Meldungen an Aufsichtsbeh&#246;rden</a></li>
+            <li><a href="../../../errorMessages/404.html" target="_self">Empfehlen Sie uns weiter</a></li>
+            <li><a href="affiliate-programs.html" target="_self">Partnerprogramme</a></li>
+            </ul>
+        </div>
+    </li><!-- SUPPORT -->
+    
+    <li class="has-submenu"><a href="#" data-submenu="submenu-support">Support</a>
+        <div class="submenu" id="submenu-support">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-support">Zur&#252;ck</button></p>
+            <p class="submenu-title">SUPPORT</p>
+            <ul>
+            <li><a href="../../support/fund-my-account.html" target="_self">Guthaben einzahlen</a></li>
+            <li><a href="../../support/individuals.html" target="_self">Privatkunden</a></li>
+            <li><a href="../../support/institutions.html" target="_self">Gesch&#228;ftskunden</a></li>
+            <li><a href="../../support/institutional-sales-contacts4343.html?p=uk" target="_self">Vertriebskontakte f&#252;r Gesch&#228;ftskunden</a></li>
+            <li><a href="../contact/ibot-container.html" target="_self">FAQs</a></li>
+            <li><a href="../../support/reports-and-dates.html" target="_self">Steuerinformationen</a></li> 
+            </ul>
+        </div>
+    </li><!-- LANGUAGE -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-language">Sprache</a>
+        <div class="submenu" id="submenu-language">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-language">Zur&#252;ck</button></p>
+            <p class="submenu-title">SPRACHE</p>
+            <ul>
+            <li><a href="../../home.html" target="_self">Englisch</a></li>
+            <li><a href="../../../fr/home.html" target="_self">Fran&#231;ais</a></li>
+            <li><a href="../../home.html" target="_self">Deutsch</a></li>
+            <li><a href="../../../es/home.html" target="_self">Espa&#241;ol</a></li>
+            <li><a href="../../../it/home.html" target="_self">Italiano</a></li>
+            <li><a href="../../../hu/home.html" target="_self">Magyar</a></li>
+            <li><a href="../../../pt/home.html" target="_self">Portugu&#234;s</a></li>
+            </ul>
+        </div>
+    </li><!-- REGION SELECTOR -->
+    
+        
+    </ul>
+</div><!-- MOBILE NAV OVERLAY -->
+<div class="website-overlay d-lg-none"></div><!-- MOBILE NAV END  -->
+
+<script>
+$(window).on('load', function() {
+    // Simple check if URL contains 'conf=am'
+    if (!window.location.href.includes('conf=am')) {
+        $('#region-modal').modal({
+            backdrop: 'static',
+            keyboard: false
+        });
+        $('#region-modal').modal('show');
+        $('body').removeClass('modal-open');
+        $('body').css('overflow', '');
+        $('body').css('padding-right', '');
+    }
+});
+</script>
+<div class="modal modal-cookies fade" id="region-modal" tabindex="-1" role="dialog" aria-labelledby="modalRegionLabel" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+    <div class="modal-content" id="modalRegionContent">
+      <div class="modal-header d-block">
+        <p class="fs-5 modal-title" id="modalCookieLabel">Which IBKR website is best for you?</p>
+        <p class="pt-10 mb-0 pr-30 fs-6">The content on the website you selected is not intended for investors in your location. </p>
+        <p class="mb-40 fs-6">Please choose the website most applicable to you.</p>
+      </div>
+      <div class="modal-footer" id="modalRegionControls">
+        <div class="row">
+          <div class="col-12 col-md-4"></div>
+          <div class="col-12 col-md-8">
+            <p>
+              <button class="btn btn-primary" id="btnRegionRecommendation">Go to US website</button>
+              <button class="btn btn-primary" id="btnRegionCurrent">Stay on IE website</button>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+$(function() {
+   $('button#btnRegionRecommendation').click(function() {
+    window.location.href = 'https://www.interactivebrokers.com/';
+  });
+  $('button#btnRegionCurrent').click(function() {
+    setCookie("IB_REG", 1, 365, '.interactivebrokers.ie');
+    location.reload();
+  });
+});
+</script><div id="contents">
+    <section class="page-title" id="page-title">
+        <div class="container">
+            <div class="row">
+                <div class="col"><h1>Informationen f&#252;r Auftragnehmer</h1></div>
+            </div>
+        </div>
+    </section>
+<section class="hero hero-dark bg-none bg-black" id="">
+    <figure class="hero-img">
+<picture>
+	<source media="(min-width:1200px)" srcset="/images/web/hero-vendor-info-xl.webp?v=27651fac4da216959d8b2c17ac132d39 1200w, /images/web/hero-vendor-info-xl.jpg?v=27651fac4da216959d8b2c17ac132d39 1200w">
+	<source media="(min-width:992px)" srcset="/images/web/hero-vendor-info-lg.webp?v=27651fac4da216959d8b2c17ac132d39 1199w, /images/web/hero-vendor-info-lg.jpg?v=27651fac4da216959d8b2c17ac132d39 1199w">
+	<source media="(min-width:768px)" srcset="/images/web/hero-vendor-info-md.webp?v=27651fac4da216959d8b2c17ac132d39 991w, /images/web/hero-vendor-info-md.jpg?v=27651fac4da216959d8b2c17ac132d39 991w">
+	<source media="(min-width:576px)" srcset="/images/web/hero-vendor-info-sm.webp?v=27651fac4da216959d8b2c17ac132d39 767w, /images/web/hero-vendor-info-sm.jpg?v=27651fac4da216959d8b2c17ac132d39 767w">
+	<source srcset="/images/web/hero-vendor-info.webp?v=27651fac4da216959d8b2c17ac132d39  575w, /images/web/hero-vendor-info.jpg?v=27651fac4da216959d8b2c17ac132d39 575w">
+	<img src="../../../images/web/hero-vendor-infoecd5.jpg?v=27651fac4da216959d8b2c17ac132d39" alt="" border="0" /> 
+</picture>
+    </figure>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <div class="hero-content">
+                    <h2>Informationen f&#252;r Auftragnehmer</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+	<section class="intro">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-md-11 col-lg-9">
+					<h2>Bedeutung der Zusammenarbeit mit Auftragnehmern</h2>
+					<p class="fs-6 lh-6">Die verbundenen Unternehmen der Interactive Brokers Group bieten rund um die Uhr verf&#252;gbare Dienste f&#252;r automatisierte Handelsausf&#252;hrungen und die Verwahrung von Wertpapieren, Rohstoffen und Devisen an &#252;ber 150 M&#228;rkten weltweit an. Seit vier Jahrzehnten liegt unser Schwerpunkt auf Technologie und Automatisierung, wodurch wir unseren Kundinnen und Kunden eine einzigartige, ausgefeilte Plattform, fortschrittliche Handelstools und vorteilhafte Ausf&#252;hrungskurse zu geringen oder Nullkosten bereitstellen k&#246;nnen.</p>
+					<p class="fs-6 lh-6">Wir sind an Partnerschaften mit Auftragnehmern interessiert, die uns dabei helfen k&#246;nnen, die Wertsch&#246;pfung f&#252;r unsere Kundschaft und Shareholder zu maximieren.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="main pb-80">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-md-6 col-lg-4">
+					<div class="my-4 my-md-0">
+						<img loading="lazy" src="../../../images/web/vendor-info-code.png" alt="Verhaltenskodex f&#252;r Auftragnehmer">
+						<h2>Verhaltenskodex f&#252;r Auftragnehmer</h2>
+						<p>Der Verhaltenskodex f&#252;r Auftragnehmer legt die grundlegenden Anforderungen fest, die Interactive Brokers und seine verbundenen Unternehmen an die Zusammenarbeit mit Lieferanten, Anbietern, Dienstleistern, unabh&#228;ngigen Auftragnehmern und Beratern stellen.</p>
+						<a href="../../../download/Vendor-CoC-2023-01-31400e.pdf?v=20230228" target="_self" class="link-arrow-down" >
+							Verhaltenskodex herunterladen
+						</a>
+					</div>
+				</div>
+				<div class="col-12 col-md-6 col-lg-4">
+					<div class="my-4 my-md-0">
+						<img loading="lazy" src="../../../images/web/vendor-info-sustainability.png" alt="Nachhaltigkeit bei Interactive Brokers">
+						<h2>Nachhaltigkeit bei Interactive Brokers</h2>
+						<p>Wir sind stets bestrebt, unsere Nachhaltigkeitsziele voranzubringen, und konzentrieren uns auf mehrere Schl&#252;sselprojekte. Wir sind daran interessiert, mit Auftragnehmern zusammenzuarbeiten, die unsere Werte teilen.</p>
+						<a href="sustainability.html" target="_self" class="link-chevron-right" >
+							Mehr erfahren
+						</a>
+					</div>
+				</div>				
+				<div class="col-12 col-lg-4">
+					<div class="my-4 my-lg-0">
+						<img loading="lazy" src="../../../images/web/vendor-info-join.png" alt="Antrag auf Beitritt zu unserem Partnernetzwerk">
+						<h2>Antrag auf Beitritt zu unserem <span class="d-none d-lg-inline"><br></span>Partnernetzwerk</h2>
+						<p>Interactive Brokers arbeitet mit Partnern aus der ganzen Welt zusammen. Wenn Sie mehr &#252;ber den Beitritt zu unserem Netzwerk erfahren m&#246;chten, f&#252;llen Sie bitte das Formular &#8222;Primary Registration Form&#8220; aus, das unten verlinkt ist.</p>
+						<a href="https://smart.gep.com/Nexus/Registration/PartnerRegistration?dd=YnBjPTcwMDIyMTc3JnNwYz0wJmZjPTE1&amp;oloc=102" target="_blank" rel="nofollow noopener" class="link-chevron-right" >
+							Primary Registration Form
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="bg-gray-5 main py-40">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-md-6">
+					<div class="my-4 me-10">
+						<h2>Allgemeine Gesch&#228;ftsbedingungen <span class="d-none d-md-inline d-lg-none"><br></span>f&#252;r die Registrierung von Auftragnehmern</h2>
+						<p>Durch die Registrierung im GEP-Portal (&#8222;Portal&#8220;) als m&#246;glicher oder aktueller Auftragnehmer (&#8222;Supplier&#8220;) der Interactive Brokers Group, Inc., einschlie&#223;lich aller verbundenen Unternehmen oder Tochtergesellschaften (&#8222;IBG&#8220;), erteilt der Auftragnehmer die Zustimmung und Best&#228;tigung zu den folgenden allgemeinen Gesch&#228;ftsbedingungen (&#8222;Agreement&#8220;). <br/>Klicken Sie auf den folgenden Link, um das vollst&#228;ndige Dokument anzuzeigen.</p>
+						<a href="https://gepsmartmtstorage.blob.core.windows.net/cumuluscontent/TnC/IBG/IBKR Supplier Registration - TnC.pdf" target="_blank" rel="nofollow noopener" class="link-chevron-right" >
+							IBKR-Registrierung f&#252;r Auftragnehmer
+						</a>
+					</div>
+				</div>
+				<div class="col-12 col-md-6">
+					<div class="my-4 ms-md-10 me-10 me-md-0">
+						<h2>Datenschutzrichtlinie <span class="d-none d-md-inline d-lg-none"><br></span>der Interactive Brokers Group</h2>
+						<p>Wir bei Interactive Brokers wissen, dass ein vertraulicher und sicherer Umgang mit den personenbezogenen Daten, die Sie uns zur Verf&#252;gung stellen, von gr&#246;&#223;ter Bedeutung ist. Die verbundenen Unternehmen der Interactive Brokers Group (zusammen &#8222;IBKR&#8220;) sind stets bestrebt, personenbezogene Daten zu sch&#252;tzen, einschlie&#223;lich derer, die sich ggf. auf unsere Kundinnen und Kunden, Angestellten, Auftragnehmer, Bewerber/-innen oder andere Personen innerhalb und au&#223;erhalb des Unternehmens beziehen. <br/>Klicken Sie auf den folgenden Link, um das vollst&#228;ndige Dokument anzuzeigen.</p>
+						<a href="../../index9abf.html" target="_self" class="link-chevron-right" >
+							Datenschutzrichtlinie
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+
+<!-- FOOTER START  -->
+<footer class="footer noprint" id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p>Interactive Brokers &#174;, IB<sup>SM</sup>, InteractiveBrokers.com &#174;, Interactive Analytics &#174;, IB Options Analytics<sup>SM</sup>, IB SmartRouting<sup>SM</sup>, PortfolioAnalyst &#174;, IB Trader Workstation<sup>SM</sup> und One World, One Account<sup>SM</sup> sind Dienstleistungs- und/oder Handelsmarken von Interactive Brokers LLC. Auf Anfrage stellen wir Ihnen gerne Belege zu unseren Aussagen und statistischen Angaben zur Verf&#252;gung. Alle abgebildeten Handelssymbole dienen ausschlie&#223;lich Veranschaulichungszwecken und stellen keine Empfehlungen dar.</p>
+                <p>Der Online-Handel mit Aktien, Optionen, Futures, W&#228;hrungen, ausl&#228;ndischen Papieren und festverzinslichen Produkten kann mit dem Risiko von erheblichen Verlusten einhergehen.</p>
+                <p>Der Handel mit Optionen birgt Risiken und ist nicht f&#252;r alle Anleger/-innen geeignet. N&#228;here Informationen finden Sie im Dokument <a href="https://www.theocc.com/about/publications/character-risks.jsp" rel="noreferrer noopener" target="_blank">&#8222;Characteristics and Risks of Standardized Options&#8220;</a> (Besonderheiten und Risiken im Zusammenhang mit standardisierten Optionen) (auch &#8222;Options Disclosure Document&#8220;, ODD). Alternativ k&#246;nnen Sie sich auch an den <a href="../../support/customer-servicef763.html?p=contact" target="_self">IB-Kundendienst</a> wenden, um eine Kopie des ODD zu erhalten. Bevor Kundinnen und Kunden mit dem Handeln beginnen, m&#252;ssen sie die relevanten Risikoinformationen in unseren <a href="../homepage-disclosures.html" target="_self">Warnhinweisen und Offenlegungen</a> durchlesen. Der Margin-Handel ist nur f&#252;r erfahrene Anleger/-innen mit hoher Risikotoleranz geeignet. Sie k&#246;nnen dabei mehr Geld verlieren, als Sie urspr&#252;nglich investiert haben. N&#228;here Informationen zu den Zinss&#228;tzen f&#252;r Margin-Kredite finden Sie unter <a href="../../trading/margin-rates.html" target="_self">Margins&#228;tze</a>. Wertpapier-Futures bergen ein hohes Risiko und sind nicht f&#252;r alle Anleger/-innen geeignet. Sie k&#246;nnen dabei mehr Geld verlieren, als Sie urspr&#252;nglich investiert haben. Bitte lesen Sie die <a href="../homepage-disclosures.html" target="_self">Risikoinformationen zu Wertpapier-Futures</a> durch, bevor Sie mit Wertpapier-Futures handeln. Strukturierte Produkte sowie festverzinsliche Produkte wie z. B. Anleihen sind komplexe Produkte, die mit erh&#246;htem Risiko einhergehen und daher nicht f&#252;r alle Anleger/-innen geeignet sind. Bevor Sie mit dem Handeln beginnen, lesen Sie bitte die <a href="../homepage-disclosures.html" target="_self">relevanten Risikoinformationen und Offenlegungen</a> durch.</p>
+                <p>Weitere Informationen zu IBKR ATS finden Sie auf der <a href="https://www.sec.gov/divisions/marketreg/form-ats-n-filings.htm#ats-n" rel="noreferrer noopener" target="_blank">SEC-Seite</a>.</p>
+<p>36 L&#228;nder schlie&#223;t sowohl L&#228;nder als auch Territorien ein.</p>
+            </div>
+        </div>
+        <div class="footer-site-links" id="footerSiteLinks">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>Konto</p>
+                    <ul>
+                    <li><a href="https://www.interactivebrokers.co.uk/sso/Login?RL=1" target="_self">Anmelden</a></li>
+                    <li> <a href="https://www.interactivebrokers.co.uk/Universal/Application" target="_self">Konto er&#246;ffnen</a></li>
+                    <li><a href="https://www.interactivebrokers.co.uk/sso/Login?c=t" target="_self">Antrag abschlie&#223;en</a></li>
+                    <li><a href="../../accounts/account-guide.html" target="_self">Kontotypen</a></li>
+                    <li><a href="https://www.interactivebrokers.co.uk/Universal/Application?ft=T&amp;locale=de_DE" target="_self">Kostenlose Testversion</a></li>
+                    </ul>
+                    <p>Software &amp; Downloads</p>
+                    <ul>
+                    <li><a href="../../trading/tws.html#tws-software" target="_self">Trader Workstation</a></li>
+                    <li><a href="../../trading/ibkr-desktop.html" target="_self">IBKR&nbsp;Desktop</a></li>
+                    <li><a href="../../trading/tws-mobile.html#trytoday" target="_self">IBKR Mobile</a></li>
+                    <li><a href="../../trading/ib-api.html#api-software" target="_self">APIs</a></li>
+                    </ul>    
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>Support</p>
+                    <ul>
+					<li><a href="../../support/fund-my-account.html" target="_self">Guthaben einzahlen</a></li>
+                    <li><a href="../../support/individuals.html" target="_self">Privatkunden</a></li>
+                    <li><a href="../../support/institutions.html" target="_self">Gesch&#228;ftskunden</a></li>
+                    <li><a href="../../support/institutional-sales-contacts4343.html?p=uk" target="_self">Vertriebskontakte f&#252;r Gesch&#228;ftskunden</a></li>
+					<li><a href="../contact/ibot-container.html" target="_self">FAQs</a></li>
+					<li><a href="../../software/systemStatus.html" target="_self">Systemstatus</a></li>
+                    </ul>
+                    <p>Anbieter-Support</p>
+                    <ul>
+                    <li><a href="supplier-information.html" target="_self">Informationen f&#252;r Auftragnehmer</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>&#220;ber uns</p>
+                    <ul>
+                    <li><a href="../awards.html" target="_self">Auszeichnungen</a></li>
+                    <li><a href="careers-splash.html" target="_self">Karriere</a></li>
+                    <li><a href="about.html" target="_self">Vorstellung und Firmengeschichte</a></li>
+                    <li><a href="https://investors.interactivebrokers.com/ir/main.php" target="_blank" rel="noreferrer noopener">Investorendialog</a></li>
+                    <li><a href="../../about/news-at-ibkr.html" target="_self">IBKR-News</a></li>
+                    <li><a href="press-and-media.html" target="_self">Presse und Medien</a></li>
+                    <li><a href="../../accounts/legalDocuments/brokerPerformanceReports.html" target="_self">Meldungen an Aufsichtsbeh&#246;rden</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>Folgen Sie uns:</p>
+                    <ul>
+                        <li><a href="https://www.facebook.com/InteractiveBrokersEurope/" target="_blank" rel="noreferrer noopener"><i class="fab fa-facebook"></i>  Facebook</a></li>
+                        <li><a href="https://www.instagram.com/interactivebrokers_europe" target="_blank" rel="noreferrer noopener"><i class="fab fa-instagram"></i>  Instagram</a></li>
+                        <li><a href="https://twitter.com/IBKR_Europe" target="_blank" rel="noreferrer noopener"><i class="fab fa-x-twitter"></i>  Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-disclosure-links" id="footerDisclosureLinks">
+            <div class="row">
+                <div class="col">
+                    <ul>
+                    <li><a href="../../accounts/legalDocuments/anti-fraud-notice.html" target="_self">Hinweise zur Betrugsbek&#228;mpfung</a></li>
+                    <li><a href="../../../errorMessages/404.html" target="_self">Hinweise zum Kundenidentifikationsprogramm</a></li>
+                    <li><a href="../warnings-on-frauds-and-scams.html" target="_self">Warnung vor Betrug und Scams</a></li>
+                    <li><a href="../../accounts/forms-and-disclosures-client-agreements.html" target="_self">Formulare und Offenlegungen</a></li>
+                    <li><a href="../../accounts/legalDocuments/accessibility-policy.html" target="_self">Erkl&#228;rung zur Barrierefreiheit</a></li>
+                    <li><a href="../../accounts/legalDocuments/privacy.html" target="_self">Datenschutz</a></li>
+                    <li><a href="../../sitemap/index.html" target="_self">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-entities" id="footerEntities">
+            <div class="row">
+                <div class="col">
+                    <div class="footer-entity"><!-- IBKR IE -->
+                        <p class="entity-name"><a href="../../../en/home.html" target="_self">Interactive Brokers Ireland Limited</a></p>
+                        <p>wird reguliert von der <a href="https://www.centralbank.ie/" target="_blank" rel="noreferrer noopener">Central Bank of Ireland</a> (CBI, Referenznummer: C423427), ist registriert beim Companies Registration Office (CRO, Registrierungsnummer: 657406) und ist ein Mitglied des Irish Investor Compensation Scheme (ICS).<br> <strong>Eingetragener Gesch&#228;ftssitz:</strong> North Dock One, 91/92 North Wall Quay, Dublin 1 D01 H7V7, Ireland.<br> <strong>Website:</strong> <a href="../../../en/home.html" target="_self">www.interactivebrokers.ie</a></p>
+                        <p class="footer-entities-link"><a href="#collapseEntities" target="_self" class="collapsed" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseEntities">Informationen zu weiteren Gesellschaften von Interactive Brokers</a></p>
+                    </div>
+                    <div class="footer-entities-list collapse" id="collapseEntities">
+                        <div class="row">
+                            <div class="col-12 col-md-6"><!-- IBKR LLC -->
+                                
+                                <p class="entity-name"><a href="https://www.interactivebrokers.com/en/home.php?nored=t" target="_self">Interactive Brokers LLC</a></p>
+                                <p>ist Mitglied der <a  rel="noreferrer noopener" target="_blank"  href="https://www.nyse.com/">NYSE</a> &#8211; <a href="https://www.finra.org/" rel="noreferrer noopener"  target="_blank">FINRA</a> &#8211; <a href="https://www.sipc.org/" rel=" noreferrer noopener" target="_blank">SIPC</a> und wird reguliert von der US Securities and Exchange Commission und der Commodity Futures Trading Commission.<br> <strong>Hauptgesch&#228;ftssitz:</strong> One Pickwick Plaza, Greenwich, CT 06830 USA<br> <strong>Website:</strong> <a href="https://www.interactivebrokers.com/en/home.php?nored=t" target="_self">www.interactivebrokers.com</a></p><!-- IBKR CA -->
+                                <p class="entity-name"><a href="https://www.interactivebrokers.ca/en/home.php?nored=t" target="_self">Interactive Brokers Canada Inc.</a></p>
+                                <p>Ist Mitglied der  <a href="https://www.ciro.ca/" target="_blank" rel="noreferrer noopener">Canadian Investment Regulatory Organization (CIRO)</a>  und Mitglied des <a href="https://www.cipf.ca/" target="_blank" rel="noreferrer noopener">Canadian Investor Protection Fund.</a><br> <strong>Eingetragener Gesch&#228;ftssitz:</strong> 1800 McGill College Avenue, Suite 2106, Montreal, Quebec, H3A 3J6, Canada.<br> <strong>Website:</strong> <a href="https://www.interactivebrokers.ca/en/home.php?nored=t" target="_self">www.interactivebrokers.ca</a></p><!-- IBKR UK -->
+                                
+                                <p class="entity-name"><a href="https://www.interactivebrokers.co.uk/en/home.php?nored=t" target="_self">Interactive Brokers (U.K.) Limited</a></p>
+                                <p>ist von der <a href="https://www.fca.org.uk/" target="_blank" rel="noreferrer noopener">Financial Conduct Authority</a> zugelassen und wird von dieser reguliert. FCA-Handelsregisternummer 208159. In England und Wales im Handelsregister eingetragen unter der Firmennummer 03958476. <a href="https://www.fca.org.uk/firms/financial-services-register" target="_blank" rel="noreferrer noopener">[https://www.fca.org.uk/firms/financial-services-register]</a><br> <strong>Eingetragener Gesch&#228;ftssitz:</strong> 20 Fenchurch Street, Floor 12, London EC3M 3BY.<br> <strong>Website:</strong> <a href="https://www.interactivebrokers.co.uk/en/home.php?nored=t" target="_self">www.interactivebrokers.co.uk</a></p><!-- IBKR AUS -->
+                                <p class="entity-name"><a href="https://www.interactivebrokers.com.au/en/home.php?nored=t" target="_self">Interactive Brokers Australia Pty. Ltd.</a></p>
+                                <p>ABN 98 166 929 568 ist lizensiert von der <a href="https://asic.gov.au/" target="_blank" rel="noreferrer noopener">Australian Securities and Investments Commission</a> (AFSL: 453554), wird von dieser reguliert und nimmt an der <a href="https://www.asx.com.au/" target="_blank" rel="noreferrer noopener">ASX</a>, <a href="https://www.asx.com.au/" target="_blank" rel="noreferrer noopener">ASX 24</a> und <a href="https://www.cboe.com.au/" target="_blank" rel="noreferrer noopener">Cboe Australia</a> teil.<br> <strong>Eingetragener Gesch&#228;ftssitz:</strong> Level 11, 175 Pitt Street, Sydney, New South Wales 2000, Australia.<br> <strong>Website:</strong> <a href="https://www.interactivebrokers.com.au/en/home.php?nored=t" target="_self">www.interactivebrokers.com.au </a></p>
+                            </div>
+                            <div class="col-12 col-md-6"><!-- IBKR HK -->
+                                
+                                <p class="entity-name"><a href="https://www.interactivebrokers.com.hk/en/home.php?nored=t" target="_self">Interactive Brokers Hong Kong Limited</a></p>
+                                <p>wird von der Hong Kong Securities and Futures Commission reguliert und ist Mitglied der <a href="https://www.hkex.com.hk/" target="_blank" rel="noreferrer noopener">SEHK</a> und <a href="https://www.hkex.com.hk/" target="_blank" rel="noreferrer noopener">HKFE</a>.<br> <strong>Eingetragener Gesch&#228;ftssitz:</strong> Suite 1512, Two Pacific Place, 88 Queensway, Admiralty, Hong Kong SAR.<br> <strong>Website:</strong> <a href="https://www.interactivebrokers.com.hk/en/home.php?nored=t" target="_self">www.interactivebrokers.com.hk</a></p><!-- IBKR IN -->
+                                <p class="entity-name"><a href="https://www.interactivebrokers.co.in/en/home.php?nored=t" target="_self">Interactive Brokers India Pvt. Ltd.</a></p>
+                                <p>ist ein handelndes Mitglied der <a href="https://www.nseindia.com/" target="_blank" rel="noreferrer noopener">NSE</a> und <a href="https://www.bseindia.com/" target="_blank" rel="noreferrer noopener">BSE</a> sowie ein verwahrendes Mitglied der <a href="https://nsdl.co.in/" target="_blank" rel="noreferrer noopener">NSDL</a>. <a href="https://www.sebi.gov.in/" target="_blank" rel="noreferrer noopener">SEBI</a>-Registrierungs-Nr. INZ000217730; NSDL: IN-DP-602-2021. CIN-U67120MH2007FTC170004.<br> <strong>Eingetragener Gesch&#228;ftssitz:</strong> 502/A, Times Square, Andheri Kurla Road, Andheri East, Mumbai 400059, India.<br> <strong>Tel.:</strong> +91-22-61289888 <span class="pipe">|</span> <strong>Fax:</strong> +91-22-61289898.<br> <strong>Website:</strong> <a href="https://www.interactivebrokers.co.in/en/home.php?nored=t" target="_self">www.interactivebrokers.co.in</a></p><!-- IBKR JP -->
+                                
+                                <p class="entity-name"><a href="https://www.interactivebrokers.co.jp/en/home.php?nored=t" target="_self">Interactive Brokers Securities Japan, Inc.</a></p>
+                                <p>wird reguliert vom Kanto Local Finance Bureau (Registrierungsnr. 187) und ist Mitglied der<a href="https://www.jsda.or.jp/" target="_blank" rel="noreferrer noopener">Japan Securities Dealers Association</a> und der <a href="https://www.nisshokyo.or.jp/" target="_blank" rel="noreferrer noopener">Commodity Futures Association of Japan</a>.<br> <strong>Eingetragener Gesch&#228;ftssitz:</strong> Kasumigaseki Building 25F, 2-5 Kasumigaseki 3-chome, Chiyoda-ku, Tokyo, 100-6025 Japan.<br> <strong>Tel.:</strong> +81 03-4590-0711 <em>(an Gesch&#228;ftstagen von 08:30&#8211;17:30 Uhr Uhr JST)</em>.<br> <strong>Website:</strong> <a href="https://www.interactivebrokers.co.jp/en/home.php?nored=t" target="_self">www.interactivebrokers.co.jp</a></p><!-- IBKR SG -->
+<p class="entity-name"><a href="https://www.interactivebrokers.com.sg/en/home.php" target="_self">Interactive Brokers Singapore Pte. Ltd.</a></p>
+<p>ist lizensiert von der Monetary Authority of Singapore (Lizenznr. CMS100917) und wird von dieser reguliert.<br> <strong>Eingetragener Gesch&#228;ftssitz:</strong>  1 Harbourfront Place #12-01/03, Harbourfront Tower 1, Singapore 098633. <br> <strong>Website:</strong> <a href="https://www.interactivebrokers.com.sg/en/home.php" target="_self">www.interactivebrokers.com.sg</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- FOOTER END  -->
+</footer>
+
+<!-- MODAL START | ABOUT IB GROUP ---------------------------------------------------------------------------------------------------- -->
+<div class="modal fade" id="modalAlert" tabindex="-1" role="dialog" aria-labelledby="modalAboutIBGroup">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content modal-primary">
+			<div class="modal-header">
+				<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+				<h4 class="modal-title" ><i class="fas fa-exclamation-circle"></i> Notice</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col">
+						<p class="message">message</p><!-- You will be brought to the website of our affiliate-->
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<div class="row">
+					<div class="col-12 col-sm-3 order-2 order-sm-1">
+						<div class="panel-btn-left"><a href="javascript:void(0);" data-bs-dismiss="modal" class="btn btn-secondary">Stay</a></div>
+					</div>
+					<div class="col-12 col-sm-9 order-1 order-sm-2">
+						<div class="panel-btn-right goto"><a href="javascript:void(0);" onclick=""  data-bs-dismiss="modal"  class="btn btn-primary">Go</a></div> 
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#modalAlert').on('show.bs.modal', function (event) {
+	  var button = $(event.relatedTarget) // Button that triggered the modal
+      let myMessage = button.data('mymessage');
+      /*let myLink = "location.href='"+button.data('mytargetlink')+"'"; */
+      let myLink = "window.open('"+button.data('mytargetlink')+"')"; 
+	  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+	  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+	  var modal = $(this)
+	  modal.find('.modal-body .message').text( myMessage );
+	  modal.find('.modal-footer .goto a').attr( "onclick", myLink );
+
+	})
+});
+</script>
+<script>
+if(window.location.href.includes('conf=am')) {
+document.querySelector("#ibkr-header").style.display = "none";
+document.querySelector("#footer").style.display = "none";
+}
+</script>
+
+
+<!-- SHARE ON SOCIAL ---------------------------------------------------------------------------------------------------->
+<div class="social-sidebar animated fadeInLeft noprint">
+	<span><i class="fa fa-chevron-left"></i><i class="fa fa-chevron-right"></i></span>
+	<div class="icon-set">
+		<p>SHARE</p>
+		<div class="share-icon"><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.interactivebrokers.com%2fen%2findex.php%3ff%3d56754" target="_blank" rel="noreferrer noopener" title="Share on Facebook" aria-label="Share on Facebook" class="icon-facebook"><i class="fab fa-facebook-square"></i></a></div>
+		<div class="share-icon"><a href="https://twitter.com/intent/tweet?text=Interactive+Brokers&amp;url=https%3A%2F%2Fwww.interactivebrokers.com%2Fen%2Findex.php%3ff%3d56754&amp;related=" target="_blank" rel="noreferrer noopener" title="Share on Twitter" aria-label="Share on Twitter" class="icon-twitter"><i class="fab fa-twitter-square"></i></a></div>
+		<div class="share-icon"><a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwww.interactivebrokers.com%2fen%2findex.php%3ff%3d56754&amp;title=Interactive+Brokers&amp;summary=Interactive+Brokers&amp;source=LinkedIn" target="_blank" rel="noreferrer noopener" title="Share on Linkedin" aria-label="Share on Linkedin" class="icon-linkedin"><i class="fab fa-linkedin"></i></a></div>
+		<div class="share-icon"><a href="javascript:void(0);" target="_self" title="Share by Email" aria-label="Share by Email" name="btn_trigger" data-toggle="modal" data-target="#emailModal" id="56754" onClick="emailCookie();" class="icon-email"><i class="far fa-envelope"></i></a></div>
+	</div>
+</div>
+<!-- MODAL START | SHARE ON SOCIAL ---------------------------------------------------------------------------------------------------->
+<div class="modal fade noprint" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="emailModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button id="cls_frm_1" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="gridSystemModalLabel"><i class="far fa-envelope text-gray"></i> Email</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col">
+						<form>
+							<div class="form-group">
+								<label for="_to" class="control-label">To:</label> <span id="_err_to" style="color: red;"></span>
+								<input type="text" class="form-control" id="_to">
+							</div>
+							<div class="form-group">
+								<label for="_from" class="control-label">From:</label> <span id="_err_frm" style="color: red;"></span>
+								<input type="text" class="form-control" id="_from">
+							</div>
+							<div class="form-group">
+								<label for="_subject" class="control-label">Subject:</label> <span id="_err_subject" style="color: red;"></span>
+								<input type="text" class="form-control" id="_subject" value="Interactive Brokers">
+							</div>
+							<div class="form-group">
+								<textarea class="form-control" id="_content" style="height:200px;"></textarea>
+							</div>
+							<p class="text-sm">URL: <span class="text-italic text-black">www.interactivebrokers.ie/en/index.php?f=<span id='vid'></span></span></p>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<div class="row">
+					<div class="col-6">
+						<div align="left">
+							<button id="cls_frm_2" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+					<div class="col-6">
+						<div align="right">
+							<button type="button" class="btn btn-primary" id="send">Send</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<input type="hidden" id="_page_id" name="_page_id" value="56754" />
+</div>
+<!-- MODAL END | SHARE ON SOCIAL ----------------------------------------------------------------------------------------------------> 
+ 
+<script type="text/javascript" src="../../../insights/ibtr_share2667.js?t=v1"></script>
+<script type="text/javascript" src="../../../scripts/common/js/base642667.js?t=v1" ></script>
+<script>
+$(document).ready(function() {
+	 $(".social-sidebar span").click(function(){
+		 $(".social-sidebar div").toggleClass("social-sidebar-hide");
+		 $(".social-sidebar span").toggleClass("toggle-arrow");
+ 	 });
+});
+function emailCookie() {
+	if (document.cookie.indexOf("IB_EM_SH") == -1) {
+		var ex=new Date();
+		ex.setTime(ex.getTime()+86400000);
+		document.cookie ='IB_EM_SH='+1+';expires='+ex.toGMTString()+';path=/;domain=';
+	}
+}
+</script>
+<!-- SCRIPTS FOOTER ---------------------------------------------------------------------------------------------------- -->
+<script type="text/javascript" src="../../../scripts/common/js/zeynep-2.2.0/zeynep.js"></script>
+<script type="text/javascript" src="../../../scripts/common/js/lazyload/lazyload.min.js"></script>
+<script type="text/javascript" src="../../../search/conversions.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    
+    // GATHER HEIGHT OF HEADER
+    var headerHeight = $("div#ibkr-header").outerHeight();
+    // GATHER HEIGHT OF DISCLOSURES
+    var disclosureHeight = $("section#UKProductDisclosure, section#TurbosDisclosure").outerHeight();
+    $("section#UKProductDisclosure").css("top", headerHeight);
+    $("section#TurbosDisclosure").css("top", headerHeight);
+    // SET CONTENTS DIV PADDING TOP
+    $("div#contents").css("padding-top", disclosureHeight);
+    // OVERRIDE TOP OF DISCLOSURE AND PADDING-TOP OF CONTENTS ON WINDOW RESIZE
+    $(window).resize(function() {
+        var headerHeight = $("div#ibkr-header").outerHeight();
+        var disclosureHeight = $("section#UKProductDisclosure, section#TurbosDisclosure").outerHeight();
+        var headerHeightDelta = headerHeight - disclosureHeight;
+        $("section#UKProductDisclosure").css("top", disclosureHeight + headerHeightDelta);
+        $("section#TurbosDisclosure").css("top", disclosureHeight + headerHeightDelta);
+        $("div#contents").css("padding-top", disclosureHeight);
+    });
+
+    // OVERRIDE TOP OF DISCLOSURE AND PADDING-TOP OF CONTENTS ON BANNER CLOSE
+    $("#bannerRegionSelector a.btn-close").click(function() {
+        setTimeout(function() {
+            var headerHeight = $("div#ibkr-header").outerHeight();
+            $("section#UKProductDisclosure").css("top", headerHeight);
+            $("section#TurbosDisclosure").css("top", headerHeight);
+            $("div#contents").css("padding-top", disclosureHeight);
+        },500);
+    });
+    // MOBILE MENU
+    $(function() {
+        // Initilize mobile menu
+        var zeynep = $('.menu-mobile').zeynep({
+            opened: function () {
+            console.log('the side menu opened')
+        },
+        closed: function () {
+            console.log('the side menu closed')
+            }
+        })
+        // Dynamically bind closing event
+        zeynep.on('closing', function () {
+            console.log('this event is dynamically binded')
+        })
+        // Mobile menu close on overlay click
+        $('.website-overlay').on('click', function () {
+            zeynep.close()
+        })
+        // Mobile menu close on button click
+        $('.btn-close').on('click', function () {
+            zeynep.close()
+        })
+        // Mobile menu open on navbar-toggler click
+        $('.navbar-toggler').on('click', function () {
+            zeynep.open()
+        })
+    })
+});
+</script>
+<!-- STYLES FOOTER ---------------------------------------------------------------------------------------------------- -->
+<link rel="preload" as="font" type="font/woff2" href="../../../fonts/fontawesome-6.4.2/webfonts/fa-brands-400.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="../../../fonts/fontawesome-6.4.2/webfonts/fa-regular-400.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="../../../fonts/fontawesome-6.4.2/webfonts/fa-solid-900.woff2" crossorigin>
+<link rel="preload" as="style" href="../../../css/ibkr/website-print.min.css">
+<link rel="stylesheet" type="text/css" media="print" href="../../../css/ibkr/website-print.min.css">
+<style type="text/css">
+@import url('../../../css/fontawesome-6.4.2/all.min.css') layer(vendors);
+@import url('../../../css/animate-3.7.2/animate.min.css') layer(vendors);
+@import url('../../../css/bootstrap-switch-3.3.2/bootstrap-switch.min.css') layer(vendors);
+@import url('../../../css/icheck-1.0.2/icheck.css') layer(vendors);
+</style><script type="text/javascript">
+	/* <![CDATA[ */
+	var google_conversion_id = 1070426721;
+	var google_custom_params = window.google_tag_params;
+	var google_remarketing_only = true;
+	/* ]]> */
+</script>
+<script type="text/javascript" src="../../../../www.googleadservices.com/pagead/f.txt"></script>
+<noscript>
+    <div display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt="" src="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/1070426721/?value=0&amp;guid=ON&amp;script=0"/>
+    </div>
+</noscript>
+</body>
+
+<!-- Mirrored from www.interactivebrokers.ie/de/general/about/supplier-information.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Sep 2025 09:18:28 GMT -->
+</html>

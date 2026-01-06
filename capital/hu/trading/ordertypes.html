@@ -1,0 +1,1977 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="hu" data-theme="light">
+
+<!-- Mirrored from www.interactivebrokers.ie/hu/trading/ordertypes.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Sep 2025 09:29:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8">
+<title>Megb&#237;z&#225;st&#237;pusok &#233;s algoritmusok | Interactive Brokers Ireland</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+<meta name="description" content="T&#246;bb mint 90 k&#252;l&#246;nb&#246;z&#337; megb&#237;z&#225;st&#237;pus &#233;s algoritmus seg&#237;ts&#233;g&#233;vel korl&#225;tozhatja a kock&#225;zatokat, felgyors&#237;thatja a v&#233;grehajt&#225;st, &#225;rjavul&#225;st &#233;rhet el, titokban">
+<meta name="keywords" content="megb&#237;z&#225;st&#237;pusok, algoritmusok, &#246;sszehasonl&#237;t&#225;s, trader workstation, kock&#225;zatcs&#246;kkent&#233;s, gyors v&#233;grehajt&#225;s, &#225;rjavul&#225;s, titoktart&#225;s">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta http-equiv="expires" content="-1">
+<meta name="robots" content="index, follow">
+<meta http-equiv="pragma" content="no-cache">
+<meta property="og:site_name" content="Interactive Brokers Ireland" />
+<!--Pid:48386-->
+<link rel="canonical" href="ordertypes.html"/>
+<meta name="apple-mobile-web-app-title" content="IBKR">
+<link rel="icon" sizes="192x192" href="../../images/web/favicons/home-screen-icon-192x192.png" />
+<link rel="icon" sizes="128x128" href="../../images/web/favicons/home-screen-icon-128x128.png" />
+<link rel="apple-touch-icon" sizes="57x57" href="../../images/web/favicons/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="../../images/web/favicons/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="../../images/web/favicons/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="../../images/web/favicons/apple-touch-icon-144x144.png" />
+<!-- SCRIPTS HEAD  -->
+<script type="text/javascript" src='../../scripts/common/js/jquery-3.6.1/jquery.min.js'></script>
+<script type="text/javascript">
+function createScriptElement(data) {
+ if (typeof data == "undefined") {
+  return;
+ }
+ var element = document.createElement("SCRIPT");
+ element.type = "text/javascript";
+ if (typeof data.id != "undefined") {
+  element.id = data.id;
+ }
+ if (typeof data.source != "undefined") {
+  element.src = data.source;
+ }
+ if (typeof data.loadfunction == "function") {
+  element.onload = data.loadfunction;
+ }
+ document.head.appendChild(element);
+}
+createScriptElement({ source : "/scripts/common/js/bootstrap-5.2.2/bootstrap.bundle.min.js", loadfunction: bsLoaded  });
+createScriptElement({ source : "/scripts/common/js/lib.js?ver=9" });
+function storeCookie()
+{
+ if(typeof(Storage) !== 'undefined')
+ {
+   if(localStorage.getItem('web') !== null)
+   {
+     localStorage.removeItem('web');
+   }
+ }
+}
+function bsLoaded() {
+  createScriptElement({ source : "/scripts/common/js/appear/appear.min.js?ver=1" });
+  createScriptElement({ source : "/scripts/common/js/easing/easing.min.js?ver=1" });
+  createScriptElement({ source : "/scripts/common/js/parallax/parallax.min.js?ver=1" });
+  createScriptElement({ source : "/scripts/common/js/uitotop/uitotop.min.js?ver=1", loadfunction: uiLoaded });
+}
+function uiLoaded() {
+  createScriptElement({ source : "/scripts/common/js/twsUtils.js?ver=2" });
+  createScriptElement({ source : "/scripts/common/js/design/design.js?ver=1" }); 
+}
+</script>
+<script type="text/javascript">
+$(function() {
+ if (document.cookie.indexOf("IB_SEARCH") == -1)
+ {
+  var ex=new Date();
+  ex.setTime(ex.getTime()+86400000);
+  document.cookie ='IB_SEARCH='+Math.floor(new Date().getTime()/1000)+';expires='+ex.toGMTString()+';path=/;domain=.interactivebrokers.ie';
+ }
+  let nex=new Date();
+  nex.setTime(nex.getTime()+86400000);
+    document.cookie ='IB_QD=0;expires='+nex.toGMTString()+';path=/;domain=.interactivebrokers.ie';
+  
+  let excfd=new Date();
+  excfd.setTime(excfd.getTime()+86400000);
+  document.cookie ='IB_QD_CFD=0;expires='+excfd.toGMTString()+';path=/;domain=.interactivebrokers.ie';
+ $('div#langselector').find('a').each(function() {
+  $(this).click(function() {
+   var link = $(this).attr("href");
+   if(link.match(/\/(en|fr|de|es|it|ru|cn|jp)\//))
+   {
+    var langs = link.split("../../index.html");
+    if(langs[3] == 'en' || langs[3] == 'fr' || langs[3] == 'de' || langs[3] == 'es' || langs[3] == 'it' || langs[3] == 'ru' || langs[3] == 'cn' || langs[3] == 'jp')
+    {
+      var lang = langs[3];
+      if(lang == 'cn')
+      {
+        lang = 'zh_CN';
+      }
+      if(lang == 'jp')
+      {
+        lang = 'ja';
+      }
+      if(hasCookie("IB_LANG"))
+      {
+        deleteCookie("IB_LANG");
+      }
+      setCookie("IB_LANG", lang, 7, '.interactivebrokers.ie');
+    } else if(langs[1] == 'en') {
+      var lang = 'en';
+      setCookie("IB_LANG", lang, 7, '.interactivebrokers.ie');
+    }
+   }
+  });
+ });
+ $('p#bandaid-close').click(function() {
+  setCookie("IB_BANDAID", 1, 7, '.interactivebrokers.ie');
+ });
+ $('a#btnCloseBannerRegionSelector').click(function() {
+  setCookie("IB_REGION_SEL", 1, 30, '.interactivebrokers.ie');
+ });
+ $('a#btnCloseBannerRegionDifc').click(function() {
+  setCookie("IB_DIFC", 1, 30, '.interactivebrokers.ie');
+ });
+});
+</script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    if(localStorage.getItem('consentMode') ===  null){
+                    const consentMode = {
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'analytics_storage': 'denied'
+            };
+                localStorage.setItem('consentMode', JSON.stringify(consentMode));
+        gtag('consent', 'default', consentMode);
+    }
+    else {
+        gtag('consent', 'default', JSON.parse(localStorage.getItem('consentMode')));
+    }
+</script>
+<!-- STYLES HEAD -->
+<style type="text/css">
+@import url('../../css/bootstrap-5.2.2/bootstrap.min.css') layer(bootstrap);
+</style>
+<link rel="preload" as="style" href="../../css/ibkr/website.mince12.css?v=1848a6e12ea6c289ee1df7ee63749846">
+<link rel="stylesheet" type="text/css" media="all" href="../../css/ibkr/website.mince12.css?v=1848a6e12ea6c289ee1df7ee63749846">
+<link rel="preload" as="style" href="../../css/ibkr/theme-ibkr.min4f42.css?v=be9c72c0d328e7fc4987bce81f28981c">
+<link rel="stylesheet" type="text/css" media="all" href="../../css/ibkr/theme-ibkr.min4f42.css?v=be9c72c0d328e7fc4987bce81f28981c"><script type="text/javascript" src="../../scripts/common/js/2015/mixitup.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+     // Mixitup JS Tools Filter
+	$('#tools-list').mixitup({
+		effects: ['fade','scale'],
+		easing: 'snap'
+	});
+	$('#tools-list-3rd').mixitup({
+		effects: ['fade','scale'],
+		easing: 'snap'
+	});
+});
+</script>
+<style type="text/css">
+/* PAGE TITLE -------------------------------------------------------------- */
+section#page-title {
+	display: none;
+}
+.ibkr-pro-styled {
+	color: var(--white);
+}
+#drop-order-types {
+	background: -moz-linear-gradient(top, var(--gray-5-solid) 1%, var(--bg-body) 10%);
+	background: -webkit-linear-gradient(top, var(--gray-5-solid) 1%, var(--bg-body) 10%);
+	background: linear-gradient(to bottom, var(--gray-5-solid) 1%, var(--bg-body) 10%);
+}
+/* MIXITUP.JS STYLES ---------------------------------------------------------------------------------------------------- */
+/* TOOL CONTAINERS */
+#tools-list {
+	margin: 0px;
+	padding: 0px;
+}
+#tools-list li {
+	float: start;
+	margin: 0px;
+	width: 20%;
+	overflow: hidden;
+	display: none;
+	opacity: 0;
+}
+#tools-list li:hover {
+	cursor: pointer;
+}
+#tools-list li:hover img {
+	-webkit-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	color: #666666;
+	background-color: rgba(0, 0, 0, 0.05);
+	border: 1px solid #FFFFFF;
+	transition: all .3s ease;
+}
+#tools-list li:hover .text-holder {
+	opacity: 1;
+}
+#tools-list li:hover .text-holder .text-middle {
+	-webkit-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+}
+#tools-list li img {
+	width: 100%;
+	transition: all .3s ease;
+}
+#tools-list li .tool-title {
+	display: inline-block;
+	margin: 0px 0px 10px;
+	padding: 46px 20px 30px;
+	width: 100%;
+	height: 120px;
+	text-align: center;
+	color: var(--dark-60);
+	background-color: var(--gray-10-solid);
+	border: 1px solid var(--gray-10-solid);
+	transition: all .3s ease;
+}
+#tools-list li:hover .tool-title {
+	color: var(--dark-80);
+	background-color: var(--gray-30-solid);
+}
+#tools-list li a {
+	width: 223px;
+	height: 120px;
+	margin: -120px 0px 0px 0px;
+	box-sizing: border-box;
+}
+#tools-list li a h5 {
+	color: #FFFFFF;
+}
+#tools-list li a:focus {
+	outline: none;
+}
+#tools-list li a:hover {
+	background-color: transparent;
+}
+.text-holder {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	background-color: #4D6E9D;
+	opacity: 0;
+	transition: all .3s ease;
+}
+.text-caption {
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+.text-middle {
+	display: table-cell;
+	vertical-align: middle;
+	color: var(--white);
+	transition: all .3s ease;
+	-webkit-transform: scale(0);
+	-o-transform: scale(0);
+	transform: scale(0);
+}
+.text-middle h5 {
+	margin: 0px;
+}
+@media (min-width:992px) and (max-width:1199.99px) {
+#tools-list li a {
+	width: 186px;
+}
+}
+@media (min-width:768px) and (max-width:991.99px) {
+/* MIXITUP.JS @ 991 */
+#tools-list li, #recent-tools-list li {
+	width: 25%;
+}
+#tools-list li a {
+	width: 173px;
+}
+#intro.hero {
+	align-items: flex-start;
+	justify-content: center;
+}
+}
+@media (max-width:767.99px) {
+/* MIXITUP.JS < 767 */
+#tools-list li, #recent-tools-list li {
+	width: 50%;
+}
+#tools-list li a {
+	width: 47%;
+}
+#intro.hero {
+	align-items: flex-start;
+	justify-content: center;
+}
+}
+/* Mixit grid */
+.qb-id {
+	margin: 0px;
+	padding: 14px;
+	display: flex;
+	flex-wrap: wrap;
+}
+.qb-id > li {
+	margin: 20px 0 10px;
+	padding: 0 0 0 0;
+	width: 100%;
+	display: none;
+	opacity: 0;
+	position: relative;
+}
+.gacs-grid {
+	margin: 0px;
+	padding: 0px;
+	display: flex;
+	flex-wrap: wrap;
+}
+.gacs-grid > li {
+	margin: 20px 0 10px;
+	padding: 0 0 0 0;
+	width: 33.33333333%;
+	display: none;
+	opacity: 0;
+	position: relative;
+}
+.gacs-grid > div .qb-id {
+	margin: 20px 0 10px;
+	padding: 0 0 0 0;
+	width: 100%;
+	display: none;
+	opacity: 0;
+	position: relative;
+}
+.gacs-grid > li > a {
+	display: block;
+	background: var(--bg-body);
+	position: relative;
+	height: 100%;
+	margin: 0 15px;
+	border: 3px solid var(--border-color);
+}
+.gacs-grid > li > a > .inner-box {
+	padding: 20px 20px 40px;
+	height: 100%;
+	position: relative;
+}
+.gacs-grid > li > a h6 {
+	margin-top: 0;
+}
+.gacs-grid > li > a .learnmore {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background-color: var(--gray-10-solid);
+}
+.gacs-grid > li > a .learnmore p {
+	margin-top: 8px;
+	margin-end: 0;
+	-webkit-margin-end: 0;
+	-moz-margin-end: 0;
+	margin-bottom: 8px;
+	margin-start: 20px;
+	-webkit-margin-start: 20px;
+	-moz-margin-start: 20px;
+}
+.gacs-grid > li > a:hover {
+	border: 3px solid var(--primary);
+}
+.overview-paragraph {
+	width: 100% !important;
+	padding: 20px !important;
+}
+[dir="rtl"] .fa-chevron-circle-right {
+	-webkit-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+@media (max-width: 767px) {
+.gacs-grid > li {
+	width: 100%;
+}
+}
+@media (min-width:768px) {
+.gacs-grid > li {
+	width: 50%;
+}
+}
+@media (min-width:992px) {
+.gacs-grid > li {
+	width: 33.33333333%;
+}
+}
+</style>
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-d23de039-d518-4f10-9810-e68da4592744","rua.cook":"true","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="XE2AM-F37QZ-LYWQP-H8KRM-4SNX5",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"XE2AM-F37QZ-LYWQP-H8KRM-4SNX5";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n="false"=="true"?1:0,t="cookiepresent",a="eykumbc7mxv4o2gjeu5q-f-3037c2489-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1168163","ak.ai":parseInt("665092",10),"ak.ol":"0","ak.cr":39,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"e12666e","ak.r":50930,"ak.a2":n,"ak.m":"a","ak.n":"essl","ak.bpcip":"38.21.70.0","ak.cport":49591,"ak.gh":"95.101.132.228","ak.quicv":"","ak.tlsv":"tls1.2","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1758012731","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==NvHyvdTlbJqD5IgbrlDSnOVufEc/1EN3b+FuZ+dJ9UZ/1nplx4nl42W/+vMiPKWsExBS4DUld5szfcW/a7MbwupFqLDl1w9nV5BTpDFU7TAWABz/UmCtkxUQEEq6tcp9qTYHF1C1QmFxKLa0EWrajyUVQEF/EfYGfWd8U1EK6lO5XS+xQrj7JsVMq1DlJOrs9JXshuwzG+wGrlMDmioCIpuNLAN3IklX1JgtuyfWzrwZMgedg+VwUnOtZmsj18kUv3NYqawwPGfzJ91UgSIo5rRKZ7UsfYH/wC9ISDU+8lJ+S7jYG5eO7W/3KWZOxQxxyP8l/Q/z74RZh/ewhhR0sIAOZYhaGWsgnH9TdU0kui48QxEMX/x+gNw13UuF4/f6rfzYFWtF7RvcVc/BY/mBFn8bco0LxU3072akvxHIzHw=","ak.pv":"398","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.html","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak-2.html","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body>
+<div id="printheader"></div>
+<!-- HEADER START  -->
+<div class="ibkr-header" id="ibkr-header">
+    
+        
+<style type="text/css">
+.banner-risk-warning {
+    margin:0px;
+    padding:8px 0px;
+    width:100%;
+    height:auto;
+    background-color:#242424;
+}
+.banner-risk-warning p {
+    margin:0px;
+    padding:0px;
+    font-weight:400;
+    font-size:1.0rem;
+    line-height:1.25rem;
+    text-align:center;
+    color:#FFFFFF;
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | EXTRA SMALL (< 576PX) ---------------------------------------------------------------------------------------------------- */
+@media (max-width:575.98px) {
+    .banner-risk-warning {
+        padding:4px 0px;
+    }
+    .banner-risk-warning p {
+        font-size:0.8125rem;
+        line-height:1.0rem;
+    }
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | SMALL (576PX-767.98PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:576px) and (max-width:767.98px) {
+    .banner-risk-warning {
+        padding:4px 0px;
+    }
+    .banner-risk-warning p {
+        font-size:0.8125rem;
+        line-height:1.0rem;
+    }
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | MEDIUM (768PX-991.98PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:768px) and (max-width:991.98px) {
+    .banner-risk-warning {
+        padding:4px 0px;
+    }
+    .banner-risk-warning p {
+        font-size:0.8125rem;
+        line-height:1.0rem;
+    }
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | LARGE (992PX-1199.98PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:992px) and (max-width:1199.98px) {
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | EXTRA LARGE (>1200PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:1200px) {
+}
+</style>
+<div class="banner-risk-warning">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p>A p&#233;nz&#252;gyi term&#233;kekbe val&#243; befektet&#233;s kock&#225;zattal j&#225;r. A vesztes&#233;ge ak&#225;r indul&#243; befektet&#233;s&#233;t is meghaladhatja.</p>
+            </div>
+        </div>
+    </div>
+</div>    <!-- NAV TOP START (LG/XL ONLY) -->
+    <nav class="navbar navbar-inverse navbar-expand-lg navbar-top d-none d-lg-block">
+        <div class="container">
+            <div class="navbar-collapse collapse" id="ibkr-nav-top"><!-- LEFT MENU -->
+                
+                <ul class="navbar-nav mr-auto align-items-center"><!-- FOR INDIVIDUALS -->
+                    <li class="nav-item dropdown"><a href="#" target="_self" class="nav-link dropdown-toggle" id="nav-for-individuals" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mag&#225;nszem&#233;lyek</a>
+                        <div class="dropdown-menu dropdown-ind-accounts" aria-labelledby="nav-for-individuals">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../accounts/individual-ie.html" target="_self" class="dropdown-item" >Egy&#233;ni vagy K&#246;z&#246;s sz&#225;mla</a> <a href="../accounts/trust-ie.html" target="_self" class="dropdown-item" >Bizalmi vagyonkezel&#233;si (trust) sz&#225;mla</a> <a href="../accounts/family-account-ie.html" target="_self" class="dropdown-item" >Csal&#225;di sz&#225;mla</a> <a href="../accounts/long-term-investment-accounts-ie.html" target="_self" class="dropdown-item">Tart&#243;s befektet&#233;si (TBSZ) sz&#225;mla</a> <a href="../accounts/plan-depargne-en-action-accounts-ie.html" target="_self" class="dropdown-item">Plan d&#8217;Epargne en Actions (PEA) sz&#225;mla</a> 
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- FOR INSTITUTIONS -->
+                    <li class="nav-item dropdown"><a href="#" target="_self" class="nav-link dropdown-toggle" id="nav-for-institutions" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Int&#233;zm&#233;nyek</a>
+                        <div class="dropdown-menu dropdown-inst-accounts" aria-labelledby="nav-for-institutions">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../accounts/institutions-ie.html" target="_self" class="dropdown-item" >Int&#233;zm&#233;nyi &#252;gyfelek &#8211; kezd&#337;lap</a> <a href="../accounts/advisor-ie.html" target="_self" class="dropdown-item" >Bejegyzett befektet&#233;si tan&#225;csad&#243;k</a> <a href="../accounts/proprietary-trading-group-ie.html" target="_self" class="dropdown-item" >Saj&#225;t sz&#225;ml&#225;s keresked&#233;si csoportok</a> <a href="../accounts/hedge-fund-ie.html" target="_self" class="dropdown-item" >Fedezeti alapok</a> <a href="../accounts/broker-ie.html" target="_self" class="dropdown-item" >K&#246;zvet&#237;t&#337; br&#243;kerek</a> <a href="../accounts/family-office-ie.html" target="_self" class="dropdown-item" >Int&#233;zm&#233;nyi csal&#225;di sz&#225;ml&#225;k</a> <a href="../accounts/compliance-officer-ie.html" target="_self" class="dropdown-item" >Compliance vezet&#337;k</a> <a href="../accounts/small-business-ie.html" target="_self" class="dropdown-item" >Kisv&#225;llalkoz&#225;sok</a> <a href="../accounts/fsa-insurance-providers.html" target="_self" class="dropdown-item" >Teljes k&#246;r&#369; adminisztr&#225;tori sz&#225;mla <br>biztos&#237;t&#243;knak</a> <a href="../accounts/money-manager-ie.html" target="_self" class="dropdown-item" >Befektet&#233;skezel&#337;k</a> <a href="../accounts/administrator-ie.html" target="_self" class="dropdown-item" >Befektet&#233;si alap adminisztr&#225;torok</a>  <a href="https://interactivebrokers.eu/campus/stl/" target="_blank" class="dropdown-item" >Oktat&#225;si int&#233;zm&#233;nyek</a>                                 </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul><!-- RIGHT MENU -->
+                
+                <ul class="navbar-nav ml-auto align-items-center"><!-- FREE TRIAL -->
+                    <li class="nav-item"><a href="free-trial.html" target="_self" class="nav-link">INGYENES PR&#211;BAVERZI&#211;</a></li><!-- CAREERS -->
+                    
+                    <li class="nav-item"><a href="../general/about/careers-splash.html" target="_self" class="nav-link">Karrierlehet&#337;s&#233;gek</a></li><!-- ABOUT US -->
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-about-us" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">R&#243;lunk</a>
+                        <div class="dropdown-menu dropdown-about-us" aria-labelledby="nav-about-us">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../general/financial-strength.html" target="_self" class="dropdown-item" >Stabilit&#225;s &#233;s biztons&#225;g</a> <a href="../general/about/info-and-history.html" target="_self" class="dropdown-item">Inform&#225;ci&#243;k &#233;s c&#233;gt&#246;rt&#233;net</a> <a href="../general/awards.html" target="_self" class="dropdown-item">D&#237;jak</a> <a href="../about/news-at-ibkr.html" target="_self" class="dropdown-item">IBKR h&#237;rek</a> <a href="../general/about/press-and-media.html" target="_self" class="dropdown-item">Sajt&#243; &#233;s m&#233;dia</a> <a href="https://investors.interactivebrokers.com/ir/main.php" target="_blank" class="dropdown-item" rel="noreferrer noopener">Befektet&#337;i kapcsolatok</a> <a href="../general/about/sustainability.html" target="_self" class="dropdown-item">Fenntarthat&#243;s&#225;g</a> <a href="../accounts/legalDocuments/brokerPerformanceReports.html" target="_self" class="dropdown-item">Szab&#225;lyoz&#243;i jelent&#233;sek</a> <a href="../accounts/referrer.html" target="_self" class="dropdown-item">K&#246;zvet&#237;tse hozz&#225;nk egy bar&#225;tj&#225;t</a> <a href="../general/about/affiliate-programs.html" target="_self" class="dropdown-item">Affiliate programok</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- SUPPORT -->
+                    
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-support" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">T&#225;mogat&#225;s</a>
+                        <div class="dropdown-menu dropdown-contact-us" aria-labelledby="nav-support">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../support/fund-my-account.html" target="_self" class="dropdown-item">T&#246;ltse fel a sz&#225;ml&#225;j&#225;t</a> <a href="../support/individuals.html" target="_self" class="dropdown-item">Mag&#225;nszem&#233;lyek</a> <a href="../support/institutions.html" target="_self" class="dropdown-item">Int&#233;zm&#233;nyek</a> <a href="../support/institutional-sales-contacts4343.html?p=uk" target="_self" class="dropdown-item">Int&#233;zm&#233;nyi &#233;rt&#233;kes&#237;t&#337;k el&#233;rhet&#337;s&#233;gei</a> <a href="../general/contact/ibot-container.html" target="_self" class="dropdown-item">GYIK &#225;ttekint&#233;se</a> <a href="../support/reports-and-dates.html" target="_self" class="dropdown-item">Ad&#243;inform&#225;ci&#243;k</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- LANGUAGE SELECTOR -->
+                    <li class="nav-item dropdown"><a href="#" class="nav-link nav-language dropdown-toggle" id="nav-language" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Nyelv</span><img src="../../images/web/icons/icon-language.svg" alt="Nyelv" width="23" height="18" border="0" /></a>
+                        <div class="dropdown-menu dropdown-language" aria-labelledby="nav-language">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../../en/home.html" target="_self" class="dropdown-item">English</a>
+                                    <a href="../../fr/home.html" target="_self" class="dropdown-item">Fran&#231;ais</a>
+                                    <a href="../../de/home.html" target="_self" class="dropdown-item">Deutsch</a>
+                                    <a href="../../es/home.html" target="_self" class="dropdown-item">Espa&#241;ol</a>
+                                    <a href="../../it/home.html" target="_self" class="dropdown-item">Italiano</a>
+                                    <a href="../home.html" target="_self" class="dropdown-item">Magyar</a>
+                                    <a href="../../pt/home.html" target="_self" class="dropdown-item">Portugu&#234;s</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                                    </ul>
+            </div>
+        </div><!-- NAV TOP END --><!-- NAV BOTTOM START -->
+    </nav>
+    
+    <nav class="navbar navbar-inverse navbar-expand-lg navbar-bottom">
+        <div class="container"><!-- LOGO -->
+            
+             <a href="../home.html" target="_self" title="Interactive Brokers kezd&#337;lap" alt="Interactive Brokers log&#243;" class="navbar-brand brand-logo" aria-label="Interactive Brokers Home"><span>Interactive Brokers kezd&#337;lap</span></a>
+            <!-- TOGGLE (XS/SM/MD ONLY) --><!-- OPEN ACCOUNT BUTTON (XS/SM/MD ONLY) -->
+            <button class="navbar-toggler" type="button" aria-label="Toggle Navigation"><span class="navbar-toggler-icon"><i class="fas fa-bars" aria-hidden="true"></i></span></button>
+            <a href="https://www.interactivebrokers.co.uk/Universal/Application" target="_self" class="d-block d-lg-none btn btn-open-account">Sz&#225;mlanyit&#225;s</a>
+            <!-- LOG IN (SM/MD ONLY) -->
+             <a href="https://www.interactivebrokers.co.uk/sso/Login?RL=1" target="_self" class="d-none d-sm-block d-lg-none btn btn-log-in">Bejelentkez&#233;s</a>             <!-- IBKR NAV BOTTOM START -->
+            <div class="navbar-collapse collapse" id="ibkr-nav-bottom">
+                <ul class="navbar-nav ml-auto align-items-center"><!-- WHY IBKR -->
+                    
+                    <li class="nav-item"><a href="../whyib/overview.html" target="_self" class="nav-link">Mi&#233;rt v&#225;lasszon minket?</a></li><!-- PRICING -->
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-pricing" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&#193;rk&#233;pz&#233;s</a>
+                        <div class="dropdown-menu dropdown-pricing" aria-labelledby="nav-pricing">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../pricing/commissions-home.html" target="_self" class="dropdown-item">Jutal&#233;kok</a> <a href="margin-rates.html" target="_self" class="dropdown-item">Fedezeti hitelkamatok</a> <a href="../accounts/fees/pricing-interest-rates.html" target="_self" class="dropdown-item">Kamatl&#225;bak</a> <a href="../pricing/short-sale-cost.html" target="_self" class="dropdown-item">Short elad&#225;s k&#246;lts&#233;ge</a> <a href="../pricing/research-news-services.html" target="_self" class="dropdown-item">Elemz&#233;sek, h&#237;rek</a> <a href="../pricing/market-data-pricing.html" target="_self" class="dropdown-item">Piaci adatok &#225;rk&#233;pz&#233;se</a> <a href="../pricing/stock-yield-enhancement-program-ie.html" target="_self" class="dropdown-item">R&#233;szv&#233;nyhozam-n&#246;vel&#337; program (SYEP)</a> <a href="../pricing/other-fees-overview.html" target="_self" class="dropdown-item">D&#237;jak</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- TRADING -->
+                    
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-technology" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Keresked&#233;s</a>
+                        <div class="dropdown-menu dropdown-technology" aria-labelledby="nav-technology">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="trading-platforms.html" target="_self" class="dropdown-item">Platformok</a> <a href="ib-api.html" target="_self" class="dropdown-item">API fel&#252;letek</a> <a href="margin.html" target="_self" class="dropdown-item">Fedezet (Margin)</a> <a href="products-exchanges.html" target="_self" class="dropdown-item">Keres&#233;s ticker k&#243;dra vagy t&#337;zsd&#233;re</a> <a href="products-stocks.html" target="_self" class="dropdown-item">Term&#233;kek &#225;ttekint&#233;se</a> <a href="ordertypes.html" target="_self" class="dropdown-item">Megb&#237;z&#225;st&#237;pusok</a> <a href="../whyib/reporting.html" target="_self" class="dropdown-item">Jelent&#233;sek</a> <a href="securities-financing.html" target="_self" class="dropdown-item">&#201;rt&#233;kpap&#237;r-finansz&#237;roz&#225;s</a> <a href="features-in-focus.html" target="_self" class="dropdown-item">Szolg&#225;ltat&#225;saink r&#233;szletei</a> <a href="../general/education/probability_lab.html" target="_self" class="dropdown-item">Probability Lab</a> <a href="sustainable-investing-ie.html" target="_self" class="dropdown-item">Fenntarthat&#243; befektet&#233;s</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- SERVICES -->
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-products" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Szolg&#225;ltat&#225;sok</a>
+                        <div class="dropdown-menu dropdown-products" aria-labelledby="nav-products">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="globalanalyst.html" target="_self" class="dropdown-item">IBKR GlobalAnalyst</a> <a href="si-quotes.html" target="_self" class="dropdown-item">EUIBSI V&#233;tel/Elad&#225;s</a> <a href="../portfolioanalyst/overview.html" target="_self" class="dropdown-item" rel="noreferrer noopener">PortfolioAnalyst</a> <a href="products-bonds.html" target="_self" class="dropdown-item">K&#246;tv&#233;ny piact&#233;r</a> <a href="products-mutual-funds.html" target="_self" class="dropdown-item">Befektet&#233;si alap piact&#233;r</a> <a href="commission-free-etfs-mkt.html" target="_self" class="dropdown-item">ETF-ek tranzakci&#243;s d&#237;j n&#233;lk&#252;l</a> <a href="https://gdcdyn.interactivebrokers.com/aces/Marketplace/InvestorsMarketplace" target="_blank" class="dropdown-item">Befektet&#337;i piact&#233;r</a> <a href="short-securities-availability.html" target="_self" class="dropdown-item">Shortolhat&#243; &#233;rt&#233;kpap&#237;rok el&#233;rhet&#337;s&#233;ge</a> <a href="third-party-integration.html" target="_self" class="dropdown-item">Integr&#225;ci&#243; harmadik felekkel</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- EDUCATION -->
+                    
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-education" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Oktat&#225;s</a>
+                        <div class="dropdown-menu dropdown-education" aria-labelledby="nav-education">
+                            <div class="row">
+                                <div class="col">
+                                     <a href="https://interactivebrokers.eu/campus/" target="_blank" class="dropdown-item">IBKR Campus</a> <a href="https://interactivebrokers.eu/campus/academy" target="_blank" class="dropdown-item" rel="noreferrer noopener">Traders' Academy</a> <a href="https://interactivebrokers.eu/campus/news" target="_blank" class="dropdown-item" rel="noreferrer noopener">Traders' Insight</a> <a href="https://interactivebrokers.eu/campus/podcasts" target="_blank" class="dropdown-item" rel="noreferrer noopener">IBKR Podcastok</a> <a href="https://interactivebrokers.eu/campus/quant" target="_blank" class="dropdown-item" rel="noreferrer noopener">IBKR Quant Blog</a> <a href="https://interactivebrokers.eu/campus/webinars" target="_blank" class="dropdown-item" rel="noreferrer noopener">Webin&#225;riumok</a> <a href="https://interactivebrokers.eu/campus/stl/" target="_blank" class="dropdown-item">Student Trading Lab</a> <a href="https://interactivebrokers.eu/campus/glossary" target="_blank" class="dropdown-item" rel="noreferrer noopener">Traders' Glossary</a>  <a href="../general/calendar/calendar.html" target="_self" class="dropdown-item">Keresked&#233;si napt&#225;r</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- SEARCH -->
+                    <li class="nav-item dropdown d-none d-lg-block" id="search-expand"><a href="#" class="nav-link nav-search dropdown-toggle" id="nav-search" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Search"><span>Keres&#233;s</span><i class="fas fa-search" aria-hidden="true"></i></a>
+                        <div class="dropdown-menu dropdown-search" aria-labelledby="nav-search">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="search_box">
+                                        <script type="text/javascript">
+                                         searchbox_input_changed=false;
+                                         $('#search-expand').on('shown.bs.dropdown', function(e) {
+                                           $('#searchField').focus();
+                                         });
+                                        </script>
+                                        <form action="https://www.interactivebrokers.ie/hu/search/search.php" method="get" class="search_form" id="search_form_id">
+                                            <input type="text" aria-label="Search Box" placeholder="Search" name="q" maxlength="64" autocomplete="off" id="searchField" class="form-control s swap_value searchinput" aria-label="Search Interactive Brokers">
+                                            <button type="submit" value="" id="searchsubmit" class="searchsubmit"><i class="fas fa-search" aria-hidden="true" aria-label="Submit Search"></i></button>
+                                        </form>
+                                        
+                                                                            </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- LOG IN -->
+                    
+                    <li class="nav-item dropdown d-none d-lg-block"><a href="#" target="_self" class="nav-link nav-login dropdown-toggle" id="nav-log-in" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bejelentkez&#233;s</a>
+                        <div class="dropdown-menu dropdown-login" aria-labelledby="nav-log-in">
+                            <div class="row">
+                                <div class="col">
+                                     <a href="../../sso/Login0104.html?RL=1" target="_self" class="dropdown-item dropdown-portal">Port&#225;l bejelentkez&#233;s</a>  <a href="ibkr-desktop.html" target="_self" class="dropdown-item">IBKR Desktop let&#246;lt&#233;se </a> <a href="tws.html#tws-software" target="_self" class="dropdown-item">Trader Workstation let&#246;lt&#233;se</a> <a href="tws-mobile.html#trytoday-drop" target="_self" class="dropdown-item">IBKR Mobile let&#246;lt&#233;se</a> <a href="ibgateway-latest.html" target="_self" class="dropdown-item">IB Gateway let&#246;lt&#233;se</a> <a href="trading-platforms.html" target="_self" class="dropdown-item">Az &#246;sszes IBKR platform &#246;sszehasonl&#237;t&#225;sa</a> <a href="https://forecasttrader.interactivebrokers.ie/eventtrader/#/markets" target="_self" class="dropdown-item">IBKR ForecastTrader</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- OPEN ACCOUNT -->
+                    <li class="nav-item dropdown d-none d-lg-block"><a href="#" target="_self" class="nav-link nav-open-account dropdown-toggle" id="nav-open-account" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sz&#225;mlanyit&#225;s</a>
+                        <div class="dropdown-menu dropdown-open-account" aria-labelledby="nav-open-account">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="https://www.interactivebrokers.co.uk/Universal/Application" target="_self" class="dropdown-item dropdown-portal">Sz&#225;mlanyit&#225;si k&#233;relem ind&#237;t&#225;sa</a> <a href="https://www.interactivebrokers.co.uk/sso/Login?c=t" target="_self" class="dropdown-item">Sz&#225;mlanyit&#225;si k&#233;relem befejez&#233;se</a> <a href="../general/what-you-need-inv.html" target="_self" class="dropdown-item">Mire lesz sz&#252;ks&#233;ge?</a> <a href="../accounts/account-guide.html" target="_self" class="dropdown-item">Hogyan v&#225;lassza ki az &#214;nnek megfelel&#337; sz&#225;ml&#225;t?</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul><!-- IBKR MENU END -->
+                
+            </div>
+        </div><!-- NAV BOTTOM END -->
+    </nav>
+</div><!-- HEADER END ---------------------------------------------------------------------------------------------------- --><!-- MOBILE NAV START (XS/SM/MD ONLY) ---------------------------------------------------------------------------------------------------- -->
+
+<div class="menu-mobile d-lg-none"><!-- CLOSE BUTTON -->
+    
+    <div class="close-button"><button type="button" class="btn-close" aria-label="Close Menu"><i class="fas fa-times"></i></button></div><!-- LOGO -->
+    <div class="logo-container"><a href="../home.html" target="_self" class="brand-logo" aria-label="Interactive Brokers Home"><span>Interactive Brokers kezd&#337;lap</span></a></div><!-- SEARCH -->
+    
+    <div class="search-container">
+        <div class="search-box">
+            <form action="https://www.interactivebrokers.ie/hu/search/search.php" method="get" class="search_form" id="search_form_id">
+                <input type="text" class="form-control" placeholder="Search" name="q" maxlength="64" autocomplete="off" id="searchFieldMobile" aria-label="Search Interactive Brokers"> 	
+                <button type="submit" class="btn-search-submit" value="" id="searchsubmitMobile" aria-label="Submit Search"><i class="fas fa-search" aria-hidden="true"></i></button> 	
+            </form>
+        </div>
+    </div>
+    <ul>
+            
+        <!-- PORTAL LOGIN -->
+        <li><a href="../../sso/Login0104.html?RL=1" target="_self" class="menu-log-in">Port&#225;l bejelentkez&#233;s</a></li>
+        
+    <!-- OPEN ACCOUNT -->
+    <li class="has-submenu"><a href="#" target="_self" class="menu-open-account" data-submenu="submenu-open-account">Sz&#225;mlanyit&#225;s</a>
+        <div class="submenu" id="submenu-open-account">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-open-account">Vissza</button></p>
+            <p class="submenu-title">SZ&#193;MLANYIT&#193;S</p>
+            <ul>
+            <li><a href="https://www.interactivebrokers.co.uk/Universal/Application" target="_self" class="menu-start-application">Sz&#225;mlanyit&#225;si k&#233;relem ind&#237;t&#225;sa</a></li>
+            <li><a href="https://www.interactivebrokers.co.uk/sso/Login?c=t" target="_self">Sz&#225;mlanyit&#225;si k&#233;relem befejez&#233;se</a></li>
+            <li><a href="../general/what-you-need-inv.html" target="_self">Mire lesz sz&#252;ks&#233;ge?</a></li>
+            <li><a href="../accounts/account-guide.html" target="_self">Hogyan v&#225;lassza ki az &#214;nnek megfelel&#337; sz&#225;ml&#225;t?</a></li>
+            </ul>
+        </div>
+    </li>
+        
+    <!-- FREE TRIAL -->
+    <li><a href="free-trial.html" target="_self">Ingyenes pr&#243;baverzi&#243;</a></li><!-- WHY IBKR -->
+    <li><a href="../whyib/overview.html" target="_self">Mi&#233;rt v&#225;lasszon minket?</a></li><!-- ACCOUNT TYPES -->
+    
+    <li class="has-submenu"><a href="#" target="_self" data-submenu="submenu-account-types">Sz&#225;mlat&#237;pusok</a>
+        <div class="submenu" id="submenu-account-types">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-account-types">Vissza</button></p>
+            <p class="submenu-title">MAG&#193;NSZEM&#201;LYEK</p>
+            <ul>
+            <li><a href="../accounts/individual-ie.html" target="_self" >Egy&#233;ni vagy K&#246;z&#246;s sz&#225;mla</a></li>
+            <li><a href="../accounts/trust-ie.html" target="_self" >Bizalmi vagyonkezel&#233;si (trust) sz&#225;ml&#225;k</a></li>
+            <li><a href="../accounts/family-account-ie.html" target="_self" >Csal&#225;di sz&#225;ml&#225;k</a></li>
+            <li><a href="../accounts/long-term-investment-accounts-ie.html" target="_self">Tart&#243;s befektet&#233;si (TBSZ) sz&#225;ml&#225;k</a></li>
+            <li><a href="../accounts/plan-depargne-en-action-accounts-ie.html" target="_self">Plan d&#8217;Epargne en Action (PEA) sz&#225;ml&#225;k</a></li>
+                        
+            </ul>
+            <p class="submenu-title">INT&#201;ZM&#201;NYEK</p>
+            <ul>
+            <li><a href="../accounts/institutions-ie.html" target="_self" >Int&#233;zm&#233;nyi sz&#225;ml&#225;k &#8211; Kezd&#337;lap</a></li>
+            <li><a href="../accounts/advisor-ie.html" target="_self" >Bejegyzett befektet&#233;si tan&#225;csad&#243;k</a></li>
+            <li><a href="../accounts/proprietary-trading-group-ie.html" target="_self" >Saj&#225;t sz&#225;ml&#225;s keresked&#233;si csoportok</a></li>
+            <li><a href="../accounts/hedge-fund-ie.html" target="_self" >Fedezeti alapok</a></li>
+            <li><a href="../accounts/broker-ie.html" target="_self" >K&#246;zvet&#237;t&#337; br&#243;kerek</a></li>
+            <li><a href="../accounts/family-office-ie.html" target="_self" >Int&#233;zm&#233;nyi csal&#225;di sz&#225;ml&#225;k</a></li>
+            <li><a href="../accounts/compliance-officer-ie.html" target="_self" >Compliance vezet&#337;k</a></li>
+            <li><a href="../accounts/small-business-ie.html" target="_self" >Kisv&#225;llalkoz&#225;sok</a></li>
+            <li><a href="../accounts/fsa-insurance-providers.html" target="_self" >Teljes k&#246;r&#369; adminisztr&#225;tori sz&#225;mla <br>biztos&#237;t&#243;knak</a></li>
+            <li><a href="../accounts/money-manager-ie.html" target="_self" >Befektet&#233;skezel&#337;k</a></li>
+            <li><a href="../accounts/administrator-ie.html" target="_self" >Befektet&#233;si alap adminisztr&#225;torok</a></li>
+             
+             
+            <li><a href="https://interactivebrokers.eu/campus/stl/" target="_blank" >Oktat&#225;si int&#233;zm&#233;nyek</a></li>
+                        
+            </ul>
+        </div>
+    </li><!-- PRICING -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-pricing">&#193;rk&#233;pz&#233;s</a>
+        <div class="submenu" id="submenu-pricing">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-pricing">Vissza</button></p>
+            <p class="submenu-title">&#193;RK&#201;PZ&#201;S</p>
+            <ul>
+            <li><a href="../pricing/commissions-home.html" target="_self">Jutal&#233;kok</a></li>
+            <li><a href="margin-rates.html" target="_self">Fedezeti hitelkamatl&#225;bak</a></li>
+            <li><a href="../accounts/fees/pricing-interest-rates.html" target="_self">Kamatl&#225;bak</a></li>
+            <li><a href="../pricing/short-sale-cost.html" target="_self">Short elad&#225;s k&#246;lts&#233;ge</a></li>
+            <li><a href="../pricing/research-news-services.html" target="_self">Kutat&#225;s &#233;s h&#237;rek</a></li>
+            <li><a href="../pricing/market-data-pricing.html" target="_self">Piaci adatok &#225;rk&#233;pz&#233;se</a></li>
+            <li><a href="../pricing/stock-yield-enhancement-program-ie.html" target="_self">R&#233;szv&#233;nyhozam-n&#246;vel&#337; program</a></li>
+            <li><a href="../pricing/other-fees-overview.html" target="_self">D&#237;jak</a></li>
+            </ul>
+        </div>
+    </li><!-- TRADING -->
+    
+    <li class="has-submenu"><a href="#" data-submenu="submenu-trading">Keresked&#233;s</a>
+        <div class="submenu" id="submenu-trading">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-trading">Vissza</button></p>
+            <p class="submenu-title">KERESKED&#201;S</p>
+            <ul>
+            <li><a href="trading-platforms.html" target="_self">Platformok</a></li>
+            <li><a href="ib-api.html" target="_self">API fel&#252;letek</a></li>
+            <li><a href="margin.html" target="_self">Fedezet (margin)</a></li>
+            <li><a href="products-exchanges.html" target="_self">Keres&#233;s ticker k&#243;dra vagy t&#337;zsd&#233;re</a></li>
+            <li><a href="products-stocks.html" target="_self">Term&#233;kek &#225;ttekint&#233;se</a></li>
+            <li><a href="ordertypes.html" target="_self">Megb&#237;z&#225;st&#237;pusok</a></li>
+            <li><a href="../whyib/reporting.html" target="_self">Jelent&#233;sek</a></li>
+            <li><a href="securities-financing.html" target="_self">&#201;rt&#233;kpap&#237;r-finansz&#237;roz&#225;s</a></li>
+            <li><a href="features-in-focus.html" target="_self">R&#233;szletes t&#225;j&#233;koztat&#243; a szolg&#225;ltat&#225;sokr&#243;l</a></li>
+            <li><a href="../general/education/probability_lab.html" target="_self">Probability Lab</a></li>
+            <li><a href="sustainable-investing-ie.html" target="_self">Fenntarthat&#243; befektet&#233;s</a></li>
+            </ul>
+        </div>
+    </li><!-- SERVICES -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-services">Szolg&#225;ltat&#225;sok</a>
+        <div class="submenu" id="submenu-services">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-services">Vissza</button></p>
+            <p class="submenu-title">SZOLG&#193;LTAT&#193;SOK</p>
+            <ul>
+            <li><a href="globalanalyst.html" target="_self">IBKR GlobalAnalyst</a></li>
+            <li><a href="si-quotes.html" target="_self">EUIBSI V&#233;tel/Elad&#225;s</a></li>
+            <li><a href="../portfolioanalyst/overview.html" target="_self" rel="noreferrer noopener">PortfolioAnalyst</a></li>
+            <li><a href="products-bonds.html" target="_self">K&#246;tv&#233;ny piact&#233;r</a></li>
+            <li><a href="products-mutual-funds.html" target="_self">Befektet&#233;si alap piact&#233;r</a></li>
+            <li><a href="commission-free-etfs-mkt.html" target="_self">Tranzakci&#243;s d&#237;j n&#233;lk&#252;li ETF-ek</a></li>
+            <li><a href="https://gdcdyn.interactivebrokers.com/aces/Marketplace/InvestorsMarketplace" target="_blank">Befektet&#337;i piact&#233;r</a></li>
+            <li><a href="short-securities-availability.html" target="_self">Shortolhat&#243; &#233;rt&#233;kpap&#237;rok el&#233;rhet&#337;s&#233;ge</a></li>
+            <li><a href="third-party-integration.html" target="_self">Harmadik f&#233;l integr&#225;ci&#243;</a></li>
+            </ul>
+        </div>
+    </li><!-- EDUCATION -->
+    
+    <li class="has-submenu"><a href="#" data-submenu="submenu-education">Oktat&#225;s</a>
+        <div class="submenu" id="submenu-education">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-education">Vissza</button></p>
+            <p class="submenu-title">OKTAT&#193;S</p>
+            <ul>
+             
+             
+            <li><a href="https://interactivebrokers.eu/campus/" target="_blank">IBKR Campus</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/academy" target="_blank">Traders' Academy</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/news" target="_blank">Traders' Insight</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/podcasts" target="_blank">IBKR Podcastok</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/quant" target="_blank">IBKR Quant Blog</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/webinars" target="_blank">Webin&#225;riumok</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/stl/" target="_blank">Student Trading Lab</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/glossary" target="_blank">Traders' Glossary</a></li>
+                        
+            <li><a href="../general/calendar/calendar.html" target="_self">Keresked&#233;si napt&#225;r</a></li>
+            </ul>
+        </div>
+    </li><!-- ABOUT US -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-about-us">R&#243;lunk</a>
+        <div class="submenu" id="submenu-about-us">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-about-us">Vissza</button></p>
+            <p class="submenu-title">R&#211;LUNK</p>
+            <ul>
+            <li><a href="../general/financial-strength.html" target="_self">Stabilit&#225;s &#233;s biztons&#225;g</a></li>
+            <li><a href="../general/about/info-and-history.html" target="_self">Inform&#225;ci&#243;k &#233;s c&#233;gt&#246;rt&#233;net</a></li>
+            <li><a href="../general/about/careers-splash.html" target="_self">Karrierlehet&#337;s&#233;gek</a></li>
+            <li><a href="../general/awards.html" target="_self">D&#237;jak</a></li>
+            <li><a href="../about/news-at-ibkr.html" target="_self">IBKR h&#237;rek</a></li>
+            <li><a href="../general/about/press-and-media.html" target="_self">Sajt&#243; &#233;s m&#233;dia</a></li>
+            <li><a href="https://investors.interactivebrokers.com/ir/main.php" target="_blank" rel="noreferrer noopener">Befektet&#337;i kapcsolatok</a></li>
+            <li><a href="../general/about/sustainability.html" target="_self">Fenntarthat&#243;s&#225;g</a></li>
+            <li><a href="../accounts/legalDocuments/brokerPerformanceReports.html" target="_self">Szab&#225;lyoz&#243;i jelent&#233;sek</a></li>
+            <li><a href="../accounts/referrer.html" target="_self">K&#246;zvet&#237;tse hozz&#225;nk egy bar&#225;tj&#225;t</a></li>
+            <li><a href="../general/about/affiliate-programs.html" target="_self">Affiliate programok</a></li>
+            </ul>
+        </div>
+    </li><!-- SUPPORT -->
+    
+    <li class="has-submenu"><a href="#" data-submenu="submenu-support">T&#225;mogat&#225;s</a>
+        <div class="submenu" id="submenu-support">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-support">Vissza</button></p>
+            <p class="submenu-title">T&#193;MOGAT&#193;S</p>
+            <ul>
+            <li><a href="../support/fund-my-account.html" target="_self">T&#246;ltse fel a sz&#225;ml&#225;j&#225;t</a></li>
+            <li><a href="../support/individuals.html" target="_self">Mag&#225;nszem&#233;lyek</a></li>
+            <li><a href="../support/institutions.html" target="_self">Int&#233;zm&#233;nyek</a></li>
+            <li><a href="../support/institutional-sales-contacts4343.html?p=uk" target="_self">Int&#233;zm&#233;nyi &#233;rt&#233;kes&#237;t&#337;k el&#233;rhet&#337;s&#233;gei</a></li>
+            <li><a href="../general/contact/ibot-container.html" target="_self">Tekintse &#225;t a GYIK-et</a></li>
+            <li><a href="../support/reports-and-dates.html" target="_self">Ad&#243;inform&#225;ci&#243;k</a></li> 
+            </ul>
+        </div>
+    </li><!-- LANGUAGE -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-language">Nyelv</a>
+        <div class="submenu" id="submenu-language">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-language">Vissza</button></p>
+            <p class="submenu-title">NYELV</p>
+            <ul>
+            <li><a href="../home.html" target="_self">Angol</a></li>
+            <li><a href="../../fr/home.html" target="_self">Fran&#231;ais</a></li>
+            <li><a href="../../de/home.html" target="_self">Deutsch</a></li>
+            <li><a href="../../es/home.html" target="_self">Espa&#241;ol</a></li>
+            <li><a href="../../it/home.html" target="_self">Italiano</a></li>
+            <li><a href="../home.html" target="_self">Magyar</a></li>
+            <li><a href="../../pt/home.html" target="_self">Portugu&#234;s</a></li>
+            </ul>
+        </div>
+    </li><!-- REGION SELECTOR -->
+    
+        
+    </ul>
+</div><!-- MOBILE NAV OVERLAY -->
+<div class="website-overlay d-lg-none"></div><!-- MOBILE NAV END  -->
+
+<script>
+$(window).on('load', function() {
+    // Simple check if URL contains 'conf=am'
+    if (!window.location.href.includes('conf=am')) {
+        $('#region-modal').modal({
+            backdrop: 'static',
+            keyboard: false
+        });
+        $('#region-modal').modal('show');
+        $('body').removeClass('modal-open');
+        $('body').css('overflow', '');
+        $('body').css('padding-right', '');
+    }
+});
+</script>
+<div class="modal modal-cookies fade" id="region-modal" tabindex="-1" role="dialog" aria-labelledby="modalRegionLabel" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+    <div class="modal-content" id="modalRegionContent">
+      <div class="modal-header d-block">
+        <p class="fs-5 modal-title" id="modalCookieLabel">Which IBKR website is best for you?</p>
+        <p class="pt-10 mb-0 pr-30 fs-6">The content on the website you selected is not intended for investors in your location. </p>
+        <p class="mb-40 fs-6">Please choose the website most applicable to you.</p>
+      </div>
+      <div class="modal-footer" id="modalRegionControls">
+        <div class="row">
+          <div class="col-12 col-md-4"></div>
+          <div class="col-12 col-md-8">
+            <p>
+              <button class="btn btn-primary" id="btnRegionRecommendation">Go to US website</button>
+              <button class="btn btn-primary" id="btnRegionCurrent">Stay on IE website</button>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+$(function() {
+   $('button#btnRegionRecommendation').click(function() {
+    window.location.href = 'https://www.interactivebrokers.com/';
+  });
+  $('button#btnRegionCurrent').click(function() {
+    setCookie("IB_REG", 1, 365, '.interactivebrokers.ie');
+    location.reload();
+  });
+});
+</script><div id="contents">
+    <section class="page-title" id="page-title">
+        <div class="container">
+            <div class="row">
+                <div class="col"><h1>Megb&#237;z&#225;st&#237;pusok &#233;s algoritmusok</h1></div>
+            </div>
+        </div>
+    </section>
+    <!-- INTRO ------------------------------------------------------------- -->
+<section class="hero hero-dark hero-bg" id="intro">
+	<figure class="hero-bg-img">
+		<picture class="r-img"><img src="../../images/web/hero-order-types.webp" alt="" border="0" class="img-flip-rtl"/></picture>
+	</figure>
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-md-8 col-lg-6">
+				<div class="hero-content">
+					<h2> A Trader Workstationt haszn&#225;l&#243; &#252;gyfelek t&#246;bb mint 90 k&#252;l&#246;nb&#246;z&#337; megb&#237;z&#225;st&#237;pushoz &#233;s algoritmushoz f&#233;rnek hozz&#225;</h2>
+				</div>
+			</div>
+		</div>
+	</div><!-- DROPLINKS ------------------------------------------------------------- -->
+</section>
+<section class="droplinks dl-3">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<a href="#drop-order-types" target="_self" class="page-scroll">
+					<svg role="img">
+						<title>IBKR megb&#237;z&#225;st&#237;pusok &#233;s algoritmusok</title>
+						<g>
+	<path d="M21.689,29.357h-2.842l-0.205-1.48c-0.859-0.186-1.665-0.515-2.403-0.981l-1.242,0.861l-2.009-2.011
+	l0.905-1.196c-0.464-0.733-0.792-1.531-0.979-2.383l-1.516-0.274V19.05l1.534-0.212c0.191-0.828,0.519-1.607,0.977-2.324
+	L12.999,15.2l2.009-2.01l1.279,0.968c0.704-0.438,1.468-0.75,2.28-0.935l0.295-1.623h2.842l0.225,1.625
+	c0.804,0.184,1.561,0.493,2.257,0.923l1.367-0.948l2.01,2.01l-0.985,1.302c0.447,0.7,0.771,1.458,0.964,2.26l1.611,0.292v2.843
+	l-1.572,0.217c-0.177,0.835-0.488,1.617-0.928,2.335l0.898,1.298l-2.009,2.01l-1.219-0.923c-0.728,0.474-1.519,0.812-2.362,1.008
+	L21.689,29.357z M19.805,28.258h0.966l0.243-1.342l0.375-0.067c0.955-0.173,1.839-0.552,2.626-1.126l0.33-0.241l1.098,0.831
+	l0.683-0.684l-0.801-1.156l0.214-0.312c0.534-0.78,0.881-1.658,1.031-2.611l0.064-0.403l1.42-0.196v-0.966l-1.442-0.262
+	l-0.07-0.372c-0.172-0.916-0.538-1.769-1.086-2.535l-0.236-0.329l0.889-1.174l-0.683-0.683l-1.23,0.852l-0.313-0.216
+	c-0.761-0.526-1.615-0.874-2.539-1.034l-0.396-0.069L20.747,12.7H19.78l-0.266,1.465l-0.378,0.066
+	c-0.929,0.162-1.789,0.516-2.557,1.051l-0.328,0.229l-1.144-0.866l-0.683,0.684l0.821,1.185l-0.225,0.315
+	c-0.556,0.78-0.922,1.653-1.088,2.596l-0.069,0.395l-1.367,0.189v0.966l1.364,0.247l0.063,0.382
+	c0.161,0.964,0.528,1.855,1.091,2.648l0.234,0.329l-0.808,1.066l0.683,0.683l1.111-0.77l0.314,0.222
+	c0.797,0.563,1.695,0.929,2.669,1.086l0.402,0.064L19.805,28.258z"/>
+	<path d="M24.591,21.522v-1.991l-1.082-0.105c-0.05-0.146-0.107-0.286-0.176-0.422l0.718-0.873l-1.408-1.408
+	l-0.877,0.721c-0.124-0.061-0.25-0.113-0.382-0.159l-0.114-1.17H19.28l-0.112,1.149c-0.128,0.042-0.255,0.085-0.376,0.141
+	l-0.912-0.75l-1.409,1.408l0.719,0.874c-0.067,0.126-0.129,0.252-0.18,0.387l-1.146,0.111v1.991l1.074,0.104
+	c0.046,0.154,0.095,0.306,0.161,0.45l-0.695,0.845l1.409,1.409l0.796-0.656c0.152,0.082,0.309,0.155,0.474,0.214l0.101,1.049h1.992
+	l0.098-1.008c0.172-0.054,0.337-0.117,0.496-0.196l0.806,0.662l1.408-1.407l-0.657-0.799c0.076-0.151,0.14-0.307,0.194-0.469
+	L24.591,21.522z M17.877,20.543c0-1.305,1.062-2.367,2.367-2.367s2.367,1.062,2.367,2.367s-1.062,2.366-2.367,2.366
+	S17.877,21.848,17.877,20.543z"/>
+	<path d="M7.141,8.405c-1.295,0-2.349-1.054-2.349-2.349s1.054-2.349,2.349-2.349S9.49,4.761,9.49,6.056
+	S8.436,8.405,7.141,8.405z M7.141,4.807c-0.689,0-1.25,0.561-1.25,1.25s0.561,1.25,1.25,1.25s1.25-0.561,1.25-1.25
+	S7.83,4.807,7.141,4.807z"/>
+	<polygon points="10.031,21.071 6.591,21.071 6.591,7.855 7.69,7.855 7.69,19.972 10.031,19.972 	"/>
+	<path d="M33.347,8.405c-1.295,0-2.349-1.054-2.349-2.349s1.054-2.349,2.349-2.349s2.349,1.054,2.349,2.349
+	S34.642,8.405,33.347,8.405z M33.347,4.807c-0.689,0-1.25,0.561-1.25,1.25s0.561,1.25,1.25,1.25s1.25-0.561,1.25-1.25
+	S34.036,4.807,33.347,4.807z"/>
+	<polygon points="33.896,21.071 30.457,21.071 30.457,19.972 32.797,19.972 32.797,7.855 33.896,7.855 	"/>
+	<path d="M20.345,8.405c-1.295,0-2.349-1.054-2.349-2.349s1.054-2.349,2.349-2.349s2.349,1.054,2.349,2.349
+	S21.64,8.405,20.345,8.405z M20.345,4.807c-0.689,0-1.25,0.561-1.25,1.25s0.561,1.25,1.25,1.25s1.25-0.561,1.25-1.25
+	S21.034,4.807,20.345,4.807z"/>
+	<rect x="19.795" y="7.855" width="1.1" height="2.709"/>
+	<rect x="19.795" y="30.119" width="1.1" height="2.709"/>
+	<path d="M22.631,37.011h-4.689v-4.86h4.689V37.011z M19.042,35.911h2.49V33.25h-2.49V35.911z"/>
+</g> </svg> <span>IBKR megb&#237;z&#225;st&#237;pusok &#233;s algoritmusok</span>
+				</a>
+				<a href="#drop-third-party" target="_self" class="page-scroll">
+					<svg role="img">
+						<title>Harmadik f&#233;l algoritmusok</title>
+						<g>
+	<path d="M21.689,29.357h-2.842l-0.205-1.48c-0.859-0.186-1.665-0.515-2.403-0.981l-1.242,0.861l-2.009-2.011
+		l0.905-1.196c-0.464-0.733-0.792-1.531-0.979-2.383l-1.516-0.274V19.05l1.534-0.212c0.191-0.828,0.519-1.607,0.977-2.324
+		L12.999,15.2l2.009-2.01l1.279,0.968c0.704-0.438,1.468-0.75,2.28-0.935l0.295-1.623h2.842l0.225,1.625
+		c0.804,0.184,1.561,0.493,2.257,0.923l1.367-0.948l2.01,2.01l-0.985,1.302c0.447,0.7,0.771,1.458,0.964,2.26l1.611,0.292v2.843
+		l-1.572,0.217c-0.177,0.835-0.488,1.617-0.928,2.335l0.898,1.298l-2.009,2.01l-1.219-0.923c-0.728,0.474-1.519,0.812-2.362,1.008
+		L21.689,29.357z M19.805,28.258h0.966l0.243-1.342l0.375-0.067c0.955-0.173,1.839-0.552,2.626-1.126l0.33-0.241l1.098,0.831
+		l0.683-0.684l-0.801-1.156l0.214-0.312c0.534-0.78,0.881-1.658,1.031-2.611l0.064-0.403l1.42-0.196v-0.966l-1.442-0.262
+		l-0.07-0.372c-0.172-0.916-0.538-1.769-1.086-2.535l-0.236-0.329l0.889-1.174l-0.683-0.683l-1.23,0.852l-0.313-0.216
+		c-0.761-0.526-1.615-0.874-2.539-1.034l-0.396-0.069L20.747,12.7H19.78l-0.266,1.465l-0.378,0.066
+		c-0.929,0.162-1.789,0.516-2.557,1.051l-0.328,0.229l-1.144-0.866l-0.683,0.684l0.821,1.185l-0.225,0.315
+		c-0.556,0.78-0.922,1.653-1.088,2.596l-0.069,0.395l-1.367,0.189v0.966l1.364,0.247l0.063,0.382
+		c0.161,0.964,0.528,1.855,1.091,2.648l0.234,0.329l-0.808,1.066l0.683,0.683l1.111-0.77l0.314,0.222
+		c0.797,0.563,1.695,0.929,2.669,1.086l0.402,0.064L19.805,28.258z"/>
+	<path d="M24.591,21.522v-1.991l-1.082-0.105c-0.05-0.146-0.107-0.286-0.176-0.422l0.718-0.873l-1.408-1.408
+		l-0.877,0.721c-0.124-0.061-0.25-0.113-0.382-0.159l-0.114-1.17H19.28l-0.112,1.149c-0.128,0.042-0.255,0.085-0.376,0.141
+		l-0.912-0.75l-1.409,1.408l0.719,0.874c-0.067,0.126-0.129,0.252-0.18,0.387l-1.146,0.111v1.991l1.074,0.104
+		c0.046,0.154,0.095,0.306,0.161,0.45l-0.695,0.845l1.409,1.409l0.796-0.656c0.152,0.082,0.309,0.155,0.474,0.214l0.101,1.049h1.992
+		l0.098-1.008c0.172-0.054,0.337-0.117,0.496-0.196l0.806,0.662l1.408-1.407l-0.657-0.799c0.076-0.151,0.14-0.307,0.194-0.469
+		L24.591,21.522z M17.877,20.543c0-1.305,1.062-2.367,2.367-2.367s2.367,1.062,2.367,2.367s-1.062,2.366-2.367,2.366
+		S17.877,21.848,17.877,20.543z"/>
+	<path d="M7.141,8.405c-1.295,0-2.349-1.054-2.349-2.349s1.054-2.349,2.349-2.349S9.49,4.761,9.49,6.056
+		S8.436,8.405,7.141,8.405z M7.141,4.807c-0.689,0-1.25,0.561-1.25,1.25s0.561,1.25,1.25,1.25s1.25-0.561,1.25-1.25
+		S7.83,4.807,7.141,4.807z"/>
+	<polygon points="10.031,21.071 6.591,21.071 6.591,7.855 7.69,7.855 7.69,19.972 10.031,19.972 	"/>
+	<path d="M33.347,8.405c-1.295,0-2.349-1.054-2.349-2.349s1.054-2.349,2.349-2.349s2.349,1.054,2.349,2.349
+		S34.642,8.405,33.347,8.405z M33.347,4.807c-0.689,0-1.25,0.561-1.25,1.25s0.561,1.25,1.25,1.25s1.25-0.561,1.25-1.25
+		S34.036,4.807,33.347,4.807z"/>
+	<polygon points="33.896,21.071 30.457,21.071 30.457,19.972 32.797,19.972 32.797,7.855 33.896,7.855 	"/>
+	<path d="M20.345,8.405c-1.295,0-2.349-1.054-2.349-2.349s1.054-2.349,2.349-2.349s2.349,1.054,2.349,2.349
+		S21.64,8.405,20.345,8.405z M20.345,4.807c-0.689,0-1.25,0.561-1.25,1.25s0.561,1.25,1.25,1.25s1.25-0.561,1.25-1.25
+		S21.034,4.807,20.345,4.807z"/>
+	<rect x="19.795" y="7.855" width="1.1" height="2.709"/>
+	<rect x="19.795" y="30.119" width="1.1" height="2.709"/>
+	<path d="M22.631,37.011h-4.689v-4.86h4.689V37.011z M19.042,35.911h2.49V33.25h-2.49V35.911z"/>
+	<g>
+		<g>
+			<path d="M25.382,34.474c0.507,0.529,1.311,0.837,2.027,0.837c0.893,0,1.388-0.385,1.388-0.947
+				c0-0.595-0.452-0.87-1.476-0.87c-0.309,0-0.804,0-0.915,0.011v-1.366c0.132,0.011,0.628,0.011,0.915,0.011
+				c0.815,0,1.355-0.265,1.355-0.816c0-0.584-0.595-0.882-1.366-0.882c-0.716,0-1.355,0.276-1.873,0.772l-0.772-0.97
+				c0.595-0.672,1.521-1.167,2.81-1.167c1.719,0,2.776,0.771,2.776,1.994c0,0.926-0.793,1.532-1.609,1.675
+				c0.75,0.077,1.719,0.661,1.719,1.763c0,1.268-1.135,2.16-2.898,2.16c-1.355,0-2.358-0.518-2.898-1.179L25.382,34.474z"/>
+		</g>
+		<g>
+			<path d="M30.888,30.56h0.72v0.374c0.192-0.244,0.532-0.436,0.872-0.436V31.2
+				c-0.051-0.011-0.119-0.017-0.198-0.017c-0.238,0-0.555,0.131-0.674,0.306v1.807h-0.72V30.56z"/>
+			<path d="M34.763,32.95c-0.215,0.266-0.515,0.414-0.844,0.414c-0.691,0-1.212-0.521-1.212-1.433
+				c0-0.895,0.515-1.439,1.212-1.439c0.323,0,0.628,0.142,0.844,0.419v-1.392h0.725v3.777h-0.725V32.95z M34.763,31.444
+				c-0.125-0.181-0.38-0.311-0.623-0.311c-0.408,0-0.691,0.322-0.691,0.799c0,0.47,0.283,0.792,0.691,0.792
+				c0.244,0,0.498-0.13,0.623-0.311V31.444z"/>
+		</g>
+	</g>
+</g> </svg> <span>Harmadik f&#233;l algoritmusok</span>
+				</a>
+				<a href="#drop-resources" target="_self" class="page-scroll">
+					<svg role="img">
+						<title>Tov&#225;bbi inform&#225;ci&#243;k</title>
+						<path d="M31.704,28.672v-22.5H11.037v0.021C9.356,6.3,8.444,8.068,8.444,9.735v21.375h0.019
+c0.03,0.591,0.189,1.177,0.489,1.684c0.528,0.891,1.372,1.379,2.374,1.379c0.015,0,0.03,0,0.045,0.001h20.167v-1h-1.016v-4.501
+H31.704z M12.037,7.172h18.667v20.5H12.037V7.172z M11.037,7.198v20.533c-0.623,0.091-1.167,0.331-1.593,0.732V9.735
+C9.444,8.543,10.04,7.316,11.037,7.198z M29.521,33.173h-18.16c-0.01,0-0.02,0-0.03,0c-0.821,0-1.279-0.481-1.52-0.889
+c-0.464-0.785-0.481-1.873-0.042-2.646c0.249-0.439,0.758-0.964,1.768-0.967h17.983V33.173z"/> </svg> <span>Tov&#225;bbi inform&#225;ci&#243;k</span>
+				</a>
+			</div>
+		</div>
+	</div><!-- ORDER TYPES AND ALGOS ------------------------------------------------------------- -->
+</section>
+<section id="drop-order-types">
+	<div class="container">
+        <div class="row mb-4 justify-content-center">
+            <div class="col-12 col-xl-11">
+                  <h2 class="text-center">IBKR megb&#237;z&#225;st&#237;pusok &#233;s algoritmusok</h2>
+                  <hr>
+                <p class="text-center fs-6 lh-6">A platformunkon el&#233;rhet&#337; megb&#237;z&#225;st&#237;pusokkal &#233;s algoritmusokkal a keresked&#337;k algoritmikus keresked&#233;si megb&#237;z&#225;sokat ny&#250;jthatnak be, &#233;s ezek seg&#237;thetnek a kock&#225;zatok korl&#225;toz&#225;s&#225;ban, a v&#233;grehajt&#225;s felgyors&#237;t&#225;s&#225;ban &#233;s az &#225;rjavul&#225;s el&#233;r&#233;s&#233;ben, tov&#225;bb&#225; lehet&#337;v&#233; teszik, hogy titokban tartsa a kil&#233;t&#233;t, optimaliz&#225;lja a piaci id&#337;z&#237;t&#233;st &#233;s fejlett keresked&#233;si funkci&#243;kkal egyszer&#369;s&#237;tse a teljes keresked&#233;si folyamatot.</p>
+                <p class="text-center">Haszn&#225;lja az al&#225;bbi linkeket a term&#233;kenk&#233;nti vagy kateg&#243;ri&#225;nk&#233;nti rendez&#233;shez, majd v&#225;lasszon ki egy megb&#237;z&#225;st&#237;pust a tov&#225;bbi inform&#225;ci&#243;k megjelen&#237;t&#233;s&#233;hez.</p>
+            </div>
+        </div>
+        <div class="filter-set">
+            <p class="no-margin">Sz&#369;r&#233;s term&#233;kre:</p> 
+            <ul id="filters-product" class="nav">
+                <li class="filter" data-filter="all mix_all_3rd">Mind</li>
+                <li class="filter" data-filter="mix_stocks mix_all_3rd">R&#233;szv&#233;nyek</li>
+                <li class="filter" data-filter="mix_options mix_all_3rd">Opci&#243;k</li>
+                <li class="filter" data-filter="mix_futures mix_all_3rd">Hat&#225;rid&#337;s &#252;gyletek</li>
+                <li class="filter" data-filter="mix_fops mix_all_3rd">Hat&#225;rid&#337;s opci&#243;k</li>
+                <li class="filter" data-filter="mix_forex mix_all_3rd">Deviz&#225;k</li>
+                <li class="filter" data-filter="mix_bonds mix_all_3rd">K&#246;tv&#233;nyek</li>
+                <li class="filter" data-filter="mix_funds mix_all_3rd">Alapok</li>
+                <li class="filter" data-filter="mix_warrants mix_all_3rd">Warrantok</li>
+                <li class="filter" data-filter="mix_efps mix_all_3rd">EFP-k</li>
+                <li class="filter" data-filter="mix_combos mix_all_3rd">Kombin&#225;lt term&#233;kek</li>
+            </ul>
+            <br>
+            <p class="no-margin">Sz&#369;r&#233;s kateg&#243;ri&#225;ra:</p>
+            <ul id="filters-category" class="nav">     
+                <li class="filter" data-filter="mix_advanced mix_all_3rd">Halad&#243; keresked&#233;s</li>
+                <li class="filter" data-filter="mix_algos mix_all_3rd">Algoritmikus keresked&#233;s</li>
+                <li class="filter" data-filter="mix_limit mix_all_3rd">Kock&#225;zat korl&#225;toz&#225;sa</li>
+                <li class="filter" data-filter="mix_price mix_all_3rd">&#193;rjavul&#225;s</li>
+                <li class="filter" data-filter="mix_privacy mix_all_3rd">Adatv&#233;delem</li>
+                <li class="filter" data-filter="mix_speed mix_all_3rd">V&#233;grehajt&#225;s sebess&#233;ge</li>
+                <li class="filter" data-filter="mix_time mix_all_3rd">Piaci id&#337;z&#237;t&#233;s</li>
+                <li class="filter" data-filter="mix_ibkr_ats mix_all_3rd" id="ibkr_ats">IBKR helysz&#237;nek</li>
+            </ul>
+        </div>
+        <div class="row">
+        	<div class="col">
+                <br>
+                <br>
+                <ul id="tools-list" class="nav"><!-- Accumulate/Distribute -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_options mix_options mix_futures mix_fops mix_forex mix_bonds mix_warrants mix_algos ">
+                        <a href="../../en/trading/ordertypesac54.html" target="_self">
+                        <div class="tool-title">Felhalmoz&#225;s / sz&#233;toszt&#225;s</div>
+                        </a>
+                    </li><!-- Adaptive Algo -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_options mix_options mix_algos">
+                        <a href="orders/adaptive-algo.html" target="_self">
+                        <div class="tool-title">Adapt&#237;v Algo</div>
+                        </a>
+                    </li><!-- All or None -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_options mix_efps mix_time">
+                        <a href="../../en/trading/ordertypesf00c.html" target="_self">
+                        <div class="tool-title">Minden vagy semmi</div>
+                        </a>
+                    </li><!-- Arrival Price -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_forex mix_algos">
+                        <a href="../../en/trading/ordertypesc7fd.html" target="_self">
+                        <div class="tool-title">Be&#233;rkez&#233;si &#225;r</div>
+                        </a>
+                    </li><!-- At Auction -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_futures mix_speed">
+                        <a href="../../en/trading/ordertypes800a.html" target="_self">
+                        <div class="tool-title">Aukci&#243;n</div>
+                        </a>
+                    </li><!-- Auction -->
+                    <li class="mix mix_all mix_all_ib mix_options mix_price">
+                        <a href="../../en/trading/ordertypes4e8f.html" target="_self">
+                        <div class="tool-title">Aukci&#243;</div>
+                        </a>
+                    </li><!-- Balance Impact and Risk -->
+                    <li class="mix mix_all mix_all_ib mix_options mix_algos">
+                        <a href="../../en/trading/ordertypes3055.html" target="_self">
+                        <div class="tool-title">Hat&#225;s/kock&#225;zat egyens&#250;ly</div>
+                        </a>
+                    </li><!-- Basket -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_options mix_futures mix_fops mix_forex mix_bonds mix_funds mix_warrants mix_advanced">
+                        <a href="../../en/trading/ordertypes007f.html" target="_self">
+                        <div class="tool-title">Kos&#225;r</div>
+                        </a>
+                    </li><!-- Block -->
+                    <li class="mix mix_all mix_all_ib mix_options mix_price">
+                        <a href="../../en/trading/ordertypesf290.html" target="_self">
+                        <div class="tool-title">Blokk</div>
+                        </a>
+                    </li><!-- Box Top -->
+                    <li class="mix mix_all mix_all_ib mix_options mix_price ">
+                        <a href="../../en/trading/ordertypesc6f6.html" target="_self">
+                        <div class="tool-title">Box Top</div>
+                        </a>
+                    </li><!-- Bracket -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_options mix_futures mix_fops mix_forex mix_warrants mix_efps mix_combos mix_limit">
+                        <a href="../../en/trading/ordertypes7f6f.html" target="_self">
+                        <div class="tool-title">S&#225;v</div>
+                        </a>
+                    </li><!-- Conditional -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_options mix_futures mix_fops mix_forex mix_warrants mix_advanced">
+                        <a href="../../en/trading/ordertypes4d0b.html" target="_self">
+                        <div class="tool-title">Felt&#233;teles</div>
+                        </a>
+                    </li><!-- Close Price -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_options mix_algos mix_price mix_time">
+                        <a href="../../en/trading/ordertypesd71b.html" target="_self">
+                        <div class="tool-title">Z&#225;r&#243;&#225;r</div>
+                        </a>
+                    </li><!-- Currency Conversion -->
+                    <li class="mix mix_all mix_all_ib mix_advanced">
+                        <a href="../../en/trading/ordertypes0f3e.html" target="_self">
+                        <div class="tool-title">Devizav&#225;lt&#225;s</div>
+                        </a>
+                    </li><!-- Dark Ice -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_futures mix_algos">
+                        <a href="../../en/trading/ordertypes6b8b.html" target="_self">
+                        <div class="tool-title">S&#246;t&#233;t j&#233;g</div>
+                        </a>
+                    </li><!-- Direct Routing -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_options mix_futures mix_fops mix_forex mix_bonds mix_funds mix_warrants mix_efps mix_combos mix_advanced ">
+                        <a href="../../en/trading/ordertypes795a.html" target="_self">
+                        <div class="tool-title">K&#246;zvetlen v&#233;grehajt&#225;s</div>
+                        </a>
+                    </li><!-- Discretionary -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_speed">
+                        <a href="../../en/trading/ordertypes9c80.html" target="_self">
+                        <div class="tool-title">Diszkrecion&#225;lis</div>
+                        </a>
+                    </li><!-- Fill or Kill -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_options mix_time">
+                        <a href="../../en/trading/ordertypes7a52.html" target="_self">
+                        <div class="tool-title">Teljes&#252;l vagy t&#246;r&#246;l</div>
+                        </a>
+                    </li><!-- Fractional Shares -->
+                    <li class="mix mix_all mix_all_ib mix_stocks">
+                        <a href="orders/fractional-share-orders.html" target="_self">
+                        <div class="tool-title">T&#246;red&#233;kr&#233;szv&#233;nyek</div>
+                        </a>
+                    </li><!-- Funari -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_price ">
+                        <a href="../../en/trading/ordertypes7653.html" target="_self">
+                        <div class="tool-title">Funari</div>
+                        </a>
+                    </li><!-- Good After Time/Date (GAT) -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_options mix_futures mix_fops mix_forex mix_bonds mix_warrants mix_time">
+                        <a href="../../en/trading/ordertypes921b.html" target="_self">
+                        <div class="tool-title">Id&#337;pont/d&#225;tum ut&#225;n &#233;rv&#233;nyes (GAT)</div>
+                        </a>
+                    </li><!-- Good-til-Canceled (GTC) -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_options mix_futures mix_fops mix_forex mix_bonds mix_warrants mix_efps mix_time">
+                        <a href="../../en/trading/ordertypesf984.html" target="_self">
+                        <div class="tool-title">Visszavon&#225;sig &#233;rv&#233;nyes (GTC)</div>
+                        </a>
+                    </li><!-- Good-til-Date/Time (GTD) -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_options mix_futures mix_fops mix_forex mix_bonds mix_warrants mix_efps mix_time">
+                        <a href="../../en/trading/ordertypesb823.html" target="_self">
+                        <div class="tool-title">D&#225;tumig/id&#337;pontig &#233;rv&#233;nyes (GTD)</div>
+                        </a>
+                    </li><!-- Hidden -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_options mix_futures mix_fops mix_bonds mix_efps mix_privacy">
+                        <a href="../../en/trading/ordertypes4e46.html" target="_self">
+                        <div class="tool-title">Rejtett</div>
+                        </a>
+                    </li><!-- IBKR ATS -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_privacy mix_ibkr_ats">
+                        <a href="../../en/trading/ordertypes9286.html" target="_self">
+                        <div class="tool-title">IBKR ATS</div>
+                        </a>
+                    </li><!-- IBKR ATS Pegged to Midpoint -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_privacy mix_price mix_ibkr_ats">
+                        <a href="../../en/trading/ordertypese4de.html" target="_self">
+                        <div class="tool-title">IBKR ATS k&#246;z&#233;p&#225;rfolyamhoz k&#246;t&#246;tt</div>
+                        </a>
+                    </li><!-- IBKR ATS Pegged to Best -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_privacy mix_price mix_ibkr_ats">
+                        <a href="../../en/trading/ordertypes729f.html" target="_self">
+                        <div class="tool-title">IBKR ATS legjobb &#225;rfolyamhoz k&#246;t&#246;tt</div>
+                        </a>
+                    </li><!-- IBKR ATS Reroute to SMART -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_advanced mix_algos mix_price mix_ibkr_ats">
+                        <a href="../../en/trading/ordertypes561a.html" target="_self">
+                        <div class="tool-title">IBKR ATS Reroute to SMART</div>
+                        </a>
+                    </li>
+                    <li class="mix mix_all mix_all_ib mix_advanced mix_options mix_ibkr_ats">
+                        <a href="orders/ibusopt-destination.html" target="_self">
+                        <div class="tool-title">IBUSOPT helysz&#237;n</div>
+                        </a>
+                    </li>
+                    <li class="mix mix_all mix_all_ib mix_advanced mix_options mix_ibkr_ats">
+                        <a href="orders/ibusopt-pegbest.html" target="_self">
+                        <div class="tool-title">IBUSOPT legjobb &#225;rfolyamhoz k&#246;t&#246;tt</div>
+                        </a>
+                    </li>
+                    <li class="mix mix_all mix_all_ib mix_advanced mix_options mix_ibkr_ats">
+                        <a href="orders/ibusopt-pegmid.html" target="_self">
+                        <div class="tool-title">IBUSOPT k&#246;z&#233;p&#225;rfolyamhoz k&#246;t&#246;tt</div>
+                        </a>
+                    </li><!-- Iceberg/Reserve -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_options mix_futures mix_warrants mix_privacy">
+                        <a href="../../en/trading/ordertypes08d9.html" target="_self">
+                        <div class="tool-title">J&#233;ghegy/tartal&#233;k</div>
+                        </a>
+                    </li><!-- Immediate or Cancel (IOC) -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_options mix_futures mix_fops mix_forex mix_warrants mix_efps mix_time">
+                        <a href="../../en/trading/ordertypesa6d5.html" target="_self">
+                        <div class="tool-title">Azonnali vagy t&#246;r&#246;l (IOC)</div>
+                        </a>
+                    </li><!-- Limit -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_options mix_futures mix_fops mix_forex mix_bonds mix_warrants mix_efps mix_price ">
+                        <a href="../../en/trading/ordertypes8bf5.html" target="_self">
+                        <div class="tool-title">Limit&#225;ras</div>
+                        </a>
+                    </li><!-- Limit if Touched -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_options mix_futures mix_fops mix_forex mix_bonds mix_warrants mix_efps mix_price">
+                        <a href="../../en/trading/ordertypes3fed.html" target="_self">
+                        <div class="tool-title">&#201;rint&#337; limit</div>
+                        </a>
+                    </li><!-- Limit-on-Close -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_warrants mix_price">
+                        <a href="../../en/trading/ordertypesc19b.html" target="_self">
+                        <div class="tool-title">Z&#225;r&#225;skori limit</div>
+                        </a>
+                    </li><!-- Limit-on-Open -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_options mix_warrants mix_price">
+                        <a href="../../en/trading/ordertypese2d0.html" target="_self">
+                        <div class="tool-title">Nyit&#225;skori limit</div>
+                        </a>
+                    </li><!-- Market -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_options mix_futures mix_fops mix_forex mix_bonds mix_funds mix_warrants mix_efps mix_speed">
+                        <a href="../../en/trading/ordertypesb1aa.html" target="_self">
+                        <div class="tool-title">Piaci</div>
+                        </a>
+                    </li><!-- Market if Touched -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_options mix_futures mix_fops mix_forex mix_bonds mix_warrants mix_efps mix_speed">
+                        <a href="../../en/trading/ordertypes2a84.html" target="_self">
+                        <div class="tool-title">&#201;rint&#337; piaci</div>
+                        </a>
+                    </li><!-- Market on Close -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_futures mix_warrants mix_speed">
+                        <a href="../../en/trading/ordertypes36a0.html" target="_self">
+                        <div class="tool-title">Z&#225;r&#225;skori piaci</div>
+                        </a>
+                    </li><!-- Market on Open -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_options mix_warrants mix_speed">
+                        <a href="../../en/trading/ordertypes8fdf.html" target="_self">
+                        <div class="tool-title">Nyit&#225;skori piaci</div>
+                        </a>
+                    </li><!-- Market to Limit -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_options mix_futures mix_fops mix_warrants mix_efps mix_limit">
+                         <a href="../../en/trading/ordertypes4747.html" target="_self">
+                        <div class="tool-title">Piaci-limit</div>
+                       </a>
+                    </li><!-- Market with Protection -->
+                    <li class="mix mix_all mix_all_ib mix_futures mix_fops mix_limit">
+                        <a href="../../en/trading/ordertypes7ba3.html" target="_self">
+                        <div class="tool-title">Piaci v&#233;delemmel</div>
+                        </a>
+                    </li><!-- MidPrice  -->
+                    <li class="mix mix_all mix_all_ib mix_stocks">
+                        <a href="../../en/trading/ordertypesca54.html" target="_self">
+                        <div class="tool-title">K&#246;z&#233;p&#225;r</div>
+                       </a>
+                    </li><!-- Minimize Impact -->
+                    <li class="mix mix_all mix_all_ib mix_options mix_algos">
+                        <a href="../../en/trading/ordertypes8613.html" target="_self">
+                        <div class="tool-title">Minim&#225;lis hat&#225;s</div>
+                        </a>
+                    </li><!-- NYSE Closing Auction D-Quote -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_price ">
+                        <a href="../../en/trading/ordertypes6faf.html" target="_self">
+                        <div class="tool-title">NYSE z&#225;r&#225;si aukci&#243; D-jegyz&#233;s</div>
+                       </a>
+                    </li><!-- One-Cancels-All (OCA) -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_options mix_futures mix_fops mix_forex mix_bonds mix_warrants mix_efps mix_advanced">
+                        <a href="../../en/trading/ordertypes274d.html" target="_self">
+                        <div class="tool-title">Egy t&#246;rli mindet (OCA)</div>
+                        </a>
+                    </li><!-- Outside RTH -->
+                    <li class="mix mix_all mix_all_ib mix_time">
+                        <a href="orders/outside-rth.html" target="_self">
+                        <div class="tool-title">Rendes keresked&#233;si id&#337;n k&#237;v&#252;l</div>
+                        </a>
+                    </li><!-- Overnight Trading -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_ibkr_ats">
+                        <a href="orders/overnight-trading-orders.html" target="_self">
+                        <div class="tool-title">Napon t&#250;li keresked&#233;s</div>
+                        </a>
+                    </li><!-- Passive Relative -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_warrants mix_price">
+                        <a href="../../en/trading/ordertypes2fcd.html" target="_self">
+                        <div class="tool-title">Passz&#237;v relat&#237;v</div>
+                        </a>
+                    </li><!-- Pegged-to-Benchmark -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_options mix_speed">
+                        <a href="../../en/trading/ordertypes9594.html" target="_self">
+                        <div class="tool-title">Referencia&#233;rt&#233;khez k&#246;t&#246;tt</div>
+                        </a>
+                    </li><!-- Pegged-to-Market -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_speed "><!--  -->
+                        <a href="../../en/trading/ordertypesadfd.html" target="_self">
+                        <div class="tool-title">Piachoz k&#246;t&#246;tt</div>
+                        </a>
+                    </li><!-- Pegged-to-Midpoint -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_price "><!--  -->
+                        <a href="../../en/trading/ordertypesc425.html" target="_self">
+                        <div class="tool-title">K&#246;z&#233;p&#225;rfolyamhoz k&#246;t&#246;tt</div>
+                        </a>
+                    </li><!-- Pegged-to-Stock -->
+                    <li class="mix mix_all mix_all_ib mix_options mix_speed">
+                         <a href="../../en/trading/ordertypes9b45.html" target="_self">
+                        <div class="tool-title">R&#233;szv&#233;nyhez k&#246;t&#246;tt</div>
+                       </a>
+                    </li><!-- Pegged Volatility Orders -->
+                    <li class="mix mix_all mix_all_ib mix_options mix_fops mix_combos mix_speed mix_advanced">
+                        <a href="../../en/trading/ordertypes8335.html" target="_self">
+                        <div class="tool-title">Volatilit&#225;shoz k&#246;t&#246;tt megb&#237;z&#225;sok</div>
+                        </a>
+                    </li><!-- Percent of Volume -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_futures mix_algos">
+                        <a href="../../en/trading/ordertypes7a7a.html" target="_self">
+                        <div class="tool-title">Volumen sz&#225;zal&#233;ka</div>
+                        </a>
+                    </li><!-- Relative/Pegged-to-Primary -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_options mix_speed ">
+                          <a href="../../en/trading/ordertypes5350.html" target="_self">
+                        <div class="tool-title">Relat&#237;v/els&#337;dlegeshez k&#246;t&#246;tt</div>
+                       </a>
+                    </li><!-- Request-for-Quote (RFQ) -->
+                    <li class="mix mix_all mix_all_ib mix_options mix_futures mix_fops mix_bonds mix_limit">
+                        <a href="../../en/trading/ordertypesa8d8.html" target="_self">
+                        <div class="tool-title">Aj&#225;nlatk&#233;r&#233;s (RFQ)</div>
+                       </a>
+                    </li><!-- Retail Price Improvement (RPI) -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_price">
+                        <a href="../../en/trading/ordertypes27d4.html" target="_self">
+                        <div class="tool-title">Kisbefektet&#337;i &#225;rjavul&#225;si megb&#237;z&#225;s (RPI)</div>
+                       </a>
+                    </li><!-- Scale -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_options mix_futures mix_fops mix_forex mix_bonds mix_warrants mix_algos ">
+                        <a href="../../en/trading/ordertypes80be.html" target="_self">
+                        <div class="tool-title">L&#233;pt&#233;k</div>
+                        </a>
+                    </li><!-- Snap to Market -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_options mix_futures mix_speed">
+                        <a href="../../en/trading/ordertypes3798.html" target="_self">
+                        <div class="tool-title">Piachoz csap&#243;d&#243;</div>
+                        </a>
+                    </li><!-- Snap to Midpoint -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_options mix_futures mix_price">
+                        <a href="../../en/trading/ordertypesa714.html" target="_self">
+                        <div class="tool-title">K&#246;z&#233;p&#225;rfolyamhoz csap&#243;d&#243;</div>
+                        </a>
+                    </li><!-- Snap to Primary -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_options mix_futures mix_speed">
+                        <a href="../../en/trading/ordertypesa5d3.html" target="_self">
+                        <div class="tool-title">Els&#337;dlegeshez csap&#243;d&#243;</div>
+                        </a>
+                    </li><!-- Spreads -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_options mix_futures mix_advanced">
+                        <a href="../../en/trading/ordertypesa7eb.html" target="_self">
+                        <div class="tool-title">Spreadek</div>
+                        </a>
+                    </li><!-- Stop -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_options mix_futures mix_fops mix_forex mix_warrants mix_efps mix_combos mix_limit">
+                        <a href="../../en/trading/ordertypes3ab6.html" target="_self">
+                        <div class="tool-title">Stop</div>
+                        </a>
+                    </li><!-- Stop - Adjustable -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_options mix_futures mix_fops mix_forex mix_warrants mix_efps mix_limit">
+                        <a href="../../en/trading/ordertypes8d7b.html" target="_self">
+                        <div class="tool-title">Stop - Korrig&#225;lhat&#243;</div>
+                        </a>
+                    </li><!-- Stop - Trailing Stop -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_options mix_futures mix_fops mix_forex mix_warrants mix_efps mix_limit">
+                        <a href="../../en/trading/ordertypesc317.html" target="_self">
+                        <div class="tool-title">Stop - Cs&#250;sz&#243; stop</div>
+                        </a>
+                    </li><!-- Stop - Trailing Stop Limit -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_options mix_futures mix_fops mix_forex mix_bonds mix_warrants mix_efps mix_limit">
+                        <a href="../../en/trading/ordertypesc1ea.html" target="_self">
+                        <div class="tool-title">Stop - Cs&#250;sz&#243; stop limit</div>
+                        </a>
+                    </li><!-- Stop Limit -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_options mix_futures mix_fops mix_forex mix_warrants mix_efps mix_limit">
+                        <a href="../../en/trading/ordertypesb1db.html" target="_self">
+                        <div class="tool-title">Stop limit</div>
+                        </a>
+                    </li><!-- Stop with Protection -->
+                    <li class="mix mix_all mix_all_ib mix_futures mix_limit">
+                        <a href="../../en/trading/ordertypesd81c.html" target="_self">
+                        <div class="tool-title">Stop v&#233;delemmel</div>
+                        </a>
+                    </li><!-- Sweep-to-Fill -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_warrants mix_speed">
+                        <a href="../../en/trading/ordertypesaeea.html" target="_self">
+                        <div class="tool-title">S&#246;pr&#233;ses teljes&#237;t&#233;s</div>
+                        </a>
+                    </li><!-- Trailing Limit if Touched -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_options mix_futures mix_fops mix_forex mix_warrants mix_efps mix_limit">
+                         <a href="../../en/trading/ordertypes63d7.html" target="_self">
+                        <div class="tool-title">&#201;rint&#337; cs&#250;sz&#243; limit</div>
+                       </a>
+                    </li><!-- Trailing Market if Touched -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_options mix_futures mix_fops mix_forex mix_warrants mix_efps mix_limit">
+                        <a href="../../en/trading/ordertypesc839.html" target="_self">
+                        <div class="tool-title">&#201;rint&#337; cs&#250;sz&#243; piaci</div>
+                        </a>
+                    </li><!-- TWAP -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_options mix_futures mix_forex mix_algos">
+                        <a href="../../en/trading/ordertypes3cb0.html" target="_self">
+                        <div class="tool-title">TWAP</div>
+                        </a>
+                    </li><!-- Variant Algos -->
+                    <li class="mix mix_all mix_all_ib mix_algos">
+                        <a href="../../en/trading/ordertypes.html" target="_self">
+                        <div class="tool-title">Algoritmus-vari&#225;nsok</div>
+                        </a>
+                    </li><!-- Volatility -->
+                    <li class="mix mix_all mix_all_ib mix_options mix_fops mix_combos mix_advanced">
+                        <a href="../../en/trading/ordertypese534.html" target="_self">
+                        <div class="tool-title">Volatilit&#225;s</div>
+                        </a>
+                    </li><!-- VWAP - Best Efforts -->
+                    <li class="mix mix_all mix_all_ib mix_stocks mix_futures mix_algos">
+                        <a href="../../en/trading/ordertypes32da.html" target="_self">
+                        <div class="tool-title">VWAP - Legjobb k&#237;s&#233;rlet</div>
+                        </a>
+                    </li>
+			   </ul>
+            </div>
+        </div>
+    </div><!-- THIRD PARTY ALGOS ------------------------------------------------------------- -->
+</section>
+<section id="drop-third-party">
+	<div class="container">
+		<div class="row">
+			<div class="col text-center">
+				<h2>Harmadik f&#233;l algoritmusok</h2>
+				<hr>
+				<h5 class="text-center">&#220;gyfeleink a vezet&#337; harmadik f&#233;l szolg&#225;ltat&#243;k (pl. Fox River vagy Quantitative Brokers (QB)) &#225;ltal k&#237;n&#225;lt k&#252;l&#246;nf&#233;le megb&#237;z&#225;st&#237;pusok k&#246;z&#252;l is v&#225;laszthatnak. <span class="hidden-xs hidden-sm"><br /></span>Az al&#225;bbi c&#237;mk&#233;k &#233;s sz&#369;r&#337;k haszn&#225;lat&#225;val tov&#225;bbi t&#225;j&#233;koztat&#225;st kaphat a harmadik f&#233;l algoritmusokr&#243;l.</h5>
+				<br>
+			</div>
+		</div><!-- START mixit grid ---->
+		<div class="row">
+			<div class="col"><!-- Begin TAB CONTENT -->
+				<div class="tab-content"><!-- Account Services -->
+					<div role="tabpanel" class="tab-pane filter-set active" id="third_party_algo_trading">
+						<p class="no-margin">Sz&#369;r&#233;si kateg&#243;ria:</p><!--
+						<li class="filter" data-filter="all">All</li>
+						<li class="filter" data-filter="mix_stocks">Stocks</li>
+						--><!-- Accumulate/Distribute --><!--<ul id="tools-list" class="nav">
+						<li class="mix mix_all mix_stocks mix_options mix_options mix_futures mix_fops mix_forex mix_bonds mix_warrants mix_algos">
+						--> 
+						<ul id="filters-3rd" class="nav">
+							<li class="filter active" data-filter="all mix_all_3rd">&#214;sszes</li>
+							<li class="filter" data-filter="mix_all_ib mix_fox">Fox River algoritmusok</li>
+							<li class="filter" data-filter="mix_all_ib mix_qb-algos">QB algoritmusok (csak hat&#225;rid&#337;s &#252;gyletek)</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div><!-- end TAB CONTENT --><!-- START 3RD PARTY ALGOS  -->
+		<div class="row">
+			<div class="col">
+				<ul id="tools-list-3rd" class="gacs-grid"><!-- FOX RIVER ALGOS START  -------------------------------------------------------------  --><!--
+					<li class="mix mix_all_3rd mix_fox overview-paragraph" >
+						<p>Fox River's algorithms understand how to pick the right price and time to trade. Instead of focusing on benchmarks, their algos are built to help seek and secure the best possible price using  embedded Trader Logic short-term alpha signals designed to locate profitable trading opportunities within the context of each algorithm's strategy.</p>
+					</li>
+					--><!-- Dark Sweep -->
+					<li class="mix mix_all_3rd mix_fox">
+						<a href="https://ibkrguides.com/tws/usersguidebook/algos/fox_sweep.htm" target="_blank" rel="noreferrer noopener">
+							<div class="inner-box">
+								<h6>Dark Sweep</h6>
+								<p>Ez a strat&#233;gia a s&#246;t&#233;t medenc&#233;kben keresi a likvidit&#225;st szond&#225;z&#243; &#233;s elfekv&#337; megb&#237;z&#225;sok &#246;tv&#246;zet&#233;vel a piaci hat&#225;s minim&#225;lisra cs&#246;kkent&#233;se &#233;rdek&#233;ben. A r&#233;szmegb&#237;z&#225;sokat a limit&#225;r &#233;s az aktu&#225;lis piaci &#225;r k&#246;z&#252;l a kedvez&#337;bb &#233;rt&#233;ken hajtja v&#233;gre. A helysz&#237;neket a teljes&#252;l&#233;s val&#243;sz&#237;n&#369;s&#233;ge alapj&#225;n rangsorolja.</p>
+							</div>
+							<div class="learnmore"> 
+								<p>Tudjon meg t&#246;bbet <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></p>
+							</div>
+						</a>
+					</li><!-- Fox Alpha -->
+					<li class="mix mix_all_3rd mix_fox">
+						<a href="https://ibkrguides.com/tws/usersguidebook/algos/fox_dark_alpha.htm" target="_blank" rel="noreferrer noopener">
+							<div class="inner-box">
+								<h6>7Fox Alpha</h6>
+								<p>R&#233;szv&#233;teli r&#225;ta algoritmus, amely a Fox River alfa jelz&#233;seket alkalmazza a legjobb v&#233;grehajt&#225;s el&#233;r&#233;se &#233;rdek&#233;ben. Lehet&#337;v&#233; teszi a felhaszn&#225;l&#243; sz&#225;m&#225;ra, hogy meghat&#225;rozza a megb&#237;z&#225;s agresszivit&#225;si szintj&#233;t. A t&#233;nyleges r&#233;szv&#233;teli r&#225;ta az &#252;gyf&#233;l &#225;ltal meghat&#225;rozott tartom&#225;nyon bel&#252;l elt&#233;rhet a c&#233;l&#233;rt&#233;kt&#337;l.</p>
+							</div>
+							<div class="learnmore"> 
+								<p>Tudjon meg t&#246;bbet <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></p>
+							</div>
+						</a>
+					</li><!-- Fox Blaster -->
+					<li class="mix mix_all_3rd mix_fox">
+						<a href="https://ibkrguides.com/tws/usersguidebook/algos/fox_blaster.htm" target="_blank" rel="noreferrer noopener">
+							<div class="inner-box">
+								<h6>Fox Blaster&#8482;</h6>
+								<p>Agressz&#237;v be&#233;rkez&#233;si &#225;rstrat&#233;gia olyan kereked&#337;k sz&#225;m&#225;ra, akik saj&#225;t piaci jelz&#233;seik alapj&#225;n maguk v&#225;lasztj&#225;k ki a bel&#233;p&#233;si pontot. R&#246;vid lej&#225;rat&#250; alfa potenci&#225;llal kereskedik &#233;s agressz&#237;vebb, mint a Fox Alpha.</p>
+							</div>
+							<div class="learnmore"> 
+								<p>Tudjon meg t&#246;bbet <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></p>
+							</div>
+						</a>
+					</li><!-- Fox Dark Attack -->
+					<li class="mix mix_all_3rd mix_fox">
+						<a href="https://ibkrguides.com/tws/usersguidebook/algos/fox_dark_attack.htm" target="_blank" rel="noreferrer noopener">
+							<div class="inner-box">
+								<h6>Fox Dark Attack&#8482;</h6>
+								<p>Likvidit&#225;skeres&#337; s&#246;t&#233;t strat&#233;gia, ami k&#233;pes dinamikusan cs&#250;szni a megc&#233;lzott szintek k&#246;z&#246;tt egy numerikus bemeneti adattal a piaci hat&#225;s minimaliz&#225;l&#225;sa &#233;rdek&#233;ben. K&#233;pes hozz&#225;f&#233;rni a nagy s&#246;t&#233;t medenc&#233;khez &#233;s a megvil&#225;g&#237;tott helysz&#237;neken tal&#225;lhat&#243; rejtett likvidit&#225;shoz. Ez a strat&#233;gia nem felt&#233;tlen&#252;l k&#233;pes a megb&#237;z&#225;s eg&#233;sz&#233;t teljes&#237;teni, tekintettel arra, hogy nem ismert a s&#246;t&#233;t medenc&#233;k likvidit&#225;sa.</p>
+							</div>
+							<div class="learnmore"> 
+								<p>Tudjon meg t&#246;bbet <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></p>
+							</div>
+						</a>
+					</li><!-- Fox River Pyramid -->
+					<li class="mix mix_all_3rd mix_fox">
+						<a href="https://ibkrguides.com/tws/usersguidebook/algos/fox_pyramid.htm" target="_blank" rel="noreferrer noopener">
+							<div class="inner-box">
+								<h6>Fox River Pyramid&#8482;</h6>
+								<p>Dinamikus, egyedi megb&#237;z&#225;sokon alapul&#243; strat&#233;gia, ami a felhaszn&#225;l&#243; &#225;ltal meghat&#225;rozott &#225;rfolyams&#225;vok alapj&#225;n m&#243;dos&#237;tja a magatart&#225;s&#225;t &#233;s az agresszivit&#225;s&#225;t. Lehet&#337;s&#233;get k&#237;n&#225;l az egyedi POV r&#225;ta, az &#8222;I Would&#8221; s&#246;t&#233;t be&#225;ll&#237;t&#225;s &#233;s a s&#246;pr&#233;si &#225;r be&#225;ll&#237;t&#225;s&#225;ra.</p>
+							</div>
+							<div class="learnmore"> 
+								<p>Tudjon meg t&#246;bbet <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></p>
+							</div>
+						</a>
+					</li><!-- Fox Smart Order Router -->
+					<li class="mix mix_all_3rd mix_fox">
+						<a href="https://ibkrguides.com/tws/usersguidebook/algos/fox_smart_router.htm" target="_blank" rel="noreferrer noopener">
+							<div class="inner-box">
+								<h6>Fox Smart Order Router&#8482;</h6>
+								<p>Intelligens likvidit&#225;s-felhaszn&#225;l&#225;si logika alkalmaz&#225;s&#225;ra kialak&#237;tott strat&#233;gia, amely k&#252;l&#246;nb&#246;z&#337; val&#243;s idej&#369; t&#233;nyez&#337;kh&#246;z igazodik, &#250;gymint megb&#237;z&#225;s attrib&#250;tumai, piaci felt&#233;telek &#233;s helysz&#237;nelemz&#233;s. P&#225;rhuzamos helysz&#237;n-s&#246;pr&#233;st alkalmaz, mik&#246;zben a legjobb teljes&#237;t&#233;si lehet&#337;s&#233;g alapj&#225;n rangsorol. Az &#250;tvonalv&#225;laszt&#243; valamennyi jelent&#337;s megvil&#225;g&#237;tott &#233;s s&#246;t&#233;t helysz&#237;nt el&#233;ri.</p>
+							</div>
+							<div class="learnmore"> 
+								<p>Tudjon meg t&#246;bbet <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></p>
+							</div>
+						</a>
+					</li><!-- Fox Spotlight -->
+					<li class="mix mix_all_3rd mix_fox">
+						<a href="https://ibkrguides.com/tws/usersguidebook/algos/fox_spotlight.htm" target="_blank" rel="noreferrer noopener">
+							<div class="inner-box">
+								<h6>Fox Spotlight&#8482;</h6>
+								<p>A piaci hat&#225;s minimaliz&#225;l&#225;s&#225;t szolg&#225;l&#243;, kiz&#225;r&#243;lag ETF-ekre alkalmazhat&#243; strat&#233;gia. Az algoritmus c&#233;lja, hogy felm&#233;rje a piaci hat&#225;st, &#233;s amennyiben a megb&#237;z&#225;sok az ADV (&#225;tlagos napi volumen) jelent&#337;s sz&#225;zal&#233;kos ar&#225;ny&#225;t teszik ki, a strat&#233;gia megk&#237;s&#233;rli minim&#225;lisra cs&#246;kkenteni a hat&#225;st, mik&#246;zben v&#233;grehajtja a megb&#237;z&#225;st. C&#233;lja, hogy v&#233;grehajtsa a megjelen&#237;tett volumenhez k&#233;pest nagynak min&#337;s&#252;l&#337; megb&#237;z&#225;sokat. Dinamikus &#233;s intelligens m&#243;don sz&#225;m&#237;tja ki a limitet a piaci hat&#225;s t&#252;kr&#233;ben.</p>
+							</div>
+							<div class="learnmore"> 
+								<p>Tudjon meg t&#246;bbet <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></p>
+							</div>
+						</a>
+					</li><!-- Percent of Volume -->
+					<li class="mix mix_all_3rd mix_fox">
+						<a href="https://ibkrguides.com/tws/usersguidebook/algos/fox_pov.htm" target="_blank" rel="noreferrer noopener">
+							<div class="inner-box">
+								<h6>Percent of Volume&#8482;</h6>
+								<p>Volumen-sz&#225;zal&#233;k (POV) strat&#233;gia, melynek c&#233;lja a v&#233;grehajt&#225;s &#252;temez&#233;s&#233;nek kontrollja a piaci volumen sz&#225;zal&#233;kos ar&#225;ny&#225;ban. A lehet&#337; legk&#246;zelebb igyekszik maradni a meghat&#225;rozott POV ar&#225;nyhoz. </p>
+							</div>
+							<div class="learnmore"> 
+								<p>Tudjon meg t&#246;bbet <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></p>
+							</div>
+						</a>
+					</li><!-- Fox TWAP -->
+					<li class="mix mix_all_3rd mix_fox">
+						<a href="https://ibkrguides.com/tws/usersguidebook/algos/fox_fox_twap.htm" target="_blank" rel="noreferrer noopener">
+							<div class="inner-box">
+								<h6>Fox TWAP</h6>
+								<p>Id&#337;s&#250;lyoz&#225;st haszn&#225;l&#243; algoritmus, amelynek c&#233;lja egy megb&#237;z&#225;s egyenletes eloszt&#225;sa a felhaszn&#225;l&#243; &#225;ltal meghat&#225;rozott id&#337;tartamban a Fox River alfa jelz&#233;sek seg&#237;ts&#233;g&#233;vel. Seg&#237;ts&#233;g&#233;vel a felhaszn&#225;l&#243; rugalmasan be&#225;ll&#237;thatja, hogy a modell milyen m&#233;rt&#233;kben t&#233;rhet el az elv&#225;rt teljes&#237;t&#233;si r&#225;t&#225;t&#243;l. Arra t&#246;rekszik, hogy a Fox River alfa &#233;s a r&#246;vid t&#225;v&#250; alfa jelz&#233;sek felhaszn&#225;l&#225;s&#225;val fel&#252;lm&#250;lja a TWAP teljes&#237;tm&#233;ny&#233;t.</p>
+							</div>
+							<div class="learnmore"> 
+								<p>Tudjon meg t&#246;bbet <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></p>
+						</div>
+						</a>
+					</li><!-- TWAP -->
+					<li class="mix mix_all_3rd mix_fox">
+						<a href="https://ibkrguides.com/tws/usersguidebook/algos/fox_twap.htm" target="_blank" rel="noreferrer noopener">
+							<div class="inner-box">
+								<h6>TWAP</h6>
+								<p>Passz&#237;v, id&#337;vel s&#250;lyozott algoritmus, amelynek c&#233;lja egy megb&#237;z&#225;s egyenletes eloszt&#225;sa a felhaszn&#225;l&#243; &#225;ltal meghat&#225;rozott id&#337;szakban. A r&#233;szv&#233;teli r&#225;t&#225;t haszn&#225;lja limitk&#233;nt.</p>
+							</div>
+							<div class="learnmore"> 
+								<p>Tudjon meg t&#246;bbet <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></p>
+							</div>
+						</a>
+					</li><!-- Fox VWAP -->
+					<li class="mix mix_all_3rd mix_fox">
+						<a href="https://ibkrguides.com/tws/usersguidebook/algos/fox_fox_vwap.htm" target="_blank" rel="noreferrer noopener">
+							<div class="inner-box">
+								<h6>Fox VWAP</h6>
+								<p>Volumen-specifikus strat&#233;gia, amelynek c&#233;lja egy megb&#237;z&#225;s v&#233;grehajt&#225;sa a legjobb felt&#233;telek mellett egy el&#337;re meghat&#225;rozott id&#337;szakon bel&#252;l. A felhaszn&#225;l&#243; rugalmasan be&#225;ll&#237;thatja, hogy a strat&#233;gia mennyivel haladhatja meg az elv&#225;rt volument vagy maradhat el t&#337;le. A Fox r&#246;vid t&#225;v&#250; alfa jelz&#233;sekre t&#225;maszkod&#243; strat&#233;gia a VWAP referencia&#233;rt&#233;khez k&#233;pest a legjobb &#225;ltal&#225;nos teljes&#237;tm&#233;nyre t&#246;rekv&#337; keresked&#337;kre van optimaliz&#225;lva.</p>
+							</div>
+							<div class="learnmore"> 
+								<p>Tudjon meg t&#246;bbet <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></p>
+							</div>
+						</a>
+					</li><!-- VWAP -->
+					<li class="mix mix_all_3rd mix_fox">
+						<a href="https://ibkrguides.com/tws/usersguidebook/algos/fox_vwap.htm" target="_blank" rel="noreferrer noopener">
+							<div class="inner-box">
+								<h6>VWAP</h6>
+								<p>Passz&#237;v volumen-specifikus strat&#233;gia, amelynek c&#233;lja egy megb&#237;z&#225;s v&#233;grehajt&#225;sa a legjobb felt&#233;telek mellett egy el&#337;re meghat&#225;rozott id&#337;szakon bel&#252;l. Opcion&#225;lisan be&#225;ll&#237;that&#243;k az id&#337;szakot meghat&#225;roz&#243; c&#237;mk&#233;k. A r&#233;szv&#233;teli r&#225;t&#225;t haszn&#225;lja limitk&#233;nt.</p>
+							</div>
+							<div class="learnmore"> 
+								<p>Tudjon meg t&#246;bbet <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></p>
+							</div>
+						</a>
+					</li><!-- QB ALGOS START -------------------------------------------------------------  --><!--
+					<li class="mix mix_all_3rd mix_qb-algos overview-paragraph" >
+						<p>Financial technology company Quantitative Brokers (QB) provides advanced agency algorithms and data-driven analytics to reduce implicit trading costs for clients trading in the Futures and US Cash Treasury markets. QB algos are augment existing trading workflows and improve performance and productivity without the need to change trading platforms or executing brokers.</p>
+					</li>
+					--><!-- QB Bolt -->
+					<li class="mix mix_all_3rd mix_qb-algos">
+						<a href="https://ibkrguides.com/tws/usersguidebook/algos/qb_bolt.htm" target="_blank" rel="noreferrer noopener">
+							<div class="inner-box">
+								<h6>QB Bolt</h6>
+								<p><b>Referencia&#233;rt&#233;k: be&#233;rkez&#233;si &#225;r</b><br /> C&#233;lja a legjobb v&#233;grehajt&#225;s el&#233;r&#233;se nagyban elt&#233;r&#337; piaci felt&#233;telek k&#246;z&#246;tt oly m&#243;don, hogy megkeresi a t&#246;k&#233;letes egyens&#250;lyt a passz&#237;v &#233;s az agressz&#237;v teljes&#252;l&#233;sek k&#246;z&#246;tt.</p>
+								<p>F&#337;bb funkci&#243;k:</p>
+								<ul>
+								<li>Intelligens megb&#237;z&#225;sfelad&#225;si technik&#225;k a r&#233;szmegb&#237;z&#225;sok dinamikus sz&#225;m&#250; szint k&#246;z&#246;tti feloszt&#225;sa &#233;rdek&#233;ben a s&#252;rg&#337;ss&#233;gi &#233;s val&#243;s idej&#369; volatilit&#225;si &#233;rt&#233;kek alapj&#225;n</li>
+								<li>A val&#243;s idej&#369; likvidit&#225;si profil alapj&#225;n folyamatosan korrig&#225;lja a megjelen&#237;tett (feladott) mennyis&#233;get</li>
+								<li>R&#246;vid t&#225;v&#250; &#225;raz&#225;si jelz&#233;seket haszn&#225;l a k&#246;vetkez&#337; l&#233;p&#233;sk&#246;z el&#337;rejelz&#233;s&#233;hez</li>
+								<li>Intelligensen megszerzi a spreadet t&#246;bb l&#233;p&#233;sk&#246;zre kiterjed&#337; v&#233;teli/elad&#225;si forgat&#243;k&#246;nyvek eset&#233;n</li>
+								</ul>
+							</div>
+							<div class="learnmore"> 
+								<p>Tudjon meg t&#246;bbet <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></p>
+							</div>
+						</a>
+					</li><!-- QB Strobe -->
+					<li class="mix mix_all_3rd mix_qb-algos">
+						<a href="https://ibkrguides.com/tws/usersguidebook/algos/qb_strobe.htm" target="_blank" rel="noreferrer noopener">
+							<div class="inner-box">
+								<h6>QB Strobe</h6>
+								<p><b>Referencia&#233;rt&#233;k: volumennel s&#250;lyozott &#225;tlag&#225;r (VWAP) vagy id&#337;s&#250;lyozott &#225;tlag&#225;r (TWAP)</b><br /> Kereskedjen az &#214;n &#225;ltal meghat&#225;rozott id&#337;z&#237;t&#233;s szerint, mik&#246;zben a spread megszerz&#233;s&#233;re lehet&#337;s&#233;get teremt&#337; poz&#237;ci&#243;kat vesz fel.</p>
+								<p>F&#337;bb funkci&#243;k:</p>
+								<ul>
+								<li>El&#337;retekint&#337; volatilit&#225;si el&#337;rejelz&#233;seket haszn&#225;l a specifikus &#252;temez&#233;s be&#225;ll&#237;t&#225;s&#225;hoz</li>
+								</ul>
+							</div>
+							<div class="learnmore"> 
+								<p>Tudjon meg t&#246;bbet <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></p>
+							</div>
+						</a>
+					</li><!-- QB Closer -->
+					<li class="mix mix_all_3rd mix_qb-algos">
+						<a href="https://ibkrguides.com/tws/usersguidebook/algos/qb_closer.htm" target="_blank" rel="noreferrer noopener">
+							<div class="inner-box">
+								<h6>QB Closer</h6>
+								<p><b>Referencia&#233;rt&#233;k: napi elsz&#225;mol&#225;si &#225;r (amerikai hat&#225;rid&#337;s r&#233;szv&#233;nyindex-&#252;gyletek azonnali piac&#225;nak z&#225;r&#225;sa)</b><br /> Kereskedjen mindenkor optim&#225;lis felt&#233;telek k&#246;z&#246;tt, mik&#246;zben az elsz&#225;mol&#225;si &#225;rat haszn&#225;lja referencia&#233;rt&#233;kk&#233;nt.</p>
+								<p>F&#337;bb funkci&#243;k:</p>
+								<ul>
+								<li>Szezon&#225;lis korrekci&#243;k: h&#243; v&#233;ge, negyed&#233;v v&#233;ge &#233;s &#225;tfordul&#225;si id&#337;szakok</li>
+								<li>Automatikusan v&#225;lasztja ki a referencia&#233;rt&#233;k megfelel&#337; id&#337;keret&#233;t (nincs sz&#252;ks&#233;g beavatkoz&#225;sra a felhaszn&#225;l&#243; r&#233;sz&#233;r&#337;l)</li>
+								<li>Term&#233;kspecifikus, 1 perces t&#225;rol&#243;volumen, volatilit&#225;si &#233;s jegyz&#233;si nagys&#225;grend-el&#337;rejelz&#233;seket haszn&#225;l</li>
+								<li>Optimaliz&#225;lt diszkrecion&#225;lis keresked&#233;s intelligens volumeng&#246;rb&#233;k alkalmaz&#225;s&#225;val a megb&#237;z&#225;sok nyit&#225;s&#225;hoz &#233;s z&#225;r&#225;s&#225;hoz</li>
+								</ul>
+							</div>
+							<div class="learnmore"> 
+								<p>Tudjon meg t&#246;bbet <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></p>
+							</div>
+						</a>
+					</li><!-- QB Octane -->
+					<li class="mix mix_all_3rd mix_qb-algos">
+						<a href="https://ibkrguides.com/tws/usersguidebook/algos/qb_octane.htm" target="_blank" rel="noreferrer noopener">
+							<div class="inner-box">
+								<h6>QB Octane</h6>
+								<p><b>Referencia&#233;rt&#233;k: s&#246;pr&#233;si &#225;r</b><br /> Likvidit&#225;skeres&#337; strat&#233;gia, amelynek c&#233;lja az optim&#225;lis v&#233;grehajt&#225;s olyan esetekben, amikor a s&#252;rg&#337;s teljes&#252;l&#233;s az els&#337;dleges c&#233;l. A v&#225;rhat&#243;an er&#337;s r&#246;vid t&#225;v&#250; alf&#225;val rendelkez&#337; megb&#237;z&#225;sokn&#225;l aj&#225;nlott.</p>
+								<p>F&#337;bb funkci&#243;k:</p>
+								<ul>
+								<li>Smart Sweep Logic: t&#246;bb szintr&#337;l haszn&#225;lja fel a likvidit&#225;st gondosan kalibr&#225;lt id&#337;k&#246;z&#246;nk&#233;nt, mik&#246;zben a likvidit&#225;sfelhaszn&#225;l&#225;si ig&#233;nyt s&#250;lyozza a visszafordul&#225;s val&#243;sz&#237;n&#369;s&#233;g&#233;vel szemben.</li>
+								<li>Liquidity Measure: nem csak elk&#252;l&#246;n&#237;tve, a konkr&#233;t kontraktus vonatkoz&#225;s&#225;ban, hanem komplex m&#243;don m&#233;ri fel a likvidit&#225;si helyzetet</li>
+								<li>Liquidity Signals: a likvidit&#225;s (ide&#233;rtve a rejtett likvidit&#225;st is) &#233;szlel&#233;s&#233;t szolg&#225;l&#243; k&#252;l&#246;nb&#246;z&#337; jelz&#233;sek</li>
+								</ul>
+							</div>
+							<div class="learnmore"> 
+								<p>Tudjon meg t&#246;bbet <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></p>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div><!-- ORDER TYPES INFO ------------------------------------------------------------- -->
+</section>
+<section id="ordertypes-info" class="gray">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<h2>Fontos inform&#225;ci&#243;k</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 col-md-5">
+				<h5>Szimul&#225;lt megb&#237;z&#225;st&#237;pusok</h5>
+				<p>A br&#243;ker szimul&#225;l bizonyos megb&#237;z&#225;st&#237;pusokat (p&#233;ld&#225;ul stop vagy felt&#233;teles megb&#237;z&#225;sok). Az egyenletes keresked&#233;si &#252;gyf&#233;l&#233;lm&#233;ny fenntart&#225;sa &#233;rdek&#233;ben szimul&#225;lt megb&#237;z&#225;st&#237;pusok haszn&#225;lhat&#243;k abban az esetben, ha egy t&#337;zsde k&#237;n&#225;lat&#225;ban nem tal&#225;lhat&#243; meg valamely megb&#237;z&#225;st&#237;pus. B&#225;r a szimul&#225;lt megb&#237;z&#225;sok er&#337;s ellen&#337;rz&#233;si lehet&#337;s&#233;get k&#237;n&#225;lnak, olyan harmadik feleknek (pl. piaci adatszolg&#225;ltat&#243;k &#233;s t&#337;zsd&#233;k) a teljes&#237;tm&#233;ny&#233;t&#337;l f&#252;gghetnek, amelyekre nincs r&#225;hat&#225;sunk.</p>
+				<p>B&#225;r a br&#243;ker megk&#237;s&#233;rli a k&#252;ls&#337; adatok sz&#369;r&#233;s&#233;t a lehet&#337; legjobb v&#233;grehajt&#225;si min&#337;s&#233;g biztos&#237;t&#225;sa &#233;rdek&#233;ben, nem l&#225;that el&#337;re minden okot, amely miatt a szimul&#225;lt megb&#237;z&#225;s nem vagy csak hib&#225;san hajthat&#243; v&#233;gre. A nem kiel&#233;g&#237;t&#337; v&#233;grehajt&#225;s oka lehet, t&#246;bbek k&#246;z&#246;tt: [i] hib&#225;s, hi&#225;nyos vagy k&#246;vetkezetlen piaci adatok; [ii] adatsz&#369;r&#337;k (p&#233;ld&#225;ul: a br&#243;ker figyelmen k&#237;v&#252;l hagyja az aktu&#225;lis v&#233;teli/elad&#225;si aj&#225;nlaton k&#237;v&#252;l bejelentett legut&#243;bbi k&#246;t&#233;si adatot, mivel az gyakran id&#337;szer&#369;tlen vagy hib&#225;s tranzakci&#243;kra vonatkozik; ez pedig befoly&#225;solhatja a szimul&#225;lt megb&#237;z&#225;sok felad&#225;s&#225;t); [iii] egy t&#337;zsde ut&#243;lag hib&#225;snak min&#337;s&#237;ti a tranzakci&#243;kat; [iv] piaci le&#225;ll&#225;sok &#233;s zavarok.</p>
+				<p>Fontos, hogy az &#252;gyfelek tiszt&#225;ban legyenek a szimul&#225;lt megb&#237;z&#225;sok &#233;rz&#233;kenys&#233;g&#233;vel, &#233;s azt vegy&#233;k figyelembe a keresked&#233;si d&#246;nt&#233;seik sor&#225;n.</p>
+				<br>
+			</div>
+			<div class="col-12 col-md-5 offset-md-1">
+				<h5>Piaci hozz&#225;f&#233;r&#233;si adatok &#233;s megb&#237;z&#225;ssz&#369;r&#337;k</h5>
+				<p>Felh&#237;vjuk a figyelmet, hogy a t&#337;zsd&#233;k &#233;s szab&#225;lyoz&#243; hat&#243;s&#225;gok elv&#225;rj&#225;k a br&#243;kerekt&#337;l, hogy k&#252;l&#246;nb&#246;z&#337; keresked&#233;s el&#337;tti sz&#369;r&#337;ket &#233;s egy&#233;b kontrollokat alkalmazzanak annak biztos&#237;t&#225;sa &#233;rdek&#233;ben, hogy az &#225;ltaluk teljes&#237;tett megb&#237;z&#225;sok nem okoznak zavart a piacokon &#233;s nem s&#233;rtik a t&#337;zsdei szab&#225;lyokat. A t&#337;zsd&#233;k a saj&#225;t sz&#369;r&#337;iket &#233;s korl&#225;taikat is alkalmazz&#225;k a hozz&#225;juk be&#233;rkez&#337; megb&#237;z&#225;sokra.</p>
+				<p>Ezen sz&#369;r&#337;k &#233;s megb&#237;z&#225;si korl&#225;toz&#225;sok miatt a br&#243;ker vagy a t&#337;zsde oldal&#225;n k&#233;sedelmet szenvedhet az &#252;gyf&#233;lmegb&#237;z&#225;sok beny&#250;jt&#225;sa vagy v&#233;grehajt&#225;sa. A sz&#369;r&#337;k miatt az is el&#337;fordulhat, hogy egyes megb&#237;z&#225;sok t&#246;rl&#233;sre vagy elutas&#237;t&#225;sra ker&#252;lnek. Emellett a br&#243;ker a t&#337;zsd&#233;re t&#246;rt&#233;n&#337; beny&#250;jt&#225;st megel&#337;z&#337;en <a href="https://www.interactivebrokers.com/pricecap" target="_blank" rel="noreferrer noopener">maximaliz&#225;lhatja</a> egy &#252;gyf&#233;lmegb&#237;z&#225;s &#225;r&#225;t vagy m&#233;ret&#233;t.</p>
+				<p>A br&#243;ker fenntartja a kiz&#225;r&#243;lagos jogot, hogy sz&#369;r&#337;ket &#233;s m&#225;s korl&#225;toz&#225;sokat alkalmazzon b&#225;rmely &#252;gyf&#233;lmegb&#237;z&#225;s tekintet&#233;ben, &#233;s nem v&#225;llal felel&#337;ss&#233;get a br&#243;ker vagy a t&#337;zsde &#225;ltal alkalmazott sz&#369;r&#337;k vagy megb&#237;z&#225;si korl&#225;toz&#225;sok hat&#225;sai&#233;rt.</p>
+				<h5>GTC megb&#237;z&#225;sok</h5>
+				<p>Felh&#237;vjuk a figyelmet, hogy az IBAlgos nem t&#225;mogatja a GTC megb&#237;z&#225;sokat.</p>
+            </div>
+        </div>
+	</div>
+</section>
+<section id="resources"> <span class="id-drop"><span id="drop-resources"></span></span>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <div class="alert alert-primary p-30">
+                    <h3 class="h6 text-bold">Tudjon meg t&#246;bbet az IBKR &#225;ltal k&#237;n&#225;lt algoritmikus keresked&#233;si lehet&#337;s&#233;gekr&#337;l</h3>
+                    <div class="row">
+                        <div class="col-12">
+                            <p><a class="link-chevron-right" href="../../lib/cstools/faq/index.html#/content/77854820" target="_blank" >Mi az &#225;rmenedzsment algoritmus?</a></p>
+                            <p><a class="link-chevron-right" href="https://ibkrcampus.eu/trading-course/tws-algos/" target="_blank" rel="nofollow noopener noreferrer">Algoritmikus keresked&#233;si komment&#225;rok az IBKR Quant Blogon</a></p>
+                            <p><a class="link-chevron-right" href="https://ibkrcampus.eu/category/ibkr-quant-news/ibkr-quant-home/" target="_blank" rel="nofollow noopener noreferrer">TWS Algoritmikus keresked&#233;sr&#337;l sz&#243;l&#243; kurzus a Traders' Academy fel&#252;leten</a></p>
+                            <p><a class="link-chevron-right" href="https://www.ibkrguides.com/traderworkstation/order-types.htm" target="_blank" rel="nofollow noopener noreferrer">IBKR Felhaszn&#225;l&#243;i &#250;tmutat&#243;k: Megb&#237;z&#225;st&#237;pusok</a></p>
+                            <p><a class="link-chevron-right" href="https://www.ibkrguides.com/traderworkstation/algos.htm" target="_blank" rel="nofollow noopener noreferrer">IBKR Felhaszn&#225;l&#243;i &#250;tmutat&#243;k: Algoritmikus keresked&#233;s</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+// link directly to open account modal
+$(document).ready(function() {
+  // Read a page's GET URL variables and return them as an associative array.
+    function getUrlVars()
+    {
+        var vars = [], vals = [], hash;
+        var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+        for(var i = 0; i < hashes.length; i++)
+        {
+            hash = hashes[i].split('=');
+            vars.push(hash[0]);
+            vals.push(hash[1]);
+            // vars[hash[0]] = hash[1];
+        }
+        if ((vars[1]=='ats') && (vals[1]=='1#drop-order-types')){
+            setTimeout(function() {
+                $('#ibkr_ats').click();
+            }, 1200 );
+        }
+        return vars;
+    }
+    getUrlVars();
+});
+</script>
+</div>
+
+<!-- FOOTER START ---------------------------------------------------------------------------------------------------- -->
+<footer class="footer noprint" id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p>Az Interactive Brokers &#174;, IB<sup>SM</sup>, InteractiveBrokers.com &#174;, Interactive Analytics &#174;, IB Options Analytics<sup>SM</sup>, IB SmartRouting<sup>SM</sup>, PortfolioAnalyst &#174;, IB Trader Workstation<sup>SM</sup> &#233;s One World, One Account<sup>SM</sup> az Interactive Brokers LLC szolg&#225;ltat&#225;si v&#233;djegyei &#233;s/vagy v&#233;djegyei. K&#233;r&#233;s eset&#233;n biztos&#237;tjuk az esetleges k&#225;rig&#233;nyekhez sz&#252;ks&#233;ges al&#225;t&#225;maszt&#243; dokument&#225;ci&#243;t &#233;s statisztikai adatokat. Az oldalon l&#225;that&#243; keresked&#233;si k&#243;dok kiz&#225;r&#243;lag szeml&#233;ltet&#233;si c&#233;lokat szolg&#225;lnak &#233;s nem tekintend&#337;k aj&#225;nl&#225;snak.</p>
+                <p>A r&#233;szv&#233;nyekkel, opci&#243;s &#233;s hat&#225;rid&#337;s &#252;gyletekkel, deviz&#225;kkal, k&#252;lf&#246;ldi r&#233;szv&#233;nyekkel &#233;s k&#246;tv&#233;nyekkel t&#246;rt&#233;n&#337; online keresked&#233;s jelent&#337;s vesztes&#233;g kock&#225;zat&#225;val j&#225;rhat.</p>
+                <p>Az opci&#243;k kock&#225;zatot jelentenek, ez&#233;rt nem minden befektet&#337;nek aj&#225;nlottak. Tov&#225;bbi inform&#225;ci&#243;k&#233;rt olvassa el az opci&#243;k k&#246;zz&#233;t&#233;teli dokumentum&#225;t <a href="https://www.theocc.com/about/publications/character-risks.jsp" rel="noreferrer noopener" target="_blank">(Characteristics and Risks of Standardized Options, ODD)</a>. Alternat&#237;v megold&#225;sk&#233;nt k&#233;rj&#252;k, vegye fel a kapcsolatot az <a href="../support/customer-servicef763.html?p=contact" target="_self">IB &#220;gyf&#233;lszolg&#225;lat&#225;val</a> &#233;s k&#233;rje az ODD egy p&#233;ld&#225;ny&#225;nak megk&#252;ld&#233;s&#233;t. A keresked&#233;s megkezd&#233;se el&#337;tt &#252;gyfeleink k&#246;telesek elolvasni a <a href="../general/homepage-disclosures.html" target="_self">Figyelmeztet&#233;sek &#233;s k&#246;zz&#233;t&#233;telek</a> oldalon tal&#225;lhat&#243; relev&#225;ns kock&#225;zatfelt&#225;r&#225;si nyilatkozatokat. A t&#337;ke&#225;tt&#233;tes keresked&#233;s kiz&#225;r&#243;lag magas kock&#225;zatt&#369;r&#233;s&#369;, tapasztalt befektet&#337;k sz&#225;m&#225;ra javasolt. A vesztes&#233;g m&#233;rt&#233;ke meghaladhatja indul&#243; befektet&#233;s&#233;t. A fedezeti hitelkamatokkal kapcsolatos tov&#225;bbi inform&#225;ci&#243;k&#233;rt k&#233;rj&#252;k, l&#225;togasson el a  <a href="margin-rates.html" target="_self">Fedezeti hitelkamatok</a> oldalra. A hat&#225;rid&#337;s &#233;rt&#233;kpap&#237;rok magas kock&#225;zattal j&#225;rnak, ez&#233;rt nem minden befektet&#337;nek aj&#225;nlottak. A lehets&#233;ges vesztes&#233;g m&#233;rt&#233;ke meghaladhatja indul&#243; befektet&#233;s&#233;t. A hat&#225;rid&#337;s &#233;rt&#233;kpap&#237;rokkal val&#243; keresked&#233;s el&#337;tt olvassa el a <a href="../general/homepage-disclosures.html" target="_self">&#8222;Security Futures Risk Disclosure Statement&#8221;</a> c&#237;m&#369; dokumentumot. A struktur&#225;lt term&#233;kek &#233;s a r&#246;gz&#237;tett kamatoz&#225;s&#250; term&#233;kek (mint p&#233;ld&#225;ul a k&#246;tv&#233;nyek) magasabb kock&#225;zattal j&#225;r&#243; &#246;sszetett term&#233;kek, ez&#233;rt nem minden befektet&#337;nek aj&#225;nlottak. Keresked&#233;s el&#337;tt olvassa el a <a href="../general/homepage-disclosures.html" target="_self">Kock&#225;zatfelt&#225;r&#243; nyilatkozatot</a>.</p>
+                <p>Az IBKR ATS-sel kapcsolatos inform&#225;ci&#243;k&#233;rt k&#233;rj&#252;k, l&#225;togasson el a <a href="https://www.sec.gov/divisions/marketreg/form-ats-n-filings.htm#ats-n" rel="noreferrer noopener" target="_blank">SEC weboldal&#225;ra</a>.</p>
+<p>A 36 orsz&#225;g az orsz&#225;gokat &#233;s a ter&#252;leteket is mag&#225;ban foglalja.</p>
+            </div>
+        </div>
+        <div class="footer-site-links" id="footerSiteLinks">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>Sz&#225;mla</p>
+                    <ul>
+                    <li><a href="https://www.interactivebrokers.co.uk/sso/Login?RL=1" target="_self">Bejelentkez&#233;s</a></li>
+                    <li><a href="https://www.interactivebrokers.co.uk/Universal/Application" target="_self">Sz&#225;mlanyit&#225;s</a></li>
+                    <li><a href="https://www.interactivebrokers.co.uk/sso/Login?c=t" target="_self">Sz&#225;mlanyit&#225;si k&#233;relem befejez&#233;se</a></li>
+                    <li><a href="../accounts/account-guide.html" target="_self">Sz&#225;mlat&#237;pusok</a></li>
+                    <li><a href="https://www.interactivebrokers.co.uk/Universal/Application?ft=T" target="_self">Ingyenes pr&#243;baverzi&#243;</a></li>
+                    </ul>
+                    <p>Szoftverek &#233;s let&#246;lthet&#337; programok</p>
+                    <ul>
+                    <li><a href="tws.html#tws-software" target="_self">Trader Workstation</a></li>
+                    <li><a href="ibkr-desktop.html" target="_self">IBKR Desktop</a></li>
+                    <li><a href="tws-mobile.html#trytoday" target="_self">IBKR Mobile</a></li>
+                    <li><a href="ib-api.html#api-software" target="_self">API fel&#252;letek</a></li>
+                    </ul>    
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>T&#225;mogat&#225;s</p>
+                    <ul>
+					<li><a href="../support/fund-my-account.html" target="_self">T&#246;ltse fel a sz&#225;ml&#225;j&#225;t</a></li>
+                    <li><a href="../support/individuals.html" target="_self">Mag&#225;nszem&#233;lyek</a></li>
+                    <li><a href="../support/institutions.html" target="_self">Int&#233;zm&#233;nyek</a></li>
+                    <li><a href="../support/institutional-sales-contacts4343.html?p=uk" target="_self">Int&#233;zm&#233;nyi &#233;rt&#233;kes&#237;t&#337;k el&#233;rhet&#337;s&#233;gei</a></li>
+					<li><a href="../general/contact/ibot-container.html" target="_self">Tekintse &#225;t a GYIK-et</a></li>
+					<li><a href="../software/systemStatus.html" target="_self">Rendszer&#225;llapot</a></li>
+                    </ul>
+                    <p>Sz&#225;ll&#237;t&#243;i t&#225;mogat&#225;s</p>
+                    <ul>
+                    <li><a href="../general/about/supplier-information.html" target="_self">Sz&#225;ll&#237;t&#243;i inform&#225;ci&#243;k</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>R&#243;lunk</p>
+                    <ul>
+                    <li><a href="../general/awards.html" target="_self">D&#237;jak</a></li>
+                    <li><a href="../general/about/careers-splash.html" target="_self">Karrierlehet&#337;s&#233;gek</a></li>
+                    <li><a href="../general/about/about.html" target="_self">Inform&#225;ci&#243;k &#233;s c&#233;gt&#246;rt&#233;net</a></li>
+                    <li><a href="https://investors.interactivebrokers.com/ir/main.php" target="_blank" rel="noreferrer noopener">Befektet&#337;i kapcsolatok</a></li>
+                    <li><a href="../about/news-at-ibkr.html" target="_self">IBKR h&#237;rek</a></li>
+                    <li><a href="../general/about/press-and-media.html" target="_self">Sajt&#243; &#233;s m&#233;dia</a></li>
+                    <li><a href="../accounts/legalDocuments/brokerPerformanceReports.html" target="_self">Szab&#225;lyoz&#243;i jelent&#233;sek</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>K&#246;vessen minket a k&#246;z&#246;ss&#233;gi m&#233;di&#225;ban!</p>
+                    <ul>
+                        <li><a href="https://www.facebook.com/InteractiveBrokersEurope/" target="_blank" rel="noreferrer noopener"><i class="fab fa-facebook"></i>  Facebook</a></li>
+                        <li><a href="https://www.instagram.com/interactivebrokers_europe" target="_blank" rel="noreferrer noopener"><i class="fab fa-instagram"></i>  Instagram</a></li>
+                        <li><a href="https://twitter.com/IBKR_Europe" target="_blank" rel="noreferrer noopener"><i class="fab fa-x-twitter"></i>  Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-disclosure-links" id="footerDisclosureLinks">
+            <div class="row">
+                <div class="col">
+                    <ul>
+                    <li><a href="../accounts/legalDocuments/anti-fraud-notice.html" target="_self">T&#225;j&#233;koztat&#243; a csal&#225;s elleni k&#252;zdelemr&#337;l</a></li>
+                    <li><a href="../accounts/legalDocuments/custIdentificationNotice.html" target="_self">T&#225;j&#233;koztat&#243; az &#252;gyf&#233;l-azonos&#237;t&#225;si programr&#243;l</a></li>
+                    <li><a href="../general/warnings-on-frauds-and-scams.html" target="_self">Figyelmeztet&#233;s csal&#225;sokra &#233;s &#225;tver&#233;sekre</a></li>
+                    <li><a href="../accounts/forms-and-disclosures-client-agreements.html" target="_self">Formanyomtatv&#225;nyok &#233;s k&#246;zz&#233;t&#233;telek</a></li>
+                    <li><a href="../accounts/legalDocuments/accessibility-policy.html" target="_self">Akad&#225;lymentes&#237;t&#233;si nyilatkozat</a></li>
+                    <li><a href="../accounts/legalDocuments/privacy.html" target="_self">Adatv&#233;delem</a></li>
+                    <li><a href="../sitemap/index.html" target="_self">Oldalt&#233;rk&#233;p</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-entities" id="footerEntities">
+            <div class="row">
+                <div class="col">
+                    <div class="footer-entity"><!-- IBKR IE -->
+                        <p class="entity-name"><a href="../../en/home.html" target="_self">Interactive Brokers Ireland Limited</a></p>
+                        <p>szab&#225;lyoz&#243; hat&#243;s&#225;ga a <a href="https://www.centralbank.ie/" target="_blank" rel="noreferrer noopener">Central Bank of Ireland</a> (CBI, hivatkoz&#225;si sz&#225;m: C423427), nyilv&#225;ntart&#243; hat&#243;s&#225;ga a Companies Registration Office (CRO, nyilv&#225;ntart&#225;si sz&#225;m: 657406), &#233;s az Irish Investor Compensation Scheme (ICS) tagja.<br> <strong>Sz&#233;khely:</strong> North Dock One, 91/92 North Wall Quay, Dublin 1 D01 H7V7, &#205;rorsz&#225;g.<br> <strong>Weboldal:</strong> <a href="../../en/home.html" target="_self">www.interactivebrokers.ie</a></p>
+                        <p class="footer-entities-link"><a href="#collapseEntities" target="_self" class="collapsed" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseEntities">Az Interactive Brokers egy&#233;b le&#225;nyv&#225;llalataira vonatkoz&#243; inform&#225;ci&#243;k</a></p>
+                    </div>
+                    <div class="footer-entities-list collapse" id="collapseEntities">
+                        <div class="row">
+                            <div class="col-12 col-md-6"><!-- IBKR LLC -->
+                                
+                                <p class="entity-name"><a href="https://www.interactivebrokers.com/en/home.php?nored=t" target="_self">Interactive Brokers LLC</a></p>
+                                <p>a <a  rel="noreferrer noopener" target="_blank"  href="https://www.nyse.com/">NYSE</a>, a <a href="https://www.finra.org/" rel="noreferrer noopener"  target="_blank">FINRA</a> &#233;s a <a href="https://www.sipc.org/" rel=" noreferrer noopener" target="_blank">SIPC</a> tagja, szab&#225;lyoz&#243; hat&#243;s&#225;ga a US Securities and Exchange Commission illetve a Commodity Futures Trading Commission.<br> <strong>Sz&#233;khely:</strong> One Pickwick Plaza, Greenwich, CT 06830 USA<br> <strong>Weboldal:</strong> <a href="https://www.interactivebrokers.com/en/home.php?nored=t" target="_self">www.interactivebrokers.com</a></p><!-- IBKR CA -->
+                                <p class="entity-name"><a href="https://www.interactivebrokers.ca/en/home.php?nored=t" target="_self">Interactive Brokers Canada Inc.</a></p>
+                                <p>az , a <a href="https://www.ciro.ca/" target="_blank" rel="noreferrer noopener">Canadian Investment Regulatory Organization (CIRO)</a>  &#233;s a <a href="https://www.cipf.ca/" target="_blank" rel="noreferrer noopener">Canadian Investor Protection Fund tagja.</a><br> <strong>Sz&#233;khely:</strong> 1800 McGill College Avenue, Suite 2106, Montreal, Quebec, H3A 3J6, Kanada.<br> <strong>Weboldal:</strong> <a href="https://www.interactivebrokers.ca/en/home.php?nored=t" target="_self">www.interactivebrokers.ca</a></p><!-- IBKR UK -->
+                                
+                                <p class="entity-name"><a href="https://www.interactivebrokers.co.uk/en/home.php?nored=t" target="_self">Interactive Brokers U.K. Limited</a></p>
+                                <p>enged&#233;lyez&#337; &#233;s szab&#225;lyoz&#243; hat&#243;s&#225;ga a <a href="https://www.fca.org.uk/" target="_blank" rel="noreferrer noopener">Financial Conduct Authority</a>. FCA nyilv&#225;ntart&#225;si sz&#225;m: 208159. Bejegyezve Angli&#225;ban &#233;s Walesben 03958476 c&#233;gjegyz&#233;ksz&#225;mon. <a href="https://www.fca.org.uk/firms/financial-services-register" target="_blank" rel="noreferrer noopener">[https://www.fca.org.uk/firms/financial-services-register]</a><br> <strong>Sz&#233;khely:</strong> 20 Fenchurch Street, Floor 12, London EC3M 3BY.<br> <strong>Weboldal:</strong> <a href="https://www.interactivebrokers.co.uk/en/home.php?nored=t" target="_self">www.interactivebrokers.co.uk</a></p><!-- IBKR AUS -->
+                                <p class="entity-name"><a href="https://www.interactivebrokers.com.au/en/home.php?nored=t" target="_self">Interactive Brokers Australia Pty. Ltd.</a></p>
+                                <p>ABN 98 166 929 568 enged&#233;lyez&#337; &#233;s szab&#225;lyoz&#243; hat&#243;s&#225;ga az <a href="https://asic.gov.au/" target="_blank" rel="noreferrer noopener">Australian Securities and Investments Commission</a> (AFSL: 453554). Tags&#225;gai: <a href="https://www.asx.com.au/" target="_blank" rel="noreferrer noopener">ASX</a>, <a href="https://www.asx.com.au/" target="_blank" rel="noreferrer noopener">ASX 24</a> &#233;s <a href="https://www.cboe.com.au/" target="_blank" rel="noreferrer noopener">Cboe Australia</a>.<br> <strong>Sz&#233;khely:</strong> Level 11, 175 Pitt Street, Sydney, New South Wales 2000, Ausztr&#225;lia.<br> <strong>Weboldal:</strong> <a href="https://www.interactivebrokers.com.au/en/home.php?nored=t" target="_self">www.interactivebrokers.com.au </a></p>
+                            </div>
+                            <div class="col-12 col-md-6"><!-- IBKR HK -->
+                                
+                                <p class="entity-name"><a href="https://www.interactivebrokers.com.hk/en/home.php?nored=t" target="_self">Interactive Brokers Hong Kong Limited</a></p>
+                                <p>szab&#225;lyoz&#243; hat&#243;s&#225;ga a Hong Kong Securities and Futures Commission. Tags&#225;gai: <a href="https://www.hkex.com.hk/" target="_blank" rel="noreferrer noopener">SEHK</a> &#233;s <a href="https://www.hkex.com.hk/" target="_blank" rel="noreferrer noopener">HKFE</a>.<br> <strong>Sz&#233;khely:</strong> Suite 1512, Two Pacific Place, 88 Queensway, Admiralty, Hong Kong SAR.<br> <strong>Weboldal:</strong> <a href="https://www.interactivebrokers.com.hk/en/home.php?nored=t" target="_self">www.interactivebrokers.com.hk</a></p><!-- IBKR IN -->
+                                <p class="entity-name"><a href="https://www.interactivebrokers.co.in/en/home.php?nored=t" target="_self">Az Interactive Brokers India Pvt. Ltd.</a></p>
+                                <p>az <a href="https://www.nseindia.com/" target="_blank" rel="noreferrer noopener">NSE</a> &#233;s a <a href="https://www.bseindia.com/" target="_blank" rel="noreferrer noopener">BSE</a> keresked&#337;tagja, valamint az <a href="https://nsdl.co.in/" target="_blank" rel="noreferrer noopener">NSDL</a> let&#233;ti tagja. <a href="https://www.sebi.gov.in/" target="_blank" rel="noreferrer noopener">SEBI</a> nyilv&#225;ntart&#225;si sz&#225;m:  INZ000217730; NSDL: IN-DP-602-2021. CIN-U67120MH2007FTC170004.<br> <strong>Sz&#233;khely:</strong> 502/A, Times Square, Andheri Kurla Road, Andheri East, Mumbai 400059, India.<br> <strong>Telefon:</strong> +91-22-61289888 <span class="pipe">|</span> <strong>Fax:</strong> +91-22-61289898.<br> <strong>Weboldal:</strong> <a href="https://www.interactivebrokers.co.in/en/home.php?nored=t" target="_self">www.interactivebrokers.co.in</a></p><!-- IBKR JP -->
+                                
+                                <p class="entity-name"><a href="https://www.interactivebrokers.co.jp/en/home.php?nored=t" target="_self">Az Interactive Brokers Securities Japan Inc.</a></p>
+                                <p>szab&#225;lyoz&#243; hat&#243;s&#225;ga a Kanto Local Finance Bureau (nyilv&#225;ntart&#225;si sz&#225;m: 187), &#233;s a <a href="https://www.jsda.or.jp/" target="_blank" rel="noreferrer noopener">Japan Securities Dealers Association</a> illetve a <a href="https://www.nisshokyo.or.jp/" target="_blank" rel="noreferrer noopener">The Commodity Futures Association of Japan</a>tagja.<br> <strong>Sz&#233;khely:</strong> Kasumigaseki Building 25F, 2-5 Kasumigaseki 3-chome, Chiyoda-ku, Tokyo, 100-6025 Jap&#225;n.<br> <strong>Telefon:</strong> +81 03-4590-0711 <em>(munkanapokon: 8:30-17:30 JST)</em>.<br> <strong>Weboldal:</strong> <a href="https://www.interactivebrokers.co.jp/en/home.php?nored=t" target="_self">www.interactivebrokers.co.jp</a></p><!-- IBKR SG -->
+<p class="entity-name"><a href="https://www.interactivebrokers.com.sg/en/home.php" target="_self">Interactive Brokers Singapore Pte. Ltd.</a></p>
+<p>enged&#233;lyez&#337; &#233;s szab&#225;lyoz&#243; hat&#243;s&#225;ga a Monetary Authority of Singapore (Enged&#233;lysz&#225;m: CMS100917).<br> <strong>Sz&#233;khely:</strong>  1 Harbourfront Place #12-01/03, Harbourfront Tower 1, Singapore 098633. <br> <strong>Weboldal:</strong> <a href="https://www.interactivebrokers.com.sg/en/home.php" target="_self">www.interactivebrokers.com.sg</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- FOOTER END ---------------------------------------------------------------------------------------------------- -->
+</footer>
+
+<script>
+if(window.location.href.includes('conf=am')) {
+document.querySelector("#ibkr-header").style.display = "none";
+document.querySelector("#footer").style.display = "none";
+}
+</script><!-- SCRIPTS FOOTER ---------------------------------------------------------------------------------------------------- -->
+<script type="text/javascript" src="../../scripts/common/js/zeynep-2.2.0/zeynep.js"></script>
+<script type="text/javascript" src="../../scripts/common/js/lazyload/lazyload.min.js"></script>
+<script type="text/javascript" src="../../search/conversions.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    
+    // GATHER HEIGHT OF HEADER
+    var headerHeight = $("div#ibkr-header").outerHeight();
+    // GATHER HEIGHT OF DISCLOSURES
+    var disclosureHeight = $("section#UKProductDisclosure, section#TurbosDisclosure").outerHeight();
+    $("section#UKProductDisclosure").css("top", headerHeight);
+    $("section#TurbosDisclosure").css("top", headerHeight);
+    // SET CONTENTS DIV PADDING TOP
+    $("div#contents").css("padding-top", disclosureHeight);
+    // OVERRIDE TOP OF DISCLOSURE AND PADDING-TOP OF CONTENTS ON WINDOW RESIZE
+    $(window).resize(function() {
+        var headerHeight = $("div#ibkr-header").outerHeight();
+        var disclosureHeight = $("section#UKProductDisclosure, section#TurbosDisclosure").outerHeight();
+        var headerHeightDelta = headerHeight - disclosureHeight;
+        $("section#UKProductDisclosure").css("top", disclosureHeight + headerHeightDelta);
+        $("section#TurbosDisclosure").css("top", disclosureHeight + headerHeightDelta);
+        $("div#contents").css("padding-top", disclosureHeight);
+    });
+
+    // OVERRIDE TOP OF DISCLOSURE AND PADDING-TOP OF CONTENTS ON BANNER CLOSE
+    $("#bannerRegionSelector a.btn-close").click(function() {
+        setTimeout(function() {
+            var headerHeight = $("div#ibkr-header").outerHeight();
+            $("section#UKProductDisclosure").css("top", headerHeight);
+            $("section#TurbosDisclosure").css("top", headerHeight);
+            $("div#contents").css("padding-top", disclosureHeight);
+        },500);
+    });
+    // MOBILE MENU
+    $(function() {
+        // Initilize mobile menu
+        var zeynep = $('.menu-mobile').zeynep({
+            opened: function () {
+            console.log('the side menu opened')
+        },
+        closed: function () {
+            console.log('the side menu closed')
+            }
+        })
+        // Dynamically bind closing event
+        zeynep.on('closing', function () {
+            console.log('this event is dynamically binded')
+        })
+        // Mobile menu close on overlay click
+        $('.website-overlay').on('click', function () {
+            zeynep.close()
+        })
+        // Mobile menu close on button click
+        $('.btn-close').on('click', function () {
+            zeynep.close()
+        })
+        // Mobile menu open on navbar-toggler click
+        $('.navbar-toggler').on('click', function () {
+            zeynep.open()
+        })
+    })
+});
+</script>
+<!-- STYLES FOOTER ---------------------------------------------------------------------------------------------------- -->
+<link rel="preload" as="font" type="font/woff2" href="../../fonts/fontawesome-6.4.2/webfonts/fa-brands-400.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="../../fonts/fontawesome-6.4.2/webfonts/fa-regular-400.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="../../fonts/fontawesome-6.4.2/webfonts/fa-solid-900.woff2" crossorigin>
+<link rel="preload" as="style" href="../../css/ibkr/website-print.min.css">
+<link rel="stylesheet" type="text/css" media="print" href="../../css/ibkr/website-print.min.css">
+<style type="text/css">
+@import url('../../css/fontawesome-6.4.2/all.min.css') layer(vendors);
+@import url('../../css/animate-3.7.2/animate.min.css') layer(vendors);
+@import url('../../css/bootstrap-switch-3.3.2/bootstrap-switch.min.css') layer(vendors);
+@import url('../../css/icheck-1.0.2/icheck.css') layer(vendors);
+</style></body>
+
+<!-- Mirrored from www.interactivebrokers.ie/hu/trading/ordertypes.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Sep 2025 09:31:58 GMT -->
+</html>

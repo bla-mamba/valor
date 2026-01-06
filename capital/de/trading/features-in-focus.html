@@ -1,0 +1,1945 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="de" data-theme="light">
+
+<!-- Mirrored from www.interactivebrokers.ie/de/trading/features-in-focus.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Sep 2025 09:16:56 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8">
+<title>Funktionen im Fokus | Interactive Brokers Ireland</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"> 
+<meta name="description" content="Die &#220;bersicht &#8222;Funktionen im Fokus&#8220; liefert detaillierte Beschreibungen und Anleitungen zu einigen der beliebtesten Tools und Services von Interactive Brokers.">
+<meta name="keywords" content="Funktionen im Fokus">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta http-equiv="expires" content="-1">
+<meta name="robots" content="index, follow">
+<meta http-equiv="pragma" content="no-cache">
+<meta name="apple-mobile-web-app-title" content="IBKR">
+<link rel="icon" sizes="192x192" href="../../images/web/favicons/home-screen-icon-192x192.png" />
+<link rel="icon" sizes="128x128" href="../../images/web/favicons/home-screen-icon-128x128.png" />
+<link rel="apple-touch-icon" sizes="57x57" href="../../images/web/favicons/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="../../images/web/favicons/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="../../images/web/favicons/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="../../images/web/favicons/apple-touch-icon-144x144.png" />
+<!-- SCRIPTS HEAD  -->
+<script type="text/javascript" src='../../scripts/common/js/jquery-3.6.1/jquery.min.js'></script>
+<script type="text/javascript">
+function createScriptElement(data) {
+ if (typeof data == "undefined") {
+  return;
+ }
+ var element = document.createElement("SCRIPT");
+ element.type = "text/javascript";
+ if (typeof data.id != "undefined") {
+  element.id = data.id;
+ }
+ if (typeof data.source != "undefined") {
+  element.src = data.source;
+ }
+ if (typeof data.loadfunction == "function") {
+  element.onload = data.loadfunction;
+ }
+ document.head.appendChild(element);
+}
+createScriptElement({ source : "/scripts/common/js/bootstrap-5.2.2/bootstrap.bundle.min.js", loadfunction: bsLoaded  });
+createScriptElement({ source : "/scripts/common/js/lib.js?ver=9" });
+function storeCookie()
+{
+ if(typeof(Storage) !== 'undefined')
+ {
+   if(localStorage.getItem('web') !== null)
+   {
+     localStorage.removeItem('web');
+   }
+ }
+}
+function bsLoaded() {
+  createScriptElement({ source : "/scripts/common/js/appear/appear.min.js?ver=1" });
+  createScriptElement({ source : "/scripts/common/js/easing/easing.min.js?ver=1" });
+  createScriptElement({ source : "/scripts/common/js/parallax/parallax.min.js?ver=1" });
+  createScriptElement({ source : "/scripts/common/js/uitotop/uitotop.min.js?ver=1", loadfunction: uiLoaded });
+}
+function uiLoaded() {
+  createScriptElement({ source : "/scripts/common/js/twsUtils.js?ver=2" });
+  createScriptElement({ source : "/scripts/common/js/design/design.js?ver=1" }); 
+}
+</script>
+<script type="text/javascript">
+$(function() {
+ if (document.cookie.indexOf("IB_SEARCH") == -1)
+ {
+  var ex=new Date();
+  ex.setTime(ex.getTime()+86400000);
+  document.cookie ='IB_SEARCH='+Math.floor(new Date().getTime()/1000)+';expires='+ex.toGMTString()+';path=/;domain=.interactivebrokers.ie';
+ }
+  let nex=new Date();
+  nex.setTime(nex.getTime()+86400000);
+    document.cookie ='IB_QD=0;expires='+nex.toGMTString()+';path=/;domain=.interactivebrokers.ie';
+  
+  let excfd=new Date();
+  excfd.setTime(excfd.getTime()+86400000);
+  document.cookie ='IB_QD_CFD=0;expires='+excfd.toGMTString()+';path=/;domain=.interactivebrokers.ie';
+ $('div#langselector').find('a').each(function() {
+  $(this).click(function() {
+   var link = $(this).attr("href");
+   if(link.match(/\/(en|fr|de|es|it|ru|cn|jp)\//))
+   {
+    var langs = link.split("../../index.html");
+    if(langs[3] == 'en' || langs[3] == 'fr' || langs[3] == 'de' || langs[3] == 'es' || langs[3] == 'it' || langs[3] == 'ru' || langs[3] == 'cn' || langs[3] == 'jp')
+    {
+      var lang = langs[3];
+      if(lang == 'cn')
+      {
+        lang = 'zh_CN';
+      }
+      if(lang == 'jp')
+      {
+        lang = 'ja';
+      }
+      if(hasCookie("IB_LANG"))
+      {
+        deleteCookie("IB_LANG");
+      }
+      setCookie("IB_LANG", lang, 7, '.interactivebrokers.ie');
+    } else if(langs[1] == 'en') {
+      var lang = 'en';
+      setCookie("IB_LANG", lang, 7, '.interactivebrokers.ie');
+    }
+   }
+  });
+ });
+ $('p#bandaid-close').click(function() {
+  setCookie("IB_BANDAID", 1, 7, '.interactivebrokers.ie');
+ });
+ $('a#btnCloseBannerRegionSelector').click(function() {
+  setCookie("IB_REGION_SEL", 1, 30, '.interactivebrokers.ie');
+ });
+ $('a#btnCloseBannerRegionDifc').click(function() {
+  setCookie("IB_DIFC", 1, 30, '.interactivebrokers.ie');
+ });
+});
+</script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    if(localStorage.getItem('consentMode') ===  null){
+                    const consentMode = {
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'analytics_storage': 'denied'
+            };
+                localStorage.setItem('consentMode', JSON.stringify(consentMode));
+        gtag('consent', 'default', consentMode);
+    }
+    else {
+        gtag('consent', 'default', JSON.parse(localStorage.getItem('consentMode')));
+    }
+</script>
+<!-- STYLES HEAD -->
+<style type="text/css">
+@import url('../../css/bootstrap-5.2.2/bootstrap.min.css') layer(bootstrap);
+</style>
+<link rel="preload" as="style" href="../../css/ibkr/website.mince12.css?v=1848a6e12ea6c289ee1df7ee63749846">
+<link rel="stylesheet" type="text/css" media="all" href="../../css/ibkr/website.mince12.css?v=1848a6e12ea6c289ee1df7ee63749846">
+<link rel="preload" as="style" href="../../css/ibkr/theme-ibkr.min4f42.css?v=be9c72c0d328e7fc4987bce81f28981c">
+<link rel="stylesheet" type="text/css" media="all" href="../../css/ibkr/theme-ibkr.min4f42.css?v=be9c72c0d328e7fc4987bce81f28981c"><style type="text/css">
+section#page-title, .section-title{display:none;}
+/* INTRO -------------------------------------------------------------- */
+#intro.lazy {
+	background-image: none;
+	background-color: #F3F4F3;
+}
+#intro {
+    background-color: #F3F4F3;  /* 223344; */
+    background-image: url(../../images/web/hero-fif-v3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 40px 60px 120px;
+    background-position: 100% 20%;
+}
+#intro-below.lazy {
+	background-image: none;
+	background-color: #F3F4F3;
+}
+#intro-below{display: none;}
+#intro h2 {
+    font-weight:600;
+    font-size:2.5rem;
+    line-height:2.75rem;
+    color:#000000;
+}
+#features-in-focus .filter-set {
+    margin: 20px 0px;
+    padding: 20px 20px;
+    background-color: #F7F7F7;
+    border: 1px solid #F7F7F7;
+} 
+/* MIXIT GRID -------------------------------------------------------------- */
+.mix-container { display:flex; flex-wrap:wrap; margin:20px 0px 0px 0px; padding:0px; }
+.mix-container  > div { position:relative; margin:5px 0px; padding:0px;width:33.33333333%;}
+.mix-container  > div > a { position:relative; display:block; margin:5px; padding:0px; height:100%; background:#f7f7f7; border:2px solid #ffffff; 
+	    transition-duration: 0.3s; transition-timing-function: ease-in-out;
+	}
+.mix-container  > div > a:hover { background-color:#FFFFFF; border:2px solid #DB1222; }
+.mix-container  > div > a > .inner-box { min-height:120px; height:100%; display: flex; align-content: center; align-items: center;text-align: center;}
+/*.mix-container  > div > a > .inner-box h6 {width:100%;font-weight: 300;margin:0 1rem;}*/
+.grid-tile .learn-more{padding:1rem;font-size:1rem;line-height: 1.375rem;color:#000;display: flex; align-items: flex-end; justify-content:flex-start;bottom: 0;position: absolute;}
+.grid-tile .learn-more i{padding: .2rem .5rem;}
+.grid-tile h4{padding:.5rem 1rem; color:#000;font-weight: 600;}
+.grid-tile p{padding:0 1rem; margin-bottom: 60px;}
+/* MEDIA QUERY | EXTRA SMALL < 576px ---------------------------------------------------------------------------------------------------- */
+@media (max-width:575.98px) {
+	#intro {
+		background-color: #F3F4F3;
+		background-image: none;
+		padding:50px;
+	}
+	#intro-below {
+        background-color: #F3F4F3;
+        background-image: url(../../images/web/hero-fif-v3.jpg);
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: 100% 100%;
+		padding: 0px;
+		margin: 0px;
+		min-height: 180px;
+        display: block;
+	}
+    .mix-container  > div {width:100%;}
+}
+/* MEDIA QUERY | SMALL > 576px ---------------------------------------------------------------------------------------------------- */
+@media (min-width:576px) and (max-width:767.98px) { 
+	#intro {
+		background-color: #F3F4F3;
+		background-image: none;
+		padding:50px;
+	}
+	#intro-below {
+        background-color: #F3F4F3;
+        background-image: url(../../images/web/hero-fif-v3.jpg);
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: 100% 100%;
+		padding: 0px;
+		margin: 0px;
+		min-height: 260px;
+        display: block;
+	}
+    .mix-container  > div {width:100%;}
+}
+/* MEDIA QUERY | MEDIUM > 768px ---------------------------------------------------------------------------------------------------- */
+@media (min-width:768px) and (max-width:991.98px) {
+	#intro {
+        background-size: cover;
+		padding: 20px 0 140px;
+		background-position: 100% 0%;
+	}
+    #features-in-focus{padding-top:20px;}
+    .mix-container  > div {width:50%;}
+}
+/* MEDIA QUERY | LARGE > 992px ---------------------------------------------------------------------------------------------------- */
+@media (min-width:992px) and (max-width:1199.98px) {
+	#intro {
+        background-size: cover;
+		padding: 40px 40px 120px;
+		background-position: 100% 0%;
+	}
+	#intro-below {display:none;}
+    .mix-container  > div {width:33.33333333%;}
+}
+/* MEDIA QUERY | EXTRA LARGE > 1200px ---------------------------------------------------------------------------------------------------- */
+@media (min-width:1200px) {
+	#intro {
+        background-size: cover;
+		padding: 40px 60px 120px;
+		background-position: 100% 20%;
+	}
+	#intro-below {display:none;}
+    .mix-container  > div {width:33.33333333%;}
+}
+</style>
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-d23de039-d518-4f10-9810-e68da4592744","rua.cook":"true","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="XE2AM-F37QZ-LYWQP-H8KRM-4SNX5",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"XE2AM-F37QZ-LYWQP-H8KRM-4SNX5";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n="false"=="true"?1:0,t="cookiepresent",a="eykumbc7mxv4o2gjethq-f-c852d60d3-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1168163","ak.ai":parseInt("665092",10),"ak.ol":"0","ak.cr":39,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"1d790940","ak.r":50930,"ak.a2":n,"ak.m":"a","ak.n":"essl","ak.bpcip":"38.21.70.0","ak.cport":49573,"ak.gh":"95.101.132.220","ak.quicv":"","ak.tlsv":"tls1.2","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1758012623","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==ZHGgSVqkDL8w4N/Zsa89Ml2WCWkVrmleaso2/RyN4MeCcQUQzZVMkQMquF9nI8wtNlQ8jdWrcUc9/5vqKqdeyYahkBIMdi14NvqagA9qrKP4Hjq2Z1kJeCFtW6Wdb1L+Gy3epnrpMSdWToSXqkZmkH/FqNADUcJUfXzeOglIgLeOc9ewNQXGyJ7e/ohCCBc3mKD+zF/W+tDkyVXSrfVWkdLELt+OCoHeV8EanRJzlE+hqnBkUgo2YkYNTALQeM3AflMIPBUMD5BYenb7HcF2Mb0CLD2xRBfR8XN57ymmJgXFepAB7uC+JnaBcb2s6bueZF0tEp532pMT464uu5Dk05sEQtxPDVgkLohzrXjx1AnGZ69RmmRNs/XlSKWaltiLZLI2hO2n2c7b3tZegEj6EfkfodIH/xLkn0csdxfJEEQ=","ak.pv":"398","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.html","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak-2.html","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body>
+<div id="printheader"></div>
+<!-- HEADER START  -->
+<div class="ibkr-header" id="ibkr-header">
+    
+        
+<style type="text/css">
+.banner-risk-warning {
+    margin:0px;
+    padding:8px 0px;
+    width:100%;
+    height:auto;
+    background-color:#242424;
+}
+.banner-risk-warning p {
+    margin:0px;
+    padding:0px;
+    font-weight:400;
+    font-size:1.0rem;
+    line-height:1.25rem;
+    text-align:center;
+    color:#FFFFFF;
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | EXTRA SMALL (< 576PX) ---------------------------------------------------------------------------------------------------- */
+@media (max-width:575.98px) {
+    .banner-risk-warning {
+        padding:4px 0px;
+    }
+    .banner-risk-warning p {
+        font-size:0.8125rem;
+        line-height:1.0rem;
+    }
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | SMALL (576PX-767.98PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:576px) and (max-width:767.98px) {
+    .banner-risk-warning {
+        padding:4px 0px;
+    }
+    .banner-risk-warning p {
+        font-size:0.8125rem;
+        line-height:1.0rem;
+    }
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | MEDIUM (768PX-991.98PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:768px) and (max-width:991.98px) {
+    .banner-risk-warning {
+        padding:4px 0px;
+    }
+    .banner-risk-warning p {
+        font-size:0.8125rem;
+        line-height:1.0rem;
+    }
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | LARGE (992PX-1199.98PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:992px) and (max-width:1199.98px) {
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | EXTRA LARGE (>1200PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:1200px) {
+}
+</style>
+<div class="banner-risk-warning">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p>Das Investieren in Finanzprodukte ist mit Risiken verbunden.<br> Ihre Anlagen k&#246;nnen an Wert gewinnen oder verlieren und Verluste k&#246;nnen den Wert Ihrer urspr&#252;nglichen Investition &#252;bersteigen.</p>
+            </div>
+        </div>
+    </div>
+</div>    <!-- NAV TOP START (LG/XL ONLY) -->
+    <nav class="navbar navbar-inverse navbar-expand-lg navbar-top d-none d-lg-block">
+        <div class="container">
+            <div class="navbar-collapse collapse" id="ibkr-nav-top"><!-- LEFT MENU -->
+                
+                <ul class="navbar-nav mr-auto align-items-center"><!-- FOR INDIVIDUALS -->
+                    <li class="nav-item dropdown"><a href="#" target="_self" class="nav-link dropdown-toggle" id="nav-for-individuals" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Privatkunden</a>
+                        <div class="dropdown-menu dropdown-ind-accounts" aria-labelledby="nav-for-individuals">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../accounts/individual-ie.html" target="_self" class="dropdown-item" >Einzel- oder Gemeinschaftskonten</a> <a href="../accounts/trust-ie.html" target="_self" class="dropdown-item" >Trust-Konten</a> <a href="../accounts/family-account-ie.html" target="_self" class="dropdown-item" >Family-Konten</a> <a href="../accounts/long-term-investment-accounts-ie.html" target="_self" class="dropdown-item">Tart&#243;s Befektet&#233;si Sz&#225;mia (TBSZ)</a> <a href="../accounts/plan-depargne-en-action-accounts-ie.html" target="_self" class="dropdown-item">Plan d&#8217;Epargne en Actions (PEA)</a> 
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- FOR INSTITUTIONS -->
+                    <li class="nav-item dropdown"><a href="#" target="_self" class="nav-link dropdown-toggle" id="nav-for-institutions" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Gesch&#228;ftskunden</a>
+                        <div class="dropdown-menu dropdown-inst-accounts" aria-labelledby="nav-for-institutions">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../../errorMessages/404.html" target="_self" class="dropdown-item" >Startseite Gesch&#228;ftskunden</a> <a href="../accounts/advisor-ie.html" target="_self" class="dropdown-item" >Registrierte Anlageberater</a> <a href="../accounts/proprietary-trading-group-ie.html" target="_self" class="dropdown-item" >Prop-Trader</a> <a href="../accounts/hedge-fund-ie.html" target="_self" class="dropdown-item" >Hedgefonds</a> <a href="../accounts/broker-ie.html" target="_self" class="dropdown-item" >Einf&#252;hrende Broker</a> <a href="../accounts/family-office-ie.html" target="_self" class="dropdown-item" >Family Offices</a> <a href="../accounts/compliance-officer-ie.html" target="_self" class="dropdown-item" >Compliance-Beauftragte</a> <a href="../accounts/small-business-ie.html" target="_self" class="dropdown-item" >Kleinunternehmen</a> <a href="../accounts/fsa-insurance-providers.html" target="_self" class="dropdown-item" >Full-Service-Verwalter <br>Versicherungsanbieter</a> <a href="../accounts/money-manager-ie.html" target="_self" class="dropdown-item" >Money Manager</a> <a href="../accounts/administrator-ie.html" target="_self" class="dropdown-item" >Fondsverwalter</a>  <a href="https://interactivebrokers.eu/campus/stl/" target="_blank" class="dropdown-item" >Bildungseinrichtungen</a>                                 </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul><!-- RIGHT MENU -->
+                
+                <ul class="navbar-nav ml-auto align-items-center"><!-- FREE TRIAL -->
+                    <li class="nav-item"><a href="free-trial.html" target="_self" class="nav-link">KOSTENLOS TESTEN</a></li><!-- CAREERS -->
+                    
+                    <li class="nav-item"><a href="../general/about/careers-splash.html" target="_self" class="nav-link">Karriere</a></li><!-- ABOUT US -->
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-about-us" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&#220;ber uns</a>
+                        <div class="dropdown-menu dropdown-about-us" aria-labelledby="nav-about-us">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../general/financial-strength.html" target="_self" class="dropdown-item" >Finanzst&#228;rke und Sicherheit</a> <a href="../general/about/info-and-history.html" target="_self" class="dropdown-item">Vorstellung und Firmengeschichte</a> <a href="../general/awards.html" target="_self" class="dropdown-item">Auszeichnungen</a> <a href="../about/news-at-ibkr.html" target="_self" class="dropdown-item">IBKR-News</a> <a href="../general/about/press-and-media.html" target="_self" class="dropdown-item">Presse und Medien</a> <a href="https://investors.interactivebrokers.com/ir/main.php" target="_blank" class="dropdown-item" rel="noreferrer noopener">Investorendialog</a> <a href="../general/about/sustainability.html" target="_self" class="dropdown-item">Nachhaltigkeit</a> <a href="../accounts/legalDocuments/brokerPerformanceReports.html" target="_self" class="dropdown-item">Meldungen an Aufsichtsbeh&#246;rden</a> <a href="../../errorMessages/404.html" target="_self" class="dropdown-item">Empfehlen Sie uns weiter</a> <a href="../general/about/affiliate-programs.html" target="_self" class="dropdown-item">Partnerprogramme</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- SUPPORT -->
+                    
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-support" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Support</a>
+                        <div class="dropdown-menu dropdown-contact-us" aria-labelledby="nav-support">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../support/fund-my-account.html" target="_self" class="dropdown-item">Guthaben einzahlen</a> <a href="../support/individuals.html" target="_self" class="dropdown-item">Privatkunden</a> <a href="../support/institutions.html" target="_self" class="dropdown-item">Gesch&#228;ftskunden</a> <a href="../support/institutional-sales-contacts4343.html?p=uk" target="_self" class="dropdown-item">Vertriebskontakte f&#252;r Gesch&#228;ftskunden</a> <a href="../general/contact/ibot-container.html" target="_self" class="dropdown-item">FAQs</a> <a href="../support/reports-and-dates.html" target="_self" class="dropdown-item">Steuerinformationen</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- LANGUAGE SELECTOR -->
+                    <li class="nav-item dropdown"><a href="#" class="nav-link nav-language dropdown-toggle" id="nav-language" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Sprache</span><img src="../../images/web/icons/icon-language.svg" alt="Sprache" width="23" height="18" border="0" /></a>
+                        <div class="dropdown-menu dropdown-language" aria-labelledby="nav-language">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../../en/home.html" target="_self" class="dropdown-item">English</a>
+                                    <a href="../../fr/home.html" target="_self" class="dropdown-item">Fran&#231;ais</a>
+                                    <a href="../home.html" target="_self" class="dropdown-item">Deutsch</a>
+                                    <a href="../../es/home.html" target="_self" class="dropdown-item">Espa&#241;ol</a>
+                                    <a href="../../it/home.html" target="_self" class="dropdown-item">Italiano</a>
+                                    <a href="../../hu/home.html" target="_self" class="dropdown-item">Magyar</a>
+                                    <a href="../../pt/home.html" target="_self" class="dropdown-item">Portugu&#234;s</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                                    </ul>
+            </div>
+        </div><!-- NAV TOP END --><!-- NAV BOTTOM START -->
+    </nav>
+    
+    <nav class="navbar navbar-inverse navbar-expand-lg navbar-bottom">
+        <div class="container"><!-- LOGO -->
+            
+             <a href="../home.html" target="_self" title="Interactive Brokers Startseite" alt="Interactive Brokers Logo" class="navbar-brand brand-logo" aria-label="Interactive Brokers Home"><span>Interactive Brokers Startseite</span></a>
+            <!-- TOGGLE (XS/SM/MD ONLY) --><!-- OPEN ACCOUNT BUTTON (XS/SM/MD ONLY) -->
+            <button class="navbar-toggler" type="button" aria-label="Toggle Navigation"><span class="navbar-toggler-icon"><i class="fas fa-bars" aria-hidden="true"></i></span></button>
+            <a href="https://www.interactivebrokers.co.uk/Universal/Application" target="_self" class="d-block d-lg-none btn btn-open-account">Konto er&#246;ffnen</a>
+            <!-- LOG IN (SM/MD ONLY) -->
+             <a href="https://www.interactivebrokers.co.uk/sso/Login?RL=1" target="_self" class="d-none d-sm-block d-lg-none btn btn-log-in">Login</a>             <!-- IBKR NAV BOTTOM START -->
+            <div class="navbar-collapse collapse" id="ibkr-nav-bottom">
+                <ul class="navbar-nav ml-auto align-items-center"><!-- WHY IBKR -->
+                    
+                    <li class="nav-item"><a href="../whyib/overview.html" target="_self" class="nav-link">Warum IBKR?</a></li><!-- PRICING -->
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-pricing" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Preisgestaltung</a>
+                        <div class="dropdown-menu dropdown-pricing" aria-labelledby="nav-pricing">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../pricing/commissions-home.html" target="_self" class="dropdown-item">Provisionen</a> <a href="margin-rates.html" target="_self" class="dropdown-item">Margins&#228;tze</a> <a href="../accounts/fees/pricing-interest-rates.html" target="_self" class="dropdown-item">Zinss&#228;tze</a> <a href="../pricing/short-sale-cost.html" target="_self" class="dropdown-item">Leerverkaufskosten</a> <a href="../pricing/research-news-services.html" target="_self" class="dropdown-item">Recherchen und Nachrichten</a> <a href="../pricing/market-data-pricing.html" target="_self" class="dropdown-item">Marktdaten-Preise</a> <a href="../pricing/stock-yield-enhancement-program-ie.html" target="_self" class="dropdown-item">Programm zur Optimierung der Aktienrendite</a> <a href="../pricing/other-fees-overview.html" target="_self" class="dropdown-item">Sonstige Geb&#252;hren</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- TRADING -->
+                    
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-technology" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Handel</a>
+                        <div class="dropdown-menu dropdown-technology" aria-labelledby="nav-technology">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="trading-platforms.html" target="_self" class="dropdown-item">Plattformen</a> <a href="ib-api.html" target="_self" class="dropdown-item">APIs</a> <a href="margin.html" target="_self" class="dropdown-item">Margin</a> <a href="products-exchanges.html" target="_self" class="dropdown-item">Symbol- und B&#246;rsensuche</a> <a href="products-stocks.html" target="_self" class="dropdown-item">Produkt&#252;bersicht</a> <a href="ordertypes.html" target="_self" class="dropdown-item">Ordertypen</a> <a href="../whyib/reporting.html" target="_self" class="dropdown-item">Berichte</a> <a href="securities-financing.html" target="_self" class="dropdown-item">Wertpapierleihe</a> <a href="features-in-focus.html" target="_self" class="dropdown-item">Funktionen im Fokus</a> <a href="../general/education/probability_lab.html" target="_self" class="dropdown-item">Probability Lab</a> <a href="sustainable-investing-ie.html" target="_self" class="dropdown-item">Nachhaltiges Investieren</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- SERVICES -->
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-products" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Serviceleistungen</a>
+                        <div class="dropdown-menu dropdown-products" aria-labelledby="nav-products">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="globalanalyst.html" target="_self" class="dropdown-item">IBKR GlobalAnalyst</a> <a href="si-quotes.html" target="_self" class="dropdown-item">EUIBSI Bid/Ask</a> <a href="../portfolioanalyst/overview.html" target="_self" class="dropdown-item" rel="noreferrer noopener">PortfolioAnalyst</a> <a href="products-bonds.html" target="_self" class="dropdown-item">Anleihen-Marktplatz</a> <a href="products-mutual-funds.html" target="_self" class="dropdown-item">Investmentfonds-Marktplatz</a> <a href="commission-free-etfs-mkt.html" target="_self" class="dropdown-item">ETFs ohne Transaktionsgeb&#252;hren</a> <a href="https://gdcdyn.interactivebrokers.com/aces/Marketplace/InvestorsMarketplace" target="_blank" class="dropdown-item">Anleger-Marktplatz</a> <a href="short-securities-availability.html" target="_self" class="dropdown-item">Verf&#252;gbarkeit von Wertpapieren f&#252;r Leerverk&#228;ufe</a> <a href="third-party-integration.html" target="_self" class="dropdown-item">Drittanbieter-Integration</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- EDUCATION -->
+                    
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-education" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Lerncenter</a>
+                        <div class="dropdown-menu dropdown-education" aria-labelledby="nav-education">
+                            <div class="row">
+                                <div class="col">
+                                     <a href="https://interactivebrokers.eu/campus/" target="_blank" class="dropdown-item">IBKR-Campus</a> <a href="https://interactivebrokers.eu/campus/academy" target="_blank" class="dropdown-item" rel="noreferrer noopener">Trader-Akademie</a> <a href="https://interactivebrokers.eu/campus/news" target="_blank" class="dropdown-item" rel="noreferrer noopener">Traders&#8217; Insight</a> <a href="https://interactivebrokers.eu/campus/podcasts" target="_blank" class="dropdown-item" rel="noreferrer noopener">IBKR-Podcasts</a> <a href="https://interactivebrokers.eu/campus/quant" target="_blank" class="dropdown-item" rel="noreferrer noopener">IBKR-Quant-Blog</a> <a href="https://interactivebrokers.eu/campus/webinars" target="_blank" class="dropdown-item" rel="noreferrer noopener">Webinare</a> <a href="https://interactivebrokers.eu/campus/stl/" target="_blank" class="dropdown-item">Trading Lab f&#252;r Schule und Studium</a> <a href="https://interactivebrokers.eu/campus/glossary" target="_blank" class="dropdown-item" rel="noreferrer noopener">Trader-Glossar</a>  <a href="../general/calendar/calendar.html" target="_self" class="dropdown-item">Trader-Kalender</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- SEARCH -->
+                    <li class="nav-item dropdown d-none d-lg-block" id="search-expand"><a href="#" class="nav-link nav-search dropdown-toggle" id="nav-search" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Search"><span>Suche</span><i class="fas fa-search" aria-hidden="true"></i></a>
+                        <div class="dropdown-menu dropdown-search" aria-labelledby="nav-search">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="search_box">
+                                        <script type="text/javascript">
+                                         searchbox_input_changed=false;
+                                         $('#search-expand').on('shown.bs.dropdown', function(e) {
+                                           $('#searchField').focus();
+                                         });
+                                        </script>
+                                        <form action="https://www.interactivebrokers.ie/de/search/index.php" method="get" class="search_form" id="search_form_id">
+                                            <input type="text" aria-label="Search Box" placeholder="Search" name="query" maxlength="64" autocomplete="off" id="searchField" class="form-control s swap_value searchinput" aria-label="Search Interactive Brokers">
+                                            <button type="submit" value="" id="searchsubmit" class="searchsubmit"><i class="fas fa-search" aria-hidden="true" aria-label="Submit Search"></i></button>
+                                        </form>
+                                        
+                                                                            </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- LOG IN -->
+                    
+                    <li class="nav-item dropdown d-none d-lg-block"><a href="#" target="_self" class="nav-link nav-login dropdown-toggle" id="nav-log-in" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Anmelden</a>
+                        <div class="dropdown-menu dropdown-login" aria-labelledby="nav-log-in">
+                            <div class="row">
+                                <div class="col">
+                                     <a href="../../sso/Login0104.html?RL=1" target="_self" class="dropdown-item dropdown-portal">Anmelden im Portal</a>  <a href="ibkr-desktop.html" target="_self" class="dropdown-item">IBKR Desktop herunterladen</a> <a href="tws.html#tws-software" target="_self" class="dropdown-item">Trader Workstation herunterladen</a> <a href="tws-mobile.html#trytoday-drop" target="_self" class="dropdown-item">IBKR Mobile herunterladen</a> <a href="ibgateway-latest.html" target="_self" class="dropdown-item">IB Gateway herunterladen</a> <a href="trading-platforms.html" target="_self" class="dropdown-item">Alle IBKR-Plattformen vergleichen</a> <a href="https://forecasttrader.interactivebrokers.ie/eventtrader/#/markets" target="_self" class="dropdown-item">IBKR ForecastTrader</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- OPEN ACCOUNT -->
+                    <li class="nav-item dropdown d-none d-lg-block"><a href="#" target="_self" class="nav-link nav-open-account dropdown-toggle" id="nav-open-account" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Konto er&#246;ffnen</a>
+                        <div class="dropdown-menu dropdown-open-account" aria-labelledby="nav-open-account">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="https://www.interactivebrokers.co.uk/Universal/Application" target="_self" class="dropdown-item dropdown-portal">Antrag starten</a> <a href="https://www.interactivebrokers.co.uk/sso/Login?c=t" target="_self" class="dropdown-item">Antrag abschlie&#223;en</a> <a href="../general/what-you-need-inv.html" target="_self" class="dropdown-item">Ben&#246;tigte Informationen</a> <a href="../accounts/account-guide.html" target="_self" class="dropdown-item">Leitfaden zur Kontoauswahl</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul><!-- IBKR MENU END -->
+                
+            </div>
+        </div><!-- NAV BOTTOM END -->
+    </nav>
+</div><!-- HEADER END ---------------------------------------------------------------------------------------------------- --><!-- MOBILE NAV START (XS/SM/MD ONLY) ---------------------------------------------------------------------------------------------------- -->
+
+<div class="menu-mobile d-lg-none"><!-- CLOSE BUTTON -->
+    
+    <div class="close-button"><button type="button" class="btn-close" aria-label="Close Menu"><i class="fas fa-times"></i></button></div><!-- LOGO -->
+    <div class="logo-container"><a href="../home.html" target="_self" class="brand-logo" aria-label="Interactive Brokers Home"><span>Interactive Brokers Startseite</span></a></div><!-- SEARCH -->
+    
+    <div class="search-container">
+        <div class="search-box">
+            <form action="https://www.interactivebrokers.ie/de/search/index.php" method="get" class="search_form" id="search_form_id">
+                <input type="text" class="form-control" placeholder="Search" name="query" maxlength="64" autocomplete="off" id="searchFieldMobile" aria-label="Search Interactive Brokers"> 	
+                <button type="submit" class="btn-search-submit" value="" id="searchsubmitMobile" aria-label="Submit Search"><i class="fas fa-search" aria-hidden="true"></i></button> 	
+            </form>
+        </div>
+    </div>
+    <ul>
+            
+        <!-- PORTAL LOGIN -->
+        <li><a href="../../sso/Login0104.html?RL=1" target="_self" class="menu-log-in">Anmelden im Portal</a></li>
+        
+    <!-- OPEN ACCOUNT -->
+    <li class="has-submenu"><a href="#" target="_self" class="menu-open-account" data-submenu="submenu-open-account">Konto er&#246;ffnen</a>
+        <div class="submenu" id="submenu-open-account">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-open-account">Zur&#252;ck</button></p>
+            <p class="submenu-title">KONTO ER&#214;FFNEN</p>
+            <ul>
+            <li><a href="https://www.interactivebrokers.co.uk/Universal/Application" target="_self" class="menu-start-application">Antrag starten</a></li>
+            <li><a href="https://www.interactivebrokers.co.uk/sso/Login?c=t" target="_self">Antrag abschlie&#223;en</a></li>
+            <li><a href="../general/what-you-need-inv.html" target="_self">Ben&#246;tigte Informationen</a></li>
+            <li><a href="../accounts/account-guide.html" target="_self">Leitfaden zur Kontoauswahl</a></li>
+            </ul>
+        </div>
+    </li>
+        
+    <!-- FREE TRIAL -->
+    <li><a href="free-trial.html" target="_self">Kostenlose Testversion</a></li><!-- WHY IBKR -->
+    <li><a href="../whyib/overview.html" target="_self">Warum IBKR?</a></li><!-- ACCOUNT TYPES -->
+    
+    <li class="has-submenu"><a href="#" target="_self" data-submenu="submenu-account-types">Kontotypen</a>
+        <div class="submenu" id="submenu-account-types">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-account-types">Zur&#252;ck</button></p>
+            <p class="submenu-title">PRIVATKUNDEN</p>
+            <ul>
+            <li><a href="../accounts/individual-ie.html" target="_self" >Einzel- oder Gemeinschaftskonten</a></li>
+            <li><a href="../accounts/trust-ie.html" target="_self" >Trust-Konten</a></li>
+            <li><a href="../accounts/family-account-ie.html" target="_self" >Family-Konten</a></li>
+            <li><a href="../accounts/long-term-investment-accounts-ie.html" target="_self">Tart&#243;s Befektet&#233;si Sz&#225;mia (TBSZ) </a></li>
+            <li><a href="../accounts/plan-depargne-en-action-accounts-ie.html" target="_self">Plan d&#8217;&#233;pargne en actions (PEA)</a></li>
+                        
+            </ul>
+            <p class="submenu-title">GESCH&#196;FTSKUNDEN</p>
+            <ul>
+            <li><a href="../../errorMessages/404.html" target="_self" >Startseite Gesch&#228;ftskunden</a></li>
+            <li><a href="../accounts/advisor-ie.html" target="_self" >Registrierte Anlageberater</a></li>
+            <li><a href="../accounts/proprietary-trading-group-ie.html" target="_self" >Prop-Trader</a></li>
+            <li><a href="../accounts/hedge-fund-ie.html" target="_self" >Hedgefonds</a></li>
+            <li><a href="../accounts/broker-ie.html" target="_self" >Einf&#252;hrende Broker</a></li>
+            <li><a href="../accounts/family-office-ie.html" target="_self" >Family Offices</a></li>
+            <li><a href="../accounts/compliance-officer-ie.html" target="_self" >Compliance-Beauftragte</a></li>
+            <li><a href="../accounts/small-business-ie.html" target="_self" >Kleinunternehmen</a></li>
+            <li><a href="../accounts/fsa-insurance-providers.html" target="_self" >Full-Service-Verwalter <br>Versicherungsanbieter</a></li>
+            <li><a href="../accounts/money-manager-ie.html" target="_self" >Money Manager</a></li>
+            <li><a href="../accounts/administrator-ie.html" target="_self" >Fondsverwalter</a></li>
+             
+             
+            <li><a href="https://interactivebrokers.eu/campus/stl/" target="_blank" >Bildungseinrichtungen</a></li>
+                        
+            </ul>
+        </div>
+    </li><!-- PRICING -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-pricing">Preisgestaltung</a>
+        <div class="submenu" id="submenu-pricing">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-pricing">Zur&#252;ck</button></p>
+            <p class="submenu-title">PREISGESTALTUNG</p>
+            <ul>
+            <li><a href="../pricing/commissions-home.html" target="_self">Provisionen</a></li>
+            <li><a href="margin-rates.html" target="_self">Margins&#228;tze</a></li>
+            <li><a href="../accounts/fees/pricing-interest-rates.html" target="_self">Zinss&#228;tze</a></li>
+            <li><a href="../pricing/short-sale-cost.html" target="_self">Leerverkaufskosten</a></li>
+            <li><a href="../pricing/research-news-services.html" target="_self">Recherchen und Nachrichten</a></li>
+            <li><a href="../pricing/market-data-pricing.html" target="_self">Marktdaten-Preise</a></li>
+            <li><a href="../pricing/stock-yield-enhancement-program-ie.html" target="_self">Programm zur Optimierung der Aktienrendite</a></li>
+            <li><a href="../pricing/other-fees-overview.html" target="_self">Geb&#252;hren</a></li>
+            </ul>
+        </div>
+    </li><!-- TRADING -->
+    
+    <li class="has-submenu"><a href="#" data-submenu="submenu-trading">Handel</a>
+        <div class="submenu" id="submenu-trading">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-trading">Zur&#252;ck</button></p>
+            <p class="submenu-title">HANDEL</p>
+            <ul>
+            <li><a href="trading-platforms.html" target="_self">Plattformen</a></li>
+            <li><a href="ib-api.html" target="_self">APIs</a></li>
+            <li><a href="margin.html" target="_self">Margin</a></li>
+            <li><a href="products-exchanges.html" target="_self">Symbol- und B&#246;rsensuche</a></li>
+            <li><a href="products-stocks.html" target="_self">Produkt&#252;bersicht</a></li>
+            <li><a href="ordertypes.html" target="_self">Ordertypen</a></li>
+            <li><a href="../whyib/reporting.html" target="_self">Berichte</a></li>
+            <li><a href="securities-financing.html" target="_self">Wertpapierleihe</a></li>
+            <li><a href="features-in-focus.html" target="_self">Funktionen im Fokus</a></li>
+            <li><a href="../general/education/probability_lab.html" target="_self">Probability Lab</a></li>
+            <li><a href="sustainable-investing-ie.html" target="_self">Nachhaltiges Investieren</a></li>
+            </ul>
+        </div>
+    </li><!-- SERVICES -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-services">Serviceleistungen</a>
+        <div class="submenu" id="submenu-services">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-services">Zur&#252;ck</button></p>
+            <p class="submenu-title">SERVICELEISTUNGEN</p>
+            <ul>
+            <li><a href="globalanalyst.html" target="_self">IBKR GlobalAnalyst</a></li>
+            <li><a href="si-quotes.html" target="_self">EUIBSI Bid/Ask</a></li>
+            <li><a href="../portfolioanalyst/overview.html" target="_self" rel="noreferrer noopener">PortfolioAnalyst</a></li>
+            <li><a href="products-bonds.html" target="_self">Anleihen-Marktplatz</a></li>
+            <li><a href="products-mutual-funds.html" target="_self">Investmentfonds-Marktplatz</a></li>
+            <li><a href="commission-free-etfs-mkt.html" target="_self">ETFs ohne Transaktionsgeb&#252;hr</a></li>
+            <li><a href="https://gdcdyn.interactivebrokers.com/aces/Marketplace/InvestorsMarketplace" target="_blank">Anleger-Marktplatz</a></li>
+            <li><a href="short-securities-availability.html" target="_self">Verf&#252;gbarkeit von Wertpapieren f&#252;r Leerverk&#228;ufe</a></li>
+            <li><a href="third-party-integration.html" target="_self">Drittanbieter-Integration</a></li>
+            </ul>
+        </div>
+    </li><!-- EDUCATION -->
+    
+    <li class="has-submenu"><a href="#" data-submenu="submenu-education">Lerncenter</a>
+        <div class="submenu" id="submenu-education">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-education">Zur&#252;ck</button></p>
+            <p class="submenu-title">LERNCENTER</p>
+            <ul>
+             
+             
+            <li><a href="https://interactivebrokers.eu/campus/" target="_blank">IBKR-Campus</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/academy" target="_blank">Trader-Akademie</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/news" target="_blank">Traders&#8217; Insight</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/podcasts" target="_blank">IBKR-Podcasts</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/quant" target="_blank">IBKR-Quant-Blog</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/webinars" target="_blank">Webinare</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/stl/" target="_blank">Trading Lab f&#252;r Schule und Studium</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/glossary" target="_blank">Trader-Glossar</a></li>
+                        
+            <li><a href="../general/calendar/calendar.html" target="_self">Trader-Kalender</a></li>
+            </ul>
+        </div>
+    </li><!-- ABOUT US -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-about-us">&#220;ber uns</a>
+        <div class="submenu" id="submenu-about-us">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-about-us">Zur&#252;ck</button></p>
+            <p class="submenu-title">&#220;BER UNS</p>
+            <ul>
+            <li><a href="../general/financial-strength.html" target="_self">Finanzst&#228;rke und Sicherheit</a></li>
+            <li><a href="../general/about/info-and-history.html" target="_self">Vorstellung und Firmengeschichte</a></li>
+            <li><a href="../general/about/careers-splash.html" target="_self">Karriere</a></li>
+            <li><a href="../general/awards.html" target="_self">Auszeichnungen</a></li>
+            <li><a href="../about/news-at-ibkr.html" target="_self">IBKR-News</a></li>
+            <li><a href="../general/about/press-and-media.html" target="_self">Presse und Medien</a></li>
+            <li><a href="https://investors.interactivebrokers.com/ir/main.php" target="_blank" rel="noreferrer noopener">Investorendialog</a></li>
+            <li><a href="../general/about/sustainability.html" target="_self">Nachhaltigkeit</a></li>
+            <li><a href="../accounts/legalDocuments/brokerPerformanceReports.html" target="_self">Meldungen an Aufsichtsbeh&#246;rden</a></li>
+            <li><a href="../../errorMessages/404.html" target="_self">Empfehlen Sie uns weiter</a></li>
+            <li><a href="../general/about/affiliate-programs.html" target="_self">Partnerprogramme</a></li>
+            </ul>
+        </div>
+    </li><!-- SUPPORT -->
+    
+    <li class="has-submenu"><a href="#" data-submenu="submenu-support">Support</a>
+        <div class="submenu" id="submenu-support">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-support">Zur&#252;ck</button></p>
+            <p class="submenu-title">SUPPORT</p>
+            <ul>
+            <li><a href="../support/fund-my-account.html" target="_self">Guthaben einzahlen</a></li>
+            <li><a href="../support/individuals.html" target="_self">Privatkunden</a></li>
+            <li><a href="../support/institutions.html" target="_self">Gesch&#228;ftskunden</a></li>
+            <li><a href="../support/institutional-sales-contacts4343.html?p=uk" target="_self">Vertriebskontakte f&#252;r Gesch&#228;ftskunden</a></li>
+            <li><a href="../general/contact/ibot-container.html" target="_self">FAQs</a></li>
+            <li><a href="../support/reports-and-dates.html" target="_self">Steuerinformationen</a></li> 
+            </ul>
+        </div>
+    </li><!-- LANGUAGE -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-language">Sprache</a>
+        <div class="submenu" id="submenu-language">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-language">Zur&#252;ck</button></p>
+            <p class="submenu-title">SPRACHE</p>
+            <ul>
+            <li><a href="../home.html" target="_self">Englisch</a></li>
+            <li><a href="../../fr/home.html" target="_self">Fran&#231;ais</a></li>
+            <li><a href="../home.html" target="_self">Deutsch</a></li>
+            <li><a href="../../es/home.html" target="_self">Espa&#241;ol</a></li>
+            <li><a href="../../it/home.html" target="_self">Italiano</a></li>
+            <li><a href="../../hu/home.html" target="_self">Magyar</a></li>
+            <li><a href="../../pt/home.html" target="_self">Portugu&#234;s</a></li>
+            </ul>
+        </div>
+    </li><!-- REGION SELECTOR -->
+    
+        
+    </ul>
+</div><!-- MOBILE NAV OVERLAY -->
+<div class="website-overlay d-lg-none"></div><!-- MOBILE NAV END  -->
+
+<script>
+$(window).on('load', function() {
+    // Simple check if URL contains 'conf=am'
+    if (!window.location.href.includes('conf=am')) {
+        $('#region-modal').modal({
+            backdrop: 'static',
+            keyboard: false
+        });
+        $('#region-modal').modal('show');
+        $('body').removeClass('modal-open');
+        $('body').css('overflow', '');
+        $('body').css('padding-right', '');
+    }
+});
+</script>
+<div class="modal modal-cookies fade" id="region-modal" tabindex="-1" role="dialog" aria-labelledby="modalRegionLabel" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+    <div class="modal-content" id="modalRegionContent">
+      <div class="modal-header d-block">
+        <p class="fs-5 modal-title" id="modalCookieLabel">Which IBKR website is best for you?</p>
+        <p class="pt-10 mb-0 pr-30 fs-6">The content on the website you selected is not intended for investors in your location. </p>
+        <p class="mb-40 fs-6">Please choose the website most applicable to you.</p>
+      </div>
+      <div class="modal-footer" id="modalRegionControls">
+        <div class="row">
+          <div class="col-12 col-md-4"></div>
+          <div class="col-12 col-md-8">
+            <p>
+              <button class="btn btn-primary" id="btnRegionRecommendation">Go to US website</button>
+              <button class="btn btn-primary" id="btnRegionCurrent">Stay on IE website</button>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+$(function() {
+   $('button#btnRegionRecommendation').click(function() {
+    window.location.href = 'https://www.interactivebrokers.com/';
+  });
+  $('button#btnRegionCurrent').click(function() {
+    setCookie("IB_REG", 1, 365, '.interactivebrokers.ie');
+    location.reload();
+  });
+});
+</script><div id="contents">
+    <section class="page-title" id="page-title">
+        <div class="container">
+            <div class="row">
+                <div class="col"><h1>Funktionen im Fokus</h1></div>
+            </div>
+        </div>
+    </section>
+    <!-- INTRO -->
+<section id="intro" class="hero-center hero-dark hero-small">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6"><!-- <div class="title-block-under"></div> -->
+                <div>
+                    <h2>Funktionen im Fokus<span class="d-none d-md-inline"><br /></span></h2>
+                    <h5>Die &#220;bersicht &#8222;Funktionen im Fokus&#8220; liefert detaillierte <span class="d-none d-xl-inline"><br /></span>Beschreibungen und Anleitungen zu einigen <span class="d-none d-md-inline d-lg-none"><br /></span>unserer beliebtesten Tools und Services.</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="intro-below">
+	<div class="container no-margin">
+		<div class="row"><!-- <div class="col-12 d-md-none">
+				<img class="lazy" data-src="/images/web/half-hero-team-computer.jpg" alt="hero people">
+			</div> -->
+        </div>
+	</div><!-- MIX IT UP -->
+</section>
+<section id="features-in-focus" class="features-in-focus">
+	<div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="filter-set">
+                    <div class="row">
+                        <div class="col-12">   
+                            <p class="no-margin">Filter:</p><!--<ul class="nav" id="filters">-->
+                            <ul class="nav" id="" role="tablist">
+								<li class="filter_btn mixitup-control-active" data-mixitup-control data-filter="all">Alle anzeigen</li>
+								<li class="filter_btn" data-mixitup-control data-filter=".mx_advisors">Berater</li>
+								<li class="filter_btn" data-mixitup-control data-filter=".mx_trading">Handel</li>
+								<li class="filter_btn" data-mixitup-control data-filter=".mx_futures">Futures</li>
+								<li class="filter_btn" data-mixitup-control data-filter=".mx_options">Optionen</li>
+								<li class="filter_btn" data-mixitup-control data-filter=".mx_portfolio">Portfolio</li>
+								<li class="filter_btn" data-mixitup-control data-filter=".mx_acct_mngt">Kontoverwaltung</li>
+                                 
+								    <li class="filter_btn" data-mixitup-control data-filter=".mx_research">Recherchen</li>
+                                 
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- MIXITUP GRID START -->
+                <div class="mix-container" id="MixItUp21DC29">
+                    <div class="mix all mx_trading">
+                        <a class="grid-tile" href="../software/pdfhighlights/PDF-accumulateDistribute.html" target="_self">
+                            <img class="lazy" data-src="/images/web/fif-accumulate-dist-styled.jpg" alt="&#8222;Akkumulieren/Verteilen&#8220;-Algorithmus" border="0" >
+                            <h4>&#8222;Akkumulieren/Verteilen&#8220;-Algorithmus</h4>
+                            <div class="description">
+                                <p>Die unterschiedlichen Funktionen, Ordertypen, Strategien und Bedingungen des Akkumulieren/Verteilen-Algorithmus sollen das Auffinden des besten Kurses f&#252;r gro&#223;volumige Orders erleichtern, ohne dabei Aufmerksamkeit am Markt zu erregen.</p>
+                            </div>
+                            <div class="learn-more">
+                                Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+                     
+                    <div class="mix all mx_research">
+                       <a class="grid-tile" href="fundamentals-explorer.html" target="_self">
+                            <img class="lazy" data-src="/images/web/fif-fundamentals-explorer.jpg" alt="Fundamentaldaten-Explorer" border="0" >
+                            <h4>Fundamentaldaten-Explorer</h4>
+                            <div class="description">
+                                <p>Der Fundamentaldaten-Explorer stellt den Kundinnen und Kunden von IBKR kostenlos eine umfangreiche Sammlung an Fundamentaldaten aus aller Welt bereit.</p>
+                            </div>
+                            <div class="learn-more">
+                                Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+                     
+                    <div class="mix all mx_trading">
+                        <a class="grid-tile" href="orders/bracket.html" target="_self">
+                            <img class="lazy" data-src="/images/web/fif-bracket-orders.jpg" alt="Bracket-Orders" border="0" >
+                            <h4>Bracket-Orders</h4>
+                            <div class="description">
+                                <p>Bracket-Orders helfen dabei, Verluste zu begrenzen und Gewinne abzusichern. Dazu wird eine Order mit zwei einander gegen&#252;berliegenden Orders flankiert. </p>
+                            </div>
+                            <div class="learn-more">
+                                Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mix all mx_acct_mngt">
+                        <a class="grid-tile" href="fractional-trading.html" target="_self">
+                            <img class="lazy" data-src="/images/web/fif-trade-fractions.webp" alt="Handel mit Bruchteilen" border="0" >
+                            <h4>Handel mit Bruchteilen</h4>
+                            <div class="description">
+                                <p>Mit Bruchteilen k&#246;nnen Sie Ihre Anlagen auf mehr Aktien verteilen und so Ihr Portfolio breiter streuen. Auf diese Weise k&#246;nnen Sie selbst kleine Barbetr&#228;ge f&#252;r sich arbeiten lassen, um Ihre m&#246;gliche Rendite schnell und einfach zu maximieren!</p>
+                            </div>
+                            <div class="learn-more">
+                                Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mix all mx_portfolio mx_advisors">
+                        <a class="grid-tile" href="../../en/trading/fif-strategy-builder.html" target="_self">
+                            <img class="lazy" data-src="/images/web/fif-strategy-builder.jpg" alt="Strategy Builder" border="0" >
+                            <h4>Strategy Builder</h4>
+                            <div class="description">
+                                <p>Der Strategy Builder erm&#246;glicht es Ihnen, Optionsstrategien mit komplexen Spreads und mehreren Komponenten zu erstellen. Kombiniert mit den Optionsketten k&#246;nnen Sie mit nur einem Klick eine ganze Reihe g&#228;ngiger Strategien erstellen.  </p>
+                            </div>
+                            <div class="learn-more">
+                                Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mix all mx_portfolio">
+                        <a class="grid-tile" href="impact-dashboard.html" target="_self">
+                            <img class="lazy" data-src="/images/web/fif-impact-dashboard.jpg" alt="Impact-Dashboard" border="0" >
+                            <h4>Impact-Dashboard</h4>
+                            <div class="description">
+                                <p>Legen Sie zun&#228;chst fest, welche Werte Ihnen wichtig sind und welche Praktiken Sie vermeiden m&#246;chten. Anschlie&#223;end k&#246;nnen Sie mit dem Impact-Dashboard sicherstellen, dass Ihre Anlagen mit Ihren Werten im Einklang sind. </p>
+                            </div>
+                            <div class="learn-more">
+                                Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mix all mx_options">
+                        <a class="grid-tile" href="../../en/trading/write-options-tool.html" target="_self">
+                            <img class="lazy" data-src="/images/web/fif-write-options-tool.jpg" alt="Stillhalter-Tool" border="0" >
+                            <h4>Stillhalter-Tool</h4>
+                            <div class="description">
+                                <p>Das Stillhalter-Tool liefert Ihnen einen schnellen &#220;berblick &#252;ber all Ihre Positionen (Long &amp; Short) und erm&#246;glicht es Ihnen, gedeckte Optionen zu schreiben bzw. Protective Puts zu kaufen.  </p>
+                            </div>
+                            <div class="learn-more">
+                                Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mix all mx_options">
+                        <a class="grid-tile" href="../../en/trading/rollover-options-tool.html" target="_self">
+                            <img class="lazy" data-src="/images/web/fif-rollover-options-tool.jpg" alt="Optionsverl&#228;ngerungs-Tool" border="0" >
+                            <h4>Optionsverl&#228;ngerungs-Tool</h4>
+                            <div class="description">
+                                <p>Mit unserem Tool zur Optionsverl&#228;ngerung sehen Sie auf einen Blick, welche Optionen in Ihrem Portfolio kurz vor dem Verfall stehen. Die &#220;bersicht schlie&#223;t auch Ihre Unterkonten ein. </p>
+                            </div>
+                            <div class="learn-more">
+                                Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mix all mx_trading">
+                        <a class="grid-tile" href="../../en/trading/exit-strategy.html" target="_self">
+                            <img class="lazy" data-src="/images/web/fif-exit-strategy.jpg" alt="Exit-Strategie" border="0" >
+                            <h4>Exit-Strategie</h4>
+                            <div class="description">
+                                <p>Im Exit-Strategiefenster werden Ihre potenziellen Gewinne und Verlust grafisch dargestellt &#8211; Gr&#252;n f&#252;r Gewinne, Rot f&#252;r Verluste. Zudem bietet es einen Einblick in die Wahrscheinlichkeit, mit der jede Order ausgef&#252;hrt wird. </p>
+                            </div>
+                            <div class="learn-more">
+                                Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mix all mx_options">
+                        <a class="grid-tile" href="mobile-options.html" target="_self">
+                            <img class="lazy" data-src="/images/web/fif-tile-mobile-options.jpg" alt="Mobiler Optionshandel" border="0" >
+                            <h4>Mobiler Optionshandel</h4>
+                            <div class="description">
+                                <p>Mit unseren innovativen, intuitiven Tools gestaltet sich der Optionshandel reibungslos &#8211; ganz gleich, wo Sie gerade sind. </p>
+                            </div>
+                            <div class="learn-more">
+                                Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+                     
+                    <div class="mix all mx_acct_mngt">
+                         
+                            </a><a class="grid-tile" href="../pricing/stock-yield-enhancement-program-ie.html" target="_self">
+                                                    <img class="lazy" data-src="/images/web/fif-syep-thumbnail.jpg" alt="Programm zur Optimierung der Aktienrendite" border="0" width="1000" height="560" >
+                            <h4>Programm zur Optimierung der Aktienrendite</h4>
+                            <div class="description">
+                                <p>Generieren Sie zus&#228;tzliches Einkommen durch vollst&#228;ndig eingezahlte Aktien in Ihrem Depot. </p>
+                            </div>
+                            <div class="learn-more">
+                                Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+                     
+                    <div class="mix all mx_trading">
+                        <a class="grid-tile" href="../../errorMessages/404.html" target="_self">
+                            <img class="lazy" data-src="/images/web/fif-tws-layout-library.jpg?v=20230723" alt="TWS-Layout-Bibliothek" border="0" >
+                            <h4>TWS-Layout-Bibliothek</h4>
+                            <div class="description">
+                                <p>Sie k&#246;nnen Ihrer TWS so viele Layouts hinzuf&#252;gen, wie Sie m&#246;chten. Die Layouts werden am unteren Rand der TWS als Registerkarten angezeigt und k&#246;nnen individuell angepasst werden. </p>
+                            </div>
+                            <div class="learn-more">
+                                Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mix all mx_portfolio">
+                        <a class="grid-tile" href="../../en/trading/lp-custom-indexing.html" target="_self">
+                            <img loading="lazy" src="../../images/web/fif-custom-indexing.jpg" alt="Benutzerdefinierten Indexierung" border="0" >
+                            <h4>Benutzerdefinierten Indexierung</h4>
+                            <div class="description">
+                                <p>Erstellen und personalisieren Sie direkte Index-Modelle auf Grundlage von ETFs, die wichtige Indizes nachbilden.</p>
+                            </div>
+                            <div class="learn-more">
+                                Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mix all mx_research">
+                        <a class="grid-tile" href="products-bonds.html" target="_self">
+                            <img class="lazy" data-src="/images/web/fif-tile-bond-search.jpg" alt="Anleihen-Suche" border="0" >
+                            <h4>Anleihen-Suche</h4>
+                            <div class="description">
+                                <p>Mit unserem Anleihen-Suchtool k&#246;nnen Sie unser umfangreiches Angebot von mehr als 1 Million Anleihen weltweit durchsuchen und die verf&#252;gbaren Renditen vergleichen. </p>
+                            </div>
+                            <div class="learn-more">
+                                Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mix all mx_research">
+                        <a class="grid-tile" href="products-mutual-funds.html" target="_self">
+                            <img class="lazy" data-src="/images/web/fif-mutual-fund-search-tool.jpg" alt="Investmentfonds-Suche" border="0" >
+                            <h4>Investmentfonds-Suche</h4>
+                            <div class="description">
+                                <p>IBKR bietet einen der gr&#246;&#223;ten Marktpl&#228;tze f&#252;r Investmentfonds an &#8211; mit Fonds von Anbietern wie der Allianz, American Funds, BlackRock, Fidelity, Franklin Templeton, Invesco, MFS, PIMCO und vielen mehr. </p>
+                            </div>
+                            <div class="learn-more">
+                                Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>                    <div class="mix all mx_acct_mngt">
+                        <a class="grid-tile" href="risk-navigator.html" target="_self">
+                            <img class="lazy" data-src="/images/web/fif-risk-navigator.jpg" alt="IB Risk Navigator" border="0" >
+                            <h4>IB Risk Navigator<sup>SM</sup></h4>
+                            <div class="description">
+                                <p>Der Risk Navigator ist eine Plattform f&#252;r das Echtzeit-Management von Marktrisiken, die Ihnen eine umfassende Einsch&#228;tzung der Risikoexposition zahlreicher Anlageklassen aus aller Welt bereitstellt. </p>
+                            </div>
+                            <div class="learn-more">
+                                Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mix all mx_portfolio">
+                        <a class="grid-tile" href="rebalance-portfolio.html" target="_self">
+                            <img class="lazy" data-src="/images/web/fif-rebalance-portfolio.jpg?v=20230723" alt="Portfolio-Umschichtung" border="0" >
+                            <h4>Portfolio-Umschichtung</h4>
+                            <div class="description">
+                                <p>Nutzen Sie das Tool zur Portfolio-Umschichtung, um die aktuellen Positionen in Ihrem Portfolio neu zu gewichten.  </p>
+                            </div>
+                            <div class="learn-more">
+                                Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mix all mx_advisors">
+                        <a class="grid-tile" href="model-portfolios.html" target="_self">
+                            <img class="lazy" data-src="/images/web/fif-model-portfolios.jpg" alt="Modellportfolios" border="0" >
+                            <h4>Modellportfolios</h4>
+                            <div class="description">
+                                <p>Mit einem Beraterkonto k&#246;nnen Sie die Modellportfolios nutzen, um das Verm&#246;gen Ihrer Kundinnen und Kunden in ein oder mehrere Portfolios zu investieren. Diese Portfolios lassen sich individuell zusammenstellen. Damit ersparen Sie sich die M&#252;he, verschiedene Investitionen in einzelnen Instrumenten zu t&#228;tigen. </p>
+                            </div>
+                            <div class="learn-more">
+                                Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mix all mx_acct_mngt">
+                        <a class="grid-tile" href="client-portal.html" target="_self">
+                            <img class="lazy" data-src="/images/web/fif-client-portal.jpg" alt="Client Portal" border="0" >
+                            <h4>Client Portal</h4>
+                            <div class="description">
+                                <p>Im Client Portal finden Sie s&#228;mtliche Tools und Funktionen, um Ihr Konto im Auge zu behalten und zu verwalten. Hier finden Sie Ihre wichtigsten Kontoinformationen und k&#246;nnen sich einen &#220;berblick &#252;ber Ihre Portfolio-Performance, Benachrichtigungen und wichtige Neuigkeiten verschaffen. </p>
+                            </div>
+                            <div class="learn-more">
+                                Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mix all mx_acct_mngt">
+                        <a class="grid-tile" href="short-securities-availability.html" target="_self">
+                            <img class="lazy" data-src="/images/web/fif-short-securities-availability.jpg" alt="Verf&#252;gbarkeit von Wertpapieren f&#252;r Leerverk&#228;ufe" border="0" >
+                            <h4>Verf&#252;gbarkeit von Wertpapieren f&#252;r Leerverk&#228;ufe</h4>
+                            <div class="description">
+                                <p>Mit dem elektronischen Such-Tool f&#252;r Leerverk&#228;ufe k&#246;nnen Kundinnen und Kunden direkt vom Client Portal aus nach Wertpapieren suchen, die f&#252;r Leerverk&#228;ufe zur Verf&#252;gung stehen.  </p>
+                            </div>
+                            <div class="learn-more">
+                                Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mix all mx_advisors">
+                        <a class="grid-tile" href="allocation-order-tool.html" target="_self">
+                            <img class="lazy" data-src="/images/web/fif-allocation-order-tool.jpg" alt="Allokations-Ordertool" border="0" >
+                            <h4>Allokations-Ordertool</h4>
+                            <div class="description">
+                                <p>Interactive Brokers bietet ein einzigartiges Tool zum Aufteilen von Trades an. Mit einem Beraterkonto ist es so m&#246;glich, Trades f&#252;r mehrere Kundenkonten zum selben Kurs auszuf&#252;hren. </p>
+                            </div>
+                            <div class="learn-more">
+                                Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mix all mx_research">
+                        <a class="grid-tile" href="esg-enviro-social-gov.html" target="_self">
+                            <img class="lazy" data-src="/images/web/fif-tile-esg.jpg" alt="Umwelt, Soziales und Unternehmensf&#252;hrung (Environmental, Social and Governance, ESG)" border="0" >
+                            <h4>Umwelt, Soziales und Unternehmensf&#252;hrung (Environmental, Social and Governance, ESG)</h4>
+                            <div class="description">
+                                <p>Die ESG-Scores von Refinitiv geben Ihnen die M&#246;glichkeit, Anlageentscheidungen nicht nur basierend auf finanziellen Faktoren zu treffen. </p>
+                            </div>
+                            <div class="learn-more">
+                                Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mix all mx_options">
+                        <a class="grid-tile" href="../../en/trading/fif-volatility-lab.html" target="_self">
+                            <img class="lazy" data-src="/images/web/fif-volatility-lab.jpg" alt="Volatility Lab" border="0" >
+                            <h4>Volatility Lab</h4>
+                            <div class="description">
+                                <p>Unser umfassendes Angebot an Volatilit&#228;tstools f&#252;r Optionen bietet Ihnen einen &#220;berblick &#252;ber vergangene und zuk&#252;nftige Volatilit&#228;tswerte zu einer Aktie und zu vergleichbaren Aktien der Branche sowie eine allgemeine Einsch&#228;tzung des Markts. </p>
+                            </div>
+                            <div class="learn-more">
+                                Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mix all mx_trading">
+                        <a class="grid-tile" href="../../errorMessages/404.html" target="_self">
+                            <img class="lazy" data-src="/images/web/fif-fx-trader.jpg" alt="FXTrader" border="0" >
+                            <h4>FXTrader</h4>
+                            <div class="description">
+                                <p>Der FXTrader ist eine optimierte Trading-Schnittstelle, die von IBKR entwickelte Tools f&#252;r den Handel an den Devisenm&#228;rkten enth&#228;lt. </p>
+                            </div>
+                            <div class="learn-more">
+                                Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mix all mx_portfolio">
+                        <a class="grid-tile" href="stock-etf-benchmarker.html" target="_self">
+                            <img class="lazy" data-src="/images/web/fif-stock-etf-benchmarker.jpg" alt="Aktien-/ETF-Benchmarker" border="0" >
+                            <h4>Aktien-/ETF-Benchmarker</h4>
+                            <div class="description">
+                                <p>Unser Aktien-/ETF-Benchmarker zeigt Verteilungswerte zur Portfolio-Performance an, die im Tagesverlauf in Echtzeit aktualisiert werden. </p>
+                            </div>
+                            <div class="learn-more">
+                                Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mix all mx_portfolio">
+                        <a class="grid-tile" href="../../errorMessages/404.html" target="_self">
+                            <img class="lazy" data-src="/images/web/fif-mf-etf-replicator.jpg" alt="Investmentfonds-/ETF-Replikator" border="0" >
+                            <h4>Investmentfonds-/ETF-Replikator</h4>
+                            <div class="description">
+                                <p>Der Investmentfonds-/ETF-Replikator durchsucht den Markt nach ETFs, deren Performance am st&#228;rksten dem von Ihnen eingegebenen Fonds oder ETF &#228;hnelt. Der Replikator empfiehlt dann, wie viele Aktien gekauft werden sollten, damit diese Performance erreicht wird. </p>
+                            </div>
+                            <div class="learn-more">
+                                Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mix all mx_research">
+                        <a class="grid-tile" href="../../en/trading/sma-technology.html" target="_self">
+                            <img class="lazy" data-src="/images/web/fif-social-sentiment.jpg" alt="Social-Sentiment-Daten von Social Market Analytics (SMA)" border="0" >
+                            <h4>Social-Sentiment-Daten von Social Market Analytics (SMA)</h4>
+                            <div class="description">
+                                <p>Die patentierte Technologie von Social Market Analytics (SMA) zur Sentiment-Analyse hilft Ihnen dabei, positive oder negative &#196;nderungen im Hinblick auf die Stimmung der Anleger/-innen zu erkennen. </p>
+                            </div>
+                            <div class="learn-more">
+                                Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div><!-- per Nicolas The Split the Spread link below redirects to IBUK version 40243 because the content has CFD text -->
+                    <div class="mix all mx_trading">
+                        <a class="grid-tile" href="relative-price-tools.html" target="_self">
+                            <img class="lazy" data-src="/images/web/fif-split-the-spread.jpg" alt="Split-Spread-Order" border="0" >
+                            <h4>Split-Spread-Order</h4>
+                            <div class="description">
+                                <p>Split-Spreads sind alle Orders, deren Kurs innerhalb der Geld-Brief-Spanne liegt. Wenn diese Orders ausgef&#252;hrt werden, erzielen sie erhebliche Kursverbesserungen. </p>
+                            </div>
+                            <div class="learn-more">
+                                Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mix all mx_options">
+                        <a class="grid-tile" href="../software/pdfhighlights/PDF-ComboTrader.html" target="_self">
+                            <img class="lazy" data-src="/images/web/fif-combotrader.jpg" alt="ComboTrader" border="0" >
+                            <h4>ComboTrader</h4>
+                            <div class="description">
+                                <p>Mit dem Auswahltool f&#252;r Kombinationen k&#246;nnen Sie in der Trader Workstation schnell und einfach Kombinationsorders erstellen. </p>
+                            </div>
+                            <div class="learn-more">
+                                Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mix all mx_futures">
+                        <a class="grid-tile" href="../software/pdfhighlights/PDF-SpreadTraderFutures.html" target="_self">
+                            <img class="lazy" data-src="/images/web/fif-fut-spreadtrader.jpg" alt="SpreadTrader" border="0" >
+                            <h4>SpreadTrader</h4>
+                            <div class="description">
+                                <p>Mit dem SpreadTrader der Trader Workstation k&#246;nnen Sie in einem einzigen Fenster schnell und einfach Futures-Spreads verwalten. </p>
+                            </div>
+                            <div class="learn-more">
+                                Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mix all mx_futures">
+                        <a class="grid-tile" href="https://www.ibkrguides.com/tws/usersguidebook/priceriskanalytics/index arbitrage meter.htm" target="_blank" rel="noreferrer">
+                            <img class="lazy" data-src="/images/web/fif-index-arbitrage-meter.jpg" alt="Index-Arbitrage-Rechner" border="0" >
+                            <h4>Index-Arbitrage-Rechner</h4>
+                            <div class="description">
+                                <p>Der Index-Arbitrage-Rechner zeigt Ihnen die H&#246;he der Pr&#228;mie (oder des Abschlags) im Frontmonats-Futures-Kurs gegen&#252;ber seinem Fair Value in Bezug auf den Indexkurs an. </p>
+                            </div>
+                            <div class="learn-more">
+                                Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mix all mx_options">
+                        <a class="grid-tile" href="../software/pdfhighlights/PDF-OptionTrader.html" target="_self">
+                            <img class="lazy" data-src="/images/web/fif-options-trader.jpg" alt="OptionTrader" border="0" >
+                            <h4>OptionTrader</h4>
+                            <div class="description">
+                                <p>Der OptionTrader ist ein robustes Trading-Tool, mit dem Sie Optionen zu einem Basiswert einsehen und handeln k&#246;nnen. </p>
+                            </div>
+                            <div class="learn-more">
+                                Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+ 
+                    <div class="mix all mx_options mx_trading">
+                        <a class="grid-tile" href="../../en/trading/lp-options-liquidity-tool.html" target="_self">
+                            <img loading="lazy" src="../../images/web/fif-option-liquidity-tool.jpg" alt="Liquidit&#228;tstool f&#252;r Optionen" border="0" >
+                            <h4>Liquidit&#228;tstool f&#252;r Optionen</h4>
+                            <div class="description">
+                                <p>Erstellen Sie liquidit&#228;tssteigernde Strategien, indem Sie Orders direkt an IBUSOPT leiten, wo diese mit unserem Privatkunden-Orderflow interagieren.</p>
+                            </div>
+                            <div class="learn-more">
+                                Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mix all mx_options">
+                        <a class="grid-tile" href="../software/pdfhighlights/PDF-OptionsPortfolio.html" target="_self">
+                            <img class="lazy" data-src="/images/web/fif-options-portfolio.jpg" alt="Optionsportfolio" border="0" >
+                            <h4>Optionsportfolio</h4>
+                            <div class="description">
+                                <p>Mit diesem Tool k&#246;nnen Sie das Risikoprofil Ihres Portfolios anpassen. Beschreiben Sie Ihr Ziel und geben Sie etwaige Bedingungen an, um die kosteng&#252;nstigste Methode zum Erreichen Ihrer gew&#252;nschten Delta-, Gamma-, Vega- oder Theta-Werte zu finden. </p>
+                            </div>
+                            <div class="learn-more">
+                                Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mix all mx_options">
+                        <a class="grid-tile" href="option-analytics.html" target="_self">
+                            <img class="lazy" data-src="/images/web/fif-options-analytics.jpg" alt="Optionsanalyse" border="0" >
+                            <h4>Optionsanalyse</h4>
+                            <div class="description">
+                                <p>Im Optionsanalyse-Fenster k&#246;nnen Optionsh&#228;ndler grafisch darstellen, wie sich der Kurs einer Option ver&#228;ndert, wenn sich die Griechenwerte je um eine Einheit &#228;ndern. </p>
+                            </div>
+                            <div class="learn-more">
+                                Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mix all mx_options">
+                        <a class="grid-tile" href="../../en/software/pdfhighlights/PDF-Options-Strategy-Lab.html" target="_self">
+                            <img class="lazy" data-src="/images/web/fif-options-strat-lab.jpg" alt="Strategy Lab f&#252;r Optionen" border="0" >
+                            <h4>Strategy Lab f&#252;r Optionen</h4>
+                            <div class="description">
+                                <p>Erstellen und &#252;bermitteln Sie mit dem Strategy Lab f&#252;r Optionen einfache und komplexe Optionsorders mit mehreren Komponenten auf Basis Ihrer Kurs- und Volatilit&#228;tsprognose. </p>
+                            </div>
+                            <div class="learn-more">
+                                Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+                                        <div class="mix all mx_futures">
+                        <a class="grid-tile" href="../../en/trading/cme-micro-bitcoin.html" target="_self">
+                            <img class="lazy" data-src="/images/web/fif-cme-bitcoin.jpg" alt="CME-Micro-Bitcoin" border="0" >
+                            <h4>CME-Micro-Bitcoin</h4>
+                            <div class="description">
+                                <p>Mit 1/10 der Gr&#246;&#223;e eines Bitcoin stellen Micro-Bitcoin-Futures (MBT) eine effiziente und kosteng&#252;nstige Methode dar, kosteneffizient und pr&#228;zise Bitcoin-Chancen zu nutzen und Ihre Handelsstrategien zu verbessern. </p>
+                            </div>
+                            <div class="learn-more">
+                                Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+                                        <div class="mix all mx_trading">
+                        <a class="grid-tile" href="https://ibkrcampus.com/trading-course/excel-and-the-tws-api/" target="_blank" rel="noreferrer">
+                            <img class="lazy" data-src="/images/web/fif-excel-tws.jpg" alt="Excel- und TWS-API" border="0" >
+                            <h4>Excel- und TWS-API</h4>
+                            <div class="description">
+                                <p>In diesem Kurs werden die Grundlagen zu APIs erl&#228;utert und erkl&#228;rt, wie Sie Excel zusammen mit der TWS zum Verwalten Ihres Kontos und Automatisieren Ihrer Handelsgesch&#228;fte verwenden k&#246;nnen.  </p>
+                            </div>
+                            <div class="learn-more">
+                                Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mix all mx_options">
+                        <a class="grid-tile" href="https://ibkrcampus.com/trading-course/neutral-market-strategies/" target="_blank" rel="noreferrer">
+                            <img class="lazy" data-src="/images/web/fif-neutral-options.jpg" alt="Neutrale Optionsmarktstrategien" border="0" >
+                            <h4>Neutrale Optionsmarktstrategien</h4>
+                            <div class="description">
+                                <p>Erfahren Sie, was Short-Straddles und Short-Strangles sind und unter welchen Bedingungen sie positive bzw. negative Auswirkungen auf Gewinne und Verluste haben k&#246;nnen. </p>
+                            </div>
+                            <div class="learn-more">
+                                Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mix all mx_research">
+                        <a class="grid-tile" href="globalanalyst.html" target="_blank" rel="noreferrer">
+                            <img class="lazy" data-src="/images/web/fif-globalanalyst.jpg" alt="IBKR GlobalAnalyst" border="0" >
+                            <h4>IBKR GlobalAnalyst</h4>
+                            <div class="description">
+                                <p>Scannen Sie im Handumdrehen die ganze Welt nach unterbewerteten Aktien und vergleichen Sie relative Bewertungen einzeln oder sortiert nach Regionen, L&#228;ndern oder Branchen.</p>
+                            </div>
+                            <div class="learn-more">
+                                Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+                                        <div class="mix all mx_trading">
+                        <a class="grid-tile" href="fif-fx-order-to-trades.html" target="_blank" rel="noreferrer">
+                            <img class="lazy" data-src="/images/web/fif-fx-order.jpg" alt="Forex-Orders zum Anh&#228;ngen an Ihre Trades" border="0" >
+                            <h4>Forex-Orders zum Anh&#228;ngen an Ihre Trades</h4>
+                            <div class="description">
+                                <p>H&#228;ngen Sie in der TWS eine Forex-Order an internationale Aktien-Orders an<sup>1</sup>, um Zinskosten f&#252;r die Finanzierung des Kaufs zu vermeiden.</p>
+                            </div>
+                            <div class="learn-more">
+                                Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+                                        <div class="mix all mx_trading">
+                        <a class="grid-tile" href="tradingview-landing.html" target="_blank" rel="noreferrer">
+                            <img class="lazy" data-src="/images/web/fif-tradingview.jpg" alt="TradingView" border="0" >
+                            <h4>TradingView</h4>
+                            <div class="description">
+                                <p>Nutzen Sie unsere erstklassigen Charts und Tools von TradingView, einem sozialen Netzwerk aus 30 Millionen Tradern und Anlegern, um Chancen auf globalen M&#228;rkten aufzusp&#252;ren.</p>
+                            </div>
+                            <div class="learn-more">
+                                Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mix all mx_trading">
+                        <a class="grid-tile" href="../../errorMessages/404.html" target="_blank" rel="noreferrer">
+                            <img class="lazy" data-src="/images/web/fif-book-price-ladder.jpg" alt="Orderbuch-Kursleiter zum Erstellen, &#196;ndern und &#220;bermitteln von Orders" border="0" >
+                            <h4>Orderbuch-Kursleiter zum Erstellen, &#196;ndern und &#220;bermitteln von Orders</h4>
+                            <div class="description">
+                                <p>Der BookTrader l&#228;sst Sie Orders zu einem bestimmten Finanzinstrument in der Orderbuch-Kursleiter erstellen, &#228;ndern und &#252;bermitteln. Mit einem Klick erstellen Sie eine Order zum Kurs Ihrer Wahl oder zum besten Geld-/Briefkurs.</p>
+                            </div>
+                            <div class="learn-more">
+                                Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mix all mx_trading">
+                        <a class="grid-tile" href="../../en/trading/fif-portfolio-performance-profile.html" target="_blank" rel="noreferrer">
+                            <img class="lazy" data-src="/images/web/fif-portfolio-performance-profile.jpg" alt="Portfolio-Performance-Profil" border="0" >
+                            <h4>Portfolio-Performance-Profil</h4>
+                            <div class="description">
+                                <p>F&#252;gen Sie Ihrem Portfolio hypothetische Positionen hinzu oder entfernen Sie Positionen, um zu sehen, wie sich die &#196;nderungen auf die wichtigsten Portfolio-Kennzahlen auswirken. Wenn Sie mit den Ergebnissen zufrieden sind, k&#246;nnen Sie anschlie&#223;end Live-Orders erstellen und &#252;bermitteln, um die Positionen direkt Ihrer eigentlichen Order hinzuzuf&#252;gen.</p>
+                            </div>
+                            <div class="learn-more">
+                                Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mix all mx_trading">
+                        <a class="grid-tile" href="../../errorMessages/404.html" target="_blank" rel="noreferrer">
+                            <img class="lazy" data-src="/images/web/fif-integrate-stock-window.jpg" alt="Integriertes Aktienfenster" border="0" >
+                            <h4>Integriertes Aktienfenster</h4>
+                            <div class="description">
+                                <p>Das integrierte Aktienfenster ist ein dynamisches, individuell anpassbares Fenster mit allen Marktdaten und Ordermanagement-Tools, die H&#228;ndler/-innen ben&#246;tigen, um die aktuelle Marktlage zu analysieren, Handelsaktivit&#228;ten nachzuverfolgen, Handelsentscheidungen zu treffen und Orders f&#252;r ein bestimmtes Wertpapier zu erstellen.</p>
+                            </div>
+                            <div class="learn-more">
+                                Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mix all mx_trading">
+                        <a class="grid-tile" href="../../en/trading/fif-ibkr-forum.html" target="_blank" rel="noreferrer">
+                            <img class="lazy" data-src="/images/web/fif-ibkr-forum.jpg" alt="IBKR-Forum" border="0" >
+                            <h4>IBKR-Forum</h4>
+                            <div class="description">
+                                <p>&#220;ber das IBKR-Forum haben Sie Zugang zu den Kenntnissen und Erfahrungen anderer IBKR-Kundinnen und -Kunden. Hier k&#246;nnen Sie Beobachtungen, Ideen, Artikel und Fragen posten und mit anderen in Kontakt treten, sodass ein hilfreicher gegenseitiger Online-Austausch entsteht.</p>
+                            </div>
+                            <div class="learn-more">
+                                Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="mix all mx_trading">
+                        <a class="grid-tile" href="us-overnight-trading.html" target="_self">
+                            <img loading="lazy" src="../../images/web/fif-overnight-etfs.jpg" alt="Overnight-Handelssitzung" border="0" >
+                            <h4>Overnight-Handelssitzung</h4>
+                            <div class="description">
+				                <p>Handeln Sie 10.000 US-Aktien und -ETFs rund um die Uhr. Sichern Sie sich Zugang zu US-Aktien und -ETFs, wenn marktbewegende Nachrichten bekannt werden, die asiatischen M&#228;rkte ge&#246;ffnet sind oder wann immer es f&#252;r Sie am g&#252;nstigsten ist.</p>
+                            </div>
+                            <div class="learn-more">
+                            Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mix all mx_trading mx_advisors">
+						<a class="grid-tile" href="../../en/trading/fif-tax-loss-harvesting.html" target="_self">
+                            <picture>
+                                <source media="(min-width:1200px)" srcset="/images/web/fif-tax-loss-harvesting-xl.webp?v=1dd607e99bf0295dbc9d063bb972d93f 1200w, /images/web/fif-tax-loss-harvesting-xl.jpg?v=1dd607e99bf0295dbc9d063bb972d93f 1200w">
+                                <source media="(min-width:992px)" srcset="/images/web/fif-tax-loss-harvesting-lg.webp?v=1dd607e99bf0295dbc9d063bb972d93f 1199w, /images/web/fif-tax-loss-harvesting-lg.jpg?v=1dd607e99bf0295dbc9d063bb972d93f 1199w">
+                                <source media="(min-width:768px)" srcset="/images/web/fif-tax-loss-harvesting-md.webp?v=1dd607e99bf0295dbc9d063bb972d93f 991w, /images/web/fif-tax-loss-harvesting-md.jpg?v=1dd607e99bf0295dbc9d063bb972d93f 991w">
+                                <source media="(min-width:576px)" srcset="/images/web/fif-tax-loss-harvesting-sm.webp?v=1dd607e99bf0295dbc9d063bb972d93f 767w, /images/web/fif-tax-loss-harvesting-sm.jpg?v=1dd607e99bf0295dbc9d063bb972d93f 767w">
+                                <source srcset="/images/web/fif-tax-loss-harvesting.webp?v=1dd607e99bf0295dbc9d063bb972d93f  575w, /images/web/fif-tax-loss-harvesting.jpg?v=1dd607e99bf0295dbc9d063bb972d93f 575w">
+                                <img src="../../images/web/fif-tax-loss-harvestingf55f.jpg?v=1dd607e99bf0295dbc9d063bb972d93f" alt="Berater mit Laptop" border="0" loading="lazy" />
+                            </picture>
+                            <h4>F&#252;r Berater/-innen: Steuerliche Verlustnutzung<sup>2</sup>                            </h4>
+							</a><div class="description">
+								<p>IBKRs Tool f&#252;r die steuerliche Verlustnutzung hilft Ihnen dabei, die Steuerverbindlichkeiten Ihrer Kundinnen und Kunden zu verringern, indem Sie Verluste verschiedener Anlagen nutzen, um ihre Kapitalertragssteuern zu senken.</p>
+							</div>
+							<div class="learn-more">
+								Mehr erfahren <i class="fa-solid fa-circle-chevron-right" aria-hidden="true"></i>
+							</div>
+						</a>
+					</div>
+					<div class="mix all mx_research">
+						<a class="grid-tile" href="../../en/trading/securities-lending-dashboard.html" target="_self">
+							<img loading="lazy" src="../../images/web/fif-orbisa.jpg" alt="Dashboard f&#252;r die Wertpapierleihe" border="0" >
+							<h4>Dashboard f&#252;r die Wertpapierleihe</h4>
+							<div class="description">
+								<p>Die tagesaktuellen Daten zu Leerverk&#228;ufen Tausender Wertpapiere helfen Ihnen dabei, eigene Trading-Ideen zu entwickeln, Leerverkaufs-Trends zu beurteilen und Ihr Portfolio aus einem anderen Blickwinkel zu betrachten. Das Dashboard f&#252;r die Wertpapierleihe wird unterst&#252;tzt von Orbisa, einem f&#252;hrenden Anbieter von Marktdaten f&#252;r die Wertpapierleihe.</p>
+							</div>
+							<div class="learn-more">
+								Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+							</div>
+						</a>
+					</div>
+                <div class="mix all mx_research">
+                    <a class="grid-tile" href="../../en/trading/fif-news-and-research.html" target="_self">
+                        <img loading="lazy" src="../../images/web/fif-news-and-research.jpg" alt="Nachrichten und Recherchen" border="0" >
+                        <h4>Nachrichten &amp; Recherchen</h4>
+                        <div class="description">
+                             
+                            <p>Entdecken Sie umfassende Nachrichten und Recherchen zu den Produkten und Themen, die Sie interessieren &#8211; &#252;ber ein einziges &#252;bersichtliches Fenster. Dank Zugriff auf mehr als 60 branchenf&#252;hrende Quellen, verg&#252;nstigte Recherche-Abos und eine werbefreie Leseumgebung ist es mit unserem Tool f&#252;r Nachrichten und Recherchen ganz einfach, sich &#252;ber die eigenen Investments auf dem Laufenden zu halten.</p>
+                                                    </div>
+                        <div class="learn-more">
+                            Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="mix all mx_research">
+                    <a class="grid-tile" href="../../en/trading/fif-discover-tool.html" target="_self">
+                        <img loading="lazy" src="../../images/web/fif-discover-tool.jpg" alt="Entdecken" border="0" >
+                        <h4>Entdecken</h4>
+                        <div class="description">
+                            <p>Unter &#8222;Entdecken&#8220; erwarten Sie marktbestimmende Drittanbieter-Inhalte, die speziell darauf zugeschnitten sind, Ihre Trading-Erfolge zu verbessern.</p>
+                        </div>
+                        <div class="learn-more">
+                            Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="mix all mx_options">
+                    <a class="grid-tile" href="../../en/trading/fif-options-wizard.html" target="_self">
+                        <img loading="lazy" src="../../images/web/fif-tile-options-wizard-b.jpg" alt="Optionen-Assistent" border="0" >
+                        <h4>Optionen-Assistent</h4>
+                        <div class="description">
+                            <p>Egal, ob Sie gerade erst in die Welt des Optionshandels einsteigen oder einfach nur nach einer simplen Methode suchen, um die besten Strategien f&#252;r sich ausfinding zu machen &#8211; der Optionen-Assistent ist Ihnen behilflich. Beantworten Sie ein paar Fragen zu Ihren Erwartungen und der Optionen-Assistent pr&#228;sentiert Ihnen einige Standardstrategien, die zu Ihren Vorhersagen passen.</p>
+                        </div>
+                        <div class="learn-more">
+                            Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                </div>
+		                                <div class="mix all mx_trading mx_acct_mngt">
+                        <a class="grid-tile" href="recurring-investments.html" target="_self">
+                            <img src="../../images/web/fif-recurring-investments.png" loading="lazy" alt="Wertpapier-Sparpl&#228;ne" border="0" >
+                            <h4>Wertpapier-Sparpl&#228;ne</h4>
+                            <div class="description">
+                                <p>Durch das automatische Investieren von Guthaben nach einem regelm&#228;&#223;igen Zeitplan k&#246;nnen Sie eine vorher festgelegte Anlagestrategie erstellen und ausf&#252;hren.</p>
+                            </div>
+                            <div class="learn-more">
+                                Mehr erfahren <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+                   <div class="mix all mx_trading mx_portfolio">
+                       <a class="grid-tile" href="news-summaries.html" target="_self">
+                            <img loading="lazy" src="../../images/web/news-summaries-fif.jpg" alt="KI-Zusammenfassungen von Nachrichten" border="0" >
+                            <h4>KI-Zusammenfassungen von Nachrichten</h4>
+                            <div class="description">
+                                <p>Unsere KI-Zusammenfassungen von Nachrichten nutzen <span class="fw-600">generative KI</span>, um die zentralen Aussagen von Nachrichtenartikeln ausgew&#228;hlter Anbieter augenblicklich zusammenzufassen. Das spart Zeit ein und erm&#246;glicht es Ihnen, noch schneller auf Markt&#228;nderungen zu reagieren. </p>
+                            </div>
+                            <div class="learn-more">
+                                Mehr erfahren <i class="fa-solid fa-circle-chevron-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+		                                <div class="mix all mx_trading mx_portfolio">
+						<a class="grid-tile" href="fif-tax-loss-harvesting-individuals.html" target="_self">
+                            <picture>
+                                <source media="(min-width:1200px)" srcset="/images/web/fif-tax-loss-harvesting-individuals-xl.webp?v=1239800953 1200w, /images/web/fif-tax-loss-harvesting-individuals-xl.jpg?v=1239800953 1200w">
+                                <source media="(min-width:992px)" srcset="/images/web/fif-tax-loss-harvesting-individuals-lg.webp?v=1239800953 1199w, /images/web/fif-tax-loss-harvesting-individuals-lg.jpg?v=1239800953 1199w">
+                                <source media="(min-width:768px)" srcset="/images/web/fif-tax-loss-harvesting-individuals-md.webp?v=1239800953 991w, /images/web/fif-tax-loss-harvesting-individuals-md.jpg?v=1239800953 991w">
+                                <source media="(min-width:576px)" srcset="/images/web/fif-tax-loss-harvesting-individuals-sm.webp?v=1239800953 767w, /images/web/fif-tax-loss-harvesting-individuals-sm.jpg?v=1239800953 767w">
+                                <source srcset="/images/web/fif-tax-loss-harvesting-individuals.webp?v=1239800953  575w, /images/web/fif-tax-loss-harvesting-individuals.jpg?v=1239800953 575w">
+                                <img src="../../images/web/fif-tax-loss-harvesting-individualsea43.jpg?v=1239800953" alt="Anleger mit Laptop" border="0" loading="lazy" />
+                            </picture>
+                            <h4>Steuerliche Verluste nutzen!<sup>2</sup></h4>
+							<div class="description">
+								<p>IBKRs Tool f&#252;r die steuerliche Verlustnutzung hilft Ihnen dabei, Ihre Steuerverbindlichkeiten zu verringern, indem Sie Verluste verschiedener Anlagen nutzen, um Ihre Kapitalertragssteuern zu senken.  </p>
+							</div>
+							<div class="learn-more">
+								Mehr erfahren <i class="fa-solid fa-circle-chevron-right" aria-hidden="true"></i>
+							</div>
+						</a>
+					</div>
+                    <div class="mix all mx_research">
+						<a class="grid-tile" href="fif-multisort.html" target="_self">
+							<img loading="lazy" src="../../images/web/fif-multisort-screener.jpg" alt="MultiSort-Screener" border="0" >
+							<h4>MultiSort-Screener</h4>
+							<div class="description">
+								<p>Mit dem neuen MultiSort-Screener von IBKR k&#246;nnen Sie ganz leicht die Aktien finden, die am besten zu Ihren Strategien passen. Der Screener durchsucht dazu mehr als 70.000 Aktien weltweit.</p>
+							</div>
+							<div class="learn-more">
+								Mehr erfahren <i class="fa-solid fa-circle-chevron-right" aria-hidden="true"></i>
+							</div>
+						</a>
+					</div>
+		                                <div class="mix all mx_trading">
+                        <a class="grid-tile" href="../../en/trading/scaletrader-forecast-contracts.html" target="_self">
+                            <img loading="lazy" src="../../images/web/fif-scaletrader-forecastex.jpg" alt="ScaleTrader f&#252;r ForecastEx-Kontrakte" border="0" >
+                            <h4>ScaleTrader f&#252;r ForecastEx-Kontrakte</h4>
+                            <div class="description">
+                                <p>Der ScaleTrader verbessert den Handel mit ForecastEx-Kontrakten erheblich, indem er es Ihnen erm&#246;glicht, systematisch Liquidit&#228;t zuzuf&#252;hren und gleichzeitig voreingestellte Gewinnziele durch erg&#228;nzende Meinungs-Orders zu etablieren.</p>
+                            </div>
+                            <div class="learn-more">
+                                Mehr erfahren <i class="fa-solid fa-circle-chevron-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+		                                <div class="mix all mx_research">
+						<a class="grid-tile" href="../../en/trading/investment-themes.html" target="_self">
+							<img loading="lazy" src="../../images/web/fif-investors-themes.jpg" alt="Anlagethemen" border="0" >
+							<h4>Anlagethemen</h4>
+							<div class="description">
+								<p>Dieses intuitive Recherchetool hilft Ihnen dabei, aus Markttrends praktische Handelsideen abzuleiten. Das Tool ist auf den leistungsstarken IBKR-Handelsplattformen verf&#252;gbar. Es vereinfacht Ihre Recherche, indem es Verbindungen zwischen Unternehmen, Produkten, Wettbewerbern und Regionen herstellt &#8211; und zwar f&#252;r das gesamte S&amp;P-1500-Universum.</p>
+							</div>
+							<div class="learn-more">
+								Mehr erfahren <i class="fa-solid fa-circle-chevron-right" aria-hidden="true"></i>
+							</div>
+						</a>
+					</div>
+					<div class="mix all mx_research">
+						<a class="grid-tile" href="fif-connections.html" target="_self">
+							<img loading="lazy" src="../../images/web/fif-tile-connections.jpg" alt="Miteinander verbunden" border="0" >
+							<h4>Zusammenh&#228;nge</h4>
+							<div class="description">
+								<p>Dieses neue Tool bietet Ihnen einen Rundumblick auf die Anlagewelt, die eine bestimmte Aktie umgibt. Entdecken Sie &#228;hnliche Unternehmen, relevante Trends, zum Sektor passende ETFs sowie handelbare Instrumente wie Futures, Optionen und Anleihen.</p>
+							</div>
+							<div class="learn-more">
+								Mehr erfahren <i class="fa-solid fa-circle-chevron-right" aria-hidden="true"></i>
+							</div>
+						</a>
+					</div>	
+		        </div><!-- MIXITUP GRID END -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--BEST INFORMED INVESTORS CHOOSE IBKR-->
+<style type="text/css">
+	#best-informed-investors .best-informed-caption {
+		padding: 20px;
+	}
+	@media (min-width: 768px) {
+		#best-informed-investors .best-informed-caption {
+			padding: 30px;
+		}	
+</style>
+<section id="best-informed-investors" class="">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 col-md-5 col-lg-4">
+				<img loading="lazy" src="../../images/web/ibkr-best-informed-h.jpg" alt="Wer gut informiert ist, entscheidet sich f&#252;r Interactive Brokers">
+			</div>
+            <div class="col-12 col-md-7 offset-lg-1 dflex best-informed-caption">
+				<h2 class="mb-20">Wer gut informiert ist, entscheidet sich f&#252;r <span class="d-none d-sm-inline d-md-none"><br></span>Interactive Brokers</h2>
+								
+				<p>Anleger/-innen vertrauen auf IBKRs anspruchsvollen Tools, darunter Aktienbruchteile, Sparpl&#228;ne, die Overnight-Handelssitzung, den Options-Assistent und vieles mehr. Diese Funktionen bieten Ihnen transparente Ausf&#252;hrungen und einen vollst&#228;ndigen Markt&#252;berblick und helfen Ihnen dabei, immer <span class="d-none d-xl-inline"><br></span>einen Schritt voraus zu sein.</p>
+				            
+            </div>
+        </div>
+    </div>
+</section><section id="disclosures" class="disclosure">
+	<div class="container">
+        <div class="row">
+            <div class="col-12">
+				<p><strong>Offenlegungen</strong></p>
+                                           <p>DER HANDEL MIT BITCOIN-FUTURES BIRGT ERHEBLICHE RISIKEN UND IST NUR GEEIGNET F&#220;R KUNDINNEN UND KUNDEN MIT HOHER RISIKOTOLERANZ, F&#220;R DIE VERLUSTE FINANZIELL VERKRAFTBAR SIND.</p>
+                <p>N&#228;here Informationen zu den Risiken beim Handel von Bitcoin-Produkten finden Sie <a href="https://gdcdyn.interactivebrokers.com/Universal/servlet/Registration_v2.formSampleView?formdb=4098">hier.</a></p>
+		          				<p>Bei Investmentfonds handelt es sich um Anlagen, bei denen Anlegerguthaben zusammengef&#252;hrt und zum Kauf diverser Wertpapiere verwendet wird, um bestimmte Anlageziele zu erreichen wie z.&nbsp;B. Verm&#246;gensaufbau, Einkommen oder beides. Anleger/-innen sind dazu angehalten, die verschiedenen Anlageziele, Geb&#252;hren und Risiken zu durchdenken, die mit Anlagen in Investmentfonds verbunden sind. Bitte lesen Sie den entsprechenden Prospekt. Diese Mitteilung darf nicht als Empfehlung, Werbung oder Aufforderung zum Kauf eines bestimmten Fonds oder einer bestimmte Fondsfamilie ausgelegt werden. Es kann vorkommen, dass Interactive Brokers f&#252;r den Kauf und das Halten von Investmentfonds von Fondsgesellschaften eine Verg&#252;tung erh&#228;lt. Verg&#252;tungen dieser Art werden dem Fondsverm&#246;gen entnommen. IBKR wirbt jedoch nicht f&#252;r Investitionen in bestimmte Fonds und empfiehlt Ihnen auch keine Fonds oder anderen Produkte. Weitere Informationen entnehmen Sie bitte unserer <a href="../../en/trading/products-exchanges.php%23/fundsearch.html">Liste der Investmentfondsprodukte.</a></p>				<p>Optionen und Futures: Optionen und Futures sind nicht f&#252;r alle Anleger/-innen geeignet. Ihre Verluste k&#246;nnen dabei den Wert Ihrer urspr&#252;nglichen Investition &#252;bersteigen. Bitte lesen Sie das Dokument <a href="http://www.theocc.com/about/publications/character-risks.jsp">&#8222;Characteristics and Risks of Standardized Options&#8220;</a> (Besonderheiten und Risiken standardisierter Optionen) durch, bevor Sie mit Optionen handeln. Bitte lesen Sie das Dokument <a href="../general/homepage-disclosures.html">&#8222;Security Futures Risk Disclosure Statement&#8220;</a> (Risikoinformation zu Wertpapier-Futures) durch, bevor Sie mit Optionen handeln.</p>
+                <p>Die blo&#223;e Er&#246;rterung oder Erw&#228;hnung von ETFs sollte nicht als Empfehlung, Werbung oder Aufforderung zum Handel verstanden werden. Alle Anleger/-innen sollten sich &#252;ber die Anlagerisiken sowie die vom Fonds oder Finanzunternehmen erhobenen Geb&#252;hren und Kosten informieren, bevor sie investieren. Bevor Sie auf Grundlage dieser Informationen Entscheidungen treffen, sollten Sie genau pr&#252;fen, inwiefern diese f&#252;r Ihre pers&#246;nliche Situation und Finanzlage relevant sind, und bei Bedarf professionelle Beratung in Anspruch nehmen.</p>
+                <p>Die mit dem Risk Navigator oder Tool f&#252;r die steuerliche Verlustnutzung erstellten Prognosen oder sonstigen Informationen &#252;ber die Wahrscheinlichkeit bestimmter Anlageresultate sind rein hypothetischer Natur. Sie stellen weder verifizierte Anlageergebnisse dar noch k&#246;nnen Sie f&#252;r die Zukunft eine bestimmte Performance garantieren. Bitte beachten Sie, dass die mit diesem Tool erzielten Ergebnisse im Laufe der Zeit unterschiedlich ausfallen k&#246;nnen.</p>
+                <hr>
+				<ol>
+                    					<li>Der Forex-Handel birgt ein erhebliches Verlustrisiko. Bei den Abwicklungsterminen im Forex-Handel kann es aufgrund von unterschiedlichen Zeitzonen und Feiertagen zu Abweichungen kommen. Wenn Sie auf mehreren Forex-M&#228;rkten handeln, kann es vorkommen, dass Sie sich Kapital leihen m&#252;ssen, um Forex-Transaktionen abzuwickeln. Wenn Sie die Kosten f&#252;r markt&#252;bergreifende Transaktionen berechnen, m&#252;ssen Sie die Zinsen ber&#252;cksichtigen, die f&#252;r das geliehene Kapital anfallen.</li>
+                                        <li>
+                        <p>Die hier gemachten Angaben stellen keine Steuerberatung dar. Die Empf&#228;nger/-innen und andere Steuerzahler/-innen d&#252;rfen sie nicht verwenden, um nationale, bundesstaatliche, lokale oder andere Steuergesetze und Vorschriften zu umgehen. Wichtig: Diese Informationen stellen auch keine verl&#228;ssliche Hilfe dar, um Steuerprobleme zu l&#246;sen.</p>
+                        
+<p>IBKR bietet keine Rechts- oder Steuerberatung an und nichts in diesem Tool f&#252;r die steuerliche Verlustnutzung darf als Steuerberatung ausgelegt werden. Das Tool f&#252;r die steuerliche Verlustnutzung soll das Berechnen m&#246;glicher Steuervorteile erleichtern, die sich aus dem Verkauf von Wertpapieren ergeben k&#246;nnen, die Verluste machen. Dar&#252;ber hinaus k&#246;nnen Sie mit dem Tool bei Bedarf Wertpapiere durch andere austauschen. Steuergesetze sind komplex und k&#246;nnen sich jederzeit &#228;ndern. Kapitalertr&#228;ge werden nicht in allen Jurisdiktonen besteuert, wodurch das Tool f&#252;r die steuerliche Verlustnutzung nicht zwangsl&#228;ufig f&#252;r alle steuerlichen Wohnsitze geeignet ist. Sie sollten es in Betracht ziehen, professionelle Steuerberatung in Anspruch zu nehmen, um Ihre pers&#246;nliche Situation beurteilen zu lassen.</p>
+<p>IBKR STELLT DAS TOOL F&#220;R DIE STEUERLICHE VERLUSTNUTZUNG NUR ZU INFORMATIONSZWECKEN ZUR VERF&#220;GUNG. DIE ANGABEN SIND REIN SACHLICH UND BER&#220;CKSICHTIGEN KEINE PERS&#214;NLICHEN UMST&#196;NDE. SIE STELLEN KEINE EMPFEHLUNG, KEIN ANGEBOT UND KEINE AUFFORDERUNG ZUM KAUF ODER VERKAUF VON WERTPAPIEREN DAR. Es ber&#252;cksichtigt keine Positionen, die Sie ggf. in anderen Konten halten, oder Transaktionen, die Sie mit anderen Konten durchf&#252;hren, (einschlie&#223;lich anderer IBKR-Konten) und somit auch nicht die Auswirkungen, die diese Aspekte auf die Transaktionen haben k&#246;nnten, die Sie mit dem Tool f&#252;r die steuerliche Verlustnutzung durchf&#252;hren.</p>
+<p>Das Tool f&#252;r die steuerliche Verlustnutzung dient dazu, entweder kurz- oder langfristige Verluste zu maximieren (in Abh&#228;ngigkeit von Ihrer Auswahl im Tool). Es &#252;berschreibt vorher festgelegte Methoden f&#252;r die Steuerpostenzuordnung, die sonst f&#252;r Sie oder Ihre Kontoeinstellungen gelten. Wenn &#8222;irgendeine Position mit Kapitalverlust&#8220; ausgew&#228;hlt ist, versucht das Tool, die Verluste zu maximieren.</p>
+<p>Wenn Ihr steuerlicher Wohnsitz au&#223;erhalb der USA liegt, sollen Sie sich bewusst sein, dass das Tool f&#252;r die steuerliche Verlustnutzung eine Unterscheidung zwischen kurz- und langfristigen Kapitalverlusten anwendet, die auf den IRS-Definitionen basiert, die nur f&#252;r Personen mit Wohnsitz in den USA gelten. Ebenso basiert auch die Anwendung der Wash-Sale-Regel auf den IRS- Definitionen f&#252;r US-Einwohner/-innen.</p>
+<p>IBKR gibt keine Garantie, weder ausdr&#252;cklich noch implizit, hinsichtlich der Genauigkeit der Daten oder den damit erzielten Ergebnissen und haftet nicht f&#252;r Sch&#228;den, die sich aus deren Nutzung ergeben. IBKR garantiert nicht, dass die Annahmen auf Ihre pers&#246;nlichen Umst&#228;nde genau zutreffen.</p>
+<p>Die vom Tool f&#252;r die steuerliche Verlustnutzung bereitgestellten Informationen sollten nicht genutzt werden, um Ihre ggf. geltenden Steuerverbindlichkeiten festzustellen. Das Tool f&#252;r die steuerliche Verlustnutzung ist nicht dazu gedacht, Steuerstrafen zu umgehen, die ggf. von den Steuerbeh&#246;rden verh&#228;ngt werden.</p>
+<p>Indem Sie das Tool f&#252;r die steuerliche Verlustnutzung verwenden, best&#228;tigen Sie, dass Sie die obigen Offenlegungen und Einschr&#228;nkungen gelesen und verstanden haben und dass Sie IBKR nicht haftbar machen werden f&#252;r Anspr&#252;che oder Klagegr&#252;nde, die sich aus Ihrer Nutzung des Tools f&#252;r die steuerliche Verlustnutzung ergeben.</p>                        <p>DIE STEUERAUSWIRKUNGEN H&#196;NGEN VON DER PERS&#214;NLICHEN SITUATION AB UND K&#214;NNEN SICH IN DER ZUKUNFT &#196;NDERN.</p>
+                    </li>
+				</ol>
+			</div>
+        </div>	
+    </div>
+</section>
+</div>
+
+<!-- FOOTER START  -->
+<footer class="footer noprint" id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p>Interactive Brokers &#174;, IB<sup>SM</sup>, InteractiveBrokers.com &#174;, Interactive Analytics &#174;, IB Options Analytics<sup>SM</sup>, IB SmartRouting<sup>SM</sup>, PortfolioAnalyst &#174;, IB Trader Workstation<sup>SM</sup> und One World, One Account<sup>SM</sup> sind Dienstleistungs- und/oder Handelsmarken von Interactive Brokers LLC. Auf Anfrage stellen wir Ihnen gerne Belege zu unseren Aussagen und statistischen Angaben zur Verf&#252;gung. Alle abgebildeten Handelssymbole dienen ausschlie&#223;lich Veranschaulichungszwecken und stellen keine Empfehlungen dar.</p>
+                <p>Der Online-Handel mit Aktien, Optionen, Futures, W&#228;hrungen, ausl&#228;ndischen Papieren und festverzinslichen Produkten kann mit dem Risiko von erheblichen Verlusten einhergehen.</p>
+                <p>Der Handel mit Optionen birgt Risiken und ist nicht f&#252;r alle Anleger/-innen geeignet. N&#228;here Informationen finden Sie im Dokument <a href="https://www.theocc.com/about/publications/character-risks.jsp" rel="noreferrer noopener" target="_blank">&#8222;Characteristics and Risks of Standardized Options&#8220;</a> (Besonderheiten und Risiken im Zusammenhang mit standardisierten Optionen) (auch &#8222;Options Disclosure Document&#8220;, ODD). Alternativ k&#246;nnen Sie sich auch an den <a href="../support/customer-servicef763.html?p=contact" target="_self">IB-Kundendienst</a> wenden, um eine Kopie des ODD zu erhalten. Bevor Kundinnen und Kunden mit dem Handeln beginnen, m&#252;ssen sie die relevanten Risikoinformationen in unseren <a href="../general/homepage-disclosures.html" target="_self">Warnhinweisen und Offenlegungen</a> durchlesen. Der Margin-Handel ist nur f&#252;r erfahrene Anleger/-innen mit hoher Risikotoleranz geeignet. Sie k&#246;nnen dabei mehr Geld verlieren, als Sie urspr&#252;nglich investiert haben. N&#228;here Informationen zu den Zinss&#228;tzen f&#252;r Margin-Kredite finden Sie unter <a href="margin-rates.html" target="_self">Margins&#228;tze</a>. Wertpapier-Futures bergen ein hohes Risiko und sind nicht f&#252;r alle Anleger/-innen geeignet. Sie k&#246;nnen dabei mehr Geld verlieren, als Sie urspr&#252;nglich investiert haben. Bitte lesen Sie die <a href="../general/homepage-disclosures.html" target="_self">Risikoinformationen zu Wertpapier-Futures</a> durch, bevor Sie mit Wertpapier-Futures handeln. Strukturierte Produkte sowie festverzinsliche Produkte wie z. B. Anleihen sind komplexe Produkte, die mit erh&#246;htem Risiko einhergehen und daher nicht f&#252;r alle Anleger/-innen geeignet sind. Bevor Sie mit dem Handeln beginnen, lesen Sie bitte die <a href="../general/homepage-disclosures.html" target="_self">relevanten Risikoinformationen und Offenlegungen</a> durch.</p>
+                <p>Weitere Informationen zu IBKR ATS finden Sie auf der <a href="https://www.sec.gov/divisions/marketreg/form-ats-n-filings.htm#ats-n" rel="noreferrer noopener" target="_blank">SEC-Seite</a>.</p>
+<p>36 L&#228;nder schlie&#223;t sowohl L&#228;nder als auch Territorien ein.</p>
+            </div>
+        </div>
+        <div class="footer-site-links" id="footerSiteLinks">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>Konto</p>
+                    <ul>
+                    <li><a href="https://www.interactivebrokers.co.uk/sso/Login?RL=1" target="_self">Anmelden</a></li>
+                    <li> <a href="https://www.interactivebrokers.co.uk/Universal/Application" target="_self">Konto er&#246;ffnen</a></li>
+                    <li><a href="https://www.interactivebrokers.co.uk/sso/Login?c=t" target="_self">Antrag abschlie&#223;en</a></li>
+                    <li><a href="../accounts/account-guide.html" target="_self">Kontotypen</a></li>
+                    <li><a href="https://www.interactivebrokers.co.uk/Universal/Application?ft=T&amp;locale=de_DE" target="_self">Kostenlose Testversion</a></li>
+                    </ul>
+                    <p>Software &amp; Downloads</p>
+                    <ul>
+                    <li><a href="tws.html#tws-software" target="_self">Trader Workstation</a></li>
+                    <li><a href="ibkr-desktop.html" target="_self">IBKR&nbsp;Desktop</a></li>
+                    <li><a href="tws-mobile.html#trytoday" target="_self">IBKR Mobile</a></li>
+                    <li><a href="ib-api.html#api-software" target="_self">APIs</a></li>
+                    </ul>    
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>Support</p>
+                    <ul>
+					<li><a href="../support/fund-my-account.html" target="_self">Guthaben einzahlen</a></li>
+                    <li><a href="../support/individuals.html" target="_self">Privatkunden</a></li>
+                    <li><a href="../support/institutions.html" target="_self">Gesch&#228;ftskunden</a></li>
+                    <li><a href="../support/institutional-sales-contacts4343.html?p=uk" target="_self">Vertriebskontakte f&#252;r Gesch&#228;ftskunden</a></li>
+					<li><a href="../general/contact/ibot-container.html" target="_self">FAQs</a></li>
+					<li><a href="../software/systemStatus.html" target="_self">Systemstatus</a></li>
+                    </ul>
+                    <p>Anbieter-Support</p>
+                    <ul>
+                    <li><a href="../general/about/supplier-information.html" target="_self">Informationen f&#252;r Auftragnehmer</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>&#220;ber uns</p>
+                    <ul>
+                    <li><a href="../general/awards.html" target="_self">Auszeichnungen</a></li>
+                    <li><a href="../general/about/careers-splash.html" target="_self">Karriere</a></li>
+                    <li><a href="../general/about/about.html" target="_self">Vorstellung und Firmengeschichte</a></li>
+                    <li><a href="https://investors.interactivebrokers.com/ir/main.php" target="_blank" rel="noreferrer noopener">Investorendialog</a></li>
+                    <li><a href="../about/news-at-ibkr.html" target="_self">IBKR-News</a></li>
+                    <li><a href="../general/about/press-and-media.html" target="_self">Presse und Medien</a></li>
+                    <li><a href="../accounts/legalDocuments/brokerPerformanceReports.html" target="_self">Meldungen an Aufsichtsbeh&#246;rden</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>Folgen Sie uns:</p>
+                    <ul>
+                        <li><a href="https://www.facebook.com/InteractiveBrokersEurope/" target="_blank" rel="noreferrer noopener"><i class="fab fa-facebook"></i>  Facebook</a></li>
+                        <li><a href="https://www.instagram.com/interactivebrokers_europe" target="_blank" rel="noreferrer noopener"><i class="fab fa-instagram"></i>  Instagram</a></li>
+                        <li><a href="https://twitter.com/IBKR_Europe" target="_blank" rel="noreferrer noopener"><i class="fab fa-x-twitter"></i>  Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-disclosure-links" id="footerDisclosureLinks">
+            <div class="row">
+                <div class="col">
+                    <ul>
+                    <li><a href="../accounts/legalDocuments/anti-fraud-notice.html" target="_self">Hinweise zur Betrugsbek&#228;mpfung</a></li>
+                    <li><a href="../../errorMessages/404.html" target="_self">Hinweise zum Kundenidentifikationsprogramm</a></li>
+                    <li><a href="../general/warnings-on-frauds-and-scams.html" target="_self">Warnung vor Betrug und Scams</a></li>
+                    <li><a href="../accounts/forms-and-disclosures-client-agreements.html" target="_self">Formulare und Offenlegungen</a></li>
+                    <li><a href="../accounts/legalDocuments/accessibility-policy.html" target="_self">Erkl&#228;rung zur Barrierefreiheit</a></li>
+                    <li><a href="../accounts/legalDocuments/privacy.html" target="_self">Datenschutz</a></li>
+                    <li><a href="../sitemap/index.html" target="_self">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-entities" id="footerEntities">
+            <div class="row">
+                <div class="col">
+                    <div class="footer-entity"><!-- IBKR IE -->
+                        <p class="entity-name"><a href="../../en/home.html" target="_self">Interactive Brokers Ireland Limited</a></p>
+                        <p>wird reguliert von der <a href="https://www.centralbank.ie/" target="_blank" rel="noreferrer noopener">Central Bank of Ireland</a> (CBI, Referenznummer: C423427), ist registriert beim Companies Registration Office (CRO, Registrierungsnummer: 657406) und ist ein Mitglied des Irish Investor Compensation Scheme (ICS).<br> <strong>Eingetragener Gesch&#228;ftssitz:</strong> North Dock One, 91/92 North Wall Quay, Dublin 1 D01 H7V7, Ireland.<br> <strong>Website:</strong> <a href="../../en/home.html" target="_self">www.interactivebrokers.ie</a></p>
+                        <p class="footer-entities-link"><a href="#collapseEntities" target="_self" class="collapsed" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseEntities">Informationen zu weiteren Gesellschaften von Interactive Brokers</a></p>
+                    </div>
+                    <div class="footer-entities-list collapse" id="collapseEntities">
+                        <div class="row">
+                            <div class="col-12 col-md-6"><!-- IBKR LLC -->
+                                
+                                <p class="entity-name"><a href="https://www.interactivebrokers.com/en/home.php?nored=t" target="_self">Interactive Brokers LLC</a></p>
+                                <p>ist Mitglied der <a  rel="noreferrer noopener" target="_blank"  href="https://www.nyse.com/">NYSE</a> &#8211; <a href="https://www.finra.org/" rel="noreferrer noopener"  target="_blank">FINRA</a> &#8211; <a href="https://www.sipc.org/" rel=" noreferrer noopener" target="_blank">SIPC</a> und wird reguliert von der US Securities and Exchange Commission und der Commodity Futures Trading Commission.<br> <strong>Hauptgesch&#228;ftssitz:</strong> One Pickwick Plaza, Greenwich, CT 06830 USA<br> <strong>Website:</strong> <a href="https://www.interactivebrokers.com/en/home.php?nored=t" target="_self">www.interactivebrokers.com</a></p><!-- IBKR CA -->
+                                <p class="entity-name"><a href="https://www.interactivebrokers.ca/en/home.php?nored=t" target="_self">Interactive Brokers Canada Inc.</a></p>
+                                <p>Ist Mitglied der  <a href="https://www.ciro.ca/" target="_blank" rel="noreferrer noopener">Canadian Investment Regulatory Organization (CIRO)</a>  und Mitglied des <a href="https://www.cipf.ca/" target="_blank" rel="noreferrer noopener">Canadian Investor Protection Fund.</a><br> <strong>Eingetragener Gesch&#228;ftssitz:</strong> 1800 McGill College Avenue, Suite 2106, Montreal, Quebec, H3A 3J6, Canada.<br> <strong>Website:</strong> <a href="https://www.interactivebrokers.ca/en/home.php?nored=t" target="_self">www.interactivebrokers.ca</a></p><!-- IBKR UK -->
+                                
+                                <p class="entity-name"><a href="https://www.interactivebrokers.co.uk/en/home.php?nored=t" target="_self">Interactive Brokers (U.K.) Limited</a></p>
+                                <p>ist von der <a href="https://www.fca.org.uk/" target="_blank" rel="noreferrer noopener">Financial Conduct Authority</a> zugelassen und wird von dieser reguliert. FCA-Handelsregisternummer 208159. In England und Wales im Handelsregister eingetragen unter der Firmennummer 03958476. <a href="https://www.fca.org.uk/firms/financial-services-register" target="_blank" rel="noreferrer noopener">[https://www.fca.org.uk/firms/financial-services-register]</a><br> <strong>Eingetragener Gesch&#228;ftssitz:</strong> 20 Fenchurch Street, Floor 12, London EC3M 3BY.<br> <strong>Website:</strong> <a href="https://www.interactivebrokers.co.uk/en/home.php?nored=t" target="_self">www.interactivebrokers.co.uk</a></p><!-- IBKR AUS -->
+                                <p class="entity-name"><a href="https://www.interactivebrokers.com.au/en/home.php?nored=t" target="_self">Interactive Brokers Australia Pty. Ltd.</a></p>
+                                <p>ABN 98 166 929 568 ist lizensiert von der <a href="https://asic.gov.au/" target="_blank" rel="noreferrer noopener">Australian Securities and Investments Commission</a> (AFSL: 453554), wird von dieser reguliert und nimmt an der <a href="https://www.asx.com.au/" target="_blank" rel="noreferrer noopener">ASX</a>, <a href="https://www.asx.com.au/" target="_blank" rel="noreferrer noopener">ASX 24</a> und <a href="https://www.cboe.com.au/" target="_blank" rel="noreferrer noopener">Cboe Australia</a> teil.<br> <strong>Eingetragener Gesch&#228;ftssitz:</strong> Level 11, 175 Pitt Street, Sydney, New South Wales 2000, Australia.<br> <strong>Website:</strong> <a href="https://www.interactivebrokers.com.au/en/home.php?nored=t" target="_self">www.interactivebrokers.com.au </a></p>
+                            </div>
+                            <div class="col-12 col-md-6"><!-- IBKR HK -->
+                                
+                                <p class="entity-name"><a href="https://www.interactivebrokers.com.hk/en/home.php?nored=t" target="_self">Interactive Brokers Hong Kong Limited</a></p>
+                                <p>wird von der Hong Kong Securities and Futures Commission reguliert und ist Mitglied der <a href="https://www.hkex.com.hk/" target="_blank" rel="noreferrer noopener">SEHK</a> und <a href="https://www.hkex.com.hk/" target="_blank" rel="noreferrer noopener">HKFE</a>.<br> <strong>Eingetragener Gesch&#228;ftssitz:</strong> Suite 1512, Two Pacific Place, 88 Queensway, Admiralty, Hong Kong SAR.<br> <strong>Website:</strong> <a href="https://www.interactivebrokers.com.hk/en/home.php?nored=t" target="_self">www.interactivebrokers.com.hk</a></p><!-- IBKR IN -->
+                                <p class="entity-name"><a href="https://www.interactivebrokers.co.in/en/home.php?nored=t" target="_self">Interactive Brokers India Pvt. Ltd.</a></p>
+                                <p>ist ein handelndes Mitglied der <a href="https://www.nseindia.com/" target="_blank" rel="noreferrer noopener">NSE</a> und <a href="https://www.bseindia.com/" target="_blank" rel="noreferrer noopener">BSE</a> sowie ein verwahrendes Mitglied der <a href="https://nsdl.co.in/" target="_blank" rel="noreferrer noopener">NSDL</a>. <a href="https://www.sebi.gov.in/" target="_blank" rel="noreferrer noopener">SEBI</a>-Registrierungs-Nr. INZ000217730; NSDL: IN-DP-602-2021. CIN-U67120MH2007FTC170004.<br> <strong>Eingetragener Gesch&#228;ftssitz:</strong> 502/A, Times Square, Andheri Kurla Road, Andheri East, Mumbai 400059, India.<br> <strong>Tel.:</strong> +91-22-61289888 <span class="pipe">|</span> <strong>Fax:</strong> +91-22-61289898.<br> <strong>Website:</strong> <a href="https://www.interactivebrokers.co.in/en/home.php?nored=t" target="_self">www.interactivebrokers.co.in</a></p><!-- IBKR JP -->
+                                
+                                <p class="entity-name"><a href="https://www.interactivebrokers.co.jp/en/home.php?nored=t" target="_self">Interactive Brokers Securities Japan, Inc.</a></p>
+                                <p>wird reguliert vom Kanto Local Finance Bureau (Registrierungsnr. 187) und ist Mitglied der<a href="https://www.jsda.or.jp/" target="_blank" rel="noreferrer noopener">Japan Securities Dealers Association</a> und der <a href="https://www.nisshokyo.or.jp/" target="_blank" rel="noreferrer noopener">Commodity Futures Association of Japan</a>.<br> <strong>Eingetragener Gesch&#228;ftssitz:</strong> Kasumigaseki Building 25F, 2-5 Kasumigaseki 3-chome, Chiyoda-ku, Tokyo, 100-6025 Japan.<br> <strong>Tel.:</strong> +81 03-4590-0711 <em>(an Gesch&#228;ftstagen von 08:30&#8211;17:30 Uhr Uhr JST)</em>.<br> <strong>Website:</strong> <a href="https://www.interactivebrokers.co.jp/en/home.php?nored=t" target="_self">www.interactivebrokers.co.jp</a></p><!-- IBKR SG -->
+<p class="entity-name"><a href="https://www.interactivebrokers.com.sg/en/home.php" target="_self">Interactive Brokers Singapore Pte. Ltd.</a></p>
+<p>ist lizensiert von der Monetary Authority of Singapore (Lizenznr. CMS100917) und wird von dieser reguliert.<br> <strong>Eingetragener Gesch&#228;ftssitz:</strong>  1 Harbourfront Place #12-01/03, Harbourfront Tower 1, Singapore 098633. <br> <strong>Website:</strong> <a href="https://www.interactivebrokers.com.sg/en/home.php" target="_self">www.interactivebrokers.com.sg</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- FOOTER END  -->
+</footer>
+
+<!-- MODAL START | ABOUT IB GROUP ---------------------------------------------------------------------------------------------------- -->
+<div class="modal fade" id="modalAlert" tabindex="-1" role="dialog" aria-labelledby="modalAboutIBGroup">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content modal-primary">
+			<div class="modal-header">
+				<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+				<h4 class="modal-title" ><i class="fas fa-exclamation-circle"></i> Notice</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col">
+						<p class="message">message</p><!-- You will be brought to the website of our affiliate-->
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<div class="row">
+					<div class="col-12 col-sm-3 order-2 order-sm-1">
+						<div class="panel-btn-left"><a href="javascript:void(0);" data-bs-dismiss="modal" class="btn btn-secondary">Stay</a></div>
+					</div>
+					<div class="col-12 col-sm-9 order-1 order-sm-2">
+						<div class="panel-btn-right goto"><a href="javascript:void(0);" onclick=""  data-bs-dismiss="modal"  class="btn btn-primary">Go</a></div> 
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#modalAlert').on('show.bs.modal', function (event) {
+	  var button = $(event.relatedTarget) // Button that triggered the modal
+      let myMessage = button.data('mymessage');
+      /*let myLink = "location.href='"+button.data('mytargetlink')+"'"; */
+      let myLink = "window.open('"+button.data('mytargetlink')+"')"; 
+	  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+	  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+	  var modal = $(this)
+	  modal.find('.modal-body .message').text( myMessage );
+	  modal.find('.modal-footer .goto a').attr( "onclick", myLink );
+
+	})
+});
+</script>
+<script>
+if(window.location.href.includes('conf=am')) {
+document.querySelector("#ibkr-header").style.display = "none";
+document.querySelector("#footer").style.display = "none";
+}
+</script>
+
+
+<!-- SHARE ON SOCIAL ---------------------------------------------------------------------------------------------------->
+<div class="social-sidebar animated fadeInLeft noprint">
+	<span><i class="fa fa-chevron-left"></i><i class="fa fa-chevron-right"></i></span>
+	<div class="icon-set">
+		<p>SHARE</p>
+		<div class="share-icon"><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.interactivebrokers.com%2fen%2findex.php%3ff%3d21577" target="_blank" rel="noreferrer noopener" title="Share on Facebook" aria-label="Share on Facebook" class="icon-facebook"><i class="fab fa-facebook-square"></i></a></div>
+		<div class="share-icon"><a href="https://twitter.com/intent/tweet?text=Interactive+Brokers&amp;url=https%3A%2F%2Fwww.interactivebrokers.com%2Fen%2Findex.php%3ff%3d21577&amp;related=" target="_blank" rel="noreferrer noopener" title="Share on Twitter" aria-label="Share on Twitter" class="icon-twitter"><i class="fab fa-twitter-square"></i></a></div>
+		<div class="share-icon"><a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwww.interactivebrokers.com%2fen%2findex.php%3ff%3d21577&amp;title=Interactive+Brokers&amp;summary=Interactive+Brokers&amp;source=LinkedIn" target="_blank" rel="noreferrer noopener" title="Share on Linkedin" aria-label="Share on Linkedin" class="icon-linkedin"><i class="fab fa-linkedin"></i></a></div>
+		<div class="share-icon"><a href="javascript:void(0);" target="_self" title="Share by Email" aria-label="Share by Email" name="btn_trigger" data-toggle="modal" data-target="#emailModal" id="21577" onClick="emailCookie();" class="icon-email"><i class="far fa-envelope"></i></a></div>
+	</div>
+</div>
+<!-- MODAL START | SHARE ON SOCIAL ---------------------------------------------------------------------------------------------------->
+<div class="modal fade noprint" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="emailModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button id="cls_frm_1" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="gridSystemModalLabel"><i class="far fa-envelope text-gray"></i> Email</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col">
+						<form>
+							<div class="form-group">
+								<label for="_to" class="control-label">To:</label> <span id="_err_to" style="color: red;"></span>
+								<input type="text" class="form-control" id="_to">
+							</div>
+							<div class="form-group">
+								<label for="_from" class="control-label">From:</label> <span id="_err_frm" style="color: red;"></span>
+								<input type="text" class="form-control" id="_from">
+							</div>
+							<div class="form-group">
+								<label for="_subject" class="control-label">Subject:</label> <span id="_err_subject" style="color: red;"></span>
+								<input type="text" class="form-control" id="_subject" value="Interactive Brokers">
+							</div>
+							<div class="form-group">
+								<textarea class="form-control" id="_content" style="height:200px;"></textarea>
+							</div>
+							<p class="text-sm">URL: <span class="text-italic text-black">www.interactivebrokers.ie/en/index.php?f=<span id='vid'></span></span></p>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<div class="row">
+					<div class="col-6">
+						<div align="left">
+							<button id="cls_frm_2" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+					<div class="col-6">
+						<div align="right">
+							<button type="button" class="btn btn-primary" id="send">Send</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<input type="hidden" id="_page_id" name="_page_id" value="21577" />
+</div>
+<!-- MODAL END | SHARE ON SOCIAL ----------------------------------------------------------------------------------------------------> 
+ 
+<script type="text/javascript" src="../../insights/ibtr_share2667.js?t=v1"></script>
+<script type="text/javascript" src="../../scripts/common/js/base642667.js?t=v1" ></script>
+<script>
+$(document).ready(function() {
+	 $(".social-sidebar span").click(function(){
+		 $(".social-sidebar div").toggleClass("social-sidebar-hide");
+		 $(".social-sidebar span").toggleClass("toggle-arrow");
+ 	 });
+});
+function emailCookie() {
+	if (document.cookie.indexOf("IB_EM_SH") == -1) {
+		var ex=new Date();
+		ex.setTime(ex.getTime()+86400000);
+		document.cookie ='IB_EM_SH='+1+';expires='+ex.toGMTString()+';path=/;domain=';
+	}
+}
+</script>
+<!-- SCRIPTS FOOTER ---------------------------------------------------------------------------------------------------- -->
+<script type="text/javascript" src="../../scripts/common/js/zeynep-2.2.0/zeynep.js"></script>
+<script type="text/javascript" src="../../scripts/common/js/lazyload/lazyload.min.js"></script>
+<script type="text/javascript" src="../../search/conversions.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    
+    // GATHER HEIGHT OF HEADER
+    var headerHeight = $("div#ibkr-header").outerHeight();
+    // GATHER HEIGHT OF DISCLOSURES
+    var disclosureHeight = $("section#UKProductDisclosure, section#TurbosDisclosure").outerHeight();
+    $("section#UKProductDisclosure").css("top", headerHeight);
+    $("section#TurbosDisclosure").css("top", headerHeight);
+    // SET CONTENTS DIV PADDING TOP
+    $("div#contents").css("padding-top", disclosureHeight);
+    // OVERRIDE TOP OF DISCLOSURE AND PADDING-TOP OF CONTENTS ON WINDOW RESIZE
+    $(window).resize(function() {
+        var headerHeight = $("div#ibkr-header").outerHeight();
+        var disclosureHeight = $("section#UKProductDisclosure, section#TurbosDisclosure").outerHeight();
+        var headerHeightDelta = headerHeight - disclosureHeight;
+        $("section#UKProductDisclosure").css("top", disclosureHeight + headerHeightDelta);
+        $("section#TurbosDisclosure").css("top", disclosureHeight + headerHeightDelta);
+        $("div#contents").css("padding-top", disclosureHeight);
+    });
+
+    // OVERRIDE TOP OF DISCLOSURE AND PADDING-TOP OF CONTENTS ON BANNER CLOSE
+    $("#bannerRegionSelector a.btn-close").click(function() {
+        setTimeout(function() {
+            var headerHeight = $("div#ibkr-header").outerHeight();
+            $("section#UKProductDisclosure").css("top", headerHeight);
+            $("section#TurbosDisclosure").css("top", headerHeight);
+            $("div#contents").css("padding-top", disclosureHeight);
+        },500);
+    });
+    // MOBILE MENU
+    $(function() {
+        // Initilize mobile menu
+        var zeynep = $('.menu-mobile').zeynep({
+            opened: function () {
+            console.log('the side menu opened')
+        },
+        closed: function () {
+            console.log('the side menu closed')
+            }
+        })
+        // Dynamically bind closing event
+        zeynep.on('closing', function () {
+            console.log('this event is dynamically binded')
+        })
+        // Mobile menu close on overlay click
+        $('.website-overlay').on('click', function () {
+            zeynep.close()
+        })
+        // Mobile menu close on button click
+        $('.btn-close').on('click', function () {
+            zeynep.close()
+        })
+        // Mobile menu open on navbar-toggler click
+        $('.navbar-toggler').on('click', function () {
+            zeynep.open()
+        })
+    })
+});
+</script>
+<!-- STYLES FOOTER ---------------------------------------------------------------------------------------------------- -->
+<link rel="preload" as="font" type="font/woff2" href="../../fonts/fontawesome-6.4.2/webfonts/fa-brands-400.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="../../fonts/fontawesome-6.4.2/webfonts/fa-regular-400.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="../../fonts/fontawesome-6.4.2/webfonts/fa-solid-900.woff2" crossorigin>
+<link rel="preload" as="style" href="../../css/ibkr/website-print.min.css">
+<link rel="stylesheet" type="text/css" media="print" href="../../css/ibkr/website-print.min.css">
+<style type="text/css">
+@import url('../../css/fontawesome-6.4.2/all.min.css') layer(vendors);
+@import url('../../css/animate-3.7.2/animate.min.css') layer(vendors);
+@import url('../../css/bootstrap-switch-3.3.2/bootstrap-switch.min.css') layer(vendors);
+@import url('../../css/icheck-1.0.2/icheck.css') layer(vendors);
+</style><script type="text/javascript" src="../../scripts/common/js/mixitup-3.3.1/mixitup.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+   var containerEl = document.querySelector('.mix-container');
+   /* var mixer = mixitup(containerEl); */
+   var mixer = mixitup(containerEl, {
+       selectors: {
+           control: '[data-mixitup-control]'
+       }
+   });
+});
+</script>
+<script type="text/javascript">
+	/* <![CDATA[ */
+	var google_conversion_id = 1070426721;
+	var google_custom_params = window.google_tag_params;
+	var google_remarketing_only = true;
+	/* ]]> */
+</script>
+<script type="text/javascript" src="../../../www.googleadservices.com/pagead/f.txt"></script>
+<noscript>
+    <div display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt="" src="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/1070426721/?value=0&amp;guid=ON&amp;script=0"/>
+    </div>
+</noscript>
+</body>
+
+<!-- Mirrored from www.interactivebrokers.ie/de/trading/features-in-focus.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Sep 2025 09:17:07 GMT -->
+</html>

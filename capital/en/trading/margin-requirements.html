@@ -1,0 +1,4598 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en" data-theme="light">
+
+<!-- Mirrored from www.interactivebrokers.ie/en/trading/margin-requirements.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Sep 2025 09:36:35 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8">
+    <title>Margin Requirements | Valor Capital LTD</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+<meta name="description" content="Use the IBKR Margin Requirements Wizard to see what requirements apply to you. Also view info on the exposure fees for high risk accounts.">
+<meta name="keywords" content="ibkr margin requirements, country requirements margin, high risk fees, exposure fees margin, interactive brokers margin requirements">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta http-equiv="expires" content="-1">
+<meta name="robots" content="index, follow">
+<meta http-equiv="pragma" content="no-cache">
+<meta property="og:site_name" content="Valor Capital LTD" />
+<!--Pid:37725-->
+<link rel="canonical" href="margin-requirements.html"/>
+<meta name="apple-mobile-web-app-title" content="IBKR">
+<!-- SCRIPTS HEAD  -->
+<script type="text/javascript" src='../../scripts/common/js/jquery-3.6.1/jquery.min.js'></script>
+<script type="text/javascript">
+function createScriptElement(data) {
+ if (typeof data == "undefined") {
+  return;
+ }
+ var element = document.createElement("SCRIPT");
+ element.type = "text/javascript";
+ if (typeof data.id != "undefined") {
+  element.id = data.id;
+ }
+ if (typeof data.source != "undefined") {
+  // Fix the path to be relative to your local file structure
+  var fixedSource = data.source.replace(/^\//, '../../');
+  element.src = fixedSource;
+ }
+ if (typeof data.loadfunction == "function") {
+  element.onload = data.loadfunction;
+ }
+ document.head.appendChild(element);
+}
+createScriptElement({ source : "../../scripts/common/js/bootstrap-5.2.2/bootstrap.bundle.min.js", loadfunction: bsLoaded  });
+createScriptElement({ source : "../../scripts/common/js/lib.js?ver=9" });
+function storeCookie()
+{
+ if(typeof(Storage) !== 'undefined')
+ {
+   if(localStorage.getItem('web') !== null)
+   {
+     localStorage.removeItem('web');
+   }
+ }
+}
+function bsLoaded() {
+  createScriptElement({ source : "../../scripts/common/js/appear/appear.min.js?ver=1" });
+  createScriptElement({ source : "../../scripts/common/js/easing/easing.min.js?ver=1" });
+  createScriptElement({ source : "../../scripts/common/js/parallax/parallax.min.js?ver=1" });
+  createScriptElement({ source : "../../scripts/common/js/uitotop/uitotop.min.js?ver=1", loadfunction: uiLoaded });
+}
+function uiLoaded() {
+  createScriptElement({ source : "../../scripts/common/js/twsUtils.js?ver=2" });
+  createScriptElement({ source : "../../scripts/common/js/design/design.js?ver=1" }); 
+}
+</script>
+<script type="text/javascript">
+$(function() {
+ if (document.cookie.indexOf("IB_SEARCH") == -1)
+ {
+  var ex=new Date();
+  ex.setTime(ex.getTime()+86400000);
+  document.cookie ='IB_SEARCH='+Math.floor(new Date().getTime()/1000)+';expires='+ex.toGMTString()+';path=/;domain=.interactivebrokers.ie';
+ }
+  let nex=new Date();
+  nex.setTime(nex.getTime()+86400000);
+    document.cookie ='IB_QD=0;expires='+nex.toGMTString()+';path=/;domain=.interactivebrokers.ie';
+  
+  let excfd=new Date();
+  excfd.setTime(excfd.getTime()+86400000);
+  document.cookie ='IB_QD_CFD=0;expires='+excfd.toGMTString()+';path=/;domain=.interactivebrokers.ie';
+ $('div#langselector').find('a').each(function() {
+  $(this).click(function() {
+   var link = $(this).attr("href");
+   if(link.match(/\/(en|fr|de|es|it|ru|cn|jp)\//))
+   {
+    var langs = link.split("../../index.html");
+    if(langs[3] == 'en' || langs[3] == 'fr' || langs[3] == 'de' || langs[3] == 'es' || langs[3] == 'it' || langs[3] == 'ru' || langs[3] == 'cn' || langs[3] == 'jp')
+    {
+      var lang = langs[3];
+      if(lang == 'cn')
+      {
+        lang = 'zh_CN';
+      }
+      if(lang == 'jp')
+      {
+        lang = 'ja';
+      }
+      if(hasCookie("IB_LANG"))
+      {
+        deleteCookie("IB_LANG");
+      }
+      setCookie("IB_LANG", lang, 7, '.interactivebrokers.ie');
+    } else if(langs[1] == 'en') {
+      var lang = 'en';
+      setCookie("IB_LANG", lang, 7, '.interactivebrokers.ie');
+    }
+   }
+  });
+ });
+ $('p#bandaid-close').click(function() {
+  setCookie("IB_BANDAID", 1, 7, '.interactivebrokers.ie');
+ });
+ $('a#btnCloseBannerRegionSelector').click(function() {
+  setCookie("IB_REGION_SEL", 1, 30, '.interactivebrokers.ie');
+ });
+ $('a#btnCloseBannerRegionDifc').click(function() {
+  setCookie("IB_DIFC", 1, 30, '.interactivebrokers.ie');
+ });
+});
+</script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    if(localStorage.getItem('consentMode') ===  null){
+                    const consentMode = {
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'analytics_storage': 'denied'
+            };
+                localStorage.setItem('consentMode', JSON.stringify(consentMode));
+        gtag('consent', 'default', consentMode);
+    }
+    else {
+        gtag('consent', 'default', JSON.parse(localStorage.getItem('consentMode')));
+    }
+</script>
+<!-- STYLES HEAD -->
+<style type="text/css">
+@import url('../../css/bootstrap-5.2.2/bootstrap.min.css') layer(bootstrap);
+</style>
+<link rel="preload" as="style" href="../../css/ibkr/website.mince12.css?v=1848a6e12ea6c289ee1df7ee63749846">
+<link rel="stylesheet" type="text/css" media="all" href="../../css/ibkr/website.mince12.css?v=1848a6e12ea6c289ee1df7ee63749846">
+<link rel="preload" as="style" href="../../css/ibkr/theme-ibkr.min4f42.css?v=be9c72c0d328e7fc4987bce81f28981c">
+<link rel="stylesheet" type="text/css" media="all" href="../../css/ibkr/theme-ibkr.min4f42.css?v=be9c72c0d328e7fc4987bce81f28981c"><link rel="stylesheet" type="text/css" media="all" href="../../css/web/margins-v2.css" />
+<script type="text/javascript">
+$(document).ready(function() {
+setTimeout(function() {
+// change canvas width for mobile screen size
+var hideWizard = false;
+var initWizard = 1;
+var winWidth = $( window ).width();
+if (winWidth<768){
+$ ( '#canvas' ).attr( 'width', '420' );
+}
+var currentTheme = $("html").attr("data-theme");  
+var darkLight_theme = currentTheme;
+var currentDir = "ltr";
+var direction_theme = "ltr";
+// console.log('starting direction is ' + currentDir  ); 
+// HTML5 particle example: http://timothypoon.com/blog/2011/01/19/html5-canvas-particle-animation/
+var activearea = $('.textbox-set'); // The textbox-set CLASS must be on the DIV tags
+// which encapsulate the CANVAS tag in order to listen to mouse events
+var canvas = document.getElementById('canvas');
+var ctx = canvas.getContext('2d');
+var lineHeight = 30;
+var fillStyleOpacity = 1.0;
+var padding = 15;
+var textPadding = 20;
+var boxTextStyle = '700 11px Arial';
+var headlineTextStyle = '300 13px Arial';
+var bigBoldHeadlineTextStyle = '300 20px Arial';
+var toggleWidth = 0;
+var nestingDone = true;
+var maxWidth = 0;
+var nestRowYOffset = 0;
+var rowBaseY = 0;
+var rowBaseHeight = 0;
+var rolloverEffectID = -1;
+var initAnimationPlayed = false;
+var cornerRadius = { upperLeft: 0, upperRight: 0, lowerLeft: 0, lowerRight: 0 };
+var exchangeOffsetY = 0;
+var productOffsetY = 0;
+var selectedLabel = ['','',''];
+var selectedIndex = [-1,-1,-1];
+var mylocationSet = []; // holds button label text
+var exchangeSet = []; // holds button label text
+var productSet = []; // holds button label text
+var naExchanges = [];
+var naProducts = [];
+var currentRegion = [];
+var aimateBusy = false;
+var goMarginReq = false;
+var collectiveSteps = 0;
+var marginReqs = [0,0,0]; // Reg-T, Risk, Portfolio Margin
+// var ot = 0; // if user selects "Other" as their location
+var linkExchange = [];
+var linkYourLoc = [];
+var globalProdOffset = 2;
+var globalExch = 1;
+var product_pid = [];
+// UK based websites: EU, IE, IBCE, AU, IN, JP
+linkYourLoc = ['us','ca','uk','eu','au','hk','jp','in','ru','sg','ot'];
+linkExchange = ['us','ca','uk','eu','au','cn','hk','jp','in','mx','sg','kr','br','za','il','ru','gl'];
+product_pid = ['/trading/margin-stocks.php','../../trading/margin-options.html','../../trading/margin-futures-fops.html','../../trading/margin-ssf.html','../../trading/margin-bonds.html','../../trading/margin-funds.html','../../trading/margin-cfd.html' ,'../../trading/margin-forex.html','/trading/margin-metals.php'];
+globalProdOffset = 2;
+globalExch = 1;
+/* UPDATED TO USE NAMED PATHS INSTEAD OF PAGE IDS --------------------------------------------------
+var product_pid_fr = ['27610','27617','27623','27629','27641','27647','27659' ,'27635','27653'];
+var product_pid_de = ['27611','27618','27624','27630','27642','27648','27660' ,'27636','27654'];
+var product_pid_it = ['27612','27619','27625','27631','27643','27649','27661' ,'27637','27655'];
+var product_pid_jp = ['27613','27620','27626','27632','27644','27650','27662' ,'27638','27656'];
+var product_pid_ru = ['27614','27621','27627','27633','27645','27651','27663' ,'27639','27657'];
+var product_pid_es = ['27615','27622','27628','27634','27646','27652','27664' ,'27640','27658'];
+var product_pid_cn = ['27182','27184','27185','27186','27188','27189','27195' ,'27187','27190'];
+----------------------------------------------------------------------------------------------------   */
+var url = '';
+var currentProtocol = '';
+var currentDomain = '';
+var currentLangPrefix = 'en';
+var linkText = '';
+var colX = [65,265,465];
+var colXxs = [65,210,355];
+var stepProgress = [0,0,0];
+var stepHeadline = [];
+var subtitles = [];
+// Read in the list to get a total count of text boxes.
+// Each text box represents an object
+var textboxList = [];
+/* Loop through each product array to build the JQuery button listeners for each shortcut button (found in the table view accordions) */
+$('#stocks-000000').click(function(){ goShortcut(0,0,0); return false; });
+$('#stocks-000100').click(function(){ goShortcut(0,1,0); return false; });
+$('#stocks-000200').click(function(){ goShortcut(0,2,0); return false; });
+$('#stocks-000300').click(function(){ goShortcut(0,3,0); return false; });
+$('#stocks-000400').click(function(){ goShortcut(0,4,0); return false; });
+$('#stocks-000500').click(function(){ goShortcut(0,5,0); return false; });
+$('#stocks-000600').click(function(){ goShortcut(0,6,0); return false; });
+$('#stocks-000700').click(function(){ goShortcut(0,7,0); return false; });
+$('#stocks-000900').click(function(){ goShortcut(0,9,0); return false; });
+$('#stocks-001000').click(function(){ goShortcut(0,10,0); return false; });
+$('#stocks-001400').click(function(){ goShortcut(0,14,0); return false; });
+$('#stocks-001500').click(function(){ goShortcut(0,15,0); return false; });
+$('#stocks-010000').click(function(){ goShortcut(1,0,0); return false; });
+$('#stocks-010100').click(function(){ goShortcut(1,1,0); return false; });
+$('#stocks-010200').click(function(){ goShortcut(1,2,0); return false; });
+$('#stocks-010300').click(function(){ goShortcut(1,3,0); return false; }); 
+$('#stocks-010400').click(function(){ goShortcut(1,4,0); return false; });
+$('#stocks-010500').click(function(){ goShortcut(1,5,0); return false; });
+$('#stocks-010600').click(function(){ goShortcut(1,6,0); return false; });
+$('#stocks-010700').click(function(){ goShortcut(1,7,0); return false; });
+$('#stocks-010900').click(function(){ goShortcut(1,9,0); return false; });
+$('#stocks-011000').click(function(){ goShortcut(1,10,0); return false; });
+$('#stocks-011500').click(function(){ goShortcut(1,15,0); return false; });
+$('#stocks-020000').click(function(){ goShortcut(2,0,0); return false; });
+$('#stocks-020100').click(function(){ goShortcut(2,1,0); return false; });
+$('#stocks-020200').click(function(){ goShortcut(2,2,0); return false; });
+$('#stocks-020300').click(function(){ goShortcut(2,3,0); return false; });
+$('#stocks-020400').click(function(){ goShortcut(2,4,0); return false; });
+$('#stocks-020500').click(function(){ goShortcut(2,5,0); return false; });
+$('#stocks-020600').click(function(){ goShortcut(2,6,0); return false; });
+$('#stocks-020700').click(function(){ goShortcut(2,7,0); return false; });
+$('#stocks-020900').click(function(){ goShortcut(2,9,0); return false; });
+$('#stocks-021000').click(function(){ goShortcut(2,10,0); return false; });
+$('#stocks-021400').click(function(){ goShortcut(2,14,0); return false; });
+$('#stocks-021500').click(function(){ goShortcut(2,15,0); return false; });
+$('#stocks-030000').click(function(){ goShortcut(3,0,0); return false; });
+$('#stocks-030100').click(function(){ goShortcut(3,1,0); return false; });
+$('#stocks-030200').click(function(){ goShortcut(3,2,0); return false; });
+$('#stocks-030300').click(function(){ goShortcut(3,3,0); return false; });
+$('#stocks-030400').click(function(){ goShortcut(3,4,0); return false; });
+$('#stocks-030500').click(function(){ goShortcut(3,5,0); return false; });
+$('#stocks-030600').click(function(){ goShortcut(3,6,0); return false; });
+$('#stocks-030700').click(function(){ goShortcut(3,7,0); return false; });
+$('#stocks-030900').click(function(){ goShortcut(3,9,0); return false; });
+$('#stocks-031000').click(function(){ goShortcut(3,10,0); return false; });
+$('#stocks-031400').click(function(){ goShortcut(3,14,0); return false; });
+$('#stocks-031500').click(function(){ goShortcut(3,15,0); return false; });
+$('#stocks-040000').click(function(){ goShortcut(4,0,0); return false; });
+$('#stocks-040100').click(function(){ goShortcut(4,1,0); return false; });
+$('#stocks-040200').click(function(){ goShortcut(4,2,0); return false; });
+$('#stocks-040300').click(function(){ goShortcut(4,3,0); return false; });
+$('#stocks-040400').click(function(){ goShortcut(4,4,0); return false; });
+$('#stocks-040600').click(function(){ goShortcut(4,6,0); return false; });
+$('#stocks-040700').click(function(){ goShortcut(4,7,0); return false; });
+$('#stocks-040900').click(function(){ goShortcut(4,9,0); return false; });
+$('#stocks-041000').click(function(){ goShortcut(4,10,0); return false; });
+$('#stocks-041500').click(function(){ goShortcut(4,15,0); return false; });
+$('#stocks-050000').click(function(){ goShortcut(5,0,0); return false; });
+$('#stocks-050100').click(function(){ goShortcut(5,1,0); return false; });
+$('#stocks-050200').click(function(){ goShortcut(5,2,0); return false; });
+$('#stocks-050300').click(function(){ goShortcut(5,3,0); return false; });
+$('#stocks-050400').click(function(){ goShortcut(5,4,0); return false; });
+$('#stocks-050500').click(function(){ goShortcut(5,5,0); return false; });
+$('#stocks-050600').click(function(){ goShortcut(5,6,0); return false; });
+$('#stocks-050700').click(function(){ goShortcut(5,7,0); return false; });
+$('#stocks-050900').click(function(){ goShortcut(5,9,0); return false; });
+$('#stocks-051000').click(function(){ goShortcut(5,10,0); return false; });
+$('#stocks-051500').click(function(){ goShortcut(5,15,0); return false; });
+$('#stocks-060000').click(function(){ goShortcut(6,0,0); return false; });
+$('#stocks-060100').click(function(){ goShortcut(6,1,0); return false; });
+$('#stocks-060200').click(function(){ goShortcut(6,2,0); return false; });
+$('#stocks-060300').click(function(){ goShortcut(6,3,0); return false; });
+$('#stocks-060400').click(function(){ goShortcut(6,4,0); return false; });
+$('#stocks-060600').click(function(){ goShortcut(6,6,0); return false; });
+$('#stocks-060700').click(function(){ goShortcut(6,7,0); return false; });
+$('#stocks-060900').click(function(){ goShortcut(6,9,0); return false; });
+$('#stocks-061000').click(function(){ goShortcut(6,10,0); return false; });
+$('#stocks-061500').click(function(){ goShortcut(6,15,0); return false; });
+$('#stocks-070800').click(function(){ goShortcut(7,8,0); return false; });
+$('#stocks-080000').click(function(){ goShortcut(8,0,0); return false; });
+$('#stocks-080100').click(function(){ goShortcut(8,1,0); return false; });
+$('#stocks-080200').click(function(){ goShortcut(8,2,0); return false; });
+$('#stocks-080300').click(function(){ goShortcut(8,3,0); return false; });
+$('#stocks-080400').click(function(){ goShortcut(8,4,0); return false; });
+$('#stocks-080500').click(function(){ goShortcut(8,5,0); return false; });
+$('#stocks-080600').click(function(){ goShortcut(8,6,0); return false; });
+$('#stocks-070800').click(function(){ goShortcut(7,8,0); return false; });
+$('#stocks-080900').click(function(){ goShortcut(8,9,0); return false; });
+$('#stocks-081000').click(function(){ goShortcut(8,10,0); return false; });
+$('#stocks-081400').click(function(){ goShortcut(8,14,0); return false; });
+$('#stocks-081500').click(function(){ goShortcut(8,15,0); return false; });
+$('#stocks-090000').click(function(){ goShortcut(9,0,0); return false; });
+$('#stocks-090100').click(function(){ goShortcut(9,1,0); return false; });
+$('#stocks-090200').click(function(){ goShortcut(9,2,0); return false; });
+$('#stocks-090300').click(function(){ goShortcut(9,3,0); return false; });
+$('#stocks-090400').click(function(){ goShortcut(9,4,0); return false; });
+$('#stocks-090500').click(function(){ goShortcut(9,5,0); return false; });
+$('#stocks-090600').click(function(){ goShortcut(9,6,0); return false; });
+$('#stocks-090700').click(function(){ goShortcut(9,7,0); return false; });
+$('#stocks-090900').click(function(){ goShortcut(9,9,0); return false; });
+$('#stocks-091000').click(function(){ goShortcut(9,10,0); return false; });
+$('#stocks-091500').click(function(){ goShortcut(9,15,0); return false; });
+$('#stocks-100000').click(function(){ goShortcut(10,0,0); return false; });
+$('#stocks-100100').click(function(){ goShortcut(10,1,0); return false; });
+$('#stocks-100200').click(function(){ goShortcut(10,2,0); return false; });
+$('#stocks-100300').click(function(){ goShortcut(10,3,0); return false; });
+$('#stocks-100400').click(function(){ goShortcut(10,4,0); return false; });
+$('#stocks-100500').click(function(){ goShortcut(10,5,0); return false; });
+$('#stocks-100600').click(function(){ goShortcut(10,6,0); return false; });
+$('#stocks-100700').click(function(){ goShortcut(10,7,0); return false; });
+$('#stocks-100900').click(function(){ goShortcut(10,9,0); return false; });
+$('#stocks-101000').click(function(){ goShortcut(10,10,0); return false; });
+$('#stocks-101400').click(function(){ goShortcut(10,14,0); return false; });
+$('#stocks-101500').click(function(){ goShortcut(10,15,0); return false; });
+$('#options-000001').click(function(){ goShortcut(0,0,1); return false; });
+$('#options-010001').click(function(){ goShortcut(1,0,1); return false; });
+$('#options-010101').click(function(){ goShortcut(1,1,1); return false; });
+$('#options-011101').click(function(){ goShortcut(1,11,1); return false; });
+$('#options-020001').click(function(){ goShortcut(2,0,1); return false; });
+$('#options-020101').click(function(){ goShortcut(2,1,1); return false; });
+$('#options-020201').click(function(){ goShortcut(2,2,1); return false; });
+$('#options-020301').click(function(){ goShortcut(2,3,1); return false; });
+$('#options-020401').click(function(){ goShortcut(2,4,1); return false; });
+$('#options-020601').click(function(){ goShortcut(2,6,1); return false; });
+$('#options-020701').click(function(){ goShortcut(2,7,1); return false; });
+$('#options-020901').click(function(){ goShortcut(2,9,1); return false; });
+$('#options-021001').click(function(){ goShortcut(2,10,1); return false; });
+$('#options-021101').click(function(){ goShortcut(2,11,1); return false; });
+$('#options-030001').click(function(){ goShortcut(3,0,1); return false; });
+$('#options-030101').click(function(){ goShortcut(3,1,1); return false; });
+$('#options-030201').click(function(){ goShortcut(3,2,1); return false; });
+$('#options-030301').click(function(){ goShortcut(3,3,1); return false; });
+$('#options-030401').click(function(){ goShortcut(3,4,1); return false; });
+$('#options-030601').click(function(){ goShortcut(3,6,1); return false; });
+$('#options-030701').click(function(){ goShortcut(3,7,1); return false; });
+$('#options-030901').click(function(){ goShortcut(3,9,1); return false; });
+$('#options-031001').click(function(){ goShortcut(3,10,1); return false; });
+$('#options-031101').click(function(){ goShortcut(3,11,1); return false; });
+$('#options-040001').click(function(){ goShortcut(4,0,1); return false; });
+$('#options-040101').click(function(){ goShortcut(4,1,1); return false; });
+$('#options-040201').click(function(){ goShortcut(4,2,1); return false; });
+$('#options-040301').click(function(){ goShortcut(4,3,1); return false; });
+$('#options-040401').click(function(){ goShortcut(4,4,1); return false; });
+$('#options-040601').click(function(){ goShortcut(4,6,1); return false; });
+$('#options-040701').click(function(){ goShortcut(4,7,1); return false; });
+$('#options-041001').click(function(){ goShortcut(4,10,1); return false; });
+$('#options-041101').click(function(){ goShortcut(4,11,1); return false; });
+$('#options-050001').click(function(){ goShortcut(5,0,1); return false; });
+$('#options-050101').click(function(){ goShortcut(5,1,1); return false; });
+$('#options-050201').click(function(){ goShortcut(5,2,1); return false; });
+$('#options-050301').click(function(){ goShortcut(5,3,1); return false; });
+$('#options-050401').click(function(){ goShortcut(5,4,1); return false; });
+$('#options-050601').click(function(){ goShortcut(5,6,1); return false; });
+$('#options-050701').click(function(){ goShortcut(5,7,1); return false; });
+$('#options-051001').click(function(){ goShortcut(5,10,1); return false; });
+$('#options-051101').click(function(){ goShortcut(5,11,1); return false; });
+$('#options-060001').click(function(){ goShortcut(6,0,1); return false; });
+$('#options-060101').click(function(){ goShortcut(6,1,1); return false; });
+$('#options-060201').click(function(){ goShortcut(6,2,1); return false; });
+$('#options-060301').click(function(){ goShortcut(6,3,1); return false; });
+$('#options-060401').click(function(){ goShortcut(6,4,1); return false; });
+$('#options-060601').click(function(){ goShortcut(6,6,1); return false; });
+$('#options-060701').click(function(){ goShortcut(6,7,1); return false; });
+$('#options-061001').click(function(){ goShortcut(6,10,1); return false; });
+$('#options-061101').click(function(){ goShortcut(6,11,1); return false; });
+$('#options-070801').click(function(){ goShortcut(7,8,1); return false; });
+$('#options-080001').click(function(){ goShortcut(8,0,1); return false; });
+$('#options-070101').click(function(){ goShortcut(7,1,1); return false; });
+$('#options-070201').click(function(){ goShortcut(7,2,1); return false; });
+$('#options-070301').click(function(){ goShortcut(7,3,1); return false; });
+$('#options-070401').click(function(){ goShortcut(7,4,1); return false; });
+$('#options-070601').click(function(){ goShortcut(7,6,1); return false; });
+$('#options-070701').click(function(){ goShortcut(7,7,1); return false; });
+$('#options-070901').click(function(){ goShortcut(7,9,1); return false; });
+$('#options-071001').click(function(){ goShortcut(7,10,1); return false; });
+$('#options-071101').click(function(){ goShortcut(7,11,1); return false; });
+$('#options-090001').click(function(){ goShortcut(9,0,1); return false; });
+$('#options-090101').click(function(){ goShortcut(9,1,1); return false; });
+$('#options-090201').click(function(){ goShortcut(9,2,1); return false; });
+$('#options-090301').click(function(){ goShortcut(9,3,1); return false; });
+$('#options-090401').click(function(){ goShortcut(9,4,1); return false; });
+$('#options-090601').click(function(){ goShortcut(9,6,1); return false; });
+$('#options-090701').click(function(){ goShortcut(9,7,1); return false; });
+$('#options-091001').click(function(){ goShortcut(9,10,1); return false; });
+$('#options-091101').click(function(){ goShortcut(9,11,1); return false; });
+$('#options-100001').click(function(){ goShortcut(10,0,1); return false; });
+$('#futures-000002').click(function(){ goShortcut(0,0,2); return false; });
+$('#futures-000102').click(function(){ goShortcut(0,1,2); return false; });
+$('#futures-000202').click(function(){ goShortcut(0,2,2); return false; });
+$('#futures-000302').click(function(){ goShortcut(0,3,2); return false; });
+$('#futures-000402').click(function(){ goShortcut(0,4,2); return false; });
+$('#futures-000602').click(function(){ goShortcut(0,6,2); return false; });
+$('#futures-000702').click(function(){ goShortcut(0,7,2); return false; });
+$('#futures-000802').click(function(){ goShortcut(0,8,2); return false; });
+$('#futures-000902').click(function(){ goShortcut(0,9,2); return false; });
+$('#futures-001002').click(function(){ goShortcut(0,10,2); return false; });
+$('#futures-001102').click(function(){ goShortcut(0,11,2); return false; });
+$('#futures-010002').click(function(){ goShortcut(1,0,2); return false; });
+$('#futures-010102').click(function(){ goShortcut(1,1,2); return false; });
+$('#futures-010202').click(function(){ goShortcut(1,2,2); return false; });
+$('#futures-010302').click(function(){ goShortcut(1,3,2); return false; });
+$('#futures-010402').click(function(){ goShortcut(1,4,2); return false; });
+$('#futures-010602').click(function(){ goShortcut(1,6,2); return false; });
+$('#futures-010702').click(function(){ goShortcut(1,7,2); return false; });
+$('#futures-010802').click(function(){ goShortcut(1,8,2); return false; });
+$('#futures-010902').click(function(){ goShortcut(1,9,2); return false; });
+$('#futures-011002').click(function(){ goShortcut(1,10,2); return false; });
+$('#futures-011102').click(function(){ goShortcut(1,11,2); return false; });
+$('#futures-020002').click(function(){ goShortcut(2,0,2); return false; });
+$('#futures-020102').click(function(){ goShortcut(2,1,2); return false; });
+$('#futures-020202').click(function(){ goShortcut(2,2,2); return false; });
+$('#futures-020302').click(function(){ goShortcut(2,3,2); return false; });
+$('#futures-020402').click(function(){ goShortcut(2,4,2); return false; });
+$('#futures-020602').click(function(){ goShortcut(2,6,2); return false; });
+$('#futures-020702').click(function(){ goShortcut(2,7,2); return false; });
+$('#futures-020802').click(function(){ goShortcut(2,8,2); return false; });
+$('#futures-020902').click(function(){ goShortcut(2,9,2); return false; });
+$('#futures-021002').click(function(){ goShortcut(2,10,2); return false; });
+$('#futures-021102').click(function(){ goShortcut(2,11,2); return false; });
+$('#futures-030002').click(function(){ goShortcut(3,0,2); return false; });
+$('#futures-030102').click(function(){ goShortcut(3,1,2); return false; });
+$('#futures-030202').click(function(){ goShortcut(3,2,2); return false; });
+$('#futures-030302').click(function(){ goShortcut(3,3,2); return false; });
+$('#futures-030402').click(function(){ goShortcut(3,4,2); return false; });
+$('#futures-030602').click(function(){ goShortcut(3,6,2); return false; });
+$('#futures-030702').click(function(){ goShortcut(3,7,2); return false; });
+$('#futures-030802').click(function(){ goShortcut(3,8,2); return false; });
+$('#futures-030902').click(function(){ goShortcut(3,9,2); return false; });
+$('#futures-031002').click(function(){ goShortcut(3,10,2); return false; });
+$('#futures-031102').click(function(){ goShortcut(3,11,2); return false; });
+$('#futures-040002').click(function(){ goShortcut(4,0,2); return false; });
+$('#futures-040102').click(function(){ goShortcut(4,1,2); return false; });
+$('#futures-040202').click(function(){ goShortcut(4,2,2); return false; });
+$('#futures-040302').click(function(){ goShortcut(4,3,2); return false; });
+$('#futures-040402').click(function(){ goShortcut(4,4,2); return false; });
+$('#futures-040602').click(function(){ goShortcut(4,6,2); return false; });
+$('#futures-040702').click(function(){ goShortcut(4,7,2); return false; });
+$('#futures-040802').click(function(){ goShortcut(4,8,2); return false; });
+$('#futures-040902').click(function(){ goShortcut(4,9,2); return false; });
+$('#futures-041002').click(function(){ goShortcut(4,10,2); return false; });
+$('#futures-041102').click(function(){ goShortcut(4,11,2); return false; });
+$('#futures-050002').click(function(){ goShortcut(5,0,2); return false; });
+$('#futures-050102').click(function(){ goShortcut(5,1,2); return false; });
+$('#futures-050202').click(function(){ goShortcut(5,2,2); return false; });
+$('#futures-050302').click(function(){ goShortcut(5,3,2); return false; });
+$('#futures-050402').click(function(){ goShortcut(5,4,2); return false; });
+$('#futures-050602').click(function(){ goShortcut(5,6,2); return false; });
+$('#futures-050702').click(function(){ goShortcut(5,7,2); return false; });
+$('#futures-050802').click(function(){ goShortcut(5,8,2); return false; });
+$('#futures-050902').click(function(){ goShortcut(5,9,2); return false; });
+$('#futures-051002').click(function(){ goShortcut(5,10,2); return false; });
+$('#futures-051102').click(function(){ goShortcut(5,11,2); return false; });
+$('#futures-060002').click(function(){ goShortcut(6,0,2); return false; });
+$('#futures-060102').click(function(){ goShortcut(6,1,2); return false; });
+$('#futures-060202').click(function(){ goShortcut(6,2,2); return false; });
+$('#futures-060302').click(function(){ goShortcut(6,3,2); return false; });
+$('#futures-060402').click(function(){ goShortcut(6,4,2); return false; });
+$('#futures-060602').click(function(){ goShortcut(6,6,2); return false; });
+$('#futures-060702').click(function(){ goShortcut(6,7,2); return false; });
+$('#futures-060802').click(function(){ goShortcut(6,8,2); return false; });
+$('#futures-060902').click(function(){ goShortcut(6,9,2); return false; });
+$('#futures-061002').click(function(){ goShortcut(6,10,2); return false; });
+$('#futures-061102').click(function(){ goShortcut(6,11,2); return false; });
+$('#futures-070802').click(function(){ goShortcut(7,8,2); return false; });
+$('#futures-080002').click(function(){ goShortcut(8,0,2); return false; });
+$('#futures-080102').click(function(){ goShortcut(8,1,2); return false; });
+$('#futures-080202').click(function(){ goShortcut(8,2,2); return false; });
+$('#futures-080302').click(function(){ goShortcut(8,3,2); return false; });
+$('#futures-080402').click(function(){ goShortcut(8,4,2); return false; });
+$('#futures-080602').click(function(){ goShortcut(8,6,2); return false; });
+$('#futures-080702').click(function(){ goShortcut(8,7,2); return false; });
+$('#futures-080802').click(function(){ goShortcut(8,8,2); return false; });
+$('#futures-080902').click(function(){ goShortcut(8,9,2); return false; });
+$('#futures-081002').click(function(){ goShortcut(8,10,2); return false; });
+$('#futures-081102').click(function(){ goShortcut(8,11,2); return false; });
+$('#futures-090002').click(function(){ goShortcut(9,0,2); return false; });
+$('#futures-090102').click(function(){ goShortcut(9,1,2); return false; });
+$('#futures-090202').click(function(){ goShortcut(9,2,2); return false; });
+$('#futures-090302').click(function(){ goShortcut(9,3,2); return false; });
+$('#futures-090402').click(function(){ goShortcut(9,4,2); return false; });
+$('#futures-090602').click(function(){ goShortcut(9,6,2); return false; });
+$('#futures-090702').click(function(){ goShortcut(9,7,2); return false; });
+$('#futures-090802').click(function(){ goShortcut(9,8,2); return false; });
+$('#futures-090902').click(function(){ goShortcut(9,9,2); return false; });
+$('#futures-091002').click(function(){ goShortcut(9,10,2); return false; });
+$('#futures-091102').click(function(){ goShortcut(9,11,2); return false; });
+$('#futures-100002').click(function(){ goShortcut(10,0,2); return false; });
+$('#futures-100102').click(function(){ goShortcut(10,1,2); return false; });
+$('#futures-100202').click(function(){ goShortcut(10,2,2); return false; });
+$('#futures-100302').click(function(){ goShortcut(10,3,2); return false; });
+$('#futures-100402').click(function(){ goShortcut(10,4,2); return false; });
+$('#futures-100602').click(function(){ goShortcut(10,6,2); return false; });
+$('#futures-100702').click(function(){ goShortcut(10,7,2); return false; });
+$('#futures-100802').click(function(){ goShortcut(10,8,2); return false; });
+$('#futures-100902').click(function(){ goShortcut(10,9,2); return false; });
+$('#futures-101002').click(function(){ goShortcut(10,10,2); return false; });
+$('#futures-101102').click(function(){ goShortcut(10,11,2); return false; });
+$('#ssf-011103').click(function(){ goShortcut(1,11,3); return false; });
+$('#ssf-020203').click(function(){ goShortcut(2,2,3); return false; });
+$('#ssf-020303').click(function(){ goShortcut(2,3,3); return false; });
+$('#ssf-020603').click(function(){ goShortcut(2,6,3); return false; });
+$('#ssf-021103').click(function(){ goShortcut(2,11,3); return false; });
+$('#ssf-030203').click(function(){ goShortcut(3,2,3); return false; });
+$('#ssf-030303').click(function(){ goShortcut(3,3,3); return false; });
+$('#ssf-030603').click(function(){ goShortcut(3,6,3); return false; });
+$('#ssf-031103').click(function(){ goShortcut(3,11,3); return false; });
+$('#ssf-040603').click(function(){ goShortcut(4,6,3); return false; });
+$('#ssf-041103').click(function(){ goShortcut(4,11,3); return false; });
+$('#ssf-050603').click(function(){ goShortcut(5,6,3); return false; });
+$('#ssf-051103').click(function(){ goShortcut(5,11,3); return false; });
+$('#ssf-060603').click(function(){ goShortcut(6,6,3); return false; });
+$('#ssf-061103').click(function(){ goShortcut(6,11,3); return false; });
+$('#ssf-070803').click(function(){ goShortcut(7,8,3); return false; });
+$('#ssf-080203').click(function(){ goShortcut(8,2,3); return false; });
+$('#ssf-080303').click(function(){ goShortcut(8,3,3); return false; });
+$('#ssf-080603').click(function(){ goShortcut(8,6,3); return false; });
+$('#ssf-081103').click(function(){ goShortcut(8,11,3); return false; });
+$('#ssf-090603').click(function(){ goShortcut(9,6,3); return false; });
+$('#ssf-091103').click(function(){ goShortcut(9,11,3); return false; });
+$('#bonds-000004').click(function(){ goShortcut(0,0,4); return false; });
+$('#bonds-000104').click(function(){ goShortcut(0,1,4); return false; });
+$('#bonds-000204').click(function(){ goShortcut(0,2,4); return false; });
+$('#bonds-000304').click(function(){ goShortcut(0,3,4); return false; });
+$('#bonds-010004').click(function(){ goShortcut(1,0,4); return false; });
+$('#bonds-010104').click(function(){ goShortcut(1,1,4); return false; });
+$('#bonds-010204').click(function(){ goShortcut(1,2,4); return false; });
+$('#bonds-010304').click(function(){ goShortcut(1,3,4); return false; });
+$('#bonds-020004').click(function(){ goShortcut(2,0,4); return false; });
+$('#bonds-020104').click(function(){ goShortcut(2,1,4); return false; });
+$('#bonds-020204').click(function(){ goShortcut(2,2,4); return false; });
+$('#bonds-020304').click(function(){ goShortcut(2,3,4); return false; });
+$('#bonds-030004').click(function(){ goShortcut(3,0,4); return false; });
+$('#bonds-030104').click(function(){ goShortcut(3,1,4); return false; });
+$('#bonds-030204').click(function(){ goShortcut(3,2,4); return false; });
+$('#bonds-030304').click(function(){ goShortcut(3,3,4); return false; });
+$('#bonds-050004').click(function(){ goShortcut(5,0,4); return false; });
+$('#bonds-050104').click(function(){ goShortcut(5,1,4); return false; });
+$('#bonds-050204').click(function(){ goShortcut(5,2,4); return false; });
+$('#bonds-050304').click(function(){ goShortcut(5,3,4); return false; });
+$('#bonds-050604').click(function(){ goShortcut(5,6,4); return false; });
+$('#bonds-060004').click(function(){ goShortcut(6,0,4); return false; });
+$('#bonds-060104').click(function(){ goShortcut(6,1,4); return false; });
+$('#bonds-060204').click(function(){ goShortcut(6,2,4); return false; });
+$('#bonds-060304').click(function(){ goShortcut(6,3,4); return false; });
+$('#bonds-060604').click(function(){ goShortcut(6,6,4); return false; });
+$('#bonds-080004').click(function(){ goShortcut(8,0,4); return false; });
+$('#bonds-080104').click(function(){ goShortcut(8,1,4); return false; });
+$('#bonds-080204').click(function(){ goShortcut(8,2,4); return false; });
+$('#bonds-080304').click(function(){ goShortcut(8,3,4); return false; });
+$('#bonds-090004').click(function(){ goShortcut(9,0,4); return false; });
+$('#bonds-090104').click(function(){ goShortcut(9,1,4); return false; });
+$('#bonds-090204').click(function(){ goShortcut(9,2,4); return false; });
+$('#bonds-090304').click(function(){ goShortcut(9,3,4); return false; });
+$('#bonds-090604').click(function(){ goShortcut(9,6,4); return false; });
+$('#bonds-100004').click(function(){ goShortcut(10,0,4); return false; });
+$('#bonds-100104').click(function(){ goShortcut(10,1,4); return false; });
+$('#bonds-100204').click(function(){ goShortcut(10,2,4); return false; });
+$('#bonds-100304').click(function(){ goShortcut(10,3,4); return false; });
+$('#mutual_funds-000005').click(function(){ goShortcut(0,0,5); return false; });
+$('#mutual_funds-020205').click(function(){ goShortcut(2,2,5); return false; });
+$('#mutual_funds-020305').click(function(){ goShortcut(2,3,5); return false; });
+$('#mutual_funds-030205').click(function(){ goShortcut(3,2,5); return false; });
+$('#mutual_funds-030305').click(function(){ goShortcut(3,3,5); return false; });
+$('#mutual_funds-040205').click(function(){ goShortcut(4,2,5); return false; });
+$('#mutual_funds-040305').click(function(){ goShortcut(4,3,5); return false; });
+$('#mutual_funds-050205').click(function(){ goShortcut(5,2,5); return false; });
+$('#mutual_funds-050305').click(function(){ goShortcut(5,3,5); return false; });
+$('#mutual_funds-060005').click(function(){ goShortcut(6,0,5); return false; });
+$('#mutual_funds-060205').click(function(){ goShortcut(6,2,5); return false; });
+$('#mutual_funds-060305').click(function(){ goShortcut(6,3,5); return false; });
+$('#mutual_funds-080205').click(function(){ goShortcut(8,2,5); return false; });
+$('#mutual_funds-080305').click(function(){ goShortcut(8,3,5); return false; });
+$('#mutual_funds-100005').click(function(){ goShortcut(10,0,5); return false; });
+$('#mutual_funds-100205').click(function(){ goShortcut(10,2,5); return false; });
+$('#mutual_funds-100305').click(function(){ goShortcut(10,3,5); return false; });
+$('#cfds-020006').click(function(){ goShortcut(2,0,6); return false; });
+$('#cfds-020206').click(function(){ goShortcut(2,2,6); return false; });
+$('#cfds-020306').click(function(){ goShortcut(2,3,6); return false; });
+$('#cfds-020406').click(function(){ goShortcut(2,4,6); return false; });
+$('#cfds-020606').click(function(){ goShortcut(2,6,6); return false; });
+$('#cfds-020706').click(function(){ goShortcut(2,7,6); return false; });
+$('#cfds-021006').click(function(){ goShortcut(2,10,6); return false; });
+$('#cfds-021206').click(function(){ goShortcut(2,12,6); return false; });
+$('#cfds-021306').click(function(){ goShortcut(2,13,6); return false; });
+$('#cfds-030006').click(function(){ goShortcut(3,0,6); return false; });
+$('#cfds-030206').click(function(){ goShortcut(3,2,6); return false; });
+$('#cfds-030306').click(function(){ goShortcut(3,3,6); return false; });
+$('#cfds-030406').click(function(){ goShortcut(3,4,6); return false; });
+$('#cfds-030606').click(function(){ goShortcut(3,6,6); return false; });
+$('#cfds-030706').click(function(){ goShortcut(3,7,6); return false; });
+$('#cfds-031006').click(function(){ goShortcut(3,10,6); return false; });
+$('#cfds-031206').click(function(){ goShortcut(3,12,6); return false; });
+$('#cfds-031306').click(function(){ goShortcut(3,13,6); return false; });
+$('#cfds-040006').click(function(){ goShortcut(4,0,6); return false; });
+$('#cfds-040206').click(function(){ goShortcut(4,2,6); return false; });
+$('#cfds-040306').click(function(){ goShortcut(4,3,6); return false; });
+$('#cfds-040406').click(function(){ goShortcut(4,4,6); return false; });
+$('#cfds-040606').click(function(){ goShortcut(4,6,6); return false; });
+$('#cfds-040706').click(function(){ goShortcut(4,7,6); return false; });
+$('#cfds-041006').click(function(){ goShortcut(4,10,6); return false; });
+$('#cfds-041206').click(function(){ goShortcut(4,12,6); return false; });
+$('#cfds-041306').click(function(){ goShortcut(4,13,6); return false; });
+$('#cfds-060006').click(function(){ goShortcut(6,0,6); return false; });
+$('#cfds-060206').click(function(){ goShortcut(6,2,6); return false; });
+$('#cfds-060306').click(function(){ goShortcut(6,3,6); return false; });
+$('#cfds-060406').click(function(){ goShortcut(6,4,6); return false; });
+$('#cfds-060606').click(function(){ goShortcut(6,6,6); return false; });
+$('#cfds-060706').click(function(){ goShortcut(6,7,6); return false; });
+$('#cfds-061006').click(function(){ goShortcut(6,10,6); return false; });
+$('#cfds-061206').click(function(){ goShortcut(6,12,6); return false; });
+$('#cfds-061306').click(function(){ goShortcut(6,13,6); return false; });
+$('#cfds-080006').click(function(){ goShortcut(8,0,6); return false; });
+$('#cfds-080206').click(function(){ goShortcut(8,2,6); return false; });
+$('#cfds-080306').click(function(){ goShortcut(8,3,6); return false; });
+$('#cfds-080406').click(function(){ goShortcut(8,4,6); return false; });
+$('#cfds-080606').click(function(){ goShortcut(8,6,6); return false; });
+$('#cfds-080706').click(function(){ goShortcut(8,7,6); return false; });
+$('#cfds-081006').click(function(){ goShortcut(8,10,6); return false; });
+$('#cfds-081206').click(function(){ goShortcut(8,12,6); return false; });
+$('#cfds-081306').click(function(){ goShortcut(8,13,6); return false; });
+$('#cfds-090006').click(function(){ goShortcut(9,0,6); return false; });
+$('#cfds-090206').click(function(){ goShortcut(9,2,6); return false; });
+$('#cfds-090306').click(function(){ goShortcut(9,3,6); return false; });
+$('#cfds-090406').click(function(){ goShortcut(9,4,6); return false; });
+$('#cfds-090606').click(function(){ goShortcut(9,6,6); return false; });
+$('#cfds-090706').click(function(){ goShortcut(9,7,6); return false; });
+$('#cfds-091006').click(function(){ goShortcut(9,10,6); return false; });
+$('#cfds-091206').click(function(){ goShortcut(9,12,6); return false; });
+$('#cfds-091306').click(function(){ goShortcut(9,13,6); return false; });
+$('#cfds-100006').click(function(){ goShortcut(10,0,6); return false; });
+$('#cfds-100206').click(function(){ goShortcut(10,2,6); return false; });
+$('#cfds-100306').click(function(){ goShortcut(10,3,6); return false; });
+$('#cfds-100406').click(function(){ goShortcut(10,4,6); return false; });
+$('#cfds-100606').click(function(){ goShortcut(10,6,6); return false; });
+$('#cfds-100706').click(function(){ goShortcut(10,7,6); return false; });
+$('#cfds-101006').click(function(){ goShortcut(10,10,6); return false; });
+$('#cfds-101206').click(function(){ goShortcut(10,12,6); return false; });
+$('#cfds-101306').click(function(){ goShortcut(10,13,6); return false; });
+$('#forex-001607').click(function(){ goShortcut(0,16,7); return false; });
+$('#forex-011607').click(function(){ goShortcut(1,16,7); return false; });
+$('#forex-021607').click(function(){ goShortcut(2,16,7); return false; });
+$('#forex-031607').click(function(){ goShortcut(3,16,7); return false; });
+$('#forex-051607').click(function(){ goShortcut(5,16,7); return false; });
+$('#forex-061607').click(function(){ goShortcut(6,16,7); return false; });
+$('#forex-081607').click(function(){ goShortcut(8,16,7); return false; });
+$('#forex-101607').click(function(){ goShortcut(10,16,7); return false; });
+$('#metals-021108').click(function(){ goShortcut(2,11,8); return false; });
+$('#metals-031108').click(function(){ goShortcut(3,11,8); return false; });
+$('#metals-081108').click(function(){ goShortcut(8,11,8); return false; });
+var goShortcut = function(r, e, p){
+// console.log('Shortcut parameters: ' + r +', '+ e +', '+ p);
+// r = region of resident, e = exchange location, p = product
+selectedIndex[0] = r;
+selectedIndex[1] = e;
+selectedIndex[2] = p;
+switch (r){
+case 0:
+currentRegion = res_us;
+break;
+case 1:
+currentRegion = res_ca;
+break;
+case 2:
+currentRegion = res_uk;
+break;
+case 3:
+currentRegion = res_eu;
+break;
+case 4:
+currentRegion = res_au;
+break;
+case 5:
+currentRegion = res_hk;
+break;
+case 6:
+currentRegion = res_jp;
+break;
+case 7:
+currentRegion = res_in;
+break;
+case 8:
+currentRegion = res_ru;
+break;
+case 9:
+currentRegion = res_sg;
+break;
+case 10:
+currentRegion = res_ot;
+break;
+}
+// console.log('REGION ARRAY currentRegion = ' + currentRegion);
+launchURL();
+}
+var createTextbox = function(x,y,w,h,text,lineset,loc,btntype,btnstate,bid) {
+var textbox = {
+width: Number(w),
+height: Number(h),
+myleft:0,
+mytop:0,
+fillStyle: 'rgba(219,18,34,1.0)',
+fillStyle2: 'rgba(219,18,34,1.0)',
+strokeStyle: 'rgba(219,18,34,1.0)',
+colorFillStyle: 'rgba(255,255,255,1.0)',
+hoverFillStyle: 'rgba(226,161,6,1.0)',
+hoverFillStyle2: 'rgba(226,161,6,1.0)',
+hoverStrokeStyle: 'rgba(226,161,6,1.0)',
+hoverColorFillStyle: 'rgba(56,43,37,1.0)',
+offFillStyle: 'rgba(56,43,37,1.0)',
+offFillStyle2: 'rgba(56,43,37,1.0)',
+offStrokeStyle: 'rgba(56,43,37,1.0)',
+offColorFillStyle: 'rgba(255,255,255,1.0)',
+naFillStyle: 'rgba(255,255,255,1.0)',
+naFillStyle2: 'rgba(255,255,255,1.0)',
+naStrokeStyle: 'rgba(127,127,127,1.0)',
+naColorFillStyle: 'rgba(127,127,127,1.0)',
+		dark_fillStyle: 'rgba(219,18,34,1.0)',
+		dark_fillStyle2: 'rgba(219,18,34,1.0)',
+		dark_strokeStyle: 'rgba(219,18,34,1.0)',
+		dark_colorFillStyle: 'rgba(4,4,4,1.0)',
+		dark_hoverFillStyle: 'rgba(226,161,6,1.0)',
+		dark_hoverFillStyle2: 'rgba(226,161,6,1.0)',
+		dark_hoverStrokeStyle: 'rgba(226,161,6,1.0)',
+		dark_hoverColorFillStyle: 'rgba(4,4,4,1.0)',
+		dark_offFillStyle: 'rgba(170,158,133,1.0)',
+		dark_offFillStyle2: 'rgba(170,158,133,1.0)',
+		dark_offStrokeStyle: 'rgba(170,158,133,1.0)',
+		dark_offColorFillStyle: 'rgba(4,4,4,1.0)',
+		dark_naFillStyle: 'rgba(59,59,59,1.0)',
+		dark_naFillStyle2: 'rgba(59,59,59,1.0)',
+		dark_naStrokeStyle: 'rgba(59,59,59,1.0)',
+		dark_naColorFillStyle: 'rgba(130,130,130,1.0)',
+lineWeight: 0.85,
+text: text,
+bid: bid,
+font: 'Arial',
+fontSize: '13px',
+fontWeigth: '700',
+stepType: 'button',
+lineHeight: 17,
+opacity: 1.0,
+progress: 0,
+holdLineSet: [],
+myLoc: 'null',
+btntype: 'null',
+buttonState: 'na',
+timeDelay: 0,
+target: {
+x: x,
+y: y
+},
+ctr: {
+x: x,
+y: y
+}
+};
+if (winWidth<768){
+textbox.fontSize = '13px';
+}
+textbox.ctr.x = x;
+textbox.ctr.y = y;
+textbox.target.x = x;
+textbox.target.y = y;
+textbox.holdLineSet = lineset;
+textbox.myLoc = loc;
+textbox.btntype = btntype;
+textbox.buttonState = btnstate;
+textboxList.push(textbox);
+};
+var stepSetH1 = [];
+var stepSetH6 = [];
+var createSteps = function(x,y,w,h,text,sstate,stype){
+var stepBox = {
+width: Number(w),
+height: Number(h),
+myleft:0,
+mytop:0,
+fillStyle: 'rgba(255,255,255,1.0)',
+fillStyle2: 'rgba(255,255,255,1.0)',
+strokeStyle: 'rgba(219,18,34,1.0)',
+colorFillStyle: 'rgba(28,28,28,1.0)',
+offFillStyle: 'rgba(255,255,255,1.0)',
+offFillStyle2: 'rgba(255,255,255,1.0)',
+offStrokeStyle: 'rgba(190,190,190,1.0)',
+offColorFillStyle: 'rgba(127,127,127,1.0)',
+		dark_fillStyle: 'rgba(0,0,0,1.0)',
+		dark_fillStyle2: 'rgba(0,0,0,1.0)',
+		dark_strokeStyle: 'rgba(219,18,34,1.0)',
+		dark_colorFillStyle: 'rgba(228,228,228,1.0)',
+		dark_offFillStyle: 'rgba(0,0,0,1.0)',
+		dark_offFillStyle2: 'rgba(0,0,0,1.0)',
+		dark_offStrokeStyle: 'rgba(60,60,60,1.0)',
+		dark_offColorFillStyle: 'rgba(127,127,127,1.0)',
+lineWeight: 0.85,
+text: text,
+h1TextStyle: '700 30px Arial',
+h6TextStyle: '700 13px Arial',
+font: 'Arial',
+fontSize: '13px',
+fontWeigth: '700',
+lineHeight: 17,
+opacity: 1.0,
+stepType: 'h1',
+stepState: 'off',
+target: {
+x: x,
+y: y
+},
+ctr: {
+x: x,
+y: y
+}
+};
+stepBox.ctr.x = x;
+stepBox.ctr.y = y;
+stepBox.target.x = x;
+stepBox.target.y = y;
+stepBox.stepType = stype;
+stepBox.stepState = sstate;
+if (stype=='h1'){
+stepSetH1.push(stepBox);
+}else{
+stepSetH6.push(stepBox);
+}
+};
+var displaySteps = function () {
+var stepTop = 20;
+var subTitleTop = 50;
+if (winWidth<768){
+createSteps(colXxs[0],stepTop,140,40,stepHeadline[0],'active','h1');
+createSteps(colXxs[0],subTitleTop,120,40,subtitles[0],'active','h6');
+createSteps(colXxs[1],stepTop,140,40,stepHeadline[1],'off','h1');
+createSteps(colXxs[1],subTitleTop,120,40,subtitles[1],'off','h6');
+createSteps(colXxs[2],stepTop,140,40,stepHeadline[2],'off','h1');
+createSteps(colXxs[2],subTitleTop,120,40,subtitles[2],'off','h6');
+}else{
+createSteps(colX[0],stepTop,140,40,stepHeadline[0],'active','h1');
+createSteps(colX[0],subTitleTop,120,40,subtitles[0],'active','h6');
+createSteps(colX[1],stepTop,140,40,stepHeadline[1],'off','h1');
+createSteps(colX[1],subTitleTop,120,40,subtitles[1],'off','h6');
+createSteps(colX[2],stepTop,140,40,stepHeadline[2],'off','h1');
+createSteps(colX[2],subTitleTop,120,40,subtitles[2],'off','h6');
+}
+stepProgress[0] = 1;
+};
+// Create the array of textbox items based on the HTML lists
+$( ".textbox-items-960 li" ).each(function( index ) {
+url = window.location.href;
+var urlParts = url.split('../../index.html');
+currentProtocol = urlParts[0];
+currentDomain = urlParts[2];
+currentLangPrefix = urlParts[3];
+linkText = currentProtocol+'//'+currentDomain+'/'+currentLangPrefix;
+var yOffsetTitle = 54;
+var btnY = 36;
+myY = btnY*index +btnY + yOffsetTitle; // (canvas.height/2)+((Math.random()*400)-200);
+myWidth = $( this ).attr( "width" ); // 128;
+myHeight = $( this ).attr( "height" ); // 30;
+myText = $( this ).text();
+myID = $( this ).attr( "id" );
+holdLineset = $( this ).attr( "lines" ).split(',');
+btntype = $( this ).attr( 'class' );
+btnstate = 'na';
+if (winWidth<768){
+myWidth *= 0.85;
+// size for mobile devices
+switch (btntype){
+case 'mylocation':
+myX = colXxs[0];
+exchangeOffsetY = myY;
+productOffsetY = myY;
+// mylocationSet.push(myText);
+mylocationSet.push(myID);
+btnstate = 'off';
+break;
+case 'exchange':
+myX = colXxs[1];
+myY = btnY*index +btnY - exchangeOffsetY + (2 * yOffsetTitle);
+productOffsetY = myY;
+// exchangeSet.push(myText);
+exchangeSet.push(myID);
+naExchanges.push(-1);
+break;
+case 'product':
+myX = colXxs[2];
+myY = btnY*index +btnY - productOffsetY - exchangeOffsetY + (3 * yOffsetTitle);
+// productSet.push(myText);
+productSet.push(myID);
+naProducts.push(-1);
+break;
+case 'titlestep':
+stepHeadline.push(myText);
+break;
+case 'subtitlesstep':
+subtitles.push(myText);
+break;
+default:
+myX = 65;
+myY = btnY*index +btnY;
+break;
+}
+}else{
+// size for non-mobile large screens
+switch (btntype){
+case 'mylocation':
+myX = colX[0];
+exchangeOffsetY = myY;
+productOffsetY = myY;
+// mylocationSet.push(myText);
+mylocationSet.push(myID);
+btnstate = 'off';
+break;
+case 'exchange':
+myX = colX[1];
+myY = btnY*index +btnY - exchangeOffsetY + (2 * yOffsetTitle);
+productOffsetY = myY;
+// exchangeSet.push(myText);
+exchangeSet.push(myID);
+naExchanges.push(-1);
+break;
+case 'product':
+myX = colX[2];
+myY = btnY*index +btnY - productOffsetY - exchangeOffsetY + (3 * yOffsetTitle);
+// productSet.push(myText);
+productSet.push(myID);
+naProducts.push(-1);
+break;
+case 'titlestep':
+stepHeadline.push(myText);
+break;
+case 'subtitlesstep':
+subtitles.push(myText);
+break;
+default:
+myX = 65;
+myY = btnY*index +btnY;
+break;
+}
+}
+myleft = myX - myWidth/2;
+mytop = myY - myHeight/2;
+if ( $( this ).attr( 'loc' )!= null ){
+myLoc = $( this ).attr( 'loc' );
+}else{
+myLoc = 'null';
+}
+if ( (btntype != 'titlestep') && (btntype != 'subtitlesstep')){
+tBox = createTextbox(myX,myY,myWidth,myHeight,myText,holdLineset,myLoc,btntype,btnstate,myID);
+}else{
+if (subtitles.length == 3){
+displaySteps();
+}
+}
+});
+// use 'mousemove' to crete button rollover effect
+activearea.on('mousemove', function(evt){
+var rect = canvas.getBoundingClientRect();
+var hitX = evt.pageX - rect.left;
+var hitY = evt.pageY - rect.top - pageYOffset;
+// $('html,body').css({'cursor':'pointer'});
+for(var i=0; i<textboxList.length; i++){
+myleft = textboxList[i].ctr.x - textboxList[i].width/2,
+mytop = textboxList[i].ctr.y - textboxList[i].height/2;
+/*if (i==0){
+console.log( "hovering x,y of mouse: " + hitX +", "+hitY);
+console.log( i + ": button left,top: " + myleft +", "+mytop);
+}*/
+if ( hitY > mytop && hitY < (mytop + textboxList[i].height) && hitX > myleft && hitX < (myleft + textboxList[i].width) ) {
+// noClick = false;
+if ( (textboxList[i].buttonState != 'na') && (textboxList[i].buttonState != 'active') && (textboxList[i].buttonState != 'hover') ){
+textboxList[i].buttonState = "hover";
+}
+}else{
+// only reset buttonState if hoverState is currently active
+if (textboxList[i].buttonState == "hover"){
+textboxList[i].buttonState = "off";
+}
+}
+}
+});
+// use 'mousedown' to record button selections of STEP 1, 2, and 3
+activearea.on('mousedown', function(evt){
+// prevent button click until animation is finished
+if (collectiveSteps==0){
+aimateBusy = false;
+}
+if (!aimateBusy){
+aimateBusy = true;
+var rect = canvas.getBoundingClientRect();
+var hitX = evt.pageX - rect.left;
+var hitY = evt.pageY - rect.top - pageYOffset;
+var submitLeft =0, submitTop =0;
+var noClick = true;
+var btnTypeClicked = '';
+var now = new Date();
+// set buttonslide distance
+var slideDist = 50;
+if (winWidth<768){
+slideDist = 30;
+}
+for(var i=0; i<textboxList.length; i++){
+myleft = textboxList[i].ctr.x - textboxList[i].width/2,
+mytop = textboxList[i].ctr.y - textboxList[i].height/2;
+if ( hitY > mytop && hitY < (mytop + textboxList[i].height) && hitX > myleft && hitX < (myleft + textboxList[i].width) ) {
+noClick = false;
+if (textboxList[i].buttonState != 'na'){
+btnTypeClicked = textboxList[i].btntype;
+switch( (textboxList[i].btntype) ){
+// STEP 1 SELECTION
+case 'mylocation':
+// selectedLabel[0] = textboxList[i].text;
+selectedLabel[0] = textboxList[i].bid;
+selectedIndex[0] = mylocationSet.indexOf(selectedLabel[0]);
+textboxList[i].buttonState = 'active';
+// Reset the Exchange and Product selections
+selectedLabel[1] = '';
+selectedIndex[1] = -1;
+selectedLabel[2] = '';
+selectedIndex[2] = -1;
+// console.log('selectedLabel[0] m06 = ' + selectedLabel[0] );
+switch (selectedLabel[0]){
+case 'm01':
+currentRegion = res_us;
+break;
+case 'm02':
+currentRegion = res_ca;
+break;
+case 'm03':
+currentRegion = res_uk;
+break;
+case 'm04':
+currentRegion = res_eu;
+break;
+case 'm05':
+currentRegion = res_au;
+break;
+case 'm06':
+currentRegion = res_hk;
+break;
+case 'm07':
+currentRegion = res_jp;
+break;
+case 'm08':
+currentRegion = res_in;
+break;
+case 'm09':
+currentRegion = res_ru;
+break;
+case 'm10':
+currentRegion = res_sg;
+// console.log('res_sg');
+break;
+case 'm11':
+currentRegion = res_ot;
+// ot = 1;
+break;
+}
+var testProd = 0;
+// display corresponding list of acceptable exchanges
+for (var j=0; j<exchangeSet.length; j++){
+testProd = 0;
+// for (var k=0;k<productSet.length; k++){
+for (var k=0;k<productSet.length; k++){
+// console.log( k + ': region product name: ' + currentRegion[j][k][0] );
+if ( currentRegion[j][k][4] != 1){
+// This exchange has a viable product
+testProd = 1;
+break;
+}
+}
+naExchanges[j]=testProd;
+// console.log( j + ': naExchanges = ' + naExchanges[j] + ' and exchangeSet.length = ' + exchangeSet.length );
+}
+for (var j=0; j<naProducts.length; j++){
+naProducts[j]=0;
+// console.log( j + ':exch: naProducts = ' + naProducts[j] + ' and productSet.length = ' + productSet.length );
+}
+/*selectedIndex[1] connects to naExchanges[] mylocationSet exchangeSet productSet */
+stepProgress[0]=0;
+stepProgress[1]=1;
+stepProgress[2]=0;
+break;
+// STEP 2 SELECTION
+case 'exchange':
+// selectedLabel[1] = textboxList[i].text;
+selectedLabel[1] = textboxList[i].bid;
+selectedIndex[1] = exchangeSet.indexOf(selectedLabel[1]);
+textboxList[i].buttonState = 'active';
+// console.log('selectedLabel[1] and selectedIndex[1] = ' + selectedLabel[1] +' and '+ selectedIndex[1] );
+// Reset the Product selection
+selectedLabel[2] = '';
+selectedIndex[2] = -1;
+textboxList[i].target.x = textboxList[i].ctr.x;
+for (var k=0;k<productSet.length; k++){
+naProducts[k]=0;
+}
+var testProd = 0;
+if (selectedIndex[1] != (exchangeSet.length-globalExch)){
+// DOMESTIC PRODUCTS
+// display corresponding list of acceptable products
+/*for (var k=0;k<productSet.length-2; k++){*/
+for (var k=0;k<productSet.length-globalProdOffset; k++){
+testProd = 0;
+if ( currentRegion[ selectedIndex[1] ][k][4] != 1){
+// This exchange has a viable product
+testProd = 1;
+naProducts[k]=testProd;
+console.log( k + ' k: naProducts = ' + naProducts[k] + ' and productSet.length = ' + productSet.length + ', selectedIndex[1] ' + selectedIndex[1] );
+}
+}
+}else{
+// GLOBAL PRODUCTS
+// display corresponding list of acceptable products
+for (var k=7;k<productSet.length; k++){
+testProd = 0;
+if ( currentRegion[ selectedIndex[1] ][k][4] != 1){
+// This exchange has a viable product
+/*if ( (selectedIndex[0] == 0) && (k == 8) ){
+// SPECIAL EXCEPTION ALLOWING "OTHER" TO SHOW "CFD" BUT HIDE IT FOR "US"
+// WHERE "OTHER" IS selectedIndex[0] == 7 AND "US" IS selectedIndex[0] == 0
+testProd = 0;
+}else{
+testProd = 1;
+}*/
+testProd = 1;
+}
+naProducts[k]=testProd;
+}
+}
+stepProgress[0]=0;
+stepProgress[1]=0;
+stepProgress[2]=1;
+break;
+// STEP 3 SELECTION
+case 'product':
+// selectedLabel[2] = textboxList[i].text;
+selectedLabel[2] = textboxList[i].bid;
+selectedIndex[2] = productSet.indexOf(selectedLabel[2]);
+textboxList[i].buttonState = 'active';
+textboxList[i].target.x = textboxList[i].ctr.x;
+stepProgress[0]=1;
+stepProgress[1]=1;
+stepProgress[2]=1;
+goMarginReq = true;
+break;
+default:
+break;
+}
+}
+}else{
+// button was not hit
+}
+}// close click busy
+}
+// Test if Show Margin Requirements button clicked ---------------------------
+// submitLeft = otherObj[0].ctr.x - otherObj[0].width/2,
+// submitTop = otherObj[0].ctr.y - otherObj[0].height/2;
+// console.log('submit left, top, hitY, hitX : ' + submitLeft +', '+ submitTop +', '+ hitY +', '+ hitX );
+// DEFINE THE TARGET URL BASED ON THE 3 STEP SELECTIONS
+if (goMarginReq){
+launchURL();
+}
+// ----------------------------------------------------------------------------
+// Loop through all buttons to adjust other buttons based on user selection
+if (!noClick){
+for(var i=0; i<textboxList.length; i++){
+switch( (textboxList[i].btntype) ){
+case 'mylocation':
+if (selectedLabel[0]!='') {
+if (i==selectedIndex[0]){
+textboxList[i].buttonState = 'active';
+}else{
+textboxList[i].buttonState = 'off';
+}
+}
+break;
+case 'exchange':
+// console.log('naExchanges = ' + naExchanges.toString() +' and mylocationSet.length is: '+ mylocationSet.length );
+if(naExchanges[ i - mylocationSet.length ] != -1 ){
+// Show N/A buttons based on user's Location selection
+if(naExchanges[ i - mylocationSet.length ] == 0 ){
+textboxList[i].buttonState = 'na';
+}else{
+if (btnTypeClicked == 'mylocation'){
+textboxList[i].ctr.x -= slideDist;
+now = new Date();
+textboxList[i].timeDelay = now.getTime() + ( 40 * i - mylocationSet.length );
+}
+if ( (i-mylocationSet.length) == selectedIndex[1]){
+textboxList[i].buttonState = 'active';
+}else{
+textboxList[i].buttonState = 'off';
+}
+}
+}
+break;
+case 'product':
+// Show N/A buttons based on user's Exchange selection
+// console.log('naProducts = ' + naProducts.toString() );
+if(naProducts[ i - mylocationSet.length - exchangeSet.length ] != -1 ){
+if(naProducts[ i - mylocationSet.length - exchangeSet.length ] == 0 ){
+textboxList[i].buttonState = 'na';
+}else{
+if (btnTypeClicked == 'exchange'){
+textboxList[i].ctr.x -= slideDist;
+now = new Date();
+textboxList[i].timeDelay = now.getTime() + ( 40 * i - mylocationSet.length - exchangeSet.length );
+}
+if ( (i - mylocationSet.length - exchangeSet.length ) == selectedIndex[2]){
+textboxList[i].buttonState = 'active';
+}else{
+textboxList[i].buttonState = 'off';
+}
+}
+}
+break;
+default:
+break;
+}
+}
+}
+});
+var launchURL = function(){
+// Hold Margin Requirements based on the 3 selected parameters:
+// var marginReqs = [0,0,0]; // Reg-T, Risk, Portfolio Margin
+marginReqs[0]=currentRegion[selectedIndex[1]][selectedIndex[2]][1];
+marginReqs[1]=currentRegion[selectedIndex[1]][selectedIndex[2]][2];
+marginReqs[2]=currentRegion[selectedIndex[1]][selectedIndex[2]][3];
+// build complete array of other products --------------------------------------------
+var tempArray=[];
+var binToDecArr=[];
+var decStr="";
+for (var k=0;k<productSet.length; k++){
+for (var l=1;l<5; l++){
+tempArray.push(currentRegion[ selectedIndex[1] ][k][l]);
+}
+}
+// var holdInt = tempArray.join("|");
+// Each product has a set of 4 values (1 or 0).
+// To pass each set in the URL, the following code converts the 4 character string from binary to a 2 digit decimal string for each of the 9 products.
+var holdInt = tempArray.join("");
+binToDecArr.push(parseInt(holdInt.substr(0,4),2));
+binToDecArr.push(parseInt(holdInt.substr(4,4),2));
+binToDecArr.push(parseInt(holdInt.substr(8,4),2));
+binToDecArr.push(parseInt(holdInt.substr(12,4),2));
+binToDecArr.push(parseInt(holdInt.substr(16,4),2));
+binToDecArr.push(parseInt(holdInt.substr(20,4),2));
+binToDecArr.push(parseInt(holdInt.substr(24,4),2));binToDecArr.push(parseInt(holdInt.substr(28,4),2));binToDecArr.push(parseInt(holdInt.substr(32,4),2));/* !$HK_FOREX || */
+console.log('binToDecArr.toString() = ' + binToDecArr.toString() +' and length: '+ binToDecArr.length );
+for (var i=0; i<binToDecArr.length; i++){
+if (binToDecArr[i]<10){
+decStr += "0"+String(binToDecArr[i]);
+}else{
+decStr += String(binToDecArr[i]);
+}
+}
+// OVERRIDE linkText for testing only:
+// linkText = 'https://www.interactivebrokers.co.uk/en/index.php?f=';
+// linkText = 'https://www.interactivebrokers.com.hk/en/index.php?f=';
+var targetURL = linkText+product_pid[selectedIndex[2]]+'?hm='+linkYourLoc[selectedIndex[0]]+'&ex='+linkExchange[selectedIndex[1]]+'&rgt='+marginReqs[0]+'&rsk='+marginReqs[1]+'&pm='+marginReqs[2]+'&rst='+decStr;
+// console.log('linkText = ' + linkText + ', selectedIndex[0] = ' + selectedIndex[0] + ', selectedIndex[1] = ' + selectedIndex[1] + ', selectedIndex[2] = ' + selectedIndex[2] );
+// console.log('marginReqs[0] = ' + marginReqs[0] + ', marginReqs[1] = ' + marginReqs[1] + ', marginReqs[2] = ' + marginReqs[2] );
+// console.log("targetURL = " + targetURL + ' linkText = ' + linkText);
+window.location = targetURL;
+};
+// Draw selection buttons for STEPS 1,2, and 3
+var drawRoundedRect = function(b, index) {
+ctx.beginPath();
+ctx.moveTo( (b.ctr.x-(b.width/2)) + cornerRadius.upperLeft, (b.ctr.y-(b.height/2)) );
+ctx.lineTo( (b.ctr.x-(b.width/2)) + b.width - cornerRadius.upperRight, (b.ctr.y-(b.height/2)) );
+ctx.quadraticCurveTo( (b.ctr.x-(b.width/2)) + b.width, (b.ctr.y-(b.height/2)), (b.ctr.x-(b.width/2)) + b.width, (b.ctr.y-(b.height/2)) + cornerRadius.upperRight);
+ctx.lineTo( (b.ctr.x-(b.width/2)) + b.width, (b.ctr.y-(b.height/2)) + b.height - cornerRadius.lowerRight);
+ctx.quadraticCurveTo( (b.ctr.x-(b.width/2)) + b.width, (b.ctr.y-(b.height/2)) + b.height, (b.ctr.x-(b.width/2)) + b.width - cornerRadius.lowerRight, (b.ctr.y-(b.height/2)) + b.height);
+ctx.lineTo( (b.ctr.x-(b.width/2)) + cornerRadius.lowerLeft, (b.ctr.y-(b.height/2)) + b.height);
+ctx.quadraticCurveTo( (b.ctr.x-(b.width/2)), (b.ctr.y-(b.height/2)) + b.height, (b.ctr.x-(b.width/2)), (b.ctr.y-(b.height/2)) + b.height - cornerRadius.lowerLeft);
+ctx.lineTo( (b.ctr.x-(b.width/2)), (b.ctr.y-(b.height/2)) + cornerRadius.upperLeft);
+ctx.quadraticCurveTo( (b.ctr.x-(b.width/2)), (b.ctr.y-(b.height/2)), (b.ctr.x-(b.width/2)) + cornerRadius.upperLeft, (b.ctr.y-(b.height/2)) );
+ctx.closePath();
+    if (darkLight_theme == 'dark'){
+        var filltop = b.dark_fillStyle;
+        var fillbottom = b.dark_fillStyle2;
+        var strokeColor = b.dark_strokeStyle;
+        switch (b.buttonState){
+            case 'active':
+                filltop = b.dark_fillStyle;
+                fillbottom = b.dark_fillStyle2;
+                strokeColor = b.dark_strokeStyle;
+                break;
+            case 'hover':
+                filltop = b.dark_hoverFillStyle;
+                fillbottom = b.dark_hoverFillStyle2;
+                strokeColor = b.dark_hoverStrokeStyle;
+                break;
+            case 'off':
+                filltop = b.dark_offFillStyle;
+                fillbottom = b.dark_offFillStyle2;
+                strokeColor = b.dark_offStrokeStyle;
+                break;
+            case 'na':
+                filltop = b.dark_naFillStyle;
+                fillbottom = b.dark_naFillStyle2;
+                strokeColor = b.dark_naStrokeStyle;
+                break;
+            case 'submit':
+                filltop = b.dark_fillStyle;
+                fillbottom = b.dark_fillStyle2;
+                strokeColor = b.dark_strokeStyle;
+                break;
+            default:
+                break;
+        }
+    }else{
+        var filltop = b.fillStyle;
+        var fillbottom = b.fillStyle2;
+        var strokeColor = b.strokeStyle;
+        switch (b.buttonState){
+            case 'active':
+                filltop = b.fillStyle;
+                fillbottom = b.fillStyle2;
+                strokeColor = b.strokeStyle;
+                break;
+            case 'hover':
+                filltop = b.hoverFillStyle;
+                fillbottom = b.hoverFillStyle2;
+                strokeColor = b.hoverStrokeStyle;
+                break;
+            case 'off':
+                filltop = b.offFillStyle;
+                fillbottom = b.offFillStyle2;
+                strokeColor = b.offStrokeStyle;
+                break;
+            case 'na':
+                filltop = b.naFillStyle;
+                fillbottom = b.naFillStyle2;
+                strokeColor = b.naStrokeStyle;
+                break;
+            case 'submit':
+                filltop = b.fillStyle;
+                fillbottom = b.fillStyle2;
+                strokeColor = b.strokeStyle;
+                break;
+            default:
+                break;
+        }
+    }
+// Add Gradient
+var grdData=ctx.createLinearGradient(0, (b.ctr.y-(b.height/2)) ,0 , (b.ctr.y-b.height/2+b.height) );
+grdData.addColorStop(0, filltop);
+grdData.addColorStop(1, fillbottom);
+ctx.fillStyle = grdData;
+// Fill
+ctx.fill();
+ctx.lineWidth = b.lineWeight;
+ctx.strokeStyle = strokeColor;
+ctx.stroke();
+};
+// Draws lines from selected button to applicable buttons in the corresponding next STEP
+var drawLine = function(b1, b2){
+ctx.beginPath();
+ctx.moveTo(b1.ctr.x+(b1.width/2), b1.ctr.y);
+ctx.lineTo(b2.ctr.x-(b2.width/2), b2.ctr.y);
+ctx.lineWidth = 0.85;
+    if (darkLight_theme == 'dark'){
+	ctx.strokeStyle = 'rgba(222,222,222,0.5)';
+    }else{
+	ctx.strokeStyle = 'rgba(22,22,22,0.25)';
+    }
+ctx.stroke();
+};
+// Animates applicable buttons after selection made in STEP 1 or STEP 2
+var lifeCycle = function(b, index) {
+if ((b.ctr.x != b.target.x)||(b.ctr.y != b.target.y)){
+var timeBoost = 0;
+var now = new Date();
+if (b.btntype == 'product'){
+timeBoost = 400;
+}
+if ( b.timeDelay<now.getTime() + 300 + timeBoost ){
+stepX = b.target.x - b.ctr.x;
+stepY = b.target.y - b.ctr.y;
+if (Math.abs(stepX)>0.50){
+b.ctr.x = b.ctr.x + stepX*0.15; // *delta;
+b.ctr.y = b.ctr.y + stepY*0.15; // *delta;
+b.progress++;
+}else{
+b.ctr.x = b.target.x;
+b.ctr.y = b.target.y;
+}
+// track for button movement. Don't allow additional mouse click until motion completed
+collectiveSteps += stepX;
+}
+}
+};
+// Format button labels
+var wrapText = function (b, index) { /*text, x, y, maxWidth, maxHeight, lineHeight, tStyle, fs) {*/
+        if (darkLight_theme == 'dark'){
+            var textColor = b.dark_colorFillStyle;
+            switch (b.buttonState){
+                case 'active':
+                    textColor = b.dark_colorFillStyle;
+                    break;
+                case 'hover':
+                    textColor = b.dark_hoverColorFillStyle;
+                    break;
+                case 'off':
+                    textColor = b.dark_offColorFillStyle;
+                    break;
+                case 'na':
+                    textColor = b.dark_naColorFillStyle;
+                    break;
+                case 'submit':
+                    textColor = b.dark_colorFillStyle;
+                    break;
+                default:
+                    break;
+            }
+        }else{
+            var textColor = b.colorFillStyle;
+            switch (b.buttonState){
+                case 'active':
+                    textColor = b.colorFillStyle;
+                    break;
+                case 'hover':
+                    textColor = b.hoverColorFillStyle;
+                    break;
+                case 'off':
+                    textColor = b.offColorFillStyle;
+                    break;
+                case 'na':
+                    textColor = b.naColorFillStyle;
+                    break;
+                case 'submit':
+                    textColor = b.colorFillStyle;
+                    break;
+                default:
+                    break;
+            }
+        }
+/* BEGIN color change for STEP and Subtitle only */
+if (b.stepType=='h1'){
+ctx.font = b.h1TextStyle;
+}else if (b.stepType=='h6'){
+ctx.font = b.h6TextStyle;
+}else{
+// regular buttons
+ctx.fillStyle = textColor;
+// headlineTextStyle = '500 14px Arial
+holdFontStyle = b.fontWeigth+' '+b.fontSize+' '+b.font;
+ctx.font = holdFontStyle;
+}
+if (b.stepType !='button'){
+// only applies to H1 and H6 STEP titles
+if (stepProgress[index]==1){
+b.stepState = 'active';
+}else{
+b.stepState = 'off';
+}
+              if (darkLight_theme == 'dark'){
+                  if (b.stepState == 'off'){
+                    ctx.fillStyle = b.dark_offColorFillStyle; 
+                }else{
+                    ctx.fillStyle = b.dark_colorFillStyle; 
+                }
+              }else{
+                if (b.stepState == 'off'){
+                    ctx.fillStyle = b.offColorFillStyle; 
+                }else{
+                    ctx.fillStyle = b.colorFillStyle; 
+                }
+            }
+}
+var x = b.ctr.x+3;
+var y = b.ctr.y+5;
+var paddingPercent = 1.0; //0.8;
+var maxWidth = b.width*paddingPercent;
+var maxHeight = b.height*paddingPercent;
+var words = b.text.split(' ');
+var line = '';
+var goodWidth = 0;
+var lineCount = 1;
+var testLine = '';
+var metrics = ctx.measureText(testLine);
+var testWidth = 0;
+var xLineOffset = 0;
+var yLineOffset = 0;
+// evaluate complete height of textblock to center vertically
+for(var n = 0; n < words.length; n++) {
+lessThan = /</.test(words[n]);
+greaterThan = />/.test(words[n]);
+ampersand = /&/.test(words[n]);
+breakTest = /<br>/.test(words[n]);
+if ( lessThan ){
+modWord = words[n].replace('<','<');
+line += modWord + ' ';
+}
+if ( greaterThan ){
+modWord = words[n].replace('>','>');
+line += modWord + ' ';
+}
+if ( ampersand ){
+modWord = words[n].replace('&','&');
+line += modWord + ' ';
+}
+if (breakTest){
+// force make a line break
+/*modWord = words[n].replace( /<br>/,' ' );*/
+modWord = words[n]; /*.replace( /<br>/,' ' );*/
+lineCount+=1;
+// line = line + modWord + ' ';
+line = modWord + ' ';
+}
+if (!lessThan && !breakTest && !greaterThan && !ampersand){
+testLine = line + words[n] + ' ';
+metrics = ctx.measureText(testLine);
+testWidth = metrics.width;
+if (testWidth > maxWidth && n > 0 ) {
+lineCount+=1;
+line = words[n] + ' ';
+}else {
+line = testLine;
+}
+}
+}
+yLineOffset = ((lineCount-1)*b.lineHeight)/2;
+line = '';
+goodWidth = 0;
+lineCount = 1;
+for(var n = 0; n < words.length; n++) {
+lessThan = /</.test(words[n]);
+greaterThan = />/.test(words[n]);
+ampersand = /&/.test(words[n]);
+breakTest = /<br>/.test(words[n]);
+if ( lessThan ){
+modWord = words[n].replace('<','<');
+line += modWord + ' ';
+}
+if ( greaterThan ){
+modWord = words[n].replace('>','>');
+line += modWord + ' ';
+}
+if ( ampersand ){
+modWord = words[n].replace('&','&');
+line += modWord + ' ';
+}
+if (breakTest){
+// force make a line break
+/*modWord = words[n].replace(/<br>/,'' );*/
+modWord = words[n]; /*.replace( '<br>','3' );*/
+// line = line + modWord + ' ';
+xLineOffset = ( (maxWidth-goodWidth)/2)-b.width/2*paddingPercent;
+ctx.fillText(line, x+xLineOffset, y-yLineOffset);
+line = modWord + ' ';
+y += b.lineHeight;
+}
+if (!lessThan && !breakTest && !greaterThan && !ampersand){
+testLine = line + words[n] + ' ';
+metrics = ctx.measureText(testLine);
+testWidth = metrics.width;
+if (testWidth > maxWidth && n > 0) {
+xLineOffset = ( (maxWidth-goodWidth)/2)-b.width/2*paddingPercent;
+ctx.fillText(line, x+xLineOffset, y-yLineOffset);
+line = words[n] + ' ';
+y += b.lineHeight;
+}else {
+line = testLine;
+goodWidth = testWidth;
+}
+}
+}
+// center the last line or word of text
+var testLine = line + ' ';
+var metrics = ctx.measureText(testLine);
+var testWidth = metrics.width;
+xLineOffset = ((maxWidth-testWidth)/2)-b.width/2*paddingPercent;
+ctx.fillText(line, x+xLineOffset, y-yLineOffset);
+}
+// Comma delmited lists for each margin requriement scenario based on each location of residence (specified in STEP 1)
+//-----------------------------------------------------
+// US
+var res_us=[
+[["us-stocks",1,0,1,0],
+["us-options",1,0,1,0],
+["us-futures-fops",0,1,0,0],
+["us-ssfs",0,0,0,1],
+["us-bonds",1,0,0,0],
+["us-mutual-funds",1,0,0,0],
+["us-cfds",0,0,0,1],
+["us-forex",1,0,0,0],
+["us-metals",0,0,0,1]],
+[["ca-stocks",1,0,0,0],
+["ca-options",0,0,0,1],
+["ca-futures-fops",0,1,0,0],
+["ca-ssfs",0,0,0,1],
+["ca-bonds",1,0,0,0],
+["ca-mutual-funds",0,0,0,1],
+["ca-cfds",0,0,0,1],
+["ca-forex",1,0,0,0],
+["ca-metals",0,0,0,1]],
+[["uk-stocks",1,1,0,0],
+["uk-options",0,0,0,1],
+["uk-futures-fops",0,1,0,0],
+["uk-ssfs",0,0,0,1],
+["uk-bonds",0,1,0,0],
+["uk-mutual-funds",0,0,0,1],
+["uk-cfds",0,0,0,1],
+["uk-forex",1,0,0,0],
+["uk-metals",0,0,0,1]],
+[["eu-stocks",1,1,0,0],
+["eu-options",0,0,0,1],
+["eu-futures-fops",0,1,0,0],
+["eu-ssfs",0,0,0,1],
+["eu-bonds",0,1,0,0],
+["eu-mutual-funds",0,0,0,1],
+["eu-cfds",0,0,0,1],
+["eu-forex",1,0,0,0],
+["eu-metals",0,0,0,1]],
+[["au-stocks",1,1,0,0],
+["au-options",0,0,0,1],
+["au-futures-fops",0,1,0,0],
+["au-ssfs",0,0,0,1],
+["au-bonds",0,0,0,1],
+["au-mutual-funds",0,0,0,1],
+["au-cfds",0,0,0,1],
+["au-forex",1,0,0,0],
+["au-metals",0,0,0,1]],
+[["cn-stocks",1,1,0,0],
+["cn-options",0,0,0,1],
+["cn-futures-fops",0,0,0,1],
+["cn-ssfs",0,0,0,1],
+["cn-bonds",0,0,0,1],
+["cn-mutual-funds",0,0,0,1],
+["cn-cfds",0,0,0,1],
+["cn-forex",1,0,0,0],
+["cn-metals",0,0,0,1]],
+[["hk-stocks",1,1,0,0],
+["hk-options",0,0,0,1],
+["hk-futures-fops",0,1,0,0],
+["hk-ssfs",0,0,0,1],
+["hk-bonds",0,0,0,1],
+["hk-mutual-funds",0,0,0,1],
+["hk-cfds",0,0,0,1],
+["hk-forex",1,0,0,0],
+["hk-metals",0,0,0,1]],
+[["jp-stocks",1,1,0,0],
+["jp-options",0,0,0,1],
+["jp-futures-fops",0,1,0,0],
+["jp-ssfs",0,0,0,1],
+["jp-bonds",0,0,0,1],
+["jp-mutual-funds",0,0,0,1],
+["jp-cfds",0,0,0,1],
+["jp-forex",1,0,0,0],
+["jp-metals",0,0,0,1]],
+[["in-stocks",0,0,0,1],
+["in-options",0,0,0,1],
+["in-futures-fops",0,1,0,0],
+["in-ssfs",0,0,0,1],
+["in-bonds",0,0,0,1],
+["in-mutual-funds",0,0,0,1],
+["in-cfds",0,0,0,1],
+["in-forex",1,0,0,0],
+["in-metals",0,0,0,1]],
+[["mx-stocks",1,1,0,0],
+["mx-options",0,0,0,1],
+["mx-futures-fops",0,1,0,0],
+["mx-ssfs",0,0,0,1],
+["mx-bonds",0,0,0,1],
+["mx-mutual-funds",0,0,0,1],
+["mx-cfds",0,0,0,1],
+["mx-forex",1,0,0,0],
+["mx-metals",0,0,0,1]],
+[["sg-stocks",1,1,0,0],
+["sg-options",0,0,0,1],
+["sg-futures-fops",0,1,0,0],
+["sg-ssfs",0,0,0,1],
+["sg-bonds",0,0,0,1],
+["sg-mutual-funds",0,0,0,1],
+["sg-cfds",0,0,0,1],
+["sg-forex",1,0,0,0],
+["sg-metals",0,0,0,1]],
+[["kr-stocks",0,0,0,1],
+["kr-options",0,0,0,1],
+["kr-futures-fops",0,1,0,0],
+["kr-ssfs",0,0,0,1],
+["kr-bonds",0,0,0,1],
+["kr-mutual-funds",0,0,0,1],
+["kr-cfds",0,0,0,1],
+["kr-forex",1,0,0,0],
+["kr-metals",0,0,0,1]],
+[["br-stocks",0,0,0,1],
+["br-options",0,0,0,1],
+["br-futures-fops",0,0,0,1],
+["br-ssfs",0,0,0,1],
+["br-bonds",0,0,0,1],
+["br-mutual-funds",0,0,0,1],
+["br-cfds",0,0,0,1],
+["br-forex",0,0,0,1],
+["br-metals",0,0,0,1]],
+[["za-stocks",0,0,0,1],
+["za-options",0,0,0,1],
+["za-futures-fops",0,0,0,1],
+["za-ssfs",0,0,0,1],
+["za-bonds",0,0,0,1],
+["za-mutual-funds",0,0,0,1],
+["za-cfds",0,0,0,1],
+["za-forex",0,0,0,1],
+["za-metals",0,0,0,1]],
+[["il-stocks",1,0,0,0],
+["il-options",0,0,0,1],
+["il-futures-fops",0,0,0,1],
+["il-ssfs",0,0,0,1],
+["il-bonds",0,0,0,1],
+["il-mutual-funds",0,0,0,1],
+["il-cfds",0,0,0,1],
+["il-forex",0,0,0,1],
+["il-metals",0,0,0,1]],
+[["ru-stocks",1,1,0,0],
+["ru-options",0,0,0,1],
+["ru-futures-fops",0,0,0,1],
+["ru-ssfs",0,0,0,1],
+["ru-bonds",0,0,0,1],
+["ru-mutual-funds",0,0,0,1],
+["ru-cfds",0,0,0,1],
+["ru-forex",0,0,0,1],
+["ru-metals",0,0,0,1]]
+,[["gl-stocks",0,0,0,1],
+["gl-options",0,0,0,1],
+["gl-futures-fops",0,0,0,1],
+["gl-ssfs",0,0,0,1],
+["gl-bonds",0,0,0,1],
+["gl-mutual-funds",0,0,0,1],
+["gl-cfds",0,0,0,1],
+["gl-forex",1,0,0,0],
+["gl-metals",0,0,0,1]]
+];
+//-----------------------------------------------------
+// CANADA
+var res_ca=[
+[["us-stocks",1,0,0,0],
+["us-options",1,0,0,0],
+["us-futures-fops",0,1,0,0],
+["us-ssfs",0,0,0,1],
+["us-bonds",0,1,0,0],
+["us-mutual-funds",0,0,0,1],
+["us-cfds",0,0,0,1],
+["us-forex",1,0,0,0],
+["us-metals",0,0,0,1]],
+[["ca-stocks",1,0,0,0],
+["ca-options",1,0,0,0],
+["ca-futures-fops",0,1,0,0],
+["ca-ssfs",0,0,0,1],
+["ca-bonds",0,1,0,0],
+["ca-mutual-funds",0,0,0,1],
+["ca-cfds",0,0,0,1],
+["ca-forex",1,0,0,0],
+["ca-metals",0,0,0,1]],
+[["uk-stocks",1,1,0,0],
+["uk-options",0,0,0,1],
+["uk-futures-fops",0,1,0,0],
+["uk-ssfs",0,0,0,1],
+["uk-bonds",0,1,0,0],
+["uk-mutual-funds",0,0,0,1],
+["uk-cfds",0,0,0,1],
+["uk-forex",1,0,0,0],
+["uk-metals",0,0,0,1]],
+[["eu-stocks",1,1,0,0],
+["eu-options",0,0,0,1],
+["eu-futures-fops",0,1,0,0],
+["eu-ssfs",0,0,0,1],
+["eu-bonds",0,1,0,0],
+["eu-mutual-funds",0,0,0,1],
+["eu-cfds",0,0,0,1],
+["eu-forex",1,0,0,0],
+["eu-metals",0,0,0,1]],
+[["au-stocks",1,1,0,0],
+["au-options",0,0,0,1],
+["au-futures-fops",0,1,0,0],
+["au-ssfs",0,0,0,1],
+["au-bonds",0,0,0,1],
+["au-mutual-funds",0,0,0,1],
+["au-cfds",0,0,0,1],
+["au-forex",1,0,0,0],
+["au-metals",0,0,0,1]],
+[["cn-stocks",1,1,0,0],
+["cn-options",0,0,0,1],
+["cn-futures-fops",0,0,0,1],
+["cn-ssfs",0,0,0,1],
+["cn-bonds",0,0,0,1],
+["cn-mutual-funds",0,0,0,1],
+["cn-cfds",0,0,0,1],
+["cn-forex",1,0,0,0],
+["cn-metals",0,0,0,1]],
+[["hk-stocks",1,1,0,0],
+["hk-options",0,0,0,1],
+["hk-futures-fops",0,1,0,0],
+["hk-ssfs",0,0,0,1],
+["hk-bonds",0,0,0,1],
+["hk-mutual-funds",0,0,0,1],
+["hk-cfds",0,0,0,1],
+["hk-forex",1,0,0,0],
+["hk-metals",0,0,0,1]],
+[["jp-stocks",1,1,0,0],
+["jp-options",0,0,0,1],
+["jp-futures-fops",0,1,0,0],
+["jp-ssfs",0,0,0,1],
+["jp-bonds",0,0,0,1],
+["jp-mutual-funds",0,0,0,1],
+["jp-cfds",0,0,0,1],
+["jp-forex",1,0,0,0],
+["jp-metals",0,0,0,1]],
+[["in-stocks",0,0,0,1],
+["in-options",0,0,0,1],
+["in-futures-fops",0,1,0,0],
+["in-ssfs",0,0,0,1],
+["in-bonds",0,0,0,1],
+["in-mutual-funds",0,0,0,1],
+["in-cfds",0,0,0,1],
+["in-forex",1,0,0,0],
+["in-metals",0,0,0,1]],
+[["mx-stocks",1,1,0,0],
+["mx-options",0,0,0,1],
+["mx-futures-fops",0,1,0,0],
+["mx-ssfs",0,0,0,1],
+["mx-bonds",0,0,0,1],
+["mx-mutual-funds",0,0,0,1],
+["mx-cfds",0,0,0,1],
+["mx-forex",1,0,0,0],
+["mx-metals",0,0,0,1]],
+[["sg-stocks",1,1,0,0],
+["sg-options",0,0,0,1],
+["sg-futures-fops",0,1,0,0],
+["sg-ssfs",0,0,0,1],
+["sg-bonds",0,0,0,1],
+["sg-mutual-funds",0,0,0,1],
+["sg-cfds",0,0,0,1],
+["sg-forex",1,0,0,0],
+["sg-metals",0,0,0,1]],
+[["kr-stocks",0,0,0,1],
+["kr-options",0,1,0,0],
+["kr-futures-fops",0,1,0,0],
+["kr-ssfs",0,1,0,0],
+["kr-bonds",0,0,0,1],
+["kr-mutual-funds",0,0,0,1],
+["kr-cfds",0,0,0,1],
+["kr-forex",1,0,0,0],
+["kr-metals",0,0,0,1]],
+[["br-stocks",0,0,0,1],
+["br-options",0,0,0,1],
+["br-futures-fops",0,0,0,1],
+["br-ssfs",0,0,0,1],
+["br-bonds",0,0,0,1],
+["br-mutual-funds",0,0,0,1],
+["br-cfds",0,0,0,1],
+["br-forex",0,0,0,1],
+["br-metals",0,0,0,1]],
+[["za-stocks",0,0,0,1],
+["za-options",0,0,0,1],
+["za-futures-fops",0,0,0,1],
+["za-ssfs",0,0,0,1],
+["za-bonds",0,0,0,1],
+["za-mutual-funds",0,0,0,1],
+["za-cfds",0,0,0,1],
+["za-forex",0,0,0,1],
+["za-metals",0,0,0,1]],
+[["il-stocks",0,0,0,1],
+["il-options",0,0,0,1],
+["il-futures-fops",0,0,0,1],
+["il-ssfs",0,0,0,1],
+["il-bonds",0,0,0,1],
+["il-mutual-funds",0,0,0,1],
+["il-cfds",0,0,0,1],
+["il-forex",0,0,0,1],
+["il-metals",0,0,0,1]],
+[["ru-stocks",1,1,0,0],
+["ru-options",0,0,0,1],
+["ru-futures-fops",0,0,0,1],
+["ru-ssfs",0,0,0,1],
+["ru-bonds",0,0,0,1],
+["ru-mutual-funds",0,0,0,1],
+["ru-cfds",0,0,0,1],
+["ru-forex",0,0,0,1],
+["ru-metals",0,0,0,1]]
+,[["gl-stocks",0,0,0,1],
+["gl-options",0,0,0,1],
+["gl-futures-fops",0,0,0,1],
+["gl-ssfs",0,0,0,1],
+["gl-bonds",0,0,0,1],
+["gl-mutual-funds",0,0,0,1],
+["gl-cfds",0,0,0,1],
+["gl-forex",1,0,0,0],
+["gl-metals",0,0,0,1]]
+];
+//-----------------------------------------------------
+// UK
+var res_uk=[
+[["us-stocks",1,0,1,0],
+["us-options",1,0,1,0],
+["us-futures-fops",0,1,1,0],
+["us-ssfs",0,0,0,1],
+["us-bonds",1,0,0,0],
+["us-mutual-funds",0,0,0,1],
+["us-cfds",1,0,0,0],
+["us-forex",1,0,0,0],
+["us-metals",1,0,0,0]],
+[["ca-stocks",1,0,0,0],
+["ca-options",1,1,0,0],
+["ca-futures-fops",0,1,0,0],
+["ca-ssfs",0,0,0,1],
+["ca-bonds",0,1,0,0],
+["ca-mutual-funds",0,0,0,1],
+["ca-cfds",0,0,0,1],
+["ca-forex",1,0,0,0],
+["ca-metals",1,0,0,0]],
+[["uk-stocks",1,1,0,0],
+["uk-options",1,1,0,0],
+["uk-futures-fops",0,1,0,0],
+["uk-ssfs",0,1,0,0],
+["uk-bonds",1,0,0,0],
+["uk-mutual-funds",1,0,0,0],
+["uk-cfds",1,0,0,0],
+["uk-forex",1,0,0,0],
+["uk-metals",1,0,0,0]],
+[["eu-stocks",1,1,0,0],
+["eu-options",1,1,0,0],
+["eu-futures-fops",0,1,0,0],
+["eu-ssfs",0,1,0,0],
+["eu-bonds",1,0,0,0],
+["eu-mutual-funds",1,0,0,0],
+["eu-cfds",1,0,0,0],
+["eu-forex",1,0,0,0],
+["eu-metals",1,0,0,0]],
+[["au-stocks",1,1,0,0],
+["au-options",0,1,0,0],
+["au-futures-fops",0,1,0,0],
+["au-ssfs",0,0,0,1],
+["au-bonds",0,0,0,1],
+["au-mutual-funds",0,0,0,1],
+["au-cfds",1,0,0,0],
+["au-forex",1,0,0,0],
+["au-metals",1,0,0,0]],
+[["cn-stocks",1,1,0,0],
+["cn-options",0,0,0,1],
+["cn-futures-fops",0,0,0,1],
+["cn-ssfs",0,0,0,1],
+["cn-bonds",0,0,0,1],
+["cn-mutual-funds",0,0,0,1],
+["cn-cfds",0,0,0,1],
+["cn-forex",1,0,0,0],
+["cn-metals",1,0,0,0]],
+[["hk-stocks",1,1,0,0],
+["hk-options",0,1,0,0],
+["hk-futures-fops",0,1,0,0],
+["hk-ssfs",0,1,0,0],
+["hk-bonds",0,0,0,1],
+["hk-mutual-funds",0,0,0,1],
+["hk-cfds",1,0,0,0],
+["hk-forex",1,0,0,0],
+["hk-metals",1,0,0,0]],
+[["jp-stocks",1,1,0,0],
+["jp-options",1,1,0,0],
+["jp-futures-fops",0,1,0,0],
+["jp-ssfs",0,0,0,1],
+["jp-bonds",0,0,0,1],
+["jp-mutual-funds",0,0,0,1],
+["jp-cfds",1,0,0,0],
+["jp-forex",1,0,0,0],
+["jp-metals",1,0,0,0]],
+[["in-stocks",0,0,0,1],
+["in-options",0,0,0,1],
+["in-futures-fops",0,1,0,0],
+["in-ssfs",0,0,0,1],
+["in-bonds",0,0,0,1],
+["in-mutual-funds",0,0,0,1],
+["in-cfds",0,0,0,1],
+["in-forex",1,0,0,0],
+["in-metals",1,0,0,0]],
+[["mx-stocks",1,1,0,0],
+["mx-options",1,1,0,0],
+["mx-futures-fops",0,1,0,0],
+["mx-ssfs",0,0,0,1],
+["mx-bonds",0,0,0,1],
+["mx-mutual-funds",0,0,0,1],
+["mx-cfds",0,0,0,1],
+["mx-forex",1,0,0,0],
+["mx-metals",1,0,0,0]],
+[["sg-stocks",1,1,0,0],
+["sg-options",1,1,0,0],
+["sg-futures-fops",0,1,0,0],
+["sg-ssfs",0,0,0,1],
+["sg-bonds",0,0,0,1],
+["sg-mutual-funds",0,0,0,1],
+["sg-cfds",1,0,0,0],
+["sg-forex",1,0,0,0],
+["sg-metals",1,0,0,0]],
+[["kr-stocks",0,0,0,1],
+["kr-options",0,1,0,0],
+["kr-futures-fops",0,1,0,0],
+["kr-ssfs",0,1,0,0],
+["kr-bonds",0,0,0,1],
+["kr-mutual-funds",0,0,0,1],
+["kr-cfds",0,0,0,1],
+["kr-forex",1,0,0,0],
+["kr-metals",1,0,0,0]],
+[["br-stocks",0,0,0,1],
+["br-options",0,0,0,1],
+["br-futures-fops",0,0,0,1],
+["br-ssfs",0,0,0,1],
+["br-bonds",0,0,0,1],
+["br-mutual-funds",0,0,0,1],
+["br-cfds",1,0,0,0],
+["br-forex",1,0,0,0],
+["br-metals",1,0,0,0]],
+[["za-stocks",0,0,0,1],
+["za-options",0,0,0,1],
+["za-futures-fops",0,0,0,1],
+["za-ssfs",0,0,0,1],
+["za-bonds",0,0,0,1],
+["za-mutual-funds",0,0,0,1],
+["za-cfds",1,0,0,0],
+["za-forex",1,0,0,0],
+["za-metals",1,0,0,0]],
+[["il-stocks",1,0,0,0],
+["il-options",0,0,0,1],
+["il-futures-fops",0,0,0,1],
+["il-ssfs",0,0,0,1],
+["il-bonds",0,0,0,1],
+["il-mutual-funds",0,0,0,1],
+["il-cfds",0,0,0,1],
+["il-forex",0,0,0,1],
+["il-metals",0,0,0,1]],
+[["ru-stocks",1,1,0,0],
+["ru-options",0,0,0,1],
+["ru-futures-fops",0,0,0,1],
+["ru-ssfs",0,0,0,1],
+["ru-bonds",0,0,0,1],
+["ru-mutual-funds",0,0,0,1],
+["ru-cfds",0,0,0,1],
+["ru-forex",0,0,0,1],
+["ru-metals",0,0,0,1]]
+,[["gl-stocks",0,0,0,1],
+["gl-options",0,0,0,1],
+["gl-futures-fops",0,0,0,1],
+["gl-ssfs",0,0,0,1],
+["gl-bonds",0,0,0,1],
+["gl-mutual-funds",0,0,0,1],
+["gl-cfds",0,0,0,1],
+["gl-forex",1,0,0,0],
+["gl-metals",1,0,0,0]]
+];
+// ----------------------------------------------------
+// EUROPE (COPY OF UK for use on non .eu websites)
+var res_eu=[
+[["us-stocks",1,0,1,0],
+["us-options",1,0,1,0],
+["us-futures-fops",0,1,1,0],
+["us-ssfs",0,0,0,1],
+["us-bonds",1,0,0,0],
+["us-mutual-funds",0,0,0,1],
+["us-cfds",1,0,0,0],
+["us-forex",1,0,0,0],
+["us-metals",1,0,0,0]],
+[["ca-stocks",1,0,0,0],
+["ca-options",1,1,0,0],
+["ca-futures-fops",0,1,0,0],
+["ca-ssfs",0,0,0,1],
+["ca-bonds",0,1,0,0],
+["ca-mutual-funds",0,0,0,1],
+["ca-cfds",0,0,0,1],
+["ca-forex",1,0,0,0],
+["ca-metals",1,0,0,0]],
+[["uk-stocks",1,1,0,0],
+["uk-options",1,1,0,0],
+["uk-futures-fops",0,1,0,0],
+["uk-ssfs",0,1,0,0],
+["uk-bonds",1,0,0,0],
+["uk-mutual-funds",1,0,0,0],
+["uk-cfds",1,0,0,0],
+["uk-forex",1,0,0,0],
+["uk-metals",1,0,0,0]],
+[["eu-stocks",1,1,0,0],
+["eu-options",1,1,0,0],
+["eu-futures-fops",0,1,0,0],
+["eu-ssfs",0,1,0,0],
+["eu-bonds",1,0,0,0],
+["eu-mutual-funds",1,0,0,0],
+["eu-cfds",1,0,0,0],
+["eu-forex",1,0,0,0],
+["eu-metals",1,0,0,0]],
+[["au-stocks",1,1,0,0],
+["au-options",0,1,0,0],
+["au-futures-fops",0,1,0,0],
+["au-ssfs",0,0,0,1],
+["au-bonds",0,0,0,1],
+["au-mutual-funds",0,0,0,1],
+["au-cfds",1,0,0,0],
+["au-forex",1,0,0,0],
+["au-metals",1,0,0,0]],
+[["cn-stocks",1,1,0,0],
+["cn-options",0,0,0,1],
+["cn-futures-fops",0,0,0,1],
+["cn-ssfs",0,0,0,1],
+["cn-bonds",0,0,0,1],
+["cn-mutual-funds",0,0,0,1],
+["cn-cfds",0,0,0,1],
+["cn-forex",1,0,0,0],
+["cn-metals",1,0,0,0]],
+[["hk-stocks",1,1,0,0],
+["hk-options",0,1,0,0],
+["hk-futures-fops",0,1,0,0],
+["hk-ssfs",0,1,0,0],
+["hk-bonds",0,0,0,1],
+["hk-mutual-funds",0,0,0,1],
+["hk-cfds",1,0,0,0],
+["hk-forex",1,0,0,0],
+["hk-metals",1,0,0,0]],
+[["jp-stocks",1,1,0,0],
+["jp-options",1,1,0,0],
+["jp-futures-fops",0,1,0,0],
+["jp-ssfs",0,0,0,1],
+["jp-bonds",0,0,0,1],
+["jp-mutual-funds",0,0,0,1],
+["jp-cfds",1,0,0,0],
+["jp-forex",1,0,0,0],
+["jp-metals",1,0,0,0]],
+[["in-stocks",0,0,0,1],
+["in-options",0,0,0,1],
+["in-futures-fops",0,1,0,0],
+["in-ssfs",0,0,0,1],
+["in-bonds",0,0,0,1],
+["in-mutual-funds",0,0,0,1],
+["in-cfds",0,0,0,1],
+["in-forex",1,0,0,0],
+["in-metals",1,0,0,0]],
+[["mx-stocks",1,1,0,0],
+["mx-options",1,1,0,0],
+["mx-futures-fops",0,1,0,0],
+["mx-ssfs",0,0,0,1],
+["mx-bonds",0,0,0,1],
+["mx-mutual-funds",0,0,0,1],
+["mx-cfds",0,0,0,1],
+["mx-forex",1,0,0,0],
+["mx-metals",1,0,0,0]],
+[["sg-stocks",1,1,0,0],
+["sg-options",1,1,0,0],
+["sg-futures-fops",0,1,0,0],
+["sg-ssfs",0,0,0,1],
+["sg-bonds",0,0,0,1],
+["sg-mutual-funds",0,0,0,1],
+["sg-cfds",1,0,0,0],
+["sg-forex",1,0,0,0],
+["sg-metals",1,0,0,0]],
+[["kr-stocks",0,0,0,1],
+["kr-options",0,1,0,0],
+["kr-futures-fops",0,1,0,0],
+["kr-ssfs",0,1,0,0],
+["kr-bonds",0,0,0,1],
+["kr-mutual-funds",0,0,0,1],
+["kr-cfds",0,0,0,1],
+["kr-forex",1,0,0,0],
+["kr-metals",1,0,0,0]],
+[["br-stocks",0,0,0,1],
+["br-options",0,0,0,1],
+["br-futures-fops",0,0,0,1],
+["br-ssfs",0,0,0,1],
+["br-bonds",0,0,0,1],
+["br-mutual-funds",0,0,0,1],
+["br-cfds",1,0,0,0],
+["br-forex",1,0,0,0],
+["br-metals",1,0,0,0]],
+[["za-stocks",0,0,0,1],
+["za-options",0,0,0,1],
+["za-futures-fops",0,0,0,1],
+["za-ssfs",0,0,0,1],
+["za-bonds",0,0,0,1],
+["za-mutual-funds",0,0,0,1],
+["za-cfds",1,0,0,0],
+["za-forex",1,0,0,0],
+["za-metals",1,0,0,0]],
+[["il-stocks",1,0,0,0],
+["il-options",0,0,0,1],
+["il-futures-fops",0,0,0,1],
+["il-ssfs",0,0,0,1],
+["il-bonds",0,0,0,1],
+["il-mutual-funds",0,0,0,1],
+["il-cfds",0,0,0,1],
+["il-forex",0,0,0,1],
+["il-metals",0,0,0,1]],
+[["ru-stocks",1,1,0,0],
+["ru-options",0,0,0,1],
+["ru-futures-fops",0,0,0,1],
+["ru-ssfs",0,0,0,1],
+["ru-bonds",0,0,0,1],
+["ru-mutual-funds",0,0,0,1],
+["ru-cfds",0,0,0,1],
+["ru-forex",0,0,0,1],
+["ru-metals",0,0,0,1]]
+,[["gl-stocks",0,0,0,1],
+["gl-options",0,0,0,1],
+["gl-futures-fops",0,0,0,1],
+["gl-ssfs",0,0,0,1],
+["gl-bonds",0,0,0,1],
+["gl-mutual-funds",0,0,0,1],
+["gl-cfds",0,0,0,1],
+["gl-forex",1,0,0,0],
+["gl-metals",1,0,0,0]]
+];
+/*var res_eu=[
+[["us-stocks",0,1,0,0],
+["us-options",0,1,0,0],
+["us-futures-fops",0,1,0,0],
+["us-ssfs",0,0,0,1],
+["us-bonds",0,1,0,0],
+["us-mutual-funds",0,1,0,1],
+["us-cfds",0,1,0,0],
+["us-forex",0,1,0,0],
+["us-metals",0,1,0,0]],
+[["ca-stocks",0,1,0,0],
+["ca-options",0,1,0,0],
+["ca-futures-fops",0,1,0,0],
+["ca-ssfs",0,1,0,1],
+["ca-bonds",0,1,0,0],
+["ca-mutual-funds",0,1,0,1],
+["ca-cfds",0,1,0,1],
+["ca-forex",0,1,0,0],
+["ca-metals",0,1,0,0]],
+[["uk-stocks",0,1,0,0],
+["uk-options",0,1,0,0],
+["uk-futures-fops",0,1,0,0],
+["uk-ssfs",0,1,0,0],
+["uk-bonds",0,1,0,0],
+["uk-mutual-funds",0,1,0,0],
+["uk-cfds",0,1,0,0],
+["uk-forex",0,1,0,0],
+["uk-metals",0,1,0,0]],
+[["eu-stocks",0,1,0,0],
+["eu-options",0,1,0,0],
+["eu-futures-fops",0,1,0,0],
+["eu-ssfs",0,1,0,0],
+["eu-bonds",0,1,0,0],
+["eu-mutual-funds",0,1,0,0],
+["eu-cfds",0,1,0,0],
+["eu-forex",0,1,0,0],
+["eu-metals",0,1,0,0]],
+[["au-stocks",0,1,0,0],
+["au-options",0,1,0,0],
+["au-futures-fops",0,1,0,0],
+["au-ssfs",0,1,0,1],
+["au-bonds",0,1,0,1],
+["au-mutual-funds",0,1,0,1],
+["au-cfds",0,1,0,0],
+["au-forex",0,1,0,0],
+["au-metals",0,1,0,0]],
+[["cn-stocks",0,1,0,0],
+["cn-options",0,1,0,1],
+["cn-futures-fops",0,1,0,1],
+["cn-ssfs",0,1,0,1],
+["cn-bonds",0,1,0,1],
+["cn-mutual-funds",0,1,0,1],
+["cn-cfds",0,1,0,1],
+["cn-forex",0,1,0,0],
+["cn-metals",0,1,0,0]],
+[["hk-stocks",0,1,0,0],
+["hk-options",0,1,0,0],
+["hk-futures-fops",0,1,0,0],
+["hk-ssfs",0,1,0,0],
+["hk-bonds",0,1,0,1],
+["hk-mutual-funds",0,1,0,1],
+["hk-cfds",0,1,0,0],
+["hk-forex",0,1,0,0],
+["hk-metals",0,1,0,0]],
+[["jp-stocks",0,1,0,0],
+["jp-options",0,1,0,0],
+["jp-futures-fops",0,1,0,0],
+["jp-ssfs",0,1,0,1],
+["jp-bonds",0,1,0,1],
+["jp-mutual-funds",0,1,0,1],
+["jp-cfds",0,1,0,0],
+["jp-forex",0,1,0,0],
+["jp-metals",0,1,0,0]],
+[["in-stocks",0,1,0,1],
+["in-options",0,1,0,1],
+["in-futures-fops",0,1,0,0],
+["in-ssfs",0,1,0,1],
+["in-bonds",0,1,0,1],
+["in-mutual-funds",0,1,0,1],
+["in-cfds",0,1,0,1],
+["in-forex",0,1,0,0],
+["in-metals",0,1,0,0]],
+[["mx-stocks",0,1,0,0],
+["mx-options",0,1,0,0],
+["mx-futures-fops",0,1,0,0],
+["mx-ssfs",0,1,0,1],
+["mx-bonds",0,1,0,1],
+["mx-mutual-funds",0,1,0,1],
+["mx-cfds",0,1,0,1],
+["mx-forex",0,1,0,0],
+["mx-metals",0,1,0,0]],
+[["sg-stocks",0,1,0,0],
+["sg-options",0,1,0,0],
+["sg-futures-fops",0,1,0,0],
+["sg-ssfs",0,1,0,1],
+["sg-bonds",0,1,0,1],
+["sg-mutual-funds",0,1,0,1],
+["sg-cfds",0,1,0,0],
+["sg-forex",0,1,0,0],
+["sg-metals",0,1,0,0]],
+[["kr-stocks",0,1,0,1],
+["kr-options",0,1,0,0],
+["kr-futures-fops",0,1,0,0],
+["kr-ssfs",0,1,0,0],
+["kr-bonds",0,1,0,1],
+["kr-mutual-funds",0,1,0,1],
+["kr-cfds",0,1,0,1],
+["kr-forex",0,1,0,0],
+["kr-metals",0,1,0,0]],
+[["br-stocks",0,1,0,1],
+["br-options",0,1,0,1],
+["br-futures-fops",0,1,0,1],
+["br-ssfs",0,1,0,1],
+["br-bonds",0,1,0,1],
+["br-mutual-funds",0,1,0,1],
+["br-cfds",0,1,0,0],
+["br-forex",0,1,0,0],
+["br-metals",0,1,0,0]],
+[["za-stocks",0,1,0,1],
+["za-options",0,1,0,1],
+["za-futures-fops",0,1,0,1],
+["za-ssfs",0,1,0,1],
+["za-bonds",0,1,0,1],
+["za-mutual-funds",0,1,0,1],
+["za-cfds",0,1,0,0],
+["za-forex",0,1,0,0],
+["za-metals",0,1,0,0]],
+[["il-stocks",0,1,0,0],
+["il-options",0,1,0,1],
+["il-futures-fops",0,1,0,1],
+["il-ssfs",0,1,0,1],
+["il-bonds",0,1,0,1],
+["il-mutual-funds",0,1,0,1],
+["il-cfds",0,1,0,1],
+["il-forex",0,1,0,1],
+["il-metals",0,1,0,1]],
+[["ru-stocks",0,1,0,0],
+["ru-options",0,1,0,1],
+["ru-futures-fops",0,1,0,1],
+["ru-ssfs",0,1,0,1],
+["ru-bonds",0,1,0,1],
+["ru-mutual-funds",0,1,0,1],
+["ru-cfds",0,1,0,1],
+["ru-forex",0,1,0,1],
+["ru-metals",0,1,0,1]]
+,[["gl-stocks",0,1,0,1],
+["gl-options",0,1,0,1],
+["gl-futures-fops",0,1,0,1],
+["gl-ssfs",0,1,0,1],
+["gl-bonds",0,1,0,1],
+["gl-mutual-funds",0,1,0,1],
+["gl-cfds",0,1,0,1],
+["gl-forex",0,1,0,0],
+["gl-metals",0,1,0,0]]
+]; */
+//-----------------------------------------------------
+// AUSTRALIA
+var res_au=[
+[["us-stocks",0,1,0,0],
+["us-options",0,1,0,0],
+["us-futures-fops",0,1,0,0],
+["us-ssfs",0,0,0,1],
+["us-bonds",0,0,0,1],
+["us-mutual-funds",0,0,0,1],
+["us-cfds",1,0,0,0],
+["us-forex",0,0,0,1],
+["us-metals",0,0,0,1]],
+[["ca-stocks",0,1,0,0],
+["ca-options",0,1,0,0],
+["ca-futures-fops",0,1,0,0],
+["ca-ssfs",0,0,0,1],
+["ca-bonds",0,0,0,1],
+["ca-mutual-funds",0,0,0,1],
+["ca-cfds",0,0,0,1],
+["ca-forex",0,0,0,1],
+["ca-metals",0,0,0,1]],
+[["uk-stocks",0,1,0,0],
+["uk-options",0,1,0,0],
+["uk-futures-fops",0,1,0,0],
+["uk-ssfs",0,0,0,1],
+["uk-bonds",0,0,0,1],
+["uk-mutual-funds",1,0,0,0],
+["uk-cfds",1,0,0,0],
+["uk-forex",0,0,0,1],
+["uk-metals",0,0,0,1]],
+[["eu-stocks",0,1,0,0],
+["eu-options",0,1,0,0],
+["eu-futures-fops",0,1,0,0],
+["eu-ssfs",0,0,0,1],
+["eu-bonds",0,0,0,1],
+["eu-mutual-funds",1,0,0,0],
+["eu-cfds",1,0,0,0],
+["eu-forex",0,0,0,1],
+["eu-metals",0,0,0,1]],
+[["au-stocks",0,1,0,0],
+["au-options",0,1,0,0],
+["au-futures-fops",0,1,0,0],
+["au-ssfs",0,0,0,1],
+["au-bonds",0,0,0,1],
+["au-mutual-funds",0,0,0,1],
+["au-cfds",1,0,0,0],
+["au-forex",0,0,0,1],
+["au-metals",0,0,0,1]],
+[["cn-stocks",0,0,0,1],
+["cn-options",0,0,0,1],
+["cn-futures-fops",0,0,0,1],
+["cn-ssfs",0,0,0,1],
+["cn-bonds",0,0,0,1],
+["cn-mutual-funds",0,0,0,1],
+["cn-cfds",0,0,0,1],
+["cn-forex",0,0,0,1],
+["cn-metals",0,0,0,1]],
+[["hk-stocks",0,1,0,0],
+["hk-options",0,1,0,0],
+["hk-futures-fops",0,1,0,0],
+["hk-ssfs",0,1,0,0],
+["hk-bonds",0,0,0,1],
+["hk-mutual-funds",0,0,0,1],
+["hk-cfds",1,0,0,0],
+["hk-forex",0,0,0,1],
+["hk-metals",0,0,0,1]],
+[["jp-stocks",0,1,0,0],
+["jp-options",0,1,0,0],
+["jp-futures-fops",0,1,0,0],
+["jp-ssfs",0,0,0,1],
+["jp-bonds",0,0,0,1],
+["jp-mutual-funds",0,0,0,1],
+["jp-cfds",1,0,0,0],
+["jp-forex",0,0,0,1],
+["jp-metals",0,0,0,1]],
+[["in-stocks",0,0,0,1],
+["in-options",0,0,0,1],
+["in-futures-fops",0,1,0,0],
+["in-ssfs",0,0,0,1],
+["in-bonds",0,0,0,1],
+["in-mutual-funds",0,0,0,1],
+["in-cfds",0,0,0,1],
+["in-forex",0,0,0,1],
+["in-metals",0,0,0,1]],
+[["mx-stocks",0,1,0,0],
+["mx-options",0,0,0,1],
+["mx-futures-fops",0,1,0,0],
+["mx-ssfs",0,0,0,1],
+["mx-bonds",0,0,0,1],
+["mx-mutual-funds",0,0,0,1],
+["mx-cfds",0,0,0,1],
+["mx-forex",0,0,0,1],
+["mx-metals",0,0,0,1]],
+[["sg-stocks",0,1,0,0],
+["sg-options",0,1,0,0],
+["sg-futures-fops",0,1,0,0],
+["sg-ssfs",0,0,0,1],
+["sg-bonds",0,0,0,1],
+["sg-mutual-funds",0,0,0,1],
+["sg-cfds",1,0,0,0],
+["sg-forex",0,0,0,1],
+["sg-metals",0,0,0,1]],
+[["kr-stocks",0,0,0,1],
+["kr-options",0,1,0,0],
+["kr-futures-fops",0,1,0,0],
+["kr-ssfs",0,1,0,0],
+["kr-bonds",0,0,0,1],
+["kr-mutual-funds",0,0,0,1],
+["kr-cfds",0,0,0,1],
+["kr-forex",0,0,0,1],
+["kr-metals",0,0,0,1]],
+[["br-stocks",0,0,0,1],
+["br-options",0,0,0,1],
+["br-futures-fops",0,0,0,1],
+["br-ssfs",0,0,0,1],
+["br-bonds",0,0,0,1],
+["br-mutual-funds",0,0,0,1],
+["br-cfds",1,0,0,0],
+["br-forex",0,0,0,1],
+["br-metals",0,0,0,1]],
+[["za-stocks",0,0,0,1],
+["za-options",0,0,0,1],
+["za-futures-fops",0,0,0,1],
+["za-ssfs",0,0,0,1],
+["za-bonds",0,0,0,1],
+["za-mutual-funds",0,0,0,1],
+["za-cfds",1,0,0,0],
+["za-forex",0,0,0,1],
+["za-metals",0,0,0,1]],
+[["il-stocks",0,0,0,1],
+["il-options",0,0,0,1],
+["il-futures-fops",0,0,0,1],
+["il-ssfs",0,0,0,1],
+["il-bonds",0,0,0,1],
+["il-mutual-funds",0,0,0,1],
+["il-cfds",0,0,0,1],
+["il-forex",0,0,0,1],
+["il-metals",0,0,0,1]],
+[["ru-stocks",0,1,0,0],
+["ru-options",0,0,0,1],
+["ru-futures-fops",0,0,0,1],
+["ru-ssfs",0,0,0,1],
+["ru-bonds",0,0,0,1],
+["ru-mutual-funds",0,0,0,1],
+["ru-cfds",0,0,0,1],
+["ru-forex",0,0,0,1],
+["ru-metals",0,0,0,1]]
+,[["gl-stocks",0,0,0,1],
+["gl-options",0,0,0,1],
+["gl-futures-fops",0,0,0,1],
+["gl-ssfs",0,0,0,1],
+["gl-bonds",0,0,0,1],
+["gl-mutual-funds",0,0,0,1],
+["gl-cfds",0,0,0,1],
+["gl-forex",0,0,0,1],
+["gl-metals",0,0,0,1]]
+];
+//-----------------------------------------------------
+// HONG KONG
+var res_hk=[
+[["us-stocks",0,0,1,0],
+["us-options",0,0,1,0],
+["us-futures-fops",0,1,0,0],
+["us-ssfs",0,0,0,1],
+["us-bonds",0,1,0,0],
+["us-mutual-funds",0,0,0,1],
+["us-cfds",0,0,0,1],
+["us-forex",1,0,0,0],
+["us-metals",0,0,0,1]],
+[["ca-stocks",1,0,0,0],
+["ca-options",1,0,0,0],
+["ca-futures-fops",0,1,0,0],
+["ca-ssfs",0,0,0,1],
+["ca-bonds",0,1,0,0],
+["ca-mutual-funds",0,0,0,1],
+["ca-cfds",0,0,0,1],
+["ca-forex",1,0,0,0],
+["ca-metals",0,0,0,1]],
+[["uk-stocks",0,1,0,0],
+["uk-options",0,1,0,0],
+["uk-futures-fops",0,1,0,0],
+["uk-ssfs",0,0,0,1],
+["uk-bonds",0,1,0,0],
+["uk-mutual-funds",1,0,0,0],
+["uk-cfds",0,0,0,1],
+["uk-forex",1,0,0,0],
+["uk-metals",0,0,0,1]],
+[["eu-stocks",0,1,0,0],
+["eu-options",0,1,0,0],
+["eu-futures-fops",0,1,0,0],
+["eu-ssfs",0,0,0,1],
+["eu-bonds",0,1,0,0],
+["eu-mutual-funds",1,0,0,0],
+["eu-cfds",0,0,0,1],
+["eu-forex",1,0,0,0],
+["eu-metals",0,0,0,1]],
+[["au-stocks",0,1,0,0],
+["au-options",0,1,0,0],
+["au-futures-fops",0,1,0,0],
+["au-ssfs",0,0,0,1],
+["au-bonds",0,0,0,1],
+["au-mutual-funds",0,0,0,1],
+["au-cfds",0,0,0,1],
+["au-forex",1,0,0,0],
+["au-metals",0,0,0,1]],
+[["cn-stocks",1,1,0,0],
+["cn-options",0,0,0,1],
+["cn-futures-fops",0,0,0,1],
+["cn-ssfs",0,0,0,1],
+["cn-bonds",0,0,0,1],
+["cn-mutual-funds",0,0,0,1],
+["cn-cfds",0,0,0,1],
+["cn-forex",1,0,0,0],
+["cn-metals",0,0,0,1]],
+[["hk-stocks",0,1,0,0],
+["hk-options",0,1,0,0],
+["hk-futures-fops",0,1,0,0],
+["hk-ssfs",0,1,0,0],
+["hk-bonds",0,1,0,0],
+["hk-mutual-funds",0,0,0,1],
+["hk-cfds",0,0,0,1],
+["hk-forex",1,0,0,0],
+["hk-metals",0,0,0,1]],
+[["jp-stocks",0,1,0,0],
+["jp-options",0,1,0,0],
+["jp-futures-fops",0,1,0,0],
+["jp-ssfs",0,0,0,1],
+["jp-bonds",0,0,0,1],
+["jp-mutual-funds",0,0,0,1],
+["jp-cfds",0,0,0,1],
+["jp-forex",1,0,0,0],
+["jp-metals",0,0,0,1]],
+[["in-stocks",0,0,0,1],
+["in-options",0,0,0,1],
+["in-futures-fops",0,1,0,0],
+["in-ssfs",0,0,0,1],
+["in-bonds",0,0,0,1],
+["in-mutual-funds",0,0,0,1],
+["in-cfds",0,0,0,1],
+["in-forex",1,0,0,0],
+["in-metals",0,0,0,1]],
+[["mx-stocks",0,1,0,0],
+["mx-options",0,0,0,1],
+["mx-futures-fops",0,1,0,0],
+["mx-ssfs",0,0,0,1],
+["mx-bonds",0,0,0,1],
+["mx-mutual-funds",0,0,0,1],
+["mx-cfds",0,0,0,1],
+["mx-forex",1,0,0,0],
+["mx-metals",0,0,0,1]],
+[["sg-stocks",0,1,0,0],
+["sg-options",0,1,0,0],
+["sg-futures-fops",0,1,0,0],
+["sg-ssfs",0,0,0,1],
+["sg-bonds",0,0,0,1],
+["sg-mutual-funds",0,0,0,1],
+["sg-cfds",0,0,0,1],
+["sg-forex",1,0,0,0],
+["sg-metals",0,0,0,1]],
+[["kr-stocks",0,0,0,1],
+["kr-options",0,1,0,0],
+["kr-futures-fops",0,1,0,0],
+["kr-ssfs",0,1,0,0],
+["kr-bonds",0,0,0,1],
+["kr-mutual-funds",0,0,0,1],
+["kr-cfds",0,0,0,1],
+["kr-forex",1,0,0,0],
+["kr-metals",0,0,0,1]],
+[["br-stocks",0,0,0,1],
+["br-options",0,0,0,1],
+["br-futures-fops",0,0,0,1],
+["br-ssfs",0,0,0,1],
+["br-bonds",0,0,0,1],
+["br-mutual-funds",0,0,0,1],
+["br-cfds",0,0,0,1],
+["br-forex",0,0,0,1],
+["br-metals",0,0,0,1]],
+[["za-stocks",0,0,0,1],
+["za-options",0,0,0,1],
+["za-futures-fops",0,0,0,1],
+["za-ssfs",0,0,0,1],
+["za-bonds",0,0,0,1],
+["za-mutual-funds",0,0,0,1],
+["za-cfds",0,0,0,1],
+["za-forex",0,0,0,1],
+["za-metals",0,0,0,1]],
+[["il-stocks",0,0,0,1],
+["il-options",0,0,0,1],
+["il-futures-fops",0,0,0,1],
+["il-ssfs",0,0,0,1],
+["il-bonds",0,0,0,1],
+["il-mutual-funds",0,0,0,1],
+["il-cfds",0,0,0,1],
+["il-forex",0,0,0,1],
+["il-metals",0,0,0,1]],
+[["ru-stocks",0,1,0,0],
+["ru-options",0,0,0,1],
+["ru-futures-fops",0,0,0,1],
+["ru-ssfs",0,0,0,1],
+["ru-bonds",0,0,0,1],
+["ru-mutual-funds",0,0,0,1],
+["ru-cfds",0,0,0,1],
+["ru-forex",0,0,0,1],
+["ru-metals",0,0,0,1]]
+,[["gl-stocks",0,0,0,1],
+["gl-options",0,0,0,1],
+["gl-futures-fops",0,0,0,1],
+["gl-ssfs",0,0,0,1],
+["gl-bonds",0,0,0,1],
+["gl-mutual-funds",0,0,0,1],
+["gl-cfds",0,0,0,1],
+["gl-forex",1,0,0,0],
+["gl-metals",0,0,0,1]]
+];
+//-----------------------------------------------------
+// JAPAN
+var res_jp=[
+[["us-stocks",1,0,1,0],
+["us-options",1,0,1,0],
+["us-futures-fops",0,1,1,0],
+["us-ssfs",0,0,0,1],
+["us-bonds",1,0,0,0],
+["us-mutual-funds",1,0,0,0],
+["us-cfds",1,0,0,0],
+["us-forex",1,0,0,0],
+["us-metals",0,0,0,1]],
+[["ca-stocks",1,0,0,0],
+["ca-options",1,0,0,0],
+["ca-futures-fops",0,1,0,0],
+["ca-ssfs",0,0,0,1],
+["ca-bonds",0,1,0,0],
+["ca-mutual-funds",0,0,0,1],
+["ca-cfds",0,0,0,1],
+["ca-forex",1,0,0,0],
+["ca-metals",0,0,0,1]],
+[["uk-stocks",1,1,0,0],
+["uk-options",1,1,0,0],
+["uk-futures-fops",0,1,0,0],
+["uk-ssfs",0,0,0,1],
+["uk-bonds",0,1,0,0],
+["uk-mutual-funds",1,0,0,0],
+["uk-cfds",1,0,0,0],
+["uk-forex",1,0,0,0],
+["uk-metals",0,0,0,1]],
+[["eu-stocks",1,1,0,0],
+["eu-options",1,1,0,0],
+["eu-futures-fops",0,1,0,0],
+["eu-ssfs",0,0,0,1],
+["eu-bonds",0,1,0,0],
+["eu-mutual-funds",1,0,0,0],
+["eu-cfds",1,0,0,0],
+["eu-forex",1,0,0,0],
+["eu-metals",0,0,0,1]],
+[["au-stocks",1,1,0,0],
+["au-options",1,1,0,0],
+["au-futures-fops",0,1,0,0],
+["au-ssfs",0,0,0,1],
+["au-bonds",0,0,0,1],
+["au-mutual-funds",0,0,0,1],
+["au-cfds",1,0,0,0],
+["au-forex",1,0,0,0],
+["au-metals",0,0,0,1]],
+[["cn-stocks",0,0,0,1],
+["cn-options",0,0,0,1],
+["cn-futures-fops",0,0,0,1],
+["cn-ssfs",0,0,0,1],
+["cn-bonds",0,0,0,1],
+["cn-mutual-funds",0,0,0,1],
+["cn-cfds",0,0,0,1],
+["cn-forex",0,0,0,1],
+["cn-metals",0,0,0,1]],
+[["hk-stocks",1,1,0,0],
+["hk-options",1,1,0,0],
+["hk-futures-fops",0,1,0,0],
+["hk-ssfs",0,1,0,0],
+["hk-bonds",1,1,0,0],
+["hk-mutual-funds",0,0,0,1],
+["hk-cfds",1,0,0,0],
+["hk-forex",1,0,0,0],
+["hk-metals",0,0,0,1]],
+[["jp-stocks",1,0,0,0],
+["jp-options",0,1,0,0],
+["jp-futures-fops",0,1,0,0],
+["jp-ssfs",0,0,0,1],
+["jp-bonds",0,0,0,1],
+["jp-mutual-funds",0,0,0,1],
+["jp-cfds",1,0,0,0],
+["jp-forex",1,0,0,0],
+["jp-metals",0,0,0,1]],
+[["in-stocks",0,0,0,1],
+["in-options",0,0,0,1],
+["in-futures-fops",0,1,0,0],
+["in-ssfs",0,0,0,1],
+["in-bonds",0,0,0,1],
+["in-mutual-funds",0,0,0,1],
+["in-cfds",0,0,0,1],
+["in-forex",1,0,0,0],
+["in-metals",0,0,0,1]],
+[["mx-stocks",1,1,0,0],
+["mx-options",0,0,0,1],
+["mx-futures-fops",0,1,0,0],
+["mx-ssfs",0,0,0,1],
+["mx-bonds",0,0,0,1],
+["mx-mutual-funds",0,0,0,1],
+["mx-cfds",0,0,0,1],
+["mx-forex",1,0,0,0],
+["mx-metals",0,0,0,1]],
+[["sg-stocks",1,1,0,0],
+["sg-options",0,1,0,0],
+["sg-futures-fops",0,1,0,0],
+["sg-ssfs",0,0,0,1],
+["sg-bonds",0,0,0,1],
+["sg-mutual-funds",0,0,0,1],
+["sg-cfds",1,0,0,0],
+["sg-forex",1,0,0,0],
+["sg-metals",0,0,0,1]],
+[["kr-stocks",0,0,0,1],
+["kr-options",0,1,0,0],
+["kr-futures-fops",0,1,0,0],
+["kr-ssfs",0,1,0,0],
+["kr-bonds",0,0,0,1],
+["kr-mutual-funds",0,0,0,1],
+["kr-cfds",0,0,0,1],
+["kr-forex",1,0,0,0],
+["kr-metals",0,0,0,1]],
+[["br-stocks",0,0,0,1],
+["br-options",0,0,0,1],
+["br-futures-fops",0,0,0,1],
+["br-ssfs",0,0,0,1],
+["br-bonds",0,0,0,1],
+["br-mutual-funds",0,0,0,1],
+["br-cfds",1,0,0,0],
+["br-forex",1,0,0,0],
+["br-metals",0,0,0,1]],
+[["za-stocks",0,0,0,1],
+["za-options",0,0,0,1],
+["za-futures-fops",0,0,0,1],
+["za-ssfs",0,0,0,1],
+["za-bonds",0,0,0,1],
+["za-mutual-funds",0,0,0,1],
+["za-cfds",1,0,0,0],
+["za-forex",1,0,0,0],
+["za-metals",0,0,0,1]],
+[["il-stocks",0,0,0,1],
+["il-options",0,0,0,1],
+["il-futures-fops",0,0,0,1],
+["il-ssfs",0,0,0,1],
+["il-bonds",0,0,0,1],
+["il-mutual-funds",0,0,0,1],
+["il-cfds",0,0,0,1],
+["il-forex",0,0,0,1],
+["il-metals",0,0,0,1]],
+[["ru-stocks",1,1,0,0],
+["ru-options",0,0,0,1],
+["ru-futures-fops",0,0,0,1],
+["ru-ssfs",0,0,0,1],
+["ru-bonds",0,0,0,1],
+["ru-mutual-funds",0,0,0,1],
+["ru-cfds",0,0,0,1],
+["ru-forex",0,0,0,1],
+["ru-metals",0,0,0,1]]
+,[["gl-stocks",0,0,0,1],
+["gl-options",0,0,0,1],
+["gl-futures-fops",0,0,0,1],
+["gl-ssfs",0,0,0,1],
+["gl-bonds",0,0,0,1],
+["gl-mutual-funds",0,0,0,1],
+["gl-cfds",0,0,0,1],
+["gl-forex",1,0,0,0],
+["gl-metals",0,0,0,1]]
+];
+//-----------------------------------------------------
+// INDIA
+var res_in=[
+[["us-stocks",0,0,0,1],
+["us-options",0,0,0,1],
+["us-futures-fops",0,0,0,1],
+["us-ssfs",0,0,0,1],
+["us-bonds",0,0,0,1],
+["us-mutual-funds",0,0,0,1],
+["us-cfds",0,0,0,1],
+["us-forex",0,0,0,1],
+["us-metals",0,0,0,1]],
+[["ca-stocks",0,0,0,1],
+["ca-options",0,0,0,1],
+["ca-futures-fops",0,0,0,1],
+["ca-ssfs",0,0,0,1],
+["ca-bonds",0,0,0,1],
+["ca-mutual-funds",0,0,0,1],
+["ca-cfds",0,0,0,1],
+["ca-forex",0,0,0,1],
+["ca-metals",0,0,0,1]],
+[["uk-stocks",0,0,0,1],
+["uk-options",0,0,0,1],
+["uk-futures-fops",0,0,0,1],
+["uk-ssfs",0,0,0,1],
+["uk-bonds",0,0,0,1],
+["uk-mutual-funds",0,0,0,1],
+["uk-cfds",0,0,0,1],
+["uk-forex",0,0,0,1],
+["uk-metals",0,0,0,1]],
+[["eu-stocks",0,0,0,1],
+["eu-options",0,0,0,1],
+["eu-futures-fops",0,0,0,1],
+["eu-ssfs",0,0,0,1],
+["eu-bonds",0,0,0,1],
+["eu-mutual-funds",0,0,0,1],
+["eu-cfds",0,0,0,1],
+["eu-forex",0,0,0,1],
+["eu-metals",0,0,0,1]],
+[["au-stocks",0,0,0,1],
+["au-options",0,0,0,1],
+["au-futures-fops",0,0,0,1],
+["au-ssfs",0,0,0,1],
+["au-bonds",0,0,0,1],
+["au-mutual-funds",0,0,0,1],
+["au-cfds",0,0,0,1],
+["au-forex",0,0,0,1],
+["au-metals",0,0,0,1]],
+[["cn-stocks",0,0,0,1],
+["cn-options",0,0,0,1],
+["cn-futures-fops",0,0,0,1],
+["cn-ssfs",0,0,0,1],
+["cn-bonds",0,0,0,1],
+["cn-mutual-funds",0,0,0,1],
+["cn-cfds",0,0,0,1],
+["cn-forex",0,0,0,1],
+["cn-metals",0,0,0,1]],
+[["hk-stocks",0,0,0,1],
+["hk-options",0,0,0,1],
+["hk-futures-fops",0,0,0,1],
+["hk-ssfs",0,0,0,1],
+["hk-bonds",0,0,0,1],
+["hk-mutual-funds",0,0,0,1],
+["hk-cfds",0,0,0,1],
+["hk-forex",0,0,0,1],
+["hk-metals",0,0,0,1]],
+[["jp-stocks",0,0,0,1],
+["jp-options",0,0,0,1],
+["jp-futures-fops",0,0,0,1],
+["jp-ssfs",0,0,0,1],
+["jp-bonds",0,0,0,1],
+["jp-mutual-funds",0,0,0,1],
+["jp-cfds",0,0,0,1],
+["jp-forex",0,0,0,1],
+["jp-metals",0,0,0,1]],
+[["in-stocks",1,0,0,0],
+["in-options",0,1,0,0],
+["in-futures-fops",0,1,0,0],
+["in-ssfs",0,1,0,0],
+["in-bonds",0,0,0,1],
+["in-mutual-funds",0,0,0,1],
+["in-cfds",0,0,0,1],
+["in-forex",0,0,0,1],
+["in-metals",0,0,0,1]],
+[["mx-stocks",0,0,0,1],
+["mx-options",0,0,0,1],
+["mx-futures-fops",0,0,0,1],
+["mx-ssfs",0,0,0,1],
+["mx-bonds",0,0,0,1],
+["mx-mutual-funds",0,0,0,1],
+["mx-cfds",0,0,0,1],
+["mx-forex",0,0,0,1],
+["mx-metals",0,0,0,1]],
+[["sg-stocks",0,0,0,1],
+["sg-options",0,0,0,1],
+["sg-futures-fops",0,0,0,1],
+["sg-ssfs",0,0,0,1],
+["sg-bonds",0,0,0,1],
+["sg-mutual-funds",0,0,0,1],
+["sg-cfds",0,0,0,1],
+["sg-forex",0,0,0,1],
+["sg-metals",0,0,0,1]],
+[["kr-stocks",0,0,0,1],
+["kr-options",0,0,0,1],
+["kr-futures-fops",0,0,0,1],
+["kr-ssfs",0,0,0,1],
+["kr-bonds",0,0,0,1],
+["kr-mutual-funds",0,0,0,1],
+["kr-cfds",0,0,0,1],
+["kr-forex",0,0,0,1],
+["kr-metals",0,0,0,1]],
+[["br-stocks",0,0,0,1],
+["br-options",0,0,0,1],
+["br-futures-fops",0,0,0,1],
+["br-ssfs",0,0,0,1],
+["br-bonds",0,0,0,1],
+["br-mutual-funds",0,0,0,1],
+["br-cfds",0,0,0,1],
+["br-forex",0,0,0,1],
+["br-metals",0,0,0,1]],
+[["za-stocks",0,0,0,1],
+["za-options",0,0,0,1],
+["za-futures-fops",0,0,0,1],
+["za-ssfs",0,0,0,1],
+["za-bonds",0,0,0,1],
+["za-mutual-funds",0,0,0,1],
+["za-cfds",0,0,0,1],
+["za-forex",0,0,0,1],
+["za-metals",0,0,0,1]],
+[["il-stocks",0,0,0,1],
+["il-options",0,0,0,1],
+["il-futures-fops",0,0,0,1],
+["il-ssfs",0,0,0,1],
+["il-bonds",0,0,0,1],
+["il-mutual-funds",0,0,0,1],
+["il-cfds",0,0,0,1],
+["il-forex",0,0,0,1],
+["il-metals",0,0,0,1]],
+[["ru-stocks",0,0,0,1],
+["ru-options",0,0,0,1],
+["ru-futures-fops",0,0,0,1],
+["ru-ssfs",0,0,0,1],
+["ru-bonds",0,0,0,1],
+["ru-mutual-funds",0,0,0,1],
+["ru-cfds",0,0,0,1],
+["ru-forex",0,0,0,1],
+["ru-metals",0,0,0,1]]
+,[["gl-stocks",0,0,0,1],
+["gl-options",0,0,0,1],
+["gl-futures-fops",0,0,0,1],
+["gl-ssfs",0,0,0,1],
+["gl-bonds",0,0,0,1],
+["gl-mutual-funds",0,0,0,1],
+["gl-cfds",0,0,0,1],
+["gl-forex",0,0,0,1],
+["gl-metals",0,0,0,1]]
+];
+//-----------------------------------------------------
+// RUSSIA
+var res_ru=[
+[["us-stocks",1,0,1,0],
+["us-options",1,0,1,0],
+["us-futures-fops",0,1,1,0],
+["us-ssfs",0,0,0,1],
+["us-bonds",1,0,0,0],
+["us-mutual-funds",0,0,0,1],
+["us-cfds",1,0,0,0],
+["us-forex",1,0,0,0],
+["us-metals",1,0,0,0]],
+[["ca-stocks",1,0,0,0],
+["ca-options",1,1,0,0],
+["ca-futures-fops",0,1,0,0],
+["ca-ssfs",0,0,0,1],
+["ca-bonds",0,1,0,0],
+["ca-mutual-funds",0,0,0,1],
+["ca-cfds",0,0,0,1],
+["ca-forex",1,0,0,0],
+["ca-metals",1,0,0,0]],
+[["uk-stocks",1,1,0,0],
+["uk-options",1,1,0,0],
+["uk-futures-fops",0,1,0,0],
+["uk-ssfs",0,1,0,0],
+["uk-bonds",1,0,0,0],
+["uk-mutual-funds",1,0,0,0],
+["uk-cfds",1,0,0,0],
+["uk-forex",1,0,0,0],
+["uk-metals",1,0,0,0]],
+[["eu-stocks",1,1,0,0],
+["eu-options",1,1,0,0],
+["eu-futures-fops",0,1,0,0],
+["eu-ssfs",0,1,0,0],
+["eu-bonds",1,0,0,0],
+["eu-mutual-funds",1,0,0,0],
+["eu-cfds",1,0,0,0],
+["eu-forex",1,0,0,0],
+["eu-metals",1,0,0,0]],
+[["au-stocks",1,1,0,0],
+["au-options",0,1,0,0],
+["au-futures-fops",0,1,0,0],
+["au-ssfs",0,0,0,1],
+["au-bonds",0,0,0,1],
+["au-mutual-funds",0,0,0,1],
+["au-cfds",1,0,0,0],
+["au-forex",1,0,0,0],
+["au-metals",1,0,0,0]],
+[["cn-stocks",1,1,0,0],
+["cn-options",0,0,0,1],
+["cn-futures-fops",0,0,0,1],
+["cn-ssfs",0,0,0,1],
+["cn-bonds",0,0,0,1],
+["cn-mutual-funds",0,0,0,1],
+["cn-cfds",0,0,0,1],
+["cn-forex",1,0,0,0],
+["cn-metals",1,0,0,0]],
+[["hk-stocks",1,1,0,0],
+["hk-options",0,1,0,0],
+["hk-futures-fops",0,1,0,0],
+["hk-ssfs",0,1,0,0],
+["hk-bonds",0,0,0,1],
+["hk-mutual-funds",0,0,0,1],
+["hk-cfds",1,0,0,0],
+["hk-forex",1,0,0,0],
+["hk-metals",1,0,0,0]],
+[["jp-stocks",1,1,0,0],
+["jp-options",1,1,0,0],
+["jp-futures-fops",0,1,0,0],
+["jp-ssfs",0,0,0,1],
+["jp-bonds",0,0,0,1],
+["jp-mutual-funds",0,0,0,1],
+["jp-cfds",1,0,0,0],
+["jp-forex",1,0,0,0],
+["jp-metals",1,0,0,0]],
+[["in-stocks",0,0,0,1],
+["in-options",0,0,0,1],
+["in-futures-fops",0,1,0,0],
+["in-ssfs",0,0,0,1],
+["in-bonds",0,0,0,1],
+["in-mutual-funds",0,0,0,1],
+["in-cfds",0,0,0,1],
+["in-forex",1,0,0,0],
+["in-metals",1,0,0,0]],
+[["mx-stocks",1,1,0,0],
+["mx-options",1,1,0,0],
+["mx-futures-fops",0,1,0,0],
+["mx-ssfs",0,0,0,1],
+["mx-bonds",0,0,0,1],
+["mx-mutual-funds",0,0,0,1],
+["mx-cfds",0,0,0,1],
+["mx-forex",1,0,0,0],
+["mx-metals",1,0,0,0]],
+[["sg-stocks",1,1,0,0],
+["sg-options",1,1,0,0],
+["sg-futures-fops",0,1,0,0],
+["sg-ssfs",0,0,0,1],
+["sg-bonds",0,0,0,1],
+["sg-mutual-funds",0,0,0,1],
+["sg-cfds",1,0,0,0],
+["sg-forex",1,0,0,0],
+["sg-metals",1,0,0,0]],
+[["kr-stocks",0,0,0,1],
+["kr-options",0,1,0,0],
+["kr-futures-fops",0,1,0,0],
+["kr-ssfs",0,1,0,0],
+["kr-bonds",0,0,0,1],
+["kr-mutual-funds",0,0,0,1],
+["kr-cfds",0,0,0,1],
+["kr-forex",1,0,0,0],
+["kr-metals",1,0,0,0]],
+[["br-stocks",0,0,0,1],
+["br-options",0,0,0,1],
+["br-futures-fops",0,0,0,1],
+["br-ssfs",0,0,0,1],
+["br-bonds",0,0,0,1],
+["br-mutual-funds",0,0,0,1],
+["br-cfds",1,0,0,0],
+["br-forex",1,0,0,0],
+["br-metals",1,0,0,0]],
+[["za-stocks",0,0,0,1],
+["za-options",0,0,0,1],
+["za-futures-fops",0,0,0,1],
+["za-ssfs",0,0,0,1],
+["za-bonds",0,0,0,1],
+["za-mutual-funds",0,0,0,1],
+["za-cfds",1,0,0,0],
+["za-forex",1,0,0,0],
+["za-metals",1,0,0,0]],
+[["il-stocks",1,0,0,0],
+["il-options",0,0,0,1],
+["il-futures-fops",0,0,0,1],
+["il-ssfs",0,0,0,1],
+["il-bonds",0,0,0,1],
+["il-mutual-funds",0,0,0,1],
+["il-cfds",0,0,0,1],
+["il-forex",0,0,0,1],
+["il-metals",0,0,0,1]],
+[["ru-stocks",1,1,0,0],
+["ru-options",0,0,0,1],
+["ru-futures-fops",0,0,0,1],
+["ru-ssfs",0,0,0,1],
+["ru-bonds",0,0,0,1],
+["ru-mutual-funds",0,0,0,1],
+["ru-cfds",0,0,0,1],
+["ru-forex",0,0,0,1],
+["ru-metals",0,0,0,1]]
+,[["gl-stocks",0,0,0,1],
+["gl-options",0,0,0,1],
+["gl-futures-fops",0,0,0,1],
+["gl-ssfs",0,0,0,1],
+["gl-bonds",0,0,0,1],
+["gl-mutual-funds",0,0,0,1],
+["gl-cfds",0,0,0,1],
+["gl-forex",1,0,0,0],
+["gl-metals",1,0,0,0]]
+];
+//-----------------------------------------------------
+// SINGAPORE
+var res_sg=[
+[["us-stocks",0,0,1,0],
+["us-options",0,0,1,0],
+["us-futures-fops",0,1,0,0],
+["us-ssfs",0,0,0,1],
+["us-bonds",0,1,0,0],
+["us-mutual-funds",0,0,0,1],
+["us-cfds",0,0,0,1],
+["us-forex",0,0,0,1],
+["us-metals",0,0,0,1]],
+[["ca-stocks",0,1,0,0],
+["ca-options",1,0,0,0],
+["ca-futures-fops",0,1,0,0],
+["ca-ssfs",0,0,0,1],
+["ca-bonds",0,1,0,0],
+["ca-mutual-funds",0,0,0,1],
+["ca-cfds",0,0,0,1],
+["ca-forex",0,0,0,1],
+["ca-metals",0,0,0,1]],
+[["uk-stocks",0,1,0,0],
+["uk-options",0,1,0,0],
+["uk-futures-fops",0,1,0,0],
+["uk-ssfs",0,0,0,1],
+["uk-bonds",0,1,0,0],
+["uk-mutual-funds",0,0,0,1],
+["uk-cfds",1,0,0,0],
+["uk-forex",0,0,0,1],
+["uk-metals",0,0,0,1]],
+[["eu-stocks",0,1,0,0],
+["eu-options",0,1,0,0],
+["eu-futures-fops",0,1,0,0],
+["eu-ssfs",0,0,0,1],
+["eu-bonds",0,1,0,0],
+["eu-mutual-funds",0,0,0,1],
+["eu-cfds",1,0,0,0],
+["eu-forex",0,0,0,1],
+["eu-metals",0,0,0,1]],
+[["au-stocks",0,1,0,0],
+["au-options",0,1,0,0],
+["au-futures-fops",0,1,0,0],
+["au-ssfs",0,0,0,1],
+["au-bonds",0,0,0,1],
+["au-mutual-funds",0,0,0,1],
+["au-cfds",1,0,0,0],
+["au-forex",0,0,0,1],
+["au-metals",0,0,0,1]],
+[["cn-stocks",0,1,0,0],
+["cn-options",0,0,0,1],
+["cn-futures-fops",0,0,0,1],
+["cn-ssfs",0,0,0,1],
+["cn-bonds",0,0,0,1],
+["cn-mutual-funds",0,0,0,1],
+["cn-cfds",0,0,0,1],
+["cn-forex",0,0,0,1],
+["cn-metals",0,0,0,1]],
+[["hk-stocks",0,1,0,0],
+["hk-options",0,1,0,0],
+["hk-futures-fops",0,1,0,0],
+["hk-ssfs",0,1,0,0],
+["hk-bonds",0,1,0,0],
+["hk-mutual-funds",0,0,0,1],
+["hk-cfds",1,0,0,0],
+["hk-forex",0,0,0,1],
+["hk-metals",0,0,0,1]],
+[["jp-stocks",0,1,0,0],
+["jp-options",0,1,0,0],
+["jp-futures-fops",0,1,0,0],
+["jp-ssfs",0,0,0,1],
+["jp-bonds",0,0,0,1],
+["jp-mutual-funds",0,0,0,1],
+["jp-cfds",1,0,0,0],
+["jp-forex",0,0,0,1],
+["jp-metals",0,0,0,1]],
+[["in-stocks",0,0,0,1],
+["in-options",0,0,0,1],
+["in-futures-fops",0,1,0,0],
+["in-ssfs",0,0,0,1],
+["in-bonds",0,0,0,1],
+["in-mutual-funds",0,0,0,1],
+["in-cfds",0,0,0,1],
+["in-forex",0,0,0,1],
+["in-metals",0,0,0,1]],
+[["mx-stocks",0,1,0,0],
+["mx-options",0,0,0,1],
+["mx-futures-fops",0,1,0,0],
+["mx-ssfs",0,0,0,1],
+["mx-bonds",0,0,0,1],
+["mx-mutual-funds",0,0,0,1],
+["mx-cfds",0,0,0,1],
+["mx-forex",0,0,0,1],
+["mx-metals",0,0,0,1]],
+[["sg-stocks",0,1,0,0],
+["sg-options",0,1,0,0],
+["sg-futures-fops",0,1,0,0],
+["sg-ssfs",0,0,0,1],
+["sg-bonds",0,0,0,1],
+["sg-mutual-funds",0,0,0,1],
+["sg-cfds",1,0,0,0],
+["sg-forex",0,0,0,1],
+["sg-metals",0,0,0,1]],
+[["kr-stocks",0,0,0,1],
+["kr-options",0,1,0,0],
+["kr-futures-fops",0,1,0,0],
+["kr-ssfs",0,1,0,0],
+["kr-bonds",0,0,0,1],
+["kr-mutual-funds",0,0,0,1],
+["kr-cfds",0,0,0,1],
+["kr-forex",0,0,0,1],
+["kr-metals",0,0,0,1]],
+[["br-stocks",0,0,0,1],
+["br-options",0,0,0,1],
+["br-futures-fops",0,0,0,1],
+["br-ssfs",0,0,0,1],
+["br-bonds",0,0,0,1],
+["br-mutual-funds",0,0,0,1],
+["br-cfds",1,0,0,0],
+["br-forex",0,0,0,1],
+["br-metals",0,0,0,1]],
+[["za-stocks",0,0,0,1],
+["za-options",0,0,0,1],
+["za-futures-fops",0,0,0,1],
+["za-ssfs",0,0,0,1],
+["za-bonds",0,0,0,1],
+["za-mutual-funds",0,0,0,1],
+["za-cfds",1,0,0,0],
+["za-forex",0,0,0,1],
+["za-metals",0,0,0,1]],
+[["il-stocks",0,0,0,1],
+["il-options",0,0,0,1],
+["il-futures-fops",0,0,0,1],
+["il-ssfs",0,0,0,1],
+["il-bonds",0,0,0,1],
+["il-mutual-funds",0,0,0,1],
+["il-cfds",0,0,0,1],
+["il-forex",0,0,0,1],
+["il-metals",0,0,0,1]],
+[["ru-stocks",0,1,0,0],
+["ru-options",0,0,0,1],
+["ru-futures-fops",0,0,0,1],
+["ru-ssfs",0,0,0,1],
+["ru-bonds",0,0,0,1],
+["ru-mutual-funds",0,0,0,1],
+["ru-cfds",0,0,0,1],
+["ru-forex",0,0,0,1],
+["ru-metals",0,0,0,1]]
+,[["gl-stocks",0,0,0,1],
+["gl-options",0,0,0,1],
+["gl-futures-fops",0,0,0,1],
+["gl-ssfs",0,0,0,1],
+["gl-bonds",0,0,0,1],
+["gl-mutual-funds",0,0,0,1],
+["gl-cfds",0,0,0,1],
+["gl-forex",0,0,0,1],
+["gl-metals",0,0,0,1]]
+];
+//-----------------------------------------------------
+// OTHER
+var res_ot=[
+[["us-stocks",1,0,1,0],
+["us-options",1,0,1,0],
+["us-futures-fops",0,1,0,0],
+["us-ssfs",0,0,0,1],
+["us-bonds",1,0,0,0],
+["us-mutual-funds",1,0,0,0],
+["us-cfds",1,0,0,0],
+["us-forex",1,0,0,0],
+["us-metals",0,0,0,1]],
+[["ca-stocks",1,0,0,0],
+["ca-options",0,0,0,1],
+["ca-futures-fops",0,1,0,0],
+["ca-ssfs",0,0,0,1],
+["ca-bonds",1,0,0,0],
+["ca-mutual-funds",0,0,0,1],
+["ca-cfds",0,0,0,1],
+["ca-forex",1,0,0,0],
+["ca-metals",0,0,0,1]],
+[["uk-stocks",1,1,0,0],
+["uk-options",0,0,0,1],
+["uk-futures-fops",0,1,0,0],
+["uk-ssfs",0,0,0,1],
+["uk-bonds",0,1,0,0],
+["uk-mutual-funds",1,0,0,0],
+["uk-cfds",1,0,0,0],
+["uk-forex",1,0,0,0],
+["uk-metals",0,0,0,1]],
+[["eu-stocks",1,1,0,0],
+["eu-options",0,0,0,1],
+["eu-futures-fops",0,1,0,0],
+["eu-ssfs",0,0,0,1],
+["eu-bonds",0,1,0,0],
+["eu-mutual-funds",1,0,0,0],
+["eu-cfds",1,0,0,0],
+["eu-forex",1,0,0,0],
+["eu-metals",0,0,0,1]],
+[["au-stocks",1,1,0,0],
+["au-options",0,0,0,1],
+["au-futures-fops",0,1,0,0],
+["au-ssfs",0,0,0,1],
+["au-bonds",0,0,0,1],
+["au-mutual-funds",0,0,0,1],
+["au-cfds",1,0,0,0],
+["au-forex",1,0,0,0],
+["au-metals",0,0,0,1]],
+[["cn-stocks",1,1,0,0],
+["cn-options",0,0,0,1],
+["cn-futures-fops",0,0,0,1],
+["cn-ssfs",0,0,0,1],
+["cn-bonds",0,0,0,1],
+["cn-mutual-funds",0,0,0,1],
+["cn-cfds",0,0,0,1],
+["cn-forex",1,0,0,0],
+["cn-metals",0,0,0,1]],
+[["hk-stocks",1,1,0,0],
+["hk-options",0,0,0,1],
+["hk-futures-fops",0,1,0,0],
+["hk-ssfs",0,0,0,1],
+["hk-bonds",0,0,0,1],
+["hk-mutual-funds",0,0,0,1],
+["hk-cfds",1,0,0,0],
+["hk-forex",1,0,0,0],
+["hk-metals",0,0,0,1]],
+[["jp-stocks",1,1,0,0],
+["jp-options",0,0,0,1],
+["jp-futures-fops",0,1,0,0],
+["jp-ssfs",0,0,0,1],
+["jp-bonds",0,0,0,1],
+["jp-mutual-funds",0,0,0,1],
+["jp-cfds",1,0,0,0],
+["jp-forex",1,0,0,0],
+["jp-metals",0,0,0,1]],
+[["in-stocks",0,0,0,1],
+["in-options",0,0,0,1],
+["in-futures-fops",0,1,0,0],
+["in-ssfs",0,0,0,1],
+["in-bonds",0,0,0,1],
+["in-mutual-funds",0,0,0,1],
+["in-cfds",0,0,0,1],
+["in-forex",1,0,0,0],
+["in-metals",0,0,0,1]],
+[["mx-stocks",1,1,0,0],
+["mx-options",0,0,0,1],
+["mx-futures-fops",0,1,0,0],
+["mx-ssfs",0,0,0,1],
+["mx-bonds",0,0,0,1],
+["mx-mutual-funds",0,0,0,1],
+["mx-cfds",0,0,0,1],
+["mx-forex",1,0,0,0],
+["mx-metals",0,0,0,1]],
+[["sg-stocks",1,1,0,0],
+["sg-options",0,0,0,1],
+["sg-futures-fops",0,1,0,0],
+["sg-ssfs",0,0,0,1],
+["sg-bonds",0,0,0,1],
+["sg-mutual-funds",0,0,0,1],
+["sg-cfds",1,0,0,0],
+["sg-forex",1,0,0,0],
+["sg-metals",0,0,0,1]],
+[["kr-stocks",0,0,0,1],
+["kr-options",0,0,0,1],
+["kr-futures-fops",0,1,0,0],
+["kr-ssfs",0,0,0,1],
+["kr-bonds",0,0,0,1],
+["kr-mutual-funds",0,0,0,1],
+["kr-cfds",0,0,0,1],
+["kr-forex",1,0,0,0],
+["kr-metals",0,0,0,1]],
+[["br-stocks",0,0,0,1],
+["br-options",0,0,0,1],
+["br-futures-fops",0,0,0,1],
+["br-ssfs",0,0,0,1],
+["br-bonds",0,0,0,1],
+["br-mutual-funds",0,0,0,1],
+["br-cfds",1,0,0,0],
+["br-forex",1,0,0,0],
+["br-metals",0,0,0,1]],
+[["za-stocks",0,0,0,1],
+["za-options",0,0,0,1],
+["za-futures-fops",0,0,0,1],
+["za-ssfs",0,0,0,1],
+["za-bonds",0,0,0,1],
+["za-mutual-funds",0,0,0,1],
+["za-cfds",1,0,0,0],
+["za-forex",1,0,0,0],
+["za-metals",0,0,0,1]],
+[["il-stocks",1,0,0,0],
+["il-options",0,0,0,1],
+["il-futures-fops",0,0,0,1],
+["il-ssfs",0,0,0,1],
+["il-bonds",0,0,0,1],
+["il-mutual-funds",0,0,0,1],
+["il-cfds",0,0,0,1],
+["il-forex",0,0,0,1],
+["il-metals",0,0,0,1]],
+[["ru-stocks",1,1,0,0],
+["ru-options",0,0,0,1],
+["ru-futures-fops",0,0,0,1],
+["ru-ssfs",0,0,0,1],
+["ru-bonds",0,0,0,1],
+["ru-mutual-funds",0,0,0,1],
+["ru-cfds",0,0,0,1],
+["ru-forex",0,0,0,1],
+["ru-metals",0,0,0,1]]
+,[["gl-stocks",0,0,0,1],
+["gl-options",0,0,0,1],
+["gl-futures-fops",0,0,0,1],
+["gl-ssfs",0,0,0,1],
+["gl-bonds",0,0,0,1],
+["gl-mutual-funds",0,0,0,1],
+["gl-cfds",0,0,0,1],
+["gl-forex",1,0,0,0],
+["gl-metals",0,0,0,1]]
+];
+// Loop function continually redraws all the canvas elements allowing for button selection, animation, and rollovers
+/* ----------------------------------------------------------------------------------- */
+// var onePass = 0;
+var lCount = linkYourLoc.length;
+var eCount = linkExchange.length;
+var pCount = productSet.length;
+var loop = function() {
+        currentTheme = $("html").attr("data-theme");
+        if (darkLight_theme != currentTheme){
+            // switch them colors dark or light
+            darkLight_theme = currentTheme;
+            // console.log('currentTheme is now ' + currentTheme  );
+        }
+        currentDir = $("html").attr("dir");  
+        if (direction_theme != currentDir) {
+            // console.log('direction_theme != currentDir where: ' + direction_theme +' != '+ currentDir);
+            direction_theme = currentDir;
+            if (currentDir == 'rtl'){
+                // Adjust tab pill buttons
+                $('#tables-btn').trigger('click');
+                // changeView('tables');
+                $('#tables-btn').addClass('active');
+                $('#tables-btn').attr('selected',true);
+                $('#wizard-btn').removeClass('active');
+                $('#wizard-btn').attr('selected',false);
+                // hide the wizard and show the table interface
+                $('#wizard-btn').css( {'display' : 'none'} );
+			    hideWizard = true;
+            }else{
+                // Wizard mode is ONLY available for LTR layouts
+                $('#wizard-btn').css( {'display' : 'block'} );
+            }
+        }
+collectiveSteps = 0;
+ctx.clearRect(0, 0, canvas.width, canvas.height);
+logMotion = 0;
+// Draw the lines to all applicable boxes
+// Draw lines to STEP 2 boxes
+textboxList.forEach(function(box, index) {
+if (selectedIndex[0] != -1){
+boxLocation = textboxList[selectedIndex[0]];
+if (textboxList[index].btntype == 'exchange' ){
+if(naExchanges[ index - lCount ] == 1){
+boxEnd = textboxList[index];
+drawLine(boxLocation, boxEnd);
+}
+}
+}
+// Draw lines to STEP 3 boxes
+if (selectedIndex[1] != -1){
+boxExchange = textboxList[selectedIndex[1] + mylocationSet.length ];
+if (textboxList[index].btntype == 'product' ){
+/*if (onePass < 20){
+console.log( index + ': naProducts[ index - lCount - eCount -1 ] = ' + naProducts[ index - lCount - eCount -1 ] );
+// console.log('boxExchange to string: selectedIndex[1] + mylocationSet.length = ' + selectedIndex[1] + mylocationSet.length );
+onePass++;
+}*/
+if(naProducts[ index - lCount - eCount ] == 1){
+boxEnd = textboxList[index];
+drawLine(boxExchange, boxEnd);
+}
+}
+}
+});
+textboxList.forEach(function(box, index) {
+drawRoundedRect(box, index);
+wrapText(box, index);
+lifeCycle(box, index);
+});
+stepSetH1.forEach(function(box, index){
+// drawRoundedRect(box, index);
+// buildSteps(box,index);
+wrapText(box, index);
+});
+stepSetH6.forEach(function(box, index){
+// drawRoundedRect(box, index);
+// buildSteps(box,index);
+wrapText(box, index);
+});
+window.requestAnimationFrame(loop);
+};
+loop();
+/* BEGIN Toggle visible of Margin Requirements Wizard View and Margin Requirements Table View */
+$('#wizard-btn').click(function(){ changeView('wizard'); });
+$('#tables-btn').click(function(){ changeView('tables'); });
+// toggle to table mode for mobile screens
+changeView = function( evt ) {
+// console.log('changeView() called!!! evt = ' + evt );
+if (evt == 'wizard'){
+$('#features-wizard').css( {'display' : 'block'} );
+$('#features-tables').css( {'display' : 'none'} );
+}else{
+$('#features-wizard').css( {'display' : 'none'} );
+$('#features-tables').css( {'display' : 'block'} );
+}
+}
+if ( winWidth < 768 ) {
+if( hideWizard == false ) {
+// console.log('LOOP only show tables!!!' );
+// disable wizard mode
+$('#tables-btn').click();
+changeView('tables');
+// hiddle pill buttons
+$('#margin-requirements .pill-set').css({ 'display' : 'none' });
+hideWizard = true;
+}
+}else{
+if ( hideWizard == true ) {
+// console.log('WIDE greater than 767 winWidth = ' + winWidth );
+$('#margin-requirements .pill-set').css({ 'display' : 'block' });
+changeView('wizard');
+}
+hideWizard = false;
+if (initWizard == 1){
+initWizard = 0;
+changeView('wizard');
+}
+}
+/* END Toggle visible of Margin Requirements Wizard View and Margin Requirements Table View */
+}, 250); // setTimeout
+}); // document ready
+</script>
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-d23de039-d518-4f10-9810-e68da4592744","rua.cook":"true","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="XE2AM-F37QZ-LYWQP-H8KRM-4SNX5",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"XE2AM-F37QZ-LYWQP-H8KRM-4SNX5";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n="false"=="true"?1:0,t="cookiepresent",a="eykumbc7mxv4o2gjewra-f-fa1f183c8-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1168163","ak.ai":parseInt("665092",10),"ak.ol":"0","ak.cr":39,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"16e5675","ak.r":50930,"ak.a2":n,"ak.m":"a","ak.n":"essl","ak.bpcip":"38.21.70.0","ak.cport":49592,"ak.gh":"95.101.132.199","ak.quicv":"","ak.tlsv":"tls1.2","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1758012834","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==IE2VkFYQRmFXuyjXmCag2P1EuMUMDKFe3AdGzH1M/lgEMRM9OcnDpQ+oQp4Mko8DPL+o690PSh9LyJe2rXOuMV1VuzMln/VsI4FJo5LT+/yIf5hfEThYLUue1iADPm7YRUo4ne0RW7hT7srMv7Fvy1WiI+MeigEd3AAsxY5mPvErLWU0hvpdcDcSg1QEJZjjKwMUhIHc4FpNUg/cHVG3EZ0Zg4dN5w+GyDZVbUe2ycT7svrZIc/4ciS+lZg5tllshMMwGluigRo+rG/KPhQzuq295kd6YfQwCZ0gmEJu0LS7SI34vbVd1BJtQhzRDcSysrXD05QoNonwZy84zd1B7p8fkpj1VJZb0wdxuS6xhIQh5f/2iJwQjJTLB11YDmDg+cXBrjDFuXxGZjL8yqXeE0q3IE6SxEmIK3uxPKzkan0=","ak.pv":"398","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.html","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak-2.html","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body>
+<style type="text/css">
+/* PAGE TITLE -------------------------------------------------------------- */
+    @layer bootstrap {#page-title {display:none;}
+    /*Pills override */
+    .nav-pills > li > a, 
+    .nav-pills > li > a:hover, 
+    .nav-pills > li .nav-link,
+    .nav-pills .nav-item > a,
+    .nav-pills .nav-item > a:hover,
+    .nav-pills .nav-item .nav-link{
+        color:var(--font-color-dark) !important;
+        background-color:var(--bg-body) !important;
+        border:1px solid var(--gray-50) !important;
+    }
+    .nav-pills > li .nav-link.active, 
+    .nav-pills .nav-item .nav-link.active{
+        color:var(--light) !important;
+        background-color:var(--primary) !important;
+        border: 1px solid var(--primary) !important;
+    }}
+    #features-wizard{padding-top:0;}
+	a:hover{cursor:pointer;}
+	.btn-mod{width: 60%;}
+	.btn .caret{margin-left:4px;}
+	.margin-benefits li{font-size:18px;font-weight:300;line-height:1.4em;margin-bottom:25px;}
+	.infographic{max-height: 480px;}
+	.cat-bkgd{background-color:var(--gray-10-solid);max-height:340px;margin-bottom:8px;}
+	.product-block {background: var(--gray-5-solid);border: 1px solid var(--gray-10-solid);min-height: 400px;}
+	.block-top-image-stock {height:120px;background-image: url(../../images/2015/margin-product-tiles-stock.jpg); backgroundsize:cover;background-position: 50% 50%;}
+	.block-top-image-options {height:120px;background-image: url(../../images/2015/margin-product-tiles-options.jpg);background-size:cover;background-position: 50% 38%;}
+	.block-top-image-futures {height:120px;background-image: url(../../images/2015/margin-product-tiles-futures.jpg); backgroundsize:cover;background-position: 50% 50%;}
+	.block-top-image-ssf {height:120px;background-image: url(../../images/2015/margin-product-tiles-ssf.jpg); backgroundsize:cover;background-position: 50% 50%;}
+	.block-top-image-bonds {height:120px;background-image: url(../../images/2015/margin-product-tiles-bonds.jpg); backgroundsize:cover;background-position: 50% 60%;}
+	.block-top-image-mutual-fund {height:120px;background-image: url(../../images/2015/margin-product-tiles-mutual-fund.jpg);background-size:cover;background-position: 50% 50%;}
+	.block-top-image-metals {height:120px;background-image: url(../../images/2015/margin-product-tiles-metals.jpg); backgroundsize:cover;background-position: 50% 50%;}
+	.notes-education {margin: 20px 1px 0;padding: 0px 30px 40px; background: var(--gray-5-solid);border: 1px solid var(--gray-10-solid);}
+	.notes-headline {margin: 20px 1px 0;padding: 0px 30px 15px; background: var(--gray-5-solid);border: 1px solid var(--gray-10-solid);border-bottom:1px solid var(--gray-5-solid);}
+	.matrix-box {padding-left:15px;padding-right:15px;}
+	.center{text-align:center;}
+	/* BEGIN Margin Selector --------  */
+	.mylocation, .exchange, .product, .submit, .titlestep, .subtitlesstep {font-size:7px;color:var(--gray-30); display:none;}
+	.textbox-set {
+	  margin: 3em auto;
+	  cursor: default;
+	}
+	.textbox-items {
+	  display: table;
+	  margin: 0 0 10px;
+	  padding: 0;
+	  list-style-type: none;
+	  color: var(--light);
+	  font-size: 18px;
+	  text-align: center;
+	}
+	.textbox-items li {
+	  display: table-cell;
+	  width: 25%;
+	  vertical-align: bottom;
+	  padding: 0 .5em;
+	  -webkit-transform: scale(0.65) translateY(40px);
+			  transform: scale(0.65) translateY(40px);
+	  -webkit-transform-origin: bottom center;
+			  transform-origin: bottom center;
+	  -webkit-transition: -webkit-transform .5s;
+	  transition: -webkit-transform .5s;
+	  transition: transform .5s;
+	  transition: transform .5s, -webkit-transform .5s;
+	}
+	.textbox-items li.active {
+	  -webkit-transform: scale(1) translateY(0);
+			  transform: scale(1) translateY(0);
+	}
+	.textbox-items em {
+	  display: block;
+	  margin-top: .5em;
+	}
+/* Begin table view margin selector section */
+.shortcut-view {
+    background-color:var(--gray-dark-50);color:var(--light);font-weight:700;text-align:center;display: inline-block;line-height:30px;
+}
+.shortcut-view-global {
+    background-color:var(--gray-dark-50);color:var(--light);font-weight:700;text-align:center;display: inline-block;line-height:30px;
+}
+.shortcut-ul {padding: 0 0 0 15px;}
+.shortcut-ul li{
+    list-style:none; margin:5px 0; /* padding:0px 0; border:1px solid #e6e6e6; */ 
+}
+.shortcut-ul a .row {background-color:var(--bg-body);align-items: center;}
+.shortcut-ul a .row:hover {background-color: var(--gray-30-solid);}
+.shortcut-ul a div:not(:first-child) {color: var(--p-color)}
+.panel-group > .panel-default > .panel-heading + .panel-collapse > .panel-body{background-color: var(--gray-5-solid);}
+.gray-box{background-color: var(--gray-5-solid);border: 1px solid var(--border-color);margin: 20px 0px;padding: 20px;}
+.btn-uk-margin{margin: 20px auto 10px;padding: 6px 40px;}
+	/* END Margin Selector --------  */
+	@media (max-width:767px){
+		#margin-page-index {min-height: 180px;padding-top: 20px;background-size: cover;}
+		.btn-mod{width: 50%;}
+		.notes-education {margin: 20px 0px 0;padding: 20px 5px;background: var(--gray-5-solid);border: none;}
+		.matrix-box {padding-left:0;padding-right:0;}
+		.key-selectable {background-color:#323436;width:30px;height:12px;display:inline-block;margin:0 10px 0 0px;}
+		.key-na {background-color:#ffffff;border:1px solid var(--gray-50); width:30px;height:12px;display:inline-block;margin:0 10px 0 0px;}
+		.key-selectable-dark {background-color:#a99d86;width:30px;height:12px;display:inline-block;margin:0 10px 0 0px;}
+		.key-na-dark {background-color:#3b3b3b;border:1px solid var(--gray-50); width:30px;height:12px;display:inline-block;margin:0 10px 0 0px;}
+		.key-selected {background-color:var(--primary);width:30px;height:12px;display:inline-block;margin:0 10px 0 0px;}
+		.visible-xs {height: 3px;}
+		.shortcut-view {
+			background-color:var(--gray-dark-50);color:var(--light);font-weight:700;text-align:center;display: inline-block; 
+		}
+	}
+	@media (min-width:768px){
+		.btn-mod{width: 50%;}
+		.key-selectable {background-color:#323436;width:30px;height:12px;display:inline-block;margin:0 10px 0 20px;}
+		.key-na {background-color:#ffffff;border:1px solid var(--gray-50); width:30px;height:12px;display:inline-block;margin:0 10px 0 20px;}
+		.key-selectable-dark {background-color:#a99d86;width:30px;height:12px;display:inline-block;margin:0 10px 0 20px;}
+		.key-na-dark {background-color:#3b3b3b;border:1px solid var(--gray-50); width:30px;height:12px;display:inline-block;margin:0 10px 0 20px;}
+		.key-selected {background-color:var(--primary);width:30px;height:12px;display:inline-block;margin:0 10px 0 20px;}
+	}
+	@media (min-width:992px){
+		.btn-mod{width: 70%;}
+	}
+	@media (min-width:1200px){
+		.btn-mod{width: 60%;}
+	}
+</style>
+<div id="printheader"></div>
+<!-- HEADER START  -->
+<div class="ibkr-header" id="ibkr-header">
+        <style type="text/css">
+.banner-risk-warning {
+    margin:0px;
+    padding:8px 0px;
+    width:100%;
+    height:auto;
+    background-color:#242424;
+}
+.banner-risk-warning p {
+    margin:0px;
+    padding:0px;
+    font-weight:400;
+    font-size:1.0rem;
+    line-height:1.25rem;
+    text-align:center;
+    color:#FFFFFF;
+}
+.banner-risk-warning .warninglink a{text-decoration:underline;}
+/* BOOTSTRAP 4 | MEDIA QUERY | EXTRA SMALL (< 576PX) ---------------------------------------------------------------------------------------------------- */
+@media (max-width:575.98px) {
+    .banner-risk-warning {
+        padding:4px 0px;
+    }
+    .banner-risk-warning p {
+        font-size:0.8125rem;
+        line-height:1.0rem;
+    }
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | SMALL (576PX-767.98PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:576px) and (max-width:767.98px) {
+    .banner-risk-warning {
+        padding:4px 0px;
+    }
+    .banner-risk-warning p {
+        font-size:0.8125rem;
+        line-height:1.0rem;
+    }
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | MEDIUM (768PX-991.98PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:768px) and (max-width:991.98px) {
+    .banner-risk-warning {
+        padding:4px 0px;
+    }
+    .banner-risk-warning p {
+        font-size:0.8125rem;
+        line-height:1.0rem;
+    }
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | LARGE (992PX-1199.98PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:992px) and (max-width:1199.98px) {
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | EXTRA LARGE (>1200PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:1200px) {
+    
+}
+</style>
+<div class="banner-risk-warning">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p>Investing in financial products involves risk. Losses may exceed the value of your original investment.</p>
+            </div>
+        </div>
+    </div>
+</div>    <!-- NAV TOP START (LG/XL ONLY) -->
+    <nav class="navbar navbar-inverse navbar-expand-lg navbar-top d-none d-lg-block">
+        <div class="container">
+            <div class="navbar-collapse collapse" id="ibkr-nav-top">
+            </div>
+        </div>
+    </nav>
+    <!-- NAV TOP END -->
+           <!-- NAV BOTTOM START -->
+      <nav class="navbar navbar-inverse navbar-expand-lg navbar-bottom">
+        <div class="container">
+          <!-- LOGO -->
+          <a
+  href="../home.html"
+  target="_self"
+  title="Valor"
+  aria-label="Valor LTD Home"
+>
+  <img src="../../../logo.svg" alt="Valor LTD Logo" width="140" height="auto" />
+</a>
+
+
+          <!-- TOGGLE (XS/SM/MD ONLY) -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            aria-label="Toggle Navigation"
+          >
+            <span class="navbar-toggler-icon">
+              <i class="fas fa-bars" aria-hidden="true"></i>
+            </span>
+          </button>
+
+          <!-- NAV LINKS -->
+          <div class="navbar-collapse collapse" id="ibkr-nav-bottom">
+            <ul class="navbar-nav ml-auto align-items-center">
+              <!-- WHY VALOR -->
+              <li class="nav-item">
+                <a href="../whyib/overview.html" target="_self" class="nav-link">
+                  Why Valor
+                </a>
+              </li>
+
+              <!-- PRICING -->
+              <li class="nav-item dropdown">
+                <a
+                  href="javascript:void(0)"
+                  class="nav-link dropdown-toggle"
+                  id="nav-pricing"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Pricing
+                </a>
+                <div
+                  class="dropdown-menu dropdown-pricing"
+                  aria-labelledby="nav-pricing"
+                >
+                  <div class="row">
+                    <div class="col">
+                      <a
+                        href="../pricing/commissions-home.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >Commissions</a
+                      >
+                      <a
+                        href="../trading/margin-rates.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >Margin Rates</a
+                      >
+                      <a
+                        href="../pricing/research-news-services.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >Research and News</a
+                      >
+                      <a
+                        href="../pricing/market-data-pricing.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >Market Data Pricing</a
+                      >
+                      <a
+                        href="../pricing/other-fees-overview.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >Fees</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- TRADING -->
+              <li class="nav-item dropdown">
+                <a
+                  href="javascript:void(0)"
+                  class="nav-link dropdown-toggle"
+                  id="nav-technology"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Trading
+                </a>
+                <div
+                  class="dropdown-menu dropdown-technology"
+                  aria-labelledby="nav-technology"
+                >
+                  <div class="row">
+                    <div class="col">
+                      <a
+                        href="../trading/trading-platforms.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >Platforms</a
+                      >
+                      <a
+                        href="../trading/ib-api.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >APIs</a
+                      >
+                      <a
+                        href="../trading/margin.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >Margin</a
+                      >
+                      <a
+                        href="../trading/ordertypes.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >Order Types</a
+                      >
+                      <a
+                        href="../whyib/reporting.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >Reporting</a
+                      >
+                      <a
+                        href="../trading/sustainable-investing-ie.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >Sustainable Investing</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- LOGIN / OPEN ACCOUNT BUTTONS -->
+              <!-- LOG IN -->
+              <li class="nav-item d-none d-lg-block">
+                <a
+                  href="https://dex.whiterock24.ai/signin"
+                  target="_self"
+                  class="nav-link nav-login"
+                  id="nav-log-in"
+                >
+                  Log In
+                </a>
+              </li>
+              <!-- OPEN ACCOUNT -->
+              <li class="nav-item d-none d-lg-block">
+                <a
+                  href="https://dex.whiterock24.ai/sign-up"
+                  target="_self"
+                  class="nav-link nav-open-account"
+                  id="nav-open-account"
+                >
+                  Open Account
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- NAV BOTTOM END -->
+
+
+</div>
+<!-- HEADER END ---------------------------------------------------------------------------------------------------- -->
+
+   <!-- MOBILE NAV START (XS/SM/MD ONLY) -->
+<div class="menu-mobile d-lg-none">
+  <!-- CLOSE BUTTON -->
+  <div class="close-button">
+    <button type="button" class="btn-close" aria-label="Close Menu">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+
+  <!-- LOGO -->
+  <div class="logo-container">
+    <a
+  href="../home.html"
+  target="_self"
+  title="Valor"
+  aria-label="Valor LTD Home"
+>
+  <img src="../../../logo.svg" alt="Valor LTD Logo" width="140" height="auto" />
+</a>
+  </div>
+
+  <ul>
+    <!-- WHY VALOR -->
+    <li><a href="whyib/overview.html" target="_self">Why Valor</a></li>
+
+    <!-- PRICING (Always Open) -->
+    <li>
+      <p class="submenu-title">PRICING</p>
+      <ul>
+        <li><a href="../pricing/commissions-home.html" target="_self">Commissions</a></li>
+        <li><a href="../trading/margin-rates.html" target="_self">Margin Rates</a></li>
+        <li><a href="../pricing/research-news-services.html" target="_self">Research and News</a></li>
+        <li><a href="../pricing/market-data-pricing.html" target="_self">Market Data Pricing</a></li>
+        <li><a href="../pricing/other-fees-overview.html" target="_self">Fees</a></li>
+      </ul>
+    </li>
+
+    <!-- TRADING (Always Open) -->
+    <li>
+      <p class="submenu-title">TRADING</p>
+      <ul>
+        <li><a href="../trading/trading-platforms.html" target="_self">Platforms</a></li>
+        <li><a href="../trading/ib-api.html" target="_self">APIs</a></li>
+        <li><a href="../trading/margin.html" target="_self">Margin</a></li>
+        <li><a href="../trading/ordertypes.html" target="_self">Order Types</a></li>
+        <li><a href="../whyib/reporting.html" target="_self">Reporting</a></li>
+        <li><a href="../trading/sustainable-investing-ie.html" target="_self">Sustainable Investing</a></li>
+      </ul>
+    </li>
+
+    <!-- LOG IN -->
+    <li>
+      <a
+        href="https://dex.whiterock24.ai/signin"
+        target="_self"
+        class="nav-link nav-login"
+        id="nav-log-in"
+        style="display:block; width:calc(100% - 20px); margin:12px 10px; border:2px solid #c82333; color:#c82333; padding:12px; border-radius:0; text-align:center; font-weight:600;"
+      >
+        Log In
+      </a>
+    </li>
+
+    <!-- OPEN ACCOUNT -->
+    <li>
+      <a
+        href="https://dex.whiterock24.ai/sign-up"
+        target="_self"
+        class="nav-link nav-open-account"
+        id="nav-open-account"
+        style="display:block; width:calc(100% - 20px); margin:8px 10px 12px; background-color:#c82333; color:#fff; padding:12px; border-radius:0; text-align:center; font-weight:600;"
+      >
+        Open Account
+      </a>
+    </li>
+  </ul>
+</div>
+<!-- MOBILE NAV OVERLAY -->
+<div class="website-overlay d-lg-none"></div>
+<!-- MOBILE NAV END -->
+
+<style>
+/* Hover effects */
+.nav-login:hover {
+  border-color: #a71d2a !important;
+  color: #a71d2a !important;
+}
+
+.nav-open-account:hover {
+  background-color: #a71d2a !important;
+  color: #fff !important;
+}
+</style>
+
+
+
+
+
+<script>
+$(window).on('load', function() {
+    // Simple check if URL contains 'conf=am'
+    if (!window.location.href.includes('conf=am')) {
+        $('#region-modal').modal({
+            backdrop: 'static',
+            keyboard: false
+        });
+        $('#region-modal').modal('show');
+        $('body').removeClass('modal-open');
+        $('body').css('overflow', '');
+        $('body').css('padding-right', '');
+    }
+});
+</script>
+<script>
+$(function() {
+   $('button#btnRegionRecommendation').click(function() {
+    window.location.href = 'https://www.interactivebrokers.com/';
+  });
+  $('button#btnRegionCurrent').click(function() {
+    setCookie("IB_REG", 1, 365, '.interactivebrokers.ie');
+    location.reload();
+  });
+});
+</script><div id="contents">
+    <section class="page-title" id="page-title">
+        <div class="container">
+            <div class="row">
+                <div class="col"><h1>Margin Requirements</h1></div>
+            </div>
+        </div>
+    </section>
+<style>
+		.text-regular {
+		font-weight: 400 !important;
+		}
+	</style>
+		
+	<!-- INTRO -->
+<!-- INTRO -->
+<section class="hero hero-side-nav" id="">
+    <figure class="hero-bg-img img-flip-rtl">
+        <picture class="r-img"> <img src="../../images/web/hero-margin.jpg" alt="" border="0" /> </picture>
+    </figure>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-4 col-xl-3">
+                
+<!-- Side Nav -->
+<nav class="ibkr-sidebar">
+    <ul class="list-unstyled" id="nav_set">
+		<li  > <a href="margin.html" id="nav_overview" target="_self">Margin Trading Overview</a> </li>
+        		<li  >  <a href="margin-rates.html" id="nav_overview" target="_self">Margin Rates & Financing</a></li>
+		<li  class="active" > <a href="margin-requirements.html" id="nav_margin_requirements" target="_self">Margin Requirements</a> </li>
+		    </ul>
+</nav>
+<script>
+        $(document).ready(navSetAnimation);
+        $(window).on('resize',navSetAnimation);
+        function navSetAnimation() {
+            const mqMd = window.matchMedia( "(max-width:991.98px)" );
+            if (mqMd.matches) {
+                $('#nav_set li').each(function() {
+                    let navItem = $(this);
+                    let navItemIndex = (parseInt($(navItem).index() + 1)) * 0.1;
+                    let navOrigin = $('.hero').offset().left;
+                    if ($(navItem).hasClass('active')) {
+                        let navItemActive = $(this);
+                        let navItemActiveOffset = navItemActive.offset().left - navOrigin;
+                        let navItemActiveDuration = navItemIndex * 1000;
+                        $('#nav_set').animate({scrollLeft: navItemActiveOffset}, navItemActiveDuration);
+                    }
+                });
+            }
+        }
+    </script>            </div>
+            <div class="col-12 col-lg-8 col-xl-7">
+                <div class="hero-content">
+	                        <h2>Margin Requirements</h2>
+									                    <ul class="checklist-circle">
+                                <li>As a resident of Europe you are subjected to Risk-based margin. The complete margin requirement details can be seen by selecting a product below.</li>
+			                </ul>
+							                                
+		                    <ul class="checklist-circle">
+                                <li>Margin Financing Charge</a></li>
+			                </ul>
+									                    <ul class="checklist-circle">
+                                <li>Exposure Fee for High Risk Accounts</a></li>
+			                </ul>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</section>	
+<style>
+#eu-margin .btn{width: 100%; }
+</style>
+    
+<!-- Margin Financing Charge -->
+<span class="id-drop"><span id="margin-financing-charge" ></span></span>
+<section class="">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h2>Margin Financing Charge</h2>
+        <hr>
+                      <p>Interactive Brokers may deposit cash to cover margin requirements for positions held in Hong Kong Futures Exchange (HKFE) or Hong Kong Stock Exchange (SEHK) contracts. The interest earned on that cash may be less than what is earned on other investments.  To account for this difference, Interactive Brokers computes a Margin Financing Charge.  This is a monthly charge in HKD that accrues on overnight HKFE and SEHK margin balances.  To the extent that an account holds sufficient HKD cash to cover the margin balance, the charge is computed using a rate equal to the difference between the HKD credit interest rate</a> and the rate that Interactive Brokers earns on margin deposits.  The remaining margin balance, if any, is charged at a rate equal to the difference between the standard HKDbenchmark rate</a> and the rate that Interactive Brokers earns on margin deposits.</p>
+                </div>
+    </div>
+  </div>
+</section>
+<!-- Exposure Fee for High Risk Accounts -->
+<span class="id-drop"><span id="universal-exposure" ></span></span>
+<section class="">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h2>Exposure Fee for High Risk Accounts</h2>
+        <hr>
+        <p>Interactive Brokers calculates and charges a daily "Exposure Fee" to customer accounts that are deemed to have significant risk exposure. The charge for such accounts is based on the results of stress tests performed to determine exposure to a series of prices changes and to identify accounts that, while margin compliant, have potential exposure that exceeds the account's equity were these hypothetical scenarios to occur.</p>
+        <p>Exposure Fees apply only to a small percentage of accounts with unusually risky positions. Most accounts are not subject to the fee, based upon recent studies. The Exposure Fee differs from a margin requirement as the amount of the exposure fee is deducted from the account's cash balance on a daily basis. Please note that the exposure fee is <u>not</u> insurance against losses in an account, and a client remains liable to Interactive Brokers for any debt or deficit in an account, regardless of whether an exposure fee has been paid at any point.</p>
+        <p>Each day, as part of its risk management policy, Valor simulates thousands of profit and loss scenarios for client portfolios based upon a comprehensive set of sector-based market scenarios for all pre-defined primary risk factors. Following that simulation, all other product(s) in the portfolio are adjusted based upon their respective correlation. These market scenarios simulate events such as price changes in the underlying, both up and down, along with implied volatility shifts in portfolios, including options positions. Valor calculates an Exposure Fee for the account based on the potential exposure in the event that these projected scenarios occur. </p>
+        <p>The Exposure Fee is calculated on all calendar days and is charged to the account at the end of the following trading day. The exposure fee charge on Monday's activity statement reflects the charges for Friday, Saturday and Sunday. Exposure Fee calculation periods which include a holiday are determined in the same manner as that of a weekend. The fee is calculated on the holiday and charged at the end of the next trading day. The results of the Exposure Analysis and resulting Exposure Fee are made available for each account in the Valor Client Portal</p>
+        <p>Please note the following:</p>
+        <ul>
+          <li class="paralist">Valor calculates the Exposure Fee at its discretion. The calculation may be subject to change without notice and is based on a proprietary algorithm designed to determine the potential exposure to the firm that an account presents. </li>
+          <li class="paralist">The Exposure Fee may change each day based on market movements, changes in the account's portfolio, and changes in the formulas and algorithms that Valor uses to determine the potential risk of the account.</li>
+          <li class="paralist">The Exposure Fee is calculated daily and deducted from affected accounts on the following trading day. Accounts subject to the exposure fee should maintain excess equity to avoid a margin deficiency. If deduction of the fee causes a margin deficiency, the account will be subject to liquidation of positions as specified in the Valor Customer Agreement. </li>
+          <li class="paralist">Accounts that are subject to both an overnight position (Inventory) fee and an Exposure Fee will be charged the greater of the two fees.</li>
+          <li class="paralist">The Exposure Fee is <u>not</u> a form of insurance. The client is still liable to Valor to satisfy any account debt or deficit. Whether an account has been assessed and has paid an Exposure Fee does <u>not</u> relieve the account of any liability. Nor will the debt or deficit to Valor be offset or reduced by the amount of any exposure fees to which the account may have been assessed at any time.</li>
+        </ul>
+        <br>
+        <p><strong>The Exposure Fee is calculated for all assets in the entire portfolio.</strong></p>
+        <p>If you wish to avoid being charged an Exposure Fee, please consider the following:</p>
+        <ul>
+          <li class="paralist">Adding additional equity will improve the risk profile of an account and may reduce or eliminate the Exposure Fee.</li>
+          <li class="paralist">Holding one or more highly concentrated single position(s) generally expose an account to significant risk exposure and, hence, increases the likelihood of an account being assessed an Exposure Fee. Managing risk through diversification and hedging may reduce the risk and reduce or eliminate the Exposure Fee.</li>
+          <li class="paralist">Closing out short option positions may also reduce or eliminate the Exposure Fee. Testing has indicated that short positions in low-priced options generate the largest exposures relative to the amount of capital.</li>
+        </ul>
+        <br>
+        <p><strong>Additional Tools Available to Accounts</strong></p>
+        <ul>
+          <li>Valor provides an Exposure Fee Calculation Report in the Valor Client Portal, which provides details regarding the Fee and examples of hypothetical adjustments to existing position, which if implemented are projected to reduce the Fee given information available at that time.</li>
+          <li>Risk Navigator provides a custom scenario feature which allows an accountholder to determine what effect, if any, changes to their portfolio will have on the Exposure fee.</li>
+          <li>Through the Order Preview Window, Valor provides a feature which allows an account holder to check what impact, if any, an order will have upon the projected Exposure Fee.</li>
+        </ul>
+        <br>
+        <hr>
+        <br>
+        <div class="notes">
+          <ol>
+            <li>
+              According to StockBrokers.com, "Valor Capital LTD continues to lead with unbeatable margin rates, a significant advantage for active and professional traders."
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+	<section id="final-cta">
+	    <div class="container">
+			<div class="row align-items-center">
+				<div class="col-12 col-md-5 col-lg-4">
+					<img src="../../images/web/futures-traders_1775907056.jpg" alt="Futures trading at IBKR" loading="lazy" />
+				</div>
+				<div class="col-12 offset-md-1 col-md-6 col-lg-7 cta-block">
+	                    <h2 class="pb-10">Start trading like a professional today!</h2>
+	                   				</div>
+			</div>
+		</div>
+		<!-- /.container -->
+	</section>
+</div>
+ <!-- FOOTER START  -->
+    <footer class="footer noprint" id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <p>
+              © 2026 VALOR CAPITAL LTD. All rights reserved. VALOR CAPITAL LTD
+              is a private limited company incorporated in the UK, providing
+              management consultancy services.
+            </p>
+            <p>
+              VALOR CAPITAL LTD operates under UK company regulations and is
+              committed to delivering professional and ethical consultancy
+              services.
+            </p>
+          </div>
+        </div>
+        <div class="footer-disclosure-links" id="footerDisclosureLinks">
+          <div class="row">
+            <div class="col">
+              <ul>
+                <li>
+                  <a
+                    href="../accounts/legalDocuments/anti-fraud-notice.html"
+                    target="_self"
+                    >Anti-Fraud Notice</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../general/warnings-on-frauds-and-scams.html"
+                    target="_self"
+                    >Warning on Frauds and Scams</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../accounts/legalDocuments/accessibility-policy.html"
+                    target="_self"
+                    >Accessibility Statement</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+ <!-- LICENSE INFORMATION START -->
+<div class="license-info" style="
+  border-top: 1px solid #ccc;
+  margin-top: 25px;
+  padding-top: 20px;
+  font-size: 0.95rem;
+  color: #000;
+  line-height: 1.6;
+">
+  <h6 style="font-weight: 600; margin-bottom: 10px; font-size: 1rem; color: #000;">
+    FSCA Authorization
+  </h6>
+
+  <p>
+    VALOR CAPITAL LTD is listed among the officially authorised 
+    <strong>Crypto Asset Service Providers (CASPs)</strong> under the 
+    <em>Financial Advisory and Intermediary Services (FAIS) Act, No. 37 of 2002</em>.
+  </p>
+
+  <p style="margin-top: 15px; font-size: 0.9rem; color: #222;">
+    <strong>Disclaimer:</strong> VALOR CAPITAL LTD does not accept any responsibility or liability 
+    for financial losses, damages, or actions taken based on the information, opinions, or materials 
+    provided on this website or through any communication. Users acknowledge that all investment 
+    and business activities carry inherent risk, and VALOR CAPITAL LTD shall not be held accountable 
+    for any direct or indirect consequences arising from such decisions.
+  </p>
+</div>
+<!-- LICENSE INFORMATION END -->
+        <div class="footer-entities" id="footerEntities">
+          <div class="row">
+            <div class="col">
+              <div class="footer-entity">
+                <p class="entity-name">
+                  <a href="../home.html" target="_self">VALOR CAPITAL LTD</a>
+                </p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- FOOTER END  -->
+
+<!-- MODAL START | ABOUT IB GROUP ---------------------------------------------------------------------------------------------------- -->
+<div class="modal fade" id="modalAlert" tabindex="-1" role="dialog" aria-labelledby="modalAboutIBGroup">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content modal-primary">
+			<div class="modal-header">
+				<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+				<h4 class="modal-title" ><i class="fas fa-exclamation-circle"></i> Notice</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col">
+						<p class="message">message</p><!-- You will be brought to the website of our affiliate-->
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<div class="row">
+					<div class="col-12 col-sm-3 order-2 order-sm-1">
+						<div class="panel-btn-left"><a href="javascript:void(0);" data-bs-dismiss="modal" class="btn btn-secondary">Stay</a></div>
+					</div>
+					<div class="col-12 col-sm-9 order-1 order-sm-2">
+						<div class="panel-btn-right goto"><a href="javascript:void(0);" onclick=""  data-bs-dismiss="modal"  class="btn btn-primary">Go</a></div> 
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#modalAlert').on('show.bs.modal', function (event) {
+	  var button = $(event.relatedTarget) // Button that triggered the modal
+      let myMessage = button.data('mymessage');
+      /*let myLink = "location.href='"+button.data('mytargetlink')+"'"; */
+      let myLink = "window.open('"+button.data('mytargetlink')+"')"; 
+	  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+	  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+	  var modal = $(this)
+	  modal.find('.modal-body .message').text( myMessage );
+	  modal.find('.modal-footer .goto a').attr( "onclick", myLink );
+
+	})
+});
+</script><script>
+if(window.location.href.includes('conf=am')) {
+document.querySelector("#ibkr-header").style.display = "none";
+document.querySelector("#footer").style.display = "none";
+}
+
+</script>
+<!-- MODAL START | MODAL  -->
+<style type="text/css">
+#modalNewsAtIBKR .modal-dialog .modal-content .modal-header {
+    border-top: 1px solid var(--border-color) !important;
+}
+</style>
+<script>
+$(function() {
+ setTimeout(function() {
+  $('#modalNewsAtIBKR').modal('show');
+ }, 2000);
+});
+$('#modalNewsAtIBKR').on('hidden.bs.modal', function () {
+  setCookie("IB_EMPRO", '1', 90, '.interactivebrokers.ie');
+});
+$('#newsibkrform-submit').click(function() {
+  $('#newsibkrform-invalid-email').hide();
+  $.ajax({
+    type: "POST",
+    url: '/response_handlers/email-pros/index.php',
+      dataType: "json",
+      data: {
+        'email': $('#news_ibkr_email').val(),
+        'name': $('#news_ibkr_name').val(),
+        'emt': 'c4dc833b4e2f08e0e4570fb958dc8f90'
+      },
+      success: function(r) {
+        if(r && r.success)
+        {
+          $('#newsibkrform-submit').hide();
+          $('#newsibkrform-cancel').hide();
+          $('#newibkrform-success').show();
+          setCookie("IB_EMPRO", '1', 365, '.interactivebrokers.ie');
+        } else {
+          $('#newsibkrform-invalid-email').show();
+          $('#newsibkrform-invalid-email').text(r.msg);
+        }
+      },
+      error: function(xhr, status, err) {
+        $('#newsibkrform-invalid-email').text('There was an error submitting your email. Please try again.');
+      }
+    });
+});
+</script>
+<!-- MODAL END | MODAL  -->
+<!-- MODAL START | SHARE ON SOCIAL ---------------------------------------------------------------------------------------------------->
+<div class="modal fade noprint" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="emailModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button id="cls_frm_1" type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="gridSystemModalLabel"><i class="far fa-envelope text-gray"></i> Email</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col">
+						<form>
+							<div class="form-group">
+								<label for="_to" class="control-label">To:</label> <span id="_err_to" style="color: red;"></span>
+								<input type="text" class="form-control" id="_to">
+							</div>
+							<div class="form-group">
+								<label for="_from" class="control-label">From:</label> <span id="_err_frm" style="color: red;"></span>
+								<input type="text" class="form-control" id="_from">
+							</div>
+							<div class="form-group">
+								<label for="_subject" class="control-label">Subject:</label> <span id="_err_subject" style="color: red;"></span>
+								<input type="text" class="form-control" id="_subject" value="Interactive Brokers">
+							</div>
+							<div class="form-group">
+								<textarea class="form-control" id="_content" style="height:200px;"></textarea>
+							</div>
+							<p class="text-sm">URL: <span class="text-italic text-black">www.interactivebrokers.ie/en/index.php?f=<span id='vid'></span></span></p>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<div class="row">
+					<div class="col-6">
+						<div align="left">
+							<button id="cls_frm_2" type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
+						</div>
+					</div>
+					<div class="col-6">
+						<div align="right">
+							<button type="button" class="btn btn-primary" id="send">Send</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<input type="hidden" id="_page_id" name="_page_id" value="37725" />
+</div>
+<!-- MODAL END | SHARE ON SOCIAL ----------------------------------------------------------------------------------------------------> 
+<script type="text/javascript" src="../../insights/ibtr_share2667.js?t=v1"></script>
+<script>
+$(document).ready(function() {
+	 $(".social-sidebar span").click(function(){
+		 $(".social-sidebar div").toggleClass("social-sidebar-hide");
+		 $(".social-sidebar span").toggleClass("toggle-arrow");
+ 	 });
+});
+function emailCookie() {
+	if (document.cookie.indexOf("IB_EM_SH") == -1) {
+		var ex=new Date();
+		ex.setTime(ex.getTime()+86400000);
+		document.cookie ='IB_EM_SH='+1+';expires='+ex.toGMTString()+';path=/;domain=';
+	}
+}
+</script>
+<!-- SCRIPTS FOOTER ---------------------------------------------------------------------------------------------------- -->
+<script type="text/javascript" src="../../scripts/common/js/zeynep-2.2.0/zeynep.js"></script>
+<script type="text/javascript" src="../../scripts/common/js/lazyload/lazyload.min.js"></script>
+<script type="text/javascript" src="../../search/conversions.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    
+    // GATHER HEIGHT OF HEADER
+    var headerHeight = $("div#ibkr-header").outerHeight();
+    // GATHER HEIGHT OF DISCLOSURES
+    var disclosureHeight = $("section#UKProductDisclosure, section#TurbosDisclosure").outerHeight();
+    $("section#UKProductDisclosure").css("top", headerHeight);
+    $("section#TurbosDisclosure").css("top", headerHeight);
+    // SET CONTENTS DIV PADDING TOP
+    $("div#contents").css("padding-top", disclosureHeight);
+    // OVERRIDE TOP OF DISCLOSURE AND PADDING-TOP OF CONTENTS ON WINDOW RESIZE
+    $(window).resize(function() {
+        var headerHeight = $("div#ibkr-header").outerHeight();
+        var disclosureHeight = $("section#UKProductDisclosure, section#TurbosDisclosure").outerHeight();
+        var headerHeightDelta = headerHeight - disclosureHeight;
+        $("section#UKProductDisclosure").css("top", disclosureHeight + headerHeightDelta);
+        $("section#TurbosDisclosure").css("top", disclosureHeight + headerHeightDelta);
+        $("div#contents").css("padding-top", disclosureHeight);
+    });
+
+    // OVERRIDE TOP OF DISCLOSURE AND PADDING-TOP OF CONTENTS ON BANNER CLOSE
+    $("#bannerRegionSelector a.btn-close").click(function() {
+        setTimeout(function() {
+            var headerHeight = $("div#ibkr-header").outerHeight();
+            $("section#UKProductDisclosure").css("top", headerHeight);
+            $("section#TurbosDisclosure").css("top", headerHeight);
+            $("div#contents").css("padding-top", disclosureHeight);
+        },500);
+    });
+    // MOBILE MENU
+    $(function() {
+        // Initilize mobile menu
+        var zeynep = $('.menu-mobile').zeynep({
+            opened: function () {
+            console.log('the side menu opened')
+        },
+        closed: function () {
+            console.log('the side menu closed')
+            }
+        })
+        // Dynamically bind closing event
+        zeynep.on('closing', function () {
+            console.log('this event is dynamically binded')
+        })
+        // Mobile menu close on overlay click
+        $('.website-overlay').on('click', function () {
+            zeynep.close()
+        })
+        // Mobile menu close on button click
+        $('.btn-close').on('click', function () {
+            zeynep.close()
+        })
+        // Mobile menu open on navbar-toggler click
+        $('.navbar-toggler').on('click', function () {
+            zeynep.open()
+        })
+    })
+});
+</script>
+<!-- STYLES FOOTER ---------------------------------------------------------------------------------------------------- -->
+<link rel="preload" as="font" type="font/woff2" href="../../fonts/fontawesome-6.4.2/webfonts/fa-brands-400.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="../../fonts/fontawesome-6.4.2/webfonts/fa-regular-400.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="../../fonts/fontawesome-6.4.2/webfonts/fa-solid-900.woff2" crossorigin>
+<link rel="preload" as="style" href="../../css/ibkr/website-print.min.css">
+<link rel="stylesheet" type="text/css" media="print" href="../../css/ibkr/website-print.min.css">
+<style type="text/css">
+@import url('../../css/fontawesome-6.4.2/all.min.css') layer(vendors);
+@import url('../../css/animate-3.7.2/animate.min.css') layer(vendors);
+@import url('../../css/bootstrap-switch-3.3.2/bootstrap-switch.min.css') layer(vendors);
+@import url('../../css/icheck-1.0.2/icheck.css') layer(vendors);
+</style></body>
+
+<!-- Mirrored from www.interactivebrokers.ie/en/trading/margin-requirements.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Sep 2025 09:36:52 GMT -->
+</html>

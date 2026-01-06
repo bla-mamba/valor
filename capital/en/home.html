@@ -1,0 +1,5042 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en" data-theme="light">
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <head>
+    <title>Home | Valor Capital LTD</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=5"
+    />
+    <meta
+      name="description"
+      content="Leading online trading solutions for traders, investors and advisors, with direct global access to stocks, options, futures, currencies, bonds and funds. Transparent, low commissions and financing rates and support for best execution."
+    />
+    <meta
+      name="keywords"
+      content="lowest cost, online broker, best execution, advanced technology, direct market access, global trading, stocks, options, futures, currencies, fixed income, mutual funds, ETFs"
+    />
+    <meta name="author" content="Valor" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:site_name" content="Valor" />
+    <link rel="canonical" href="home.html" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Interactive Brokers Ireland",
+        "description": "Financial Services Company",
+        "disambiguatingDescription": "Financial Services Company",
+        "url": "https://www.interactivebrokers.ie"
+      }
+    </script>
+    <meta name="apple-mobile-web-app-title" content="IBKR" />
+    <!-- SCRIPTS HEAD  -->
+    <script
+      type="text/javascript"
+      src="../scripts/common/js/jquery-3.6.1/jquery.min.js"
+    ></script>
+    <script type="text/javascript">
+      function createScriptElement(data) {
+        if (typeof data == "undefined") {
+          return;
+        }
+        var element = document.createElement("SCRIPT");
+        element.type = "text/javascript";
+        if (typeof data.id != "undefined") {
+          element.id = data.id;
+        }
+        if (typeof data.source != "undefined") {
+          element.src = data.source;
+        }
+        if (typeof data.loadfunction == "function") {
+          element.onload = data.loadfunction;
+        }
+        document.head.appendChild(element);
+      }
+      createScriptElement({
+        source: "/scripts/common/js/bootstrap-5.2.2/bootstrap.bundle.min.js",
+        loadfunction: bsLoaded,
+      });
+      createScriptElement({ source: "/scripts/common/js/lib.js?ver=9" });
+      function storeCookie() {
+        if (typeof Storage !== "undefined") {
+          if (localStorage.getItem("web") !== null) {
+            localStorage.removeItem("web");
+          }
+        }
+      }
+      function bsLoaded() {
+        createScriptElement({
+          source: "/scripts/common/js/appear/appear.min.js?ver=1",
+        });
+        createScriptElement({
+          source: "/scripts/common/js/easing/easing.min.js?ver=1",
+        });
+        createScriptElement({
+          source: "/scripts/common/js/parallax/parallax.min.js?ver=1",
+        });
+        createScriptElement({
+          source: "/scripts/common/js/uitotop/uitotop.min.js?ver=1",
+          loadfunction: uiLoaded,
+        });
+      }
+      function uiLoaded() {
+        createScriptElement({ source: "/scripts/common/js/twsUtils.js?ver=2" });
+        createScriptElement({
+          source: "/scripts/common/js/design/design.js?ver=1",
+        });
+      }
+    </script>
+    <script type="text/javascript">
+      $(function () {
+        if (document.cookie.indexOf("IB_SEARCH") == -1) {
+          var ex = new Date();
+          ex.setTime(ex.getTime() + 86400000);
+          document.cookie =
+            "IB_SEARCH=" +
+            Math.floor(new Date().getTime() / 1000) +
+            ";expires=" +
+            ex.toGMTString() +
+            ";path=/;domain=.interactivebrokers.ie";
+        }
+        let nex = new Date();
+        nex.setTime(nex.getTime() + 86400000);
+        document.cookie =
+          "IB_QD=0;expires=" +
+          nex.toGMTString() +
+          ";path=/;domain=.interactivebrokers.ie";
+
+        let excfd = new Date();
+        excfd.setTime(excfd.getTime() + 86400000);
+        document.cookie =
+          "IB_QD_CFD=0;expires=" +
+          excfd.toGMTString() +
+          ";path=/;domain=.interactivebrokers.ie";
+        $("div#langselector")
+          .find("a")
+          .each(function () {
+            $(this).click(function () {
+              var link = $(this).attr("href");
+              if (link.match(/\/(en|fr|de|es|it|ru|cn|jp)\//)) {
+                var langs = link.split("../index.html");
+                if (
+                  langs[3] == "en" ||
+                  langs[3] == "fr" ||
+                  langs[3] == "de" ||
+                  langs[3] == "es" ||
+                  langs[3] == "it" ||
+                  langs[3] == "ru" ||
+                  langs[3] == "cn" ||
+                  langs[3] == "jp"
+                ) {
+                  var lang = langs[3];
+                  if (lang == "cn") {
+                    lang = "zh_CN";
+                  }
+                  if (lang == "jp") {
+                    lang = "ja";
+                  }
+                  if (hasCookie("IB_LANG")) {
+                    deleteCookie("IB_LANG");
+                  }
+                  setCookie("IB_LANG", lang, 7, ".interactivebrokers.ie");
+                } else if (langs[1] == "en") {
+                  var lang = "en";
+                  setCookie("IB_LANG", lang, 7, ".interactivebrokers.ie");
+                }
+              }
+            });
+          });
+        $("p#bandaid-close").click(function () {
+          setCookie("IB_BANDAID", 1, 7, ".interactivebrokers.ie");
+        });
+        $("a#btnCloseBannerRegionSelector").click(function () {
+          setCookie("IB_REGION_SEL", 1, 30, ".interactivebrokers.ie");
+        });
+        $("a#btnCloseBannerRegionDifc").click(function () {
+          setCookie("IB_DIFC", 1, 30, ".interactivebrokers.ie");
+        });
+      });
+    </script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      if (localStorage.getItem("consentMode") === null) {
+        const consentMode = {
+          ad_storage: "denied",
+          ad_user_data: "denied",
+          ad_personalization: "denied",
+          analytics_storage: "denied",
+        };
+        localStorage.setItem("consentMode", JSON.stringify(consentMode));
+        gtag("consent", "default", consentMode);
+      } else {
+        gtag(
+          "consent",
+          "default",
+          JSON.parse(localStorage.getItem("consentMode"))
+        );
+      }
+    </script>
+    <!-- STYLES HEAD -->
+    <style type="text/css">
+      @import url("../css/bootstrap-5.2.2/bootstrap.min.css") layer(bootstrap);
+    </style>
+    <link
+      rel="preload"
+      as="style"
+      href="../css/ibkr/website.mince12.css?v=1848a6e12ea6c289ee1df7ee63749846"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+      href="../css/ibkr/website.mince12.css?v=1848a6e12ea6c289ee1df7ee63749846"
+    />
+    <link
+      rel="preload"
+      as="style"
+      href="../css/ibkr/theme-ibkr.min4f42.css?v=be9c72c0d328e7fc4987bce81f28981c"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+      href="../css/ibkr/theme-ibkr.min4f42.css?v=be9c72c0d328e7fc4987bce81f28981c"
+    />
+    <script>
+      (window.BOOMR_mq = window.BOOMR_mq || []).push([
+        "addVar",
+        {
+          "rua.upush": "false",
+          "rua.cpush": "false",
+          "rua.upre": "false",
+          "rua.cpre": "false",
+          "rua.uprl": "false",
+          "rua.cprl": "false",
+          "rua.cprf": "false",
+          "rua.trans": "SJ-d23de039-d518-4f10-9810-e68da4592744",
+          "rua.cook": "true",
+          "rua.ims": "false",
+          "rua.ufprl": "false",
+          "rua.cfprl": "false",
+          "rua.isuxp": "false",
+          "rua.texp": "norulematch",
+          "rua.ceh": "false",
+          "rua.ueh": "false",
+          "rua.ieh.st": "0",
+        },
+      ]);
+    </script>
+    <script>
+      !(function (e) {
+        var n = "https://s.go-mpulse.net/boomerang/";
+        if ("False" == "True")
+          (e.BOOMR_config = e.BOOMR_config || {}),
+            (e.BOOMR_config.PageParams = e.BOOMR_config.PageParams || {}),
+            (e.BOOMR_config.PageParams.pci = !0),
+            (n = "https://s2.go-mpulse.net/boomerang/");
+        if (
+          ((window.BOOMR_API_key = "XE2AM-F37QZ-LYWQP-H8KRM-4SNX5"),
+          (function () {
+            function e() {
+              if (!o) {
+                var e = document.createElement("script");
+                (e.id = "boomr-scr-as"),
+                  (e.src = window.BOOMR.url),
+                  (e.async = !0),
+                  i.parentNode.appendChild(e),
+                  (o = !0);
+              }
+            }
+            function t(e) {
+              o = !0;
+              var n,
+                t,
+                a,
+                r,
+                d = document,
+                O = window;
+              if (
+                ((window.BOOMR.snippetMethod = e ? "if" : "i"),
+                (t = function (e, n) {
+                  var t = d.createElement("script");
+                  (t.id = n || "boomr-if-as"),
+                    (t.src = window.BOOMR.url),
+                    (BOOMR_lstart = new Date().getTime()),
+                    (e = e || d.body),
+                    e.appendChild(t);
+                }),
+                !window.addEventListener &&
+                  window.attachEvent &&
+                  navigator.userAgent.match(/MSIE [67]\./))
+              )
+                return (
+                  (window.BOOMR.snippetMethod = "s"),
+                  void t(i.parentNode, "boomr-async")
+                );
+              (a = document.createElement("IFRAME")),
+                (a.src = "about:blank"),
+                (a.title = ""),
+                (a.role = "presentation"),
+                (a.loading = "eager"),
+                (r = (a.frameElement || a).style),
+                (r.width = 0),
+                (r.height = 0),
+                (r.border = 0),
+                (r.display = "none"),
+                i.parentNode.appendChild(a);
+              try {
+                (O = a.contentWindow), (d = O.document.open());
+              } catch (_) {
+                (n = document.domain),
+                  (a.src =
+                    "javascript:var d=document.open();d.domain='" +
+                    n +
+                    "';void(0);"),
+                  (O = a.contentWindow),
+                  (d = O.document.open());
+              }
+              if (n)
+                (d._boomrl = function () {
+                  (this.domain = n), t();
+                }),
+                  d.write("<bo" + "dy onload='document._boomrl();'>");
+              else if (
+                ((O._boomrl = function () {
+                  t();
+                }),
+                O.addEventListener)
+              )
+                O.addEventListener("load", O._boomrl, !1);
+              else if (O.attachEvent) O.attachEvent("onload", O._boomrl);
+              d.close();
+            }
+            function a(e) {
+              window.BOOMR_onload = (e && e.timeStamp) || new Date().getTime();
+            }
+            if (
+              !window.BOOMR ||
+              (!window.BOOMR.version && !window.BOOMR.snippetExecuted)
+            ) {
+              (window.BOOMR = window.BOOMR || {}),
+                (window.BOOMR.snippetStart = new Date().getTime()),
+                (window.BOOMR.snippetExecuted = !0),
+                (window.BOOMR.snippetVersion = 12),
+                (window.BOOMR.url = n + "XE2AM-F37QZ-LYWQP-H8KRM-4SNX5");
+              var i =
+                  document.currentScript ||
+                  document.getElementsByTagName("script")[0],
+                o = !1,
+                r = document.createElement("link");
+              if (
+                r.relList &&
+                "function" == typeof r.relList.supports &&
+                r.relList.supports("preload") &&
+                "as" in r
+              )
+                (window.BOOMR.snippetMethod = "p"),
+                  (r.href = window.BOOMR.url),
+                  (r.rel = "preload"),
+                  (r.as = "script"),
+                  r.addEventListener("load", e),
+                  r.addEventListener("error", function () {
+                    t(!0);
+                  }),
+                  setTimeout(function () {
+                    if (!o) t(!0);
+                  }, 3e3),
+                  (BOOMR_lstart = new Date().getTime()),
+                  i.parentNode.appendChild(r);
+              else t(!1);
+              if (window.addEventListener)
+                window.addEventListener("load", a, !1);
+              else if (window.attachEvent) window.attachEvent("onload", a);
+            }
+          })(),
+          "".length > 0)
+        )
+          if (
+            e &&
+            "performance" in e &&
+            e.performance &&
+            "function" == typeof e.performance.setResourceTimingBufferSize
+          )
+            e.performance.setResourceTimingBufferSize();
+        !(function () {
+          if (
+            ((BOOMR = e.BOOMR || {}),
+            (BOOMR.plugins = BOOMR.plugins || {}),
+            !BOOMR.plugins.AK)
+          ) {
+            var n = "false" == "true" ? 1 : 0,
+              t = "cookiepresent",
+              a = "eykumbc7mxv4o2gjem4a-f-6c8b3b8bd-clientnsv4-s.akamaihd.net",
+              i = "false" == "true" ? 2 : 1,
+              o = {
+                "ak.v": "39",
+                "ak.cp": "1168163",
+                "ak.ai": parseInt("665092", 10),
+                "ak.ol": "0",
+                "ak.cr": 44,
+                "ak.ipv": 4,
+                "ak.proto": "http/1.1",
+                "ak.rid": "1666885",
+                "ak.r": 50930,
+                "ak.a2": n,
+                "ak.m": "a",
+                "ak.n": "essl",
+                "ak.bpcip": "38.21.70.0",
+                "ak.cport": 49538,
+                "ak.gh": "95.101.132.199",
+                "ak.quicv": "",
+                "ak.tlsv": "tls1.2",
+                "ak.0rtt": "",
+                "ak.0rtt.ed": "",
+                "ak.csrc": "-",
+                "ak.acc": "bbr",
+                "ak.t": "1758012216",
+                "ak.ak":
+                  "hOBiQwZUYzCg5VSAfCLimQ==uhwPpWyKCeP8xDvT4B1YlmPAM/wSPnZtmWHsyaSJB3hc3T1d7Ganv5dHTFcnnG36YuGvi5T1FkFX9lNvtpIGLUbu9qLub8SHD4UkeXZ29f93h1zFPZS07ZJ1a3ZDKWM1p0T4QIZTOuYdgAXy7TcUFIcqcNGfzSnyockS/9h9n39yJ0atvDTqSxmX9HESRe9wG1t2/g6CBXdRUU/HdZ0oUJOn4znRCyU7iX23USfKrCqOCqE5mmXTPwXdf/wOrtONRic8liOSg2uc6r6Ixjz0c+ca1Qx2z978w+QKdjNByGZCUulDSGH/aK9bFl0GLA8A1N1DL/NFyjEt3sU5F/2v3BeChlCox9es6mZRDhRMnMW67nad2BrkQUJs1WRErRxMXKqR7tuAsQ38TQgPQXJx2Zf4XxnXd2fULQIQVTanIIQ=",
+                "ak.pv": "398",
+                "ak.dpoabenc": "",
+                "ak.tf": i,
+              };
+            if ("" !== t) o["ak.ruds"] = t;
+            var r = {
+              i: !1,
+              av: function (n) {
+                var t = "http.initiator";
+                if (n && (!n[t] || "spa_hard" === n[t]))
+                  (o["ak.feo"] = void 0 !== e.aFeoApplied ? 1 : 0),
+                    BOOMR.addVar(o);
+              },
+              rv: function () {
+                var e = [
+                  "ak.bpcip",
+                  "ak.cport",
+                  "ak.cr",
+                  "ak.csrc",
+                  "ak.gh",
+                  "ak.ipv",
+                  "ak.html",
+                  "ak.n",
+                  "ak.ol",
+                  "ak.proto",
+                  "ak.quicv",
+                  "ak.tlsv",
+                  "ak.0rtt",
+                  "ak.0rtt.ed",
+                  "ak.r",
+                  "ak.acc",
+                  "ak-2.html",
+                  "ak.tf",
+                ];
+                BOOMR.removeVar(e);
+              },
+            };
+            BOOMR.plugins.AK = {
+              akVars: o,
+              akDNSPreFetchDomain: a,
+              init: function () {
+                if (!r.i) {
+                  var e = BOOMR.subscribe;
+                  e("before_beacon", r.av, null, null),
+                    e("onbeacon", r.rv, null, null),
+                    (r.i = !0);
+                }
+                return this;
+              },
+              is_complete: function () {
+                return !0;
+              },
+            };
+          }
+        })();
+      })(window);
+    </script>
+  </head>
+  <body>
+    <!-- IRELAND (.IE) AND HUNGARY (.HU) PAGE START ---------------------------------------------------------------------------------------------------- -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+      href="../css/ibkr/home.min.css"
+    />
+    <!-- GOOGLE ---------------------------------------------------------------------------------------------------- -->
+    <!-- MENU ---------------------------------------------------------------------------------------------------- -->
+    <!-- HEADER START  -->
+    <div class="ibkr-header" id="ibkr-header">
+      <style type="text/css">
+        .banner-risk-warning {
+          margin: 0px;
+          padding: 8px 0px;
+          width: 100%;
+          height: auto;
+          background-color: #242424;
+        }
+        .banner-risk-warning p {
+          margin: 0px;
+          padding: 0px;
+          font-weight: 400;
+          font-size: 1rem;
+          line-height: 1.25rem;
+          text-align: center;
+          color: #ffffff;
+        }
+        .banner-risk-warning .warninglink a {
+          text-decoration: underline;
+        }
+        /* BOOTSTRAP 4 | MEDIA QUERY | EXTRA SMALL (< 576PX) ---------------------------------------------------------------------------------------------------- */
+        @media (max-width: 575.98px) {
+          .banner-risk-warning {
+            padding: 4px 0px;
+          }
+          .banner-risk-warning p {
+            font-size: 0.8125rem;
+            line-height: 1rem;
+          }
+        }
+        /* BOOTSTRAP 4 | MEDIA QUERY | SMALL (576PX-767.98PX) ---------------------------------------------------------------------------------------------------- */
+        @media (min-width: 576px) and (max-width: 767.98px) {
+          .banner-risk-warning {
+            padding: 4px 0px;
+          }
+          .banner-risk-warning p {
+            font-size: 0.8125rem;
+            line-height: 1rem;
+          }
+        }
+        /* BOOTSTRAP 4 | MEDIA QUERY | MEDIUM (768PX-991.98PX) ---------------------------------------------------------------------------------------------------- */
+        @media (min-width: 768px) and (max-width: 991.98px) {
+          .banner-risk-warning {
+            padding: 4px 0px;
+          }
+          .banner-risk-warning p {
+            font-size: 0.8125rem;
+            line-height: 1rem;
+          }
+        }
+        /* BOOTSTRAP 4 | MEDIA QUERY | LARGE (992PX-1199.98PX) ---------------------------------------------------------------------------------------------------- */
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+        }
+        /* BOOTSTRAP 4 | MEDIA QUERY | EXTRA LARGE (>1200PX) ---------------------------------------------------------------------------------------------------- */
+        @media (min-width: 1200px) {
+        }
+      </style>
+      <div class="banner-risk-warning">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <p>
+                Investing in financial products involves risk. Losses may exceed
+                the value of your original investment.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- NAV TOP START (LG/XL ONLY) -->
+      <nav
+        class="navbar navbar-inverse navbar-expand-lg navbar-top d-none d-lg-block"
+      >
+        <div class="container">
+          <div class="navbar-collapse collapse" id="ibkr-nav-top"></div>
+        </div>
+      </nav>
+      <!-- NAV TOP END -->
+      <!-- NAV BOTTOM START -->
+      <nav class="navbar navbar-inverse navbar-expand-lg navbar-bottom">
+        <div class="container">
+          <!-- LOGO -->
+          <a
+            href="home.html"
+            target="_self"
+            title="Valor"
+            aria-label="Valor LTD Home"
+          >
+            <img
+              src="../../logo.svg"
+              alt="Valor LTD Logo"
+              width="140"
+              height="auto"
+            />
+          </a>
+
+          <!-- TOGGLE (XS/SM/MD ONLY) -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            aria-label="Toggle Navigation"
+          >
+            <span class="navbar-toggler-icon">
+              <i class="fas fa-bars" aria-hidden="true"></i>
+            </span>
+          </button>
+
+          <!-- NAV LINKS -->
+          <div class="navbar-collapse collapse" id="ibkr-nav-bottom">
+            <ul class="navbar-nav ml-auto align-items-center">
+              <!-- WHY VALOR -->
+              <li class="nav-item">
+                <a href="whyib/overview.html" target="_self" class="nav-link">
+                  Why Valor
+                </a>
+              </li>
+
+              <!-- PRICING -->
+              <li class="nav-item dropdown">
+                <a
+                  href="javascript:void(0)"
+                  class="nav-link dropdown-toggle"
+                  id="nav-pricing"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Pricing
+                </a>
+                <div
+                  class="dropdown-menu dropdown-pricing"
+                  aria-labelledby="nav-pricing"
+                >
+                  <div class="row">
+                    <div class="col">
+                      <a
+                        href="pricing/commissions-home.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >Commissions</a
+                      >
+                      <a
+                        href="trading/margin-rates.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >Margin Rates</a
+                      >
+                      <a
+                        href="pricing/research-news-services.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >Research and News</a
+                      >
+                      <a
+                        href="pricing/market-data-pricing.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >Market Data Pricing</a
+                      >
+                      <a
+                        href="pricing/other-fees-overview.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >Fees</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- TRADING -->
+              <li class="nav-item dropdown">
+                <a
+                  href="javascript:void(0)"
+                  class="nav-link dropdown-toggle"
+                  id="nav-technology"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Trading
+                </a>
+                <div
+                  class="dropdown-menu dropdown-technology"
+                  aria-labelledby="nav-technology"
+                >
+                  <div class="row">
+                    <div class="col">
+                      <a
+                        href="trading/trading-platforms.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >Platforms</a
+                      >
+                      <a
+                        href="trading/ib-api.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >APIs</a
+                      >
+                      <a
+                        href="trading/margin.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >Margin</a
+                      >
+                      <a
+                        href="trading/ordertypes.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >Order Types</a
+                      >
+                      <a
+                        href="whyib/reporting.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >Reporting</a
+                      >
+                      <a
+                        href="trading/sustainable-investing-ie.html"
+                        target="_self"
+                        class="dropdown-item"
+                        >Sustainable Investing</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- LOGIN / OPEN ACCOUNT BUTTONS -->
+              <!-- LOG IN -->
+              <li class="nav-item d-none d-lg-block">
+                <a
+                  href="https://dex.whiterock24.ai/signin"
+                  target="_self"
+                  class="nav-link nav-login"
+                  id="nav-log-in"
+                >
+                  Log In
+                </a>
+              </li>
+              <!-- OPEN ACCOUNT -->
+              <li class="nav-item d-none d-lg-block">
+                <a
+                  href="https://dex.whiterock24.ai/sign-up"
+                  target="_self"
+                  class="nav-link nav-open-account"
+                  id="nav-open-account"
+                >
+                  Open Account
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- NAV BOTTOM END -->
+    </div>
+    <!-- HEADER END ---------------------------------------------------------------------------------------------------- -->
+    <!-- MOBILE NAV START (XS/SM/MD ONLY) -->
+    <div class="menu-mobile d-lg-none">
+      <!-- CLOSE BUTTON -->
+      <div class="close-button">
+        <button type="button" class="btn-close" aria-label="Close Menu">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <!-- LOGO -->
+      <div class="logo-container">
+        <a
+          href="home.html"
+          target="_self"
+          title="Valor"
+          aria-label="Valor LTD Home"
+        >
+          <img
+            src="../../logo.svg"
+            alt="Valor LTD Logo"
+            width="140"
+            height="auto"
+          />
+        </a>
+      </div>
+
+      <ul>
+        <!-- WHY VALOR -->
+        <li><a href="whyib/overview.html" target="_self">Why Valor</a></li>
+
+        <!-- PRICING (Always Open) -->
+        <li>
+          <p class="submenu-title">PRICING</p>
+          <ul>
+            <li>
+              <a href="pricing/commissions-home.html" target="_self"
+                >Commissions</a
+              >
+            </li>
+            <li>
+              <a href="trading/margin-rates.html" target="_self"
+                >Margin Rates</a
+              >
+            </li>
+            <li>
+              <a href="pricing/research-news-services.html" target="_self"
+                >Research and News</a
+              >
+            </li>
+            <li>
+              <a href="pricing/market-data-pricing.html" target="_self"
+                >Market Data Pricing</a
+              >
+            </li>
+            <li>
+              <a href="pricing/other-fees-overview.html" target="_self">Fees</a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- TRADING (Always Open) -->
+        <li>
+          <p class="submenu-title">TRADING</p>
+          <ul>
+            <li>
+              <a href="trading/trading-platforms.html" target="_self"
+                >Platforms</a
+              >
+            </li>
+            <li><a href="trading/ib-api.html" target="_self">APIs</a></li>
+            <li><a href="trading/margin.html" target="_self">Margin</a></li>
+            <li>
+              <a href="trading/ordertypes.html" target="_self">Order Types</a>
+            </li>
+            <li><a href="whyib/reporting.html" target="_self">Reporting</a></li>
+            <li>
+              <a href="trading/sustainable-investing-ie.html" target="_self"
+                >Sustainable Investing</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <!-- LOG IN -->
+        <li>
+          <a
+            href="https://dex.whiterock24.ai/signin"
+            target="_self"
+            class="nav-link nav-login"
+            id="nav-log-in"
+            style="
+              display: block;
+              width: calc(100% - 20px);
+              margin: 12px 10px;
+              border: 2px solid #c82333;
+              color: #c82333;
+              padding: 12px;
+              border-radius: 0;
+              text-align: center;
+              font-weight: 600;
+            "
+          >
+            Log In
+          </a>
+        </li>
+
+        <!-- OPEN ACCOUNT -->
+        <li>
+          <a
+            href="https://dex.whiterock24.ai/sign-up"
+            target="_self"
+            class="nav-link nav-open-account"
+            id="nav-open-account"
+            style="
+              display: block;
+              width: calc(100% - 20px);
+              margin: 8px 10px 12px;
+              background-color: #c82333;
+              color: #fff;
+              padding: 12px;
+              border-radius: 0;
+              text-align: center;
+              font-weight: 600;
+            "
+          >
+            Open Account
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- MOBILE NAV OVERLAY -->
+    <div class="website-overlay d-lg-none"></div>
+    <!-- MOBILE NAV END -->
+
+    <style>
+      /* Hover effects */
+      .nav-login:hover {
+        border-color: #a71d2a !important;
+        color: #a71d2a !important;
+      }
+
+      .nav-open-account:hover {
+        background-color: #a71d2a !important;
+        color: #fff !important;
+      }
+    </style>
+
+    <style>
+      /* Hover effects */
+      .nav-login:hover {
+        border-color: #a71d2a !important;
+        color: #a71d2a !important;
+      }
+
+      .nav-open-account:hover {
+        background-color: #a71d2a !important;
+        color: #fff !important;
+      }
+    </style>
+
+    <script>
+      $(window).on("load", function () {
+        // Simple check if URL contains 'conf=am'
+        if (!window.location.href.includes("conf=am")) {
+          $("#region-modal").modal({
+            backdrop: "static",
+            keyboard: false,
+          });
+          $("#region-modal").modal("show");
+          $("body").removeClass("modal-open");
+          $("body").css("overflow", "");
+          $("body").css("padding-right", "");
+        }
+      });
+    </script>
+    <div
+      class="modal modal-cookies fade"
+      id="region-modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="modalRegionLabel"
+      data-bs-backdrop="static"
+    ></div>
+    <script>
+      $(function () {
+        $("button#btnRegionRecommendation").click(function () {
+          window.location.href = "https://www.interactivebrokers.com/";
+        });
+        $("button#btnRegionCurrent").click(function () {
+          setCookie("IB_REG", 1, 365, ".interactivebrokers.ie");
+          location.reload();
+        });
+      });
+    </script>
+    <!-- CONTENTS START ---------------------------------------------------------------------------------------------------- -->
+    <div id="contents">
+      <!-- HOME HERO CAROUSEL ---------------------------------------------------------------------------------------------------- -->
+      <!-- CAROUSEL ---------------------------------------------------------------------------------------------------- -->
+      <style type="text/css">
+        /* Page Title */
+        section#page-title {
+          display: none;
+        }
+        /* Banner Carousel Structure */
+        @media (max-width: 767.98px) {
+          .hero-carousel {
+            width: 100%;
+            padding: 0;
+          }
+          .hero-carousel + #simple-investing,
+          .hero-carousel + #droplinks {
+            margin-top: 5px !important;
+          }
+        }
+        @media (min-width: 768px) {
+          .hero-carousel {
+            background-color: #ffffff;
+            margin: 0px;
+            padding: 0px;
+            position: relative;
+            width: 100%;
+            height: 550px;
+            min-height: 450px !important;
+            z-index: 1;
+          }
+        }
+        @media (min-width: 768px) and (min-height: 1300px) {
+          .hero-carousel {
+            min-height: 800px !important;
+          }
+        }
+        @media (min-width: 1300px) and (min-height: 1600px) {
+          .hero-carousel {
+            min-height: 1000px !important;
+          }
+        }
+        @media (max-width: 767.98px) {
+          .hero-carousel .container {
+            width: 100%;
+            max-width: none;
+          }
+        }
+        @media (min-width: 768px) {
+          .hero-carousel .carousel,
+          .hero-carousel .carousel .carousel-inner,
+          .hero-carousel .carousel .carousel-inner .carousel-item,
+          .hero-carousel .carousel .carousel-inner .carousel-item .container {
+            height: 100% !important;
+          }
+          .hero-carousel .carousel .carousel-inner .carousel-item .container {
+            padding-bottom: 75px !important;
+            align-content: center !important;
+            display: flex !important;
+          }
+          .hero-carousel
+            .carousel
+            .carousel-inner
+            .carousel-item
+            .container
+            .row {
+            width: 100%;
+          }
+        }
+        @media (min-width: 768px) and (max-width: 1170px) {
+          .hero-carousel .carousel .carousel-inner .carousel-item .container {
+            width: 100%;
+            max-width: none;
+            padding-left: 30px;
+            padding-right: 30px;
+          }
+        }
+        /* Banner Carousel Items */
+        @media (max-width: 767.98px) {
+          .hero-carousel .carousel-item {
+            position: relative !important;
+            display: block !important;
+            float: none;
+            margin-top: 5px !important;
+            margin-right: auto !important;
+            margin-left: auto !important;
+            padding: 35px 20px;
+            width: calc(100% - 10px);
+          }
+        }
+        @media (min-width: 768px) {
+          .hero-carousel .carousel-item {
+            position: absolute;
+            display: none;
+            top: 0;
+            inset-inline-start: 0;
+            opacity: 0;
+            transform: translateX(40px);
+            margin-right: 0;
+            transition: -webkit-transform 0.6s cubic-bezier(0.25, 0.1, 0.25, 1),
+              opacity 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+            transition: transform 0.6s cubic-bezier(0.25, 0.1, 0.25, 1),
+              opacity 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+          }
+          .hero-carousel .carousel-item-next,
+          .hero-carousel .carousel-item-prev,
+          .hero-carousel .carousel-item.active {
+            display: block;
+            opacity: 1;
+            -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+          }
+          .hero-carousel .active.carousel-item-right,
+          .hero-carousel .carousel-item-next:not(.carousel-item-left) {
+            opacity: 0;
+            -webkit-transform: translateX(40px);
+            transform: translateX(40px);
+          }
+          .hero-carousel .active.carousel-item-left,
+          .hero-carousel .carousel-item-prev:not(.carousel-item-right) {
+            opacity: 0;
+            -webkit-transform: translateX(-40px);
+            transform: translateX(-40px);
+          }
+        }
+        @media (min-width: 768px) and (max-width: 1199.98px) {
+          .hero-carousel .carousel-item {
+            padding-top: 3rem;
+          }
+        }
+        /* Banner Carousel Indicators */
+        @media (min-width: 768px) {
+          .hero-carousel .carousel-indicators {
+            position: absolute;
+            bottom: 30px;
+          }
+          .hero-carousel .carousel-indicators li {
+            background: #fff !important;
+            width: 50px !important;
+            height: 6px !important;
+            border-radius: 0 !important;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            margin: 0 5px;
+            opacity: 0.5;
+            border: none;
+          }
+          .hero-carousel .carousel-indicators li.active {
+            opacity: 1;
+          }
+          .hero-carousel .carousel-indicator-cyep.active,
+          .hero-carousel .carousel-indicator-ibkr.active,
+          .hero-carousel .carousel-indicator-interest.active,
+          .hero-carousel .carousel-indicator-screener.active {
+            background: #db1222 !important;
+          }
+          .hero-carousel .carousel-indicator-margin.active,
+          .hero-carousel .carousel-indicator-simple-pricing.active {
+            background: #fff !important;
+          }
+        }
+        /* Banner Slide Content */
+        .hero-carousel .hero-content .hero-eyebrow {
+          font-size: 0.9753rem;
+          font-weight: var(--fw-600);
+          letter-spacing: 0.05em;
+          text-transform: uppercase;
+        }
+        .hero-carousel .hero-content .hero-eyebrow + .hero-headline {
+          margin-top: 0.5rem;
+        }
+        .hero-carousel .hero-content .hero-headline {
+          margin: 0;
+          font-weight: 600;
+          line-height: 1.2;
+        }
+        .hero-carousel .hero-content {
+          width: 100%;
+        }
+        @media (max-width: 767.98px) {
+          .hero-carousel .hero-content .hero-headline {
+            font-size: 1.875rem;
+          }
+        }
+        @media (min-width: 768px) {
+          .hero-carousel .hero-content .hero-headline {
+            font-size: 2.25rem;
+          }
+        }
+        @media (min-height: 900px) and (min-width: 1200px) {
+          .hero-carousel .hero-content .hero-headline {
+            font-size: 2.5rem;
+          }
+        }
+        .hero-carousel .hero-content .hero-eyebrow {
+          font-size: 1.25;
+          font-weight: 600;
+        }
+        .hero-carousel .hero-content .hero-eyebrow,
+        .hero-carousel .hero-content .hero-subhead,
+        .hero-carousel .hero-content .hero-text {
+          margin: 0;
+          font-size: 1rem;
+          line-height: 1.4;
+        }
+        .hero-carousel .hero-eyebrow + .hero-headline {
+          margin-top: 0.5rem;
+        }
+        .hero-carousel .hero-headline + .hero-subhead,
+        .hero-carousel .hero-subhead + .hero-text {
+          margin-top: 1rem;
+        }
+        .hero-carousel .hero-subhead + .hero-subhead {
+          margin-top: 0.75rem;
+        }
+        .hero-carousel .hero-headline + .hero-cta,
+        .hero-carousel .hero-subhead + .hero-cta,
+        .hero-carousel .hero-text + .hero-cta {
+          margin-top: 2.25rem;
+        }
+        .hero-carousel .hero-cta .btn {
+          padding: 12px 30px;
+          min-width: 180px;
+        }
+        .hero-carousel .hero-cta .btn-home-outline {
+          background: transparent;
+        }
+        @media (min-width: 576px) {
+          .hero-carousel .hero-cta a.btn + a.btn {
+            margin: 0 0 0 8px;
+          }
+        }
+        /* Hero Img Scaling Wrapper */
+        .hero-img-scaling-wrapper {
+          position: relative;
+          width: 100%;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        @media (min-width: 992px) {
+          .hero-carousel .hero-img-scaling-wrapper {
+            height: 70%;
+          }
+        }
+        @media (max-height: 899.98px) and (min-width: 1200px) {
+          .hero-carousel .hero-img-scaling-wrapper {
+            height: 90%;
+          }
+        }
+        @media (min-height: 900px) and (min-width: 1200px) {
+          .hero-carousel .hero-img-scaling-wrapper {
+            height: 70%;
+          }
+        }
+        @media (min-height: 1000px) and (min-width: 1200px) {
+          .hero-carousel .hero-img-scaling-wrapper {
+            height: 60%;
+          }
+        }
+        @media (max-width: 991.98px) {
+          .hero-carousel .hero-img-scaling-wrapper img {
+            position: relative;
+          }
+        }
+        @media (min-width: 992px) {
+          .hero-carousel .hero-img-scaling-wrapper img {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            max-width: none;
+          }
+        }
+        /* ============================================================== */
+        /* =============     Banner OVERNIGHT TRADING      ============== */
+        /* ============================================================== */
+        /* Hero img */
+        @media (max-width: 767.98px) {
+          .hero-carousel .carousel-overnight-trading {
+            background: #0b1021
+              url("../images/web/hero-banner-home-overnight-trading-mobile.jpg");
+            background-repeat: no-repeat;
+            background-size: 150%;
+            background-position: top center;
+            padding-top: calc(50% + 20px) !important;
+          }
+        }
+        @media (min-width: 768px) and (max-width: 991.98px) {
+          .hero-carousel .carousel-overnight-trading {
+            background: #0b1021
+              url("../images/web/hero-banner-home-overnight-trading-tablet.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 60%;
+          }
+          [dir="rtl"] .hero-carousel .carousel-overnight-trading {
+            background: #0b1021
+              url("../images/web/hero-banner-home-overnight-trading-tablet-rtl.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 60%;
+          }
+        }
+        @media (min-width: 768px) and (max-width: 991.98px) and (max-height: 699.98px) {
+          .hero-carousel .carousel-overnight-trading {
+            background: #0b1021
+              url("../images/web/hero-banner-home-overnight-trading-tablet.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 50%;
+          }
+          [dir="rtl"] .hero-carousel .carousel-overnight-trading {
+            background: #0b1021
+              url("../images/web/hero-banner-home-overnight-trading-tablet-rtl.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 50%;
+          }
+        }
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+          .hero-carousel .carousel-overnight-trading {
+            background: #0b1021
+              url("../images/web/hero-banner-home-overnight-trading-laptop6654.jpg?v1");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right center;
+          }
+          [dir="rtl"] .hero-carousel .carousel-overnight-trading {
+            background: #0b1021
+              url("../images/web/hero-banner-home-overnight-trading-laptop-rtl.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left center;
+          }
+        }
+        @media (max-height: 799.98px) and (min-width: 1200px) {
+          .hero-carousel .carousel-overnight-trading {
+            background: #0b1021
+              url("../images/web/hero-banner-home-overnight-trading-desktop.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right center;
+          }
+          [dir="rtl"] .hero-carousel .carousel-overnight-trading {
+            background: #0b1021
+              url("../images/web/hero-banner-home-overnight-trading-desktop-rtl.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left center;
+          }
+        }
+        @media (min-height: 800px) and (min-width: 1200px) {
+          .hero-carousel .carousel-overnight-trading {
+            background: #0b1021
+              url("../images/web/hero-banner-home-overnight-trading-desktop-hd.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right center;
+          }
+          [dir="rtl"] .hero-carousel .carousel-overnight-trading {
+            background: #0b1021
+              url("../images/web/hero-banner-home-overnight-trading-desktop-hd-rtl.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left center;
+          }
+        }
+        .hero-carousel .carousel-overnight-trading .hero-headline,
+        .hero-carousel .carousel-overnight-trading .hero-subhead {
+          color: #fff;
+        }
+        .hero-carousel .carousel-interest a.btn.btn-primary {
+          box-shadow: 0 3px 20px rgb(0, 0, 0, 0.1) !important;
+        }
+        /* ============================================================== */
+        /* ==================     Banner INTEREST      ================== */
+        /* ============================================================== */
+        /* Hero img */
+        @media (max-width: 767.98px) {
+          .hero-carousel .carousel-interest {
+            background: #f0f0f0
+              url("../images/web/hero-banner-home-interest-mobile.jpg");
+            background-repeat: no-repeat;
+            background-size: 150%;
+            background-position: top center;
+            padding-top: calc(50% + 20px) !important;
+          }
+        }
+        @media (min-width: 768px) and (max-width: 991.98px) {
+          .hero-carousel .carousel-interest {
+            background: #f0f0f0
+              url("../images/web/hero-banner-home-interest-tablet.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: bottom right;
+          }
+          [dir="rtl"] .hero-carousel .carousel-interest {
+            background: #f0f0f0
+              url("../images/web/hero-banner-home-interest-tablet-rtl.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: bottom left;
+          }
+        }
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+          .hero-carousel .carousel-interest {
+            background: #f0f0f0
+              url("../images/web/hero-banner-home-interest-laptop.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right center;
+          }
+          [dir="rtl"] .hero-carousel .carousel-interest {
+            background: #f0f0f0
+              url("../images/web/hero-banner-home-interest-laptop-rtl.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left center;
+          }
+        }
+        @media (max-height: 799.98px) and (min-width: 1200px) {
+          .hero-carousel .carousel-interest {
+            background: #f0f0f0
+              url("../images/web/hero-banner-home-interest-desktop.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right center;
+          }
+          [dir="rtl"] .hero-carousel .carousel-interest {
+            background: #f0f0f0
+              url("../images/web/hero-banner-home-interest-desktop-rtl.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left center;
+          }
+        }
+        @media (min-height: 800px) and (min-width: 1200px) {
+          .hero-carousel .carousel-interest {
+            background: #f0f0f0
+              url("../images/web/hero-banner-home-interest-desktop-hd.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right bottom;
+          }
+          [dir="rtl"] .hero-carousel .carousel-interest {
+            background: #f0f0f0
+              url("../images/web/hero-banner-home-interest-desktop-hd-rtl.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left bottom;
+          }
+        }
+        .hero-carousel .carousel-interest .hero-headline,
+        .hero-carousel .carousel-interest .hero-subhead {
+          color: #222;
+        }
+        .hero-carousel .carousel-interest a.btn.btn-primary {
+          box-shadow: 0 3px 20px rgb(0, 0, 0, 0.1) !important;
+        }
+        /* ============================================================== */
+        /* ==================   Banner IBKR DESKTOP    ================== */
+        /* ============================================================== */
+        .hero-carousel .carousel-ibkr-desktop {
+          background: radial-gradient(
+              49.37% 69.1% at 50% 0%,
+              rgba(107, 158, 244, 0.5) 0%,
+              rgba(107, 158, 244, 0) 100%
+            ),
+            #15181e;
+        }
+        @media (min-width: 992px) {
+          .hero-carousel .carousel-ibkr-desktop {
+            background: radial-gradient(
+                54.88% 76.8% at 81% 0%,
+                rgba(107, 158, 244, 0.5) 0%,
+                rgba(107, 158, 244, 0) 100%
+              ),
+              #15181e;
+          }
+        }
+        @media (max-width: 991.98px) {
+          .carousel-ibkr-desktop {
+            padding-top: 50% !important;
+          }
+        }
+        @media (max-width: 991.98px) and (min-width: 576px) {
+          .carousel-ibkr-desktop {
+            padding-top: 40vh !important;
+          }
+        }
+        .carousel-ibkr-desktop .hero-img-wrapper {
+          z-index: 1;
+          overflow: visible;
+        }
+        @media (max-width: 991.98px) {
+          .carousel-ibkr-desktop .hero-img-wrapper {
+            position: absolute;
+            width: 100%;
+            padding-top: 50%;
+            height: 0;
+            top: 0px;
+            left: 0px;
+          }
+        }
+        @media (max-width: 991.98px) and (min-width: 576px) {
+          .carousel-ibkr-desktop .hero-img-wrapper {
+            padding-top: 40vh;
+          }
+        }
+        @media (min-width: 992px) {
+          .carousel-ibkr-desktop .hero-img-wrapper {
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            right: 0;
+            top: 0;
+            bottom: 0;
+          }
+        }
+        @media (min-width: 1400px) {
+          .carousel-ibkr-desktop .hero-img-wrapper {
+            width: 40%;
+          }
+        }
+        .carousel-ibkr-desktop .hero-img-wrapper img {
+          object-fit: contain;
+          object-position: center;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          translate: -50% -50%;
+          border-radius: 0.5rem;
+        }
+        @media (max-width: 991.98px) {
+          .carousel-ibkr-desktop .hero-img-wrapper img {
+            height: calc(100% - 4rem);
+            width: calc(100% - 4rem);
+          }
+        }
+        @media (max-width: 991.98px) and (min-width: 576px) {
+          .carousel-ibkr-desktop .hero-img-wrapper img {
+            height: calc(100% - 12vh);
+            width: calc(100% - 4rem);
+          }
+        }
+        @media (min-width: 992px) {
+          .carousel-ibkr-desktop .hero-img-wrapper img {
+            height: calc(100% - 5rem);
+            width: calc(100% - 5rem);
+          }
+        }
+        @media (min-width: 1200px) {
+          .carousel-ibkr-desktop .hero-img-wrapper img {
+            height: auto;
+            width: 85%;
+            max-height: calc(100% - 5rem);
+            max-width: calc(100% - 5rem);
+          }
+        }
+        @media (min-width: 1600px) {
+          .carousel-ibkr-desktop .hero-img-wrapper img {
+            width: 75%;
+          }
+        }
+        .hero-carousel .carousel-ibkr-desktop .hero-headline {
+          color: #fff;
+        }
+        .hero-carousel .carousel-ibkr-desktop .hero-subhead {
+          color: #b7b8ba;
+        }
+        /* ============================================================== */
+        /* ==================   Banner GLOBAL ACCESS   ================== */
+        /* ============================================================== */
+        @media (max-width: 767.98px) {
+          .hero-carousel .carousel-global-access .hero-headline,
+          .hero-carousel .carousel-global-access .hero-subhead {
+            color: #222;
+          }
+        }
+        @media (min-width: 768px) {
+          .hero-carousel .carousel-global-access .hero-headline,
+          .hero-carousel .carousel-global-access .hero-subhead {
+            color: #fff;
+          }
+        }
+        .hero-carousel .carousel-global-access a.btn.btn-primary {
+          box-shadow: 0 3px 20px rgb(0, 0, 0, 0.1) !important;
+        }
+        /* Hero img */
+        @media (max-width: 767.98px) {
+          .hero-carousel .carousel-global-access {
+            background: #e9ecf1
+              url("../images/web/hero-banner-home-global-access-mobile.jpg");
+            background-repeat: no-repeat;
+            background-size: 150%;
+            background-position: top center;
+            padding-top: calc(50% + 20px) !important;
+          }
+        }
+        @media (min-width: 768px) and (max-width: 991.98px) {
+          .hero-carousel .carousel-global-access {
+            background: #e9ecf1
+              url("../images/web/hero-banner-home-global-access-tablet.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: bottom right;
+          }
+          [dir="rtl"] .hero-carousel .carousel-global-access {
+            background: #e9ecf1
+              url("../images/web/hero-banner-home-global-access-tablet-rtl.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: bottom left;
+          }
+        }
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+          .hero-carousel .carousel-global-access {
+            background: #e9ecf1
+              url("../images/web/hero-banner-home-global-access-laptop.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right center;
+          }
+          [dir="rtl"] .hero-carousel .carousel-global-access {
+            background: #e9ecf1
+              url("../images/web/hero-banner-home-global-access-laptop-rtl.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left center;
+          }
+        }
+        @media (max-height: 799.98px) and (min-width: 1200px) {
+          .hero-carousel .carousel-global-access {
+            background: #e9ecf1
+              url("../images/web/hero-banner-home-global-access-desktop.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right center;
+          }
+          [dir="rtl"] .hero-carousel .carousel-global-access {
+            background: #e9ecf1
+              url("../images/web/hero-banner-home-global-access-desktop-rtl.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left center;
+          }
+        }
+        @media (min-height: 800px) and (min-width: 1200px) {
+          .hero-carousel .carousel-global-access {
+            background: #e9ecf1
+              url("../images/web/hero-banner-home-global-access-desktop-hd.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right bottom;
+          }
+          [dir="rtl"] .hero-carousel .carousel-global-access {
+            background: #e9ecf1
+              url("../images/web/hero-banner-home-global-access-desktop-hd-rtl.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left bottom;
+          }
+        }
+        /* ============================================================== */
+        /* ==================   Banner ISA 2           ================== */
+        /* ============================================================== */
+        @media (max-width: 767.98px) {
+          .hero-carousel .carousel-isa-2 .hero-headline,
+          .hero-carousel .carousel-isa-2 .hero-subhead {
+            color: #fff;
+          }
+        }
+        @media (min-width: 768px) {
+          .hero-carousel .carousel-isa-2 .hero-headline,
+          .hero-carousel .carousel-isa-2 .hero-subhead {
+            color: #fff;
+          }
+        }
+        .hero-carousel .carousel-isa-2 a.btn.btn-primary {
+          box-shadow: 0 3px 20px rgb(0, 0, 0, 0.1) !important;
+        }
+        /* Hero img */
+        @media (max-width: 767.98px) {
+          .hero-carousel .carousel-isa-2 {
+            background: #000
+              url("../images/web/hero-banner-home-isa-2-mobile.webp");
+            background-repeat: no-repeat;
+            background-size: 150%;
+            background-position: top center;
+            padding-top: calc(50% + 20px) !important;
+          }
+        }
+        @media (min-width: 768px) and (max-width: 991.98px) {
+          .hero-carousel .carousel-isa-2 {
+            background: #000
+              url("../images/web/hero-banner-home-isa-2-tablet.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: bottom right;
+          }
+          [dir="rtl"] .hero-carousel .carousel-isa-2 {
+            background: #000
+              url("../images/web/hero-banner-home-isa-2-tablet-rtl.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: bottom left;
+          }
+        }
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+          .hero-carousel .carousel-isa-2 {
+            background: #000
+              url("../images/web/hero-banner-home-isa-2-laptop.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right center;
+          }
+          [dir="rtl"] .hero-carousel .carousel-isa-2 {
+            background: #000
+              url("../images/web/hero-banner-home-isa-2-laptop-rtl.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left center;
+          }
+        }
+        @media (max-height: 799.98px) and (min-width: 1200px) {
+          .hero-carousel .carousel-isa-2 {
+            background: #000
+              url("../images/web/hero-banner-home-isa-2-desktop.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right center;
+          }
+          [dir="rtl"] .hero-carousel .carousel-isa-2 {
+            background: #000
+              url("../images/web/hero-banner-home-isa-2-desktop-rtl.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left center;
+          }
+        }
+        @media (min-height: 800px) and (min-width: 1200px) {
+          .hero-carousel .carousel-isa-2 {
+            background: #000
+              url("../images/web/hero-banner-home-isa-2-desktop-hd.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right bottom;
+          }
+          [dir="rtl"] .hero-carousel .carousel-isa-2 {
+            background: #000
+              url("../images/web/hero-banner-home-isa-2-desktop-hd-rtl.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left bottom;
+          }
+        }
+        /* ============================================================== */
+        /* ==================   Banner PEA 2           ================== */
+        /* ============================================================== */
+        @media (max-width: 767.98px) {
+          .hero-carousel .carousel-pea-2 .hero-headline,
+          .hero-carousel .carousel-pea-2 .hero-subhead {
+            color: #fff;
+          }
+        }
+        @media (min-width: 768px) {
+          .hero-carousel .carousel-pea-2 .hero-headline,
+          .hero-carousel .carousel-pea-2 .hero-subhead {
+            color: #fff;
+          }
+        }
+        .hero-carousel .carousel-pea-2 a.btn.btn-primary {
+          box-shadow: 0 3px 20px rgb(0, 0, 0, 0.1) !important;
+        }
+        /* Hero img */
+        @media (max-width: 767.98px) {
+          .hero-carousel .carousel-pea-2 {
+            background: #000
+              url("../images/web/carousel/hero-banner-home-pea-2-mobile.webp");
+            background-repeat: no-repeat;
+            background-size: 150%;
+            background-position: top center;
+            padding-top: calc(50% + 20px) !important;
+          }
+        }
+        @media (min-width: 768px) and (max-width: 991.98px) {
+          .hero-carousel .carousel-pea-2 {
+            background: #000
+              url("../images/web/carousel/hero-banner-home-pea-2-tablet.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: bottom right;
+          }
+          [dir="rtl"] .hero-carousel .carousel-pea-2 {
+            background: #000
+              url("../images/web/carousel/hero-banner-home-pea-2-tablet-rtl.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: bottom left;
+          }
+        }
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+          .hero-carousel .carousel-pea-2 {
+            background: #000
+              url("../images/web/carousel/hero-banner-home-pea-2-laptop.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right center;
+          }
+          [dir="rtl"] .hero-carousel .carousel-pea-2 {
+            background: #000
+              url("../images/web/carousel/hero-banner-home-pea-2-laptop-rtl.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left center;
+          }
+        }
+        @media (max-height: 799.98px) and (min-width: 1200px) {
+          .hero-carousel .carousel-pea-2 {
+            background: #000
+              url("../images/web/carousel/hero-banner-home-pea-2-desktop.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right center;
+          }
+          [dir="rtl"] .hero-carousel .carousel-pea-2 {
+            background: #000
+              url("../images/web/carousel/hero-banner-home-pea-2-desktop-rtl.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left center;
+          }
+        }
+        @media (min-height: 800px) and (min-width: 1200px) {
+          .hero-carousel .carousel-pea-2 {
+            background: #000
+              url("../images/web/carousel/hero-banner-home-pea-2-desktop-hd.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right bottom;
+          }
+          [dir="rtl"] .hero-carousel .carousel-pea-2 {
+            background: #000
+              url("../images/web/carousel/hero-banner-home-pea-2-desktop-hd-rtl.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left bottom;
+          }
+        }
+        /* ============================================================== */
+        /* ==================   Banner CURRENCIES      ================== */
+        /* ============================================================== */
+        @media (max-width: 767.98px) {
+          .hero-carousel .carousel-currencies .hero-headline,
+          .hero-carousel .carousel-currencies .hero-subhead {
+            color: #fff;
+          }
+        }
+        @media (min-width: 768px) {
+          .hero-carousel .carousel-currencies .hero-headline,
+          .hero-carousel .carousel-currencies .hero-subhead {
+            color: #fff;
+          }
+        }
+        .hero-carousel .carousel-currencies a.btn.btn-primary {
+          box-shadow: 0 3px 20px rgb(0, 0, 0, 0.1) !important;
+        }
+        @media (max-width: 768px) {
+          .hero-carousel .carousel-currencies {
+            min-height: 65vh;
+          }
+        }
+        /* Hero img */
+        @media (max-width: 991.98px) {
+          .hero-carousel .carousel-currencies {
+            background: #000
+              url("../images/web/carousel/hero-banner-home-currencies-tablet1b26.webp?v2");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: bottom center;
+          }
+        }
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+          .hero-carousel .carousel-currencies {
+            background: #000
+              url("../images/web/carousel/hero-banner-home-currencies-laptop6654.webp?v1");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right center;
+          }
+          [dir="rtl"] .hero-carousel .carousel-currencies {
+            background: #000
+              url("../images/web/carousel/hero-banner-home-currencies-laptop-rtl6654.webp?v1");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left center;
+          }
+        }
+        @media (max-height: 799.98px) and (min-width: 1200px) {
+          .hero-carousel .carousel-currencies {
+            background: #000
+              url("../images/web/carousel/hero-banner-home-currencies-desktop6654.webp?v1");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right center;
+          }
+          [dir="rtl"] .hero-carousel .carousel-currencies {
+            background: #000
+              url("../images/web/carousel/hero-banner-home-currencies-desktop-rtl6654.webp?v1");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left center;
+          }
+        }
+        @media (min-height: 800px) and (min-width: 1200px) {
+          .hero-carousel .carousel-currencies {
+            background: #000
+              url("../images/web/carousel/hero-banner-home-currencies-desktop-hd6654.webp?v1");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right bottom;
+          }
+          [dir="rtl"] .hero-carousel .carousel-currencies {
+            background: #000
+              url("../images/web/carousel/hero-banner-home-currencies-desktop-hd-rtl6654.webp?v1");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left bottom;
+          }
+        }
+        /* ============================================================== */
+        /* ===================    Banner EU TRADE     =================== */
+        /* ============================================================== */
+        .hero-carousel .carousel-eu-trade .hero-headline,
+        .hero-carousel .carousel-eu-trade .hero-subhead {
+          color: #fff;
+        }
+        .hero-carousel .carousel-eu-trade .paralist li {
+          color: #fff !important;
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+        .hero-carousel .carousel-eu-trade a.btn.btn-primary {
+          box-shadow: 0 3px 20px rgb(0, 0, 0, 0.1) !important;
+        }
+        @media (max-width: 575.98px) {
+          .carousel-eu-trade {
+            padding-top: 40% !important;
+          }
+        }
+        @media (min-width: 576px) and (max-width: 991.98px) {
+          .carousel-eu-trade {
+            padding-top: 40vh !important;
+          }
+        }
+        .carousel-eu-trade .hero-img-wrapper {
+          z-index: 1;
+          overflow: visible;
+        }
+        @media (max-width: 575.98px) {
+          .carousel-eu-trade .hero-img-wrapper {
+            position: absolute;
+            width: 100%;
+            padding-top: 40%;
+            height: 0;
+            top: 0px;
+            inset-inline-start: 0px;
+          }
+        }
+        @media (min-width: 576px) and (max-width: 991.98px) {
+          .carousel-eu-trade .hero-img-wrapper {
+            position: absolute;
+            width: 100%;
+            padding-top: 40vh;
+            height: 0;
+            top: 0px;
+            inset-inline-start: 0px;
+          }
+        }
+        @media (min-width: 992px) {
+          .carousel-eu-trade .hero-img-wrapper {
+            position: absolute;
+            width: 40%;
+            height: 100%;
+            right: 0;
+            top: 0;
+            bottom: 0;
+          }
+        }
+        .carousel-eu-trade .hero-img-wrapper img {
+          object-fit: contain;
+          object-position: center;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          translate: -50% -50%;
+        }
+        @media (max-width: 991.98px) {
+          .carousel-eu-trade .hero-img-wrapper img {
+            height: calc(100% - 4rem);
+            width: calc(100% - 4rem);
+          }
+        }
+        @media (max-width: 991.98px) and (min-width: 576px) {
+          .carousel-eu-trade .hero-img-wrapper img {
+            height: calc(100% - 12vh);
+            width: calc(100% - 4rem);
+          }
+        }
+        @media (min-width: 992px) {
+          .carousel-eu-trade .hero-img-wrapper img {
+            height: calc(100% - 5rem);
+            width: calc(100% - 5rem);
+          }
+        }
+        @media (min-width: 1200px) {
+          .carousel-eu-trade .hero-img-wrapper img {
+            height: 85%;
+            width: auto;
+            max-height: calc(100% - 5rem);
+            max-width: calc(100% - 5rem);
+          }
+        }
+        @media (min-width: 1600px) {
+          .carousel-eu-trade .hero-img-wrapper img {
+            height: 75%;
+          }
+        } /* Hero img */
+        @media (max-width: 991.98px) {
+          .hero-carousel .carousel-eu-trade {
+            background: #000
+              url("../images/web/carousel/hero-banner-home-eu-trade-tablet.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center 30%;
+          }
+        }
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+          .hero-carousel .carousel-eu-trade {
+            background: #000
+              url("../images/web/carousel/hero-banner-home-eu-trade-laptop.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right center;
+          }
+          [dir="rtl"] .hero-carousel .carousel-eu-trade {
+            background: #000
+              url("../images/web/carousel/hero-banner-home-eu-trade-laptop-rtl.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left center;
+          }
+        }
+        @media (max-height: 799.98px) and (min-width: 1200px) {
+          .hero-carousel .carousel-eu-trade {
+            background: #000
+              url("../images/web/carousel/hero-banner-home-eu-trade-desktop.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right center;
+          }
+          [dir="rtl"] .hero-carousel .carousel-eu-trade {
+            background: #000
+              url("../images/web/carousel/hero-banner-home-eu-trade-desktop-rtl.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left center;
+          }
+        }
+        @media (min-height: 800px) and (min-width: 1200px) {
+          .hero-carousel .carousel-eu-trade {
+            background: #000
+              url("../images/web/carousel/hero-banner-home-eu-trade-desktop-hd.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right bottom;
+          }
+          [dir="rtl"] .hero-carousel .carousel-eu-trade {
+            background: #000
+              url("../images/web/carousel/hero-banner-home-eu-trade-desktop-hd-rtl.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left bottom;
+          }
+        }
+        /* ============================================================== */
+        /* ==================   Banner Country         ================== */
+        /* ============================================================== */
+        @media (max-width: 767.98px) {
+          .hero-carousel .carousel-country .hero-headline,
+          .hero-carousel .carousel-country .hero-subhead {
+            color: #fff;
+          }
+        }
+        @media (min-width: 768px) {
+          .hero-carousel .carousel-country .hero-headline,
+          .hero-carousel .carousel-country .hero-subhead {
+            color: #fff;
+          }
+        }
+        .hero-carousel .carousel-country a.btn.btn-primary {
+          box-shadow: 0 3px 20px rgb(0, 0, 0, 0.1) !important;
+        }
+        @media (max-width: 768px) {
+          .hero-carousel .carousel-country {
+            min-height: 65vh;
+          }
+        }
+        /* Hero img */
+        @media (max-width: 991.98px) {
+          .hero-carousel .carousel-country {
+            background: linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0) -5.41%,
+                rgba(0, 0, 0, 0.7) 87.83%
+              ),
+              url("../images/web/carousel/hero-banner-home-country--tablet1b26.html?v2");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: bottom center;
+          }
+        }
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+          .hero-carousel .carousel-country {
+            background: linear-gradient(
+                270deg,
+                rgba(0, 0, 0, 0) -24.76%,
+                rgba(0, 0, 0, 0.7) 85.58%
+              ),
+              url("../images/web/carousel/hero-banner-home-country--laptop1b26.html?v2");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right center;
+          }
+        }
+        @media (max-height: 799.98px) and (min-width: 1200px) {
+          .hero-carousel .carousel-country {
+            background: linear-gradient(
+                270deg,
+                rgba(0, 0, 0, 0) -24.76%,
+                rgba(0, 0, 0, 0.7) 85.58%
+              ),
+              url("../images/web/carousel/hero-banner-home-country--desktop1b26.html?v2");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right center;
+          }
+        }
+        @media (min-height: 800px) and (min-width: 1200px) {
+          .hero-carousel .carousel-country {
+            background: linear-gradient(
+                270deg,
+                rgba(0, 0, 0, 0) -24.76%,
+                rgba(0, 0, 0, 0.7) 85.58%
+              ),
+              url("../images/web/carousel/hero-banner-home-country--desktop-hd1b26.html?v2");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right bottom;
+          }
+        }
+        /* ============================================================== */
+        /* ===================    Banner CH TRADE     =================== */
+        /* ============================================================== */
+        .hero-carousel .carousel-ch-trade .hero-headline,
+        .hero-carousel .carousel-ch-trade .hero-subhead {
+          color: #fff;
+        }
+        .hero-carousel .carousel-ch-trade .paralist li {
+          color: #fff !important;
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+        .hero-carousel .carousel-ch-trade a.btn.btn-primary,
+        .hero-carousel .carousel-ch-trade a:link.btn.btn-primary,
+        .hero-carousel .carousel-ch-trade a:visited.btn.btn-primary,
+        .hero-carousel .carousel-ch-trade a:hover.btn.btn-primary,
+        .hero-carousel .carousel-ch-trade a:active.btn.btn-primary,
+        .hero-carousel .carousel-ch-trade a:focus.btn.btn-primary {
+          background-color: #fff !important;
+          border-color: #fff !important;
+          color: #db1222 !important;
+          transition: background-color 300ms ease-in, border-color 300ms ease-in;
+          box-shadow: none !important;
+        }
+        .hero-carousel .carousel-ch-trade a:hover.btn.btn-primary {
+          background-color: #fff !important;
+          border-color: #fff !important;
+          color: #222 !important;
+        }
+        .hero-carousel .carousel-ch-trade a.btn.btn-primary {
+          box-shadow: 0 3px 20px rgb(0, 0, 0, 0.1) !important;
+        }
+        @media (max-width: 575.98px) {
+          .carousel-ch-trade {
+            padding-top: 40% !important;
+          }
+        }
+        @media (min-width: 576px) and (max-width: 991.98px) {
+          .carousel-ch-trade {
+            padding-top: 40vh !important;
+          }
+        }
+        .carousel-ch-trade .hero-img-wrapper {
+          z-index: 1;
+          overflow: visible;
+        }
+        @media (max-width: 575.98px) {
+          .carousel-ch-trade .hero-img-wrapper {
+            position: absolute;
+            width: 100%;
+            padding-top: 40%;
+            height: 0;
+            top: 0px;
+            inset-inline-start: 0px;
+          }
+        }
+        @media (min-width: 576px) and (max-width: 991.98px) {
+          .carousel-ch-trade .hero-img-wrapper {
+            position: absolute;
+            width: 100%;
+            padding-top: 40vh;
+            height: 0;
+            top: 0px;
+            inset-inline-start: 0px;
+          }
+        }
+        @media (min-width: 992px) {
+          .carousel-ch-trade .hero-img-wrapper {
+            position: absolute;
+            width: 40%;
+            height: 100%;
+            right: 0;
+            top: 0;
+            bottom: 0;
+          }
+        }
+        .carousel-ch-trade .hero-img-wrapper img {
+          object-fit: contain;
+          object-position: center;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          translate: -50% -50%;
+        }
+        @media (max-width: 991.98px) {
+          .carousel-ch-trade .hero-img-wrapper img {
+            height: calc(100% - 4rem);
+            width: calc(100% - 4rem);
+          }
+        }
+        @media (max-width: 991.98px) and (min-width: 576px) {
+          .carousel-ch-trade .hero-img-wrapper img {
+            height: calc(100% - 12vh);
+            width: calc(100% - 4rem);
+          }
+        }
+        @media (min-width: 992px) {
+          .carousel-ch-trade .hero-img-wrapper img {
+            height: calc(100% - 5rem);
+            width: calc(100% - 5rem);
+          }
+        }
+        @media (min-width: 1200px) {
+          .carousel-ch-trade .hero-img-wrapper img {
+            height: 85%;
+            width: auto;
+            max-height: calc(100% - 5rem);
+            max-width: calc(100% - 5rem);
+          }
+        }
+        @media (min-width: 1600px) {
+          .carousel-ch-trade .hero-img-wrapper img {
+            height: 75%;
+          }
+        }
+        /* Hero img */
+        @media (max-width: 991.98px) {
+          .hero-carousel .carousel-ch-trade {
+            background: #670808
+              url("../images/web/carousel/hero-banner-home-ch-trade-tablet.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center 30%;
+          }
+        }
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+          .hero-carousel .carousel-ch-trade {
+            background: #670808
+              url("../images/web/carousel/hero-banner-home-ch-trade-laptop.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right center;
+          }
+        }
+        @media (max-height: 799.98px) and (min-width: 1200px) {
+          .hero-carousel .carousel-ch-trade {
+            background: #670808
+              url("../images/web/carousel/hero-banner-home-ch-trade-desktop.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right center;
+          }
+        }
+        @media (min-height: 800px) and (min-width: 1200px) {
+          .hero-carousel .carousel-ch-trade {
+            background: #670808
+              url("../images/web/carousel/hero-banner-home-ch-trade-desktop-hd.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right bottom;
+          }
+        }
+        /* ============================================================== */
+        /* ===================    Banner UK TRADE     =================== */
+        /* ============================================================== */
+        .hero-carousel .carousel-uk-trade .hero-headline,
+        .hero-carousel .carousel-uk-trade .hero-subhead {
+          color: #fff;
+        }
+        .hero-carousel .carousel-uk-trade .paralist li {
+          color: #fff !important;
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+        .hero-carousel .carousel-uk-trade a.btn.btn-primary {
+          box-shadow: 0 3px 20px rgb(0, 0, 0, 0.1) !important;
+        }
+        @media (max-width: 575.98px) {
+          .carousel-uk-trade {
+            padding-top: 30vh !important;
+          }
+        }
+        @media (min-width: 576px) and (max-width: 991.98px) {
+          .carousel-uk-trade {
+            padding-top: 40vh !important;
+          }
+        }
+        .carousel-uk-trade .hero-img-wrapper {
+          z-index: 1;
+          overflow: visible;
+        }
+        @media (max-width: 575.98px) {
+          .carousel-uk-trade .hero-img-wrapper {
+            position: absolute;
+            width: 100%;
+            padding-top: 30vh;
+            height: 0;
+            top: 0px;
+            inset-inline-start: 0px;
+          }
+        }
+        @media (min-width: 576px) and (max-width: 991.98px) {
+          .carousel-uk-trade .hero-img-wrapper {
+            position: absolute;
+            width: 100%;
+            padding-top: 40vh;
+            height: 0;
+            top: 0px;
+            inset-inline-start: 0px;
+          }
+        }
+        @media (min-width: 992px) {
+          .carousel-uk-trade .hero-img-wrapper {
+            position: absolute;
+            width: 40%;
+            height: 100%;
+            right: 0;
+            top: 0;
+            bottom: 0;
+          }
+        }
+        .carousel-uk-trade .hero-img-wrapper img {
+          object-fit: contain;
+          object-position: center;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          translate: -50% -50%;
+        }
+        @media (max-width: 991.98px) {
+          .carousel-uk-trade .hero-img-wrapper img {
+            height: calc(100% - 4rem);
+            width: calc(100% - 4rem);
+          }
+        }
+        @media (max-width: 991.98px) and (min-width: 576px) {
+          .carousel-uk-trade .hero-img-wrapper img {
+            height: calc(100% - 12vh);
+            width: calc(100% - 4rem);
+          }
+        }
+        @media (min-width: 992px) {
+          .carousel-uk-trade .hero-img-wrapper img {
+            height: calc(100% - 5rem);
+            width: calc(100% - 5rem);
+          }
+        }
+        @media (min-width: 1200px) {
+          .carousel-uk-trade .hero-img-wrapper img {
+            height: 85%;
+            width: auto;
+            max-height: calc(100% - 5rem);
+            max-width: calc(100% - 5rem);
+          }
+        }
+        @media (min-width: 1600px) {
+          .carousel-uk-trade .hero-img-wrapper img {
+            height: 75%;
+          }
+        }
+        /* Hero img */
+        @media (max-width: 991.98px) {
+          .hero-carousel .carousel-uk-trade {
+            background: #444
+              url("../images/web/carousel/hero-banner-home-uk-trade-tablet.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+          }
+        }
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+          .hero-carousel .carousel-uk-trade {
+            background: #444
+              url("../images/web/carousel/hero-banner-home-uk-trade-laptop.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right center;
+          }
+        }
+        @media (max-height: 799.98px) and (min-width: 1200px) {
+          .hero-carousel .carousel-uk-trade {
+            background: #444
+              url("../images/web/carousel/hero-banner-home-uk-trade-desktop.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right center;
+          }
+        }
+        @media (min-height: 800px) and (min-width: 1200px) {
+          .hero-carousel .carousel-uk-trade {
+            background: #444
+              url("../images/web/carousel/hero-banner-home-uk-trade-desktop-hd.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right bottom;
+          }
+        }
+        /* ============================================================== */
+        /* ================    Banner AU COMMISSIONS     ================ */
+        /* ============================================================== */
+        .hero-carousel .carousel-au-commissions .hero-headline,
+        .hero-carousel .carousel-au-commissions .hero-subhead {
+          color: #fff;
+        }
+        .hero-carousel .carousel-au-commissions a.btn.btn-primary {
+          box-shadow: 0 3px 20px rgb(0, 0, 0, 0.1) !important;
+        }
+        @media (max-width: 575.98px) {
+          .carousel-au-commissions {
+            padding-top: 40% !important;
+          }
+        }
+        @media (min-width: 576px) and (max-width: 991.98px) {
+          .carousel-au-commissions {
+            padding-top: 25% !important;
+          }
+        }
+        @media (min-width: 576px) and (max-width: 991.98px) {
+          .carousel-au-commissions {
+            padding-top: 40vh !important;
+          }
+        }
+        .carousel-au-commissions .hero-img-wrapper {
+          z-index: 1;
+          overflow: visible;
+        }
+        @media (max-width: 575.98px) {
+          .carousel-au-commissions .hero-img-wrapper {
+            position: absolute;
+            width: 100%;
+            padding-top: 40%;
+            height: 0;
+            top: 0px;
+            inset-inline-start: 0px;
+          }
+        }
+        @media (min-width: 576px) and (max-width: 991.98px) {
+          .carousel-au-commissions .hero-img-wrapper {
+            position: absolute;
+            width: 100%;
+            padding-top: 40vh;
+            height: 0;
+            top: 0px;
+            inset-inline-start: 0px;
+          }
+        }
+        @media (min-width: 992px) {
+          .carousel-au-commissions .hero-img-wrapper {
+            position: absolute;
+            width: 40%;
+            height: 100%;
+            inset-inline-end: 0px;
+            top: 0;
+            bottom: 0;
+          }
+        }
+        .carousel-au-commissions .hero-img-wrapper img {
+          object-fit: contain;
+          object-position: center;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          translate: -50% -50%;
+          border-radius: 0.5rem;
+          filter: drop-shadow(0rem 0rem 0.5rem rgba(255, 255, 255, 0.5));
+        }
+        @media (max-width: 991.98px) {
+          .carousel-au-commissions .hero-img-wrapper img {
+            height: calc(100% - 4rem);
+            width: calc(100% - 4rem);
+          }
+        }
+        @media (min-width: 576px) and (max-width: 991.98px) {
+          .carousel-au-commissions .hero-img-wrapper img {
+            height: calc(100% - 14vh);
+            width: calc(100% - 4rem);
+          }
+        }
+        @media (min-width: 992px) {
+          .carousel-au-commissions .hero-img-wrapper img {
+            height: calc(100% - 5rem);
+            width: calc(100% - 5rem);
+          }
+        }
+        @media (min-width: 1200px) {
+          .carousel-au-commissions .hero-img-wrapper img {
+            height: auto;
+            width: 85%;
+            max-height: calc(100% - 5rem);
+            max-width: calc(100% - 5rem);
+          }
+        }
+        @media (min-width: 1600px) {
+          .carousel-au-commissions .hero-img-wrapper img {
+            width: 75%;
+          }
+        }
+        /* Hero img */
+        @media (max-width: 991.98px) {
+          .hero-carousel .carousel-au-commissions {
+            background: #000
+              url("../images/web/carousel/hero-banner-home-au-commissions-tablet.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center 30%;
+          }
+        }
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+          .hero-carousel .carousel-au-commissions {
+            background: #000
+              url("../images/web/carousel/hero-banner-home-au-commissions-laptop.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right center;
+          }
+          [dir="rtl"] .hero-carousel .carousel-au-commissions {
+            background: #000
+              url("../images/web/carousel/hero-banner-home-au-commissions-laptop-rtl.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left center;
+          }
+        }
+        @media (max-height: 799.98px) and (min-width: 1200px) {
+          .hero-carousel .carousel-au-commissions {
+            background: #000
+              url("../images/web/carousel/hero-banner-home-au-commissions-desktop.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right center;
+          }
+          [dir="rtl"] .hero-carousel .carousel-au-commissions {
+            background: #000
+              url("../images/web/carousel/hero-banner-home-au-commissions-desktop-rtl.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left center;
+          }
+        }
+        @media (min-height: 800px) and (min-width: 1200px) {
+          .hero-carousel .carousel-au-commissions {
+            background: #000
+              url("../images/web/carousel/hero-banner-home-au-commissions-desktop-hd.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right bottom;
+          }
+          [dir="rtl"] .hero-carousel .carousel-au-commissions {
+            background: #000
+              url("../images/web/carousel/hero-banner-home-au-commissions-desktop-hd-rtl.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left bottom;
+          }
+        }
+        /* ============================================================== */
+        /* ==================   Banner AU CURRENCIES   ================== */
+        /* ============================================================== */
+        /* slide content */
+        .hero-carousel .carousel-au-currencies .hero-headline,
+        .hero-carousel .carousel-au-currencies .hero-subhead {
+          color: #fff;
+        }
+        .hero-carousel .carousel-au-currencies .paralist li {
+          color: #fff !important;
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+        .hero-carousel .carousel-au-currencies .container {
+          z-index: 1;
+        }
+        .hero-carousel .carousel-au-currencies a.btn.btn-primary,
+        .hero-carousel .carousel-au-currencies a:link.btn.btn-primary,
+        .hero-carousel .carousel-au-currencies a:visited.btn.btn-primary,
+        .hero-carousel .carousel-au-currencies a:hover.btn.btn-primary,
+        .hero-carousel .carousel-au-currencies a:active.btn.btn-primary,
+        .hero-carousel .carousel-au-currencies a:focus.btn.btn-primary {
+          background-color: #fff !important;
+          border-color: #fff !important;
+          color: #db1222 !important;
+          transition: background-color 300ms ease-in, border-color 300ms ease-in;
+          box-shadow: none !important;
+        }
+        .hero-carousel .carousel-au-currencies a:hover.btn.btn-primary {
+          background-color: #fff !important;
+          border-color: #fff !important;
+          color: #222 !important;
+        }
+        .hero-carousel .carousel-au-currencies a.btn.btn-primary {
+          box-shadow: 0 3px 20px rgb(0, 0, 0, 0.1) !important;
+        }
+        @media (max-width: 575.98px) {
+          .carousel-au-currencies {
+            padding-top: 40% !important;
+          }
+        }
+        @media (min-width: 576px) and (max-width: 991.98px) {
+          .carousel-au-currencies {
+            padding-top: 40vh !important;
+          }
+        }
+        .carousel-au-currencies .hero-img-wrapper {
+          z-index: 1;
+          overflow: visible;
+        }
+        @media (max-width: 575.98px) {
+          .carousel-au-currencies .hero-img-wrapper {
+            position: absolute;
+            width: 100%;
+            padding-top: 40%;
+            height: 0;
+            top: 0px;
+            inset-inline-start: 0px;
+          }
+        }
+        @media (min-width: 576px) and (max-width: 991.98px) {
+          .carousel-au-currencies .hero-img-wrapper {
+            position: absolute;
+            width: 100%;
+            padding-top: 40vh;
+            height: 0;
+            top: 0px;
+            inset-inline-start: 0px;
+          }
+        }
+        @media (min-width: 992px) {
+          .carousel-au-currencies .hero-img-wrapper {
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            inset-inline-end: 0;
+            top: 0;
+            bottom: 0;
+          }
+        }
+        .carousel-au-currencies .hero-img-wrapper img {
+          object-fit: contain;
+          object-position: center;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          translate: -50% -50%;
+          border-radius: 0.5rem;
+        }
+        @media (max-width: 991.98px) {
+          .carousel-au-currencies .hero-img-wrapper img {
+            height: calc(100% - 4rem);
+            width: calc(100% - 4rem);
+          }
+        }
+        @media (min-width: 576px) and (max-width: 991.98px) {
+          .carousel-au-currencies .hero-img-wrapper img {
+            height: calc(100% - 12vh);
+            width: calc(100% - 4rem);
+          }
+        }
+        @media (min-width: 992px) {
+          .carousel-au-currencies .hero-img-wrapper img {
+            height: calc(100% - 5rem);
+            width: calc(100% - 5rem);
+          }
+        }
+        @media (min-width: 1200px) {
+          .carousel-au-currencies .hero-img-wrapper img {
+            height: auto;
+            width: 60%;
+            max-height: calc(100% - 5rem);
+            max-width: calc(100% - 5rem);
+          }
+        }
+        @media (min-width: 1600px) {
+          .carousel-au-currencies .hero-img-wrapper img {
+            width: 50%;
+          }
+        }
+        .hero-carousel .carousel-au-currencies .hero-background-img {
+          background: linear-gradient(
+              180deg,
+              rgba(10, 43, 86, 0.3) 0%,
+              rgba(10, 43, 86, 0) 54.85%
+            ),
+            radial-gradient(
+              85.15% 101.86% at 75.16% 0%,
+              #153865 17.96%,
+              #030b23 100%
+            );
+          position: absolute;
+          top: 0;
+          inset-inline-start: 0;
+          height: 100%;
+          width: 100%;
+          z-index: 0;
+        }
+        @media (min-width: 992px) {
+          .hero-carousel .carousel-au-currencies .hero-background-img {
+            background: radial-gradient(
+                167.88% 65.38% at 87.5% 102.82%,
+                #040d26 0%,
+                rgba(4, 13, 38, 0) 100%
+              ),
+              linear-gradient(
+                180deg,
+                rgba(10, 43, 86, 0.3) 0%,
+                rgba(10, 43, 86, 0) 100%
+              ),
+              radial-gradient(
+                70.11% 119.38% at 66.69% 19.92%,
+                #153865 17.96%,
+                #030b23 100%
+              );
+          }
+        }
+        [dir="rtl"]
+          .hero-carousel
+          .carousel-au-currencies
+          .hero-background-img {
+          transform: scaleX(-1);
+        }
+        /* ============================================================== */
+        /* =====================   Banner AU SMSF   ===================== */
+        /* ============================================================== */
+        @media (max-width: 767.98px) {
+          .hero-carousel .carousel-au-smsf .hero-headline,
+          .hero-carousel .carousel-au-smsf .hero-subhead {
+            color: #fff;
+          }
+        }
+        @media (min-width: 768px) {
+          .hero-carousel .carousel-au-smsf .hero-headline,
+          .hero-carousel .carousel-au-smsf .hero-subhead {
+            color: #fff;
+          }
+        }
+        .hero-carousel .carousel-au-smsf a.btn.btn-primary {
+          box-shadow: 0 3px 20px rgb(0, 0, 0, 0.1) !important;
+        }
+        /* Hero img */
+        @media (max-width: 768px) {
+          .hero-carousel .carousel-au-smsf {
+            min-height: 75vh;
+          }
+        }
+        @media (max-width: 991.98px) {
+          .hero-carousel .carousel-au-smsf {
+            background: linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0) 43.18%,
+                rgba(0, 0, 0, 0.7) 100%
+              ),
+              url("../images/web/carousel/hero-banner-home-smsf-tablet.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center bottom;
+          }
+        }
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+          .hero-carousel .carousel-au-smsf {
+            background: #000
+              url("../images/web/carousel/hero-banner-home-smsf-laptop.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right center;
+          }
+          [dir="rtl"] .hero-carousel .carousel-au-smsf {
+            background: #000
+              url("../images/web/carousel/hero-banner-home-smsf-laptop-rtl.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left center;
+          }
+        }
+        @media (max-height: 799.98px) and (min-width: 1200px) {
+          .hero-carousel .carousel-au-smsf {
+            background: #000
+              url("../images/web/carousel/hero-banner-home-smsf-desktop.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right center;
+          }
+          [dir="rtl"] .hero-carousel .carousel-au-smsf {
+            background: #000
+              url("../images/web/carousel/hero-banner-home-smsf-desktop-rtl.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left center;
+          }
+        }
+        @media (min-height: 800px) and (min-width: 1200px) {
+          .hero-carousel .carousel-au-smsf {
+            background: #000
+              url("../images/web/carousel/hero-banner-home-smsf-desktop-hd.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right bottom;
+          }
+          [dir="rtl"] .hero-carousel .carousel-au-smsf {
+            background: #000
+              url("../images/web/carousel/hero-banner-home-smsf-desktop-hd-rtl.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left bottom;
+          }
+        }
+        /* ============================================================== */
+        /* ==================   Banner Forecast Ex    =================== */
+        /* ============================================================== */
+        .hero-carousel .carousel-forecastex .hero-headline,
+        .hero-carousel .carousel-forecastex .hero-subhead,
+        .hero-carousel .carousel-forecastex .carousel-disclosure {
+          color: #fff;
+        }
+        .hero-carousel .carousel-forecastex .carousel-disclosure a,
+        .hero-carousel .carousel-forecastex .carousel-disclosure a:link,
+        .hero-carousel .carousel-forecastex .carousel-disclosure a:visited,
+        .hero-carousel .carousel-forecastex .carousel-disclosure a:hover,
+        .hero-carousel .carousel-forecastex .carousel-disclosure a:active,
+        .hero-carousel .carousel-forecastex .carousel-disclosure a:focus {
+          text-decoration: underline;
+          color: #fff;
+        }
+        .carousel-forecastex .container {
+          z-index: 2;
+        }
+        @media (max-width: 991.98px) {
+          .carousel-forecastex {
+            padding-top: 0px !important;
+          }
+        }
+        .carousel-forecastex .hero-img-wrapper {
+          z-index: 3;
+          overflow: visible;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        @media (max-width: 991.98px) {
+          .carousel-forecastex .hero-img-wrapper {
+            position: relative;
+            width: 100%;
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+          }
+        }
+        @media (min-width: 992px) {
+          .carousel-forecastex .hero-img-wrapper {
+            position: absolute;
+            width: 40%;
+            height: 100%;
+            inset-inline-end: 0;
+            top: 0;
+            bottom: 0;
+          }
+        }
+        .carousel-forecastex .hero-img-wrapper a {
+          display: block;
+          max-width: 600px;
+        }
+        @media (max-width: 991.98px) {
+          .carousel-forecastex .hero-img-wrapper a {
+            width: calc(100% - 4rem);
+          }
+        }
+        @media (min-width: 992px) {
+          .carousel-forecastex .hero-img-wrapper a {
+            width: calc(100% - 5rem);
+          }
+        }
+        /* Hero img */
+        @media (max-width: 991.98px) {
+          .hero-carousel .carousel-forecastex {
+            background: #161a20
+              url("../images/web/carousel/hero-banner-home-ft-dark-tablet6654.webp?v1");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center 30%;
+          }
+        }
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+          .hero-carousel .carousel-forecastex {
+            background: #161a20
+              url("../images/web/carousel/hero-banner-home-ft-dark-laptop6654.webp?v1");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right center;
+          }
+          [dir="rtl"] .hero-carousel .carousel-forecastex {
+            background: #161a20
+              url("../images/web/carousel/hero-banner-home-ft-dark-laptop6654.webp?v1");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left center;
+          }
+        }
+        @media (max-height: 799.98px) and (min-width: 1200px) {
+          .hero-carousel .carousel-forecastex {
+            background: #161a20
+              url("../images/web/carousel/hero-banner-home-ft-dark-desktop6654.webp?v1");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right center;
+          }
+          [dir="rtl"] .hero-carousel .carousel-forecastex {
+            background: #161a20
+              url("../images/web/carousel/hero-banner-home-ft-dark-desktop6654.webp?v1");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left center;
+          }
+        }
+        @media (min-height: 800px) and (min-width: 1200px) {
+          .hero-carousel .carousel-forecastex {
+            background: #161a20
+              url("../images/web/carousel/hero-banner-home-ft-dark-desktop-hd6654.webp?v1");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right bottom;
+          }
+          [dir="rtl"] .hero-carousel .carousel-forecastex {
+            background: #161a20
+              url("../images/web/carousel/hero-banner-home-ft-dark-desktop-hd6654.webp?v1");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left bottom;
+          }
+        }
+        /* ============================================================== */
+        /* ==================        Banner institutions-uk        ================== */
+        /* ============================================================== */
+        .hero-carousel .carousel-institutions-uk .hero-headline,
+        .hero-carousel .carousel-institutions-uk .hero-subhead {
+          color: #000;
+        }
+
+        @media (max-width: 768px) {
+          .hero-carousel .carousel-institutions-uk {
+            min-height: 65vh;
+          }
+        }
+        /* Hero img */
+        @media (max-width: 991.98px) {
+          .hero-carousel .carousel-institutions-uk {
+            background: #b2d2eb
+              url("../images/web/carousel/hero-banner-home-institutions-uk-tablet6654.webp?v1");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: bottom center;
+          }
+        }
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+          .hero-carousel .carousel-institutions-uk {
+            background: #b2d2eb
+              url("../images/web/carousel/hero-banner-home-institutions-uk-laptop6654.webp?v1");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right center;
+          }
+          [dir="rtl"] .hero-carousel .carousel-institutions-uk {
+            background: #b2d2eb
+              url("../images/web/carousel/hero-banner-home-institutions-uk-laptop-rtl6654.webp?v1");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left center;
+          }
+        }
+        @media (max-height: 799.98px) and (min-width: 1200px) {
+          .hero-carousel .carousel-institutions-uk {
+            background: #b2d2eb
+              url("../images/web/carousel/hero-banner-home-institutions-uk-desktop6654.webp?v1");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right center;
+          }
+          [dir="rtl"] .hero-carousel .carousel-institutions-uk {
+            background: #b2d2eb
+              url("../images/web/carousel/hero-banner-home-institutions-uk-desktop-rtl6654.webp?v1");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left center;
+          }
+        }
+        @media (min-height: 800px) and (min-width: 1200px) {
+          .hero-carousel .carousel-institutions-uk {
+            background: #b2d2eb
+              url("../images/web/carousel/hero-banner-home-institutions-uk-desktop-hd6654.webp?v1");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right bottom;
+          }
+          [dir="rtl"] .hero-carousel .carousel-institutions-uk {
+            background: #b2d2eb
+              url("../images/web/carousel/hero-banner-home-institutions-uk-desktop-hd-rtl6654.webp?v1");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left bottom;
+          }
+        }
+
+        /* ============================================================== */
+        /* ==================       Banner Crypto      ================== */
+        /* ============================================================== */
+        .hero-carousel .carousel-crypto {
+          background: linear-gradient(180deg, #3ec0e8 39.74%, #1787be 100%);
+        }
+        .hero-carousel .carousel-crypto .hero-headline,
+        .hero-carousel .carousel-crypto .hero-subhead {
+          color: #fff;
+        }
+        .hero-carousel .carousel-crypto a.btn.btn-primary {
+          box-shadow: 0 3px 20px rgb(0 0 0 / 10%) !important;
+        }
+        @media (min-width: 768px) {
+          .hero-carousel .hero-img-wrapper-crypto img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+          }
+        }
+        /* Helpers */
+        .hero-carousel .carousel-disclosure {
+          font-size: 0.8125rem;
+          line-height: 1.2;
+          margin-top: 20px;
+        }
+        .hero-carousel .carousel-disclosure a,
+        .hero-carousel .carousel-disclosure a:link,
+        .hero-carousel .carousel-disclosure a:visited,
+        .hero-carousel .carousel-disclosure a:hover,
+        .hero-carousel .carousel-disclosure a:active,
+        .hero-carousel .carousel-disclosure a:focus {
+          text-decoration: underline;
+          color: #222;
+        }
+        @media (min-width: 992px) {
+          .text-lg-start {
+            text-align: start !important;
+          }
+        }
+        @media (min-width: 768px) {
+          .text-md-white,
+          .text-md-white a {
+            color: #fff !important;
+          }
+        }
+      </style>
+      <section class="page-title" id="page-title">
+        <div class="container">
+          <div class="row">
+            <div class="col"><h1>Interactive Brokers Home</h1></div>
+          </div>
+        </div>
+      </section>
+      <section class="hero-carousel" id="hero-carousel">
+        <div
+          id="carouselBannerAds"
+          class="carousel slide"
+          data-bs-ride="carousel"
+          data-bs-pause="false"
+          data-bs-interval="8000"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item carousel-forecastex active">
+              <div class="hero-img-wrapper">
+                <a
+                  href="https://forecasttrader.interactivebrokers.ie/eventtrader/#/markets"
+                  target="_self"
+                >
+                  <style>
+                    .contract-container {
+                      background: #15181e;
+                      border: 1px solid rgba(255, 255, 255, 0.2);
+                      border-radius: 8px;
+                      height: 100%;
+                      padding: 2.5rem;
+                    }
+                    .contract-icon path {
+                      fill: #ffffff;
+                    }
+                    .contract-title {
+                      color: #fff;
+                      font-size: var(--fs-6);
+                      line-height: 1.4;
+                      font-weight: var(--fw-400);
+                      margin: 0;
+                    }
+                    .contract-content {
+                      display: flex;
+                      flex-direction: column;
+                    }
+                    .contract-meta {
+                      margin-top: auto;
+                    }
+                    .contract-volume {
+                      color: rgba(255, 255, 255, 0.75);
+                      font-size: var(--fs-8);
+                      line-height: var(--lh-8);
+                      white-space: nowrap;
+                    }
+                    .contract-quote {
+                      white-space: nowrap;
+                    }
+                    .contract-quote-yes .contract-badge {
+                      background: #0eb35b;
+                      color: #000;
+                    }
+                    .contract-quote-yes .contract-quote-value {
+                      color: #0eb35b;
+                    }
+                    .contract-quote-no .contract-badge {
+                      background: #e62333;
+                      color: #000;
+                    }
+                    .contract-quote-no .contract-quote-value {
+                      color: #e62333;
+                    }
+                    .contract-badge {
+                      padding: 0.125rem 0.5rem;
+                      border-radius: 4px;
+                      color: #ffffff;
+                      font-size: var(--fs-7);
+                      line-height: var(--lh-7);
+                      font-weight: var(--fw-600);
+                      text-transform: uppercase;
+                      white-space: nowrap;
+                    }
+                    .contract-quote-value {
+                      font-size: var(--fs-7);
+                      line-height: var(--lh-7);
+                      font-weight: var(--fw-600);
+                      white-space: nowrap;
+                    }
+                    .contract-list {
+                      display: grid;
+                      grid-template-columns: calc(50% - 0.5rem) calc(
+                          50% - 0.5rem
+                        );
+                      gap: 1rem;
+                      grid-auto-rows: 1fr;
+                      filter: drop-shadow(0px 34px 44px rgba(0, 0, 0, 0.15));
+                    }
+                    .contract-diagram {
+                      position: relative;
+                      margin: 0;
+                      width: 100%;
+                      transition: all 300ms ease;
+                    }
+                    .contract-ratio-wrapper {
+                      width: 100%;
+                      max-width: 100%;
+                      height: 0;
+                      padding-bottom: var(--chart-aspect);
+                      position: relative;
+                    }
+                    [dir="ltr"] .contract-scale-wrapper {
+                      position: absolute;
+                      top: 0;
+                      inset-inline-start: 0;
+                      transform-origin: top left;
+                      transform: scale(var(--chart-scale));
+                    }
+                    [dir="rtl"] .contract-scale-wrapper {
+                      position: absolute;
+                      top: 0;
+                      inset-inline-start: 0;
+                      transform-origin: top right;
+                      transform: scale(var(--chart-scale));
+                    }
+                    .contract-diagram-content {
+                      width: 100%;
+                      height: 100%;
+                      position: relative;
+                    }
+                  </style>
+                </a>
+              </div>
+              <div class="container mt-50">
+                <div class="container">
+                  <div class="row align-items-center">
+                    <!-- LEFT CONTENT -->
+                    <div class="col-12 col-lg-6">
+                      <div
+                        class="hero-content d-flex flex-column align-items-start align-items-sm-center align-items-lg-start"
+                      >
+                        <h2
+                          class="hero-headline fw-bold text-start text-sm-center text-lg-start display-4 display-sm-3 display-lg-2"
+                        >
+                          VALOR CAPITAL LTD
+                        </h2>
+                        <p
+                          class="hero-subhead text-start text-sm-center text-lg-start fs-5 fs-sm-4 fs-lg-3"
+                        >
+                          A trusted consultancy firm providing strategic
+                          management solutions tailored to businesses of all
+                          sizes.
+                        </p>
+                        <p
+                          class="carousel-disclosure d-none fs-6 fs-sm-5 fs-lg-4"
+                          id="disclosureStatic"
+                        >
+                          Incorporated in 2023, VALOR CAPITAL LTD operates as an
+                          active private limited company in the UK.
+                        </p>
+                      </div>
+                    </div>
+
+<!-- RIGHT CONTENT -->
+<div class="col-12 col-lg-6">
+  <div class="row g-2">
+    <!-- Contract 0 -->
+    <div class="col-12 col-md-6">
+      <div class="card bg-dark text-white shadow-sm h-100 p-2">
+        <div class="card-body p-2 d-flex flex-column">
+          <h6 class="fs-7 mb-2">📊 Will the US economy enter a recession by Q4 2025?</h6>
+          <p class="small mb-2">Open Interest: <span class="fw-bold">128,000</span></p>
+          <div class="mt-auto d-flex gap-2">
+            <span class="badge bg-success small">YES 3%</span>
+            <span class="badge bg-danger small">NO 97%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+<style>
+  .card {
+    border-radius: 0 !important; /* remove rounded corners */
+  }
+
+  .card * {
+    color: #fff !important;   /* all text white */
+    font-weight: normal !important; /* remove boldness everywhere */
+  }
+
+  .badge.bg-success {
+    background-color: #198754 !important;
+    color: #fff !important;
+    font-weight: bold !important; /* keep badges bold */
+  }
+
+  .badge.bg-danger {
+    background-color: #dc3545 !important;
+    color: #fff !important;
+    font-weight: bold !important; /* keep badges bold */
+  }
+</style>
+
+    <!-- Contract 1 -->
+    <div class="col-12 col-md-6">
+      <div class="card bg-dark text-white shadow-sm h-100 p-2">
+        <div class="card-body p-2 d-flex flex-column">
+          <h6 class="fs-7 mb-2">📊 Will US PCE Price Index exceed 2.5% in Oct 2025?</h6>
+          <p class="small mb-2">Open Interest: <span class="fw-bold">240</span></p>
+          <div class="mt-auto d-flex gap-2">
+            <span class="badge bg-success small">YES 47%</span>
+            <span class="badge bg-danger small">NO 53%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contract 2 -->
+    <div class="col-12 col-md-6">
+      <div class="card bg-dark text-white shadow-sm h-100 p-2">
+        <div class="card-body p-2 d-flex flex-column">
+          <h6 class="fs-7 mb-2">📊 Will Fed Funds Rate be above 3.875% at next FOMC?</h6>
+          <p class="small mb-2">Open Interest: <span class="fw-bold">107,000</span></p>
+          <div class="mt-auto d-flex gap-2">
+            <span class="badge bg-success small">YES 97%</span>
+            <span class="badge bg-danger small">NO 3%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contract 3 -->
+    <div class="col-12 col-md-6">
+      <div class="card bg-dark text-white shadow-sm h-100 p-2">
+        <div class="card-body p-2 d-flex flex-column">
+          <h6 class="fs-7 mb-2">📊 Will 2025 be the warmest year on record?</h6>
+          <p class="small mb-2">Open Interest: <span class="fw-bold">1,360</span></p>
+          <div class="mt-auto d-flex gap-2">
+            <span class="badge bg-success small">YES 22%</span>
+            <span class="badge bg-danger small">NO 78%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+                  <style>
+                    .card {
+                      min-height: 140px;
+                    }
+                    .card h6 {
+                      font-size: 0.85rem;
+                      line-height: 1.2;
+                    }
+                    .card p {
+                      font-size: 0.75rem;
+                    }
+                    .badge.small {
+                      font-size: 0.7rem;
+                      padding: 0.25em 0.5em;
+                    }
+                  </style>
+                </div>
+              </div>
+
+              <figure class="hero-background-img"></figure>
+            </div>
+            <div class="carousel-item carousel-eu-trade">
+              <div class="hero-img-wrapper">
+                <img
+                  class="drop-shadow-xl"
+                  src="../images/web/carousel/hero-banner-home-eu-trade-device.webp"
+                  alt="IBKR Mobile phone showing European assets"
+                  width="824"
+                  height="970"
+                />
+              </div>
+              <div class="container">
+                <div class="row align-items-xl-center">
+                  <div class="col-12 col-lg-7 col-xxl-8">
+                    <div class="hero-content">
+                      <h2 class="hero-headline text-center text-lg-start">
+                        Trade Europe, America, the World.
+                      </h2>
+                      <p class="hero-subhead text-center text-lg-start">
+                        Access top European markets in 15 currencies seamlessly
+                        from one IBKR account!
+                      </p>
+                      <div class="row justify-content-center mt-4 mt-lg-3">
+                        <div class="col-12 col-sm-6 col-md-5 col-lg-6">
+                          <ul class="paralist my-0">
+                            <li>Euronext (Amsterdam, Paris, Lisbon & more)</li>
+                            <li>London Stock Exchange</li>
+                            <li>NYSE</li>
+                            <li>NASDAQ</li>
+                            <li>Deutsche Börse (Frankfurt)</li>
+                          </ul>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-5 col-lg-6">
+                          <ul class="paralist my-0">
+                            <li>SIX Swiss Exchange</li>
+                            <li>Bolsa de Madrid</li>
+                            <li>
+                              Nasdaq Nordic (Stockholm, Helsinki & others)
+                            </li>
+                            <li>and many more...</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item carousel-currencies">
+              <div class="container">
+                <div class="row align-items-xl-center">
+                  <div class="col-12 col-lg-5 col-xl-7">
+                    <div class="hero-content text-center text-lg-start">
+                      <h2 class="hero-headline">
+                        One Account.
+                        <span class="d-none d-xl-inline"><br /></span>15
+                        Currencies.
+                        <span class="d-none d-xl-inline"><br /></span>Zero
+                        Limits.
+                      </h2>
+                      <p class="hero-subhead">
+                        Trade globally, convert at interbank rates, and lower
+                        your FX costs with IBKR!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item carousel-overnight-trading">
+              <div class="container">
+                <div class="row align-items-xl-center">
+                  <div class="col-12 col-lg-7 col-xl-6">
+                    <div class="hero-content">
+                      <h2 class="hero-headline">
+                        Trade US Stocks and ETFs, Index Futures and Options, and
+                        Bonds Around the Clock
+                      </h2>
+                      <p class="hero-subhead">
+                        React immediately to market-moving news and trade over
+                        10,000 US stocks and ETFs, US equity index futures and
+                        options, US Treasuries, global corporate bonds, European
+                        government bonds and UK gilts when it’s convenient for
+                        you.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END CAROUSEL -------------------------------------------------------------------------------------------------- -->
+      <script>
+        const staticDisclosure = document.getElementById("disclosureStatic");
+        const dynamicDisclosure = document.getElementById("disclosureDynamic");
+        async function fetchForecastData() {
+          const primaryUrl =
+            "https://www.interactivebrokers.com/response_handlers/fcastex/";
+          try {
+            console.log("Fetching data from API...");
+            const response = await fetch(primaryUrl);
+            if (!response.ok) {
+              throw new Error(`API returned ${response.status}`);
+            }
+            const data = await response.json();
+            console.log("API request successful");
+            console.log("Data received:", data);
+            // Populate data into existing HTML elements
+            populateForecastData(data);
+          } catch (error) {
+            console.error("Error fetching data:", error);
+            showStaticHideDynamic();
+            contractIllustration();
+          }
+        }
+        function populateForecastData(data) {
+          console.log("Populating forecast data:", data);
+          if (!data) {
+            console.error("Data is null or undefined");
+            showStaticHideDynamic();
+            contractIllustration();
+            return;
+          }
+          // Convert object to array and only include the 4 specified contracts
+          let dataArray = [];
+          if (typeof data === "object" && data !== null) {
+            // Always show "recession", "consumption", "usfed", "climate" contracts
+            const desiredContracts = [
+              "recession",
+              "consumption",
+              "usfed",
+              "climate",
+            ];
+            for (let key of desiredContracts) {
+              if (data[key]) {
+                dataArray.push(data[key]);
+              }
+            }
+            // Limit to 4 items
+            dataArray = dataArray.slice(0, 4);
+          } else {
+            console.error("Data is not an object:", typeof data, data);
+            showStaticHideDynamic();
+            contractIllustration();
+            return;
+          }
+          if (dataArray.length === 0) {
+            console.warn("No matching contracts found after filtering");
+            showStaticHideDynamic();
+            contractIllustration();
+            return;
+          }
+          console.log(`Processing ${dataArray.length} forecast items`);
+          // Check if ALL items have valid primary fields
+          const allItemsHavePrimaryFields = dataArray.every(
+            (item) =>
+              item.question !== undefined &&
+              item.question !== null &&
+              item.question !== "" &&
+              item.yesQuote !== undefined &&
+              item.yesQuote !== null &&
+              item.noQuote !== undefined &&
+              item.noQuote !== null
+          );
+          // Check if ALL items have valid fallback fields
+          const allItemsHaveFallbackFields = dataArray.every(
+            (item) =>
+              item.name !== undefined &&
+              item.name !== null &&
+              item.name !== "" &&
+              item.interest !== undefined &&
+              item.interest !== null &&
+              item.yes !== undefined &&
+              item.yes !== null &&
+              item.no !== undefined &&
+              item.no !== null
+          );
+          // Determine which field set to use
+          let useFieldSet = null;
+          if (allItemsHavePrimaryFields) {
+            useFieldSet = "primary";
+          } else if (allItemsHaveFallbackFields) {
+            useFieldSet = "fallback";
+          } else {
+            console.warn(
+              "Neither primary nor fallback fields are complete for all items"
+            );
+            showStaticHideDynamic();
+            contractIllustration();
+            return;
+          }
+          // Now populate all items using the same field set
+          for (let index = 0; index < dataArray.length; index++) {
+            const item = dataArray[index];
+            // Check if DOM elements exist for this index
+            const nameEl = document.getElementById(`name-${index}`);
+            const volumeEl = document.getElementById(`volume-${index}`);
+            const yesQuoteEl = document.getElementById(`yesQuote-${index}`);
+            const noQuoteEl = document.getElementById(`noQuote-${index}`);
+            const forecastItem = document.querySelector(
+              `[data-index="${index}"]`
+            );
+            if (
+              !nameEl ||
+              !volumeEl ||
+              !yesQuoteEl ||
+              !noQuoteEl ||
+              !forecastItem
+            ) {
+              console.warn(`Missing DOM elements for item ${index}`);
+              continue;
+            }
+            if (useFieldSet === "primary") {
+              // Use primary fields
+              nameEl.textContent = item.question;
+              // Use volume if available, otherwise use a default value
+              volumeEl.textContent =
+                item.volume !== undefined && item.volume !== null
+                  ? formatNumber(item.volume)
+                  : "-";
+              yesQuoteEl.textContent = formatQuote(item.yesQuote);
+              noQuoteEl.textContent = formatQuote(item.noQuote);
+              // Show dynamic disclosure since we have valid items
+              hideStaticShowDynamic();
+              contractIllustration();
+            } else {
+              // Use fallback fields
+              nameEl.textContent = item.name;
+              volumeEl.textContent = formatNumber(item.interest);
+              yesQuoteEl.textContent = formatQuote(item.yes / 100); // Convert percentage to decimal
+              noQuoteEl.textContent = formatQuote(item.no / 100); // Convert percentage to decimal
+              // Show static disclosure since we have fallback items
+              showStaticHideDynamic();
+              contractIllustration();
+            }
+          }
+        }
+        function showStaticHideDynamic() {
+          staticDisclosure.classList.remove("d-none");
+          dynamicDisclosure.classList.add("d-none");
+        }
+        function hideStaticShowDynamic() {
+          staticDisclosure.classList.add("d-none");
+          dynamicDisclosure.classList.remove("d-none");
+        }
+        function formatNumber(num) {
+          if (typeof num !== "number") return num;
+          return num.toLocaleString();
+        }
+        function formatQuote(quote) {
+          // If it's already a number, use it directly
+          if (typeof quote === "number") {
+            return `${(quote * 100).toFixed(0)}%`;
+          }
+          // If it's a string that can be converted to a number
+          else if (typeof quote === "string" && !isNaN(parseFloat(quote))) {
+            const numericValue = parseFloat(quote);
+            return `${(numericValue * 100).toFixed(0)}%`;
+          }
+          // If it's anything else, return as is
+          return quote;
+        }
+        function contractIllustration() {
+          const contractDiagram = document.querySelector(".contract-diagram");
+          let chartFixedHeight = contractDiagram.querySelector(
+            ".contract-diagram-content"
+          ).offsetHeight;
+          let chartFixedWidth = contractDiagram.querySelector(
+            ".contract-diagram-content"
+          ).offsetWidth;
+          let chartWidth = contractDiagram.querySelector(
+            ".contract-ratio-wrapper"
+          ).offsetWidth;
+          let chartRatio = chartFixedHeight / chartFixedWidth;
+          let chartAspectRatio = (100 * chartFixedHeight) / chartFixedWidth;
+          let chartScale = chartWidth / chartFixedWidth;
+          let targetSlide = document.querySelector(".carousel-forecastex");
+          let heroFrame = targetSlide.querySelector(".hero-img-wrapper > a");
+          let heroFrameWidth = heroFrame.offsetWidth;
+          heroFrame.style.setProperty(
+            "height",
+            heroFrameWidth * chartRatio + "px"
+          );
+          contractDiagram.style.setProperty("--chart-scale", chartScale);
+          contractDiagram.style.setProperty(
+            "--chart-aspect",
+            chartAspectRatio + "%"
+          );
+          contractDiagram.style.setProperty("opacity", "1");
+        }
+        // Initialize the page
+        document.addEventListener("DOMContentLoaded", () => {
+          // Load initial data
+          fetchForecastData();
+        });
+        window.addEventListener("resize", () => {
+          contractIllustration();
+        });
+        document
+          .getElementById("hero-carousel")
+          .addEventListener("slid.bs.carousel", function (e) {
+            contractIllustration();
+          });
+      </script>
+      <!-- DROP LINKS ---------------------------------------------------------------------------------------------------- -->
+      <section id="droplinks">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-3">
+              <div class="row align-items-center">
+                <div
+                  class="col-12 col-sm-2 offset-sm-1 col-md-2 offset-md-2 col-lg-12 offset-lg-0"
+                >
+                  <!-- col-xl-3 offset-xl-0 -->
+                  <a href="#sec-low-cost" target="_self" class="page-scroll">
+                    <div>
+                      <img
+                        src="../images/web/crd-low-costd9b0.svg?v122123"
+                        alt="Low Cost"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-8 col-md-7 col-lg-12">
+                  <!--col-xl-9-->
+                  <a href="#sec-low-cost" target="_self" class="page-scroll">
+                    <h5 class="mt-15">Professional Pricing</h5>
+
+                    <p>
+                      Low commissions, low margin rates, interest paid, and
+                      Stock Yield Enhancement.<sup
+                        class="disclosure-indicator"
+                        aria-details="d-rate-margin-lowest-3p"
+                        >1</sup
+                      ><sup>,</sup
+                      ><sup
+                        class="disclosure-indicator"
+                        aria-details="d-rate-interest"
+                        >4</sup
+                      >
+                    </p>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-3">
+              <div class="row align-items-center">
+                <div
+                  class="col-12 col-sm-2 offset-sm-1 col-md-2 offset-md-2 col-lg-12 offset-lg-0"
+                >
+                  <!-- col-xl-3 offset-xl-0 -->
+                  <a
+                    href="#sec-global-access"
+                    target="_self"
+                    class="page-scroll"
+                  >
+                    <div>
+                      <img
+                        src="../images/web/crd-global-accessd9b0.svg?v122123"
+                        alt="Global Access"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-8 col-md-7 col-lg-12">
+                  <!--col-xl-9-->
+                  <a
+                    href="#sec-global-access"
+                    target="_self"
+                    class="page-scroll"
+                  >
+                    <h5 class="mt-15">Global Access</h5>
+                    <p>
+                      Invest globally in stocks, options, futures, currencies,
+                      bonds and funds from a single unified platform.
+                    </p>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-3">
+              <div class="row align-items-center">
+                <div
+                  class="col-12 col-sm-2 offset-sm-1 col-md-2 offset-md-2 col-lg-12 offset-lg-0"
+                >
+                  <!-- col-xl-3 offset-xl-0 -->
+                  <a href="#sec-technology" target="_self" class="page-scroll">
+                    <div>
+                      <img
+                        src="../images/web/crd-technologyd9b0.svg?v122123"
+                        alt="Premier Technology"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-8 col-md-7 col-lg-12">
+                  <!--col-xl-9-->
+                  <a href="#sec-technology" target="_self" class="page-scroll">
+                    <h5 class="mt-15">Premier Technology</h5>
+                    <p>
+                      Valor's powerful suite of technology helps you optimize
+                      your trading speed and efficiency and perform
+                      sophisticated portfolio analysis.
+                    </p>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-3">
+              <div class="row align-items-center">
+                <div
+                  class="col-12 col-sm-2 offset-sm-1 col-md-2 offset-md-2 col-lg-12 offset-lg-0"
+                >
+                  <!-- col-xl-3 offset-xl-0 -->
+                  <a href="#sec-strength" target="_self" class="page-scroll">
+                    <div>
+                      <img
+                        src="../images/web/crd-vault-icon.svg"
+                        alt="Strength and Security"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-8 col-md-7 col-lg-12">
+                  <!--col-xl-9-->
+                  <a href="#sec-strength" target="_self" class="page-scroll">
+                    <h5 class="mt-15">Strength & Security</h5>
+                    <p>
+                      $18.5 billion in equity capital<span
+                        class="disclosure-indicator"
+                        aria-details="d-metrics-ibg-affiliates"
+                        >5</span
+                      >, automated risk controls, all assets marked to market
+                      daily, rated “A- Outlook Stable” by Standard &
+                      Poor's.<span
+                        class="disclosure-indicator"
+                        aria-details="d-metrics-ibkr-rating-3p"
+                        >6</span
+                      >
+                    </p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- AWARD SET ---------------------------------------------------------------------------------------------------- -->
+      <!-- AWARD WINNING PLATFORM AND SERVICES -->
+      <style type="text/css">
+           #award-winning {
+               padding-top: 50px;
+               padding-bottom: 20px;
+           }
+
+           #award-winning .awardset {
+               margin: 20px;
+           }
+           #award-winning .award-attribute {
+               text-align: center;
+               font-size: 0.875rem;
+           }
+           #award-winning .award-headline {
+               text-align: center;
+               padding-bottom: 2rem;
+           }
+           .award-content {
+               max-width: 200px;
+               height: 100%;
+               margin: auto;
+           }
+           /* Aspect Ratio */
+           .award-img-aspect {
+               width: 100%;
+               padding-top: 100%;
+               height: 0;
+               position:relative;
+           }
+           /* Aspect Ratio Container */
+           .award-img-aspect .award-img {
+               position: absolute;
+               height: 100% !important;
+               width: 100% !important;
+               top: 0;
+               left: 0;
+               display: flex;
+           }
+           .award-img-aspect .award-img img {
+               padding: 0 !important;
+               width: 100% !important;
+               height: 100% !important;
+               object-fit: contain;
+               object-position: center;
+               transform-origin: center;
+           }
+           #award-winning .btn-awards {
+               text-align: center;
+               margin: 20px;
+           }
+           /* MEDIA QUERY | EXTRA SMALL < 576px ---------------------------------------------------------------------------------------------------- */
+           @media (max-width:575.98px) {
+               #award-winning .award-attribute {
+                   text-align: center;
+                   font-size: 1rem;
+               }
+           }
+           /* MEDIA QUERY | SMALL > 576px ---------------------------------------------------------------------------------------------------- */
+           @media (min-width:576px) and (max-width:767.98px) {
+               #award-winning .award-attribute {
+                   text-align: center;
+                   font-size: 1rem;
+               }
+           }
+           /* MEDIA QUERY | MEDIUM > 768px ---------------------------------------------------------------------------------------------------- */
+           @media (min-width:768px) and (max-width:991.98px) {
+               #award-winning .awardset {
+                   margin: 0;
+               }
+               #award-winning .award-attribute {
+                   text-align: center;
+                   font-size: 1rem;
+               }
+           }
+           /* MEDIA QUERY | LARGE > 992px ---------------------------------------------------------------------------------------------------- */
+           @media (min-width:992px) {
+                   margin-top: 0;
+                   margin-end: 25px;
+                   -webkit-margin-end: 25px;
+                   -moz-margin-end: 25px;
+                   margin-bottom: 0;
+                   margin-start: 0;
+                   -webkit-margin-start: 0;
+                   -moz-margin-start: 0;
+               }
+               #award-winning .awardset:last-child {
+                   margin:0;
+               }
+        }
+      </style>
+      <section id="award-winning">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 text-center">
+              <h2 class="award-headline">Award Winning Platform & Services</h2>
+            </div>
+          </div>
+          <div class="row justify-content-center align-items-stretch">
+            <div class="col-12 col-md-4 col-lg-2 awardset order-1 order-lg-0">
+              <div class="award-content">
+                <div class="award-img-aspect">
+                  <div class="award-img">
+                    <img
+                      style="scale: 0.9"
+                      class="award-sb"
+                      loading="lazy"
+                      src="../images/web/awards-2025-stockbrokers-professionaltrading.svg"
+                      alt="StockBrokers.com 2025 rated #1 for Professional Trading"
+                    />
+                  </div>
+                </div>
+                <p class="award-attribute">
+                  #1 Professional Trading
+                  <span class="d-none d-md-inline"><br /></span>#1 International
+                  Trading
+                </p>
+              </div>
+            </div>
+            <div class="col-12 col-md-4 col-lg-2 awardset order-2 order-lg-1">
+              <div class="award-content">
+                <div class="award-img-aspect">
+                  <div class="award-img">
+                    <img
+                      style="scale: 0.97"
+                      class="award-bz"
+                      loading="lazy"
+                      src="../images/web/awards-2024-nerdwallet-best-online-broker-advanced-traders.png"
+                      alt="Nerdwallet Award"
+                    />
+                  </div>
+                </div>
+                <p class="award-attribute">
+                  Best Online Broker<span class="d-inline d-md-none">,</span>
+                  <span class="d-none d-md-inline"><br /></span> for Advanced
+                  Traders
+                </p>
+              </div>
+            </div>
+            <div class="col-12 col-md-4 col-lg-2 awardset order-0 order-lg-2">
+              <div class="award-content">
+                <div class="award-img-aspect">
+                  <div class="award-img">
+                    <img
+                      style="scale: 0.95"
+                      class="award-br"
+                      loading="lazy"
+                      src="../images/web/award-barrons-2023-best-online-broker.png"
+                      alt="Interactive Brokers was Rated #1 - Best Online Broker ... Again - 2023 by Barron's"
+                    />
+                  </div>
+                </div>
+                <p class="award-attribute">
+                  #1 Best Online Broker
+                  <span class="d-none d-md-inline"><br /></span>5 out of 5 stars
+                </p>
+              </div>
+            </div>
+            <div class="col-12 col-md-4 col-lg-2 awardset order-3">
+              <div class="award-content">
+                <div class="award-img-aspect">
+                  <div class="award-img">
+                    <img
+                      class="award-iv"
+                      loading="lazy"
+                      src="../images/web/award-2024-investopedia-best-for-advanced-traders.png"
+                      alt="Investopedia 2024 Award - Best for Advanced Traders"
+                    />
+                  </div>
+                </div>
+                <p class="award-attribute">
+                  Best for
+                  <span class="d-none d-md-inline"><br /> </span>Advanced
+                  Traders
+                </p>
+              </div>
+            </div>
+            <div class="col-12 col-md-4 col-lg-2 awardset order-4">
+              <div class="award-content">
+                <div class="award-img-aspect">
+                  <div class="award-img">
+                    <img
+                      style="scale: 0.85"
+                      class="award-bc d-light-none"
+                      loading="lazy"
+                      src="../images/web/award-2025-brokerchooser_d.png"
+                      alt="BrokerChooser 2025 Award - Best Online Broker"
+                    />
+                    <img
+                      style="scale: 0.85"
+                      class="award-bc d-dark-none"
+                      loading="lazy"
+                      src="../images/web/award-2025-brokerchooser.png"
+                      alt="BrokerChooser 2025 Award - Best Online Broker"
+                    />
+                  </div>
+                </div>
+                <p class="award-attribute">Best Online Broker</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- LOW COST ---------------------------------------------------------------------------------------------------- -->
+      <span class="id-drop"><span id="sec-low-cost"></span></span>
+      <section id="low-cost">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-12 col-lg-5">
+              <picture>
+                <source
+                  media="(min-width:1200px)"
+                  srcset="
+                    https://www.interactivebrokers.ie/images/web/home-low-cost-xl.webp?v=70dcd7aada594af2ea68e2c6120db810 1200w,
+                    https://www.interactivebrokers.ie/images/web/home-low-cost-xl.jpg?v=70dcd7aada594af2ea68e2c6120db810  1200w
+                  "
+                />
+                <source
+                  media="(min-width:992px)"
+                  srcset="
+                    https://www.interactivebrokers.ie/images/web/home-low-cost-lg.webp?v=70dcd7aada594af2ea68e2c6120db810 1199w,
+                    https://www.interactivebrokers.ie/images/web/home-low-cost-lg.jpg?v=70dcd7aada594af2ea68e2c6120db810  1199w
+                  "
+                />
+                <source
+                  media="(min-width:768px)"
+                  srcset="
+                    https://www.interactivebrokers.ie/images/web/home-low-cost-md.webp?v=70dcd7aada594af2ea68e2c6120db810 991w,
+                    https://www.interactivebrokers.ie/images/web/home-low-cost-md.jpg?v=70dcd7aada594af2ea68e2c6120db810  991w
+                  "
+                />
+                <source
+                  media="(min-width:576px)"
+                  srcset="
+                    https://www.interactivebrokers.ie/images/web/home-low-cost-sm.webp?v=70dcd7aada594af2ea68e2c6120db810 767w,
+                    https://www.interactivebrokers.ie/images/web/home-low-cost-sm.jpg?v=70dcd7aada594af2ea68e2c6120db810  767w
+                  "
+                />
+                <source
+                  srcset="
+                    https://www.interactivebrokers.ie/images/web/home-low-cost-xl.webp?v=70dcd7aada594af2ea68e2c6120db810 575w
+                  "
+                />
+                <img
+                  src="https://www.interactivebrokers.ie/images/web/home-low-cost-xl.webp?v=70dcd7aada594af2ea68e2c6120db810"
+                  alt="Low Cost"
+                  loading="lazy"
+                  width="1600"
+                  height="1200"
+                />
+              </picture>
+            </div>
+            <div class="col-12 col-lg-6 offset-lg-1">
+              <h2>Why Choose VALOR CAPITAL LTD</h2>
+              <ul class="checklist">
+                <li>
+                  Expert management consultancy services tailored to drive
+                  business growth and efficiency.
+                </li>
+                <li>
+                  Strategic solutions designed to maximize long-term value and
+                  minimize operational challenges.
+                </li>
+                <li>
+                  Trusted guidance backed by industry knowledge and innovative
+                  approaches.
+                </li>
+                <li>
+                  Client-focused service ensuring measurable results and
+                  sustainable success.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- GLOBAL ACCESS ------------------------------------------------------------------------------------------------------ -->
+      <span class="id-drop"><span id="sec-global-access"></span></span>
+      <!-- GLOBAL ACCESS ---------------------------------------------------------------------------------------------------- -->
+      <script
+        type="text/javascript"
+        src="../scripts/common/js/map-script.js"
+      ></script>
+      <link
+        rel="stylesheet"
+        type="text/css"
+        media="all"
+        href="../css/ibkr/map.css"
+      />
+      <section id="global-access" class="mt-40">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-4 margin-bottom-20">
+              <h2>Discover a World of Opportunities</h2>
+              <br />
+              <p>
+                Invest globally in stocks, options, futures, currencies, bonds
+                and funds from a single unified platform. Fund your account in
+                multiple currencies and trade assets denominated in multiple
+                currencies. Access market data 24 hours a day and six days a
+                week.
+              </p>
+
+              <div class="totals">
+                <div class="row">
+                  <div class="col">
+                    <h2>160</h2>
+                    <p class="text-small">Markets</p>
+                  </div>
+                  <div class="col">
+                    <h2>36</h2>
+                    <p class="text-small">Countries</p>
+                  </div>
+                  <div class="col">
+                    <h2>28</h2>
+                    <p class="text-small">
+                      Currencies<span
+                        class="disclosure-indicator"
+                        aria-details="d-metrics-ibkr-currencies"
+                        >*</span
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <br />
+              <p class="text-sm">
+                Graphic is for illustrative purposes only and should not be
+                relied upon for investment decisions.
+              </p>
+            </div>
+            <div class="col-12 col-lg-8 map-wrapper">
+              <!-- MAP OF EXCHANGES BEGIN ----------------------------------------------------------------------------------------------------  -->
+              <div id="places-map">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="exch-map">
+                        <!--animate-fade-in-->
+                        <img
+                          class=""
+                          data-src="/images/web/map-solo-2245664933.png"
+                          alt="Map Locations"
+                          src="https://www.interactivebrokers.ie/images/web/map-solo-2245664933.png"
+                        />
+                        <!-- width="800" height="452" -->
+                        <div class="map-pins">
+                          <span
+                            class="marker-nyse tooltip map-location-marker"
+                            data-map-title="NYSE"
+                            data-map-subtitle="New York Stock Exchange"
+                            data-map-hours="Mon - Fri: 9:30 - 16:00 EST"
+                            data-map-hours2=""
+                            data-map-link="0"
+                          ></span>
+                          <span
+                            class="marker-cboe tooltip map-location-marker"
+                            data-map-title="Cboe"
+                            data-map-subtitle="Chicago Board Options Exchange"
+                            data-map-hours="Mon - Fri: 8:30 - 15:15 EST"
+                            data-map-hours2=""
+                            data-map-link="0"
+                          ></span>
+                          <span
+                            class="marker-tsx tooltip map-location-marker"
+                            data-map-title="TSX"
+                            data-map-subtitle="Toronto Stock Exchange"
+                            data-map-hours="Mon - Fri: 9:30 - 16:00 EST"
+                            data-map-hours2=""
+                            data-map-link="0"
+                          ></span>
+                          <span
+                            class="marker-bmv tooltip map-location-marker"
+                            data-map-title="BMV"
+                            data-map-subtitle="Bolsa Mexicana de Valores"
+                            data-map-hours="Mon - Fri: 8:30 - 15:00 CST"
+                            data-map-hours2=""
+                            data-map-link="0"
+                          ></span>
+                          <span
+                            class="marker-lse tooltip map-location-marker"
+                            data-map-title="LSE"
+                            data-map-subtitle="London Stock Exchange"
+                            data-map-hours="Mon - Fri: 8:00 - 16:50 GMT"
+                            data-map-hours2=""
+                            data-map-link="90"
+                          ></span>
+                          <span
+                            class="marker-xmad tooltip map-location-marker"
+                            data-map-title="XMAD"
+                            data-map-subtitle="Bolsa de Madrid"
+                            data-map-hours="Mon - Fri: 9:00 - 17:35 CET"
+                            data-map-hours2=""
+                            data-map-link="90"
+                          ></span>
+                          <span
+                            class="marker-fra tooltip map-location-marker"
+                            data-map-title="FRA"
+                            data-map-subtitle="Frankfurt Stock Exchange"
+                            data-map-hours="Mon - Fri: 8:00 - 20:00 CET"
+                            data-map-hours2=""
+                            data-map-link="90"
+                          ></span>
+                          <span
+                            class="marker-six tooltip map-location-marker"
+                            data-map-title="SIX"
+                            data-map-subtitle="Swiss Exchange"
+                            data-map-hours="Mon - Fri: 9:00 - 17:32 CET"
+                            data-map-hours2=""
+                            data-map-link="90"
+                          ></span>
+                          <span
+                            class="marker-bse tooltip map-location-marker"
+                            data-map-title="BSE"
+                            data-map-subtitle="Budapest Stock Exchange"
+                            data-map-hours="Mon - Fri: 9:00 - 17:20 CET"
+                            data-map-hours2=""
+                            data-map-link="90"
+                          ></span>
+                          <span
+                            class="marker-tase tooltip map-location-marker-closed"
+                            data-map-title="TASE"
+                            data-map-subtitle="Tel Aviv Stock Exchange"
+                            data-map-hours="Sun 9:30 - 16:25 IST"
+                            data-map-hours2="Mon - Thu 9:30 - 17:15 IST"
+                            data-map-link="90"
+                          ></span>
+                          <span
+                            class="map-location-marker-closed marker-nse tooltip"
+                            data-map-title="NSE"
+                            data-map-subtitle="National Stock Exchange of India"
+                            data-map-hours="Mon - Fri: 9:15-15:30 IST"
+                            data-map-hours2=""
+                            data-map-link="190"
+                          ></span>
+                          <span
+                            class="map-location-marker-closed marker-sgx tooltip"
+                            data-map-title="SGX"
+                            data-map-subtitle="Singapore Stock Exchange"
+                            data-map-hours="Mon - Fri: 9:00 - 17:00 SGT"
+                            data-map-hours2=""
+                            data-map-link="190"
+                          ></span>
+                          <span
+                            class="map-location-marker-closed marker-ksc tooltip"
+                            data-map-title="KSC"
+                            data-map-subtitle="Korea Stock Exchange"
+                            data-map-hours="Mon - Fri: 9:00 - 15:45 KST"
+                            data-map-hours2=""
+                            data-map-link="190"
+                          ></span>
+                          <span
+                            class="map-location-marker-closed marker-tse tooltip"
+                            data-map-title="TSE"
+                            data-map-subtitle="Tokyo Stock Exchange"
+                            data-map-hours="Mon - Fri: 9:00 - 11:30 and 12:30 - 15:00 JST"
+                            data-map-hours2="(Lunch break 11:30 - 12:30 JST)"
+                            data-map-link="190"
+                          ></span>
+                          <span
+                            class="map-location-marker-closed marker-asx tooltip"
+                            data-map-title="ASX"
+                            data-map-subtitle="Australia Stock Exchange"
+                            data-map-hours="Mon - Fri: 10:00 - 16:00 AEDT"
+                            data-map-hours2=""
+                            data-map-link="190"
+                          ></span>
+                          <span
+                            class="map-location-marker-closed marker-hkse tooltip"
+                            data-map-title="HKSE"
+                            data-map-subtitle="Hong Kong Stock Exchange"
+                            data-map-hours="Mon - Fri: 9:30 - 12:00 and 13:00 - 16:00 HKT"
+                            data-map-hours2="(Lunch break 12:00 - 13:00 HKT)"
+                            data-map-link="190"
+                          ></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mt-20">
+                    <div class="col">
+                      <div class="map-message mt-20">
+                        <span id="local-time">Local Time:</span>
+                        <span id="open-label">Open</span>
+                        <span id="closed-label">Closed</span>
+                        <p class="openCloseMessage">
+                          NYSE : <span class="open-color">Open</span> | LSE :
+                          <span class="open-color">Open</span> | HKSE :
+                          <span class="closed-color">Closed</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- MAP OF EXCHANGES END ----------------------------------------------------------------------------------------------------  -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- PREMIER TECHNOLOGY ------------------------------------------------------------------------------------------------- -->
+      <span class="id-drop"><span id="sec-technology"></span></span>
+      <span class="drop-link"><span id="trading-technology"></span></span>
+      <section id="trading-technology-section">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-9">
+              <figure>
+                <picture>
+                  <!-- Desktop (min-width: 768px and up) -->
+                  <source media="(min-width:768px)" srcset="1.png" />
+                  <!-- Mobile (below 768px) -->
+                  <source srcset="2.png" />
+                  <img
+                    class="drop-shadow-xl"
+                    src="1.png"
+                    alt="Valor Capital Interface"
+                    loading="lazy"
+                    width="1637"
+                    height="917"
+                  />
+                </picture>
+              </figure>
+            </div>
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="col-12 col-lg-11">
+              <h2 class="text-center">
+                Powerful Trading Platforms To Help You Succeed
+              </h2>
+            </div>
+          </div>
+          <div class="row justify-content-center mt-20">
+            <div class="col-12 col-lg-5">
+              <div class="mb-20">
+                <p>
+                  Award winning platforms for every investor from beginner to
+                  advanced on mobile, web and desktop.
+                </p>
+              </div>
+              <div class="mb-20">
+                <p>
+                  Discover new investment opportunities with over 200 free and
+                  premium research, market commentary and news providers.
+                </p>
+              </div>
+              <div class="mb-20">
+                <p>
+                  Spot market opportunities, analyze results, manage your
+                  account and make better decisions with our free trading tools.
+                </p>
+              </div>
+            </div>
+            <div class="col-12 col-lg-5 offset-lg-1">
+              <div class="mb-20">
+                <p>
+                  100+ order types - from limit orders to complex algorithmic
+                  trading - help you execute any trading strategy.
+                </p>
+              </div>
+              <div class="mb-20">
+                <p>
+                  Real-time trade confirmations, margin details, transaction
+                  cost analysis, sophisticated portfolio analysis and more.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- BROKER SECURITY ---------------------------------------------------------------------------------------------------- -->
+      <span class="id-drop"><span id="sec-strength"></span></span>
+      <!-- BROKER SECURITY ---------------------------------------------------------------------------------------------------- -->
+      <span class="id-drop"><span id="broker-security"></span></span>
+      <section id="broker-security">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-12 col-lg-6 margin-bottom-20">
+              <h2>A Broker You Can Trust</h2>
+              <p>
+                When placing your money with a broker, you need to make sure
+                your broker is secure and can endure through good and bad times
+                in the broader financial markets. Our strong capital position,
+                conservative balance sheet and automated risk controls are
+                designed to protect IBKR from major market events that can
+                threaten the stability of financial institutions.
+              </p>
+              <div class="totals">
+                <div class="row">
+                  <div class="col-6 col-sm-4">
+                    <p class="fs-2 fw-300 mt-20 mb-0">VALOR</p>
+                    <p class="text-small">Nasdaq Listed</p>
+                  </div>
+                  <div class="col-6 col-sm-4">
+                    <p class="fs-2 fw-300 mt-20 mb-0">$18.5B</p>
+                    <p class="text-small">
+                      Equity Capital<span
+                        class="disclosure-indicator"
+                        aria-details="d-metrics-ibg-affiliates"
+                        >*</span
+                      >
+                    </p>
+                  </div>
+                  <div class="col-6 col-sm-4">
+                    <p class="fs-2 fw-300 mt-20 mb-0">74%</p>
+                    <p class="text-small">
+                      Privately Held<span
+                        class="disclosure-indicator"
+                        aria-details="d-metrics-ibg-affiliates"
+                        >*</span
+                      >
+                    </p>
+                  </div>
+                  <div class="col-6 col-sm-4">
+                    <p class="fs-2 fw-300 mt-20 mb-0">$13.3B</p>
+                    <p class="text-small">
+                      Excess Regulatory Capital<span
+                        class="disclosure-indicator"
+                        aria-details="d-metrics-ibg-affiliates"
+                        >*</span
+                      >
+                    </p>
+                  </div>
+                  <div class="col-6 col-sm-4">
+                    <p class="fs-2 fw-300 mt-20 mb-0">3.87M</p>
+                    <p class="text-small">
+                      Client Accounts<span
+                        class="disclosure-indicator"
+                        aria-details="d-metrics-ibg-affiliates"
+                        >*</span
+                      >
+                    </p>
+                  </div>
+                  <div class="col-6 col-sm-4">
+                    <p class="fs-2 fw-300 mt-20 mb-0">3.55M</p>
+                    <p class="text-small">
+                      Daily Avg Revenue Trades<span
+                        class="disclosure-indicator"
+                        aria-details="d-metrics-ibg-affiliates"
+                        >*</span
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <br />
+            </div>
+            <div class="col-12 col-lg-5 offset-lg-1">
+              <picture>
+                <source
+                  media="(min-width:1200px)"
+                  srcset="
+                    https://www.interactivebrokers.ie/images/web/home-security-xl.webp?v=16bc5109771a1fe5f202675551139124 1200w,
+                    https://www.interactivebrokers.ie/images/web/home-security-xl.jpg?v=16bc5109771a1fe5f202675551139124  1200w
+                  "
+                />
+                <source
+                  media="(min-width:992px)"
+                  srcset="
+                    https://www.interactivebrokers.ie/images/web/home-security-lg.webp?v=16bc5109771a1fe5f202675551139124 1199w,
+                    https://www.interactivebrokers.ie/images/web/home-security-lg.jpg?v=16bc5109771a1fe5f202675551139124  1199w
+                  "
+                />
+                <source
+                  media="(min-width:768px)"
+                  srcset="
+                    https://www.interactivebrokers.ie/images/web/home-security-md.webp?v=16bc5109771a1fe5f202675551139124 991w,
+                    https://www.interactivebrokers.ie/images/web/home-security-md.jpg?v=16bc5109771a1fe5f202675551139124  991w
+                  "
+                />
+                <source
+                  media="(min-width:576px)"
+                  srcset="
+                    https://www.interactivebrokers.ie/images/web/home-security-sm.webp?v=16bc5109771a1fe5f202675551139124 767w,
+                    https://www.interactivebrokers.ie/images/web/home-security-sm.jpg?v=16bc5109771a1fe5f202675551139124  767w
+                  "
+                />
+                <source
+                  srcset="
+                    https://www.interactivebrokers.ie/images/web/home-security-md.webp?v=16bc5109771a1fe5f202675551139124 575w,
+                    https://www.interactivebrokers.ie/images/web/home-security.jpg?v=16bc5109771a1fe5f202675551139124     575w
+                  "
+                />
+                <img
+                  loading="lazy"
+                  src="https://www.interactivebrokers.ie/images/web/home-security-md.webp?v=16bc5109771a1fe5f202675551139124"
+                  alt="Secure metal vault door"
+                  width="1600"
+                  height="1067"
+                />
+              </picture>
+            </div>
+          </div>
+          <p class="disclosure-item-inline text-sm text-dark-gray pl-3 mt-3">
+            Interactive Brokers Group and its affiliates. For additional
+            information view our
+            <a
+              href="https://investors.interactivebrokers.com/ir/main.php"
+              target="_blank"
+              rel="noopener"
+              >Investors Relations - Earnings Release</a
+            >
+            section.
+          </p>
+        </div>
+      </section>
+      <!-- ACCOUNT TYPES and THREE STEPS ---------------------------------------------------------------------------------- -->
+      <style type="text/css">
+        /* ACCOUNT TYPES ---------------------------------------------------------------------------------------------------- */
+        #account-types h2 {
+          text-align: center;
+          margin-top: 20px;
+          margin-bottom: 5px;
+          font-weight: 300;
+        }
+        #account-types p {
+          font-size: 0.875rem;
+          text-align: center;
+        }
+        #account-types p a,
+        #account-types p a:link,
+        #account-types p a:visited,
+        #account-types p a:hover,
+        #account-types p a:active,
+        #account-types p a:focus {
+          color: var(--dark-70);
+          text-decoration: none;
+        }
+        #account-types p a:hover {
+          color: var(--primary);
+        }
+        #account-types p a img {
+          height: 60px;
+          display: block;
+          margin: 20px auto;
+        }
+        #account-types div.inst-btn {
+          border-left: 1px solid var(--border-color);
+        }
+        [dir="rtl"] #account-types div.inst-btn {
+          border-left: none;
+          border-right: 1px solid var(--border-color);
+        }
+        /* THREE STEPS ---------------------------------------------------------------------------------------------------- */
+        #three-steps.lazy {
+          background-image: none;
+          background-color: #0c2247;
+        }
+        #three-steps {
+          background-image: url("../images/web/candlestick-bkgd.jpg");
+          background-size: cover;
+          background-position: 50%;
+          min-height: 330px;
+        }
+        #three-steps h3,
+        #three-steps h4,
+        #three-steps h5,
+        #three-steps p {
+          color: var(--white);
+          text-align: center;
+          font-weight: 300;
+        }
+        #three-steps h5 {
+          font-weight: 600;
+          text-transform: uppercase;
+        }
+      </style>
+      <!-- DISCLOSURE ---------------------------------------------------------------------------------------------------- -->
+      <section class="disclosure" id="disclosure">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <ol class="disclosure-list-page">
+                <li>
+                  VALOR CAPITAL LTD is a registered private limited company
+                  providing professional consultancy services.
+                </li>
+                <li>
+                  All information presented is for general business purposes and
+                  should not be considered financial advice.
+                </li>
+                <li>
+                  Our consultancy activities focus on management strategy and
+                  operational efficiency, not financial management.
+                </li>
+                <li>
+                  Any references to performance or results are illustrative and
+                  do not guarantee future success.
+                </li>
+                <li>
+                  Clients are responsible for making their own informed
+                  decisions before implementing recommendations.
+                </li>
+                <li>
+                  VALOR CAPITAL LTD complies with applicable UK regulations and
+                  operates under its registered company status.
+                </li>
+                <li>
+                  Services may vary depending on industry sector, company size,
+                  and regional requirements.
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DISCLOSURE ADJUSTMENT -->
+      <style>
+        .disclosure-indicator.sup {
+          font-weight: var(--fw-400);
+          font-size: 0.625rem;
+          color: inherit;
+          vertical-align: super;
+          inset-block-start: -0.5em;
+          position: relative;
+          inset-inline-start: 2px;
+          line-height: 0;
+        }
+      </style>
+      <script>
+        $("span.disclosure-indicator").each(function () {
+          $(this).addClass("sup");
+        });
+
+        $(".disclosure-item-inline, .disclosure-list-inline").each(function () {
+          $(this).css("display", "none");
+        });
+        $(".disclosure-list-page > li").each(function (index) {
+          $(this).attr("data-sequence", index + 1);
+        });
+        $(".disclosure-indicator").each(function () {
+          var ariaDetails = $(this).attr("aria-details");
+          var disclosureId = $("#" + ariaDetails);
+          var disclosureCount = $(disclosureId).attr("data-sequence");
+          $(this).empty().append(disclosureCount);
+        });
+      </script>
+    </div>
+    <!-- CONTENTS END ---------------------------------------------------------------------------------------------------- -->
+<!-- FOOTER START  -->
+<footer class="footer noprint" id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <p>
+          © 2026 VALOR CAPITAL LTD. All rights reserved. VALOR CAPITAL LTD
+          is a private limited company incorporated in the UK, providing
+          management consultancy services.
+        </p>
+        <p>
+          VALOR CAPITAL LTD operates under UK company regulations and is
+          committed to delivering professional and ethical consultancy
+          services.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-disclosure-links" id="footerDisclosureLinks">
+      <div class="row">
+        <div class="col">
+          <ul>
+            <li>
+              <a href="accounts/legalDocuments/anti-fraud-notice.html" target="_self">
+                Anti-Fraud Notice
+              </a>
+            </li>
+            <li>
+              <a href="general/warnings-on-frauds-and-scams.html" target="_self">
+                Warning on Frauds and Scams
+              </a>
+            </li>
+            <li>
+              <a href="accounts/legalDocuments/accessibility-policy.html" target="_self">
+                Accessibility Statement
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+<!-- LICENSE INFORMATION START -->
+<div class="license-info" style="
+  border-top: 1px solid #ccc;
+  margin-top: 25px;
+  padding-top: 20px;
+  font-size: 0.95rem;
+  color: #000;
+  line-height: 1.6;
+">
+  <h6 style="font-weight: 600; margin-bottom: 10px; font-size: 1rem; color: #000;">
+    FSCA Authorization
+  </h6>
+
+  <p>
+    VALOR CAPITAL LTD is listed among the officially authorised 
+    <strong>Crypto Asset Service Providers (CASPs)</strong> under the 
+    <em>Financial Advisory and Intermediary Services (FAIS) Act, No. 37 of 2002</em>.
+  </p>
+
+  <p style="margin-top: 15px; font-size: 0.9rem; color: #222;">
+    <strong>Disclaimer:</strong> VALOR CAPITAL LTD does not accept any responsibility or liability 
+    for financial losses, damages, or actions taken based on the information, opinions, or materials 
+    provided on this website or through any communication. Users acknowledge that all investment 
+    and business activities carry inherent risk, and VALOR CAPITAL LTD shall not be held accountable 
+    for any direct or indirect consequences arising from such decisions.
+  </p>
+</div>
+<!-- LICENSE INFORMATION END -->
+    <div class="footer-entities" id="footerEntities">
+      <div class="row">
+        <div class="col">
+          <div class="footer-entity">
+            <p class="entity-name">
+              <a href="home.html" target="_self">VALOR CAPITAL LTD</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- FOOTER END  -->
+
+    <!-- MODAL START | ABOUT IB GROUP ---------------------------------------------------------------------------------------------------- -->
+    <div
+      class="modal fade"
+      id="modalAlert"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="modalAboutIBGroup"
+    >
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content modal-primary">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+            <h4 class="modal-title">
+              <i class="fas fa-exclamation-circle"></i> Notice
+            </h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col">
+                <p class="message">message</p>
+                <!-- You will be brought to the website of our affiliate-->
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="row">
+              <div class="col-12 col-sm-3 order-2 order-sm-1">
+                <div class="panel-btn-left">
+                  <a
+                    href="javascript:void(0);"
+                    data-bs-dismiss="modal"
+                    class="btn btn-secondary"
+                    >Stay</a
+                  >
+                </div>
+              </div>
+              <div class="col-12 col-sm-9 order-1 order-sm-2">
+                <div class="panel-btn-right goto">
+                  <a
+                    href="javascript:void(0);"
+                    onclick=""
+                    data-bs-dismiss="modal"
+                    class="btn btn-primary"
+                    >Go</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#modalAlert").on("show.bs.modal", function (event) {
+          var button = $(event.relatedTarget); // Button that triggered the modal
+          let myMessage = button.data("mymessage");
+          /*let myLink = "location.href='"+button.data('mytargetlink')+"'"; */
+          let myLink = "window.open('" + button.data("mytargetlink") + "')";
+          // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+          // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+          var modal = $(this);
+          modal.find(".modal-body .message").text(myMessage);
+          modal.find(".modal-footer .goto a").attr("onclick", myLink);
+        });
+      });
+    </script>
+    <script>
+      if (window.location.href.includes("conf=am")) {
+        document.querySelector("#ibkr-header").style.display = "none";
+        document.querySelector("#footer").style.display = "none";
+      }
+    </script>
+    <!-- SCRIPTS FOOTER ---------------------------------------------------------------------------------------------------- -->
+    <script
+      type="text/javascript"
+      src="../scripts/common/js/zeynep-2.2.0/zeynep.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../scripts/common/js/lazyload/lazyload.min.js"
+    ></script>
+    <script type="text/javascript" src="../search/conversions.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        // GATHER HEIGHT OF HEADER
+        var headerHeight = $("div#ibkr-header").outerHeight();
+        // GATHER HEIGHT OF DISCLOSURES
+        var disclosureHeight = $(
+          "section#UKProductDisclosure, section#TurbosDisclosure"
+        ).outerHeight();
+        $("section#UKProductDisclosure").css("top", headerHeight);
+        $("section#TurbosDisclosure").css("top", headerHeight);
+        // SET CONTENTS DIV PADDING TOP
+        $("div#contents").css("padding-top", disclosureHeight);
+        // OVERRIDE TOP OF DISCLOSURE AND PADDING-TOP OF CONTENTS ON WINDOW RESIZE
+        $(window).resize(function () {
+          var headerHeight = $("div#ibkr-header").outerHeight();
+          var disclosureHeight = $(
+            "section#UKProductDisclosure, section#TurbosDisclosure"
+          ).outerHeight();
+          var headerHeightDelta = headerHeight - disclosureHeight;
+          $("section#UKProductDisclosure").css(
+            "top",
+            disclosureHeight + headerHeightDelta
+          );
+          $("section#TurbosDisclosure").css(
+            "top",
+            disclosureHeight + headerHeightDelta
+          );
+          $("div#contents").css("padding-top", disclosureHeight);
+        });
+
+        // OVERRIDE TOP OF DISCLOSURE AND PADDING-TOP OF CONTENTS ON BANNER CLOSE
+        $("#bannerRegionSelector a.btn-close").click(function () {
+          setTimeout(function () {
+            var headerHeight = $("div#ibkr-header").outerHeight();
+            $("section#UKProductDisclosure").css("top", headerHeight);
+            $("section#TurbosDisclosure").css("top", headerHeight);
+            $("div#contents").css("padding-top", disclosureHeight);
+          }, 500);
+        });
+        // MOBILE MENU
+        $(function () {
+          // Initilize mobile menu
+          var zeynep = $(".menu-mobile").zeynep({
+            opened: function () {
+              console.log("the side menu opened");
+            },
+            closed: function () {
+              console.log("the side menu closed");
+            },
+          });
+          // Dynamically bind closing event
+          zeynep.on("closing", function () {
+            console.log("this event is dynamically binded");
+          });
+          // Mobile menu close on overlay click
+          $(".website-overlay").on("click", function () {
+            zeynep.close();
+          });
+          // Mobile menu close on button click
+          $(".btn-close").on("click", function () {
+            zeynep.close();
+          });
+          // Mobile menu open on navbar-toggler click
+          $(".navbar-toggler").on("click", function () {
+            zeynep.open();
+          });
+        });
+      });
+    </script>
+    <!-- STYLES FOOTER ---------------------------------------------------------------------------------------------------- -->
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="../fonts/fontawesome-6.4.2/webfonts/fa-brands-400.woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="../fonts/fontawesome-6.4.2/webfonts/fa-regular-400.woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="../fonts/fontawesome-6.4.2/webfonts/fa-solid-900.woff2"
+      crossorigin
+    />
+    <link rel="preload" as="style" href="../css/ibkr/website-print.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="print"
+      href="../css/ibkr/website-print.min.css"
+    />
+    <style type="text/css">
+      @import url("../css/fontawesome-6.4.2/all.min.css") layer(vendors);
+      @import url("../css/animate-3.7.2/animate.min.css") layer(vendors);
+      @import url("../css/bootstrap-switch-3.3.2/bootstrap-switch.min.css")
+      layer(vendors);
+      @import url("../css/icheck-1.0.2/icheck.css") layer(vendors);
+    </style>
+    <!-- PAGE SCRIPTS ---------------------------------------------------------------------------------------------------- -->
+    <script type="text/javascript">
+      // SET HEIGHT OF HERO IMAGE FOR RESIZE WITH BANNER
+      var setHeroHeight = function () {
+        var headerHeight = $("div#ibkr-header").outerHeight();
+        var droplinkHeight =
+          $(window).width() > 991 ? $("section#droplinks").outerHeight() : 0;
+        var heightOffset = headerHeight + droplinkHeight;
+        var windowHeight = $(window).height();
+        // SET HEIGHT OF HERO
+        $("section#hero-carousel").css("height", windowHeight - heightOffset);
+      };
+      // SET MATCH MEDIA BREAKPOINT
+      var mqSm = window.matchMedia("(max-width:767.98px)");
+      var mqLg = window.matchMedia(
+        "(min-width:768px) and (max-height:1299.98px)"
+      );
+      var mqV = window.matchMedia("(min-width:768px) and (min-height:1300px)");
+      $(document).ready(function () {
+        // Wait for Bootstrap to be fully loaded
+        function initializeCarousel() {
+          // Check if Bootstrap carousel is available
+          if (typeof $.fn.carousel !== "undefined") {
+            console.log("Bootstrap carousel is available");
+
+            // Initialize the carousel with proper settings
+            $("#carouselBannerAds").carousel({
+              interval: 8000,
+              ride: "carousel",
+              pause: false,
+            });
+
+            // Handle responsive behavior
+            function handleResponsiveCarousel() {
+              if (mqSm.matches) {
+                // Smaller than tablet - disable carousel
+                $("#carouselBannerAds").carousel("pause");
+                $("#hero-carousel").removeAttr("style");
+              } else if (mqLg.matches) {
+                // tablet size and larger
+                $("#carouselBannerAds").carousel("cycle");
+                setHeroHeight();
+              } else if (mqV.matches) {
+                $("#carouselBannerAds").carousel("cycle");
+                $("#hero-carousel").removeAttr("style");
+              }
+            }
+
+            // Initial setup
+            handleResponsiveCarousel();
+
+            // Handle window resize
+            $(window).resize(function () {
+              handleResponsiveCarousel();
+            });
+          } else {
+            console.log("Bootstrap carousel not yet available, retrying...");
+            // Retry after a short delay
+            setTimeout(initializeCarousel, 100);
+          }
+        }
+
+        // Start initialization
+        initializeCarousel();
+      });
+    </script>
+    <script type="text/javascript">
+      var login = document.querySelector("#nav-log-in");
+      var portal = document.querySelector("a.btn-log-in");
+      function setCookie(cname, cvalue, exdays) {
+        var d = new Date();
+        d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
+        var expires = "expires=" + d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+      }
+      login.addEventListener("click", function () {
+        setCookie("IB_LGN", "T", 365);
+      });
+      portal.addEventListener("click", function () {
+        setCookie("IB_LGN", "T", 365);
+      });
+    </script>
+    <!-- IRELAND (.IE) AND HUNGARY (.HU) PAGE END ---------------------------------------------------------------------------------------------------- -->
+    <script>
+      // Additional JavaScript to ensure dropdowns work properly
+      document.addEventListener("DOMContentLoaded", function () {
+        // Wait for Bootstrap to be fully loaded
+        function initializeDropdowns() {
+          if (typeof bootstrap !== "undefined") {
+            console.log("Bootstrap is loaded, initializing dropdowns...");
+
+            // Get all dropdown toggles
+            var dropdownElementList = [].slice.call(
+              document.querySelectorAll(".dropdown-toggle")
+            );
+
+            // Initialize each dropdown
+            var dropdownList = dropdownElementList.map(function (
+              dropdownToggleEl
+            ) {
+              return new bootstrap.Dropdown(dropdownToggleEl);
+            });
+
+            console.log("Initialized", dropdownList.length, "dropdowns");
+
+            // Add click event listeners to ensure dropdowns work
+            dropdownElementList.forEach(function (element) {
+              element.addEventListener("click", function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                var dropdown =
+                  bootstrap.Dropdown.getInstance(this) ||
+                  new bootstrap.Dropdown(this);
+                dropdown.toggle();
+              });
+            });
+          } else {
+            console.log("Bootstrap not loaded yet, retrying...");
+            setTimeout(initializeDropdowns, 100);
+          }
+        }
+
+        // Start initialization after a short delay to ensure all scripts are loaded
+        setTimeout(initializeDropdowns, 500);
+      });
+
+      // Alternative method using jQuery if the above doesn't work
+      $(document).ready(function () {
+        // Ensure dropdowns work with jQuery
+        $(".dropdown-toggle").on("click", function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+
+          // Close other dropdowns
+          $(".dropdown-menu").removeClass("show");
+          $(".dropdown-toggle").attr("aria-expanded", "false");
+
+          // Toggle current dropdown
+          var $dropdownMenu = $(this).next(".dropdown-menu");
+          var isOpen = $dropdownMenu.hasClass("show");
+
+          if (!isOpen) {
+            $dropdownMenu.addClass("show");
+            $(this).attr("aria-expanded", "true");
+          }
+        });
+
+        // Close dropdowns when clicking outside
+        $(document).on("click", function (e) {
+          if (!$(e.target).closest(".dropdown").length) {
+            $(".dropdown-menu").removeClass("show");
+            $(".dropdown-toggle").attr("aria-expanded", "false");
+          }
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Wait for Bootstrap to load
+        function initializeDropdowns() {
+          if (typeof bootstrap !== "undefined") {
+            // Initialize all dropdowns
+            var dropdownElementList = [].slice.call(
+              document.querySelectorAll(".dropdown-toggle")
+            );
+            var dropdownList = dropdownElementList.map(function (
+              dropdownToggleEl
+            ) {
+              return new bootstrap.Dropdown(dropdownToggleEl);
+            });
+            console.log("Dropdowns initialized");
+          } else {
+            // Retry if Bootstrap not loaded yet
+            setTimeout(initializeDropdowns, 100);
+          }
+        }
+
+        // Start initialization
+        setTimeout(initializeDropdowns, 1000);
+      });
+    </script>
+  </body>
+
+  <!-- Mirrored from www.interactivebrokers.ie/en/home.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Sep 2025 08:45:24 GMT -->
+</html>

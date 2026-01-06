@@ -1,0 +1,224 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+
+<html data-theme="light" dir="ltr" lang="en_US">
+    
+<!-- Mirrored from www.interactivebrokers.ie/sso/Login?action=AA_CLIENT_DASHBOARD by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Sep 2025 09:54:02 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        
+        <link rel="icon" sizes="192x192" href="../images/web/favicons/home-screen-icon-192x192.png">
+        <link rel="icon" sizes="128x128" href="../images/web/favicons/home-screen-icon-128x128.png">
+        
+
+        
+        <meta name="apple-mobile-web-app-title" content="mobileAM">
+        <link rel="apple-touch-icon" sizes="57x57" href="../images/web/favicons/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="../images/web/favicons/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="../images/web/favicons/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="../images/web/favicons/apple-touch-icon-144x144.png">
+        
+
+        <style type="text/css" id="css-bootstrap">
+            
+            @import url('../css/bootstrap-5.2.2/bootstrap.min.css') layer(bootstrap);
+            
+            @import url('../css/fontawesome-6.4.2/all.min.css') layer(vendors);
+            @import url('../css/bootstrap-switch-3.3.2/bootstrap-switch.min.css') layer(vendors);
+        </style>
+        <link rel="stylesheet" type="text/css" media="screen" href="../css/reg-am/login.min.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="../css/ibkr/theme-ibkr-portal.min.css">
+        
+
+        <script type="text/javascript" src="../scripts/common/js/jquery-3.7.0/jquery.min.js"></script>
+        <script type="text/javascript" src="../scripts/common/js/bootstrap-5.2.2/bootstrap.bundle.min.js"></script>
+        <script type="text/javascript" src="lib/xyz.bundle.min.js"></script>
+
+        
+
+        <script type="text/javascript">
+
+            function getMaintenaceMsg() {
+                $('.gstat').hide();
+                var params = {
+                    p: 'login',
+                    type: 'maintenance',
+                    format: 'webapp'
+                };
+                $.ajax({
+                    type: 'POST',
+                    url: '/portal.proxy/v1/gstat/bulletins',
+                    data: JSON.stringify(params),
+                    contentType: 'application/json; charset=utf8',
+                    success: function(data, txtStatus) {
+                        if (data) {
+                            $('.gstat').html(data).show();
+                        }
+                    }
+                });
+            }
+
+            if (window != top) {
+                top.location.href = location.href;
+            }
+
+            $(document).ready(function() {
+                window.IBSSO.XYZ.inject({
+                  WRAPPER: '.loginformWrapper',
+                  INJECTED_CALLBACK: function(err) {
+                      if (err) return;
+                      $('.xyz-append-hook').append('<div class="gstat pt-3"></div>');
+                      getMaintenaceMsg();
+                      
+                      
+                      
+                  },
+                  
+                  LOCALE: 'en_US',
+                  
+                  
+                  
+                  SERVICE: 'AM.LOGIN',
+                  
+                  
+                  
+                  
+                  SHOW_LOGIN_TYPE: true,
+                  
+                  LOGIN_TYPE: '1',
+                  
+                  
+                  SHOW_TITLE: true,
+                  PASSWORD_RESET_URL: '/credential.recovery/login-help',
+                  SHOW_PASSWORD_RESET: true,
+                  SHOW_CRED_RECOVERY: true,
+                  
+                  SHOW_REGISTER_LINK: true,
+                  SHOW_RO_OPTION: false,
+                  
+                  
+                  PAGE_TITLE: 'Login'
+                })
+
+                showCookieConsent();
+
+                
+            });
+
+            function showCookieConsent() {
+                if (document.location.hostname === 'localhost') {
+                    return;
+                }
+                try {
+                    if ((new URLSearchParams(document.location.search)).has('client_app')) {
+                        // embedded context
+                        return;
+                    }
+                } catch (e) {}
+                $.ajax({
+                    type: 'GET',
+                    url: '/en/includes/general/gdpr-am.php',
+                    success: function(data) {
+                        if (data) {
+                            $('body').prepend(data);
+                            if ($('#cookie-modal').length) {
+                                $('#cookie-modal').modal('show');
+                            }
+                        }
+                    }
+                });
+            }
+        </script>
+
+        
+        <title>Login</title>
+        
+    
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-d23de039-d518-4f10-9810-e68da4592744","rua.cook":"true","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="XE2AM-F37QZ-LYWQP-H8KRM-4SNX5",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"XE2AM-F37QZ-LYWQP-H8KRM-4SNX5";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n="false"=="true"?1:0,t="cookiepresent",a="eykumbc7mxv4o2gje3yq-f-b540a05ff-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1168163","ak.ai":parseInt("665092",10),"ak.ol":"0","ak.cr":38,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"e160be3","ak.r":50930,"ak.a2":n,"ak.m":"a","ak.n":"essl","ak.bpcip":"38.21.70.0","ak.cport":49614,"ak.gh":"95.101.132.228","ak.quicv":"","ak.tlsv":"tls1.2","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1758013169","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==9EnBt9DdwjO8BjHnG4mkwEwDanRjxy8juG+mtky5cmf5MYWOFAsexAHQPvjIcEfCiAXm0pEUhZmTnV2j2Rcn5O6TnQ4C8lC/8zIdulT2Fb9MICQSq+Hmm9qw2pWGYdFAM90w0x0pkOrd2S7yle8xJN+FEn/YLqg/VqZXqM0rVW1gtxw7lNao7D1TfNFmXew4cOt88uHE68fZRK26afxoBhi5olEwSBlQOAYb4fK3x4oNa4zVq532Rid/WYXfqEYmjNXZ3HRCc6aGLUw8NpeyIAP7Fdgz1wPMB8zrWbw8YC7i/ZZXEcXuX1NR13mrkeVGJCr6Uswv2FEzv1/yOpQnVstCdZFrO0K8XzIVobi4FzPli4YFEJowGPiEEvzMpykYngiM2n2HOhSZNyMwoZnRc+I97ZhiBTMrPleGdiCKRC8=","ak.pv":"398","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.html","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak-2.html","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+    <body class="bg-gray">
+        <section class="login-page">
+            <div class="container">
+                <div class="login-container">
+                    <div class="row">
+                        <div class="col">
+                            
+                            <div class="brand-logo"></div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="loginformWrapper"></div>
+
+                    <noscript>
+                        <div class="alert alert-danger mt-4">JavaScript must be enabled to use this application!</div>
+                    </noscript>
+
+                    
+
+                </div>
+            </div>
+        </section>
+
+        
+
+
+
+
+
+
+<footer class="noprint">
+    <div class="container-full">
+        <div class="row">
+            <div class="col">
+                <div class="footer-content">
+                    <p><a href="https://www.interactivebrokers.com/" target="_blank" class="link-external">InteractiveBrokers.com</a></p>
+                    <p class="footer-links">
+                        <span class="link-group"><a href="https://www.interactivebrokers.com/en/trading/ibkr-desktop.php" target="_blank">IBKR Desktop</a></span>
+                        <span class="link-group"><a href="https://www.interactivebrokers.com/en/trading/tws.php" target="_blank">Trader Workstation (TWS)</a></span>
+                        <span class="link-group">
+                            <a href="https://www.interactivebrokers.com/en/trading/tws-mobile.php" target="_blank">IBKR Mobile</a>
+                            <a href="https://apps.apple.com/us/app/ibkr-mobile-invest-worldwide/id454558592" target="_blank" class="app-icon" title="Download on the App Store"><i class="fa-brands fa-apple"></i></a>
+                            <a href="https://play.google.com/store/apps/details?id=atws.app&amp;hl=en_US" target="_blank" class="app-icon" title="Get it on Google play"><i class="fa-brands fa-android"></i></a>
+                        </span>
+                        <span class="link-group">
+                            <a href="https://www.interactivebrokers.com/en/trading/globaltrader/overview.php" target="_blank">IBKR GlobalTrader</a>
+                            <a href="https://apps.apple.com/us/app/ibkr-globaltrader/id1604776354" target="_blank" class="app-icon" title="Download on the App Store"><i class="fa-brands fa-apple"></i></a>
+                            <a href="https://play.google.com/store/apps/details?id=com.ibkr.gt.app&amp;hl=en_US" target="_blank" class="app-icon" title="Get it on Google play"><i class="fa-brands fa-android"></i></a>
+                        </span>
+                        <span class="link-break"></span>
+                        <span class="link-group"><a href="https://forecasttrader.interactivebrokers.com/en/home.php" target="_blank">IBKR Forecast Trader <span class="badge badge-new">NEW</span></a></span>
+                        <span class="link-group"><a href="https://www.interactivebrokers.com/en/trading/ib-api.php" target="_blank">IBKR APIs</a></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="footer-sublinks text-end"><a href="https://www.interactivebrokers.com/en/support/customer-service.php" target="_blank">Contact Us</a><span class="pipe">|</span><a href="https://www.interactivebrokers.com/en/trading/trading-platforms.php" target="_blank">About Our Trading Platform</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+        
+    </body>
+
+<!-- Mirrored from www.interactivebrokers.ie/sso/Login?action=AA_CLIENT_DASHBOARD by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Sep 2025 09:54:02 GMT -->
+</html>

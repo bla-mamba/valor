@@ -1,0 +1,2494 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en" data-theme="light">
+
+<!-- Mirrored from www.interactivebrokers.ie/en/pricing/other-fees.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Sep 2025 09:37:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8">
+<title>Other Fees | Interactive Brokers Ireland</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+<meta name="description" content="Fees for corporate actions, exercise and assignment, ADR/GDR, IRA, DTC transfers, high risk exposure, RSP and LEI fees.fees">
+<meta name="keywords" content="Fees,other fees,corporate action fees,exercise and assignment fees, ADR/GDR fees,DTC transfer fees,IRA fees,high risk exposure fees,RSP account fees,LEI fees">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta http-equiv="expires" content="-1">
+<meta name="robots" content="index, follow">
+<meta http-equiv="pragma" content="no-cache">
+<meta property="og:site_name" content="Interactive Brokers Ireland" />
+<!--Pid:38209-->
+<link rel="canonical" href="other-fees.html"/>
+<meta name="apple-mobile-web-app-title" content="IBKR">
+<link rel="icon" sizes="192x192" href="../../images/web/favicons/home-screen-icon-192x192.png" />
+<link rel="icon" sizes="128x128" href="../../images/web/favicons/home-screen-icon-128x128.png" />
+<link rel="apple-touch-icon" sizes="57x57" href="../../images/web/favicons/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="../../images/web/favicons/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="../../images/web/favicons/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="../../images/web/favicons/apple-touch-icon-144x144.png" />
+<!-- SCRIPTS HEAD  -->
+<script type="text/javascript" src='../../scripts/common/js/jquery-3.6.1/jquery.min.js'></script>
+<script type="text/javascript">
+function createScriptElement(data) {
+ if (typeof data == "undefined") {
+  return;
+ }
+ var element = document.createElement("SCRIPT");
+ element.type = "text/javascript";
+ if (typeof data.id != "undefined") {
+  element.id = data.id;
+ }
+ if (typeof data.source != "undefined") {
+  element.src = data.source;
+ }
+ if (typeof data.loadfunction == "function") {
+  element.onload = data.loadfunction;
+ }
+ document.head.appendChild(element);
+}
+createScriptElement({ source : "/scripts/common/js/bootstrap-5.2.2/bootstrap.bundle.min.js", loadfunction: bsLoaded  });
+createScriptElement({ source : "/scripts/common/js/lib.js?ver=9" });
+function storeCookie()
+{
+ if(typeof(Storage) !== 'undefined')
+ {
+   if(localStorage.getItem('web') !== null)
+   {
+     localStorage.removeItem('web');
+   }
+ }
+}
+function bsLoaded() {
+  createScriptElement({ source : "/scripts/common/js/appear/appear.min.js?ver=1" });
+  createScriptElement({ source : "/scripts/common/js/easing/easing.min.js?ver=1" });
+  createScriptElement({ source : "/scripts/common/js/parallax/parallax.min.js?ver=1" });
+  createScriptElement({ source : "/scripts/common/js/uitotop/uitotop.min.js?ver=1", loadfunction: uiLoaded });
+}
+function uiLoaded() {
+  createScriptElement({ source : "/scripts/common/js/twsUtils.js?ver=2" });
+  createScriptElement({ source : "/scripts/common/js/design/design.js?ver=1" }); 
+}
+</script>
+<script type="text/javascript">
+$(function() {
+ if (document.cookie.indexOf("IB_SEARCH") == -1)
+ {
+  var ex=new Date();
+  ex.setTime(ex.getTime()+86400000);
+  document.cookie ='IB_SEARCH='+Math.floor(new Date().getTime()/1000)+';expires='+ex.toGMTString()+';path=/;domain=.interactivebrokers.ie';
+ }
+  let nex=new Date();
+  nex.setTime(nex.getTime()+86400000);
+    document.cookie ='IB_QD=0;expires='+nex.toGMTString()+';path=/;domain=.interactivebrokers.ie';
+  
+  let excfd=new Date();
+  excfd.setTime(excfd.getTime()+86400000);
+  document.cookie ='IB_QD_CFD=0;expires='+excfd.toGMTString()+';path=/;domain=.interactivebrokers.ie';
+ $('div#langselector').find('a').each(function() {
+  $(this).click(function() {
+   var link = $(this).attr("href");
+   if(link.match(/\/(en|fr|de|es|it|ru|cn|jp)\//))
+   {
+    var langs = link.split("../../index.html");
+    if(langs[3] == 'en' || langs[3] == 'fr' || langs[3] == 'de' || langs[3] == 'es' || langs[3] == 'it' || langs[3] == 'ru' || langs[3] == 'cn' || langs[3] == 'jp')
+    {
+      var lang = langs[3];
+      if(lang == 'cn')
+      {
+        lang = 'zh_CN';
+      }
+      if(lang == 'jp')
+      {
+        lang = 'ja';
+      }
+      if(hasCookie("IB_LANG"))
+      {
+        deleteCookie("IB_LANG");
+      }
+      setCookie("IB_LANG", lang, 7, '.interactivebrokers.ie');
+    } else if(langs[1] == 'en') {
+      var lang = 'en';
+      setCookie("IB_LANG", lang, 7, '.interactivebrokers.ie');
+    }
+   }
+  });
+ });
+ $('p#bandaid-close').click(function() {
+  setCookie("IB_BANDAID", 1, 7, '.interactivebrokers.ie');
+ });
+ $('a#btnCloseBannerRegionSelector').click(function() {
+  setCookie("IB_REGION_SEL", 1, 30, '.interactivebrokers.ie');
+ });
+ $('a#btnCloseBannerRegionDifc').click(function() {
+  setCookie("IB_DIFC", 1, 30, '.interactivebrokers.ie');
+ });
+});
+</script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    if(localStorage.getItem('consentMode') ===  null){
+                    const consentMode = {
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'analytics_storage': 'denied'
+            };
+                localStorage.setItem('consentMode', JSON.stringify(consentMode));
+        gtag('consent', 'default', consentMode);
+    }
+    else {
+        gtag('consent', 'default', JSON.parse(localStorage.getItem('consentMode')));
+    }
+</script>
+<!-- STYLES HEAD -->
+<style type="text/css">
+@import url('../../css/bootstrap-5.2.2/bootstrap.min.css') layer(bootstrap);
+</style>
+<link rel="preload" as="style" href="../../css/ibkr/website.mince12.css?v=1848a6e12ea6c289ee1df7ee63749846">
+<link rel="stylesheet" type="text/css" media="all" href="../../css/ibkr/website.mince12.css?v=1848a6e12ea6c289ee1df7ee63749846">
+<link rel="preload" as="style" href="../../css/ibkr/theme-ibkr.min4f42.css?v=be9c72c0d328e7fc4987bce81f28981c">
+<link rel="stylesheet" type="text/css" media="all" href="../../css/ibkr/theme-ibkr.min4f42.css?v=be9c72c0d328e7fc4987bce81f28981c">
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-d23de039-d518-4f10-9810-e68da4592744","rua.cook":"true","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="XE2AM-F37QZ-LYWQP-H8KRM-4SNX5",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"XE2AM-F37QZ-LYWQP-H8KRM-4SNX5";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n="false"=="true"?1:0,t="cookiepresent",a="eykumbc7mxv4o2gjew7q-f-8f510bfe1-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1168163","ak.ai":parseInt("665092",10),"ak.ol":"0","ak.cr":39,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"16e8ed7","ak.r":50930,"ak.a2":n,"ak.m":"a","ak.n":"essl","ak.bpcip":"38.21.70.0","ak.cport":49592,"ak.gh":"95.101.132.199","ak.quicv":"","ak.tlsv":"tls1.2","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1758012863","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==bp17l4S60DwPJGQXUqWKm86g0lUbjsBvcJCaYvttKfS4fsvVZ6FDYIoH0o7jdCrgh4S77a2pPS3xZHxrHC7bwhsEfq9SuhQAKorLecToyYXx5ZgTxy1BXscH8sd+Pf1xgxiQh61r1OIEsn92rpc2wrmOM9QU9vWPVr3dLURkUVd14UDw4qvznLzzDIG3VmL7C/8pvLz8TRvJctMydmm/6+boSPynEX2U/rFNC97HOhoSqWMSQqkTf9AaQz6jsGSdowrnAlFxU5bRxf5CrHqiuidng8Lzze8utYkw7/dAnCZ09atPHtyD36lbZIWaAxeMC7MFUDtZEoOZ61DGXDPNi15vxV6xN3DRJ/TZRU2QZophv3r7tEx2Oh800PlbpL4ugEyuSp4KxZNxxxx+7bZzUfUNuX9VCKeaF1gZnSMexAo=","ak.pv":"398","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.html","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak-2.html","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body>
+<style>
+         .table img{vertical-align:inherit;}
+</style>
+<div id="printheader"></div>
+<!-- HEADER START  -->
+<div class="ibkr-header" id="ibkr-header">
+        <style type="text/css">
+.banner-risk-warning {
+    margin:0px;
+    padding:8px 0px;
+    width:100%;
+    height:auto;
+    background-color:#242424;
+}
+.banner-risk-warning p {
+    margin:0px;
+    padding:0px;
+    font-weight:400;
+    font-size:1.0rem;
+    line-height:1.25rem;
+    text-align:center;
+    color:#FFFFFF;
+}
+.banner-risk-warning .warninglink a{text-decoration:underline;}
+/* BOOTSTRAP 4 | MEDIA QUERY | EXTRA SMALL (< 576PX) ---------------------------------------------------------------------------------------------------- */
+@media (max-width:575.98px) {
+    .banner-risk-warning {
+        padding:4px 0px;
+    }
+    .banner-risk-warning p {
+        font-size:0.8125rem;
+        line-height:1.0rem;
+    }
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | SMALL (576PX-767.98PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:576px) and (max-width:767.98px) {
+    .banner-risk-warning {
+        padding:4px 0px;
+    }
+    .banner-risk-warning p {
+        font-size:0.8125rem;
+        line-height:1.0rem;
+    }
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | MEDIUM (768PX-991.98PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:768px) and (max-width:991.98px) {
+    .banner-risk-warning {
+        padding:4px 0px;
+    }
+    .banner-risk-warning p {
+        font-size:0.8125rem;
+        line-height:1.0rem;
+    }
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | LARGE (992PX-1199.98PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:992px) and (max-width:1199.98px) {
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | EXTRA LARGE (>1200PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:1200px) {
+    
+}
+</style>
+<div class="banner-risk-warning">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p>Investing in financial products involves risk. Losses may exceed the value of your original investment.</p>
+            </div>
+        </div>
+    </div>
+</div>    <!-- NAV TOP START (LG/XL ONLY) -->
+    <nav class="navbar navbar-inverse navbar-expand-lg navbar-top d-none d-lg-block">
+        <div class="container">
+            <div class="navbar-collapse collapse" id="ibkr-nav-top">
+                <!-- LEFT MENU -->
+                <ul class="navbar-nav mr-auto align-items-center">
+                    <!-- FOR INDIVIDUALS -->
+                    <li class="nav-item dropdown"><a href="#" target="_self" class="nav-link dropdown-toggle" id="nav-for-individuals" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">For Individuals</a>
+                        <div class="dropdown-menu dropdown-ind-accounts" aria-labelledby="nav-for-individuals">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../accounts/individual.html" target="_self" class="dropdown-item" >Individual or Joint</a>
+                                    <a href="../accounts/trust.html" target="_self" class="dropdown-item" >Trust Accounts</a>
+                                    <a href="../accounts/family-account.html" target="_self" class="dropdown-item" >Family Accounts</a>
+                                    <a href="../accounts/long-term-investment-accounts.html" target="_self" class="dropdown-item">Long-Term Investment (TBSZ) Accounts</a>
+                                    <a href="../accounts/plan-depargne-en-action-accounts.html" target="_self" class="dropdown-item">Plan d’Epargne en Actions (PEA) Accounts</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- FOR INSTITUTIONS -->
+                    <li class="nav-item dropdown"><a href="#" target="_self" class="nav-link dropdown-toggle" id="nav-for-institutions" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">For Institutions</a>
+                        <div class="dropdown-menu dropdown-inst-accounts" aria-labelledby="nav-for-institutions">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../accounts/institutions.html" target="_self" class="dropdown-item" >Institutions Home</a>
+                                    <a href="../accounts/advisor.html" target="_self" class="dropdown-item" >Registered Investment Advisors</a>
+                                    <a href="../accounts/proprietary-trading-group.html" target="_self" class="dropdown-item" >Proprietary Trading Groups</a>
+                                    <a href="../accounts/hedge-fund.html" target="_self" class="dropdown-item" >Hedge Funds</a>
+                                    <a href="../accounts/broker.html" target="_self" class="dropdown-item" >Introducing Brokers</a>
+                                    <a href="../accounts/family-office.html" target="_self" class="dropdown-item" >Family Offices</a>
+                                    <a href="../accounts/compliance-officer.html" target="_self" class="dropdown-item" >Compliance Officers</a>
+                                    <a href="../accounts/small-business.html" target="_self" class="dropdown-item" >Small Businesses</a>
+                                    <a href="../accounts/fsa-insurance-providers.html" target="_self" class="dropdown-item" >Full-Service Administrator <br>Insurance Providers</a>
+                                    <a href="../accounts/money-manager.html" target="_self" class="dropdown-item" >Money Managers</a>
+                                    <a href="../accounts/administrator.html" target="_self" class="dropdown-item" >Fund Administrators</a>
+                                     
+                                    <a href="https://interactivebrokers.eu/campus/stl/" target="_blank" class="dropdown-item" >Educators</a>
+                                                                    </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <!-- RIGHT MENU -->
+                <ul class="navbar-nav ml-auto align-items-center">
+                    <!-- FREE TRIAL -->
+                    <li class="nav-item"><a href="../trading/free-trial.html" target="_self" class="nav-link">FREE TRIAL</a></li>
+                    <!-- CAREERS -->
+                    <li class="nav-item"><a href="../general/about/careers-splash.html" target="_self" class="nav-link">Careers</a></li>
+                    <!-- ABOUT US -->
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-about-us" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About Us</a>
+                        <div class="dropdown-menu dropdown-about-us" aria-labelledby="nav-about-us">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../general/financial-strength.html" target="_self" class="dropdown-item" >Strength and Security</a>
+                                    <a href="../general/about/info-and-history.html" target="_self" class="dropdown-item">Information and History</a>
+                                    <a href="../general/awards.html" target="_self" class="dropdown-item">Awards</a>
+                                    <a href="../about/news-at-ibkr.html" target="_self" class="dropdown-item">News at IBKR</a>
+                                    <a href="../general/about/press-and-media.html" target="_self" class="dropdown-item">Press and Media</a>
+                                    <a href="https://investors.interactivebrokers.com/ir/main.php" target="_blank" class="dropdown-item" rel="noreferrer noopener">Investor Relations</a>
+                                    <a href="../general/about/sustainability.html" target="_self" class="dropdown-item">Sustainability</a>
+                                    <a href="../accounts/legalDocuments/brokerPerformanceReports.html" target="_self" class="dropdown-item">Regulatory Reports</a>
+                                    <a href="../accounts/referrer.html" target="_self" class="dropdown-item">Refer a Friend</a>
+                                    <a href="../general/about/affiliate-programs.html" target="_self" class="dropdown-item">Affiliate Programs</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- SUPPORT -->
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-support" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Support</a>
+                        <div class="dropdown-menu dropdown-contact-us" aria-labelledby="nav-support">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../support/fund-my-account.html" target="_self" class="dropdown-item">Fund Your Account</a>
+                                    <a href="../support/individuals.html" target="_self" class="dropdown-item">For Individuals</a>
+                                    <a href="../support/institutions.html" target="_self" class="dropdown-item">For Institutions</a>
+                                    <a href="../support/institutional-sales-contacts4343.html?p=uk" target="_self" class="dropdown-item">Institutional Sales Contacts</a>
+                                    <a href="../general/contact/ibot-container.html" target="_self" class="dropdown-item">Browse Our FAQs</a>
+                                    <a href="../support/reports-and-dates.html" target="_self" class="dropdown-item">Tax Information</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- LANGUAGE SELECTOR -->
+                    <li class="nav-item dropdown"><a href="#" class="nav-link nav-language dropdown-toggle" id="nav-language" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Language</span><img src="../../images/web/icons/icon-language.svg" alt="Language" width="23" height="18" border="0" /></a>
+                        <div class="dropdown-menu dropdown-language" aria-labelledby="nav-language">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../home.html" target="_self" class="dropdown-item">English</a>
+                                    <a href="../../fr/home.html" target="_self" class="dropdown-item">Français</a>
+                                    <a href="../../de/home.html" target="_self" class="dropdown-item">Deutsch</a>
+                                    <a href="../../es/home.html" target="_self" class="dropdown-item">Español</a>
+                                    <a href="../../it/home.html" target="_self" class="dropdown-item">Italiano</a>
+                                    <a href="../../hu/home.html" target="_self" class="dropdown-item">Magyar</a>
+                                    <a href="../../pt/home.html" target="_self" class="dropdown-item">Português</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                                    </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- NAV TOP END -->
+    <!-- NAV BOTTOM START -->
+    <nav class="navbar navbar-inverse navbar-expand-lg navbar-bottom">
+        <div class="container">
+            <!-- LOGO -->
+                        <a href="../home.html" target="_self" title="Interactive Brokers Home" alt="Interactive Brokers Logo" class="navbar-brand brand-logo" aria-label="Interactive Brokers Home"><span>Interactive Brokers Home</span></a>
+            <!-- TOGGLE (XS/SM/MD ONLY) -->
+            <button class="navbar-toggler" type="button" aria-label="Toggle Navigation"><span class="navbar-toggler-icon"><i class="fas fa-bars" aria-hidden="true"></i></span></button>
+            <!-- OPEN ACCOUNT BUTTON (XS/SM/MD ONLY) -->
+            <a href="https://www.interactivebrokers.co.uk/Universal/Application" target="_self" class="d-block d-lg-none btn btn-open-account">Open Account</a>
+            <!-- LOG IN (SM/MD ONLY) -->
+                            <a href="https://www.interactivebrokers.co.uk/sso/Login?RL=1" target="_self" class="d-none d-sm-block d-lg-none btn btn-log-in">Log In</a>
+                        <!-- IBKR NAV BOTTOM START -->
+            <div class="navbar-collapse collapse" id="ibkr-nav-bottom">
+                <ul class="navbar-nav ml-auto align-items-center">
+                    <!-- WHY IBKR -->
+                    <li class="nav-item"><a href="../whyib/overview.html" target="_self" class="nav-link">Why IBKR</a></li>
+                    <!-- PRICING -->
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-pricing" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pricing</a>
+                        <div class="dropdown-menu dropdown-pricing" aria-labelledby="nav-pricing">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="commissions-home.html" target="_self" class="dropdown-item">Commissions</a>
+                                    <a href="../trading/margin-rates.html" target="_self" class="dropdown-item">Margin Rates</a>
+                                    <a href="../accounts/fees/pricing-interest-rates.html" target="_self" class="dropdown-item">Interest Rates</a>
+                                    <a href="short-sale-cost.html" target="_self" class="dropdown-item">Short Sale Cost</a>
+                                    <a href="research-news-services.html" target="_self" class="dropdown-item">Research and News</a>
+                                    <a href="market-data-pricing.html" target="_self" class="dropdown-item">Market Data Pricing</a>
+                                    <a href="stock-yield-enhancement-program-ie.html" target="_self" class="dropdown-item">Stock Yield Enhancement Program</a>
+                                    <a href="other-fees-overview.html" target="_self" class="dropdown-item">Fees</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- TRADING -->
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-technology" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Trading</a>
+                        <div class="dropdown-menu dropdown-technology" aria-labelledby="nav-technology">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../trading/trading-platforms.html" target="_self" class="dropdown-item">Platforms</a>
+                                    <a href="../trading/ib-api.html" target="_self" class="dropdown-item">APIs</a>
+                                    <a href="../trading/margin.html" target="_self" class="dropdown-item">Margin</a>
+                                    <a href="../trading/products-exchanges.html" target="_self" class="dropdown-item">Symbol and Exchange Search</a>
+                                    <a href="../trading/products-stocks.html" target="_self" class="dropdown-item">Products Overview</a>
+                                    <a href="../trading/ordertypes.html" target="_self" class="dropdown-item">Order Types</a>
+                                    <a href="../whyib/reporting.html" target="_self" class="dropdown-item">Reporting</a>
+                                    <a href="../trading/securities-financing.html" target="_self" class="dropdown-item">Securities Financing</a>
+                                    <a href="../trading/features-in-focus.html" target="_self" class="dropdown-item">Features in Focus</a>
+                                    <a href="../general/education/probability-lab.html" target="_self" class="dropdown-item">Probability Lab</a>
+                                    <a href="../trading/sustainable-investing-ie.html" target="_self" class="dropdown-item">Sustainable Investing</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- SERVICES -->
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-products" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+                        <div class="dropdown-menu dropdown-products" aria-labelledby="nav-products">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../trading/globalanalyst.html" target="_self" class="dropdown-item">IBKR GlobalAnalyst</a>
+                                    <a href="../trading/si-quotes.html" target="_self" class="dropdown-item">EUIBSI Bid/Ask</a>
+                                    <a href="../portfolioanalyst/overview.html" target="_self" class="dropdown-item" rel="noreferrer noopener">PortfolioAnalyst</a>
+                                    <a href="../trading/products-bonds.html" target="_self" class="dropdown-item">Bonds Marketplace</a>
+                                    <a href="../trading/products-mutual-funds.html" target="_self" class="dropdown-item">Mutual Funds Marketplace</a>
+                                    <a href="../trading/commission-free-etfs-mkt.html" target="_self" class="dropdown-item">No Transaction Fee ETFs</a>
+                                    <a href="https://gdcdyn.interactivebrokers.com/aces/Marketplace/InvestorsMarketplace" target="_blank" class="dropdown-item">Investors' Marketplace</a>
+                                    <a href="../trading/short-securities-availability.html" target="_self" class="dropdown-item">Short Securities Availability</a>
+                                    <a href="../trading/third-party-integration.html" target="_self" class="dropdown-item">Third Party Integration</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- EDUCATION -->
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-education" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Education</a>
+                        <div class="dropdown-menu dropdown-education" aria-labelledby="nav-education">
+                            <div class="row">
+                                <div class="col">
+                                     
+                                    <a href="https://interactivebrokers.eu/campus/" target="_blank" class="dropdown-item">IBKR Campus</a>
+                                    <a href="https://interactivebrokers.eu/campus/academy" target="_blank" class="dropdown-item" rel="noreferrer noopener">Traders' Academy</a>
+                                    <a href="https://interactivebrokers.eu/campus/news" target="_blank" class="dropdown-item" rel="noreferrer noopener">Traders' Insight</a>
+                                    <a href="https://interactivebrokers.eu/campus/podcasts" target="_blank" class="dropdown-item" rel="noreferrer noopener">IBKR Podcasts</a>
+                                    <a href="https://interactivebrokers.eu/campus/quant" target="_blank" class="dropdown-item" rel="noreferrer noopener">IBKR Quant Blog</a>
+                                    <a href="https://interactivebrokers.eu/campus/webinars" target="_blank" class="dropdown-item" rel="noreferrer noopener">Webinars</a>
+                                    <a href="https://interactivebrokers.eu/campus/stl/" target="_blank" class="dropdown-item">Student Trading Lab</a>
+                                    <a href="https://interactivebrokers.eu/campus/glossary" target="_blank" class="dropdown-item" rel="noreferrer noopener">Traders' Glossary</a>
+                                                                        <a href="../general/calendar/calendar.html" target="_self" class="dropdown-item">Traders' Calendar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- SEARCH -->
+                    <li class="nav-item dropdown d-none d-lg-block" id="search-expand"><a href="#" class="nav-link nav-search dropdown-toggle" id="nav-search" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Search"><span>Search</span><i class="fas fa-search" aria-hidden="true"></i></a>
+                        <div class="dropdown-menu dropdown-search" aria-labelledby="nav-search">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="search_box">
+                                        <script type="text/javascript">
+                                         searchbox_input_changed=false;
+                                         $('#search-expand').on('shown.bs.dropdown', function(e) {
+                                           $('#searchField').focus();
+                                         });
+                                        </script>
+                                        <form action="https://www.interactivebrokers.ie/en/search/index.php" method="get" class="search_form" id="search_form_id">
+                                            <input type="text" aria-label="Search Box" placeholder="Search" name="query" maxlength="64" autocomplete="off" id="searchField" class="form-control s swap_value searchinput" aria-label="Search Interactive Brokers">
+                                            <button type="submit" value="" id="searchsubmit" class="searchsubmit"><i class="fas fa-search" aria-hidden="true" aria-label="Submit Search"></i></button>
+                                        </form>
+                                        <ul id='saytlist' style='width:150px;'><li style="display:none"></li></ul>
+<script>
+function delay(cb, ms)
+{
+  var timer = 0;
+  return function() {
+   var context = this, args = arguments;
+   clearTimeout(timer);
+   timer = setTimeout(function() {
+     cb.apply(context, args);
+   }, ms  || 0);
+  };
+}
+$(function() {
+
+ $('#searchField').keyup(delay(function() {
+  var q = $('#searchField').val() || '';
+  if(q.length >= 3)
+  {
+    $.ajax({
+      type: "POST",
+      url: 'https://misc.interactivebrokers.com/response_handlers/search/index.php',
+      dataType: "json",
+      data: {
+        'q': q
+      },
+      success: function(r) {
+        if(r && r.success)
+        {
+          var recommendations = '';
+          var limit = Math.min(r.suggestions.length, 10);
+          for(var i = 0; i < limit; i++)
+          {
+            recommendations += "<li>" + r.suggestions[i] + "</li>";
+          }
+          $('#saytlist').html(recommendations);
+          $('#saytlist').show();
+          $('ul#saytlist li').click(function(e) {
+            var list = $(this).text() || '';
+            e.stopPropagation();
+            if(list != '')
+            {
+              $('input#searchField').val(list);
+              $('button#searchsubmit').click();
+            }
+          });
+        }
+      },
+      error: function(xhr, status, err) {}
+    });
+  } else {
+   $('#saytlist').hide();
+  }
+ }, 500));
+});
+</script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- LOG IN -->
+                    <li class="nav-item dropdown d-none d-lg-block"><a href="#" target="_self" class="nav-link nav-login dropdown-toggle" id="nav-log-in" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Log In</a>
+                        <div class="dropdown-menu dropdown-login" aria-labelledby="nav-log-in">
+                            <div class="row">
+                                <div class="col">
+                                                                            <a href="../../sso/Login0104.html?RL=1" target="_self" class="dropdown-item dropdown-portal">Portal Login</a>
+                                                                        <a href="../trading/ibkr-desktop.html" target="_self" class="dropdown-item">Download IBKR Desktop </a>
+                                    <a href="../trading/tws.html#tws-software" target="_self" class="dropdown-item">Download Trader Workstation</a>
+                                    <a href="../trading/tws-mobile.html#trytoday-drop" target="_self" class="dropdown-item">Download IBKR Mobile</a>
+                                    <a href="../trading/ibgateway-latest.html" target="_self" class="dropdown-item">Download IB Gateway</a>
+                                    <a href="../trading/trading-platforms.html" target="_self" class="dropdown-item">Compare All IBKR Platforms</a>
+                                    <a href="https://forecasttrader.interactivebrokers.ie/eventtrader/#/markets" target="_self" class="dropdown-item">IBKR ForecastTrader</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- OPEN ACCOUNT -->
+                    <li class="nav-item dropdown d-none d-lg-block"><a href="#" target="_self" class="nav-link nav-open-account dropdown-toggle" id="nav-open-account" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Open Account</a>
+                        <div class="dropdown-menu dropdown-open-account" aria-labelledby="nav-open-account">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="https://www.interactivebrokers.co.uk/Universal/Application" target="_self" class="dropdown-item dropdown-portal">Start Application</a>
+                                    <a href="https://www.interactivebrokers.co.uk/sso/Login?c=t" target="_self" class="dropdown-item">Finish an Application</a>
+                                    <a href="../general/what-you-need-inv.html" target="_self" class="dropdown-item">What You Need</a>
+                                    <a href="../accounts/account-guide.html" target="_self" class="dropdown-item">A Guide to Choosing the Right Account</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <!-- IBKR MENU END -->
+            </div>
+        </div>
+    </nav>
+    <!-- NAV BOTTOM END -->
+</div>
+<!-- HEADER END ---------------------------------------------------------------------------------------------------- -->
+<!-- MOBILE NAV START (XS/SM/MD ONLY) ---------------------------------------------------------------------------------------------------- -->
+<div class="menu-mobile d-lg-none">
+    <!-- CLOSE BUTTON -->
+    <div class="close-button"><button type="button" class="btn-close" aria-label="Close Menu"><i class="fas fa-times"></i></button></div>
+    <!-- LOGO -->
+    <div class="logo-container"><a href="../home.html" target="_self" class="brand-logo" aria-label="Interactive Brokers Home"><span>Interactive Brokers Home</span></a></div>
+    <!-- SEARCH -->
+    <div class="search-container">
+        <div class="search-box">
+            <form action="https://www.interactivebrokers.ie/en/search/index.php" method="get" class="search_form" id="search_form_id">
+                <input type="text" class="form-control" placeholder="Search" name="query" maxlength="64" autocomplete="off" id="searchFieldMobile" aria-label="Search Interactive Brokers"> 	
+                <button type="submit" class="btn-search-submit" value="" id="searchsubmitMobile" aria-label="Submit Search"><i class="fas fa-search" aria-hidden="true"></i></button> 	
+            </form>
+        </div>
+    </div>
+    <ul>
+            <!-- PORTAL LOGIN -->
+        <li><a href="../../sso/Login0104.html?RL=1" target="_self" class="menu-log-in">Portal Login</a></li>
+        <!-- OPEN ACCOUNT -->
+    <li class="has-submenu"><a href="#" target="_self" class="menu-open-account" data-submenu="submenu-open-account">Open Account</a>
+        <div class="submenu" id="submenu-open-account">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-open-account">Back</button></p>
+            <p class="submenu-title">OPEN ACCOUNT</p>
+            <ul>
+            <li><a href="https://www.interactivebrokers.co.uk/Universal/Application" target="_self" class="menu-start-application">Start Application</a></li>
+            <li><a href="https://www.interactivebrokers.co.uk/sso/Login?c=t" target="_self">Finish an Application</a></li>
+            <li><a href="../general/what-you-need-inv.html" target="_self">What You Need</a></li>
+            <li><a href="../accounts/account-guide.html" target="_self">A Guide to Choosing the Right Account</a></li>
+            </ul>
+        </div>
+    </li>
+        <!-- FREE TRIAL -->
+    <li><a href="../trading/free-trial.html" target="_self">Free Trial</a></li>
+    <!-- WHY IBKR -->
+    <li><a href="../whyib/overview.html" target="_self">Why IBKR</a></li>
+    <!-- ACCOUNT TYPES -->
+    <li class="has-submenu"><a href="#" target="_self" data-submenu="submenu-account-types">Account Types</a>
+        <div class="submenu" id="submenu-account-types">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-account-types">Back</button></p>
+            <p class="submenu-title">FOR INDIVIDUALS</p>
+            <ul>
+            <li><a href="../accounts/individual.html" target="_self" >Individual or Joint</a></li>
+            <li><a href="../accounts/trust.html" target="_self" >Trust Accounts</a></li>
+            <li><a href="../accounts/family-account.html" target="_self" >Family Accounts</a></li>
+            <li><a href="../accounts/long-term-investment-accounts.html" target="_self">Long-Term Investment (TBSZ) Accounts</a></li>
+            <li><a href="../accounts/plan-depargne-en-action-accounts.html" target="_self">Plan d’Epargne en Action (PEA) Accounts</a></li>
+                        </ul>
+            <p class="submenu-title">FOR INSTITUTIONS</p>
+            <ul>
+            <li><a href="../accounts/institutions.html" target="_self" >Institutions Home</a></li>
+            <li><a href="../accounts/advisor.html" target="_self" >Registered Investment Advisors</a></li>
+            <li><a href="../accounts/proprietary-trading-group.html" target="_self" >Proprietary Trading Groups</a></li>
+            <li><a href="../accounts/hedge-fund.html" target="_self" >Hedge Funds</a></li>
+            <li><a href="../accounts/broker.html" target="_self" >Introducing Brokers</a></li>
+            <li><a href="../accounts/family-office.html" target="_self" >Family Offices</a></li>
+            <li><a href="../accounts/compliance-officer.html" target="_self" >Compliance Officers</a></li>
+            <li><a href="../accounts/small-business.html" target="_self" >Small Businesses</a></li>
+            <li><a href="../accounts/fsa-insurance-providers.html" target="_self" >Full-Service Administrator <br>Insurance Providers</a></li>
+            <li><a href="../accounts/money-manager.html" target="_self" >Money Managers</a></li>
+            <li><a href="../accounts/administrator.html" target="_self" >Fund Administrators</a></li>
+             
+            <li><a href="https://interactivebrokers.eu/campus/stl/" target="_blank" >Educators</a></li>
+                        </ul>
+        </div>
+    </li>
+    <!-- PRICING -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-pricing">Pricing</a>
+        <div class="submenu" id="submenu-pricing">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-pricing">Back</button></p>
+            <p class="submenu-title">PRICING</p>
+            <ul>
+            <li><a href="commissions-home.html" target="_self">Commissions</a></li>
+            <li><a href="../trading/margin-rates.html" target="_self">Margin Rates</a></li>
+            <li><a href="../accounts/fees/pricing-interest-rates.html" target="_self">Interest Rates</a></li>
+            <li><a href="short-sale-cost.html" target="_self">Short Sale Cost</a></li>
+            <li><a href="research-news-services.html" target="_self">Research and News</a></li>
+            <li><a href="market-data-pricing.html" target="_self">Market Data Pricing</a></li>
+            <li><a href="stock-yield-enhancement-program-ie.html" target="_self">Stock Yield Enhancement Program</a></li>
+            <li><a href="other-fees-overview.html" target="_self">Fees</a></li>
+            </ul>
+        </div>
+    </li>
+    <!-- TRADING -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-trading">Trading</a>
+        <div class="submenu" id="submenu-trading">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-trading">Back</button></p>
+            <p class="submenu-title">TRADING</p>
+            <ul>
+            <li><a href="../trading/trading-platforms.html" target="_self">Platforms</a></li>
+            <li><a href="../trading/ib-api.html" target="_self">APIs</a></li>
+            <li><a href="../trading/margin.html" target="_self">Margin</a></li>
+            <li><a href="../trading/products-exchanges.html" target="_self">Symbol and Exchange Search</a></li>
+            <li><a href="../trading/products-stocks.html" target="_self">Products Overview</a></li>
+            <li><a href="../trading/ordertypes.html" target="_self">Order Types</a></li>
+            <li><a href="../whyib/reporting.html" target="_self">Reporting</a></li>
+            <li><a href="../trading/securities-financing.html" target="_self">Securities Financing</a></li>
+            <li><a href="../trading/features-in-focus.html" target="_self">Features in Focus</a></li>
+            <li><a href="../general/education/probability-lab.html" target="_self">Probability Lab</a></li>
+            <li><a href="../trading/sustainable-investing-ie.html" target="_self">Sustainable Investing</a></li>
+            </ul>
+        </div>
+    </li>
+    <!-- SERVICES -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-services">Services</a>
+        <div class="submenu" id="submenu-services">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-services">Back</button></p>
+            <p class="submenu-title">SERVICES</p>
+            <ul>
+            <li><a href="../trading/globalanalyst.html" target="_self">IBKR GlobalAnalyst</a></li>
+            <li><a href="../trading/si-quotes.html" target="_self">EUIBSI Bid/Ask</a></li>
+            <li><a href="../portfolioanalyst/overview.html" target="_self" rel="noreferrer noopener">PortfolioAnalyst</a></li>
+            <li><a href="../trading/products-bonds.html" target="_self">Bonds Marketplace</a></li>
+            <li><a href="../trading/products-mutual-funds.html" target="_self">Mutual Funds Marketplace</a></li>
+            <li><a href="../trading/commission-free-etfs-mkt.html" target="_self">No Transaction Fee ETFs</a></li>
+            <li><a href="https://gdcdyn.interactivebrokers.com/aces/Marketplace/InvestorsMarketplace" target="_blank">Investors' Marketplace</a></li>
+            <li><a href="../trading/short-securities-availability.html" target="_self">Short Securities Availability</a></li>
+            <li><a href="../trading/third-party-integration.html" target="_self">Third Party Integration</a></li>
+            </ul>
+        </div>
+    </li>
+    <!-- EDUCATION -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-education">Education</a>
+        <div class="submenu" id="submenu-education">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-education">Back</button></p>
+            <p class="submenu-title">EDUCATION</p>
+            <ul>
+             
+            <li><a href="https://interactivebrokers.eu/campus/" target="_blank">IBKR Campus</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/academy" target="_blank">Traders' Academy</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/news" target="_blank">Traders' Insight</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/podcasts" target="_blank">IBKR Podcasts</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/quant" target="_blank">IBKR Quant Blog</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/webinars" target="_blank">Webinars</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/stl/" target="_blank">Student Trading Lab</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/glossary" target="_blank">Traders' Glossary</a></li>
+                        <li><a href="../general/calendar/calendar.html" target="_self">Traders' Calendar</a></li>
+            </ul>
+        </div>
+    </li>
+    <!-- ABOUT US -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-about-us">About Us</a>
+        <div class="submenu" id="submenu-about-us">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-about-us">Back</button></p>
+            <p class="submenu-title">ABOUT US</p>
+            <ul>
+            <li><a href="../general/financial-strength.html" target="_self">Strength and Security</a></li>
+            <li><a href="../general/about/info-and-history.html" target="_self">Information and History</a></li>
+            <li><a href="../general/about/careers-splash.html" target="_self">Careers</a></li>
+            <li><a href="../general/awards.html" target="_self">Awards</a></li>
+            <li><a href="../about/news-at-ibkr.html" target="_self">News at IBKR</a></li>
+            <li><a href="../general/about/press-and-media.html" target="_self">Press and Media</a></li>
+            <li><a href="https://investors.interactivebrokers.com/ir/main.php" target="_blank" rel="noreferrer noopener">Investor Relations</a></li>
+            <li><a href="../general/about/sustainability.html" target="_self">Sustainability</a></li>
+            <li><a href="../accounts/legalDocuments/brokerPerformanceReports.html" target="_self">Regulatory Reports</a></li>
+            <li><a href="../accounts/referrer.html" target="_self">Refer a Friend</a></li>
+            <li><a href="../general/about/affiliate-programs.html" target="_self">Affiliate Programs</a></li>
+            </ul>
+        </div>
+    </li>
+    <!-- SUPPORT -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-support">Support</a>
+        <div class="submenu" id="submenu-support">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-support">Back</button></p>
+            <p class="submenu-title">SUPPORT</p>
+            <ul>
+            <li><a href="../support/fund-my-account.html" target="_self">Fund Your Account</a></li>
+            <li><a href="../support/individuals.html" target="_self">For Individuals</a></li>
+            <li><a href="../support/institutions.html" target="_self">For Institutions</a></li>
+            <li><a href="../support/institutional-sales-contacts4343.html?p=uk" target="_self">Institutional Sales Contacts</a></li>
+            <li><a href="../general/contact/ibot-container.html" target="_self">Browse our FAQs</a></li>
+            <li><a href="../support/reports-and-dates.html" target="_self">Tax Information</a></li> 
+            </ul>
+        </div>
+    </li>
+    <!-- LANGUAGE -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-language">Language</a>
+        <div class="submenu" id="submenu-language">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-language">Back</button></p>
+            <p class="submenu-title">LANGUAGE</p>
+            <ul>
+            <li><a href="../home.html" target="_self">English</a></li>
+            <li><a href="../../fr/home.html" target="_self">Français</a></li>
+            <li><a href="../../de/home.html" target="_self">Deutsch</a></li>
+            <li><a href="../../es/home.html" target="_self">Español</a></li>
+            <li><a href="../../it/home.html" target="_self">Italiano</a></li>
+            <li><a href="../../hu/home.html" target="_self">Magyar</a></li>
+            <li><a href="../../pt/home.html" target="_self">Português</a></li>
+            </ul>
+        </div>
+    </li>
+    <!-- REGION SELECTOR -->
+        </ul>
+</div>
+<!-- MOBILE NAV OVERLAY -->
+<div class="website-overlay d-lg-none"></div>
+<!-- MOBILE NAV END  -->
+<script>
+$(window).on('load', function() {
+    // Simple check if URL contains 'conf=am'
+    if (!window.location.href.includes('conf=am')) {
+        $('#region-modal').modal({
+            backdrop: 'static',
+            keyboard: false
+        });
+        $('#region-modal').modal('show');
+        $('body').removeClass('modal-open');
+        $('body').css('overflow', '');
+        $('body').css('padding-right', '');
+    }
+});
+</script>
+<div class="modal modal-cookies fade" id="region-modal" tabindex="-1" role="dialog" aria-labelledby="modalRegionLabel" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+    <div class="modal-content" id="modalRegionContent">
+      <div class="modal-header d-block">
+        <p class="fs-5 modal-title" id="modalCookieLabel">Which IBKR website is best for you?</p>
+        <p class="pt-10 mb-0 pr-30 fs-6">The content on the website you selected is not intended for investors in your location. </p>
+        <p class="mb-40 fs-6">Please choose the website most applicable to you.</p>
+      </div>
+      <div class="modal-footer" id="modalRegionControls">
+        <div class="row">
+          <div class="col-12 col-md-4"></div>
+          <div class="col-12 col-md-8">
+            <p>
+              <button class="btn btn-primary" id="btnRegionRecommendation">Go to US website</button>
+              <button class="btn btn-primary" id="btnRegionCurrent">Stay on IE website</button>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+$(function() {
+   $('button#btnRegionRecommendation').click(function() {
+    window.location.href = 'https://www.interactivebrokers.com/';
+  });
+  $('button#btnRegionCurrent').click(function() {
+    setCookie("IB_REG", 1, 365, '.interactivebrokers.ie');
+    location.reload();
+  });
+});
+</script><div id="contents">
+    <section class="page-title" id="page-title">
+        <div class="container">
+            <div class="row">
+                <div class="col"><h1>Other Fees</h1></div>
+            </div>
+        </div>
+    </section>
+    <!-- DROPLINKS -->
+<section class="droplinks dl-8">
+    <div class="container">
+        <div class="row">
+            <div class="col"> <a href="#universal-corporate" target="_self" class="page-scroll">
+                <svg role="img">
+                    <title>Corporate Actions & Dividend Processing</title>
+                    <path d="M20.105,5.858c-7.882,0-14.295,6.413-14.295,14.295c0,7.881,6.413,14.292,14.295,14.292
+c7.881,0,14.295-6.411,14.295-14.292C34.4,12.271,27.986,5.858,20.105,5.858z M20.105,33.42c-1.978,0-3.763-2.346-4.833-5.844
+c1.557-0.313,3.176-0.482,4.833-0.482c1.657,0,3.277,0.17,4.834,0.482C23.869,31.074,22.083,33.42,20.105,33.42z M20.105,26.094
+c-1.747,0-3.457,0.181-5.1,0.517c-0.453-1.786-0.725-3.815-0.762-5.958h11.725c-0.037,2.142-0.309,4.171-0.762,5.958
+C23.562,26.275,21.853,26.094,20.105,26.094z M20.105,6.884c1.974,0,3.757,2.337,4.829,5.826c-1.557,0.312-3.175,0.481-4.829,0.481
+c-1.653,0-3.271-0.169-4.826-0.481C16.35,9.222,18.131,6.884,20.105,6.884z M20.105,14.191c1.745,0,3.454-0.181,5.096-0.516
+c0.457,1.791,0.73,3.828,0.768,5.978H14.244c0.038-2.15,0.311-4.187,0.767-5.978C16.653,14.01,18.361,14.191,20.105,14.191z
+ M13.244,19.653H6.835c0.109-2.924,1.159-5.607,2.866-7.755c1.351,0.656,2.797,1.176,4.313,1.553
+C13.55,15.302,13.28,17.404,13.244,19.653z M13.244,20.653c0.036,2.241,0.305,4.335,0.767,6.181
+c-1.519,0.378-2.967,0.899-4.319,1.557c-1.701-2.144-2.747-4.82-2.856-7.738H13.244z M26.969,20.653h6.406
+c-0.109,2.917-1.155,5.594-2.856,7.738c-1.351-0.657-2.799-1.179-4.316-1.557C26.664,24.988,26.933,22.894,26.969,20.653z
+ M26.969,19.653c-0.036-2.249-0.307-4.351-0.771-6.202c1.516-0.377,2.961-0.896,4.311-1.552c1.708,2.147,2.758,4.831,2.867,7.754
+H26.969z M29.827,11.114c-1.227,0.575-2.532,1.036-3.899,1.374c-0.699-2.315-1.71-4.159-2.922-5.303
+C25.671,7.782,28.029,9.181,29.827,11.114z M17.206,7.185c-1.212,1.144-2.222,2.988-2.921,5.303
+c-1.368-0.338-2.675-0.799-3.902-1.375C12.181,9.181,14.54,7.781,17.206,7.185z M10.371,29.175c1.228-0.577,2.537-1.039,3.908-1.378
+c0.698,2.321,1.709,4.17,2.922,5.317C14.531,32.517,12.169,31.113,10.371,29.175z M23.011,33.114
+c1.213-1.147,2.224-2.996,2.923-5.317c1.37,0.34,2.679,0.802,3.906,1.378C28.041,31.113,25.68,32.516,23.011,33.114z"/>                </svg>
+                <span>Corporate Actions & Dividend Processing</span> </a> <a href="#trading-related-fees" target="_self" class="page-scroll">
+                <svg role="img">
+                    <title>Trading</title>
+                    <g>
+	<g>
+		<g></g>
+		<rect x="19.31" y="10.441" width="1.19" height="10.684"/>
+		<g>
+			<path d="M19.312,32.578h1.187v-8.799l-1.187-0.295V32.578z"/>
+		</g>
+	</g>
+	<polygon points="13.057,10.701 13.764,9.994 8.682,4.912 3.6,9.994 4.307,10.701 8.182,6.826 8.182,20.654 
+	12.354,20.654 12.354,19.654 9.182,19.654 9.182,6.826 	"/>
+	<polygon points="27.041,29.607 26.334,30.314 31.416,35.396 36.498,30.314 35.791,29.607 31.916,33.482 
+	31.916,19.654 27.744,19.654 27.744,20.654 30.916,20.654 30.916,33.482 	"/>
+</g>
+<g>
+	<path d="M13.096,26.583c1.523,2.095,4.053,3.345,6.778,3.345c0.913,0,1.807-0.148,2.584-0.429
+	c2.108-0.76,3.286-2.37,3.151-4.307c-0.237-3.405-3.329-4.124-5.814-4.702c-2.614-0.606-4.212-1.106-4.37-2.919
+	c-0.139-1.591,1.282-2.419,1.899-2.701c0.18-0.083,0.372-0.146,0.57-0.208v-1.235c-0.419,0.109-0.768,0.228-1.063,0.364
+	c-1.761,0.807-2.728,2.258-2.587,3.884c0.244,2.8,2.919,3.422,5.279,3.97c2.942,0.685,4.738,1.271,4.903,3.628
+	c0.139,1.986-1.61,2.838-2.369,3.111c-0.663,0.239-1.426,0.365-2.206,0.365c-2.325,0-4.485-1.066-5.792-2.856L13.096,26.583z"/>
+	<path d="M20.427,14.41c1.108,0.106,2.685,0.521,4.023,1.876l0.85-0.828c-1.642-1.666-3.544-2.143-4.874-2.245V14.41
+	z"/>
+</g>                </svg>
+                <span>Trading</span> </a> <a href="#cash-movement" target="_self" class="page-scroll">
+                <svg role="img">
+                    <title>Withdrawals & Physical Deposits</title>
+                    <g>
+	<polygon points="34.606,34.076 18.606,34.076 18.606,33.076 33.606,33.076 33.606,8.909 34.606,8.909 	"/>
+	<g>
+		<rect x="18.676" y="27.479" width="1" height="2.25"/>
+		<rect x="18.676" y="9.062" width="1" height="3"/>
+		<rect x="29.342" y="26.729" width="1" height="3"/>
+		<rect x="29.342" y="9.062" width="1" height="3"/>
+	</g>
+	<path d="M16.258,6.562v4.136H13.62l-4.875,5.335H4.768v9.167h5.882l4.19,1.12l1.418,0.003v5.906h16.5V6.562H16.258z
+	 M15.035,25.336l-4.19-1.12l-5.076-0.017v-7.167h3.417l4.875-5.335h2.197v2.898h0.001h9.438c0.644,0,1.167,0.523,1.167,1.166
+	c0,0.158-0.034,0.29-0.081,0.407c-0.012,0.03-0.027,0.055-0.041,0.083c-0.041,0.081-0.086,0.155-0.136,0.213
+	c-0.016,0.019-0.032,0.04-0.048,0.056c-0.049,0.051-0.097,0.093-0.138,0.124c-0.014,0.01-0.032,0.026-0.043,0.034
+	c0,0-0.001,0-0.001,0h-5.904v1h3.837h2.205h0.432c0.781,0,1.417,0.635,1.417,1.416s-0.636,1.416-1.417,1.416l-0.432-0.004v-0.016
+	H20.94v1h5.23c0.027,0.049,0.053,0.117,0.078,0.184c0.008,0.023,0.018,0.042,0.025,0.067c0.027,0.092,0.047,0.195,0.047,0.312
+	c0,0.643-0.574,1.143-1.148,1.148l-5.013,0.008v1h3.935c0.01,0.044,0.021,0.092,0.028,0.129c0.053,0.267,0.01,0.487-0.128,0.656
+	c-0.174,0.213-0.493,0.34-0.853,0.34h-6.883H15.035z M31.758,31.229h-14.5v-4.893h5.883c0.666,0,1.258-0.258,1.626-0.706
+	c0.222-0.271,0.458-0.729,0.349-1.409h0.038c1.194,0,2.166-0.972,2.166-2.166c0-0.206-0.03-0.395-0.076-0.562
+	c1.192-0.148,2.118-1.167,2.118-2.397c0-1.102-0.742-2.034-1.753-2.323c0.147-0.267,0.254-0.601,0.254-1.011
+	c0-1.194-0.972-2.166-2.167-2.166h-8.438V7.562h14.5V31.229z"/>
+</g>                </svg>
+                <span>Withdrawals & Physical Deposits</span> </a> <a href="#security-transfer-fees" target="_self" class="page-scroll">
+                <svg role="img">
+                    <title>Security Transfer Fees</title>
+                    <path d="M32.262,8.377c-3.419-1.786-8.677-2.721-12.104-2.721c-3.427,0-8.685,0.935-12.104,2.721L7.759,8.531v11.058
+c0,4.563,3.322,12.856,12.234,15.681l0.166,0.053l0.165-0.053c8.912-2.822,12.232-11.117,12.232-15.681V8.531L32.262,8.377z
+ M20.159,6.756c3.116,0,8.062,0.856,11.3,2.446v4.313c-3.369-0.728-8.12-1.111-11.3-1.111s-7.931,0.384-11.3,1.111V9.202
+C12.098,7.612,17.043,6.756,20.159,6.756z M20.159,34.167c-8.228-2.694-11.3-10.353-11.3-14.578v-4.95
+c3.297-0.744,8.105-1.136,11.3-1.136c3.194,0,8.002,0.393,11.3,1.137v4.949C31.459,23.812,28.387,31.473,20.159,34.167z"/>                </svg>
+                <span>Security Transfer Fees</span> </a>
+                                                                <a href="#universal-exposure" target="_self" class="page-scroll">
+                <svg role="img">
+                    <title>Exposure Fee for High Risk Accounts</title>
+                    <g>
+	<path d="M34.111,36.083H5.652v-7.095L13.75,22l8.346,2.858l12.016-8.993V36.083z M6.646,35.089h26.471V17.852
+	L22.27,25.97l-8.303-2.845l-7.321,6.318V35.089z"/>
+	<polygon points="6.535,25.286 5.764,24.657 11.009,18.23 22.01,19.999 32.701,4.692 33.516,5.262 22.468,21.08 
+	11.417,19.303 	"/>
+</g>                </svg>
+                <span>Exposure Fee for High Risk Accounts</span> </a>
+                                <a href="#acct-maintenance" target="_self" class="page-scroll" id="oacct">
+                <svg role="img">
+                    <title>Account Maintenance and Reporting Fees</title>
+                    <g>
+	<path d="M32.587,13.844l-8.782-8.812l-0.17,0.002H8.313v30.09h24.27h0.002V13.985l-0.001-0.001L32.587,13.844z
+	 M24.104,6.758l6.763,6.774h-6.763V6.758z M31.584,34.124H9.313V6.034h13.791v7.707l-0.002,0.791h0.002h8.48V34.124z"/>
+	<rect x="13.493" y="19.146" width="14" height="1.5"/>
+	<rect x="13.493" y="23.48" width="14" height="1.5"/>
+	<rect x="13.493" y="27.814" width="14" height="1.5"/>
+</g>                </svg>
+                <span>Account Maintenance and Reporting Fees</span> </a> </div>
+        </div>
+    </div>
+</section>
+<section id="universal-corporate" class="gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-12"> 
+                <!-- Universal - Corporate actions dividends ---------------------------------------------> 
+                <!--<span class="id-drop"><span id="universal-corporate"></span></span>-->
+                <h2>Corporate Actions & Dividend Processing</h2>
+                <hr>
+                <p>The following represents fees charged by IBKR for the processing of Corporate Actions affecting securities in your portfolio.</p>
+                <!--<h5>Universal</h5>-->
+                <div class="table-responsive">
+                    <table cellspacing="0" cellpadding="0" border="0" width="100%" class="table table-striped table-bordered">
+                        <thead>
+                            <tr class="subheader">
+                                <th colspan="2">Universal</th>
+                            </tr>
+                            <tr>
+                                <th width="50%">Type</th>
+                                <th width="50%">Fees</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Requests  to exercise Dissenter or Appraisal Rights</td>
+                                <td>USD <span class="text-price">500</span> + external costs</td>
+                            </tr>
+                            <tr>
+                                <td>Hong Kong Stock Tenders for Cash</td>
+                                <td><span class="text-price">0.1%</span> Stamp Duty</td>
+                            </tr>
+			    <tr>
+				 <td>AU Corporate Actions (Tenders, Share Purchase Plan, Warrant, etc)</td>
+				 <td>Free (First Submission)<sup>1,2</sup></td>
+			    </tr>
+			    <tr>
+				 <td>AU Proxy Vote Submission</td>
+				 <td>AUD <span class="text-price">200</span><sup>3</sup></td>
+		            </tr>
+			    <tr>
+				 <td>Physical Attendance - AU Proxy Vote</td>
+				 <td>AUD <span class="text-price">500</span><sup>5</sup></td>
+			    </tr>
+                            <tr>
+                                <td>All Other (Mandatory, Voluntary, With Options, etc)</td>
+                                <td>Free</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-responsive">
+                    <table cellspacing="0" cellpadding="0" border="0" width="100%" class="table table-striped table-bordered">
+                        <thead>
+                            <tr class="subheader">
+                                <th colspan="2">Europe Middle East Africa (EMEA)</th>
+                            </tr>
+                            <tr>
+                                <th width="50%">Withholding Tax Voucher Request for Dividends Paid On:</th>
+                                <th width="50%">Fees</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Austrian stocks</td>
+                                <td>EUR <span class="text-price">0</span> per line<sup>4</sup></td>
+                            </tr>
+                            <tr>
+                                <td>Belgian stocks</td>
+                                <td>EUR <span class="text-price">0</span> per line<sup>4</sup></td>
+                            </tr>
+                            <tr>
+                                <td>Danish stocks</td>
+                                <td>DKK <span class="text-price">0</span> per line<sup>4</sup></td>
+                            </tr>
+                            <tr>
+                                <td>Finnish stocks</td>
+                                <td>EUR <span class="text-price">15</span> per line</td>
+                            </tr>
+                            <tr>
+                                <td>German stocks "Einzelsteuerbescheinigung"</td>
+                                <td>EUR <span class="text-price">30</span> per line<sup>4</sup></td>
+                            </tr>
+                            <tr>
+                                <td>Norwegian stocks</td>
+                                <td>NOK <span class="text-price">0</span> per line<sup>4</sup></td>
+                            </tr>
+                            <tr>
+                                <td>Swedish stocks</td>
+                                <td>SEK <span class="text-price">0</span> per line<sup>4</sup></td>
+                            </tr>
+							<tr>
+								<td>Swiss stocks</td>
+								<td>CHF <span class="text-price">0</span> per line<sup>4</sup></td>
+							</tr>
+							<tr>
+								<td>United Kingdom stocks</td>
+								<td>GBP <span class="text-price">0</span> per line<sup>4</sup></td>
+							</tr>
+							<tr>
+								<th>Withholding Tax Reclaim Request for Dividends Paid On:</th>
+								<th>Fees</th>
+							</tr>
+							<tr>
+								<td>French stocks "Form <span class="text-price">5000/5001</span>"</td>
+								<td>EUR <span class="text-price">125</span> per line</td>
+							</tr>
+							<tr>
+								<td>Spanish stocks</td>
+								<td>EUR <span class="text-price">50</span> per line</td>
+							</tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="notes">
+                    <p><strong>Notes:</strong></p>
+                    <ol>
+                        <li>IBKR imposes a submission deadline for corporate actions, after which we do not guarantee to accept your request. If we do accept your request after the submission deadline has passed, you will be charged a fee of AUD 100 for each such request, regardless of the outcome of the corporate action. As with all corporate actions, the issuer has the sole discretion to accept, reduce or reject your request.  Please <a href="../trading/delivery-exercise-actions.html" class="link-generic">click here</a> to view the submission deadlines and other relevant information.</li>
+                        <li>First submission is free of charge. Any subsequent submissions / amendments / cancellation for AU corporate action which will incur a nonrefundable fee of 100 AUD per submission. Please also note that most AU corporate action events are non-revocable and cannot be canceled. </li>
+<li><strong>Please provide your instructions at least 4 business days prior to the meeting</strong> for IBKR Australia and our agent to have sufficient time for processing. <a href="../trading/delivery-exercise-actions.html" class="link-generic">Click here</a> for more  information.</li>
+                        <li>Only Tax Voucher requests made via the Client Portal will be processed. Any ticket requests submitted to client services for Tax Vouchers are not accepted. </li>
+                        <li>Please provide your instruction for Physical Attendance (AU Proxy votes) at least 6 business days prior to the meeting for IBKR Australia and our agents to process the request.</li>
+                    </ol>
+                </div>
+                <br />
+                <br />
+            </div>
+        </div>
+        <!-- close row--> 
+    </div>
+</section>
+<!-- BEGIN   Trading related fees (non commission related)  ---------------------------------------------------------------------------------------------------------------------------------  -->
+<section id="trading-related-fees">
+    <div class="container">
+        <div class="row"><!--  margin-top-40 -->
+            <div class="col-12"> 
+                <!-- Universal - Corporate actions dividends --> 
+                <span class="id-drop"><span id="trading-related-fees"></span></span>
+                <h2>Trading Related Fees (non commission related)</h2>
+                <hr>
+                <!-- Exercise and Assignment --------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+                <h3>Exercise and Assignment <sup>1</sup></h3>
+                <!--<h5>Universal</h5>-->
+                <div class="table-responsive">
+                    <table cellspacing="0" cellpadding="0" border="0" width="100%" class="table table-striped table-bordered">
+                        <thead>
+                            <tr class="subheader">
+                                <th colspan="2">Universal</th>
+                            </tr>
+                            <tr>
+                                <th width="50%">Product</th>
+                                <th width="50%">Transaction Fees</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Stock Options</td>
+                                <td>No fees</td>
+                            </tr>
+                            <tr>
+                                <td>Non-US Index Options</td>
+                                <td>Charged standard option commissions on exercise or  assignment.<br>
+                                    No charges on lapsed/expired contracts.</td>
+                            </tr>
+                            <tr>
+                                <td>Futures / Futures Options</td>
+                                <td>Charged the standard futures or futures options commission at expiration of the contract. </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-responsive">
+                    <table cellspacing="0" cellpadding="0" border="0" width="100%" class="table table-striped table-bordered">
+                        <thead>
+                            <tr class="subheader">
+                                <th colspan="2">United States</th>
+                            </tr>
+                            <tr>
+                                <th width="50%">Product</th>
+                                <th width="50%">Transaction Fees</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Stock Options <sup>2</sup></td>
+                                <td><p>SEC Transaction Fee: USD <span class="text-price">0.00</span> * Value of Aggregate Sales</p>
+                                 <p>FINRA Trading Activity Fee: USD <span class="text-price">0.000166</span> * Quantity Sold3<sup>3</sup></p>
+                                 <p>FINRA Consolidated Audit Trail Fees: USD <span class="text-price">0.000022</span> * Quantity to <span class="text-price">0.0000274</span> * Quantity</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>US Index Options</td>
+                                <td>No fees</td>
+                            </tr>
+                            <tr>
+                                <td>Futures / Futures Options</td>
+                                <td>Charged the standard  futures or futures options commission at expiration of the contract.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="notes">
+                    <p><strong>Notes:</strong></p>
+                    <ol>
+                        <li>IBKR does not charge an option exercise or assignment fee. Certain transactions are subject to the standard commissions for the applicable product.</li>
+                        <li>The transaction fees listed represent allocations of costs charged to IBKR by third-parties. IBKR does not assess a separate option exercise/assignment fee.</li>
+                      <li>Please note that the stated Consolidated Audit Trail ("CAT") fee will be charged for all executions of shares on Eligible Securities, including instances in which a third-party broker is used for execution and such third-party broker does not pass along the CAT fee to IBKR. </li>
+                    </ol>
+                </div>
+                <br />
+                <br />
+                <!-- Cancel Modify Stock Orders ---------------------------------------------------------------------------------------------------------------------------------------------------------  -->
+                <h3>Cancel/Modify Orders</h3>
+                <!-- USA - stocks ---------------------------------------------> 
+                <div class="table-responsive">
+                    <table cellspacing="0" cellpadding="0" border="0" width="100%" class="table table-striped table-bordered">
+                        <thead>
+                            <tr class="subheader">
+                                <th colspan="4">United States</th>
+                            </tr>
+                            <tr>
+                                <th width="25%">Asset/Order Origin</th>
+                                <th width="25%">Routing Venue</th>
+                                <th width="25%">Fee per Order<sup> 1</sup></th>
+                                <th width="25%">Execution Credit <sup>2</sup></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>API/CTCI Smart</td>
+                                <td>N/A</td>
+                                <td>None</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td>TWS Directed and Smart</td>
+                                <td>All</td>
+                                <td>None</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td>API/CTCI Directed</td>
+                                <td>All</td>
+                                <td>USD <span class="text-price">0.01</span></td>
+                                <td>USD <span class="text-price">0.25</span> per API/CTCI Directed execution</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p> Orders with a time in force that specifies an expiration time, such as GTC, will be assessed cancel fees according to the above schedule.</p>
+                <p><a href="../accounts/fees/cancelModifyExamples.html" target="_blank" class="link-generic">Click here</a> for cancel/modify fee examples.</p>
+                <br />
+                <!-- Europe stocks orders ---------------------------------------------> 
+                <!--<h5>Europe Middle East Africa (EMEA)</h5>-->
+                <div class="table-responsive">
+                    <table cellspacing="0" cellpadding="0" border="0" width="100%" class="table table-striped table-bordered">
+                        <thead>
+                            <tr class="subheader">
+                                <th colspan="4">Europe Middle East Africa (EMEA)</th>
+                            </tr>
+                            <tr>
+                                <th width="25%">Asset/Order Origin</th>
+                                <th width="25%">Routing Venue</th>
+                                <th width="25%">Fee per Order<sup> 1</sup></th>
+                                <th width="25%">Execution Credit<sup> 2</sup></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Direct Routed Order</td>
+                                <td>TGATE</td>
+                                <td>EUR <span class="text-price">0.50</span></td>
+                                <td>EUR <span class="text-price">2.50</span> per TRADEGATE execution in the same product on the same day</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="notes">
+                    <p><strong>Notes:</strong></p>
+                    <ol>
+                        <li>Unless otherwise specified, the per-order fee applies to both order cancellations and modifications.</li>
+                        <li>Execution credits are applied against cancel or modify fees for the day. Execution credits cannot exceed cancel/modify fees.</li>
+                    </ol>
+                </div>
+                <br>
+                <br>
+                <!-- Europe - Cancel/Modify Futures/Options Orders ---------------------------------------------------------------------------------------------------------------------------------> 
+                <span class="id-drop"><span id="eu-cancel-modify-options"></span></span>
+                <h3>Cancel/Modify Futures/Options Orders</h3>
+                <!--<h5>Europe</h5>-->
+                <div class="table-responsive">
+                    <table cellspacing="0" cellpadding="0" border="0" width="100%" class="table table-striped table-bordered">
+                        <thead>
+                            <tr class="subheader">
+                                <th colspan="4">Europe Middle East Africa (EMEA)</th>
+                            </tr>
+                            <tr>
+                                <th width="25%">Asset/Order Origin</th>
+                                <th width="25%">Routing Venue</th>
+                                <th width="25%">Fee per Order<sup> 1</sup></th>
+                                <th width="25%">Execution Credit<sup> 2 3</sup></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>TWS</td>
+                                <td>DTB, SOFFEX</td>
+                                <td>None</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td>API/CTCI</td>
+                                <td>DTB, SOFFEX</td>
+                                <td>EUR 0.25</td>
+                                <td>EUR 2.50 per Eurex execution in the same product on the same day.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>Orders with a time in force that specifies an expiration time, such as GTC, will be assessed cancel fees according to the above schedule.</p>
+                <p><a href="../accounts/fees/cancelModifyExamples.html" target="_blank" class="link-generic">Click here</a> for more cancel/modify fee examples.</p>
+                <div class="notes">
+                    <p><strong>Notes:</strong></p>
+                    <ol>
+                        <li>Unless otherwise specified, the per-order fee applies to both order cancellations and modifications.</li>
+                        <li>Execution credits are applied against cancel or modify fees for the day. Execution credits cannot exceed cancel/modify fees.</li>
+                        <li>For options, credit is the lesser of (1/3 of commissions paid on those contracts that count towards credit) and (Execution Credit).</li>
+                    </ol>
+                </div>
+                <br>
+                <br>
+                <!-- Trade bust adjustments ---------------------------------------------------------------------------------------------------------------------------------------------------------  --> 
+                <span class="id-drop"><span id="na-us-trader-bust"></span></span>
+                <h3>Trade Bust/Adjustments</h3>
+                <p class="margin-top-20">If an exchange or other market center charges Interactive Brokers a trade bust, trade cancel fee or trade adjust fee because of an order placed by an IBKR customer, or because of a customer bust or adjust request, the customer is fully responsible for the fee and the fee will be deducted from the customer's account.</p>
+                <p>In addition to fees charged by exchanges (and in cases where exchanges do not charge a fee), IBKR  will charge the following fees for requests to have trades busted:</p>
+                <ul>
+                    <li class="paralist">USD <span class="text-price">50</span> for the first bust request in a calendar month.</li>
+                    <li class="paralist">USD <span class="text-price">100</span> per incident for subsequent bust requests in the same calendar month.</li>
+                </ul>
+                <p>The above fees are subject to change.</p>
+                <!-- USA - Trade bust adjustments ---------------------------------------------> 
+                <div class="table-responsive">
+                    <table cellspacing="0" cellpadding="0" border="0" width="100%" class="table table-striped table-bordered">
+                        <thead>
+                            <tr class="subheader">
+                                <th colspan="3">United States</th>
+                            </tr>
+                            <tr>
+                                <th width="25%">Exchange</th>
+                                <th width="25%">Fees</th>
+                                <th>Additional Info</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>CME Group <br />
+                                    (ECBOT, Globex, NYMEX)</td>
+                                <td>USD <span class="text-price">1,000.00</span></td>
+                                <td>When GCC<sup> 1</sup> busts a trade, the party responsible for entering the order into the electronic trading system that gave rise to the trade bust/adjustment shall pay an administrative fee to the Exchange in the amount of USD <span class="text-price">1,000</span> for each occurrence. If a non-member customer responsible for entering an order that results in a trade bust fails to pay the fee in accordance with this section, the clearing member carrying the customer's account shall be responsible for payment of the fee. <br />
+                                    <br />
+                                    For additional information click the following links: <a href="http://www.cmegroup.com/rulebook/CME/" target="_blank" class="linkexternal">CME Group Rulebooks</a>, <a href="http://www.cmegroup.com/rulebook/CME/I/5/5.pdf" target="_blank" class="linkexternal">Rule 588</a>, <a href="http://www.cmegroup.com/rulebook/CME/I/6/6.pdf" target="_blank" class="linkexternal">Rule 622</a>.</td>
+                            </tr>
+                            <tr>
+                                <td>NASDAQ</td>
+                                <td>USD <span class="text-price">250.00</span></td>
+                                <td>If an appeal is requested on a ruling that was previously made and that appeal upholds the original decision, Nasdaq will assess a fine for the appeal. <br />
+                                    <br />
+                                    Additional information regarding this policy can be found on this <a href="http://www.nasdaqtrader.com/Trader.aspx?id=ClearlyErroneous" target="_blank" class="linkexternal">page</a>. Clearly Erroneous Rule changes effective October 5, 2009, can be found <a href="http://www.nasdaqtrader.com/TraderNews.aspx?id=ERA2009-19" target="_blank" class="linkexternal">here</a>. For a list of fees, <a href="http://www.nasdaqtrader.com/Trader.aspx?id=PriceListTrading2#cc" target="_blank" class="linkexternal">click here</a>.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-responsive">
+                    <table cellspacing="0" cellpadding="0" border="0" width="100%" class="table table-striped table-bordered">
+                        <thead>
+                            <tr class="subheader">
+                                <th colspan="3">Germany and Sweden</th>
+                            </tr>
+                            <tr>
+                                <th width="33%">Exchange</th>
+                                <th width="33%">Fees</th>
+                                <th>Additional Info</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>EUREX</td>
+                                <td>EUR <span class="text-price">500.00</span></td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td>EUR <span class="text-price">SFB</span></td>
+                                <td>SEK <span class="text-price">700.00</span></td>
+                                <td>N/A</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-responsive">
+                    <table cellspacing="0" cellpadding="0" border="0" width="100%" class="table table-striped table-bordered">
+                        <thead>
+                            <tr class="subheader">
+                                <th colspan="3">Hong Kong</th>
+                            </tr>
+                            <tr>
+                                <th width="33%">Exchange</th>
+                                <th width="33%">Fees</th>
+                                <th>Additional Info</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>HKFE</td>
+                                <td>HKD <span class="text-price">3000.00</span></td>
+                                <td>N/A</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="notes">
+                    <p><strong>Notes:</strong></p>
+                    <ol>
+                        <li>GCC is the group at the CME that is responsible for reviewing ECBOT, Globex, and NYMEX executions.</li>
+                    </ol>
+                </div>
+                <br />
+                <br />
+                <!-- Telephone orders*closing positions  --------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+                <h3>Telephone orders closing positions </h3>
+                <!--<h5>North America</h5>-->
+                <div class="table-responsive">
+                    <table cellspacing="0" cellpadding="0" border="0" width="100%" class="table table-striped table-bordered">
+                        <thead>
+                            <tr class="subheader">
+                                <th colspan="2">America</th>
+                            </tr>
+                            <tr>
+                                <th width="50%">Currency</th>
+                                <th width="50%">Telephone Orders</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>USD</td>
+                                <td>USD <span class="text-price">30.00</span> per order</td>
+                            </tr>
+                            <tr>
+                                <td>CAD</td>
+                                <td>CAD <span class="text-price">40.00</span> per order</td>
+                            </tr>
+                            <tr>
+                                <td>MXN</td>
+                                <td>MXN <span class="text-price">550.00</span> <br /></td>
+                        </tbody>
+                    </table>
+                </div>
+                <!--<h5>Europe Middle East Africa (EMEA)</h5>-->
+                <div class="table-responsive">
+                    <table cellspacing="0" cellpadding="0" border="0" width="100%" class="table table-striped table-bordered">
+                        <thead>
+                            <tr class="subheader">
+                                <th colspan="2">Europe Middle East Africa (EMEA)</th>
+                            </tr>
+                            <tr>
+                                <th width="50%">Currency</th>
+                                <th width="50%">Telephone Orders</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>CHF</td>
+                                <td>CHF <span class="text-price">30.00</span> per order</td>
+                            </tr>
+                            <tr>
+                                <td>EUR</td>
+                                <td>EUR <span class="text-price">30.00</span> per order<br />
+                            </tr>
+                            <tr>
+                                <td>GBP</td>
+                                <td>GBP <span class="text-price">25.00</span> per order</td>
+                            </tr>
+                            <tr>
+                                <td>NOK</td>
+                                <td>NOK <span class="text-price">250.00</span></td>
+                            </tr>
+                            <tr>
+                                <td>SEK</td>
+                                <td>SEK <span class="text-price">250.00</span> per order</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!--<h5>Asia</h5>-->
+                <div class="table-responsive">
+                    <table cellspacing="0" cellpadding="0" border="0" width="100%" class="table table-striped table-bordered">
+                        <thead>
+                            <tr class="subheader">
+                                <th colspan="2">Asia-Pacific</th>
+                            </tr>
+                            <tr>
+                                <th width="50%">Currency</th>
+                                <th width="50%">Telephone Orders</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>AUD</td>
+                                <td>AUD <span class="text-price">40.00 </span>per order</td>
+                            </tr>
+                            <tr>
+                                <td>HKD</td>
+                                <td>HKD <span class="text-price">230.00</span> per order</td>
+                            </tr>
+                            <tr>
+                                <td>INR<sup> 1</sup></td>
+                                <td>INR <span class="text-price">2,000.00</span></td>
+                            </tr>
+                            <tr>
+                                <td>JPY</td>
+                                <td>JPY <span class="text-price">3,000.00</span> per order<br />
+                                    (For IB-JP customers: JPY <span class="text-price">3,300</span> incl. tax)</td>
+                            </tr>
+                            <tr>
+                                <td>KRW</td>
+                                <td>KRW <span class="text-price">35,000.00</span> per order</td>
+                            </tr>
+                            <tr>
+                                <td>NZD</td>
+                                <td>NZD <span class="text-price">40.00</span></td>
+                            </tr>
+                            <tr>
+                                <td>SGD</td>
+                                <td>SGD <span class="text-price">40.00</span> per order</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="notes">
+                    <p><strong>Notes:</strong></p>
+                    <ul>
+                        <li>Telephone orders are  only allowed for closing orders, and the stated fee is in addition to all regular commission fees. Fees will be waived in the case of IBKR technology problems.</li>
+                    </ul>
+                    <ol>
+                        <li>Demat charges of INR 4.5 per stock, irrespective of quantity, are applicable in the following cases:
+                            <ul>
+                                <li>Sale of shares.</li>
+                                <li>Transfer from client beneficiary account to personal demat account and vice versa.</li>
+                                <li>Transfer from personal demat account to demat account held with another broker.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <!-- close row--> 
+    </div>
+</section>
+<!-- END   Trading related fees (non commission related)  ---------------------------------------------------------------------------------------------------------------------------------  --> 
+<!-- BEGIN  Withdrawals and Physical Deposits --------------------------------------------------------------------------------------------------------------------------------------------------------------  -->
+<section id="cash-movement" class="gray">
+    <div class="container">
+        <div class="row"><!--  margin-top-40 -->
+            <div class="col-12"> 
+                <!-- Universal - Corporate actions dividends --> 
+                <!--<span class="id-drop"><span id="trading-related-fees"></span></span>-->
+                <h2>Withdrawals
+                                        & Physical Deposits
+                                    </h2>
+                <hr>
+                <!-- USA - Withdrawls ---------------------------------------------> 
+                <span class="id-drop"><span id="na-us-withdrawals"></span></span>
+                <h3>Withdrawals</h3>
+                <p>IBKR allows one free withdrawal request per calendar month. After the first withdrawal (of any kind), IBKR will charge the fees listed below for any subsequent withdrawal:</p>
+                <!--<h5>North America</h5>-->
+                <div class="table-responsive">
+                    <table cellspacing="0" cellpadding="0" border="0" width="100%" class="table table-striped table-bordered">
+                        <thead>
+                            <tr class="subheader">
+                                <th colspan="4">America</th>
+                            </tr>
+                            <tr>
+                                <th width="25%">Currency</th>
+                                <th width="25%">Bank Wire/Transfer</th>
+                                <th width="25%">Checks</th>
+                                <th width="25%">BACS/GIRO/ACH/EFT/SEPA</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>USD</td>
+                                <td><span class="text-price">10.00</span></td>
+                                <td><span class="text-price">4.00</span></td>
+                                <td><span class="text-price">1.00</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-responsive">
+                    <table cellspacing="0" cellpadding="0" border="0" width="100%" class="table table-striped table-bordered">
+                        <thead>
+                            <tr class="subheader">
+                                <th colspan="4">Europe Middle East Africa (EMEA)</th>
+                            </tr>
+                            <tr>
+                                <th width="25%">Currency</th>
+                                <th width="25%">Bank Transfer</th>
+                                <th width="25%">Checks</th>
+                                <th width="25%">BACS/GIRO/ACH/EFT/SEPA</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>CHF</td>
+                                <td><span class="text-price">11.00</span></td>
+                                <td>N/A</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td>CZK</td>
+                                <td><span class="text-price">300</span></td>
+                                <td>N/A</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td>DKK</td>
+                                <td><span class="text-price">30.00</span></td>
+                                <td>N/A</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td>EUR</td>
+                                <td><span class="text-price">8.00</span></td>
+                                <td>N/A</td>
+                                <td>1.00</td>
+                            </tr>
+                            <tr>
+                                <td>GBP</td>
+                                <td><span class="text-price">7.00</span></td>
+                                <td>N/A</td>
+                                <td>1.00</td>
+                            </tr>
+                            <tr>
+                                <td>HUF</td>
+                                <td><span class="text-price">6,000.00</span></td>
+                                <td>N/A</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td>NOK</td>
+                                <td><span class="text-price">50.00</span></td>
+                                <td>N/A</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td>PLN</td>
+                                <td><span class="text-price">40.00</span></td>
+                                <td>N/A</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td>SEK</td>
+                                <td><span class="text-price">50.00</span></td>
+                                <td>N/A</td>
+                                <td>N/A</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- --> 
+                </div>
+                <div class="notes">
+                    <p><strong>Notes:</strong></p>
+                    <ul>
+                        <li>IBKR withdrawal fees do not cover third-party fees. The account holder will be solely responsible for any fees assessed by a beneficiary or correspondent bank. In addition, processing fees charged by your bank or its correspondent bank, which are not included in IBKR withdrawal fees, may be deducted from bank transfer proceeds.</li>
+                    </ul>
+                </div>
+                <br />
+                <br />
+                <!-- Returned Check Fee  ---------------------------------------------------------------------------------------------- -->
+                                <h3>Returned Check Fee</h3>
+                <!--<h5>North America</h5>-->
+                <div class="table-responsive">
+                    <table cellspacing="0" cellpadding="0" border="0" width="100%" class="table table-striped table-bordered">
+                        <thead>
+                            <tr class="subheader">
+                                <th colspan="2">United States</th>
+                            </tr>
+                            <tr>
+                                <th width="50%">Currency</th>
+                                <th width="50%">Returned Check Fee</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>USD</td>
+                                <td>USD <span class="text-price">25.00</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <br />
+                <br />
+                                <!-- Deposits – min charge and fee  --------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+                                <h3>Pay Cash on Counter at Bank</h3>
+                <div class="notes">
+                    <p><strong>Notes:</strong></p>
+                    <ol>
+                        <li>Please be aware that  it is against Interactive Brokers policy to accept physical currency (cash)  deposits. Please make all deposits to your IBKR account by bank transfer, check,  direct bank transfer (ACH), or via one of the other methods described  in the <a href="../index52c0.html?f=funding" target="_self" class="link-generic">Funding Reference</a> page. Should Interactive Broker's bank not block a direct deposit of physical currency a special handling fee of 1% of the deposit amount (minimum USD 50 fee) will be charged to the account upon receipt.</li>
+                    </ol>
+                </div>
+                                <br />
+                <br />
+                <h3>Depository/Trading Currency Changes</h3>
+                <div class="table-responsive">
+                    <table cellspacing="0" cellpadding="0" border="0" width="100%" class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th width="50%">Action</th>
+                                <th width="50%">Fee</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Each request to change the trading currency or depository location of a multi-listed security held in your account.</td>
+                                <td>USD <span class="text-price">10.00</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END   Withdrawals and Physical Deposits --------------------------------------------------------------------------------------------------------------------------------------------------------------  --> 
+<!-- BEGIN Security Transfer Fees  ------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<section id="security-transfer-fees">
+    <div class="container">
+        <div class="row">
+            <div class="col-12"> 
+                <!-- Universal - Corporate actions dividends -->
+                <h2>
+                Security Transfer Fees
+                <hr>
+                <span class="id-drop"><span id="universal-adr"></span></span>
+                <h3>ADR / GDR (American or Global Depository Receipt) and CDI (Australian CHESS Depositary Interests) Fees</h3>
+                <p>Various Central Securities Depositories such as the Depository Trust Company (DTC), Euroclear or Clearstream collect custody fees on behalf of ADR/GDR/CDI agents for DRs which do not pay periodic dividends. The fees are deducted by the applicable depository in standard billing and will be passed to accounts which held the ADR/GDR/CDI on the record date.</p>
+                <p>For additional information on the fee IBKR recommends that you consult the ADR/GDR/CDI prospectus.</p>
+                <div class="table-responsive">
+                    <table cellspacing="0" cellpadding="0" border="0" width="100%" class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th width="50%">Type</th>
+                                <th width="50%">Fee</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ADR/GDR/CDI Fee</td>
+                                <td>Pass through fee of 0.05 per share.</td>
+                            </tr>
+                            <tr>
+                                <td>Voluntary Conversion</td>
+                                <td>USD 500</td>
+                            </tr>
+                            <tr>
+                                <th colspan="2">Voluntary Conversion Tied to Program Termination:</th>
+                            </tr>
+                            <tr>
+                                <td> Up to delisting date<br>
+                                    One to 30 days following delisting<br>
+                                    30+ days following delisting </td>
+                                <td> USD 500<br>
+                                    USD 0<br>
+                                    USD 500 </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <br />
+                <br />
+                <span class="id-drop"><span id="universal-dtc"></span></span>
+                <h3>DTC Position Transfers</h3>
+                <div class="table-responsive">
+                    <table cellspacing="0" cellpadding="0" border="0" width="100%" class="table table-striped table-bordered">
+                        <thead>
+                            <tr class="subheader">
+                                <th colspan="3">Universal</th>
+                            </tr>
+                            <tr>
+                                <th width="30%" class="table_header">Transfer Method</th>
+                                <th width="30%" class="table_header">Type</th>
+                                <th class="table_header">Fee</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ACATS</td>
+                                <td>Deposit or Withdrawal</td>
+                                <td>None<sup>1</sup></td>
+                            </tr>
+                            <tr>
+                                <td>DWAC</td>
+                                <td>Deposit or Withdrawal</td>
+                                <td>USD <span class="text-price">100</span> per settled transaction</td>
+                            </tr>
+                            <tr>
+                                <td>DRS</td>
+                                <td>Deposit</td>
+                                <td>Starting at USD <span class="text-price">25</span> per settled transaction<sup>2</sup>; USD <span class="text-price">100</span> per rejected transaction<sup>3</sup></td>
+                            </tr>
+                            <tr>
+                                <td>DRS</td>
+                                <td>Withdrawal</td>
+                                <td>USD <span class="text-price">5</span> per settled transaction; no fee for rejected transaction</td>
+                            </tr>
+                            <tr>
+                                <td>Canadian DRS</td>
+                                <td>Deposit or Withdrawal</td>
+                                <td>The exact settlement or rejection fee charged by the agent + CAD 30 per transaction</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="notes">
+                    <p><strong>Notes:</strong></p>
+                    <ol>
+                        <li>While IBKR does not charge for incoming or outgoing ACATS transfers, customers should consult with their sending or receiving firm to determine if there will be any applicable fees for the transfers.</li>
+                        <li>DRS deposit fees above USD 25 represent a higher fee from select transfer agents that are passed through IBKR to the client.</li>
+                        <li>Settlement is dependent upon successful DTC processing and Transfer Agent acceptance of shares.</li>
+                    </ol>
+                </div>
+                <br />
+                <br />
+                <span class="id-drop"><span id="security-northbound"></span></span>
+                <h3>United States and Canada Northbound/Southbound Fees</h3>
+                <div class="table-responsive">
+                    <table cellspacing="0" cellpadding="0" border="0" width="100%" class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th width="50%" class="table_subheader">Transfer Method</th>
+                                <th width="50%" class="table_subheader">Fee</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Northbound Transfer</td>
+                                <td>USD <span class="text-price">10.00</span> per ISIN</td>
+                            </tr>
+                            <tr>
+                                <td>Southbound Transfer</td>
+                                <td>USD <span class="text-price">10.00</span> per ISIN</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <br />
+                <br />
+                <span class="id-drop"><span id="hk-physical-certificate"></span></span>
+                <h3>Hong Kong Physical Certificate Deposit</h3>
+                <div class="table-responsive">
+                    <table cellspacing="0" cellpadding="0" border="0" width="100%" class="table table-striped table-bordered">
+                        <thead>
+                            <tr class="subheader">
+                                <th colspan="2">Hong Kong<sup>1,2,3,4</sup></th>
+                            </tr>
+                            <tr>
+                                <th width="30%" class="table_header">Certificate size</th>
+                                <th width="30%" class="table_header">Processing Fee</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>HKD 500,000 or above (Full Service)</td>
+                                <td>Free</td>
+                            </tr>
+                            <tr>
+                                <td>Less than HKD 500,000 (Full Service)</td>
+                                <td>HKD 300.00/first stock certificate per day<br>
+                                    HKD 100.00/each additional stock per day</td>
+                            </tr>
+                            <tr>
+                                <td>Less than HKD 500,000 (Self Service)</td>
+                                <td>HKD 200.00/first stock certificate per day<br>
+                                    HKD 20.00/each additional stock per day</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="notes">
+                    <p><strong>Notes:</strong></p>
+                    <ol>
+                        <li>In addition to the above, there is also a fee of HKD 5 stamp tax   per transfer form. Cash cannot be accepted. Please prepare a cheque for   HKD 5 per transfer form payable to "The Stock Exchange of Hong Kong   Limited".</li>
+                        <li>Please visit <a href="https://ibkr.info/node/4077" target="_blank" rel="noreferrer" class="link-generic">KB4077</a> for details.</li>
+                        <li>Additional fees may be imposed for submitting large volumes that are time consuming to process, please contact  Client Services  via a <a href="https://www.interactivebrokers.com/sso/resolver?action=NEW_TICKET" class="link-generic">web ticket</a> for more information.</li>
+                        <li>A rejection fee of HKD 1,000 will be charged for any transaction rejected by the share registry.</li>
+                    </ol>
+                </div>
+                <br />
+                <br />
+                <span class="id-drop"><span id="hk-physical-certificate"></span></span>
+                <h3>Singapore Central Depository Position Transfers</h3>
+                <div class="table-responsive">
+                    <table cellspacing="0" cellpadding="0" border="0" width="100%" class="table table-striped table-bordered">
+                        <thead>
+                            <tr class="subheader">
+                                <th colspan="2">Singapore</th>
+                            </tr>
+                            <tr>
+                                <th width="30%" class="table_header">Transfer Type</th>
+                                <th width="30%" class="table_header">Processing Fee</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Inbound position transfer</td>
+                                <td>SGD <span class="text-price">10.90</span> (inclusive of GST) per transfer counter</td>
+                            </tr>
+                            <tr>
+                                <td>Outbound position transfer</td>
+                                <td>SGD <span class="text-price">10.90</span> (inclusive of GST) per transfer counter</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <br />
+                <br />
+                <!--- END SECURITY TRANSFER FEES ---> 
+                <!-- Asset Transfer (Out)  --------------------------------------------------------------------------------------------------------------------------------------------------------- --> 
+                <span class="id-drop"><span id="asset-transfer-out"></span></span>
+                <h3>Asset Transfer (Out)<sup>1</sup></h3>
+                <!--<h5>Asia-Pacific</h5>-->
+                <div class="table-responsive">
+                    <table cellspacing="0" cellpadding="0" border="0" width="100%" class="table table-striped table-bordered">
+                        <thead>
+                            <tr class="subheader">
+                                <th colspan="2">Asia-Pacific</th>
+                            </tr>
+                            <tr>
+                                <th width="50%">Currency</th>
+                                <th width="50%">Asset Transfer (Out)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>AUD</td>
+                                <td>AUD <span class="text-price">50.00</span> minimum<sup>2</sup></td>
+                            </tr>
+                            <tr>
+                                <td>HKD</td>
+                                <td>HKD <span class="text-price">400.00</span></td>
+                            </tr>
+                            <tr>
+                                <td>JPY</td>
+                                <td>JPY <span class="text-price">4,000.00</span><br />
+                                    (For IB-JP customers: <span class="text-price">4,400.00</span> incl. tax)</td>
+                            </tr>
+                            <tr>
+                                <td>SGD</td>
+                                <td>SGD <span class="text-price">50.00</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="notes">
+                    <p><strong>Notes:</strong></p>
+                    <ol>
+                        <li>When transferring Asian positions from your IBKR account, there is a charge of 50.00 USD for each request or the amount listed in the above table.</li>
+                        <li>For transfers with total asset value under AUD 10,000, fee is AUD 10 per asset, otherwise AUD 5 per asset, both with minimum of AUD 50 per request.</li>
+                    </ol>
+                </div>
+                <br />
+                <br />
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END   Security Transfer Fees  --------------------------------------------------------------------------------------------------------------------------------------------------------------  -->
+<!-- BEGIN   Exposure Fee for High Risk Accounts  ---------------------------------------------------------------------------------------------------------------------------------------------  -->
+<section id="universal-exposure" class="gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-12"> <span class="id-drop"><span id="universal-exposure"></span></span>
+                <h2>Exposure Fee for High Risk Margin Accounts</h2>
+                <hr>
+                <p>For information on this fee, please click <a href="../trading/margin-requirements.html#universal-exposure" target="_blank" class="link-generic">here</a>.</p>
+                <br />
+                <br />
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END   Exposure Fee for High Risk Accounts  -----------------------------------------------------------------------------------------------------------------------------------------------  -->
+<!-- BEGIN   Account Maintenance and/or Reporting Fees  ---------------------------------------------------------------------------------------------------------------------------------------  -->
+<section id="acct-maintenance">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>Account Maintenance and/or Reporting Fees</h2>
+                <hr>
+                <span class="id-drop"><span id="universal-lei"></span></span>
+                <h3>LEI</h3>
+                <p>For  customers subject to the European Markets and Infrastructure Regulations  (EMIR) or markets in Financial Instruments Regulation (MiFIR), should you request that IBKR apply for a Legal Entity Identifier (LEI) on  your behalf, your account will be assessed a one-time fee for the application  as well as an annual maintenance fee assessed on or shortly after the yearly  anniversary date of your LEI application. The costs are reflected below.</p>
+                <div class="table-responsive">
+                    <table cellspacing="0" cellpadding="0" border="0" width="100%" class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th width="50%">Type</th>
+                                <th>Fee</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Application Fee</td>
+                                <td>USD <span class="text-price">60</span> <sup>1, 2</sup></td>
+                            </tr>
+                            <tr>
+                                <td>Renewal Fee </td>
+                                <td>USD <span class="text-price">40</span> <sup>1, 2</sup></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>For more information on EMIR and the LEI, please refer to <a href="https://guides.interactivebrokers.com/am/Default.htm#am/manageaccount/emirandleiinformation.htm" target="_blank" class="link-generic">https://guides.interactivebrokers.com/am/Default.htm#am/manageaccount/emirandleiinformation.htm </a></p>
+                                <p>For more information on MIFIR and the LEI, please refer to <a href="http://ibkb.interactivebrokers.com/article/2974" target="_blank" class="link-generic">http://ibkb.interactivebrokers.com/article/2974</a></p>
+                                <div class="notes">
+                    <p><strong>Notes:</strong></p>
+                    <ol>
+                        <li>Charged in the base currency of the account.</li>
+                        <li>The above fee includes a USD 11 surcharge paid to the Global Entity Identifier Foundation (GLEIF).</li>
+                    </ol>
+                </div>
+                <br>
+                <br>
+                <!-- Archived Statements  --------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+                <h3>Archived Statements</h3>
+                <!--<h5>North America</h5>-->
+                <div class="table-responsive">
+                    <table cellspacing="0" cellpadding="0" border="0" width="100%" class="table table-striped table-bordered">
+                        <thead>
+                            <tr class="subheader">
+                                <th colspan="3">America</th>
+                            </tr>
+                            <tr>
+                                <th width="50%">Currency</th>
+                                <th width="50%">Archived Statements<sup>1</sup></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>USD</td>
+                                <td>USD <span class="text-price">25.00</span>/first statement, <br />
+                                    USD <span class="text-price">5.00</span>/each additional statement.</td>
+                            </tr>
+                            <tr>
+                                <td>CAD</td>
+                                <td>CAD <span class="text-price">25.00</span>/first statement, <br />
+                                    CAD <span class="text-price">5.00</span>/each additional statement.</td>
+                            </tr>
+                            <tr>
+                                <td>MXN</td>
+                                <td>MXN <span class="text-price">300.00</span>/first statement, <br />
+                                    MXN <span class="text-price">60.00</span>/each additional statement.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!--<h5>Europe</h5>-->
+                <div class="table-responsive">
+                    <table cellspacing="0" cellpadding="0" border="0" width="100%" class="table table-striped table-bordered">
+                        <thead>
+                            <tr class="subheader">
+                                <th colspan="3">Europe Middle East Africa (EMEA)</th>
+                            </tr>
+                            <tr>
+                                <th width="50%">Currency</th>
+                                <th width="50%">Archived Statements<sup>1</sup></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>CHF</td>
+                                <td>CHF <span class="text-price">25.00</span>/first statement, <br />
+                                    CHF <span class="text-price">5.00</span>/each additional statement.</td>
+                            </tr>
+                            <tr>
+                                <td>EUR</td>
+                                <td>EUR <span class="text-price">20.00</span>/first statement, <br />
+                                    EUR <span class="text-price">5.00</span>/each additional statement.</td>
+                            </tr>
+                            <tr>
+                                <td>GBP</td>
+                                <td>GBP <span class="text-price">15.00</span>/first statement, <br />
+                                    GBP <span class="text-price">3.00</span>/each additional statement.</td>
+                            </tr>
+                            <tr>
+                                <td>SEK</td>
+                                <td>SEK <span class="text-price">165.00</span>/first statement, <br />
+                                    SEK <span class="text-price">35.00</span>/each additional statement.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!--<h5>Asia-Pacific</h5>-->
+                <div class="table-responsive">
+                    <table cellspacing="0" cellpadding="0" border="0" width="100%" class="table table-striped table-bordered">
+                        <thead>
+                            <tr class="subheader">
+                                <th colspan="3">Asia-Pacific</th>
+                            </tr>
+                            <tr>
+                                <th width="50%">Currency</th>
+                                <th width="50%">Archived Statements<sup>1</sup></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>AUD</td>
+                                <td>AUD <span class="text-price">25.00</span>/first statement, <br />
+                                    AUD <span class="text-price">5.00</span>/each additional statement.</td>
+                            </tr>
+                            <tr>
+                                <td>HKD</td>
+                                <td>HKD <span class="text-price">200.00</span>/first statement, <br />
+                                    HKD <span class="text-price">40.00</span>/each additional statement.</td>
+                            </tr>
+                            <tr>
+                                <td>JPY</td>
+                                <td>JPY <span class="text-price">2,200.00</span>/first statement <br />
+                                    (For IB-JP customers: JPY <span class="text-price">2,420</span> / first statement)<br />
+                                    JPY <span class="text-price">450.00</span> each additional statement.<br />
+                                    (For IB-JP customers: JPY <span class="text-price">495.00</span> incl. tax for each additional statement)</td>
+                            </tr>
+                            <tr>
+                                <td>SGD</td>
+                                <td>SGD <span class="text-price">25.00</span>/first statement, <br />
+                                    SGD <span class="text-price">5.00</span>/each additional statement.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="notes">
+                    <p><strong>Notes:</strong></p>
+                    <ul>
+                        <li>A processing fee of EUR 30.00 per request is charged for any Withholding Tax Voucher request for dividends paid on German stocks.</li>
+                        <li>A processing fee of EUR 50.00 per request is charged for any Withholding Tax Voucher requests for dividends paid on French stocks.</li>
+<li>Value-Added Tax (VAT), Goods and Service Tax (GST) or other consumption taxes will be separately applied to commissions and services, where applicable, based on the prevailing rates.
+</li>
+                    </ul>
+                    <ol>
+                        <li>The prior 7 years of statements are available.<br>
+                            For additional information on availability of Daily and Monthly statements <a href="../accounts/statementArchive.html" target="_self" class="link-generic">click here</a>.</li>
+                    </ol>
+                </div>
+                <br />
+                <br />
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END   Account Maintenance and/or Reporting Fees  -----------------------------------------------------------------------------------------------------------------------------------------  -->
+</div>
+<!-- FOOTER START  -->
+<footer class="footer noprint" id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p>Interactive Brokers ®, IB<sup>SM</sup>, InteractiveBrokers.com ®, Interactive Analytics ®, IB Options Analytics<sup>SM</sup>, IB SmartRouting<sup>SM</sup>, PortfolioAnalyst ®, IB Trader Workstation<sup>SM</sup> and One World, One Account<sup>SM</sup> are service marks and/or trademarks of Interactive Brokers LLC. Supporting documentation for any claims and statistical information will be provided upon request. Any trading symbols displayed are for illustrative purposes only and are not intended to portray recommendations.</p>
+                <p>The risk of loss in online trading of stocks, options, futures, currencies, foreign equities, and fixed income can be substantial.</p>
+                <p>Options involve risk and are not suitable for all investors. For more information read the <a href="https://www.theocc.com/about/publications/character-risks.jsp" rel="noreferrer noopener" target="_blank">Characteristics and Risks of Standardized Options</a>, also known as the options disclosure document (ODD). Alternatively, please contact <a href="../support/customer-servicef763.html?p=contact" target="_self">IB Customer Service</a> to receive a copy of the ODD. Before trading, clients must read the relevant risk disclosure statements on our <a href="../general/homepage-disclosures.html" target="_self">Warnings and Disclosures page</a>. Trading on margin is only for experienced investors with high risk tolerance. You may lose more than your initial investment. For additional information about rates on margin loans, please see <a href="../trading/margin-rates.html" target="_self">Margin Loan Rates</a>. Security futures involve a high degree of risk and are not suitable for all investors. The amount you may lose may be greater than your initial investment. Before trading security futures, read the <a href="../general/homepage-disclosures.html" target="_self">Security Futures Risk Disclosure Statement</a>. Structured products and fixed income products such as bonds are complex products that are riskier and not suitable for all investors. Before trading, please read the <a href="../general/homepage-disclosures.html" target="_self">Risk Warning and Disclosure Statement</a>.</p>
+                <p>For information on the IBKR ATS, please <a href="https://www.sec.gov/divisions/marketreg/form-ats-n-filings.htm#ats-n" rel="noreferrer noopener" target="_blank">visit the SEC site</a>.</p>
+<p>36 countries include both countries and territories.</p>
+            </div>
+        </div>
+        <div class="footer-site-links" id="footerSiteLinks">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>Account</p>
+                    <ul>
+                    <li><a href="https://www.interactivebrokers.co.uk/sso/Login?RL=1" target="_self">Log In</a></li>
+                    <li><a href="https://www.interactivebrokers.co.uk/Universal/Application" target="_self">Open an Account</a></li>
+                    <li><a href="https://www.interactivebrokers.co.uk/sso/Login?c=t" target="_self">Finish an Application</a></li>
+                    <li><a href="../accounts/account-guide.html" target="_self">Account Types</a></li>
+                    <li><a href="https://www.interactivebrokers.co.uk/Universal/Application?ft=T" target="_self">Free Trial</a></li>
+                    </ul>
+                    <p>Software & Downloads</p>
+                    <ul>
+                    <li><a href="../trading/tws.html#tws-software" target="_self">Trader Workstation</a></li>
+                    <li><a href="../trading/ibkr-desktop.html" target="_self">IBKR Desktop</a></li>
+                    <li><a href="../trading/tws-mobile.html#trytoday" target="_self">IBKR Mobile</a></li>
+                    <li><a href="../trading/ib-api.html#api-software" target="_self">APIs</a></li>
+                    </ul>    
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>Support</p>
+                    <ul>
+					<li><a href="../support/fund-my-account.html" target="_self">Fund Your Account</a></li>
+                    <li><a href="../support/individuals.html" target="_self">For Individuals</a></li>
+                    <li><a href="../support/institutions.html" target="_self">For Institutions</a></li>
+                    <li><a href="../support/institutional-sales-contacts4343.html?p=uk" target="_self">Institutional Sales Contacts</a></li>
+					<li><a href="../general/contact/ibot-container.html" target="_self">Browse our FAQs</a></li>
+					<li><a href="../software/systemStatus.html" target="_self">System Status</a></li>
+                    </ul>
+                    <p>Vendor Support</p>
+                    <ul>
+                    <li><a href="../general/about/supplier-information.html" target="_self">Supplier Information</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>About Us</p>
+                    <ul>
+                    <li><a href="../general/awards.html" target="_self">Awards</a></li>
+                    <li><a href="../general/about/careers-splash.html" target="_self">Careers</a></li>
+                    <li><a href="../general/about/info-and-history.html" target="_self">Information and History</a></li>
+                    <li><a href="https://investors.interactivebrokers.com/ir/main.php" target="_blank" rel="noreferrer noopener">Investor Relations</a></li>
+                    <li><a href="../about/news-at-ibkr.html" target="_self">News @ IBKR</a></li>
+                    <li><a href="../general/about/press-and-media.html" target="_self">Press and Media</a></li>
+                    <li><a href="../accounts/legalDocuments/brokerPerformanceReports.html" target="_self">Regulatory Reports</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>Follow Us on Social Media</p>
+                    <ul>
+                        <li><a href="https://www.facebook.com/InteractiveBrokersEurope/" target="_blank" rel="noreferrer noopener"><i class="fab fa-facebook"></i> Facebook</a></li>
+                        <li><a href="https://www.instagram.com/interactivebrokers_europe" target="_blank" rel="noreferrer noopener"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="https://twitter.com/IBKR_Europe" target="_blank" rel="noreferrer noopener"><i class="fab fa-x-twitter"></i> Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-disclosure-links" id="footerDisclosureLinks">
+            <div class="row">
+                <div class="col">
+                    <ul>
+                    <li><a href="../accounts/legalDocuments/anti-fraud-notice.html" target="_self">Anti-Fraud Notice</a></li>
+                    <li><a href="../accounts/legalDocuments/custIdentificationNotice.html" target="_self">Customer Identification Program Notice</a></li>
+                    <li><a href="../general/warnings-on-frauds-and-scams.html" target="_self">Warning on Frauds and Scams</a></li>
+                    <li><a href="../accounts/forms-and-disclosures-client-agreements.html" target="_self">Forms and Disclosures</a></li>
+                    <li><a href="../accounts/legalDocuments/accessibility-policy.html" target="_self">Accessibility Statement</a></li>
+                    <li><a href="../accounts/legalDocuments/privacy.html" target="_self">Privacy</a></li>
+                    <li><a href="../sitemap/index.html" target="_self">Site Map</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-entities" id="footerEntities">
+            <div class="row">
+                <div class="col">
+                    <div class="footer-entity">
+                        <!-- IBKR IE -->
+                        <p class="entity-name"><a href="../home.html" target="_self">Interactive Brokers Ireland Limited</a></p>
+                        <p>Is regulated by the <a href="https://www.centralbank.ie/" target="_blank" rel="noreferrer noopener">Central Bank of Ireland</a> (CBI, reference number C423427), registered with the Companies Registration Office (CRO, registration number 657406), and is a member of the Irish Investor Compensation Scheme (ICS).<br> <strong>Registered Office:</strong> North Dock One, 91/92 North Wall Quay, Dublin 1 D01 H7V7, Ireland.<br> <strong>Website:</strong> <a href="../home.html" target="_self">www.interactivebrokers.ie</a></p>
+                        <p class="footer-entities-link"><a href="#collapseEntities" target="_self" class="collapsed" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseEntities">Information on Other Interactive Brokers Affiliates</a></p>
+                    </div>
+                    <div class="footer-entities-list collapse" id="collapseEntities">
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <!-- IBKR LLC -->
+                                <p class="entity-name"><a href="https://www.interactivebrokers.com/en/home.php?nored=t" target="_self">Interactive Brokers LLC</a></p>
+                                <p>Is a member <a  rel="noreferrer noopener" target="_blank"  href="https://www.nyse.com/">NYSE</a> - <a href="https://www.finra.org/" rel="noreferrer noopener"  target="_blank">FINRA</a> - <a href="https://www.sipc.org/" rel=" noreferrer noopener" target="_blank">SIPC</a> and regulated by the US Securities and Exchange Commission and the Commodity Futures Trading Commission.<br> <strong>Headquarters:</strong> One Pickwick Plaza, Greenwich, CT 06830 USA<br> <strong>Website:</strong> <a href="https://www.interactivebrokers.com/en/home.php?nored=t" target="_self">www.interactivebrokers.com</a></p>
+                                <!-- IBKR CA -->
+                                <p class="entity-name"><a href="https://www.interactivebrokers.ca/en/home.php?nored=t" target="_self">Interactive Brokers Canada Inc.</a></p>
+                                <p>Is a member of the                                 <a href="https://www.ciro.ca/" target="_blank" rel="noreferrer noopener">Canadian Investment Regulatory Organization (CIRO)</a> 
+                                 
+                                and Member - <a href="https://www.cipf.ca/" target="_blank" rel="noreferrer noopener">Canadian Investor Protection Fund.</a><br> <strong>Registered Office:</strong> 1800 McGill College Avenue, Suite 2106, Montreal, Quebec, H3A 3J6, Canada.<br> <strong>Website:</strong> <a href="https://www.interactivebrokers.ca/en/home.php?nored=t" target="_self">www.interactivebrokers.ca</a></p>
+                                <!-- IBKR UK -->
+                                <p class="entity-name"><a href="https://www.interactivebrokers.co.uk/en/home.php?nored=t" target="_self">Interactive Brokers (U.K.) Limited</a></p>
+                                <p>Is authorised and regulated by the <a href="https://www.fca.org.uk/" target="_blank" rel="noreferrer noopener">Financial Conduct Authority</a>. FCA register entry number 208159. Incorporated in England & Wales under company number 03958476. <a href="https://www.fca.org.uk/firms/financial-services-register" target="_blank" rel="noreferrer noopener">[https://www.fca.org.uk/firms/financial-services-register]</a><br> <strong>Registered Office:</strong> 20 Fenchurch Street, Floor 12, London EC3M 3BY.<br> <strong>Website:</strong> <a href="https://www.interactivebrokers.co.uk/en/home.php?nored=t" target="_self">www.interactivebrokers.co.uk</a></p>
+                                <!-- IBKR AUS -->
+                                <p class="entity-name"><a href="https://www.interactivebrokers.com.au/en/home.php?nored=t" target="_self">Interactive Brokers Australia Pty. Ltd.</a></p>
+                                <p>ABN 98 166 929 568 is licensed and regulated by the <a href="https://asic.gov.au/" target="_blank" rel="noreferrer noopener">Australian Securities and Investments Commission</a> (AFSL: 453554) and is a participant of <a href="https://www.asx.com.au/" target="_blank" rel="noreferrer noopener">ASX</a>, <a href="https://www.asx.com.au/" target="_blank" rel="noreferrer noopener">ASX 24</a> and <a href="https://www.cboe.com.au/" target="_blank" rel="noreferrer noopener">Cboe Australia</a>.<br> <strong>Registered Office:</strong> Level 11, 175 Pitt Street, Sydney, New South Wales 2000, Australia.<br> <strong>Website:</strong> <a href="https://www.interactivebrokers.com.au/en/home.php?nored=t" target="_self">www.interactivebrokers.com.au </a></p>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <!-- IBKR HK -->
+                                <p class="entity-name"><a href="https://www.interactivebrokers.com.hk/en/home.php?nored=t" target="_self">Interactive Brokers Hong Kong Limited</a></p>
+                                <p>Is regulated by the Hong Kong Securities and Futures Commission, and is a member of the <a href="https://www.hkex.com.hk/" target="_blank" rel="noreferrer noopener">SEHK</a> and the <a href="https://www.hkex.com.hk/" target="_blank" rel="noreferrer noopener">HKFE</a>.<br> <strong>Registered Office:</strong> Suite 1512, Two Pacific Place, 88 Queensway, Admiralty, Hong Kong SAR.<br> <strong>Website:</strong> <a href="https://www.interactivebrokers.com.hk/en/home.php?nored=t" target="_self">www.interactivebrokers.com.hk</a></p>
+                                <!-- IBKR IN -->
+                                <p class="entity-name"><a href="https://www.interactivebrokers.co.in/en/home.php?nored=t" target="_self">Interactive Brokers India Pvt. Ltd.</a></p>
+                                <p>Is a trading member of <a href="https://www.nseindia.com/" target="_blank" rel="noreferrer noopener">NSE</a>, <a href="https://www.bseindia.com/" target="_blank" rel="noreferrer noopener">BSE</a>, and depository participant of <a href="https://nsdl.co.in/" target="_blank" rel="noreferrer noopener">NSDL</a>. <a href="https://www.sebi.gov.in/" target="_blank" rel="noreferrer noopener">SEBI</a> Registration No. INZ000217730; NSDL: IN-DP-602-2021. CIN-U67120MH2007FTC170004.<br> <strong>Registered Office:</strong> 502/A, Times Square, Andheri Kurla Road, Andheri East, Mumbai 400059, India.<br> <strong>Phone:</strong> +91-22-61289888 <span class="pipe">|</span> <strong>Fax:</strong> +91-22-61289898.<br> <strong>Website:</strong> <a href="https://www.interactivebrokers.co.in/en/home.php?nored=t" target="_self">www.interactivebrokers.co.in</a></p>
+                                <!-- IBKR JP -->
+                                <p class="entity-name"><a href="https://www.interactivebrokers.co.jp/en/home.php?nored=t" target="_self">Interactive Brokers Securities Japan Inc.</a></p>
+                                <p>Is regulated by Kanto Local Finance Bureau (Registration No.187) and is a member of <a href="https://www.jsda.or.jp/" target="_blank" rel="noreferrer noopener">Japan Securities Dealers Association</a> and <a href="https://www.nisshokyo.or.jp/" target="_blank" rel="noreferrer noopener">The Commodity Futures Association of Japan</a>.<br> <strong>Registered Office:</strong> Kasumigaseki Building 25F, 2-5 Kasumigaseki 3-chome, Chiyoda-ku, Tokyo, 100-6025 Japan.<br> <strong>Phone:</strong> +81 03-4590-0711 <em>(On business days from 8:30-17:30 JST)</em>.<br> <strong>Website:</strong>  <a href="https://www.interactivebrokers.co.jp/en/home.php?nored=t" target="_self">www.interactivebrokers.co.jp</a></p>
+                                <!-- IBKR SG -->
+<p class="entity-name"><a href="https://www.interactivebrokers.com.sg/en/home.php" target="_self">Interactive Brokers Singapore Pte. Ltd.</a></p>
+<p>Is licensed and regulated by the Monetary Authority of Singapore (Licence No. CMS100917).<br> <strong>Registered Office:</strong> 
+1 Harbourfront Place #12-01/03, Harbourfront Tower 1, Singapore 098633.
+<br> <strong>Website:</strong>  <a href="https://www.interactivebrokers.com.sg/en/home.php" target="_self">www.interactivebrokers.com.sg</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- FOOTER END  -->
+<!-- MODAL START | ABOUT IB GROUP ---------------------------------------------------------------------------------------------------- -->
+<div class="modal fade" id="modalAlert" tabindex="-1" role="dialog" aria-labelledby="modalAboutIBGroup">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content modal-primary">
+			<div class="modal-header">
+				<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+				<h4 class="modal-title" ><i class="fas fa-exclamation-circle"></i> Notice</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col">
+						<p class="message">message</p><!-- You will be brought to the website of our affiliate-->
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<div class="row">
+					<div class="col-12 col-sm-3 order-2 order-sm-1">
+						<div class="panel-btn-left"><a href="javascript:void(0);" data-bs-dismiss="modal" class="btn btn-secondary">Stay</a></div>
+					</div>
+					<div class="col-12 col-sm-9 order-1 order-sm-2">
+						<div class="panel-btn-right goto"><a href="javascript:void(0);" onclick=""  data-bs-dismiss="modal"  class="btn btn-primary">Go</a></div> 
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#modalAlert').on('show.bs.modal', function (event) {
+	  var button = $(event.relatedTarget) // Button that triggered the modal
+      let myMessage = button.data('mymessage');
+      /*let myLink = "location.href='"+button.data('mytargetlink')+"'"; */
+      let myLink = "window.open('"+button.data('mytargetlink')+"')"; 
+	  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+	  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+	  var modal = $(this)
+	  modal.find('.modal-body .message').text( myMessage );
+	  modal.find('.modal-footer .goto a').attr( "onclick", myLink );
+
+	})
+});
+</script><script>
+if(window.location.href.includes('conf=am')) {
+document.querySelector("#ibkr-header").style.display = "none";
+document.querySelector("#footer").style.display = "none";
+}
+
+</script>
+<!-- MODAL START | MODAL  -->
+<style type="text/css">
+#modalNewsAtIBKR .modal-dialog .modal-content .modal-header {
+    border-top: 1px solid var(--border-color) !important;
+}
+</style>
+<div class="modal fade" id="modalNewsAtIBKR" tabindex="-1" aria-labelledby="newsibkrLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+          <div class="modal-header">
+        <p class="modal-title" id="newsibkrLabel">Subscribe to News at IBKR</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+          <div class="modal-body">
+        <div class="row">
+              <div class="col">
+                <h2 class="mt-10">A Note from the Founder of Interactive Brokers</h2>
+                <p class="fs-6 lh-6 mt-10">Thank you for visiting Interactive Brokers. I appreciate your interest in our firm and the time you've taken to learn more about us.</p>
+                <p class="fs-6 lh-6 mt-20">If you'd like to stay connected, I invite you to subscribe to our quarterly update. In it, we share insights, platform enhancements, and tools to help you make better investment decisions.</p>
+                <p class="fs-6 lh-6 mt-20">For nearly 50 years, we've been committed to empowering investors through technology, transparency, and low costs. We're here to support your investing journey.</p>
+                <p class="fs-6 lh-6 mt-30 mb-20">Thomas Peterffy<br>
+                      Founder and Chairman<br>
+                      Interactive Brokers</p>
+                <div class="tab-content news-ibkr-form">
+                  <form id="contact" name="contact" class="needs-validation" novalidate="">
+                    <div class="row mt-20">
+                          <div class="col-12 col-lg-8 form-column-padding">
+                            <div class="mt-20 form-group mb-20">
+                              <label class="form-label" for="news_ibkr_email">Email<span class="required"></span></label>
+                              <input type="email" class="form-control" name="news_ibkr_email" aria-label="news_ibkr_email" id="news_ibkr_email" placeholder="Email address" title="This field is required" required="">
+                              <div id="newsibkrform-invalid-email" class="invalid-feedback"></div>
+                            </div>
+                      </div>
+                    </div>
+                    <div class="row mt-20" style="display:none">
+                          <div class="col-12 col-lg-8 form-column-padding">
+                            <div class="mt-20 form-group mb-20">
+                              <label class="form-label" for="news_ibkr_name">Name<span class="required"></span></label>
+                              <input type="name" class="form-control" name="news_ibkr_name" aria-label="news_ibkr_name" id="news_ibkr_name" placeholder="Name" title="This field is required" required="">
+                              <div id="newsibkrform-invalid-name" class="invalid-feedback">Please provide your name</div>
+                            </div>
+                      </div>
+                    </div>
+
+                    <div class="row pt-10">
+                      <div class="col">
+                        <hr>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12 col-sm-3 order-2 order-sm-1">
+                        <div class="d-flex justify-content-start">
+                            <p><a href="javascript:void(0);" target="_self" id="newsibkrform-cancel" class="btn btn-default" role="button" data-bs-dismiss="modal">Cancel</a></p>
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-9 order-1 order-sm-2">
+                        <div class="d-flex justify-content-end">
+                            <p><a href="javascript:void(0);" target="_self" id="newsibkrform-submit" type="submit" class="btn btn-primary  submit-btn" role="button">Submit</a></p>
+                            <p id="newibkrform-success" style="display:none;padding-top:10px;">We received your email. Thank you for your interest.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+  </div>
+</div>
+<script>
+$(function() {
+ setTimeout(function() {
+  $('#modalNewsAtIBKR').modal('show');
+ }, 2000);
+});
+$('#modalNewsAtIBKR').on('hidden.bs.modal', function () {
+  setCookie("IB_EMPRO", '1', 90, '.interactivebrokers.ie');
+});
+$('#newsibkrform-submit').click(function() {
+  $('#newsibkrform-invalid-email').hide();
+  $.ajax({
+    type: "POST",
+    url: '/response_handlers/email-pros/index.php',
+      dataType: "json",
+      data: {
+        'email': $('#news_ibkr_email').val(),
+        'name': $('#news_ibkr_name').val(),
+        'emt': 'e68f4997e80eebef6537df03e0f560e6'
+      },
+      success: function(r) {
+        if(r && r.success)
+        {
+          $('#newsibkrform-submit').hide();
+          $('#newsibkrform-cancel').hide();
+          $('#newibkrform-success').show();
+          setCookie("IB_EMPRO", '1', 365, '.interactivebrokers.ie');
+        } else {
+          $('#newsibkrform-invalid-email').show();
+          $('#newsibkrform-invalid-email').text(r.msg);
+        }
+      },
+      error: function(xhr, status, err) {
+        $('#newsibkrform-invalid-email').text('There was an error submitting your email. Please try again.');
+      }
+    });
+});
+</script>
+<!-- MODAL END | MODAL  -->
+<!-- SHARE ON SOCIAL ---------------------------------------------------------------------------------------------------->
+<div class="social-sidebar animated fadeInLeft noprint">
+	<span><i class="fa fa-chevron-left"></i><i class="fa fa-chevron-right"></i></span>
+	<div class="icon-set">
+		<p>SHARE</p>
+		<div class="share-icon"><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.interactivebrokers.com%2fen%2findex.php%3ff%3d38209" target="_blank" rel="noreferrer noopener" title="Share on Facebook" aria-label="Share on Facebook" class="icon-facebook"><i class="fab fa-facebook-square"></i></a></div>
+		<div class="share-icon"><a href="https://twitter.com/intent/tweet?text=Interactive+Brokers&amp;url=https%3A%2F%2Fwww.interactivebrokers.com%2Fen%2Findex.php%3ff%3d38209&amp;related=" target="_blank" rel="noreferrer noopener" title="Share on Twitter" aria-label="Share on Twitter" class="icon-twitter"><i class="fab fa-x-twitter"></i></a></div>
+		<div class="share-icon"><a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwww.interactivebrokers.com%2fen%2findex.php%3ff%3d38209&amp;title=Interactive+Brokers&amp;summary=Interactive+Brokers&amp;source=LinkedIn" target="_blank" rel="noreferrer noopener" title="Share on Linkedin" aria-label="Share on Linkedin" class="icon-linkedin"><i class="fab fa-linkedin"></i></a></div>
+		<div class="share-icon"><a href="javascript:void(0);" target="_self" title="Share by Email" aria-label="Share by Email" name="btn_trigger" data-bs-toggle="modal" data-bs-target="#emailModal" id="38209" onClick="emailCookie();" class="icon-email"><i class="far fa-envelope"></i></a></div>
+	</div>
+</div>
+<!-- MODAL START | SHARE ON SOCIAL ---------------------------------------------------------------------------------------------------->
+<div class="modal fade noprint" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="emailModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button id="cls_frm_1" type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="gridSystemModalLabel"><i class="far fa-envelope text-gray"></i> Email</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col">
+						<form>
+							<div class="form-group">
+								<label for="_to" class="control-label">To:</label> <span id="_err_to" style="color: red;"></span>
+								<input type="text" class="form-control" id="_to">
+							</div>
+							<div class="form-group">
+								<label for="_from" class="control-label">From:</label> <span id="_err_frm" style="color: red;"></span>
+								<input type="text" class="form-control" id="_from">
+							</div>
+							<div class="form-group">
+								<label for="_subject" class="control-label">Subject:</label> <span id="_err_subject" style="color: red;"></span>
+								<input type="text" class="form-control" id="_subject" value="Interactive Brokers">
+							</div>
+							<div class="form-group">
+								<textarea class="form-control" id="_content" style="height:200px;"></textarea>
+							</div>
+							<p class="text-sm">URL: <span class="text-italic text-black">www.interactivebrokers.ie/en/index.php?f=<span id='vid'></span></span></p>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<div class="row">
+					<div class="col-6">
+						<div align="left">
+							<button id="cls_frm_2" type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
+						</div>
+					</div>
+					<div class="col-6">
+						<div align="right">
+							<button type="button" class="btn btn-primary" id="send">Send</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<input type="hidden" id="_page_id" name="_page_id" value="38209" />
+</div>
+<!-- MODAL END | SHARE ON SOCIAL ----------------------------------------------------------------------------------------------------> 
+<script type="text/javascript" src="../../insights/ibtr_share2667.js?t=v1"></script>
+<script>
+$(document).ready(function() {
+	 $(".social-sidebar span").click(function(){
+		 $(".social-sidebar div").toggleClass("social-sidebar-hide");
+		 $(".social-sidebar span").toggleClass("toggle-arrow");
+ 	 });
+});
+function emailCookie() {
+	if (document.cookie.indexOf("IB_EM_SH") == -1) {
+		var ex=new Date();
+		ex.setTime(ex.getTime()+86400000);
+		document.cookie ='IB_EM_SH='+1+';expires='+ex.toGMTString()+';path=/;domain=';
+	}
+}
+</script>
+<!-- SCRIPTS FOOTER ---------------------------------------------------------------------------------------------------- -->
+<script type="text/javascript" src="../../scripts/common/js/zeynep-2.2.0/zeynep.js"></script>
+<script type="text/javascript" src="../../scripts/common/js/lazyload/lazyload.min.js"></script>
+<script type="text/javascript" src="../../search/conversions.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    
+    // GATHER HEIGHT OF HEADER
+    var headerHeight = $("div#ibkr-header").outerHeight();
+    // GATHER HEIGHT OF DISCLOSURES
+    var disclosureHeight = $("section#UKProductDisclosure, section#TurbosDisclosure").outerHeight();
+    $("section#UKProductDisclosure").css("top", headerHeight);
+    $("section#TurbosDisclosure").css("top", headerHeight);
+    // SET CONTENTS DIV PADDING TOP
+    $("div#contents").css("padding-top", disclosureHeight);
+    // OVERRIDE TOP OF DISCLOSURE AND PADDING-TOP OF CONTENTS ON WINDOW RESIZE
+    $(window).resize(function() {
+        var headerHeight = $("div#ibkr-header").outerHeight();
+        var disclosureHeight = $("section#UKProductDisclosure, section#TurbosDisclosure").outerHeight();
+        var headerHeightDelta = headerHeight - disclosureHeight;
+        $("section#UKProductDisclosure").css("top", disclosureHeight + headerHeightDelta);
+        $("section#TurbosDisclosure").css("top", disclosureHeight + headerHeightDelta);
+        $("div#contents").css("padding-top", disclosureHeight);
+    });
+
+    // OVERRIDE TOP OF DISCLOSURE AND PADDING-TOP OF CONTENTS ON BANNER CLOSE
+    $("#bannerRegionSelector a.btn-close").click(function() {
+        setTimeout(function() {
+            var headerHeight = $("div#ibkr-header").outerHeight();
+            $("section#UKProductDisclosure").css("top", headerHeight);
+            $("section#TurbosDisclosure").css("top", headerHeight);
+            $("div#contents").css("padding-top", disclosureHeight);
+        },500);
+    });
+    // MOBILE MENU
+    $(function() {
+        // Initilize mobile menu
+        var zeynep = $('.menu-mobile').zeynep({
+            opened: function () {
+            console.log('the side menu opened')
+        },
+        closed: function () {
+            console.log('the side menu closed')
+            }
+        })
+        // Dynamically bind closing event
+        zeynep.on('closing', function () {
+            console.log('this event is dynamically binded')
+        })
+        // Mobile menu close on overlay click
+        $('.website-overlay').on('click', function () {
+            zeynep.close()
+        })
+        // Mobile menu close on button click
+        $('.btn-close').on('click', function () {
+            zeynep.close()
+        })
+        // Mobile menu open on navbar-toggler click
+        $('.navbar-toggler').on('click', function () {
+            zeynep.open()
+        })
+    })
+});
+</script>
+<!-- STYLES FOOTER ---------------------------------------------------------------------------------------------------- -->
+<link rel="preload" as="font" type="font/woff2" href="../../fonts/fontawesome-6.4.2/webfonts/fa-brands-400.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="../../fonts/fontawesome-6.4.2/webfonts/fa-regular-400.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="../../fonts/fontawesome-6.4.2/webfonts/fa-solid-900.woff2" crossorigin>
+<link rel="preload" as="style" href="../../css/ibkr/website-print.min.css">
+<link rel="stylesheet" type="text/css" media="print" href="../../css/ibkr/website-print.min.css">
+<style type="text/css">
+@import url('../../css/fontawesome-6.4.2/all.min.css') layer(vendors);
+@import url('../../css/animate-3.7.2/animate.min.css') layer(vendors);
+@import url('../../css/bootstrap-switch-3.3.2/bootstrap-switch.min.css') layer(vendors);
+@import url('../../css/icheck-1.0.2/icheck.css') layer(vendors);
+</style></body>
+
+<!-- Mirrored from www.interactivebrokers.ie/en/pricing/other-fees.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Sep 2025 09:37:16 GMT -->
+</html>

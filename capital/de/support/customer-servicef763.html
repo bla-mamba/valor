@@ -1,0 +1,1832 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="de" data-theme="light">
+
+<!-- Mirrored from www.interactivebrokers.ie/de/support/customer-service.php?p=contact by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Sep 2025 09:18:24 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8">
+<title>Kundendienst | Interactive Brokers Ireland</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"> 
+<meta name="description" content="Der Kundendienst von Interactive Brokers: Kontaktinformationen und Adressen sowie Richtlinie zu Fehlern/Irrt&#252;mern bei Transaktionen">
+<meta name="keywords" content="Interactive Brokers Kundendienst, Kontakt, Kundendienst, Widerrufsrichtlinie, Dokumente einsenden, Dokumente einreichen, Kontaktdaten, Kontaktinformationen, &#214;ffnungszeiten, Zeiten, Supportzeiten, Telefonnummern, Infos zu technischem Support, Kundens">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta http-equiv="expires" content="-1">
+<meta name="robots" content="index, follow">
+<meta http-equiv="pragma" content="no-cache">
+<meta name="apple-mobile-web-app-title" content="IBKR">
+<link rel="icon" sizes="192x192" href="../../images/web/favicons/home-screen-icon-192x192.png" />
+<link rel="icon" sizes="128x128" href="../../images/web/favicons/home-screen-icon-128x128.png" />
+<link rel="apple-touch-icon" sizes="57x57" href="../../images/web/favicons/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="../../images/web/favicons/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="../../images/web/favicons/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="../../images/web/favicons/apple-touch-icon-144x144.png" />
+<!-- SCRIPTS HEAD  -->
+<script type="text/javascript" src='../../scripts/common/js/jquery-3.6.1/jquery.min.js'></script>
+<script type="text/javascript">
+function createScriptElement(data) {
+ if (typeof data == "undefined") {
+  return;
+ }
+ var element = document.createElement("SCRIPT");
+ element.type = "text/javascript";
+ if (typeof data.id != "undefined") {
+  element.id = data.id;
+ }
+ if (typeof data.source != "undefined") {
+  element.src = data.source;
+ }
+ if (typeof data.loadfunction == "function") {
+  element.onload = data.loadfunction;
+ }
+ document.head.appendChild(element);
+}
+createScriptElement({ source : "/scripts/common/js/bootstrap-5.2.2/bootstrap.bundle.min.js", loadfunction: bsLoaded  });
+createScriptElement({ source : "/scripts/common/js/lib.js?ver=9" });
+function storeCookie()
+{
+ if(typeof(Storage) !== 'undefined')
+ {
+   if(localStorage.getItem('web') !== null)
+   {
+     localStorage.removeItem('web');
+   }
+ }
+}
+function bsLoaded() {
+  createScriptElement({ source : "/scripts/common/js/appear/appear.min.js?ver=1" });
+  createScriptElement({ source : "/scripts/common/js/easing/easing.min.js?ver=1" });
+  createScriptElement({ source : "/scripts/common/js/parallax/parallax.min.js?ver=1" });
+  createScriptElement({ source : "/scripts/common/js/uitotop/uitotop.min.js?ver=1", loadfunction: uiLoaded });
+}
+function uiLoaded() {
+  createScriptElement({ source : "/scripts/common/js/twsUtils.js?ver=2" });
+  createScriptElement({ source : "/scripts/common/js/design/design.js?ver=1" }); 
+}
+</script>
+<script type="text/javascript">
+$(function() {
+ if (document.cookie.indexOf("IB_SEARCH") == -1)
+ {
+  var ex=new Date();
+  ex.setTime(ex.getTime()+86400000);
+  document.cookie ='IB_SEARCH='+Math.floor(new Date().getTime()/1000)+';expires='+ex.toGMTString()+';path=/;domain=.interactivebrokers.ie';
+ }
+  let nex=new Date();
+  nex.setTime(nex.getTime()+86400000);
+    document.cookie ='IB_QD=0;expires='+nex.toGMTString()+';path=/;domain=.interactivebrokers.ie';
+  
+  let excfd=new Date();
+  excfd.setTime(excfd.getTime()+86400000);
+  document.cookie ='IB_QD_CFD=0;expires='+excfd.toGMTString()+';path=/;domain=.interactivebrokers.ie';
+ $('div#langselector').find('a').each(function() {
+  $(this).click(function() {
+   var link = $(this).attr("href");
+   if(link.match(/\/(en|fr|de|es|it|ru|cn|jp)\//))
+   {
+    var langs = link.split("../../index.html");
+    if(langs[3] == 'en' || langs[3] == 'fr' || langs[3] == 'de' || langs[3] == 'es' || langs[3] == 'it' || langs[3] == 'ru' || langs[3] == 'cn' || langs[3] == 'jp')
+    {
+      var lang = langs[3];
+      if(lang == 'cn')
+      {
+        lang = 'zh_CN';
+      }
+      if(lang == 'jp')
+      {
+        lang = 'ja';
+      }
+      if(hasCookie("IB_LANG"))
+      {
+        deleteCookie("IB_LANG");
+      }
+      setCookie("IB_LANG", lang, 7, '.interactivebrokers.ie');
+    } else if(langs[1] == 'en') {
+      var lang = 'en';
+      setCookie("IB_LANG", lang, 7, '.interactivebrokers.ie');
+    }
+   }
+  });
+ });
+ $('p#bandaid-close').click(function() {
+  setCookie("IB_BANDAID", 1, 7, '.interactivebrokers.ie');
+ });
+ $('a#btnCloseBannerRegionSelector').click(function() {
+  setCookie("IB_REGION_SEL", 1, 30, '.interactivebrokers.ie');
+ });
+ $('a#btnCloseBannerRegionDifc').click(function() {
+  setCookie("IB_DIFC", 1, 30, '.interactivebrokers.ie');
+ });
+});
+</script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    if(localStorage.getItem('consentMode') ===  null){
+                    const consentMode = {
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'analytics_storage': 'denied'
+            };
+                localStorage.setItem('consentMode', JSON.stringify(consentMode));
+        gtag('consent', 'default', consentMode);
+    }
+    else {
+        gtag('consent', 'default', JSON.parse(localStorage.getItem('consentMode')));
+    }
+</script>
+<!-- STYLES HEAD -->
+<style type="text/css">
+@import url('../../css/bootstrap-5.2.2/bootstrap.min.css') layer(bootstrap);
+</style>
+<link rel="preload" as="style" href="../../css/ibkr/website.mince12.css?v=1848a6e12ea6c289ee1df7ee63749846">
+<link rel="stylesheet" type="text/css" media="all" href="../../css/ibkr/website.mince12.css?v=1848a6e12ea6c289ee1df7ee63749846">
+<link rel="preload" as="style" href="../../css/ibkr/theme-ibkr.min4f42.css?v=be9c72c0d328e7fc4987bce81f28981c">
+<link rel="stylesheet" type="text/css" media="all" href="../../css/ibkr/theme-ibkr.min4f42.css?v=be9c72c0d328e7fc4987bce81f28981c"><style type="text/css">
+/* PAGE TITLE ---------------------------------------------------------------------------------------------------- */
+section#page-title {
+	display: none !important;
+}
+.drop-links-xs a img {
+	width: 40px;
+}
+/* SUPPORT HEADER ---------------------------------------------------------------------------------------------------- */
+.contact-header {
+	position: relative;
+	background: url("../../images/web/contact-header-individuals.jpg") no-repeat center top #bec0bf;
+	background-size: cover;
+	padding: 60px 20px;
+}
+.contact-header .container {
+	position: relative;
+}
+.contact-header p a:hover {
+	text-decoration: underline;
+}
+.contact-header .search_box .search_form {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	margin: 10px 0px 20px 0px;
+	padding: 0px;
+}
+.contact-header .search_box .search_form input.form-control {
+	display: block;
+	margin: 0px;
+	padding: 10px;
+	width: 100%;
+	height: 56px;
+	font-weight: 400;
+	font-size: 1rem;
+	line-height: 1.25rem;
+	color: var(--dark);
+	box-shadow: none;
+	border-radius: 0px;
+	background-color: var(--white);
+}
+.contact-header .search_box .search_form button.searchsubmit {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	left: auto;
+	inset-inline-end: 16px;
+	margin: 1px 0px 0px 0px;
+	padding: 10px;
+	width: auto;
+	height: 54px;
+	font-size: 1.25rem;
+	line-height: 1.5rem;
+	color: var(--gray-60);
+	background-color: var(--white);
+	border: none;
+	box-shadow: none;
+	outline: none;
+	cursor: pointer;
+}
+/* MEDIA QUERY | EXTRA SMALL (0PX - 576PX) --------------------------------------------------------------------------- */
+@media (max-width: 575.98px) {
+/* SUPPORT HEADER ---------------------------------------------------------------------------------------------------- */
+.contact-header {
+	padding: 30px 20px;
+}
+#welcome-ctr .dflex {
+	display: block;
+}
+}
+/* MEDIA QUERY | EXTRA SMALL < 576px --------------------------------------------------------------------------------- */
+@media (max-width:575.98px) {
+#droplinks .icon {
+	min-width: 0px;
+}
+[dir="rtl"] .contact-header {
+	padding: 70px 40px;
+	text-align: center
+}
+}
+/* MEDIA QUERY | SMALL (576PX - 768PX) ------------------------------------------------------------------------------- */
+@media (min-width: 576px) and (max-width: 767.98px) {
+#droplinks .icon {
+	min-width: 0px;
+}
+/* SUPPORT HEADER ---------------------------------------------------------------------------------------------------- */
+.contact-header {
+	padding: 30px 20px;
+}
+[dir="rtl"] .contact-header .container .row {
+	justify-content: end;
+}
+}
+/* MEDIA QUERY | MEDIUM (768PX - 992PX) ------------------------------------------------------------------------------ */
+@media (min-width: 768px) and (max-width: 991.98px) {
+#droplinks .icon {
+	min-width: 100px;
+}
+/* SUPPORT HEADER ---------------------------------------------------------------------------------------------------- */
+[dir="rtl"] .contact-header .container .row {
+	justify-content: end;
+}
+}
+/* MEDIA QUERY | LARGE (992PX - 1200PX) ------------------------------------------------------------------------------ */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+	[dir="rtl"] .contact-header .container .row {
+	justify-content: end;
+}
+}
+/* MEDIA QUERY | EXTRA LARGE > 1200px -------------------------------------------------------------------------------- */
+@media (min-width: 1200px) {
+[dir="rtl"] .contact-header .container .row {
+	justify-content: end;
+}
+}
+.contact-iframe {
+	min-height: 680px;
+}
+</style>
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-d23de039-d518-4f10-9810-e68da4592744","rua.cook":"true","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="XE2AM-F37QZ-LYWQP-H8KRM-4SNX5",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"XE2AM-F37QZ-LYWQP-H8KRM-4SNX5";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n="false"=="true"?1:0,t="cookiepresent",a="eykumbc7mxv4o2gjetma-f-587c6f38b-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1168163","ak.ai":parseInt("665092",10),"ak.ol":"0","ak.cr":44,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"1d793751","ak.r":50930,"ak.a2":n,"ak.m":"a","ak.n":"essl","ak.bpcip":"38.21.70.0","ak.cport":49573,"ak.gh":"95.101.132.220","ak.quicv":"","ak.tlsv":"tls1.2","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1758012632","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==sN1sB+/kvviUH1A/vxGyHKypJnvQamM4pLh8FSGT+WBF/M3JCD4ZmxAptRc5Kj8Wrfm5Oszg4sK+s/1JbdszqWptkpgZfifW6cVALDh0Lwyzzp1Jsgh/VIWoQUqHTPx8UqAbwO5DQLnTfGPKSSFzzgUUlxNIm4H3VsmMFPi/44MxK83fYMwciI6/3VIIUqEXccefeqPYDQPMwtz2Xb+lUzUGoa7TusCfnowdZSPK/XBjziIz+4A6eN+upOx+QsdLs139Cv/DpmlB2Cgs9GE7HvSn5RVF/n2B7G2+5b5wIhJPdBtjSKuYjGjjxR7598/y8IQ21lquPDbVEWQvVVHUty04CatGqa0dJEMYwdHHOrenXilGKh0OixOHzXdYYLVf0hBzxhwsVy0ZKUCA500I5uJqfdG75pZsxTjzeUii2Mc=","ak.pv":"398","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.html","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak-2.html","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body>
+<div id="printheader"></div>
+<!-- HEADER START  -->
+<div class="ibkr-header" id="ibkr-header">
+    
+        
+<style type="text/css">
+.banner-risk-warning {
+    margin:0px;
+    padding:8px 0px;
+    width:100%;
+    height:auto;
+    background-color:#242424;
+}
+.banner-risk-warning p {
+    margin:0px;
+    padding:0px;
+    font-weight:400;
+    font-size:1.0rem;
+    line-height:1.25rem;
+    text-align:center;
+    color:#FFFFFF;
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | EXTRA SMALL (< 576PX) ---------------------------------------------------------------------------------------------------- */
+@media (max-width:575.98px) {
+    .banner-risk-warning {
+        padding:4px 0px;
+    }
+    .banner-risk-warning p {
+        font-size:0.8125rem;
+        line-height:1.0rem;
+    }
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | SMALL (576PX-767.98PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:576px) and (max-width:767.98px) {
+    .banner-risk-warning {
+        padding:4px 0px;
+    }
+    .banner-risk-warning p {
+        font-size:0.8125rem;
+        line-height:1.0rem;
+    }
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | MEDIUM (768PX-991.98PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:768px) and (max-width:991.98px) {
+    .banner-risk-warning {
+        padding:4px 0px;
+    }
+    .banner-risk-warning p {
+        font-size:0.8125rem;
+        line-height:1.0rem;
+    }
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | LARGE (992PX-1199.98PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:992px) and (max-width:1199.98px) {
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | EXTRA LARGE (>1200PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:1200px) {
+}
+</style>
+<div class="banner-risk-warning">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p>Das Investieren in Finanzprodukte ist mit Risiken verbunden.<br> Ihre Anlagen k&#246;nnen an Wert gewinnen oder verlieren und Verluste k&#246;nnen den Wert Ihrer urspr&#252;nglichen Investition &#252;bersteigen.</p>
+            </div>
+        </div>
+    </div>
+</div>    <!-- NAV TOP START (LG/XL ONLY) -->
+    <nav class="navbar navbar-inverse navbar-expand-lg navbar-top d-none d-lg-block">
+        <div class="container">
+            <div class="navbar-collapse collapse" id="ibkr-nav-top"><!-- LEFT MENU -->
+                
+                <ul class="navbar-nav mr-auto align-items-center"><!-- FOR INDIVIDUALS -->
+                    <li class="nav-item dropdown"><a href="#" target="_self" class="nav-link dropdown-toggle" id="nav-for-individuals" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Privatkunden</a>
+                        <div class="dropdown-menu dropdown-ind-accounts" aria-labelledby="nav-for-individuals">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../accounts/individual-ie.html" target="_self" class="dropdown-item" >Einzel- oder Gemeinschaftskonten</a> <a href="../accounts/trust-ie.html" target="_self" class="dropdown-item" >Trust-Konten</a> <a href="../accounts/family-account-ie.html" target="_self" class="dropdown-item" >Family-Konten</a> <a href="../accounts/long-term-investment-accounts-ie.html" target="_self" class="dropdown-item">Tart&#243;s Befektet&#233;si Sz&#225;mia (TBSZ)</a> <a href="../accounts/plan-depargne-en-action-accounts-ie.html" target="_self" class="dropdown-item">Plan d&#8217;Epargne en Actions (PEA)</a> 
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- FOR INSTITUTIONS -->
+                    <li class="nav-item dropdown"><a href="#" target="_self" class="nav-link dropdown-toggle" id="nav-for-institutions" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Gesch&#228;ftskunden</a>
+                        <div class="dropdown-menu dropdown-inst-accounts" aria-labelledby="nav-for-institutions">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../../errorMessages/404.html" target="_self" class="dropdown-item" >Startseite Gesch&#228;ftskunden</a> <a href="../accounts/advisor-ie.html" target="_self" class="dropdown-item" >Registrierte Anlageberater</a> <a href="../accounts/proprietary-trading-group-ie.html" target="_self" class="dropdown-item" >Prop-Trader</a> <a href="../accounts/hedge-fund-ie.html" target="_self" class="dropdown-item" >Hedgefonds</a> <a href="../accounts/broker-ie.html" target="_self" class="dropdown-item" >Einf&#252;hrende Broker</a> <a href="../accounts/family-office-ie.html" target="_self" class="dropdown-item" >Family Offices</a> <a href="../accounts/compliance-officer-ie.html" target="_self" class="dropdown-item" >Compliance-Beauftragte</a> <a href="../accounts/small-business-ie.html" target="_self" class="dropdown-item" >Kleinunternehmen</a> <a href="../accounts/fsa-insurance-providers.html" target="_self" class="dropdown-item" >Full-Service-Verwalter <br>Versicherungsanbieter</a> <a href="../accounts/money-manager-ie.html" target="_self" class="dropdown-item" >Money Manager</a> <a href="../accounts/administrator-ie.html" target="_self" class="dropdown-item" >Fondsverwalter</a>  <a href="https://interactivebrokers.eu/campus/stl/" target="_blank" class="dropdown-item" >Bildungseinrichtungen</a>                                 </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul><!-- RIGHT MENU -->
+                
+                <ul class="navbar-nav ml-auto align-items-center"><!-- FREE TRIAL -->
+                    <li class="nav-item"><a href="../trading/free-trial.html" target="_self" class="nav-link">KOSTENLOS TESTEN</a></li><!-- CAREERS -->
+                    
+                    <li class="nav-item"><a href="../general/about/careers-splash.html" target="_self" class="nav-link">Karriere</a></li><!-- ABOUT US -->
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-about-us" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&#220;ber uns</a>
+                        <div class="dropdown-menu dropdown-about-us" aria-labelledby="nav-about-us">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../general/financial-strength.html" target="_self" class="dropdown-item" >Finanzst&#228;rke und Sicherheit</a> <a href="../general/about/info-and-history.html" target="_self" class="dropdown-item">Vorstellung und Firmengeschichte</a> <a href="../general/awards.html" target="_self" class="dropdown-item">Auszeichnungen</a> <a href="../about/news-at-ibkr.html" target="_self" class="dropdown-item">IBKR-News</a> <a href="../general/about/press-and-media.html" target="_self" class="dropdown-item">Presse und Medien</a> <a href="https://investors.interactivebrokers.com/ir/main.php" target="_blank" class="dropdown-item" rel="noreferrer noopener">Investorendialog</a> <a href="../general/about/sustainability.html" target="_self" class="dropdown-item">Nachhaltigkeit</a> <a href="../accounts/legalDocuments/brokerPerformanceReports.html" target="_self" class="dropdown-item">Meldungen an Aufsichtsbeh&#246;rden</a> <a href="../../errorMessages/404.html" target="_self" class="dropdown-item">Empfehlen Sie uns weiter</a> <a href="../general/about/affiliate-programs.html" target="_self" class="dropdown-item">Partnerprogramme</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- SUPPORT -->
+                    
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-support" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Support</a>
+                        <div class="dropdown-menu dropdown-contact-us" aria-labelledby="nav-support">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="fund-my-account.html" target="_self" class="dropdown-item">Guthaben einzahlen</a> <a href="individuals.html" target="_self" class="dropdown-item">Privatkunden</a> <a href="institutions.html" target="_self" class="dropdown-item">Gesch&#228;ftskunden</a> <a href="institutional-sales-contacts4343.html?p=uk" target="_self" class="dropdown-item">Vertriebskontakte f&#252;r Gesch&#228;ftskunden</a> <a href="../general/contact/ibot-container.html" target="_self" class="dropdown-item">FAQs</a> <a href="reports-and-dates.html" target="_self" class="dropdown-item">Steuerinformationen</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- LANGUAGE SELECTOR -->
+                    <li class="nav-item dropdown"><a href="#" class="nav-link nav-language dropdown-toggle" id="nav-language" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Sprache</span><img src="../../images/web/icons/icon-language.svg" alt="Sprache" width="23" height="18" border="0" /></a>
+                        <div class="dropdown-menu dropdown-language" aria-labelledby="nav-language">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../../en/home.html" target="_self" class="dropdown-item">English</a>
+                                    <a href="../../fr/home.html" target="_self" class="dropdown-item">Fran&#231;ais</a>
+                                    <a href="../home.html" target="_self" class="dropdown-item">Deutsch</a>
+                                    <a href="../../es/home.html" target="_self" class="dropdown-item">Espa&#241;ol</a>
+                                    <a href="../../it/home.html" target="_self" class="dropdown-item">Italiano</a>
+                                    <a href="../../hu/home.html" target="_self" class="dropdown-item">Magyar</a>
+                                    <a href="../../pt/home.html" target="_self" class="dropdown-item">Portugu&#234;s</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                                    </ul>
+            </div>
+        </div><!-- NAV TOP END --><!-- NAV BOTTOM START -->
+    </nav>
+    
+    <nav class="navbar navbar-inverse navbar-expand-lg navbar-bottom">
+        <div class="container"><!-- LOGO -->
+            
+             <a href="../home.html" target="_self" title="Interactive Brokers Startseite" alt="Interactive Brokers Logo" class="navbar-brand brand-logo" aria-label="Interactive Brokers Home"><span>Interactive Brokers Startseite</span></a>
+            <!-- TOGGLE (XS/SM/MD ONLY) --><!-- OPEN ACCOUNT BUTTON (XS/SM/MD ONLY) -->
+            <button class="navbar-toggler" type="button" aria-label="Toggle Navigation"><span class="navbar-toggler-icon"><i class="fas fa-bars" aria-hidden="true"></i></span></button>
+            <a href="https://www.interactivebrokers.co.uk/Universal/Application" target="_self" class="d-block d-lg-none btn btn-open-account">Konto er&#246;ffnen</a>
+            <!-- LOG IN (SM/MD ONLY) -->
+             <a href="https://www.interactivebrokers.co.uk/sso/Login?RL=1" target="_self" class="d-none d-sm-block d-lg-none btn btn-log-in">Login</a>             <!-- IBKR NAV BOTTOM START -->
+            <div class="navbar-collapse collapse" id="ibkr-nav-bottom">
+                <ul class="navbar-nav ml-auto align-items-center"><!-- WHY IBKR -->
+                    
+                    <li class="nav-item"><a href="../whyib/overview.html" target="_self" class="nav-link">Warum IBKR?</a></li><!-- PRICING -->
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-pricing" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Preisgestaltung</a>
+                        <div class="dropdown-menu dropdown-pricing" aria-labelledby="nav-pricing">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../pricing/commissions-home.html" target="_self" class="dropdown-item">Provisionen</a> <a href="../trading/margin-rates.html" target="_self" class="dropdown-item">Margins&#228;tze</a> <a href="../accounts/fees/pricing-interest-rates.html" target="_self" class="dropdown-item">Zinss&#228;tze</a> <a href="../pricing/short-sale-cost.html" target="_self" class="dropdown-item">Leerverkaufskosten</a> <a href="../pricing/research-news-services.html" target="_self" class="dropdown-item">Recherchen und Nachrichten</a> <a href="../pricing/market-data-pricing.html" target="_self" class="dropdown-item">Marktdaten-Preise</a> <a href="../pricing/stock-yield-enhancement-program-ie.html" target="_self" class="dropdown-item">Programm zur Optimierung der Aktienrendite</a> <a href="../pricing/other-fees-overview.html" target="_self" class="dropdown-item">Sonstige Geb&#252;hren</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- TRADING -->
+                    
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-technology" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Handel</a>
+                        <div class="dropdown-menu dropdown-technology" aria-labelledby="nav-technology">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../trading/trading-platforms.html" target="_self" class="dropdown-item">Plattformen</a> <a href="../trading/ib-api.html" target="_self" class="dropdown-item">APIs</a> <a href="../trading/margin.html" target="_self" class="dropdown-item">Margin</a> <a href="../trading/products-exchanges.html" target="_self" class="dropdown-item">Symbol- und B&#246;rsensuche</a> <a href="../trading/products-stocks.html" target="_self" class="dropdown-item">Produkt&#252;bersicht</a> <a href="../trading/ordertypes.html" target="_self" class="dropdown-item">Ordertypen</a> <a href="../whyib/reporting.html" target="_self" class="dropdown-item">Berichte</a> <a href="../trading/securities-financing.html" target="_self" class="dropdown-item">Wertpapierleihe</a> <a href="../trading/features-in-focus.html" target="_self" class="dropdown-item">Funktionen im Fokus</a> <a href="../general/education/probability_lab.html" target="_self" class="dropdown-item">Probability Lab</a> <a href="../trading/sustainable-investing-ie.html" target="_self" class="dropdown-item">Nachhaltiges Investieren</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- SERVICES -->
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-products" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Serviceleistungen</a>
+                        <div class="dropdown-menu dropdown-products" aria-labelledby="nav-products">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../trading/globalanalyst.html" target="_self" class="dropdown-item">IBKR GlobalAnalyst</a> <a href="../trading/si-quotes.html" target="_self" class="dropdown-item">EUIBSI Bid/Ask</a> <a href="../portfolioanalyst/overview.html" target="_self" class="dropdown-item" rel="noreferrer noopener">PortfolioAnalyst</a> <a href="../trading/products-bonds.html" target="_self" class="dropdown-item">Anleihen-Marktplatz</a> <a href="../trading/products-mutual-funds.html" target="_self" class="dropdown-item">Investmentfonds-Marktplatz</a> <a href="../trading/commission-free-etfs-mkt.html" target="_self" class="dropdown-item">ETFs ohne Transaktionsgeb&#252;hren</a> <a href="https://gdcdyn.interactivebrokers.com/aces/Marketplace/InvestorsMarketplace" target="_blank" class="dropdown-item">Anleger-Marktplatz</a> <a href="../trading/short-securities-availability.html" target="_self" class="dropdown-item">Verf&#252;gbarkeit von Wertpapieren f&#252;r Leerverk&#228;ufe</a> <a href="../trading/third-party-integration.html" target="_self" class="dropdown-item">Drittanbieter-Integration</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- EDUCATION -->
+                    
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="nav-education" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Lerncenter</a>
+                        <div class="dropdown-menu dropdown-education" aria-labelledby="nav-education">
+                            <div class="row">
+                                <div class="col">
+                                     <a href="https://interactivebrokers.eu/campus/" target="_blank" class="dropdown-item">IBKR-Campus</a> <a href="https://interactivebrokers.eu/campus/academy" target="_blank" class="dropdown-item" rel="noreferrer noopener">Trader-Akademie</a> <a href="https://interactivebrokers.eu/campus/news" target="_blank" class="dropdown-item" rel="noreferrer noopener">Traders&#8217; Insight</a> <a href="https://interactivebrokers.eu/campus/podcasts" target="_blank" class="dropdown-item" rel="noreferrer noopener">IBKR-Podcasts</a> <a href="https://interactivebrokers.eu/campus/quant" target="_blank" class="dropdown-item" rel="noreferrer noopener">IBKR-Quant-Blog</a> <a href="https://interactivebrokers.eu/campus/webinars" target="_blank" class="dropdown-item" rel="noreferrer noopener">Webinare</a> <a href="https://interactivebrokers.eu/campus/stl/" target="_blank" class="dropdown-item">Trading Lab f&#252;r Schule und Studium</a> <a href="https://interactivebrokers.eu/campus/glossary" target="_blank" class="dropdown-item" rel="noreferrer noopener">Trader-Glossar</a>  <a href="../general/calendar/calendar.html" target="_self" class="dropdown-item">Trader-Kalender</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- SEARCH -->
+                    <li class="nav-item dropdown d-none d-lg-block" id="search-expand"><a href="#" class="nav-link nav-search dropdown-toggle" id="nav-search" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Search"><span>Suche</span><i class="fas fa-search" aria-hidden="true"></i></a>
+                        <div class="dropdown-menu dropdown-search" aria-labelledby="nav-search">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="search_box">
+                                        <script type="text/javascript">
+                                         searchbox_input_changed=false;
+                                         $('#search-expand').on('shown.bs.dropdown', function(e) {
+                                           $('#searchField').focus();
+                                         });
+                                        </script>
+                                        <form action="https://www.interactivebrokers.ie/de/search/index.php" method="get" class="search_form" id="search_form_id">
+                                            <input type="text" aria-label="Search Box" placeholder="Search" name="query" maxlength="64" autocomplete="off" id="searchField" class="form-control s swap_value searchinput" aria-label="Search Interactive Brokers">
+                                            <button type="submit" value="" id="searchsubmit" class="searchsubmit"><i class="fas fa-search" aria-hidden="true" aria-label="Submit Search"></i></button>
+                                        </form>
+                                        
+                                                                            </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- LOG IN -->
+                    
+                    <li class="nav-item dropdown d-none d-lg-block"><a href="#" target="_self" class="nav-link nav-login dropdown-toggle" id="nav-log-in" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Anmelden</a>
+                        <div class="dropdown-menu dropdown-login" aria-labelledby="nav-log-in">
+                            <div class="row">
+                                <div class="col">
+                                     <a href="../../sso/Login0104.html?RL=1" target="_self" class="dropdown-item dropdown-portal">Anmelden im Portal</a>  <a href="../trading/ibkr-desktop.html" target="_self" class="dropdown-item">IBKR Desktop herunterladen</a> <a href="../trading/tws.html#tws-software" target="_self" class="dropdown-item">Trader Workstation herunterladen</a> <a href="../trading/tws-mobile.html#trytoday-drop" target="_self" class="dropdown-item">IBKR Mobile herunterladen</a> <a href="../trading/ibgateway-latest.html" target="_self" class="dropdown-item">IB Gateway herunterladen</a> <a href="../trading/trading-platforms.html" target="_self" class="dropdown-item">Alle IBKR-Plattformen vergleichen</a> <a href="https://forecasttrader.interactivebrokers.ie/eventtrader/#/markets" target="_self" class="dropdown-item">IBKR ForecastTrader</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!-- OPEN ACCOUNT -->
+                    <li class="nav-item dropdown d-none d-lg-block"><a href="#" target="_self" class="nav-link nav-open-account dropdown-toggle" id="nav-open-account" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Konto er&#246;ffnen</a>
+                        <div class="dropdown-menu dropdown-open-account" aria-labelledby="nav-open-account">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="https://www.interactivebrokers.co.uk/Universal/Application" target="_self" class="dropdown-item dropdown-portal">Antrag starten</a> <a href="https://www.interactivebrokers.co.uk/sso/Login?c=t" target="_self" class="dropdown-item">Antrag abschlie&#223;en</a> <a href="../general/what-you-need-inv.html" target="_self" class="dropdown-item">Ben&#246;tigte Informationen</a> <a href="../accounts/account-guide.html" target="_self" class="dropdown-item">Leitfaden zur Kontoauswahl</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul><!-- IBKR MENU END -->
+                
+            </div>
+        </div><!-- NAV BOTTOM END -->
+    </nav>
+</div><!-- HEADER END ---------------------------------------------------------------------------------------------------- --><!-- MOBILE NAV START (XS/SM/MD ONLY) ---------------------------------------------------------------------------------------------------- -->
+
+<div class="menu-mobile d-lg-none"><!-- CLOSE BUTTON -->
+    
+    <div class="close-button"><button type="button" class="btn-close" aria-label="Close Menu"><i class="fas fa-times"></i></button></div><!-- LOGO -->
+    <div class="logo-container"><a href="../home.html" target="_self" class="brand-logo" aria-label="Interactive Brokers Home"><span>Interactive Brokers Startseite</span></a></div><!-- SEARCH -->
+    
+    <div class="search-container">
+        <div class="search-box">
+            <form action="https://www.interactivebrokers.ie/de/search/index.php" method="get" class="search_form" id="search_form_id">
+                <input type="text" class="form-control" placeholder="Search" name="query" maxlength="64" autocomplete="off" id="searchFieldMobile" aria-label="Search Interactive Brokers"> 	
+                <button type="submit" class="btn-search-submit" value="" id="searchsubmitMobile" aria-label="Submit Search"><i class="fas fa-search" aria-hidden="true"></i></button> 	
+            </form>
+        </div>
+    </div>
+    <ul>
+            
+        <!-- PORTAL LOGIN -->
+        <li><a href="../../sso/Login0104.html?RL=1" target="_self" class="menu-log-in">Anmelden im Portal</a></li>
+        
+    <!-- OPEN ACCOUNT -->
+    <li class="has-submenu"><a href="#" target="_self" class="menu-open-account" data-submenu="submenu-open-account">Konto er&#246;ffnen</a>
+        <div class="submenu" id="submenu-open-account">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-open-account">Zur&#252;ck</button></p>
+            <p class="submenu-title">KONTO ER&#214;FFNEN</p>
+            <ul>
+            <li><a href="https://www.interactivebrokers.co.uk/Universal/Application" target="_self" class="menu-start-application">Antrag starten</a></li>
+            <li><a href="https://www.interactivebrokers.co.uk/sso/Login?c=t" target="_self">Antrag abschlie&#223;en</a></li>
+            <li><a href="../general/what-you-need-inv.html" target="_self">Ben&#246;tigte Informationen</a></li>
+            <li><a href="../accounts/account-guide.html" target="_self">Leitfaden zur Kontoauswahl</a></li>
+            </ul>
+        </div>
+    </li>
+        
+    <!-- FREE TRIAL -->
+    <li><a href="../trading/free-trial.html" target="_self">Kostenlose Testversion</a></li><!-- WHY IBKR -->
+    <li><a href="../whyib/overview.html" target="_self">Warum IBKR?</a></li><!-- ACCOUNT TYPES -->
+    
+    <li class="has-submenu"><a href="#" target="_self" data-submenu="submenu-account-types">Kontotypen</a>
+        <div class="submenu" id="submenu-account-types">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-account-types">Zur&#252;ck</button></p>
+            <p class="submenu-title">PRIVATKUNDEN</p>
+            <ul>
+            <li><a href="../accounts/individual-ie.html" target="_self" >Einzel- oder Gemeinschaftskonten</a></li>
+            <li><a href="../accounts/trust-ie.html" target="_self" >Trust-Konten</a></li>
+            <li><a href="../accounts/family-account-ie.html" target="_self" >Family-Konten</a></li>
+            <li><a href="../accounts/long-term-investment-accounts-ie.html" target="_self">Tart&#243;s Befektet&#233;si Sz&#225;mia (TBSZ) </a></li>
+            <li><a href="../accounts/plan-depargne-en-action-accounts-ie.html" target="_self">Plan d&#8217;&#233;pargne en actions (PEA)</a></li>
+                        
+            </ul>
+            <p class="submenu-title">GESCH&#196;FTSKUNDEN</p>
+            <ul>
+            <li><a href="../../errorMessages/404.html" target="_self" >Startseite Gesch&#228;ftskunden</a></li>
+            <li><a href="../accounts/advisor-ie.html" target="_self" >Registrierte Anlageberater</a></li>
+            <li><a href="../accounts/proprietary-trading-group-ie.html" target="_self" >Prop-Trader</a></li>
+            <li><a href="../accounts/hedge-fund-ie.html" target="_self" >Hedgefonds</a></li>
+            <li><a href="../accounts/broker-ie.html" target="_self" >Einf&#252;hrende Broker</a></li>
+            <li><a href="../accounts/family-office-ie.html" target="_self" >Family Offices</a></li>
+            <li><a href="../accounts/compliance-officer-ie.html" target="_self" >Compliance-Beauftragte</a></li>
+            <li><a href="../accounts/small-business-ie.html" target="_self" >Kleinunternehmen</a></li>
+            <li><a href="../accounts/fsa-insurance-providers.html" target="_self" >Full-Service-Verwalter <br>Versicherungsanbieter</a></li>
+            <li><a href="../accounts/money-manager-ie.html" target="_self" >Money Manager</a></li>
+            <li><a href="../accounts/administrator-ie.html" target="_self" >Fondsverwalter</a></li>
+             
+             
+            <li><a href="https://interactivebrokers.eu/campus/stl/" target="_blank" >Bildungseinrichtungen</a></li>
+                        
+            </ul>
+        </div>
+    </li><!-- PRICING -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-pricing">Preisgestaltung</a>
+        <div class="submenu" id="submenu-pricing">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-pricing">Zur&#252;ck</button></p>
+            <p class="submenu-title">PREISGESTALTUNG</p>
+            <ul>
+            <li><a href="../pricing/commissions-home.html" target="_self">Provisionen</a></li>
+            <li><a href="../trading/margin-rates.html" target="_self">Margins&#228;tze</a></li>
+            <li><a href="../accounts/fees/pricing-interest-rates.html" target="_self">Zinss&#228;tze</a></li>
+            <li><a href="../pricing/short-sale-cost.html" target="_self">Leerverkaufskosten</a></li>
+            <li><a href="../pricing/research-news-services.html" target="_self">Recherchen und Nachrichten</a></li>
+            <li><a href="../pricing/market-data-pricing.html" target="_self">Marktdaten-Preise</a></li>
+            <li><a href="../pricing/stock-yield-enhancement-program-ie.html" target="_self">Programm zur Optimierung der Aktienrendite</a></li>
+            <li><a href="../pricing/other-fees-overview.html" target="_self">Geb&#252;hren</a></li>
+            </ul>
+        </div>
+    </li><!-- TRADING -->
+    
+    <li class="has-submenu"><a href="#" data-submenu="submenu-trading">Handel</a>
+        <div class="submenu" id="submenu-trading">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-trading">Zur&#252;ck</button></p>
+            <p class="submenu-title">HANDEL</p>
+            <ul>
+            <li><a href="../trading/trading-platforms.html" target="_self">Plattformen</a></li>
+            <li><a href="../trading/ib-api.html" target="_self">APIs</a></li>
+            <li><a href="../trading/margin.html" target="_self">Margin</a></li>
+            <li><a href="../trading/products-exchanges.html" target="_self">Symbol- und B&#246;rsensuche</a></li>
+            <li><a href="../trading/products-stocks.html" target="_self">Produkt&#252;bersicht</a></li>
+            <li><a href="../trading/ordertypes.html" target="_self">Ordertypen</a></li>
+            <li><a href="../whyib/reporting.html" target="_self">Berichte</a></li>
+            <li><a href="../trading/securities-financing.html" target="_self">Wertpapierleihe</a></li>
+            <li><a href="../trading/features-in-focus.html" target="_self">Funktionen im Fokus</a></li>
+            <li><a href="../general/education/probability_lab.html" target="_self">Probability Lab</a></li>
+            <li><a href="../trading/sustainable-investing-ie.html" target="_self">Nachhaltiges Investieren</a></li>
+            </ul>
+        </div>
+    </li><!-- SERVICES -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-services">Serviceleistungen</a>
+        <div class="submenu" id="submenu-services">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-services">Zur&#252;ck</button></p>
+            <p class="submenu-title">SERVICELEISTUNGEN</p>
+            <ul>
+            <li><a href="../trading/globalanalyst.html" target="_self">IBKR GlobalAnalyst</a></li>
+            <li><a href="../trading/si-quotes.html" target="_self">EUIBSI Bid/Ask</a></li>
+            <li><a href="../portfolioanalyst/overview.html" target="_self" rel="noreferrer noopener">PortfolioAnalyst</a></li>
+            <li><a href="../trading/products-bonds.html" target="_self">Anleihen-Marktplatz</a></li>
+            <li><a href="../trading/products-mutual-funds.html" target="_self">Investmentfonds-Marktplatz</a></li>
+            <li><a href="../trading/commission-free-etfs-mkt.html" target="_self">ETFs ohne Transaktionsgeb&#252;hr</a></li>
+            <li><a href="https://gdcdyn.interactivebrokers.com/aces/Marketplace/InvestorsMarketplace" target="_blank">Anleger-Marktplatz</a></li>
+            <li><a href="../trading/short-securities-availability.html" target="_self">Verf&#252;gbarkeit von Wertpapieren f&#252;r Leerverk&#228;ufe</a></li>
+            <li><a href="../trading/third-party-integration.html" target="_self">Drittanbieter-Integration</a></li>
+            </ul>
+        </div>
+    </li><!-- EDUCATION -->
+    
+    <li class="has-submenu"><a href="#" data-submenu="submenu-education">Lerncenter</a>
+        <div class="submenu" id="submenu-education">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-education">Zur&#252;ck</button></p>
+            <p class="submenu-title">LERNCENTER</p>
+            <ul>
+             
+             
+            <li><a href="https://interactivebrokers.eu/campus/" target="_blank">IBKR-Campus</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/academy" target="_blank">Trader-Akademie</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/news" target="_blank">Traders&#8217; Insight</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/podcasts" target="_blank">IBKR-Podcasts</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/quant" target="_blank">IBKR-Quant-Blog</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/webinars" target="_blank">Webinare</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/stl/" target="_blank">Trading Lab f&#252;r Schule und Studium</a></li>
+            <li><a href="https://interactivebrokers.eu/campus/glossary" target="_blank">Trader-Glossar</a></li>
+                        
+            <li><a href="../general/calendar/calendar.html" target="_self">Trader-Kalender</a></li>
+            </ul>
+        </div>
+    </li><!-- ABOUT US -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-about-us">&#220;ber uns</a>
+        <div class="submenu" id="submenu-about-us">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-about-us">Zur&#252;ck</button></p>
+            <p class="submenu-title">&#220;BER UNS</p>
+            <ul>
+            <li><a href="../general/financial-strength.html" target="_self">Finanzst&#228;rke und Sicherheit</a></li>
+            <li><a href="../general/about/info-and-history.html" target="_self">Vorstellung und Firmengeschichte</a></li>
+            <li><a href="../general/about/careers-splash.html" target="_self">Karriere</a></li>
+            <li><a href="../general/awards.html" target="_self">Auszeichnungen</a></li>
+            <li><a href="../about/news-at-ibkr.html" target="_self">IBKR-News</a></li>
+            <li><a href="../general/about/press-and-media.html" target="_self">Presse und Medien</a></li>
+            <li><a href="https://investors.interactivebrokers.com/ir/main.php" target="_blank" rel="noreferrer noopener">Investorendialog</a></li>
+            <li><a href="../general/about/sustainability.html" target="_self">Nachhaltigkeit</a></li>
+            <li><a href="../accounts/legalDocuments/brokerPerformanceReports.html" target="_self">Meldungen an Aufsichtsbeh&#246;rden</a></li>
+            <li><a href="../../errorMessages/404.html" target="_self">Empfehlen Sie uns weiter</a></li>
+            <li><a href="../general/about/affiliate-programs.html" target="_self">Partnerprogramme</a></li>
+            </ul>
+        </div>
+    </li><!-- SUPPORT -->
+    
+    <li class="has-submenu"><a href="#" data-submenu="submenu-support">Support</a>
+        <div class="submenu" id="submenu-support">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-support">Zur&#252;ck</button></p>
+            <p class="submenu-title">SUPPORT</p>
+            <ul>
+            <li><a href="fund-my-account.html" target="_self">Guthaben einzahlen</a></li>
+            <li><a href="individuals.html" target="_self">Privatkunden</a></li>
+            <li><a href="institutions.html" target="_self">Gesch&#228;ftskunden</a></li>
+            <li><a href="institutional-sales-contacts4343.html?p=uk" target="_self">Vertriebskontakte f&#252;r Gesch&#228;ftskunden</a></li>
+            <li><a href="../general/contact/ibot-container.html" target="_self">FAQs</a></li>
+            <li><a href="reports-and-dates.html" target="_self">Steuerinformationen</a></li> 
+            </ul>
+        </div>
+    </li><!-- LANGUAGE -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-language">Sprache</a>
+        <div class="submenu" id="submenu-language">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-language">Zur&#252;ck</button></p>
+            <p class="submenu-title">SPRACHE</p>
+            <ul>
+            <li><a href="../home.html" target="_self">Englisch</a></li>
+            <li><a href="../../fr/home.html" target="_self">Fran&#231;ais</a></li>
+            <li><a href="../home.html" target="_self">Deutsch</a></li>
+            <li><a href="../../es/home.html" target="_self">Espa&#241;ol</a></li>
+            <li><a href="../../it/home.html" target="_self">Italiano</a></li>
+            <li><a href="../../hu/home.html" target="_self">Magyar</a></li>
+            <li><a href="../../pt/home.html" target="_self">Portugu&#234;s</a></li>
+            </ul>
+        </div>
+    </li><!-- REGION SELECTOR -->
+    
+        
+    </ul>
+</div><!-- MOBILE NAV OVERLAY -->
+<div class="website-overlay d-lg-none"></div><!-- MOBILE NAV END  -->
+
+<script>
+$(window).on('load', function() {
+    // Simple check if URL contains 'conf=am'
+    if (!window.location.href.includes('conf=am')) {
+        $('#region-modal').modal({
+            backdrop: 'static',
+            keyboard: false
+        });
+        $('#region-modal').modal('show');
+        $('body').removeClass('modal-open');
+        $('body').css('overflow', '');
+        $('body').css('padding-right', '');
+    }
+});
+</script>
+<div class="modal modal-cookies fade" id="region-modal" tabindex="-1" role="dialog" aria-labelledby="modalRegionLabel" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+    <div class="modal-content" id="modalRegionContent">
+      <div class="modal-header d-block">
+        <p class="fs-5 modal-title" id="modalCookieLabel">Which IBKR website is best for you?</p>
+        <p class="pt-10 mb-0 pr-30 fs-6">The content on the website you selected is not intended for investors in your location. </p>
+        <p class="mb-40 fs-6">Please choose the website most applicable to you.</p>
+      </div>
+      <div class="modal-footer" id="modalRegionControls">
+        <div class="row">
+          <div class="col-12 col-md-4"></div>
+          <div class="col-12 col-md-8">
+            <p>
+              <button class="btn btn-primary" id="btnRegionRecommendation">Go to US website</button>
+              <button class="btn btn-primary" id="btnRegionCurrent">Stay on IE website</button>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+$(function() {
+   $('button#btnRegionRecommendation').click(function() {
+    window.location.href = 'https://www.interactivebrokers.com/';
+  });
+  $('button#btnRegionCurrent').click(function() {
+    setCookie("IB_REG", 1, 365, '.interactivebrokers.ie');
+    location.reload();
+  });
+});
+</script><div id="contents">
+    <section class="page-title" id="page-title">
+        <div class="container">
+            <div class="row">
+                <div class="col"><h1>Kundendienst</h1></div>
+            </div>
+        </div>
+    </section>
+<section class="contact-header" id="contact-header">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-sm-8 col-lg-6">
+				<h2 class="text-black">Support</h2>
+				<div class="search_box"> 
+                    <script type="text/javascript">
+                     searchbox_input_changed=false;
+                      $('#search-expand').on('shown.bs.dropdown', function(e) {
+                        $('#searchField').focus();
+                      });
+                    </script>
+				<div class="search_box"> 
+					<form action="https://www.interactivebrokers.ie/de/search/index.php" method="get" class="search_form" id="search_form_id">
+	                <input type="text" aria-label="Search Box" placeholder="Search for Answers" name="query" maxlength="64" class="form-control s swap_value searchinput b-0" id="searchField" autocomplete="off">
+	                <button type="submit" aria-label="Submit Search" class="searchsubmit" id="searchsubmit" value=""><i class="fas fa-search"></i></button>
+	            </form>
+			                    				</div>
+				<p>oder <a href="../general/contact/ibot-container.html" target="_self" class="link-arrow-right link-generic">durchsuchen Sie unsere FAQ-Sammlung</a></p>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="contact-tabs">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<ul class="nav nav-tabs nav-lines" id="nav-tabs" role="tablist">
+					<li class="nav-item"><a class="nav-link active" id="tab_search-faqs" data-bs-toggle="tab" data-bs-target="#search-faqs" role="tab" aria-controls="search-faqs" aria-selected="true">FAQs durchsuchen</a></li>
+					<li class="nav-item"><a class="nav-link" id="tab_contact" data-bs-toggle="tab" data-bs-target="#contact" role="tab" aria-controls="contact" aria-selected="false">Telefon</a></li>
+					<li class="nav-item"><a class="nav-link" id="tab_chat" data-bs-toggle="tab" data-bs-target="#chat" role="tab" aria-controls="chat" aria-selected="false">Chat</a></li>
+					<li class="nav-item"><a class="nav-link" id="tab_email" data-bs-toggle="tab" data-bs-target="#email" role="tab" aria-controls="email" aria-selected="false">E-Mail</a></li>
+					<li class="nav-item"><a class="nav-link" id="tab_fax" data-bs-toggle="tab" data-bs-target="#fax" role="tab" aria-controls="fax" aria-selected="false">Hochladen/Einsenden</a></li>
+					<li class="nav-item"><a class="nav-link" id="tab_tips" data-bs-toggle="tab" data-bs-target="#tips" role="tab" aria-controls="tips" aria-selected="false">Tipps f&#252;r einen optimalen Service</a></li>
+					<li class="nav-item"><a class="nav-link" id="tab_bust" data-bs-toggle="tab" data-bs-target="#bust" role="tab" aria-controls="bust" aria-selected="false">Richtlinie zu Fehlern/Irrt&#252;mern bei Transaktionen</a></li>
+				</ul>
+				<div class="tab-content"><!-- TAB 01 CONTENT --> 
+					<div class="tab-pane fade show active" id="search-faqs" role="tabpanel" aria-labelledby="search-faqs" tabindex="0">
+						
+<script type="text/javascript">
+window.addEventListener('message', function(d) {
+ var json = JSON.parse(d.data);
+ if(json.action == 'resize') 
+ {
+  document.getElementById('ifr').height = json.height;
+ }
+ if(json.action == 'scrollTop')
+ {
+  scrollTo(0,0);
+ }
+});
+function resizeIframe()
+{
+ var ifr = document.getElementById('ifr');
+ ifr.height = ifr.contentWindow.document.body.scrollHeight + "px";
+}
+window.onresize = resizeIframe;
+</script>
+<section class="no-padding-top"> 
+	<div class="container"> 
+    	<div class="row"> 
+        	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <iframe id="ifr" src="../../lib/cstools/faq/index.html#/articles/23298581" frameborder="0" style="width:100%;height:1200px" aria-label="Browse FAQs"></iframe>
+			</div>
+		</div>
+	</div>
+</section>					</div><!-- TAB 02 CONTENT -->
+					<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact" tabindex="0">
+						
+<section class="no-padding-top"> 
+	<div class="container"> 
+    	<div class="row"> 
+        	<div class="col">
+                				<h2>Telefon</h2>
+                <p>IBKR bietet seinen Kundenservice über diverse regionale Kundendienst-Center in Amerika, Europa und Asien an, die an Geschäftstagen rund um die Uhr erreichbar sind. Unser Kundendienst unterstützt Sie gern jederzeit telefonisch. Noch schnellere Hilfe finden Sie in vielen Fällen aber auch direkt auf der IBKR-Website und in unserer <a href="https://www.ibkrguides.com/kb/">Wissensdatenbank</a>. Die nachstehenden Tipps greifen häufig gestellte Fragen auf. Darüber hinaus können Sie in das Suchfeld oben Schlagwörter zu Ihrer Frage eingeben und so Antworten auf viele weitere Fragen finden.</p>
+                <hr>
+    			<h5>Tipps</h5>
+			</div>
+		</div>
+        <div class="row"> 
+        	<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <p><a href="https://www.ibkrguides.com/clientportal/transferandpay/enterdeposits.htm" target="_blank" class="linkexternal">Wie zahle ich Geld per Banküberweisung ein?</a></p>
+                <p><a href="https://www.ibkr.com/faq?id=27276922" target="_blank" class="linkexternal">Wie prüfe ich den Status einer Ein-/Auszahlung oder einer Überweisung?</a></p>
+                <p><a href="https://ibkrguides.com/clientportal/messagecenter/messagecenter.htm" target="_blank" class="linkexternal">Wie kann ich eine allgemeine Anfrage per Web-Ticket übermitteln?</a></p>
+                <p><a href="https://ibkrguides.com/clientportal/transferandpay/enterachdeposit.htm" target="_blank" class="linkexternal">Wie kann ich Geld mithilfe einer von Interactive Brokers eingeleiteten ACH-Überweisung einzahlen?</a></p>
+            </div>
+	        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <p><a href="https://ibkrcampus.com/trading-course/tws-for-beginners/" target="_blank" class="linkexternal">Einführung in die Trader Workstation</a></p>
+                <p><a href="https://ibkrcampus.com/trading-lessons/subscribing-to-data/" target="_blank" class="linkexternal">IBKR-Marktdaten-Assistent</a></p>
+                <p><a href="https://www.ibkrguides.com/clientportal/transferandpay/deposit.htm" target="_blank" class="linkexternal">Wie zahle ich Geld per Scheck ein?</a></p>
+                <p><a href="https://www.ibkrguides.com/kb/introduction-to-forex.htm" target="_blank" class="linkexternal">Einführung in Forex-Geschäfte (Devisen)</a></p>
+			</div>
+    	    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <p><a href="https://ibkrguides.com/clientportal/transferandpay/transpositions.htm" target="_blank" class="linkexternal">Wie kann ich US-amerikanische und kanadische Wertpapierpositionen übertragen?</a></p>
+                <p><a href="https://ibkrguides.com/securelogin/home.htm" target="_blank" class="linkexternal">Sicherer Login mit IBKR Mobile</a></p>
+                <p><a href="https://ibkrguides.com/clientportal/messagecenter/messagecenterpreferences.htm" target="_blank" class="linkexternal">Einstellungen zu Mitteilungen anpassen</a></p>
+			</div>
+		</div>
+		<div class="row"> 
+        	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            	<hr>
+            	<div class="space_20"></div>
+                <p><b>Geben Sie den numerischen Teil Ihrer Kontonummer gefolgt von der Rautetaste (#) ein</b> ODER drücken Sie die Rautetaste (#), falls Sie Ihre Kontonummer nicht kennen. Mithilfe der in der folgenden Tabelle aufgeführten Menüoptionen gelangen Sie zu dem Thema, um das es bei Ihrer Anfrage geht.</p>
+                <p>Anrufe beim Kundendienst von Interactive Brokers werden zum Zweck der Qualitätssicherung <b>ggf. aufgezeichnet</b>. </p>
+                <p>Anrufe, die außerhalb der jeweiligen Geschäftszeiten bei einem Center eingehen, werden automatisch an eine verfügbare Ansprechperson in einem anderen Kundendienst-Center weitergeleitet.<sup>1</sup></p><br />
+            	<div class="table-responsive">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-striped table-bordered" >
+                    <thead>
+                    <tr >
+                    <th width="33%" align="left" valign="middle"><strong>Standort</strong></th>
+                    <th width="33%" align="left" valign="middle"><strong>Nummer</strong></th>
+                    <th width="34%" align="left" valign="middle"><strong>Menüoptionen</strong></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                     <tr>
+                    <td>Australien</td>
+                    <td>+61 (2) 7251 0088 Durchwahl</td>
+                    <td rowspan="17"  class="text-nowrap">
+                    1 Handelsbezogene Fragen<br /> 1/1 Hilfe bei der Verwendung der Plattformen<br /> 1/2 Fragen zu Handel & Margin <br /> 1/3 Positionen schließen<br /> <br /> 2 Übertragen von Bargeld & Positionen<br /> 2/1 Hilfe bei der ersten Einzahlung<br /> 2/2 Ein- und Auszahlungen<br /> 2/3 Positionen übertragen<br /> <br /> 3 Allgemeines & Hilfe beim Anmelden<br /> <br /> 4 Hilfe bei der Kontoeröffnung<br /> <br /> 5 Hilfe zum Sicherheitsgerät<br /> <br /> 6 Technische Probleme<br />
+                    </td>
+                    </tr>
+                    <tr>
+                    <td>China</td>
+                    <td>+86 (21) 6086 8586 Durchwahl</td>
+                    </tr>
+                    <tr>
+                    <td>Europa</td>
+                    <td>00800-42-276537 Gebührenfrei<sup>2,4</sup><br />+41 41 562 0902 Durchwahl</td>
+                    </tr>
+                    <tr>
+                    <td>Großbritannien</td>
+                    <td>+44 20 3744 7220 Durchwahl</td>
+                    </tr>
+                    <tr>
+                    <td>Hongkong</td>
+                    <td>+852-3107-8333 Durchwahl</td>
+                    </tr>
+                    <tr>
+                    <td>Indien</td>
+                    <td>+91 22 61289888 Durchwahl<br>+91 22 39696188 Durchwahl</td>
+                    </tr>
+                    <tr>
+                    <td>Irland</td>
+                    <td>+353 1 264 0643 Durchwahl</td>
+                    </tr>
+                    <tr>
+                    <td>Japan</td>
+                    <td  class="text-nowrap">+81 (3) 4590 0707 Durchwahl<br>+81 (3) 4590 0711 Durchwahl (Englisch)</td>
+                    </tr>
+                    <tr>
+                    <td>Kanada</td>
+                    <td>1 (877) 745-4222 Gebührenfrei<sup>4</sup><br>1 (514) 847-3499 Durchwahl</td>
+                    </tr>
+                    <tr>
+                    <td>Kanada (Vancouver)</td>
+                    <td>1 (877) 745-4222 Gebührenfrei<sup>5</sup><br>1 (604) 661-4300 Durchwahl</td>
+                    </tr>
+                    <tr>
+                    <td>Katar</td>
+                    <td>+974 800 101341 Gebührenfrei<sup>4</sup></td>
+                    </tr>
+                    <tr>
+                    <td>Russland</td>
+                    <td>8-800-100-8556 Gebührenfrei<sup>3,4</sup><br />+41 41 562 0823 Pyсский</td>
+                    </tr>
+                    <tr>
+                    <td>Saudi-Arabien</td>
+                    <td>+966 800850 1106 Gebührenfrei<sup>4</sup></td>
+                    </tr>
+                    <tr>
+                    <td>Singapur</td>
+                    <td>+65 6990 5200 Allgemein</td>
+                    </tr>
+                    <tr>
+                    <td>Ungarn</td>
+                    <td>+36 80 088 400 Gebührenfrei<sup>4</sup><br />+36 1 701 0350 Durchwahl</td>
+                    </tr>
+                    <tr>
+                    <td>USA</td>
+                    <td>1 (877) 442-2757 Gebührenfrei<sup>4</sup><br />1 (312) 542-6901 Durchwahl</td>
+                    </tr>
+                    <tr>
+                    <td>Vereinigte Arabische Emirate</td>
+                    <td>+971 8000 3110143 Gebührenfrei<sup>4</sup></td>
+                    </tr>
+                    </tbody>
+                    </table>
+            	</div>
+            	<br>
+            	<div class="notes">
+					<p><strong>Hinweise:</strong></p>
+					<ol>
+					<li class="text-small">IBKR betreibt Kundendienst-Center auf der ganzen Welt. Wenn Sie den Kundendienst kontaktieren, kann es vorkommen, dass die Ihnen behilfliche Ansprechperson bei einem verbundenen Unternehmen von IBKR angestellt ist und im Auftrag des IBKR-Unternehmens handelt, bei dem Sie Ihr Konto führen. (Zum Beispiel: Ein IBLLC-Kunde ruft den US-amerikanischen Kundendienst an und wird dann von einer Mitarbeiterin betreut, die bei Interactive Brokers Hong Kong arbeitet und im Auftrag von IBLLC tätig ist.) Der Kundendienst ist samstags nicht erreichbar und sonntags nur zu eingeschränkten Geschäftszeiten.</li>
+					<li class="text-small">Bitte beachten Sie, dass die gebührenfreie Rufnummer ggf. nicht an allen Standorten verfügbar ist. Falls Sie IBKR über die oben genannte gebührenfreie Nummer nicht erreichen können, verwenden Sie bitte die Durchwahl.</li>
+					<li class="text-small">Die gebührenfreie Rufnummer ist nur aus Russland erreichbar.</li>  
+                                        <li class="text-small">Bei Anrufen, die von außerhalb der Region einer gebührenfreien Nummer eingehen, fallen Gebühren für Auslandsanrufe an.</li>                                  
+					</ol>
+                </div>
+                <div class="space_40"></div>
+			</div>
+		</div>
+	</div>
+</section>
+<script language='javascript' type='text/javascript' src='../../scripts/common/js/timezone.js'></script>
+<script type="text/javascript">
+var country2tz2hours = {  };
+function updateOfficeHours(tz) {
+    var h_elem;
+    if (tz == 0) {
+        return;
+    }
+}
+  	var tz_info = determine_timezone();
+	response_text = 'Europe/Zurich';
+	if (typeof(tz_info.timezone) == 'undefined') {
+                response_text = 'Europe/Zurich';
+	}
+	else {
+		response_text = tz_info.timezone.display();
+	}
+        var select_elem = document.getElementById('tz_select');
+        var select_found = false;
+        for (var i = 0; i < select_elem.options.length; i++) {
+            if (select_elem.options[i].value == response_text) {
+                select_elem.selectedIndex = i;
+                select_found = true;
+                break;
+            }
+        }
+        if (!select_found) {
+            var i = select_elem.length;
+            var tz_space = response_text.replace(/_/g, ' ');
+            select_elem.options[i] = new Option(" ("+tz_space+")",
+                    response_text);
+            select_elem.selectedIndex = i;
+        }
+        updateOfficeHours(response_text);
+</script>					</div><!-- TAB 03 CONTENT -->
+					<div class="tab-pane fade" id="chat" role="tabpanel" aria-labelledby="chat" tabindex="0">
+						
+<section id="chat" class="pt-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>Chat</h2>
+            </div>
+        </div>
+        <div class="row mb-40 d-flex align-items-center">
+            <div class="col-12 col-sm-7 col-md-8">
+                <p class="mb-20 mt-20">IBKR stellt seinen Kundinnen und Kunden einen Online-Chat bereit. Falls Sie schon l&#228;nger ein Konto haben oder Ihr Kontoantrag k&#252;rzlich genehmigt wurde, k&#246;nnen Sie im <a href="https://www.interactivebrokers.co.uk/sso/Login?forwardTo=22" target="_self">Client Portal</a> unter &#8222;Support&#8220; auf den Chat zugreifen. Klicken Sie dazu auf den folgenden Link. Wenn Sie noch kein Konto haben, k&#246;nnen Sie auf &#8222;Ich habe eine allgemeine Frage&#8220; klicken, um Hilfe zu erhalten.</p>
+                <p class="mt-40"><a href="../../en/general/contact/get-help-faster.html" target="_self" class="btn btn-primary">Ich habe eine allgemeine Frage</a> <a href="https://www.interactivebrokers.co.uk/sso/Login?action=CS_CHAT" target="_self" class="btn btn-primary">Ich habe eine dringende Frage zu meinem Konto</a></p>
+            </div>
+            <div class="col-12 col-sm-4 col-md-3 offset-sm-1">
+                <div class="b-1 pb-10 pr-20 pl-20 mt-20">
+                    <h3 class="text-center fs-4 lh-5 fw-600">Chat</h3>
+                    <p class="text-center">Sonntag 20:00&nbsp;Uhr bis Freitag 20:00&nbsp;Uhr<br />US-Ostk&#252;stenzeit</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>					</div><!-- TAB 04 CONTENT -->
+					<div class="tab-pane fade" id="email" role="tabpanel" aria-labelledby="email" tabindex="0">
+						
+<style>
+#email .alert p {
+	line-height: 1.5;
+	word-break: initial;
+}
+</style>
+<section id="email" class="no-padding-top">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<h2>E-Mail</h2>
+				<div class="col-12 alert alert-warning mb-40 col-lg-10 offset-lg-1 text-center mt-40 pb-30">
+					<h4>WICHTIGER HINWEIS</h4>
+					<p class="text-lg">Probleme mit/Anfragen zu Passw&#246;rtern, Sicherheitsger&#228;ten und der Kontoanmeldung werden <em><u>ausschlie&#223;lich</u></em> per Telefon vom Kundendienst bearbeitet. Dazu muss zun&#228;chst die Identit&#228;t des Kontinhabers bzw. der Kontinhaberin verifiziert werden. <br> Bitte stellen Sie sicherheitsbezogene Anfragen wie diese nicht per E-Mail.</p>
+				</div>
+				<p>Aufgrund von Sicherheitsbedenken und Spam-Vorf&#228;llen werden &#252;ber kommerzielle E-Mail-Dienste eingehende Nachrichten nicht unterst&#252;tzt. Kundinnen und Kunden, die bereits ein Konto haben oder den Kontoer&#246;ffnungsprozess begonnen haben, k&#246;nnen schriftliche Anfragen &#252;ber das Mitteilungscenter im Client Portal oder &#252;ber den folgenden Link einreichen. F&#252;r beide Methoden erfolgt die Beantwortung der Anfragen &#252;ber das Mitteilungscenter, wobei Sie jedoch in den <a href="http://ibkb.interactivebrokers.com/node/1251" target="_blank" class="link-external">Kommunikationseinstellungen</a> festlegen k&#246;nnen, dass eine Kopie der Antwortnachricht per E-Mail an Sie gesendet wird.</p>
+				<p>Personen, die noch kein Konto er&#246;ffnet haben, k&#246;nnen ebenfalls &#252;ber den folgenden Link schriftliche Anfragen stellen. Die Beantwortung erfolgt in diesem Fall an die angegebene E-Mail-Adresse.</p>
+				<p>Schriftliche Anfragen, die w&#228;hrend der &#252;blichen Gesch&#228;ftszeiten eingehen, werden in der Regel innerhalb von 24 Stunden beantwortet.</p>
+				<br>
+				<p class="text-center"><a href="../general/contact/newContact/contact.html" target="_self" class="btn btn-primary">Eine Anfrage senden </a></p>
+			</div>
+		</div>
+	</div>
+</section>					</div><!-- TAB 05 CONTENT -->
+					<div class="tab-pane fade" id="fax" role="tabpanel" aria-labelledby="fax" tabindex="0">
+						
+<section id="agreements" class="pt-0 pb-80"">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 pb-40">
+				<h2>Hochladen/Einsenden</h2>
+				<p>Wenn Sie ein Konto bei uns beantragen oder &#196;nderungen an einem bestehenden Konto vornehmen m&#246;chten, m&#252;ssen Sie unter Umst&#228;nden verschiedene Dokumente zum Nachweis Ihrer Identit&#228;t und/oder Adresse einreichen. Die schnellste und effizienteste Methode, die angeforderten Dokumente zu &#252;bermitteln, ist das Hochladen in der Kontoverwaltung (Anmeldung erforderlich), da so eine schnelle Bearbeitung sichergestellt werden kann. Unabh&#228;ngig von der Methode, die Sie zum &#220;bermitteln Ihrer Dokumente verwenden, sollten Sie stets darauf achten, dass die Dokumente gut lesbar sind und eine leichte &#220;berpr&#252;fung der erforderlichen Informationen erm&#246;glichen.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 col-md-6"><!-- IB LLC --> 
+				<h4>IB LLC (IBKR)</h4>
+				<p><a href="https://www.interactivebrokers.co.uk/sso/Login?action=DOC" target="_self" class="btn btn-sm btn-primary">Dokumente hochladen</a>
+				<p class="text-small">Sie werden dazu aufgefordert, sich in der Kontoverwaltung anzumelden.</p>
+				<p><strong>Kurier/&#220;ber-Nacht-Zustellung:</strong><br /> Interactive Brokers LLC: Document Processing<br /> 209 South LaSalle Street, 10<sup>th</sup> Floor, Chicago, IL 60604 USA</p>
+				<p><strong>Postversand:</strong><br /> Interactive Brokers LLC: Document Processing<br /> P.O. Box A3770, Chicago, IL 60690-3770 USA</p>
+			</div>
+			<div class="d-block d-md-none">				
+				<hr>
+			</div>
+			<div class="col-12 col-md-6"><!-- IB CANADA --> 
+				
+				<h4>IB Canada</h4>
+				<p><a href="https://www.interactivebrokers.co.uk/sso/Login?action=DOC" target="_self" class="btn btn-sm btn-primary">Dokumente hochladen</a>
+				<p class="text-small">Sie werden dazu aufgefordert, sich in der Kontoverwaltung anzumelden.</p>
+				<p><strong>Kurier/Postversand:</strong><br /> Interactive Brokers Canada Inc.<br /> Attn: Doc Processing<br /> 1800 McGill College Avenue, Suite 2106,<br /> Montreal, Quebec H3A 3J6 Canada</p>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="col-12 col-md-6"><!-- IB UK --> 
+				<h4>IB UK</h4>
+				<p><a href="https://www.interactivebrokers.co.uk/sso/Login?action=DOC" target="_self" class="btn btn-sm btn-primary">Dokumente hochladen</strong></a>
+				<p class="text-small">Sie werden dazu aufgefordert, sich im Client Portal anzumelden.</p>
+				<p><strong>Courier/Overnight/Postal:</strong><br />
+					Interactive Brokers U.K. Limited<br />
+					Attn: Doc Processing<br />
+					20 Fenchurch Street, Floor 12<br />
+					London EC3M 3BY, United Kingdom</p>
+			</div>
+			<div class="d-block d-md-none">				
+				<hr>
+			</div>
+			<div class="col-12 col-md-6"><!-- IB INDIA --> 
+				
+				<h4>IB (India) Pvt. Ltd.</h4>
+				<p><a href="https://www.interactivebrokers.co.uk/sso/Login?action=DOC" target="_self" class="btn btn-sm btn-primary">Dokumente hochladen</a>
+				<p class="text-small">Sie werden dazu aufgefordert, sich in der Kontoverwaltung anzumelden.</p>
+				<p><strong>Kurier/Postversand:</strong><br /> Interactive Brokers (India) Pvt. Ltd.<br /> 502/A, Times Square, Andheri Kurla Road<br /> Andheri East, Mumbai 400059 India</p>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="col-12 col-md-6"><!-- IB JAPAN --> 
+				<h4>IB Securities Japan, Inc.</h4>
+				<p><a href="https://www.interactivebrokers.co.uk/sso/Login?action=DOC" target="_self" class="btn btn-sm btn-primary">Dokumente hochladen</a>
+				<p class="text-small">Sie werden dazu aufgefordert, sich in der Kontoverwaltung anzumelden.</p>
+				<p><strong>Kurier/Postversand:</strong><br /> New Accounts: Interactive Brokers Securities Japan, Inc<br /> Kasumigaseki Building 25F<br /> 2-5 Kasumigaseki 3-chome<br> Chiyoda-ku, Tokyo, 100-6025 Japan</p>
+			</div>
+			<div class="d-block d-md-none">				
+				<hr>
+			</div>
+			<div class="col-12 col-md-6"><!-- IB HONG KONG --> 
+				
+				<h4>Interactive Brokers Hong Kong Limited</h4>
+				<p><a href="https://www.interactivebrokers.co.uk/sso/Login?action=DOC" target="_self" class="btn btn-sm btn-primary">Dokumente hochladen</a>
+				<p class="text-small">Sie werden dazu aufgefordert, sich in der Kontoverwaltung anzumelden.</p>
+				<p><strong>Kurier/Postversand:</strong><br /> Interactive Brokers Hong Kong Limited<br /> Attn: New Account Documentation<br /> Suite 1512 Two Pacific Place<br /> 88 Queensway, Admiralty, Hong Kong</p>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="col-12 col-md-6"><!-- IB AUSTRALIA --> 
+				<h4>Interactive Brokers Australia</h4>
+				<p><a href="https://www.interactivebrokers.co.uk/sso/Login?action=DOC" target="_self" class="btn btn-sm btn-primary">Dokumente hochladen</a>
+				<p class="text-small">Sie werden dazu aufgefordert, sich in der Kontoverwaltung anzumelden.</p>
+				<p><strong>Kurier:</strong><br /> New Accounts: Interactive Brokers Australia<br /> Level 11, 175 Pitt Street<br /> Sydney, New South Wales 2000, Australia</p>
+				<p><strong>Postversand:</strong><br /> New Accounts: Interactive Brokers Australia<br /> PO Box R229<br /> Royal Exchange NSW 1225</p>
+			</div>
+			<div class="d-block d-md-none">				
+				<hr>
+			</div>
+			<div class="col-12 col-md-6">
+				<h4>Interactive Brokers Singapore Pte Ltd</h4>
+				<p><a href="https://www.interactivebrokers.co.uk/sso/Login?action=DOC" target="_self" class="btn btn-sm btn-primary">Dokumente hochladen</a>
+				<p class="text-small">Sie werden dazu aufgefordert, sich in der Kontoverwaltung anzumelden.</p>
+				<p><strong>Kurier/&#220;ber-Nacht-Zustellung/Postversand:</strong><br /> Interactive Brokers Singapore Pte Ltd<br /> Attn: New Account Documentation<br /> 1 Harbourfront Place #12-01, Harbourfront Tower 1<br /> Singapore 098633</p>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="col-12 col-md-6"><!-- IBKRFS --> 
+				
+				<h4>IBKRFS</h4>
+				<p><a href="https://www.interactivebrokers.co.uk/sso/Login?action=DOC" target="_self" class="btn btn-sm btn-primary">Dokumente hochladen</strong></a>
+				<p class="text-small">Sie werden dazu aufgefordert, sich im Client Portal anzumelden.</p>
+				<p><strong>Kurier/&#220;ber-Nacht-Zustellung/Postversand:</strong><br /> IBKR Financial Services AG<br /> z. Hd.: Doc Processing<br /> Gubelstrasse 28, 6300 Zug, Switzerland</p>
+			</div>
+			<div class="d-block d-md-none">				
+				<hr>
+			</div>
+			<div class="col-12 col-md-6"><!-- IB IE --> 
+				<h4>Interactive Brokers Ireland Limited</h4>
+				<p><a href="https://www.interactivebrokers.co.uk/sso/Login?action=DOC" target="_self" class="btn btn-sm btn-primary">Dokumente hochladen</a>
+				<p class="text-small">Sie werden dazu aufgefordert, sich im Client Portal anzumelden.</p>
+				<p><strong>Postversand:</strong><br /> Interactive Brokers Ireland Limited<br> North Dock One, 91/92 North Wall Quay,<br> Dublin 1 D01 H7V7, Ireland</p>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="col-12 col-md-6"><!-- IBKRFS --> 
+				
+				<h4>Interactive Brokers Central Europe</h4>
+				<p><a href="https://www.interactivebrokers.co.uk/sso/Login?action=DOC" target="_self" class="btn btn-sm btn-primary">Dokumente hochladen</strong></a>
+				<p class="text-small">Sie werden dazu aufgefordert, sich im Client Portal anzumelden.</p>
+				<p><strong>Kurier/Postversand:</strong><br /> Interactive Brokers Central Europe Zrt, <br /> Attn: Doc Processing <br /> Mad&#225;ch Imre &#250;t 13-14., Budapest, 1075, Hungary</p>
+			</div>
+		</div>
+	</div>
+</section>					</div><!-- TAB 06 CONTENT -->
+					<div class="tab-pane fade" id="tips" role="tabpanel" aria-labelledby="tips" tabindex="0">
+						
+<style>
+#tips .bg-info-light{padding: 2rem; margin: 40px 0;}
+/* MEDIA QUERY | EXTRA SMALL < 576px ---------------------------------------------------------------------------------------------------- */
+@media (max-width:575.98px) {
+    #tips .bg-info-light{padding: 1rem; margin: 20px 0;}
+}
+</style>
+<section id="tips" class="no-padding-top">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<h2>Tipps f&#252;r einen optimalen Service</h2>
+				<br>
+				<p>IBKR bietet verschiedenste Wege an, &#252;ber die Sie Hilfe und Informationen erhalten k&#246;nnen, wie zum Beispiel unsere Support-Hotline, ein sicheres Ticketsystem f&#252;r Anfragen und Probleme, einen Hilfe-Chat und Kontakt per E-Mail direkt &#252;ber unsere Website. Nat&#252;rlich k&#246;nnen Sie jede Frage &#252;ber jeden beliebigen Kontaktkanal stellen. Aber je nachdem, worum es bei Ihrer Anfrage geht, werden Sie den besten und effizientesten Service &#252;ber die jeweils nachstehend empfohlene Kontaktmethode erhalten.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12" >
+				<div class="bg-info-light">
+					<h5 class="mt-0">Noch schnellere Antworten liefert der IBot, unser automatisiertes Antwortsystem</h5>
+					<p>Wir empfehlen, zuerst den IBot um Rat zu fragen, weil dies in der Regel der schnellste Weg ist. Unsere automatisierte Oberfl&#228;che, die auf englische Sprachbefehle reagiert, kann Ihnen umgehend L&#246;sungen zu g&#228;ngigen Problemen bereitstellen und liefert Ihnen Hilfe bei h&#228;ufigen Anfragen, wie z. B. Guthabenverwaltung, Bank&#252;berweisungen, Client Portal, Umsatz&#252;bersichten, Kontosalden, Ordereingabe u. v. m.</p>
+					<p>Klicken Sie auf die nachstehende Schaltfl&#228;che, um den IBot zu &#246;ffnen, und tippen Sie Ihre Frage einfach so ein, wie Sie sie stellen w&#252;rden, z. B.: &#8222;how do I withdraw funds&#8221; (wie zahle ich Guthaben aus) oder &#8222;what are the commissions for US stock orders&#8221; (wie hoch sind die Provisionen f&#252;r US-Aktienorders). </p>
+					<p><em>Bei dringenden Angelegenheiten, die menschliches Eingreifen erfordern &#8211; wie z. B. Schwierigkeiten bei einer Order oder Transaktion &#8211; kontaktieren Sie uns bitte telefonisch.</em></p>
+					<p class="mb-0"><a href="../general/contact/ibot-container.html" target="_self" class="btn btn-primary">Fragen Sie den IBot</a></p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 col-md-5">
+				<h5>Telefonische Anfragen</h5>
+				<p>Rufen Sie uns an, wenn Ihr Problem innerhalb kurzfristig gel&#246;st werden muss, zum Beispiel falls es um ein Problem mit einer Order oder einem Trade geht. In der Regel wird Ihr Anruf bei IBKR innerhalb einer Minute angenommen. Anfragen zum Thema <em>Guthabenverwaltung/Banking</em> erfordern in der Regel etwas mehr Zeit. Anstelle eines Anrufs empfehlen wir hierf&#252;r das <em>Ticketsystem</em> oder den <em>Chat</em> f&#252;r Probleme in folgenden Bereichen: Guthabenverwaltung, Steuern, Kontoausz&#252;ge, Dividenden und Kapitalma&#223;nahmen.</p>
+				<br>
+				<h5>Anfragen/Melden von Problemen per Ticket</h5>
+				<p>Dieses neue System zur sicheren &#220;bermittlung von Formularen erm&#246;glicht es, Anfragen aus der Kontoverwaltung heraus zu senden, die dann direkt an das Datenbanksystem des Kundendiensts weitergeleitet werden. Ihre Anfrage wird von dort automatisch jeweils an eine Service-Fachkraft oder ein Team des IBKR-Kundendiensts weitergeleitet, die/das f&#252;r Anfragen in diesem Bereich zust&#228;ndig ist. Es handelt sich also um eine Art &#8222;Smart-Routing&#8220; f&#252;r Ihre Anfragen. Sie erhalten sofort eine Referenznummer zu Ihrem Ticket und Ihre Anfrage wird in der Regel innerhalb von zwei Stunden einem Mitarbeiter oder einer Mitarbeiterin unseres Kundendiensts zugewiesen. Nach M&#246;glichkeit werden wir Ihre Anfrage binnen dieses Zeitraums auch beantworten. Doch selbst, wenn zun&#228;chst weiterf&#252;hrende Recherchen erforderlich sind, werden Sie dar&#252;ber informiert, wer Ihre Anfrage bearbeitet und k&#246;nnen den Bearbeitungsverlauf nachverfolgen.</p>
+			</div>
+			<div class="col-12 col-md-5 offset-md-1">
+				<h5>E-Mail</h5>
+				<p>Freie E-Mail-Kommunikation wird von IB aufgrund der wachsenden Anzahl an Spam- und Phishing-Angriffen und anderen betr&#252;gerischen Kommunikationsmethoden nicht mehr unterst&#252;tzt. Falls Sie noch nicht &#252;ber ein IBKR-Konto verf&#252;gen, m&#246;chten wir Sie bitten, Ihre Anfragen &#252;ber das Kontaktformular auf unserer Website an uns zu richten: <a href="../general/contact/newContact/contact.html" target="_self" class="linkarrow">Klicken Sie hier, um das Kontaktformular zu &#246;ffnen</a>.</p>
+				<br>
+				<h5>IB-Chat</h5>
+				<p>Unseren neuen Chat-Service finden Sie in der Kontoverwaltung. Der Chat ist so konzipiert, dass Sie mit der Servicefachkraft verbunden werden, die f&#252;r den Themenbereich Ihrer Anfrage am besten qualifiziert ist. Da eine Authentifizierung erfolgt und sichere Kommunikationskan&#228;le verwendet werden, k&#246;nnen die Mitarbeiter/-innen von IBKR auf sichere Weise Auskunft &#252;ber kontospezifische Informationen geben. Zu den Funktionen dieses neuen Systems z&#228;hlen Website-Inhalte, Webkonferenzen und Feedback. Protokolle sind auf Anfrage erh&#228;ltlich. Wir empfehlen den IB-Chat speziell f&#252;r den Themenbereich <em>Guthabenverwaltung und Banking</em> und bei Fragen zur <em>Kontoer&#246;ffnung</em>.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12"> <br>
+				<p>Bestandskundinnen und -kunden k&#246;nnen das sichere Ticketsystem f&#252;r Anfragen und Probleme nutzen, das &#252;ber das Mitteilungscenter in der Kontoverwaltung verf&#252;gbar ist. Bestandskundinnen und -kunden k&#246;nnen au&#223;erdem auch Anfragen &#252;ber das vorstehend genannte Formular stellen. Antworten auf diese Anfragen werden im Folgenden an das Mitteilungscenter geleitet. Dringende oder zeitkritische Anfragen sollten in keinem Fall &#252;ber das Kontaktformular gestellt werden.</p>
+				<hr>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+				<h4>Handelsbezogene Anfragen</h4>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 col-md-4">
+				<p><strong>Anfragen auf Widerruf von Trades (Trade Bust Requests)</strong><br/> Empfohlener Kommunikationsweg: Telefon<br/> Beantwortung erfolgt voraussichtlich: binnen 30 Minuten</p>
+				<br>
+				<p><strong>Fragen zur Ausf&#252;hrung und Liquidierung von Positionen</strong><br/> Empfohlener Kommunikationsweg: Telefon<br/> Beantwortung erfolgt voraussichtlich: in Echtzeit</p>
+				<br>
+			</div>
+			<div class="col-12 col-md-4">
+				<p><strong>Fragen zu Echtzeit-Margin/SMA</strong><br/> Empfohlener Kommunikationsweg: Telefon<br/> Beantwortung erfolgt voraussichtlich: in Echtzeit</p>
+				<br>
+				<p><strong>Probleme bei der Pr&#252;fung von Positionen, Orderstatus oder Order-Routing</strong><br/> Empfohlener Kommunikationsweg: Telefon<br/> Beantwortung erfolgt voraussichtlich: in Echtzeit</p>
+				<br>
+			</div>
+			<div class="col-12 col-md-4">
+				<p><strong>Allgemeine Fragen zu Margin/SMA</strong><br/> Empfohlener Kommunikationsweg: Ticket/Chat<br/> Beantwortung erfolgt voraussichtlich: binnen 1 Tag</p>
+				<br>
+				<p><strong>Hilfe bei der Eingabe besonderer Orders wie z. B. Combo-, Bracket- oder bedingte Orders</strong><br/> Empfohlener Kommunikationsweg: Chat<br/> Beantwortung erfolgt voraussichtlich: in Echtzeit</p>
+				<br>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="col-12">
+				<h4>Anfragen zu Guthabenverwaltung und Banking</h4>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 col-md-4">
+				<p><strong>Fragen zu Bank&#252;berweisungen, ACH-Einzahlungen und Auszahlungen</strong><br/> Empfohlener Kommunikationsweg: Ticket/Chat<br/> Beantwortung erfolgt voraussichtlich: am selben Tag</p>
+				<br>
+				<p><strong>Probleme mit ACAT/ATON</strong><br/> Empfohlener Kommunikationsweg: Ticket/Chat<br/> Beantwortung erfolgt voraussichtlich: am selben Tag</p>
+				<br>
+				<p><strong>Fragen zu Kontoausz&#252;gen und Steuerformularen (z.&nbsp;B.&nbsp;1099)</strong><br/> Empfohlener Kommunikationsweg: Ticket/Chat<br/> Beantwortung erfolgt voraussichtlich: binnen 1 Tag</p>
+				<br>
+			</div>
+			<div class="col-12 col-md-4"> <br>
+				<p><strong>IRA-Beitr&#228;ge/-Auszahlungen</strong><br/> Empfohlener Kommunikationsweg: Ticket/Chat<br/> Beantwortung erfolgt voraussichtlich: binnen 1 Tag</p>
+				<br>
+				<p><strong>Soll-/Habenzinsen</strong><br/> Empfohlener Kommunikationsweg: Ticket/Chat<br/> Beantwortung erfolgt voraussichtlich: binnen 1 Tag</p>
+				<br>
+			</div>
+			<div class="col-12 col-md-4">
+				<p><strong>Kapitalma&#223;nahmen (Dividenden, Fusionen, &#220;bernahmeangebote usw.)</strong><br/> Empfohlener Kommunikationsweg: Ticket/E-Mail<br/> Beantwortung erfolgt voraussichtlich: binnen 1 Tag</p>
+				<br>
+				<p><strong>Alle sonstigen Fragen zu Guthabenverwaltung und Banking</strong><br/> Empfohlener Kommunikationsweg: Ticket/Chat<br/> Beantwortung erfolgt voraussichtlich: am selben Tag</p>
+				<br>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="col-12">
+				<h4>Fragen zu allen sonstigen Themen</h4>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 col-md-4">
+				<p><strong>Fragen zur Er&#246;ffnung eines neuen Kontos</strong><br/> Empfohlener Kommunikationsweg: Chat/Ticket<br/> Beantwortung erfolgt voraussichtlich: in Echtzeit</p>
+				<br>
+				<p><strong>Technische Fragen (Login, Java, TWS-Installation usw.)</strong><br/> Empfohlener Kommunikationsweg: Chat/Telefon<br/> Beantwortung erfolgt voraussichtlich: in Echtzeit</p>
+				<br>
+				<p><strong>Passwort zur&#252;cksetzen (Identit&#228;tsnachweis erforderlich)</strong><br/> Empfohlener Kommunikationsweg: nur per Telefon<br/> Beantwortung erfolgt voraussichtlich: in Echtzeit</p>
+				<br>
+				<p><strong>Probleme mit dem Optionsaus&#252;bungsfenster</strong><br/> Empfohlener Kommunikationsweg: Telefon/Chat<br/> Beantwortung erfolgt voraussichtlich: in Echtzeit</p>
+				<br>
+			</div>
+			<div class="col-12 col-md-4">
+				<p><strong>Fragen zu Marktdatenabonnements</strong><br/> Empfohlener Kommunikationsweg: Ticket/Chat<br/> Beantwortung erfolgt voraussichtlich: am selben Tag</p>
+				<br>
+				<p><strong>Probleme mit der Website</strong><br/> Empfohlener Kommunikationsweg: Ticket<br/> Beantwortung erfolgt voraussichtlich: am selben Tag</p>
+				<br>
+				<p><strong>Konto-Upgrades und Handelsberechtigungen</strong><br/> Empfohlener Kommunikationsweg: Ticket/Chat<br/> Beantwortung erfolgt voraussichtlich: am selben Tag</p>
+				<br>
+				<p><strong>Fragen zu Geb&#252;hren, Provisionen, Stornierungskosten und Marktdatenpreisen</strong><br/> Empfohlener Kommunikationsweg: Ticket/E-Mail<br/> Beantwortung erfolgt voraussichtlich: binnen 1 Tag</p>
+				<br>
+			</div>
+			<div class="col-12 col-md-4">
+				<p><strong>Fragen zur Standard-Ordereingabe, Ordertypen und Symboleingabe</strong><br/> Empfohlener Kommunikationsweg: Chat/Ticket<br/> Beantwortung erfolgt voraussichtlich: binnen 1 Tag (diese Informationen sind auch jederzeit frei auf der IBKR-Website verf&#252;gbar)</p>
+				<br>
+				<p><strong>Fragen zum Pattern Day Trading</strong><br/> Empfohlener Kommunikationsweg: Ticket/E-Mail<br/> Beantwortung erfolgt voraussichtlich: am selben Tag</p>
+				<br>
+				<p><strong>Alle anderen Fragen</strong><br/> Empfohlener Kommunikationsweg: Ticket/Chat/E-Mail<br/> Beantwortung erfolgt voraussichtlich: binnen 1 Tag</p>
+				<br>
+			</div>
+		</div>
+		<hr>
+	</div>
+</section>
+<section id="additional-resources">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<h2>Weitere Ressourcen </h2>
+				<hr>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-5">
+				<p><a href="https://misc.interactivebrokers.com/cstools/contract_info/v3.10/index.php" target="_blank">Informationen zu Kontrakten</a><br> Hier finden Sie Wissenswertes zu Symbolen, B&#246;rsen und Notierungsregeln und k&#246;nnen eine ganze Datenbank mit Informationen zu allen Produkten nutzen, die &#252;ber die IBKR-Handelsplattform erh&#228;ltlich sind.</p>
+				<p><a href="https://ibkrcampus.com/traders-academy/finance-courses/" target="_self">Tutorial zur IB Trader Workstation</a><br> Eine Einf&#252;hrung in die grundlegenden Prinzipien der TWS.</p>
+				<p><a href="../trading/tws.html" target="_self">TWS-Kurzanleitung</a><br> Erl&#228;utert die grunds&#228;tzlichen Funktionen der TWS und erleichtert den Einstieg.</p>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-5 offset-md-1">
+				<p><a href="https://ibkrcampus.com/traders-academy/finance-courses/" target="_self">TWS-Benutzerhandbuch</a><br> Das umfassende TWS-Benutzerhandbuch ist besonders daf&#252;r hilfreich, sich mit den komplexeren Funktionen der TWS vertraut zu machen.</p>
+				<p><a href="../trading/free-trial.html" target="_self">TWS-Live-Demo</a><br> Erleben Sie die TWS im Einsatz!</p>
+			</div>
+		</div>
+	</div>
+</section>					</div><!-- TAB 07 CONTENT -->
+					<div class="tab-pane fade" id="bust" role="tabpanel" aria-labelledby="bust" tabindex="0">
+						
+<section id="busts" class="no-padding-top"> 
+	<div class="container"> 
+    	<div class="row"> 
+        	<div class="col">
+                <h2>IBKR-Richtlinien und -Verfahren f&#252;r Trade-Stornierungen (Busts)</h2>
+                <br>
+                <h3>Haftungsbeschr&#228;nkung</h3>
+                <p><strong>IBKR &#220;BERNIMMT KEINE HAFTUNG F&#220;R DEN ERHALT ODER DIE BEARBEITUNG VON ANFRAGEN ZUR STORNIERUNG VON TRADES (&#8222;BUSTS&#8220;), DIE VON KUNDINNEN ODER KUNDEN &#220;BERMITTELT WERDEN. EBENSO WENIG &#220;BERNIMMT IBKR HAFTUNG F&#220;R STORNIERUNGSANFRAGEN, DIE AN DAS ZUST&#196;NDIGE MARKTZENTRUM &#220;BERMITTELT UND IM FOLGENDEN VON DIESEM ABGELEHNT WERDEN. MARKTZENTREN LEGEN BESTIMMTE BEDINGUNGEN F&#220;R STORNIERUN FEST, DIE Z. B. KONKRETE ANFORDERUNGEN DAZU BEINHALTEN, WELCHE TRADES STORNIERT WERDEN K&#214;NNEN UND BINNEN WELCHER FRISTEN EINE STORNIERUNGSANFRAGE GESTELLT WERDEN MUSS.  IBKR BEM&#220;HT SICH NACH BESTEM VERM&#214;GEN, ANGEMESSENE STORNIERUNGSANFRAGEN ZU ANALYSIEREN UND AN DIE BETREFFENDEN MARKTZENTREN WEITERZULEITEN. IBKR KANN JEDOCH NICHT GARANTIEREN, DASS JEDE ANFRAGE ZUR STORNIERUNG EINES TRADES ANGENOMMEN, AN DAS ZUST&#196;NDIGE MARKTZENTRUM WEITERGELEITET UND VON DIESEM GEPR&#220;FT BZW. ANGENOMMEN WIRD. IBKR LEISTET KEINE ENTSCH&#196;DIGUNG AN KUNDINNEN ODER KUNDEN F&#220;R STORNIERUNGSANFRAGEN, DIE NICHT VON IBKR ODER DEM ZUST&#196;NDIGEN MARKTZENTRUM AKZEPTIERT WURDEN.</strong></p>            <br>
+                <ul>
+                <li class="paralist"><a href="#notice" target="_self" class="linkarrowdown page-scroll">Meldeverfahren</a></li>
+                <li class="paralist"><a href="#fees" target="_self" class="linkarrowdown page-scroll">Geb&#252;hren bei Stornierung (Bust) von Trades</a></li>
+                <li class="paralist"><a href="#both" target="_self" class="linkarrowdown page-scroll">Anfragen zur Stornierung von Trades, wenn beide Seiten des Trades Kundinnen bzw. Kunden von IBKR sind</a></li>
+                <li class="paralist"><a href="#guide" target="_self" class="linkarrowdown page-scroll">Leitlinien zur Stornierung von Trades mit Devisen/Metallen </a></li>
+                <li class="paralist"><a href="#bonds" target="_self" class="linkarrowdown page-scroll">Richtlinie zu Stornierungen/Anpassungen von Trades mit Anleihen</a></li>
+                </ul>
+            </div>
+        </div>
+	</div>
+</section>
+<hr>
+<span class="id-drop"><span id="notice"></span></span>
+<section id="">
+	<div class="container">
+        <div class="row">
+        	<div class="col">
+                <h4>Meldeverfahren</h4>
+                <p>Falls Sie als Kundin oder Kunde &#252;ber eine Ausf&#252;hrung benachrichtigt werden, die Ihrer Meinung nach eindeutig fehlerhaft ist,<sup>1</sup> und dann m&#246;chten, dass IBKR die B&#246;rse oder das Marktzentrum bittet, diesen Trade in Ihrem Namen zu stornieren, empfiehlt IBKR nachdr&#252;cklich, die entsprechende Anfrage &#252;ber das Tool f&#252;r Trade-Stornierungsanfragen in der Kontoverwaltung vorzunehmen. Telefonische Anfragen werden zwar ebenfalls bearbeitet. Da es hierbei jedoch zu Wartezeiten kommen kann und IBKR zun&#228;chst einige Informationen abfragen muss, kann dies zusammengenommen die Wahrscheinlichkeit verringern, dass Ihre Anfrage rechtzeitig &#252;bermittelt wird. Bitte nehmen Sie zur Kenntnis, dass IBKR keine unformatierte E-Mail-Kommunikation unterst&#252;tzt und dass die Kontaktaufnahme &#252;ber den &#8222;Hilfe &amp; Kontakt&#8220;-Link auf unserer Website nicht f&#252;r eilige Anliegen geeignet ist.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<hr>
+<span class="id-drop"><span id="fees"></span></span>
+<section id="">
+	<div class="container">
+        <div class="row">
+        	<div class="col">
+                <h4>Geb&#252;hren bei Stornierung (Bust) von Trades</h4>
+                <p>Zus&#228;tzlich zu den von IBKR erhobenen Geb&#252;hren wird h&#228;ufig auch seitens der Marktzentren/B&#246;rsen eine <a  href="../pricing/other-fees.html" target="_self" class="linkarrow">Geb&#252;hr</a> f&#252;r das Stornieren von Trades berechnet. Kundinnen und Kunden werden gebeten, sich selbst &#252;ber alle bei Stornierungsanfragen anfallenden Geb&#252;hren zu informieren, bevor sie eine entsprechende Anfrage stellen.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<hr>
+<span class="id-drop"><span id="both"></span></span>
+<section id="">
+	<div class="container">
+        <div class="row">
+            <div class="col">
+                <h4>Anfragen zur Stornierung von Trades, wenn beide Seiten des Trades Kundinnen bzw. Kunden von IBKR sind</h4>
+                <p>Da B&#246;rsen und Marktzentren generell dazu tendieren, bei Gesch&#228;ften zwischen Kundinnen oder Kunden desselben Brokerhauses keine Entscheidungen &#252;ber Stornierungsanfragen zu treffen, wendet IBKR bei solchen Anfragen ggf. die Richtlinien des ausf&#252;hrenden Handelsplatzes an. Angesichts der sehr unterschiedlichen und subjektiven Beschaffenheit solcher Richtlinien hat IBKR die nachstehende Richtlinie eingef&#252;hrt, um unseren Kundinnen und Kunden ein gewisses Ma&#223; an Sicherheit und Vorhersehbarkeit zu bieten. </p>
+                <p>IBKR f&#228;llt Entscheidungen &#252;ber Stornierungsanfragen ausschlie&#223;lich in F&#228;llen, in denen die ausf&#252;hrende B&#246;rse oder das ausf&#252;hrende Marktzentrum eine Entscheidung verweigert, und h&#228;lt sich bei der Entscheidungsfindung in gr&#246;&#223;tm&#246;glichem Ma&#223;e an die Stornierungsrichtlinien der betreffenden Organisation. Bitte besuchen Sie die Website der entsprechenden B&#246;rse oder des jeweiligen Marktzentrums, um konkrete Informationen zu deren Stornierungsrichtlinien zu erhalten. Trades, die nicht speziell in den Stornierungsrichtlinien der jeweiligen Organisation definiert sind, werden von IBKR von Einzelfall zu Einzelfall beurteilt. Wenn bei einer konkreten Ausf&#252;hrung keine klare Richtlinie vorliegt, wird IBKR eine Reihe von Informationen heranziehen, zu denen unter anderem die nachstehenden Aspekte z&#228;hlen. Wir ber&#252;cksichtigen alle Informationen, die f&#252;r die Beurteilung relevant sind, ob eine bestimmte Ausf&#252;hrung den Grunds&#228;tzen eines fairen und ordnungsgem&#228;&#223;en Markts entspricht, und treffen auf dieser Basis nach bestem Verm&#246;gen Entscheidungen &#252;ber einzelne Ausf&#252;hrungen:</p>
+                <ul>
+                <li class="paralist">Rechtzeitigkeit der Meldung: Eine Anfrage zur Stornierung eines Trades muss innerhalb der durch den Handelsplatz bestimmten Fristen und vorzugsweise &#252;ber das Tool f&#252;r Trade-Stornierungsanfragen gestellt werden.</li>
+                <li class="paralist">Unternehmens- oder branchenspezifische Nachrichten/Ereignisse.</li>
+                <li class="paralist">Volatilit&#228;t der Aktie in der j&#252;ngsten Vergangenheit.</li>
+                <li class="paralist">Ver&#228;nderungen allgemeiner Marktindikatoren zum Zeitpunkt der Ausf&#252;hrung.</li>
+                <li class="paralist">Dauer des Bestehens der Order vor Ausf&#252;hrung. Es ist wahrscheinlicher, dass IBKR einen Trade aufl&#246;st, bei dem eine Order einen bestehenden Geld-/Briefkurs erreicht oder angehoben hat, als dass IBKR einen Trade aufl&#246;st, bei dem die Order vor ihrer Ausf&#252;hrung zum besten Geld-/Briefkurs geworden ist.</li>
+                <li class="paralist">Zeitpunkt der Order&#252;bermittlung und der anschlie&#223;enden Ausf&#252;hrung (vor/nach den regul&#228;ren Handelszeiten oder w&#228;hrend des regul&#228;ren Handelstags).</li>
+                <li class="paralist">Er&#246;ffnungsindikation.</li>
+                <li class="paralist">Berichte oder Indikationen zu &#8222;angrenzenden&#8220; Transaktionen. Zum Beispiel: Vortagsschlusskurs, letzter zuvor gehandelter Kurs, n&#228;chster gehandelter Kurs nach der betreffenden Ausf&#252;hrung, letzte Ausf&#252;hrungskurse (&#8222;Last Prints&#8220;).</li>
+                <li class="paralist">N&#228;chste aufeinander folgende Ausf&#252;hrungskurse.</li>
+                <li class="paralist">Liquidit&#228;tsaspekte.</li>
+                </ul>
+                <p>Die vorstehenden Richtlinien sollen dazu dienen, Kundinnen und Kunden ein gewisses Ma&#223; an Sicherheit zu bieten. Jedoch ist es mit keiner Richtlinie m&#246;glich, alle denkbaren Situationen vorherzusehen.  IBKR beh&#228;lt sich das Recht vor, allen Entscheidungen das Interesse eines fairen und ordnungsgem&#228;&#223;en Marktes zugrunde zu legen.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<hr>
+<span class="id-drop"><span id="guide"></span></span>
+<section id="">
+	<div class="container">
+    	<div class="row">
+        	<div class="col">
+                <h4>Leitlinien zur Stornierung von Trades mit Devisen/Metallen </h4>
+                <p>IBKR zieht generell bei allen au&#223;erb&#246;rslichen Trades mit Devisen/Metallen eine Stornierung oder Preisanpassung in Erw&#228;gung, einschlie&#223;lich bei Ausf&#252;hrungen, die nicht mit den Preisen eines fairen und ordnungsgem&#228;&#223;en Markts zu vereinbaren sind. In der Praxis werden Gesch&#228;fte nicht angepasst, deren Ausf&#252;hrungskurs um weniger als 15 Basispunkte (0,15 %) abweicht oder deren GuV infolge der Ausf&#252;hrung zum falschen Kurs weniger als 100 USD betr&#228;gt. Gesch&#228;fte, die diese indikativen Grenzen &#252;berschreiten, k&#246;nnen, aber m&#252;ssen nicht storniert werden. Die Entscheidung basiert auf verschiedenen Bedingungen, einschlie&#223;lich Marktvolatilit&#228;t und -liquidit&#228;t, Trade-Volumen, Preisabweichung und ob der fehlerhafte Trade rechtzeitig an IBKR gemeldet wurde. </p>
+                <p>Eine Anfrage zur Stornierung eines Trades muss binnen einer angemessenen Frist nach Ausf&#252;hrung eingehen und sollte vorzugsweise &#252;ber das Tool zur Beantragung von Trade-Stornierungen in der Kontoverwaltung gestellt werden. IBKR entscheidet nach eigenem Ermessen, ob der Vorgang rechtzeitig gemeldet wurde, wobei die Umst&#228;nde des betreffenden Trades ber&#252;cksichtigt werden. Falls ein Trade die kursbezogenen Voraussetzungen f&#252;r eine Stornierung erf&#252;llt, aber die Meldung der Stornierung nur mit Verz&#246;gerung erfolgt ist, lehnt IBKR die Stornierungsanfrage ggf. ab oder verwendet andere Algorithmen zum Ermitteln der Kursanpassung. Dabei wird beispielsweise der Kursverlauf des betreffenden Finanzinstruments f&#252;r die Zeit zwischen Ausf&#252;hrung und Beantragung der Stornierung ber&#252;cksichtigt. </p>
+            </div>
+        </div>
+    </div>
+</section>
+<hr>
+<span class="id-drop"><span id="bonds"></span></span>
+<section id="">
+	<div class="container">
+    	<div class="row">
+        	<div class="col">
+                <h4>Richtlinie zu Stornierungen/Anpassungen von Trades mit Anleihen</h4>
+                <p>Wird eine Transaktion eindeutig als fehlerhaft angesehen, wobei diese Entscheidung im alleinigen Ermessen von Interactive Brokers liegt, so beh&#228;lt sich IBKR das Recht vor, die Transaktion zu &#228;ndern, zu stornieren oder zu korrigieren. In diesem Kontext ist eine &#8222;eindeutig fehlerhafte Transaktion&#8220; definiert als eine Orderausf&#252;hrung, die: (i) zu einem Kurs erfolgt ist, der f&#252;r dieses Wertpapier zum Zeitpunkt der Ausf&#252;hrung eine erhebliche Abweichung vom oder Unvereinbarkeit mit dem Markt darstellt, und/oder (ii) zu Konditionen (z. B. hinsichtlich Symbol, Menge oder Kurs) erfolgt ist, die nach vern&#252;nftigen Ma&#223;st&#228;ben unter den gegebenen Umst&#228;nden auf eine irrt&#252;mliche Eingabe schlie&#223;en lassen.</p>
+                <p>Im Falle eines solchen Trades muss IBKR von einer an der Transaktion beteiligten Person (&#8222;der/die Beteiligte&#8220;) innerhalb von drei&#223;ig (30) Minuten ab dem Zeitpunkt der Handelsausf&#252;hrung &#252;ber das Tool f&#252;r Stornierungsanfragen in der Kontoverwaltung in Kenntnis gesetzt werden. Telefonische Anfragen werden zwar ebenfalls bearbeitet. Die hierbei zu erwartenden Wartezeiten k&#246;nnen allerdings die Wahrscheinlichkeit verringern, dass die Anfrage rechtzeitig &#252;bermittelt wird. Bitte nehmen Sie zur Kenntnis, dass IBKR keine unformatierte E-Mail-Kommunikation unterst&#252;tzt und dass die Kontaktaufnahme &#252;ber den &#8222;Hilfe &amp; Kontakt&#8220;-Link auf unserer Website nicht f&#252;r eilige Anliegen geeignet ist.</p>
+                <p>Unabh&#228;ngig davon, ob ein entsprechender Antrag von Beteiligten eingegangen ist, beh&#228;lt sich IBKR das Recht vor, die Pr&#252;fung einer Transaktion einzuleiten, sofern IBKR nach alleinigem Ermessen zu der Einsch&#228;tzung kommt, dass die Umst&#228;nde eine solche Pr&#252;fung erfordern. Die vorstehend aufgef&#252;hrten Richtlinien dienen dazu, Kundinnen und Kunden ein gewisses Ma&#223; an Sicherheit zu bieten. Dennoch ist es nicht m&#246;glich, mithilfe von Richtlinien alle denkbaren Situationen vorherzusehen. Jede Anfrage wird einzeln gepr&#252;ft und unverz&#252;glich bearbeitet. IBKR beh&#228;lt sich das Recht vor, finale Entscheidungen im Interesse eines fairen und ordnungsgem&#228;&#223;en Markts zu treffen. </p>
+	        </div>
+        </div>
+    </div>
+</section>
+<span class="id-drop"><span id="disclosures"></span></span>
+<section id="" class="disclosure"> 
+	<div class="container">
+ 		<div class="row"> 
+        	<div class="col">
+            	<h6>Offenlegungen</h6>
+                <ol>
+                <li>Generell handelt es sich hierbei um die Ausf&#252;hrung einer Order zu einem Kurs, der erheblich vom zum jeweiligen Zeitpunkt geltenden Marktpreis abweicht. </li>
+                </ol>
+			</div>
+        </div>
+    </div>
+</section>					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section></div>
+</div>
+
+<!-- FOOTER START  -->
+<footer class="footer noprint" id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p>Interactive Brokers &#174;, IB<sup>SM</sup>, InteractiveBrokers.com &#174;, Interactive Analytics &#174;, IB Options Analytics<sup>SM</sup>, IB SmartRouting<sup>SM</sup>, PortfolioAnalyst &#174;, IB Trader Workstation<sup>SM</sup> und One World, One Account<sup>SM</sup> sind Dienstleistungs- und/oder Handelsmarken von Interactive Brokers LLC. Auf Anfrage stellen wir Ihnen gerne Belege zu unseren Aussagen und statistischen Angaben zur Verf&#252;gung. Alle abgebildeten Handelssymbole dienen ausschlie&#223;lich Veranschaulichungszwecken und stellen keine Empfehlungen dar.</p>
+                <p>Der Online-Handel mit Aktien, Optionen, Futures, W&#228;hrungen, ausl&#228;ndischen Papieren und festverzinslichen Produkten kann mit dem Risiko von erheblichen Verlusten einhergehen.</p>
+                <p>Der Handel mit Optionen birgt Risiken und ist nicht f&#252;r alle Anleger/-innen geeignet. N&#228;here Informationen finden Sie im Dokument <a href="https://www.theocc.com/about/publications/character-risks.jsp" rel="noreferrer noopener" target="_blank">&#8222;Characteristics and Risks of Standardized Options&#8220;</a> (Besonderheiten und Risiken im Zusammenhang mit standardisierten Optionen) (auch &#8222;Options Disclosure Document&#8220;, ODD). Alternativ k&#246;nnen Sie sich auch an den <a href="customer-servicef763.html?p=contact" target="_self">IB-Kundendienst</a> wenden, um eine Kopie des ODD zu erhalten. Bevor Kundinnen und Kunden mit dem Handeln beginnen, m&#252;ssen sie die relevanten Risikoinformationen in unseren <a href="../general/homepage-disclosures.html" target="_self">Warnhinweisen und Offenlegungen</a> durchlesen. Der Margin-Handel ist nur f&#252;r erfahrene Anleger/-innen mit hoher Risikotoleranz geeignet. Sie k&#246;nnen dabei mehr Geld verlieren, als Sie urspr&#252;nglich investiert haben. N&#228;here Informationen zu den Zinss&#228;tzen f&#252;r Margin-Kredite finden Sie unter <a href="../trading/margin-rates.html" target="_self">Margins&#228;tze</a>. Wertpapier-Futures bergen ein hohes Risiko und sind nicht f&#252;r alle Anleger/-innen geeignet. Sie k&#246;nnen dabei mehr Geld verlieren, als Sie urspr&#252;nglich investiert haben. Bitte lesen Sie die <a href="../general/homepage-disclosures.html" target="_self">Risikoinformationen zu Wertpapier-Futures</a> durch, bevor Sie mit Wertpapier-Futures handeln. Strukturierte Produkte sowie festverzinsliche Produkte wie z. B. Anleihen sind komplexe Produkte, die mit erh&#246;htem Risiko einhergehen und daher nicht f&#252;r alle Anleger/-innen geeignet sind. Bevor Sie mit dem Handeln beginnen, lesen Sie bitte die <a href="../general/homepage-disclosures.html" target="_self">relevanten Risikoinformationen und Offenlegungen</a> durch.</p>
+                <p>Weitere Informationen zu IBKR ATS finden Sie auf der <a href="https://www.sec.gov/divisions/marketreg/form-ats-n-filings.htm#ats-n" rel="noreferrer noopener" target="_blank">SEC-Seite</a>.</p>
+<p>36 L&#228;nder schlie&#223;t sowohl L&#228;nder als auch Territorien ein.</p>
+            </div>
+        </div>
+        <div class="footer-site-links" id="footerSiteLinks">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>Konto</p>
+                    <ul>
+                    <li><a href="https://www.interactivebrokers.co.uk/sso/Login?RL=1" target="_self">Anmelden</a></li>
+                    <li> <a href="https://www.interactivebrokers.co.uk/Universal/Application" target="_self">Konto er&#246;ffnen</a></li>
+                    <li><a href="https://www.interactivebrokers.co.uk/sso/Login?c=t" target="_self">Antrag abschlie&#223;en</a></li>
+                    <li><a href="../accounts/account-guide.html" target="_self">Kontotypen</a></li>
+                    <li><a href="https://www.interactivebrokers.co.uk/Universal/Application?ft=T&amp;locale=de_DE" target="_self">Kostenlose Testversion</a></li>
+                    </ul>
+                    <p>Software &amp; Downloads</p>
+                    <ul>
+                    <li><a href="../trading/tws.html#tws-software" target="_self">Trader Workstation</a></li>
+                    <li><a href="../trading/ibkr-desktop.html" target="_self">IBKR&nbsp;Desktop</a></li>
+                    <li><a href="../trading/tws-mobile.html#trytoday" target="_self">IBKR Mobile</a></li>
+                    <li><a href="../trading/ib-api.html#api-software" target="_self">APIs</a></li>
+                    </ul>    
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>Support</p>
+                    <ul>
+					<li><a href="fund-my-account.html" target="_self">Guthaben einzahlen</a></li>
+                    <li><a href="individuals.html" target="_self">Privatkunden</a></li>
+                    <li><a href="institutions.html" target="_self">Gesch&#228;ftskunden</a></li>
+                    <li><a href="institutional-sales-contacts4343.html?p=uk" target="_self">Vertriebskontakte f&#252;r Gesch&#228;ftskunden</a></li>
+					<li><a href="../general/contact/ibot-container.html" target="_self">FAQs</a></li>
+					<li><a href="../software/systemStatus.html" target="_self">Systemstatus</a></li>
+                    </ul>
+                    <p>Anbieter-Support</p>
+                    <ul>
+                    <li><a href="../general/about/supplier-information.html" target="_self">Informationen f&#252;r Auftragnehmer</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>&#220;ber uns</p>
+                    <ul>
+                    <li><a href="../general/awards.html" target="_self">Auszeichnungen</a></li>
+                    <li><a href="../general/about/careers-splash.html" target="_self">Karriere</a></li>
+                    <li><a href="../general/about/about.html" target="_self">Vorstellung und Firmengeschichte</a></li>
+                    <li><a href="https://investors.interactivebrokers.com/ir/main.php" target="_blank" rel="noreferrer noopener">Investorendialog</a></li>
+                    <li><a href="../about/news-at-ibkr.html" target="_self">IBKR-News</a></li>
+                    <li><a href="../general/about/press-and-media.html" target="_self">Presse und Medien</a></li>
+                    <li><a href="../accounts/legalDocuments/brokerPerformanceReports.html" target="_self">Meldungen an Aufsichtsbeh&#246;rden</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>Folgen Sie uns:</p>
+                    <ul>
+                        <li><a href="https://www.facebook.com/InteractiveBrokersEurope/" target="_blank" rel="noreferrer noopener"><i class="fab fa-facebook"></i>  Facebook</a></li>
+                        <li><a href="https://www.instagram.com/interactivebrokers_europe" target="_blank" rel="noreferrer noopener"><i class="fab fa-instagram"></i>  Instagram</a></li>
+                        <li><a href="https://twitter.com/IBKR_Europe" target="_blank" rel="noreferrer noopener"><i class="fab fa-x-twitter"></i>  Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-disclosure-links" id="footerDisclosureLinks">
+            <div class="row">
+                <div class="col">
+                    <ul>
+                    <li><a href="../accounts/legalDocuments/anti-fraud-notice.html" target="_self">Hinweise zur Betrugsbek&#228;mpfung</a></li>
+                    <li><a href="../../errorMessages/404.html" target="_self">Hinweise zum Kundenidentifikationsprogramm</a></li>
+                    <li><a href="../general/warnings-on-frauds-and-scams.html" target="_self">Warnung vor Betrug und Scams</a></li>
+                    <li><a href="../accounts/forms-and-disclosures-client-agreements.html" target="_self">Formulare und Offenlegungen</a></li>
+                    <li><a href="../accounts/legalDocuments/accessibility-policy.html" target="_self">Erkl&#228;rung zur Barrierefreiheit</a></li>
+                    <li><a href="../accounts/legalDocuments/privacy.html" target="_self">Datenschutz</a></li>
+                    <li><a href="../sitemap/index.html" target="_self">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-entities" id="footerEntities">
+            <div class="row">
+                <div class="col">
+                    <div class="footer-entity"><!-- IBKR IE -->
+                        <p class="entity-name"><a href="../../en/home.html" target="_self">Interactive Brokers Ireland Limited</a></p>
+                        <p>wird reguliert von der <a href="https://www.centralbank.ie/" target="_blank" rel="noreferrer noopener">Central Bank of Ireland</a> (CBI, Referenznummer: C423427), ist registriert beim Companies Registration Office (CRO, Registrierungsnummer: 657406) und ist ein Mitglied des Irish Investor Compensation Scheme (ICS).<br> <strong>Eingetragener Gesch&#228;ftssitz:</strong> North Dock One, 91/92 North Wall Quay, Dublin 1 D01 H7V7, Ireland.<br> <strong>Website:</strong> <a href="../../en/home.html" target="_self">www.interactivebrokers.ie</a></p>
+                        <p class="footer-entities-link"><a href="#collapseEntities" target="_self" class="collapsed" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseEntities">Informationen zu weiteren Gesellschaften von Interactive Brokers</a></p>
+                    </div>
+                    <div class="footer-entities-list collapse" id="collapseEntities">
+                        <div class="row">
+                            <div class="col-12 col-md-6"><!-- IBKR LLC -->
+                                
+                                <p class="entity-name"><a href="https://www.interactivebrokers.com/en/home.php?nored=t" target="_self">Interactive Brokers LLC</a></p>
+                                <p>ist Mitglied der <a  rel="noreferrer noopener" target="_blank"  href="https://www.nyse.com/">NYSE</a> &#8211; <a href="https://www.finra.org/" rel="noreferrer noopener"  target="_blank">FINRA</a> &#8211; <a href="https://www.sipc.org/" rel=" noreferrer noopener" target="_blank">SIPC</a> und wird reguliert von der US Securities and Exchange Commission und der Commodity Futures Trading Commission.<br> <strong>Hauptgesch&#228;ftssitz:</strong> One Pickwick Plaza, Greenwich, CT 06830 USA<br> <strong>Website:</strong> <a href="https://www.interactivebrokers.com/en/home.php?nored=t" target="_self">www.interactivebrokers.com</a></p><!-- IBKR CA -->
+                                <p class="entity-name"><a href="https://www.interactivebrokers.ca/en/home.php?nored=t" target="_self">Interactive Brokers Canada Inc.</a></p>
+                                <p>Ist Mitglied der  <a href="https://www.ciro.ca/" target="_blank" rel="noreferrer noopener">Canadian Investment Regulatory Organization (CIRO)</a>  und Mitglied des <a href="https://www.cipf.ca/" target="_blank" rel="noreferrer noopener">Canadian Investor Protection Fund.</a><br> <strong>Eingetragener Gesch&#228;ftssitz:</strong> 1800 McGill College Avenue, Suite 2106, Montreal, Quebec, H3A 3J6, Canada.<br> <strong>Website:</strong> <a href="https://www.interactivebrokers.ca/en/home.php?nored=t" target="_self">www.interactivebrokers.ca</a></p><!-- IBKR UK -->
+                                
+                                <p class="entity-name"><a href="https://www.interactivebrokers.co.uk/en/home.php?nored=t" target="_self">Interactive Brokers (U.K.) Limited</a></p>
+                                <p>ist von der <a href="https://www.fca.org.uk/" target="_blank" rel="noreferrer noopener">Financial Conduct Authority</a> zugelassen und wird von dieser reguliert. FCA-Handelsregisternummer 208159. In England und Wales im Handelsregister eingetragen unter der Firmennummer 03958476. <a href="https://www.fca.org.uk/firms/financial-services-register" target="_blank" rel="noreferrer noopener">[https://www.fca.org.uk/firms/financial-services-register]</a><br> <strong>Eingetragener Gesch&#228;ftssitz:</strong> 20 Fenchurch Street, Floor 12, London EC3M 3BY.<br> <strong>Website:</strong> <a href="https://www.interactivebrokers.co.uk/en/home.php?nored=t" target="_self">www.interactivebrokers.co.uk</a></p><!-- IBKR AUS -->
+                                <p class="entity-name"><a href="https://www.interactivebrokers.com.au/en/home.php?nored=t" target="_self">Interactive Brokers Australia Pty. Ltd.</a></p>
+                                <p>ABN 98 166 929 568 ist lizensiert von der <a href="https://asic.gov.au/" target="_blank" rel="noreferrer noopener">Australian Securities and Investments Commission</a> (AFSL: 453554), wird von dieser reguliert und nimmt an der <a href="https://www.asx.com.au/" target="_blank" rel="noreferrer noopener">ASX</a>, <a href="https://www.asx.com.au/" target="_blank" rel="noreferrer noopener">ASX 24</a> und <a href="https://www.cboe.com.au/" target="_blank" rel="noreferrer noopener">Cboe Australia</a> teil.<br> <strong>Eingetragener Gesch&#228;ftssitz:</strong> Level 11, 175 Pitt Street, Sydney, New South Wales 2000, Australia.<br> <strong>Website:</strong> <a href="https://www.interactivebrokers.com.au/en/home.php?nored=t" target="_self">www.interactivebrokers.com.au </a></p>
+                            </div>
+                            <div class="col-12 col-md-6"><!-- IBKR HK -->
+                                
+                                <p class="entity-name"><a href="https://www.interactivebrokers.com.hk/en/home.php?nored=t" target="_self">Interactive Brokers Hong Kong Limited</a></p>
+                                <p>wird von der Hong Kong Securities and Futures Commission reguliert und ist Mitglied der <a href="https://www.hkex.com.hk/" target="_blank" rel="noreferrer noopener">SEHK</a> und <a href="https://www.hkex.com.hk/" target="_blank" rel="noreferrer noopener">HKFE</a>.<br> <strong>Eingetragener Gesch&#228;ftssitz:</strong> Suite 1512, Two Pacific Place, 88 Queensway, Admiralty, Hong Kong SAR.<br> <strong>Website:</strong> <a href="https://www.interactivebrokers.com.hk/en/home.php?nored=t" target="_self">www.interactivebrokers.com.hk</a></p><!-- IBKR IN -->
+                                <p class="entity-name"><a href="https://www.interactivebrokers.co.in/en/home.php?nored=t" target="_self">Interactive Brokers India Pvt. Ltd.</a></p>
+                                <p>ist ein handelndes Mitglied der <a href="https://www.nseindia.com/" target="_blank" rel="noreferrer noopener">NSE</a> und <a href="https://www.bseindia.com/" target="_blank" rel="noreferrer noopener">BSE</a> sowie ein verwahrendes Mitglied der <a href="https://nsdl.co.in/" target="_blank" rel="noreferrer noopener">NSDL</a>. <a href="https://www.sebi.gov.in/" target="_blank" rel="noreferrer noopener">SEBI</a>-Registrierungs-Nr. INZ000217730; NSDL: IN-DP-602-2021. CIN-U67120MH2007FTC170004.<br> <strong>Eingetragener Gesch&#228;ftssitz:</strong> 502/A, Times Square, Andheri Kurla Road, Andheri East, Mumbai 400059, India.<br> <strong>Tel.:</strong> +91-22-61289888 <span class="pipe">|</span> <strong>Fax:</strong> +91-22-61289898.<br> <strong>Website:</strong> <a href="https://www.interactivebrokers.co.in/en/home.php?nored=t" target="_self">www.interactivebrokers.co.in</a></p><!-- IBKR JP -->
+                                
+                                <p class="entity-name"><a href="https://www.interactivebrokers.co.jp/en/home.php?nored=t" target="_self">Interactive Brokers Securities Japan, Inc.</a></p>
+                                <p>wird reguliert vom Kanto Local Finance Bureau (Registrierungsnr. 187) und ist Mitglied der<a href="https://www.jsda.or.jp/" target="_blank" rel="noreferrer noopener">Japan Securities Dealers Association</a> und der <a href="https://www.nisshokyo.or.jp/" target="_blank" rel="noreferrer noopener">Commodity Futures Association of Japan</a>.<br> <strong>Eingetragener Gesch&#228;ftssitz:</strong> Kasumigaseki Building 25F, 2-5 Kasumigaseki 3-chome, Chiyoda-ku, Tokyo, 100-6025 Japan.<br> <strong>Tel.:</strong> +81 03-4590-0711 <em>(an Gesch&#228;ftstagen von 08:30&#8211;17:30 Uhr Uhr JST)</em>.<br> <strong>Website:</strong> <a href="https://www.interactivebrokers.co.jp/en/home.php?nored=t" target="_self">www.interactivebrokers.co.jp</a></p><!-- IBKR SG -->
+<p class="entity-name"><a href="https://www.interactivebrokers.com.sg/en/home.php" target="_self">Interactive Brokers Singapore Pte. Ltd.</a></p>
+<p>ist lizensiert von der Monetary Authority of Singapore (Lizenznr. CMS100917) und wird von dieser reguliert.<br> <strong>Eingetragener Gesch&#228;ftssitz:</strong>  1 Harbourfront Place #12-01/03, Harbourfront Tower 1, Singapore 098633. <br> <strong>Website:</strong> <a href="https://www.interactivebrokers.com.sg/en/home.php" target="_self">www.interactivebrokers.com.sg</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- FOOTER END  -->
+</footer>
+
+<!-- MODAL START | ABOUT IB GROUP ---------------------------------------------------------------------------------------------------- -->
+<div class="modal fade" id="modalAlert" tabindex="-1" role="dialog" aria-labelledby="modalAboutIBGroup">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content modal-primary">
+			<div class="modal-header">
+				<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+				<h4 class="modal-title" ><i class="fas fa-exclamation-circle"></i> Notice</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col">
+						<p class="message">message</p><!-- You will be brought to the website of our affiliate-->
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<div class="row">
+					<div class="col-12 col-sm-3 order-2 order-sm-1">
+						<div class="panel-btn-left"><a href="javascript:void(0);" data-bs-dismiss="modal" class="btn btn-secondary">Stay</a></div>
+					</div>
+					<div class="col-12 col-sm-9 order-1 order-sm-2">
+						<div class="panel-btn-right goto"><a href="javascript:void(0);" onclick=""  data-bs-dismiss="modal"  class="btn btn-primary">Go</a></div> 
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#modalAlert').on('show.bs.modal', function (event) {
+	  var button = $(event.relatedTarget) // Button that triggered the modal
+      let myMessage = button.data('mymessage');
+      /*let myLink = "location.href='"+button.data('mytargetlink')+"'"; */
+      let myLink = "window.open('"+button.data('mytargetlink')+"')"; 
+	  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+	  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+	  var modal = $(this)
+	  modal.find('.modal-body .message').text( myMessage );
+	  modal.find('.modal-footer .goto a').attr( "onclick", myLink );
+
+	})
+});
+</script>
+<script>
+if(window.location.href.includes('conf=am')) {
+document.querySelector("#ibkr-header").style.display = "none";
+document.querySelector("#footer").style.display = "none";
+}
+</script>
+
+
+<!-- SHARE ON SOCIAL ---------------------------------------------------------------------------------------------------->
+<div class="social-sidebar animated fadeInLeft noprint">
+	<span><i class="fa fa-chevron-left"></i><i class="fa fa-chevron-right"></i></span>
+	<div class="icon-set">
+		<p>SHARE</p>
+		<div class="share-icon"><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.interactivebrokers.com%2fen%2findex.php%3ff%3d57253" target="_blank" rel="noreferrer noopener" title="Share on Facebook" aria-label="Share on Facebook" class="icon-facebook"><i class="fab fa-facebook-square"></i></a></div>
+		<div class="share-icon"><a href="https://twitter.com/intent/tweet?text=Interactive+Brokers&amp;url=https%3A%2F%2Fwww.interactivebrokers.com%2Fen%2Findex.php%3ff%3d57253&amp;related=" target="_blank" rel="noreferrer noopener" title="Share on Twitter" aria-label="Share on Twitter" class="icon-twitter"><i class="fab fa-twitter-square"></i></a></div>
+		<div class="share-icon"><a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwww.interactivebrokers.com%2fen%2findex.php%3ff%3d57253&amp;title=Interactive+Brokers&amp;summary=Interactive+Brokers&amp;source=LinkedIn" target="_blank" rel="noreferrer noopener" title="Share on Linkedin" aria-label="Share on Linkedin" class="icon-linkedin"><i class="fab fa-linkedin"></i></a></div>
+		<div class="share-icon"><a href="javascript:void(0);" target="_self" title="Share by Email" aria-label="Share by Email" name="btn_trigger" data-toggle="modal" data-target="#emailModal" id="57253" onClick="emailCookie();" class="icon-email"><i class="far fa-envelope"></i></a></div>
+	</div>
+</div>
+<!-- MODAL START | SHARE ON SOCIAL ---------------------------------------------------------------------------------------------------->
+<div class="modal fade noprint" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="emailModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button id="cls_frm_1" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="gridSystemModalLabel"><i class="far fa-envelope text-gray"></i> Email</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col">
+						<form>
+							<div class="form-group">
+								<label for="_to" class="control-label">To:</label> <span id="_err_to" style="color: red;"></span>
+								<input type="text" class="form-control" id="_to">
+							</div>
+							<div class="form-group">
+								<label for="_from" class="control-label">From:</label> <span id="_err_frm" style="color: red;"></span>
+								<input type="text" class="form-control" id="_from">
+							</div>
+							<div class="form-group">
+								<label for="_subject" class="control-label">Subject:</label> <span id="_err_subject" style="color: red;"></span>
+								<input type="text" class="form-control" id="_subject" value="Interactive Brokers">
+							</div>
+							<div class="form-group">
+								<textarea class="form-control" id="_content" style="height:200px;"></textarea>
+							</div>
+							<p class="text-sm">URL: <span class="text-italic text-black">www.interactivebrokers.ie/en/index.php?f=<span id='vid'></span></span></p>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<div class="row">
+					<div class="col-6">
+						<div align="left">
+							<button id="cls_frm_2" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+					<div class="col-6">
+						<div align="right">
+							<button type="button" class="btn btn-primary" id="send">Send</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<input type="hidden" id="_page_id" name="_page_id" value="57253" />
+</div>
+<!-- MODAL END | SHARE ON SOCIAL ----------------------------------------------------------------------------------------------------> 
+ 
+<script type="text/javascript" src="../../insights/ibtr_share2667.js?t=v1"></script>
+<script type="text/javascript" src="../../scripts/common/js/base642667.js?t=v1" ></script>
+<script>
+$(document).ready(function() {
+	 $(".social-sidebar span").click(function(){
+		 $(".social-sidebar div").toggleClass("social-sidebar-hide");
+		 $(".social-sidebar span").toggleClass("toggle-arrow");
+ 	 });
+});
+function emailCookie() {
+	if (document.cookie.indexOf("IB_EM_SH") == -1) {
+		var ex=new Date();
+		ex.setTime(ex.getTime()+86400000);
+		document.cookie ='IB_EM_SH='+1+';expires='+ex.toGMTString()+';path=/;domain=';
+	}
+}
+</script>
+<!-- SCRIPTS FOOTER ---------------------------------------------------------------------------------------------------- -->
+<script type="text/javascript" src="../../scripts/common/js/zeynep-2.2.0/zeynep.js"></script>
+<script type="text/javascript" src="../../scripts/common/js/lazyload/lazyload.min.js"></script>
+<script type="text/javascript" src="../../search/conversions.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    
+    // GATHER HEIGHT OF HEADER
+    var headerHeight = $("div#ibkr-header").outerHeight();
+    // GATHER HEIGHT OF DISCLOSURES
+    var disclosureHeight = $("section#UKProductDisclosure, section#TurbosDisclosure").outerHeight();
+    $("section#UKProductDisclosure").css("top", headerHeight);
+    $("section#TurbosDisclosure").css("top", headerHeight);
+    // SET CONTENTS DIV PADDING TOP
+    $("div#contents").css("padding-top", disclosureHeight);
+    // OVERRIDE TOP OF DISCLOSURE AND PADDING-TOP OF CONTENTS ON WINDOW RESIZE
+    $(window).resize(function() {
+        var headerHeight = $("div#ibkr-header").outerHeight();
+        var disclosureHeight = $("section#UKProductDisclosure, section#TurbosDisclosure").outerHeight();
+        var headerHeightDelta = headerHeight - disclosureHeight;
+        $("section#UKProductDisclosure").css("top", disclosureHeight + headerHeightDelta);
+        $("section#TurbosDisclosure").css("top", disclosureHeight + headerHeightDelta);
+        $("div#contents").css("padding-top", disclosureHeight);
+    });
+
+    // OVERRIDE TOP OF DISCLOSURE AND PADDING-TOP OF CONTENTS ON BANNER CLOSE
+    $("#bannerRegionSelector a.btn-close").click(function() {
+        setTimeout(function() {
+            var headerHeight = $("div#ibkr-header").outerHeight();
+            $("section#UKProductDisclosure").css("top", headerHeight);
+            $("section#TurbosDisclosure").css("top", headerHeight);
+            $("div#contents").css("padding-top", disclosureHeight);
+        },500);
+    });
+    // MOBILE MENU
+    $(function() {
+        // Initilize mobile menu
+        var zeynep = $('.menu-mobile').zeynep({
+            opened: function () {
+            console.log('the side menu opened')
+        },
+        closed: function () {
+            console.log('the side menu closed')
+            }
+        })
+        // Dynamically bind closing event
+        zeynep.on('closing', function () {
+            console.log('this event is dynamically binded')
+        })
+        // Mobile menu close on overlay click
+        $('.website-overlay').on('click', function () {
+            zeynep.close()
+        })
+        // Mobile menu close on button click
+        $('.btn-close').on('click', function () {
+            zeynep.close()
+        })
+        // Mobile menu open on navbar-toggler click
+        $('.navbar-toggler').on('click', function () {
+            zeynep.open()
+        })
+    })
+});
+</script>
+<!-- STYLES FOOTER ---------------------------------------------------------------------------------------------------- -->
+<link rel="preload" as="font" type="font/woff2" href="../../fonts/fontawesome-6.4.2/webfonts/fa-brands-400.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="../../fonts/fontawesome-6.4.2/webfonts/fa-regular-400.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="../../fonts/fontawesome-6.4.2/webfonts/fa-solid-900.woff2" crossorigin>
+<link rel="preload" as="style" href="../../css/ibkr/website-print.min.css">
+<link rel="stylesheet" type="text/css" media="print" href="../../css/ibkr/website-print.min.css">
+<style type="text/css">
+@import url('../../css/fontawesome-6.4.2/all.min.css') layer(vendors);
+@import url('../../css/animate-3.7.2/animate.min.css') layer(vendors);
+@import url('../../css/bootstrap-switch-3.3.2/bootstrap-switch.min.css') layer(vendors);
+@import url('../../css/icheck-1.0.2/icheck.css') layer(vendors);
+</style><script> 
+    $(document).ready(function() {
+        let checkBootstrap = setInterval(tabNav, 50);
+        let p = '';
+        function tabNav() {
+            const queryString = window.location.search; 
+            const urlParams = new URLSearchParams(queryString); 
+            let p = urlParams.get('p'); 
+            // Check if bootstrap js is loaded yet
+            let bootstrap_enabled = (typeof $().tab == 'function');
+            // If it's loaded trigger tab interaction
+            if (bootstrap_enabled === true) {
+                if ($(p != '') && ($('#nav-tabs  > .nav-item > .nav-link[data-bs-target="#' + p + '"]') != null)) {
+                    $('#nav-tabs  > .nav-item > .nav-link[data-bs-target="#' + p + '"]').tab('show');
+                    setTimeout(function() {
+                        $(window).scrollTop(0);
+                    }, 400);
+                }
+                clearInterval(checkBootstrap);
+                checkBootstrap = null;
+            }
+        }
+        function updateParam(param) {
+            let url = new URL(document.html);
+            let search_params = url.searchParams; 
+            search_params.set('p', param);
+            url.search = search_params.toString();
+            let new_url = url.toString();
+            history.pushState(null, null, new_url);
+            return false;
+        }
+        $('#nav-tabs  > .nav-item > .nav-link').click(function() {
+            let newParam = $(this).attr('data-bs-target').toString();
+            let cleanParam = newParam.replace('#','');
+            updateParam(cleanParam);
+        });
+    });
+</script>
+<script type="text/javascript">
+	/* <![CDATA[ */
+	var google_conversion_id = 1070426721;
+	var google_custom_params = window.google_tag_params;
+	var google_remarketing_only = true;
+	/* ]]> */
+</script>
+<script type="text/javascript" src="../../../www.googleadservices.com/pagead/f.txt"></script>
+<noscript>
+    <div display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt="" src="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/1070426721/?value=0&amp;guid=ON&amp;script=0"/>
+    </div>
+</noscript>
+</body>
+
+<!-- Mirrored from www.interactivebrokers.ie/de/support/customer-service.php?p=contact by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Sep 2025 09:18:25 GMT -->
+</html>
